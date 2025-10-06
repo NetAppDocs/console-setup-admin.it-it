@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task-federation-entra-id.html 
+keywords: Microsoft Entra ID, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, domain verification, client secret, redirect URL, organization admin, 
+summary: 'Federati con il tuo provider IdP Microsoft Entra ID per abilitare l"accesso Single Sign-On (SSO) per la console NetApp .  Ciò consente agli utenti di accedere utilizzando le proprie credenziali aziendali.' 
+---
+= Federare la console NetApp con l'ID Microsoft Entra
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Federati con il tuo provider IdP Microsoft Entra ID per abilitare l'accesso Single Sign-On (SSO) per la console NetApp .  Ciò consente agli utenti di accedere utilizzando le proprie credenziali aziendali.
+
+.Ruoli richiesti
+Il ruolo di amministratore della federazione è necessario per creare e gestire le federazioni.  Il visualizzatore della Federazione può visualizzare la pagina della Federazione.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
+
+
+NOTE: Puoi federarti con il tuo IdP aziendale o con il sito di supporto NetApp .  NetApp consiglia di scegliere l'una o l'altra opzione, ma non entrambe.
+
+NetApp supporta solo SSO avviato dal provider di servizi (SP).  Per prima cosa è necessario configurare il provider di identità in modo che consideri attendibile NetApp come fornitore di servizi.  Quindi, è possibile creare una connessione nella Console che utilizzi la configurazione del provider di identità.
+
+È possibile impostare una connessione federata con Microsoft Entra ID per abilitare l'accesso Single Sign-On (SSO) per la Console.  Il processo prevede la configurazione del tuo ID Microsoft Entra in modo che consideri attendibile la Console come fornitore di servizi e quindi la creazione della connessione nella Console.
+
+.Prima di iniziare
+* È richiesto un account IdP con privilegi amministrativi.  Coordinati con l'amministratore del tuo IdP per completare i passaggi.
+* Identifica il dominio che vuoi utilizzare per la federazione.  Puoi utilizzare il tuo dominio di posta elettronica o un dominio diverso di tua proprietà.  Se desideri utilizzare un dominio diverso dal tuo dominio di posta elettronica, devi prima verificare il dominio nella Console.  Puoi farlo seguendo i passaggi indicati inlink:task-federation-verify-domain.html["Verifica il tuo dominio nella console NetApp"] argomento.
+
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Selezionare *Federazione* per visualizzare la pagina *Federazioni*.
+. Selezionare *Configura nuova federazione*.
+
+
+[discrete]
+====== Dettagli del dominio
+
+. Inserisci i dettagli del tuo dominio:
++
+.. Scegli se vuoi utilizzare un dominio verificato o il tuo dominio di posta elettronica.  Il dominio di posta elettronica è il dominio associato all'account con cui hai effettuato l'accesso.
+.. Inserisci il nome della federazione che stai configurando.
+.. Se scegli un dominio verificato, seleziona il dominio dall'elenco.
+
+
+. Selezionare *Avanti*.
+
+
+[discrete]
+====== Metodo di connessione
+
+. Per il metodo di connessione, seleziona *Provider* e poi seleziona *Microsoft Entra ID*.
+. Selezionare *Avanti*.
+
+
+[discrete]
+====== Istruzioni di configurazione
+
+. Configura il tuo ID Microsoft Entra per considerare NetApp attendibile come fornitore di servizi.  Devi eseguire questo passaggio sul tuo server Microsoft Entra ID.
++
+.. Utilizzare i seguenti valori durante la registrazione dell'app Microsoft Entra ID per considerare attendibile la console:
++
+*** Per l'URL di reindirizzamento, utilizzare `https://services.cloud.netapp.com`
+*** Per l'*URL di risposta*, usa `https://netapp-cloud-account.auth0.com/login/callback`
+
+
+.. Crea un segreto client per la tua app Microsoft Entra ID.  Per completare la federazione sarà necessario fornire l'ID client, il segreto client e il nome di dominio ID Entra.
+
+
+. Torna alla Console e seleziona *Avanti* per creare la connessione.
+
+
+[discrete]
+====== Crea connessione
+
+. Crea la connessione con Microsoft Entra ID
++
+.. Inserisci l'ID client e il segreto client creati nel passaggio precedente.
+.. Inserisci il nome di dominio dell'ID Microsoft Entra.
+
+
+. Seleziona *Crea connessione*.  Il sistema crea la connessione in pochi secondi.
+
+
+[discrete]
+====== Testare e abilitare la connessione
+
+. Selezionare *Avanti*.
+. Seleziona *Test connessione* per testare la tua connessione.  Verrai indirizzato a una pagina di accesso per il tuo server IdP.  Accedi con le tue credenziali IdP per completare il test e torna alla Console per abilitare la connessione.
+. Selezionare *Avanti*.
+. Nella pagina *Abilita federazione*, rivedere i dettagli della federazione e quindi selezionare *Abilita federazione*.
+. Selezionare *Fine* per completare il processo.
+
+
+Dopo aver abilitato la federazione, gli utenti possono accedere alla NetApp Console utilizzando le proprie credenziali aziendali.

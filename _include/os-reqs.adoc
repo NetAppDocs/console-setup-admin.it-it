@@ -1,0 +1,190 @@
+= 
+:allow-uri-read: 
+
+
+Host dedicato:: L'agente Console non è supportato su un host condiviso con altre applicazioni. L'host deve essere un host dedicato.  L'host può avere qualsiasi architettura che soddisfi i seguenti requisiti di dimensione:
++
+--
+* CPU: 8 core o 8 vCPU
+* RAM: 32 GB
+* Spazio su disco: si consigliano 165 GB per l'host, con i seguenti requisiti di partizione:
++
+** `/opt`: Devono essere disponibili 120 GiB di spazio
++
+L'agente utilizza `/opt` per installare il `/opt/application/netapp` directory e il suo contenuto.
+
+** `/var`: Devono essere disponibili 40 GiB di spazio
++
+L'agente della console richiede questo spazio in `/var` perché Docker o Podman sono progettati per creare i contenitori all'interno di questa directory.  Nello specifico, creeranno contenitori nel `/var/lib/containers/storage` elenco.  I montaggi esterni o i collegamenti simbolici non funzionano per questo spazio.
+
+
+
+
+
+--
+
+
+* CPU: 8 core o 8 vCPU
+* RAM: 32 GB
+* Spazio su disco: 165 GB (con provisioning spesso)
+* vSphere 7.0 o versione successiva
+* Host ESXi 7.03 o superiore
+
+
+
+NOTE: L'agente della console riserva l'intervallo UID e GID da 19000 a 19200.  Questo intervallo è fisso e non può essere modificato.  Se un software di terze parti sul tuo host utilizza UID o GID compresi in questo intervallo, l'installazione dell'agente non andrà a buon fine.  NetApp consiglia di utilizzare un host privo di software di terze parti per evitare conflitti.
+
+Ipervisore:: È richiesto un hypervisor bare metal o hosted certificato per eseguire un sistema operativo supportato.
+
+
+[[podman-versions]]Requisiti del sistema operativo e del contenitore:: L'agente Console è supportato con i seguenti sistemi operativi quando si utilizza la Console in modalità standard o in modalità limitata.  Prima di installare l'agente è necessario uno strumento di orchestrazione dei container.
++
+--
+[cols="2a,2a,2a,2a,2a"]
+|===
+| Sistema operativo | Versioni del sistema operativo supportate | Versioni dell'agente supportate | Strumento contenitore richiesto | SELinux a 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+da 9,1 a 9,4
+
+da 8,6 a 8,10
+
+* Solo versioni in lingua inglese.
+* L'host deve essere registrato presso Red Hat Subscription Management.  Se non è registrato, l'host non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione dell'agente.
+
+ a| 
+3.9.50 o versione successiva con la console in modalità standard o modalità limitata
+ a| 
+Podman versione 4.6.1 o 4.9.4
+
+<<podman-configuration,Visualizza i requisiti di configurazione di Podman>> .
+ a| 
+Supportato in modalità di applicazione o modalità permissiva
+
+* La gestione dei sistemi Cloud Volumes ONTAP NON è supportata dagli agenti che hanno SELinux abilitato sul sistema operativo.
+
+
+
+
+ a| 
+Ubuntu
+ a| 
+24,04 LTS
+ a| 
+3.9.45 o versione successiva con la console NetApp in modalità standard o modalità limitata
+ a| 
+Docker Engine dalla versione 23.06 alla 28.0.0.
+ a| 
+Non supportato
+
+
+
+ a| 
+22,04 LTS
+ a| 
+3.9.50 o successivo
+ a| 
+Docker Engine dalla versione 23.0.6 alla 28.0.0.
+ a| 
+Non supportato
+
+|===
+--
+
+
+[[podman-versions]]Requisiti del sistema operativo e del contenitore:: L'agente Console è supportato dai seguenti sistemi operativi quando si utilizza la Console in modalità privata.  Prima di installare l'agente è necessario uno strumento di orchestrazione dei container.
++
+--
+[cols="2a,2a,2a,2a,2a"]
+|===
+| Sistema operativo | Versioni del sistema operativo supportate | Versioni dell'agente supportate | Strumento contenitore richiesto | SELinux 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+da 9,1 a 9,4
+
+da 8,6 a 8,10
+ a| 
+3.9.42 o versione successiva con la console in modalità privata
+ a| 
+Podman versione 4.6.1 o 4.9.4
+
+<<podman-configuration,Visualizza i requisiti di configurazione di Podman>> .
+ a| 
+Supportato in modalità di applicazione o modalità permissiva ^1^
+
+
+
+ a| 
+Ubuntu
+ a| 
+22,04 LTS
+ a| 
+3.9.29 o successivo
+ a| 
+Docker Engine da 23.0.6 a 26.0.0
+
+26.0.0 è supportato con le installazioni del _nuovo_ agente 3.9.44 o successive
+ a| 
+Non supportato
+
+|===
+Note:
+
+. La gestione dei sistemi Cloud Volumes ONTAP non è supportata dagli agenti che hanno SELinux abilitato sul sistema operativo.
+. L'agente Console è supportato sulle versioni in lingua inglese di questi sistemi operativi.
+. Per RHEL, l'host deve essere registrato presso Red Hat Subscription Management.  Se non è registrato, l'host non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione dell'agente.
+
+
+--
+
+
+processore:: 8 core o 8 vCPU
+Memoria RAM:: 32 GB
+
+
+Tipo di istanza AWS EC2:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM sopra indicati.  Consigliamo t3.2xlarge.
+
+
+coppia di chiavi:: Quando si crea l'agente Console, è necessario selezionare una coppia di chiavi EC2 da utilizzare con l'istanza.
+
+
+Limite di hop di risposta PUT quando si utilizza IMDSv2:: Se IMDSv2 è abilitato sull'istanza EC2 (questa è l'impostazione predefinita per le nuove istanze EC2), è necessario modificare il limite di hop della risposta PUT sull'istanza su 3.  Se non modifichi il limite sull'istanza EC2, riceverai un errore di inizializzazione dell'interfaccia utente quando tenti di configurare l'agente.
++
+--
+* link:task-require-imdsv2.html["Richiedere l'uso di IMDSv2 sulle istanze Amazon EC2"]
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["Documentazione AWS: modifica del limite di hop della risposta PUT"^]
+
+
+--
+
+
+Dimensioni della VM di Azure:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM sopra indicati.  Consigliamo Standard_D8s_v3.
+
+
+Tipo di macchina Google Cloud:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM sopra indicati.  Consigliamo n2-standard-8.
++
+--
+L'agente Console è supportato in Google Cloud su un'istanza VM con un sistema operativo che supporta https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Funzionalità della VM schermata"^]
+
+--
+
+
+Spazio su disco in /opt:: Devono essere disponibili 100 GiB di spazio
++
+--
+L'agente utilizza `/opt` per installare il `/opt/application/netapp` directory e il suo contenuto.
+
+--
+Spazio su disco in /var:: Devono essere disponibili 20 GiB di spazio
++
+--
+L'agente della console richiede questo spazio in `/var` perché Docker o Podman sono progettati per creare i contenitori all'interno di questa directory.  Nello specifico, creeranno contenitori nel `/var/lib/containers/storage` elenco.  I montaggi esterni o i collegamenti simbolici non funzionano per questo spazio.
+
+--
+

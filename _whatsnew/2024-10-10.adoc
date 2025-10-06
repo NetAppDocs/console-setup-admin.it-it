@@ -1,0 +1,9 @@
+= Patch del connettore 3.9.45
+:allow-uri-read: 
+
+
+
+
+=== Patch del connettore 3.9.45
+
+Questa patch include correzioni di bug.

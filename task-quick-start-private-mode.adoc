@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: task-quick-start-private-mode.html 
+keywords: private mode quick start, quick start, aws top secret cloud, aws secret cloud, secret cloud, top secret cloud, bluexp legacy, bluexp 
+summary: 'La modalità privata viene in genere utilizzata negli ambienti locali privi di connessione Internet e nelle regioni cloud sicure, tra cui AWS Secret Cloud, AWS Top Secret Cloud e Azure IL6.  La modalità privata non è ancora disponibile con la console NetApp .  NetApp continua a supportare questi ambienti con l"interfaccia legacy BlueXP . link:<link doc al PDF>' 
+---
+= Flusso di lavoro introduttivo (modalità privata BlueXP )
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La modalità privata BlueXP (interfaccia BlueXP legacy) viene in genere utilizzata con ambienti locali privi di connessione Internet e con regioni cloud sicure, tra cui AWS Secret Cloud, AWS Top Secret Cloud e Azure IL6.  NetApp continua a supportare questi ambienti con l'interfaccia legacy BlueXP .
+
+link:media/BlueXP-Private-Mode-legacy-interface.pdf["Documentazione PDF per la modalità privata BlueXP"^]
+
+
+
+== Funzionalità e servizi dati supportati con la modalità privata
+
+La tabella seguente può aiutarti a identificare rapidamente quali servizi e funzionalità BlueXP sono supportati in modalità privata.
+
+Tieni presente che alcuni servizi potrebbero essere supportati con limitazioni.
+
+[cols="19,27,27"]
+|===
+| Area di prodotto | Servizio o funzionalità BlueXP | Modalità privata 
+
+
+.10+| *Ambienti di lavoro* Questa parte della tabella elenca il supporto per la gestione dell'ambiente di lavoro dalla tela BlueXP .  Non indica le destinazioni di backup supportate per il BlueXP backup and recovery. | Amazon FSx per ONTAP | NO 
+
+
+| Amazon S3 | NO 
+
+
+| Blob azzurro | NO 
+
+
+| Azure NetApp Files | NO 
+
+
+| Cloud Volumes ONTAP | SÌ 
+
+
+| Google Cloud NetApp Volumes | NO 
+
+
+| Google Cloud Storage | NO 
+
+
+| Cluster ONTAP on-premise | SÌ 
+
+
+| Serie E | NO 
+
+
+| StorageGRID | NO 
+
+
+.15+| *Servizi* | Avvisi | NO 
+
+
+| Backup e ripristino | SÌhttps://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] 
+
+
+| Classificazione | SÌ 
+
+
+| Copia e sincronizza | NO 
+
+
+| Consulente digitale | NO 
+
+
+| Portafoglio digitale | SÌ 
+
+
+| Ripristino dopo un disastro | NO 
+
+
+| Efficienza economica | NO 
+
+
+| Protezione dal ransomware | NO 
+
+
+| Replicazione | SÌ 
+
+
+| Aggiornamenti software | NO 
+
+
+| Sostenibilità | NO 
+
+
+| Livelli | NO 
+
+
+| Memorizzazione nella cache del volume | NO 
+
+
+| Fabbrica del carico di lavoro | NO 
+
+
+.8+| *Caratteristiche* | Gestione dell'identità e degli accessi | SÌ 
+
+
+| Credenziali | SÌ 
+
+
+| Federazione | NO 
+
+
+| Autenticazione multifattoriale | NO 
+
+
+| Conti NSS | NO 
+
+
+| Notifiche | NO 
+
+
+| Ricerca | NO 
+
+
+| Cronologia | SÌ 
+|===

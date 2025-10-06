@@ -1,0 +1,152 @@
+---
+sidebar: sidebar 
+permalink: task-maintain-connectors.html 
+keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, agent ip address, agent uri, connector, connector health 
+summary: 'La manutenzione del sistema operativo sull"host dell"agente è responsabilità dell"utente.  Ad esempio, dovresti applicare gli aggiornamenti di sicurezza al sistema operativo sull"host dell"agente Console seguendo le procedure standard della tua azienda per la distribuzione del sistema operativo.' 
+---
+= Gestire la macchina virtuale dell'agente della console e il sistema operativo
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La manutenzione del sistema operativo sull'host dell'agente della console è responsabilità del cliente.  Ad esempio, tu (il cliente) dovresti applicare gli aggiornamenti di sicurezza al sistema operativo sull'host dell'agente seguendo le procedure standard della tua azienda per la distribuzione del sistema operativo.
+
+
+TIP: Se hai già un agente, dovresti esserne a conoscenzalink:reference-connector-operating-system-changes.html["modifiche ai sistemi operativi Linux supportati"] .
+
+
+
+== Patch del sistema operativo e agente
+
+Applica le patch di sicurezza del sistema operativo senza interrompere i servizi host dell'agente.
+
+
+
+== Tipo di VM o istanza
+
+Se si crea un agente Console dalla Console, questo distribuisce un'istanza VM nel provider cloud con una configurazione predefinita.  Dopo aver creato l'agente, non passare a un'istanza VM più piccola con meno CPU o RAM.
+
+Nella tabella seguente sono elencati i requisiti di CPU e RAM:
+
+processore:: 8 core o 8 vCPU
+Memoria RAM:: 32 GB
+
+
+link:reference-connector-default-config.html["Scopri la configurazione predefinita per l'agente"] .
+
+
+
+== Monitorare l'agente
+
+La console ti avvisa quando la macchina virtuale dell'agente non è integro, compresi problemi di spazio su disco, RAM e CPU.  Monitora queste notifiche nel Centro notifiche all'interno della Console oppure configura le notifiche e-mail.  È normale che si verifichino occasionalmente aumenti dello spazio su disco, della memoria o dell'utilizzo della CPU, ma se ciò accade frequentemente, è opportuno adottare misure per risolverlo.
+
+Ad esempio, la Console ti avvisa quando una risorsa agente (CPU, RAM o spazio su disco) supera il 90% della sua capacità totale per 30 minuti consecutivi.  Successivamente, se l'utilizzo delle risorse scende al di sotto di tale soglia, la notifica viene visualizzata come risolta (verde) nel Centro notifiche.
+
+
+NOTE: Per domande sulla modifica della VM dell'agente, contattare l'assistenza NetApp .
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#notification-center["Saperne di più."^]
+
+[cols="47,47"]
+|===
+| Notifica | Azione necessaria 
+
+
+| Lo spazio su disco è troppo alto | link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Manager/How_to_resolve_disk_space_issues_on_BlueXP_connector_VM["Rivedi l'articolo della Knowledge Base NetApp"^] . 
+
+
+| L'utilizzo della CPU è troppo elevato | Aumenta le dimensioni della CPU della VM dell'agente nel tuo provider cloud o in locale, a seconda di dove l'hai installata.  In alternativa, è possibile creare agenti aggiuntivi e distribuire il carico di lavoro tra più agenti.  L'utilizzo della RAM può variare in base all'ambiente, ai carichi di lavoro ONTAP , al numero di sistemi Cloud Volumes ONTAP e ai servizi dati utilizzati. 
+
+
+| L'utilizzo della RAM è troppo elevato | Aumenta la RAM della VM dell'agente nel tuo provider cloud o in locale, a seconda di dove l'hai installata.  In alternativa, è possibile creare agenti aggiuntivi e distribuire il carico di lavoro tra più agenti.  L'utilizzo della RAM può variare in base all'ambiente, ai carichi di lavoro ONTAP , al numero di sistemi Cloud Volumes ONTAP e ai servizi dati utilizzati. 
+|===
+
+
+== Arresto e avvio della VM dell'agente
+
+Se necessario, arrestare e avviare la VM dell'agente tramite la console del provider cloud o le procedure standard in sede.
+
+link:concept-connectors.html#connectors-must-be-operational-at-all-times["Tieni presente che l'agente della console deve essere sempre operativo"] .
+
+
+
+== Connettiti alla VM Linux
+
+Se devi connetterti alla VM Linux su cui è in esecuzione l'agente, utilizza le opzioni di connettività del tuo provider cloud.
+
+AWS:: Quando si crea l'istanza dell'agente in AWS, fornire una chiave di accesso AWS e una chiave segreta.  È possibile utilizzare questa coppia di chiavi per connettersi tramite SSH all'istanza.  Utilizzare il nome utente 'ubuntu' per l'istanza EC2 Linux.  Per gli agenti creati prima di maggio 2023, utilizzare il nome utente 'ec2-user'.
++
+--
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html["Documentazione AWS: connettiti alla tua istanza Linux"^]
+
+--
+Azzurro:: Quando si crea la macchina virtuale dell'agente in Azure, si specifica un nome utente e si sceglie di autenticarsi con una password o una chiave pubblica SSH.  Utilizza il metodo di autenticazione scelto per connetterti alla VM.
++
+--
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys#ssh-into-your-vm["Documentazione di Azure: accesso SSH alla macchina virtuale"^]
+
+--
+Google Cloud:: Non è possibile specificare un metodo di autenticazione quando si crea un agente in Google Cloud.  Tuttavia, puoi connetterti all'istanza della VM Linux tramite Google Cloud Console o Google Cloud CLI (gcloud).
++
+--
+https://cloud.google.com/compute/docs/instances/connecting-to-instance["Google Cloud Docs: connessione alle VM Linux"^]
+
+--
+
+
+
+
+== Cambiare l'indirizzo IP di un agente
+
+Se necessario, puoi modificare gli indirizzi IP interni e pubblici dell'istanza dell'agente assegnata dal tuo provider cloud.
+
+.Passi
+. Segui le istruzioni del tuo provider cloud per modificare l'indirizzo IP locale o l'indirizzo IP pubblico (o entrambi) per l'istanza dell'agente.
+. Riavviare l'istanza dell'agente per registrare un nuovo indirizzo IP pubblico con la console.
+. Se hai modificato l'indirizzo IP privato, aggiorna il percorso di backup per i file di configurazione Cloud Volumes ONTAP in modo che i backup vengano inviati al nuovo indirizzo IP privato sull'agente.
++
+Aggiornare la posizione di backup per ciascun sistema Cloud Volumes ONTAP .
+
++
+.. Dalla CLI Cloud Volumes ONTAP , impostare il livello di privilegio su avanzato:
++
+[source, cli]
+----
+set -privilege advanced
+----
+.. Eseguire il seguente comando per visualizzare la destinazione di backup corrente:
++
+[source, cli]
+----
+system configuration backup settings show
+----
+.. Eseguire il seguente comando per aggiornare l'indirizzo IP della destinazione di backup:
++
+[source, cli]
+----
+system configuration backup settings modify -destination <target-location>
+----
+
+
+
+
+
+
+== Modificare gli URI di un agente
+
+È possibile aggiungere e rimuovere l'Uniform Resource Identifier (URI) per un agente.
+
+.Passi
+. Selezionare *Amministrazione > Agenti*.
+. Nella pagina *Panoramica*, seleziona il menu azioni per un agente della console e seleziona *Modifica agente*.
++
+Per modificarlo, l'agente della console deve essere attivo.
+
+. Espandi la barra *URI agente* per visualizzare gli URI agente.
+. Aggiungi e rimuovi gli URI, quindi seleziona *Applica*.
+

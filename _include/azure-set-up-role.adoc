@@ -1,0 +1,39 @@
+= 
+:allow-uri-read: 
+
+
+. Copia il contenuto dellink:reference-permissions-azure.html["autorizzazioni di ruolo personalizzate per il connettore"] e salvarli in un file JSON.
+. Modificare il file JSON aggiungendo gli ID di sottoscrizione di Azure all'ambito assegnabile.
++
+Dovresti aggiungere l'ID per ogni sottoscrizione Azure che desideri utilizzare con NetApp Console.
+
++
+*Esempio*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+. Utilizzare il file JSON per creare un ruolo personalizzato in Azure.
++
+I passaggi seguenti descrivono come creare il ruolo utilizzando Bash in Azure Cloud Shell.
+
++
+.. Inizio https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure Cloud Shell"^] e scegli l'ambiente Bash.
+.. Carica il file JSON.
++
+image:screenshot_azure_shell_upload.png["Uno screenshot di Azure Cloud Shell in cui è possibile scegliere l'opzione per caricare un file."]
+
+.. Utilizzare l'interfaccia della riga di comando di Azure per creare il ruolo personalizzato:
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
+
+
+

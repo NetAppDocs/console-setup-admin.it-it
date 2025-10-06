@@ -1,0 +1,31 @@
+= 
+:allow-uri-read: 
+
+
+Accedere al portale di Azure e assegnare il ruolo personalizzato di Azure alla macchina virtuale dell'agente della console per una o più sottoscrizioni.
+
+.Passi
+. Dal portale di Azure, apri il servizio *Sottoscrizioni* e seleziona la tua sottoscrizione.
++
+È importante assegnare il ruolo dal servizio *Abbonamenti* perché questo specifica l'ambito dell'assegnazione del ruolo a livello di abbonamento.  L'_ambito_ definisce l'insieme di risorse a cui si applica l'accesso.  Se si specifica un ambito a un livello diverso (ad esempio, a livello di macchina virtuale), la possibilità di completare azioni dall'interno della console NetApp ne risentirà.
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Documentazione di Microsoft Azure: comprendere l'ambito di Azure RBAC"^]
+
+. Selezionare *Controllo accessi (IAM)* > *Aggiungi* > *Aggiungi assegnazione ruolo*.
+. Nella scheda *Ruolo*, seleziona il ruolo *Operatore console* e seleziona *Avanti*.
++
+
+NOTE: Console Operator è il nome predefinito fornito nella policy.  Se hai scelto un nome diverso per il ruolo, seleziona quel nome.
+
+. Nella scheda *Membri*, completa i seguenti passaggi:
++
+.. Assegna l'accesso a un'*identità gestita*.
+.. Selezionare *Seleziona membri*, selezionare l'abbonamento in cui è stata creata la macchina virtuale dell'agente Console, in *Identità gestita*, scegliere *Macchina virtuale*, quindi selezionare la macchina virtuale dell'agente Console.
+.. Seleziona *Seleziona*.
+.. Selezionare *Avanti*.
+.. Seleziona *Revisiona + assegna*.
+.. Se si desidera gestire risorse in sottoscrizioni Azure aggiuntive, passare a tale sottoscrizione e ripetere questi passaggi.
+
+
+

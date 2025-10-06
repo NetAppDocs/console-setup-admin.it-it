@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: task-adding-nss-accounts.html 
+keywords: adding, creating, netapp support site account, nss, update account, update nss account, update nss credentials, delete nss account, remove nss account, change working environment, working environment nss, digital wallet, license, change system, system nss, licenses and subscriptions 
+summary: 'Associa un account NetApp Support Site alla tua organizzazione NetApp Console per abilitare flussi di lavoro chiave per Cloud Volumes ONTAP.  Queste credenziali NSS sono associate all"intera organizzazione.' 
+---
+= Gestisci le credenziali NSS associate alla console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Associa un account NetApp Support Site alla tua organizzazione Console per abilitare flussi di lavoro chiave per la gestione dello storage.  Queste credenziali NSS sono associate all'intera organizzazione.
+
+La console supporta anche l'associazione di un account NSS per account utente. link:task-manage-user-credentials.html["Scopri come gestire le credenziali a livello utente"] .
+
+
+
+== Panoramica
+
+Per abilitare le seguenti attività è necessario associare le credenziali del sito di supporto NetApp al numero di serie specifico dell'account della console:
+
+* Distribuzione di Cloud Volumes ONTAP quando si utilizza la propria licenza (BYOL)
++
+È necessario fornire il proprio account NSS affinché la Console possa caricare la chiave di licenza e abilitare l'abbonamento per il periodo acquistato. Ciò include aggiornamenti automatici per i rinnovi dei termini.
+
+* Registrazione dei sistemi Cloud Volumes ONTAP a consumo
++
+Per attivare il supporto per il tuo sistema e accedere alle risorse di supporto tecnico NetApp è necessario fornire il tuo account NSS.
+
+* Aggiornamento del software Cloud Volumes ONTAP all'ultima versione
+
+
+Queste credenziali sono associate al numero di serie specifico del tuo account Console.  Gli utenti possono accedere a queste credenziali da *Supporto > Gestione NSS*.
+
+
+
+== Aggiungi un account NSS
+
+È possibile aggiungere e gestire gli account del sito di supporto NetApp da utilizzare con la Console dalla Dashboard di supporto all'interno della Console.
+
+Una volta aggiunto l'account NSS, la Console utilizza queste informazioni per operazioni quali download di licenze, verifica di aggiornamenti software e future registrazioni di supporto.
+
+È possibile associare più account NSS alla propria organizzazione; tuttavia, non è possibile avere account cliente e account partner all'interno della stessa organizzazione.
+
+
+NOTE: NetApp utilizza Microsoft Entra ID come provider di identità per i servizi di autenticazione specifici per il supporto e le licenze.
+
+.Passi
+. In *Amministrazione > Supporto*.
+. Selezionare *Gestione NSS*.
+. Seleziona *Aggiungi account NSS*.
+. Selezionare *Continua* per essere reindirizzati alla pagina di accesso di Microsoft.
+. Nella pagina di accesso, inserisci l'indirizzo email e la password registrati sul sito di supporto NetApp .
++
+Dopo aver effettuato l'accesso, NetApp memorizzerà il nome utente NSS.
+
++
+Si tratta di un ID generato dal sistema che corrisponde al tuo indirizzo email. Nella pagina *Gestione NSS*, puoi visualizzare la tua email daimage:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["Un'icona di tre punti orizzontali"] menu.
+
++
+** Se hai bisogno di aggiornare i token delle tue credenziali di accesso, c'è anche un'opzione *Aggiorna credenziali* inimage:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["Un'icona di tre punti orizzontali"] menu.
++
+Utilizzando questa opzione ti verrà richiesto di effettuare nuovamente l'accesso. Si noti che il token per questi account scade dopo 90 giorni. Verrà pubblicata una notifica per avvisarti di ciò.
+
+
+
+
+
+.Cosa succederà ora?
+Gli utenti possono ora selezionare l'account quando creano nuovi sistemi Cloud Volumes ONTAP e quando registrano sistemi Cloud Volumes ONTAP esistenti.
+
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html["Avvio di Cloud Volumes ONTAP in AWS"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["Avvio di Cloud Volumes ONTAP in Azure"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["Avvio di Cloud Volumes ONTAP in Google Cloud"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-registering.html["Registrazione dei sistemi pay-as-you-go"^]
+
+
+
+
+== Aggiorna le credenziali NSS
+
+Per motivi di sicurezza, è necessario aggiornare le credenziali NSS ogni 90 giorni.  Se le tue credenziali NSS sono scadute, verrai avvisato nel centro notifiche della Console. link:task-monitor-cm-operations.html#notification-center["Scopri di più sul Centro notifiche"^] .
+
+Le credenziali scadute possono compromettere quanto segue, ma non sono limitate a:
+
+* Aggiornamenti della licenza, il che significa che non potrai sfruttare la capacità appena acquistata.
+* Possibilità di inviare e monitorare i casi di supporto.
+
+
+Inoltre, puoi aggiornare le credenziali NSS associate alla tua organizzazione se desideri modificare l'account NSS associato alla tua organizzazione.  Ad esempio, se la persona associata al tuo account NSS ha lasciato la tua azienda.
+
+.Passi
+. In *Amministrazione > Supporto*.
+. Selezionare *Gestione NSS*.
+. Per l'account NSS che desideri aggiornare, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e quindi seleziona *Aggiorna credenziali*.
+. Quando richiesto, seleziona *Continua* per essere reindirizzato alla pagina di accesso di Microsoft.
++
+NetApp utilizza Microsoft Entra ID come provider di identità per i servizi di autenticazione correlati al supporto e alle licenze.
+
+. Nella pagina di accesso, inserisci l'indirizzo email e la password registrati sul sito di supporto NetApp .
+
+
+
+
+== Collega un sistema a un account NSS diverso
+
+Se la tua organizzazione dispone di più account NetApp Support Site, puoi modificare l'account associato a un sistema Cloud Volumes ONTAP .
+
+Per prima cosa devi aver associato l'account alla Console.
+
+.Passi
+. In *Amministrazione > Supporto*.
+. Selezionare *Gestione NSS*.
+. Per modificare l'account NSS, completa i seguenti passaggi:
++
+.. Espandere la riga relativa all'account del sito di supporto NetApp a cui il sistema è attualmente associato.
+.. Per il sistema per il quale si desidera modificare l'associazione, selezionareimage:icon-action.png["Un'icona composta da tre punti affiancati"]
+.. Seleziona *Cambia in un altro account NSS*.
++
+image:screenshot-nss-change-account.png["Uno screenshot che mostra il menu delle azioni per un sistema associato a un account del sito di supporto NetApp ."]
+
+.. Seleziona l'account e poi seleziona *Salva*.
+
+
+
+
+
+
+== Visualizza l'indirizzo email di un account NSS
+
+Per motivi di sicurezza, l'indirizzo email associato a un account NSS non viene visualizzato per impostazione predefinita.  È possibile visualizzare l'indirizzo e-mail e il nome utente associato a un account NSS.
+
+
+TIP: Quando si accede alla pagina Gestione NSS, la Console genera un token per ogni account nella tabella.  Tale token include informazioni sull'indirizzo email associato.  Il token viene rimosso quando si esce dalla pagina.  Le informazioni non vengono mai memorizzate nella cache, il che contribuisce a proteggere la tua privacy.
+
+.Passi
+. In *Amministrazione > Supporto*.
+. Selezionare *Gestione NSS*.
+. Per l'account NSS che desideri aggiornare, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e quindi seleziona *Visualizza indirizzo email*.  Puoi usare il pulsante Copia per copiare l'indirizzo email.
+
+
+
+
+== Rimuovere un account NSS
+
+Elimina tutti gli account NSS che non desideri più utilizzare con la Console.
+
+Non è possibile eliminare un account attualmente associato a un sistema Cloud Volumes ONTAP .  Per prima cosa devi<<attach-system-nss-account,collegare tali sistemi a un account NSS diverso>> .
+
+.Passi
+. In *Amministrazione > Supporto*.
+. Selezionare *Gestione NSS*.
+. Per l'account NSS che desideri eliminare, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e quindi seleziona *Elimina*.
+. Selezionare *Elimina* per confermare.
+

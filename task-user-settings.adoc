@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: task-user-settings.html 
+keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode 
+summary: 'All"interno della Console, ogni utente ha un profilo che contiene informazioni sull"utente e sulle sue impostazioni. Puoi visualizzare e modificare le impostazioni del tuo profilo.' 
+---
+= Gestisci le impostazioni utente della console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puoi modificare il tuo profilo della Console, ad esempio cambiando la password, abilitando l'autenticazione a più fattori (MFA) e verificando chi è l'amministratore della Console.
+
+All'interno della Console, ogni utente ha un profilo che contiene informazioni sull'utente e sulle sue impostazioni. Puoi visualizzare e modificare le impostazioni del tuo profilo.
+
+
+
+== Cambia il tuo nome visualizzato
+
+Puoi modificare il nome visualizzato nella Console, che viene utilizzato per identificarti ed è visibile agli altri utenti. Il nome visualizzato non è lo stesso del nome utente o dell'indirizzo email, che non possono essere modificati.
+
+.Passi
+. Selezionare l'icona del profilo nell'angolo in alto a destra della Console per visualizzare il pannello Impostazioni utente.
+. Seleziona l'icona *Modifica* accanto al tuo nome.
+. Inserisci il tuo nuovo nome visualizzato nel campo *Nome*.
+
+
+
+
+== Configurare l'autenticazione a più fattori
+
+Configurare l'autenticazione a più fattori (MFA) per migliorare la sicurezza richiedendo un secondo metodo di verifica.
+
+Gli utenti che utilizzano l'accesso Single Sign-On con un provider di identità esterno o il sito di supporto NetApp non possono abilitare MFA.  Se una di queste due condizioni è vera per te, non vedrai l'opzione per abilitare MFA nelle impostazioni del tuo profilo.
+
+Non abilitare MFA se il tuo account utente viene utilizzato per l'accesso API.  L'autenticazione a più fattori interrompe l'accesso all'API quando è abilitata per un account utente.  Utilizzare account di servizio per tutti gli accessi API.
+
+.Prima di iniziare
+* Devi aver già scaricato sul tuo dispositivo un'app di autenticazione, come Google Authenticator o Microsoft Authenticator.
+* Per impostare l'MFA ti servirà la password.
+
+
+
+NOTE: Se non hai accesso alla tua app di autenticazione o perdi il codice di ripristino, contatta l'amministratore della console per ricevere assistenza.
+
+.Passi
+. Selezionare l'icona del profilo nell'angolo in alto a destra della Console per visualizzare il pannello Impostazioni utente.
+. Selezionare *Configura* accanto all'intestazione *Autenticazione a più fattori*.
+. Segui le istruzioni per impostare l'MFA per il tuo account.
+. Al termine, ti verrà chiesto di salvare il codice di recupero.  Scegli se copiare il codice o scaricare un file di testo contenente il codice.  Conserva questo codice in un luogo sicuro.  Il codice di ripristino è necessario se perdi l'accesso all'app di autenticazione.
++
+Dopo aver configurato l'MFA, la Console ti chiederà di immettere un codice monouso dall'app di autenticazione ogni volta che accedi.
+
+
+
+
+
+== Rigenera il tuo codice di ripristino MFA
+
+Puoi utilizzare i codici di recupero una sola volta.  Se ne usi uno o lo perdi, creane uno nuovo.
+
+.Passi
+. Selezionare l'icona del profilo nell'angolo in alto a destra della Console per visualizzare il pannello Impostazioni utente.
+. Selezionareimage:icon-action.png["Un'icona composta da tre punti affiancati"] accanto all'intestazione *Autenticazione a più fattori*.
+. Seleziona *Rigenera codice di recupero*.
+. Copia il codice di ripristino generato e salvalo in un luogo sicuro.
+
+
+
+
+== Elimina la tua configurazione MFA
+
+Per interrompere l'utilizzo dell'autenticazione a più fattori (MFA) per l'accesso, elimina la configurazione MFA.  In questo modo non sarà più necessario immettere un codice monouso dall'app di autenticazione quando si effettua l'accesso.
+
+
+NOTE: Se non riesci ad accedere all'app di autenticazione o al codice di ripristino, dovrai contattare l'amministratore della tua organizzazione per reimpostare la configurazione MFA.
+
+.Passi
+. Selezionare l'icona del profilo nell'angolo in alto a destra della Console per visualizzare il pannello Impostazioni utente.
+. Selezionareimage:icon-action.png["Un'icona composta da tre punti affiancati"] accanto all'intestazione *Autenticazione a più fattori*.
+. Seleziona *Elimina*.
+
+
+
+
+== Contatta l'amministratore della tua organizzazione
+
+Se hai bisogno di contattare l'amministratore della tua organizzazione, puoi inviargli un'e-mail direttamente dalla Console.  L'amministratore gestisce gli account utente e le autorizzazioni all'interno della tua organizzazione.
+
+
+NOTE: Per utilizzare la funzione *Contatta gli amministratori*, è necessario che sul browser sia configurata un'applicazione di posta elettronica predefinita.
+
+.Passi
+. Selezionare l'icona del profilo nell'angolo in alto a destra della Console per visualizzare il pannello Impostazioni utente.
+. Seleziona *Contatta gli amministratori* per inviare un'e-mail all'amministratore della tua organizzazione.
+. Seleziona l'applicazione di posta elettronica da utilizzare.
+. Completa l'e-mail e seleziona *Invia*.
+
+
+
+
+== Configura la modalità scura (tema scuro)
+
+È possibile impostare la Console in modo che venga visualizzata in modalità scura.
+
+.Passi
+. Selezionare l'icona del profilo nell'angolo in alto a destra della Console per visualizzare il pannello Impostazioni utente.
+. Spostare il cursore *Tema scuro* per abilitarlo.
+

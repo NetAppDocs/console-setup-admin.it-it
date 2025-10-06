@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-create.html 
+keywords: partner organizations, create partnership, MSPs, service provider access 
+summary: Crea partnership per stabilire connessioni sicure e gestite tra la tua organizzazione e partner fidati per una gestione collaborativa delle risorse NetApp . 
+---
+= Gestisci le partnership nella console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Crea partnership per stabilire connessioni sicure e gestite tra la tua organizzazione e partner fidati per una gestione collaborativa delle risorse NetApp .
+
+Le partnership consentono di gestire in modo sicuro le risorse NetApp oltre i confini, con relazioni basate sui ruoli nella Console.  L'organizzazione che avvia l'operazione concede l'accesso alle proprie risorse, mentre l'organizzazione che accetta fornisce gli utenti o gli account di servizio a cui concedere l'accesso.  Le partnership vengono stabilite tramite un flusso di lavoro self-service, che offre all'organizzazione che le avvia il controllo completo sulle risorse condivise, sui ruoli assegnati e sulla possibilità di integrare, gestire o revocare l'accesso dei partner in base alle necessità.
+
+.Ruoli richiesti
+Il ruolo di *Amministratore partnership* è necessario per creare e gestire le partnership.  Il *Visualizzatore partnership* può visualizzare la pagina Partnership.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
+
+
+
+== Avviare una partnership organizzativa
+
+Puoi richiedere una partnership con un'altra organizzazione se conosci il suo ID organizzazione.  L'organizzazione ricevente approva la richiesta prima che la partnership possa procedere.
+
+Prima di iniziare, assicurati di avere l'ID organizzazione dell'organizzazione partner e di aver ricevuto il ruolo di *Amministratore della partnership*.
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Selezionare la scheda *Partnership*.
+. Seleziona *Aggiungi partnership*.
+. Nella finestra di dialogo *Crea partnership*, immettere l'ID dell'organizzazione partner del partner richiesto e selezionare *Aggiungi*.
++
+La richiesta di partnership viene inviata all'organizzazione partner per l'approvazione.  Puoi visualizzare lo stato della richiesta di partnership nella pagina *Partnership*.
+
+
+
+
+
+== Approvare una partnership organizzativa
+
+La richiesta di partenariato tra organizzazioni deve essere accettata dall'organizzazione ricevente prima che il partenariato possa procedere.  Per approvare e gestire le partnership è necessario disporre del ruolo di *Amministratore partnership*.
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Seleziona *Partnership*.
+. Selezionare la scheda *Partnership ricevuta*.
+. Passare alla partnership ricevuta che si desidera approvare e selezionareimage:icon-action.png["Un'icona composta da tre punti affiancati"] e quindi seleziona *Approva*.
+. Esaminare i dettagli della partnership, tra cui il nome e l'ID dell'organizzazione che ha richiesto la partnership, quindi selezionare *Avanti.*
+. Facoltativo, aggiungi i membri dell'organizzazione alla partnership e seleziona *Applica*.
++
+Puoi aggiungere altri membri in qualsiasi momento tramite la pagina *Partnership*.
+
++
+
+NOTE: Tutti i membri aggiunti diventano visibili nell'organizzazione del partner, dove il partner può assegnarli alle risorse.
+
+
+
+.Risultato
+La partnership che hai approvato ora mostra lo stato *Costituita*.  Gli utenti con i ruoli *Amministratore partnership* o *Visualizzatore partnership* in entrambe le organizzazioni possono visualizzare la partnership.
+
+
+
+== Visualizza lo stato della partnership
+
+Visualizza lo stato delle tue partnership.
+
+.Ruolo richiesto
+Amministratore della partnership, Visualizzatore della partnership.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Selezionare *Partnership*.
+. Selezionare la scheda *Partnership avviate* o *Partnership ricevute*.
+. Esaminare la tabella corrispondente che mostra le partnership e i relativi stati.
+
+
+
+
+== Disattivare una partnership organizzativa
+
+Per disattivare una partnership è necessario essere membri dell'organizzazione che ha avviato la collaborazione.  La disattivazione di una partnership revoca immediatamente l'accesso a tutte le risorse della tua organizzazione che erano condivise con l'organizzazione partner.
+
+.Ruolo richiesto
+Amministratore della partnership.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Selezionare *Partnership*.
+. Selezionare la scheda *Partnership avviate*.
+. Esaminare la tabella corrispondente che mostra le partnership e i relativi stati.
+. Passare alla partnership avviata che si desidera disattivare e selezionareimage:icon-action.png["Un'icona composta da tre punti affiancati"] e quindi seleziona *Disabilita*.
+

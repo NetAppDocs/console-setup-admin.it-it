@@ -1,0 +1,143 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-keystone-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: 'La gestione dell"identità e dell"accesso NetApp Console fornisce due ruoli Keystone che puoi assegnare ai membri della tua organizzazione.' 
+---
+= Ruoli di accesso Keystone nella console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+I ruoli Keystone forniscono l'accesso alle dashboard Keystone e consentono agli utenti di visualizzare e gestire il proprio abbonamento Keystone .  Esistono due ruoli Keystone : amministratore Keystone e visualizzatore Keystone .  La differenza principale tra i due ruoli riguarda le azioni che possono intraprendere in Keystone.  Il ruolo di amministratore Keystone è l'unico a cui è consentito creare richieste di servizio o modificare abbonamenti.
+
+.Esempio di ruoli Keystone nella console NetApp
+XYZ Corporation dispone di quattro tecnici di archiviazione provenienti da reparti diversi che visualizzano le informazioni sugli abbonamenti Keystone .  Sebbene tutti questi utenti debbano monitorare l'abbonamento Keystone , solo il responsabile del team è autorizzato a effettuare richieste di assistenza.  A tre membri del team viene assegnato il ruolo di * Keystone viewer*, mentre al responsabile del team viene assegnato il ruolo di * Keystone admin*, in modo che vi sia un punto di controllo sulle richieste di servizio per l'azienda.
+
+La tabella seguente indica le azioni che ciascun ruolo Keystone può eseguire.
+
+[cols="40,20a,20a"]
+|===
+| Caratteristica e azione | Amministratore Keystone | Visualizzatore Keystone 
+
+
+| Visualizza le seguenti schede: Abbonamento, Risorse, Monitoraggio e Amministrazione  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+3+| * Pagina di abbonamento Keystone *: 
+
+
+| Visualizza gli abbonamenti  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Modificare o rinnovare gli abbonamenti  a| 
+SÌ
+ a| 
+NO
+
+
+
+3+| * Pagina delle risorse Keystone *: 
+
+
+| Visualizza risorse  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Gestire le risorse  a| 
+SÌ
+ a| 
+NO
+
+
+
+3+| * Pagina degli avvisi Keystone *: 
+
+
+| Visualizza avvisi  a| 
+SÌ
+ a| 
+NO
+
+
+
+| Gestisci gli avvisi  a| 
+SÌ
+ a| 
+NO
+
+
+
+| Crea avvisi per te stesso  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+3+| *Licenze e abbonamenti*: 
+
+
+| Può visualizzare licenze e abbonamenti  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+3+| * Pagina dei report Keystone *: 
+
+
+| Scarica i report  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Gestisci i report  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Crea report per te stesso  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+3+| *Richieste di servizio*: 
+
+
+| Crea richieste di servizio  a| 
+SÌ
+ a| 
+NO
+
+
+
+| Visualizza le richieste di servizio create da qualsiasi utente all'interno dell'organizzazione  a| 
+SÌ
+ a| 
+SÌ
+
+|===

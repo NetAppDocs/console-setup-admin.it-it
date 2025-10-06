@@ -1,0 +1,76 @@
+= Connettore 3.9.52
+:allow-uri-read: 
+
+
+
+
+=== Connettore 3.9.52
+
+Questa versione di BlueXP Connector include piccoli miglioramenti della sicurezza e correzioni di bug, oltre ad alcuni aggiornamenti aggiuntivi.
+
+Al momento, la versione 3.9.52 è disponibile per la modalità standard e la modalità limitata.
+
+
+
+==== Supporto per Docker 27 e Docker 28
+
+Docker 27 e Docker 28 sono ora supportati con il connettore.
+
+
+
+==== Cloud Volumes ONTAP
+
+I nodi Cloud Volumes ONTAP non si arrestano più quando il connettore non è conforme o è inattivo per più di 14 giorni.  Cloud Volumes ONTAP continua a inviare messaggi di gestione eventi quando perde l'accesso al connettore.  Questa modifica serve a garantire che Cloud Volumes ONTAP possa continuare a funzionare anche se il connettore è inattivo per un periodo di tempo prolungato.  Non modifica i requisiti di conformità per il connettore.
+
+
+
+=== Amministrazione Keystone disponibile in BlueXP
+
+La versione beta di NetApp Keystone in BlueXP ha aggiunto l'accesso all'amministrazione Keystone .  È possibile accedere alla pagina di registrazione per la versione beta NetApp Keystone dalla barra di navigazione a sinistra di BlueXP.
+
+
+
+=== Gestione dell'identità e degli accessi (IAM) BlueXP
+
+
+
+==== Nuovi ruoli di gestione dello storage
+
+Sono disponibili i ruoli di amministratore di archiviazione, specialista dell'integrità del sistema e visualizzatore di archiviazione, che possono essere assegnati agli utenti.
+
+Questi ruoli consentono di stabilire chi all'interno dell'organizzazione può scoprire e gestire le risorse di storage, nonché visualizzare le informazioni sullo stato di storage ed eseguire aggiornamenti software.
+
+Questi ruoli sono supportati per controllare l'accesso alle seguenti risorse di archiviazione:
+
+* Sistemi della serie E
+* Sistemi StorageGRID
+* Sistemi ONTAP on-premise
+
+
+È inoltre possibile utilizzare questi ruoli per controllare l'accesso ai seguenti servizi BlueXP :
+
+* Aggiornamenti software
+* Consulente digitale
+* Resilienza operativa
+* Efficienza economica
+* Sostenibilità
+
+
+Sono stati aggiunti i seguenti ruoli:
+
+* *Amministratore dell'archiviazione*
++
+Gestire lo stato di integrità, la governance e l'individuazione delle risorse di storage nell'organizzazione.  Questo ruolo può anche eseguire aggiornamenti software sulle risorse di archiviazione.
+
+* *Specialista in salute del sistema*
++
+Gestire lo stato di integrità e la governance dello storage per le risorse di storage nell'organizzazione.  Questo ruolo può anche eseguire aggiornamenti software sulle risorse di archiviazione.  Questo ruolo non può modificare o eliminare gli ambienti di lavoro.
+
+* *Visualizzatore di archiviazione*
++
+Visualizza le informazioni sullo stato di integrità dell'archiviazione e i dati di governance.
+
++
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."^]
+
+

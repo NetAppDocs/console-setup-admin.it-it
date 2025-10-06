@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: reference-ports-gcp.html 
+keywords: ports, firewall rules, http, https, inbound, outbound, connector, agent 
+summary: 'Le regole del firewall di Google Cloud per l"agente richiedono sia regole in entrata che in uscita.  La console NetApp crea automaticamente questo gruppo di sicurezza quando si crea un agente della console dalla console. Per altre opzioni di installazione, è necessario impostare manualmente questo gruppo di sicurezza.' 
+---
+= Regole del firewall dell'agente in Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le regole del firewall di Google Cloud per l'agente richiedono sia regole in entrata che in uscita.  La console NetApp crea automaticamente questo gruppo di sicurezza quando si crea un agente della console dalla console. Per altre opzioni di installazione, è necessario impostare manualmente questo gruppo di sicurezza.
+
+
+
+== Regole in entrata
+
+[cols="10,10,80"]
+|===
+| Protocollo | Porta | Scopo 
+
+
+| SSH | 22 | Fornisce accesso SSH all'host dell'agente 
+
+
+| HTTP | 80  a| 
+* Fornisce l'accesso HTTP dai browser Web client all'interfaccia utente locale
+* Utilizzato durante il processo di aggiornamento Cloud Volumes ONTAP
+
+
+
+
+| HTTPS | 443 | Fornisce l'accesso HTTPS dai browser Web client all'interfaccia utente locale 
+
+
+| TCP | 3128 | Fornisce a Cloud Volumes ONTAP l'accesso a Internet.  Dopo la distribuzione, è necessario aprire manualmente questa porta. 
+|===
+
+
+== Regole in uscita
+
+Le regole del firewall predefinite dell'agente aprono tutto il traffico in uscita.  Seguire le regole di base in uscita, se accettabili, oppure utilizzare regole di uscita avanzate per requisiti più rigorosi.
+
+
+
+=== Regole di base in uscita
+
+Le regole del firewall predefinite per l'agente includono le seguenti regole in uscita.
+
+[cols="20,20,60"]
+|===
+| Protocollo | Porta | Scopo 
+
+
+| Tutto TCP | Tutto | Tutto il traffico in uscita 
+
+
+| Tutti gli UDP | Tutto | Tutto il traffico in uscita 
+|===
+
+
+=== Regole in uscita avanzate
+
+Se sono necessarie regole rigide per il traffico in uscita, è possibile utilizzare le seguenti informazioni per aprire solo le porte necessarie per la comunicazione in uscita da parte dell'agente.
+
+
+NOTE: L'indirizzo IP di origine è l'host dell'agente.
+
+[cols="5*"]
+|===
+| Servizio | Protocollo | Porta | Destinazione | Scopo 
+
+
+| Chiamate API e AutoSupport | HTTPS | 443 | Gestione cluster ONTAP e Internet in uscita LIF | Chiamate API a Google Cloud, a ONTAP, a NetApp Data Classification e invio di messaggi AutoSupport a NetApp 
+
+
+| chiamate API | TCP | 8080 | Classificazione dei dati | Sonda per l'istanza di classificazione dei dati durante la distribuzione 
+
+
+| DNS | UDP | 53 | DNS | Utilizzato per la risoluzione DNS tramite classificazione dei dati 
+|===

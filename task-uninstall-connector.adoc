@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: task-uninstall-connector.html 
+keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent 
+summary: 'Disinstallare un agente Console per risolvere i problemi o per rimuoverlo definitivamente dall"host.  I passaggi da seguire dipendono dalla modalità di distribuzione utilizzata.  Dopo aver rimosso un agente Console dal tuo ambiente, puoi rimuoverlo dalla Console.' 
+---
+= Disinstallare e rimuovere un agente Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Disinstallare un agente Console per risolvere i problemi o per rimuoverlo definitivamente dall'host.  I passaggi da seguire dipendono dalla modalità di distribuzione utilizzata.  Dopo aver rimosso un agente Console dal tuo ambiente, puoi rimuoverlo dalla Console.
+
+link:concept-modes.html["Scopri di più sulle modalità di distribuzione della console NetApp"] .
+
+
+
+== Disinstallare l'agente quando si utilizza la modalità standard o limitata
+
+Se si utilizza la modalità standard o la modalità limitata (in altre parole, l'host dell'agente ha connettività in uscita), è necessario seguire i passaggi indicati di seguito per disinstallare l'agente.
+
+.Passi
+. Connettersi alla VM Linux per l'agente.
+. Dall'host Linux, eseguire lo script di disinstallazione:
++
+`/opt/application/netapp/service-manager-2/uninstall.sh [silent]`
+
++
+_silent_ esegue lo script senza chiedere conferma.
+
+
+
+
+
+== Rimuovere gli agenti della console dalla console
+
+Se un agente della Console è inattivo, è possibile rimuoverlo dall'elenco degli agenti.  Potresti farlo se elimini la macchina virtuale dell'agente o se disinstalli il software dell'agente.
+
+Tenere presente quanto segue sulla rimozione di un agente Console:
+
+* Questa azione non elimina la macchina virtuale.
+* Questa azione non può essere annullata: una volta rimosso un agente della console, non è possibile aggiungerlo di nuovo.
+
+
+.Passi
+. Selezionare *Amministrazione > Agenti*.
+. Nella pagina *Panoramica*, seleziona il menu azioni per un agente inattivo e seleziona *Rimuovi agente*.
+. Inserisci il nome dell'agente per confermare e poi seleziona *Rimuovi*.
+

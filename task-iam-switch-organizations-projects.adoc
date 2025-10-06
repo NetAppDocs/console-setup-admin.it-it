@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task-iam-switch-organizations-projects.html 
+keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors 
+summary: 'Potresti appartenere a più organizzazioni della Console o avere le autorizzazioni per accedere a più progetti o agenti all"interno di un"organizzazione.  Quando necessario, puoi passare facilmente da un"organizzazione, un progetto o un agente della console all"altro per accedere alle risorse associate a tale organizzazione, progetto o agente.' 
+---
+= Passare tra organizzazioni, progetti e agenti della console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Potresti appartenere a più organizzazioni della Console o avere le autorizzazioni per accedere a più progetti o agenti all'interno di un'organizzazione.  Quando necessario, puoi passare facilmente da un'organizzazione, un progetto o un agente della console all'altro per accedere alle risorse associate a tale organizzazione, progetto o agente.
+
+
+TIP: Potresti appartenere a più organizzazioni se un'altra organizzazione ti invita a unirti o se ne crei una tu stesso.  È possibile creare un'organizzazione aggiuntiva utilizzando l'API. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/post-organizations.html["Scopri come creare una nuova organizzazione"^]
+
+
+
+== Passare da un'organizzazione all'altra
+
+Se sei membro di più organizzazioni, puoi passare da una all'altra in qualsiasi momento.
+
+.Passi
+. Nell'intestazione superiore della Console, seleziona *Organizzazione*.
++
+image:screenshot-iam-switch-organizations.png["Uno screenshot del banner in alto, dove puoi selezionare il menu a discesa Organizzazione e poi selezionarne un'altra."]
+
+. Se hai delle organizzazioni partner, seleziona la scheda *Partnership* per visualizzare le organizzazioni partner disponibili.
+
+
++ La scheda *Partnership* non viene visualizzata se non hai organizzazioni partner.
+
+. Seleziona un'altra organizzazione e poi seleziona *Cambia*.
+
+
++ Se hai delle organizzazioni partner, seleziona la scheda *Partnership* per visualizzare le organizzazioni partner disponibili.
+
+
+
+== Passa da un progetto all'altro
+
+Se la tua organizzazione comprende più progetti e hai accesso a tali progetti, puoi passare da uno all'altro in qualsiasi momento.
+
+
+NOTE: Non è possibile passare a un altro progetto mentre si visualizza una qualsiasi delle pagine *Identità e accesso*.
+
+.Passi
+. Nell'intestazione superiore della Console, seleziona *Progetto*.
+. Sfoglia le cartelle e i progetti nella tua organizzazione, seleziona il progetto che desideri, quindi seleziona *Cambia*.
++
+image:screenshot-iam-switch-projects-select.png["Uno screenshot del menu Ambito in cui è possibile selezionare un nuovo progetto."]
+
+
+
+
+
+== Passare da un agente della console all'altro
+
+Se si dispone di più agenti Console, è possibile passare da uno all'altro per visualizzare i sistemi associati a un agente specifico.
+
+.Passi
+. Nell'intestazione superiore della Console, seleziona l'icona Agente.
+. Seleziona un altro agente e poi seleziona *Cambia*.
+
+
+.Informazioni correlate
+link:task-iam-associate-connectors.html["Associare agenti a cartelle e progetti"] .
+
+
+
+== Informazioni correlate
+
+* link:concept-identity-and-access-management.html["Scopri di più su identità e accesso nella console NetApp"]
+* link:task-iam-get-started.html["Inizia con identità e accesso"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Scopri di più sull'API per l'identità e l'accesso"^]
+

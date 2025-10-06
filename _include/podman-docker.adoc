@@ -1,0 +1,165 @@
+= 
+:allow-uri-read: 
+
+
+A seconda del sistema operativo in uso, prima di installare l'agente è necessario utilizzare Podman o Docker Engine.
+
+* Podman è richiesto per Red Hat Enterprise Linux 8 e 9.
++
+<<podman-versions,Visualizza le versioni di Podman supportate>> .
+
+* Docker Engine è richiesto per Ubuntu.
++
+<<podman-versions,Visualizza le versioni supportate di Docker Engine>> .
+
+
+
+.Passi
+[role="tabbed-block"]
+====
+.Podman
+--
+Per installare e configurare Podman, segui questi passaggi:
+
+* Abilita e avvia il servizio podman.socket
+* Installa python3
+* Installa il pacchetto podman-compose versione 1.0.6
+* Aggiungere podman-compose alla variabile d'ambiente PATH
+* Se si utilizza Red Hat Enterprise Linux 8, verificare che la versione di Podman utilizzi Aardvark DNS anziché CNI
+
+
+
+NOTE: Dopo aver installato l'agente, regolare la porta aardvark-dns (predefinita: 53) per evitare conflitti di porta DNS.  Seguire le istruzioni per configurare la porta.
+
+.Passi
+. Rimuovere il pacchetto podman-docker se è installato sull'host.
++
+[source, cli]
+----
+dnf remove podman-docker
+rm /var/run/docker.sock
+----
+. Installa Podman.
++
+È possibile ottenere Podman dai repository ufficiali di Red Hat Enterprise Linux.
+
++
+Per Red Hat Enterprise Linux 9:
+
++
+[source, cli]
+----
+sudo dnf install podman-2:<version>
+----
++
+Dove <versione> è la versione supportata di Podman che stai installando. <<podman-versions,Visualizza le versioni di Podman supportate>> .
+
++
+Per Red Hat Enterprise Linux 8:
+
++
+[source, cli]
+----
+sudo dnf install podman-3:<version>
+----
++
+Dove <versione> è la versione supportata di Podman che stai installando. <<podman-versions,Visualizza le versioni di Podman supportate>> .
+
+. Abilitare e avviare il servizio podman.socket.
++
+[source, cli]
+----
+sudo systemctl enable --now podman.socket
+----
+. Installa python3.
++
+[source, cli]
+----
+sudo dnf install python3
+----
+. Installa il pacchetto repository EPEL se non è già disponibile sul tuo sistema.
+. Se si utilizza Red Hat Enterprise:
++
+Questo passaggio è necessario perché podman-compose è disponibile nel repository Extra Packages for Enterprise Linux (EPEL).
+
++
+Per Red Hat Enterprise Linux 9:
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+----
++
+Per Red Hat Enterprise Linux 8:
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+----
+. Installa il pacchetto podman-compose 1.0.6.
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.0.6
+----
++
+
+NOTE: Utilizzando il `dnf install` Il comando soddisfa il requisito per aggiungere podman-compose alla variabile d'ambiente PATH.  Il comando di installazione aggiunge podman-compose a /usr/bin, che è già incluso nel `secure_path` opzione sull'host.
+
+. Se si utilizza Red Hat Enterprise Linux 8, verificare che la versione di Podman utilizzi NetAvark con Aardvark DNS anziché CNI.
++
+.. Controlla se il tuo networkBackend è impostato su CNI eseguendo il seguente comando:
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+.. Se networkBackend è impostato su `CNI` , dovrai cambiarlo in `netavark` .
+.. Installare `netavark` E `aardvark-dns` utilizzando il seguente comando:
++
+[source, cli]
+----
+dnf install aardvark-dns netavark
+----
+.. Apri il `/etc/containers/containers.conf` file e modificare l'opzione network_backend per utilizzare "netavark" invece di "cni".
+
+
++
+Se `/etc/containers/containers.conf` non esiste, apportare le modifiche alla configurazione `/usr/share/containers/containers.conf` .
+
+. Riavvia Podman.
++
+[source, cli]
+----
+systemctl restart podman
+----
+. Confermare che networkBackend sia ora cambiato in "netavark" utilizzando il seguente comando:
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+
+
+--
+.Motore Docker
+--
+Per installare Docker Engine, seguire la documentazione di Docker.
+
+.Passi
+. https://docs.docker.com/engine/install/["Visualizza le istruzioni di installazione da Docker"^]
++
+Segui i passaggi per installare una versione supportata di Docker Engine.  Non installare la versione più recente, poiché non è supportata dalla Console.
+
+. Verificare che Docker sia abilitato e in esecuzione.
++
+[source, cli]
+----
+sudo systemctl enable docker && sudo systemctl start docker
+----
+
+
+--
+====

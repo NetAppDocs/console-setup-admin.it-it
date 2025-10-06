@@ -1,0 +1,133 @@
+= 
+:allow-uri-read: 
+
+
+.Prima di iniziare
+Dovresti avere quanto segue:
+
+* Privilegi di root per installare l'agente.
+* Dettagli su un server proxy, se è necessario un proxy per l'accesso a Internet dall'agente.
++
+Dopo l'installazione è possibile configurare un server proxy, ma per farlo è necessario riavviare l'agente.
+
+* Un certificato firmato da una CA, se il server proxy utilizza HTTPS o se il proxy è un proxy di intercettazione.
+
+
+.Informazioni su questo compito
+Il programma di installazione disponibile sul sito di supporto NetApp potrebbe essere una versione precedente.  Dopo l'installazione, l'agente si aggiorna automaticamente se è disponibile una nuova versione.
+
+.Passi
+. Se le variabili di sistema _http_proxy_ o _https_proxy_ sono impostate sull'host, rimuoverle:
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+Se non si rimuovono queste variabili di sistema, l'installazione non riuscirà.
+
+. Scarica il software dell'agente da https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["Sito di supporto NetApp"^] e quindi copiarlo sull'host Linux.
++
+Dovresti scaricare il programma di installazione dell'agente "online" pensato per l'uso nella tua rete o nel cloud.
+
+. Assegnare le autorizzazioni per eseguire lo script.
++
+[source, cli]
+----
+chmod +x NetApp-Console-Agent-<version>
+----
++
+Dove <versione> è la versione dell'agente scaricato.
+
+. Eseguire lo script di installazione.
++
+[source, cli]
+----
+ ./NetApp-Console-Agent-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+I parametri --proxy e --cacert sono facoltativi.  Se si dispone di un server proxy, sarà necessario immettere i parametri come mostrato.  Il programma di installazione non richiede di fornire informazioni su un proxy.
+
++
+Ecco un esempio del comando che utilizza entrambi i parametri facoltativi:
+
++
+[source, cli]
+----
+ ./NetApp-Console-Agent-v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+--proxy configura l'agente per utilizzare un server proxy HTTP o HTTPS utilizzando uno dei seguenti formati:
+
++
+** \http://indirizzo:porta
+** \http://nome-utente:password@indirizzo:porta
+** \http://nome-dominio%92nome-utente:password@indirizzo:porta
+** \https://indirizzo:porta
+** \https://nome-utente:password@indirizzo:porta
+** \https://nome-dominio%92nome-utente:password@indirizzo:porta
++
+Notare quanto segue:
+
++
+*** L'utente può essere un utente locale o un utente di dominio.
+*** Per un utente di dominio, è necessario utilizzare il codice ASCII per \ come mostrato sopra.
+*** L'agente non supporta nomi utente o password che includono il carattere @.
+*** Se la password include uno qualsiasi dei seguenti caratteri speciali, è necessario anteporre una barra rovesciata a tale carattere speciale: & o !
++
+Per esempio:
+
++
+\http://bxpproxyuser:netapp1\!@indirizzo:3128
+
+
+
+
+
++
+--cacert specifica un certificato firmato da una CA da utilizzare per l'accesso HTTPS tra l'agente e il server proxy.  Questo parametro è obbligatorio solo se si specifica un server proxy HTTPS o se il proxy è un proxy di intercettazione.
+
+. Se hai utilizzato Podman, dovrai modificare la porta aardvark-dns.
++
+.. Eseguire l'SSH sulla macchina virtuale dell'agente.
+.. Aprire il file podman _/usr/share/containers/containers.conf_ e modificare la porta scelta per il servizio DNS Aardvark.  Ad esempio, cambialo in 54.
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+...
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+...
+Esc:wq
+----
+.. Riavviare la macchina virtuale dell'agente.
+
+
+
+
+. Attendi il completamento dell'installazione.
++
+Al termine dell'installazione, il servizio agente (occm) viene riavviato due volte se è stato specificato un server proxy.
+
+. Aprire un browser Web da un host che dispone di una connessione alla macchina virtuale dell'agente e immettere il seguente URL:
++
+https://_ipaddress_[]
+
+. Dopo aver effettuato l'accesso, configura l'agente:
++
+.. Specificare l'organizzazione della console da associare all'agente.
+.. Inserisci un nome per il sistema.
+.. In *Stai utilizzando un ambiente protetto?* mantieni disattivata la modalità con restrizioni.
++
+È consigliabile disattivare la modalità limitata perché questi passaggi descrivono come utilizzare la Console in modalità standard.  Dovresti abilitare la modalità limitata solo se disponi di un ambiente sicuro e desideri disconnettere questo account dai servizi backend della Console.  Se è così,link:task-quick-start-restricted-mode.html["segui i passaggi per iniziare a utilizzare la console NetApp in modalità limitata"] .
+
+.. Seleziona *Iniziamo*.
+
+
+

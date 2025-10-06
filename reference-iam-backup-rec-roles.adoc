@@ -1,0 +1,285 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-backup-rec-roles.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, roles, permissions, access control, role-based access control, rbac, role-based access 
+summary: 'È possibile assegnare i seguenti ruoli agli utenti per consentire loro di accedere a NetApp Backup and Recovery all"interno della Console.  I ruoli di backup e ripristino offrono la flessibilità di assegnare agli utenti un ruolo specifico per le attività che devono svolgere all"interno della tua organizzazione. Il modo in cui si assegnano i ruoli dipende dalle proprie pratiche aziendali e di gestione dell"archiviazione.' 
+---
+= Ruoli di backup e ripristino NetApp nella console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile assegnare i seguenti ruoli agli utenti per consentire loro di accedere a NetApp Backup and Recovery all'interno della Console.  I ruoli di backup e ripristino offrono la flessibilità di assegnare agli utenti un ruolo specifico per le attività che devono svolgere all'interno della tua organizzazione. Il modo in cui si assegnano i ruoli dipende dalle proprie pratiche aziendali e di gestione dell'archiviazione.
+
+Backup e ripristino utilizza i seguenti ruoli:
+
+* *Super amministratore di backup e ripristino*: esegue qualsiasi azione.
+* *Amministratore di backup e ripristino*: esegue backup su snapshot locali, replica su storage secondario ed esegue backup su storage di oggetti.
+* *Amministratore del backup e del ripristino*: Ripristina i carichi di lavoro.
+* *Amministratore clone di backup e ripristino*: clona applicazioni e dati.
+* *Visualizzatore di backup e ripristino*: visualizza le informazioni di backup e ripristino.
+
+
+La tabella seguente indica le azioni che ciascun ruolo può eseguire.
+
+[cols="20,20,15,15a,15a,15a"]
+|===
+| Caratteristica e azione | Super amministratore di backup e ripristino | Amministratore di backup | Ripristina amministratore | Clona amministratore | Spettatore 
+
+
+| Aggiungi, modifica o elimina host | SÌ | NO  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Installa i plugin | SÌ | NO  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Aggiungi credenziali (host, istanza, vCenter) | SÌ | NO  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Visualizza la dashboard e tutte le schede | SÌ | SÌ  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Inizia la prova gratuita | SÌ | NO  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Avviare la scoperta dei carichi di lavoro | NO | SÌ  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+| Visualizza le informazioni sulla licenza | SÌ | SÌ  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Attiva la licenza | SÌ | NO  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Visualizza gli host | SÌ | SÌ  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+6+| *Orari*: 
+
+
+| Attivare gli orari | SÌ | SÌ  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+| Sospendere gli orari | SÌ | SÌ  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+6+| *Politiche e protezione*: 
+
+
+| Visualizza i piani di protezione | SÌ | SÌ  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Creare, modificare o eliminare piani di protezione | SÌ | SÌ  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Ripristinare i carichi di lavoro | SÌ | NO  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Crea, dividi o elimina cloni | SÌ | NO  a| 
+NO
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+| Crea, modifica o elimina una policy | SÌ | SÌ  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+6+| *Segnalazioni*: 
+
+
+| Visualizza i report | SÌ | SÌ  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Crea report | SÌ | SÌ  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+| Elimina i report | SÌ | NO  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+6+| *Importa da SnapCenter e gestisci l'host*: 
+
+
+| Visualizza i dati SnapCenter importati | SÌ | SÌ  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Importa dati da SnapCenter | SÌ | SÌ  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Gestisci (migra) l'host | SÌ | SÌ  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+6+| *Configura impostazioni*: 
+
+
+| Configurare la directory dei registri | SÌ | SÌ  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Associare o rimuovere le credenziali dell'istanza | SÌ | SÌ  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+6+| *Secchi*: 
+
+
+| Visualizza i bucket di archiviazione | SÌ | SÌ  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Crea, modifica o elimina bucket di archiviazione | SÌ | SÌ  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+|===

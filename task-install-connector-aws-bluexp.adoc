@@ -1,0 +1,342 @@
+---
+sidebar: sidebar 
+permalink: task-install-connector-aws-bluexp.html 
+keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector 
+summary: È possibile creare un agente Console in AWS direttamente dalla console NetApp .  Prima di creare un agente Console in AWS dalla Console, è necessario configurare la rete e preparare le autorizzazioni AWS. 
+---
+= Crea un agente Console in AWS dalla console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile creare un agente Console in AWS direttamente dalla console NetApp .  Prima di creare un agente Console in AWS dalla Console, è necessario configurare la rete e preparare le autorizzazioni AWS.
+
+.Prima di iniziare
+* Dovresti avere unlink:concept-connectors.html["comprensione degli agenti della console"] .
+* Dovresti rivederelink:reference-limitations.html["Limitazioni dell'agente della console"] .
+
+
+
+
+== Passaggio 1: configurare la rete per la distribuzione di un agente della console in AWS
+
+Assicurarsi che il percorso di rete in cui si prevede di installare l'agente Console supporti i seguenti requisiti.  Questi requisiti consentono all'agente della console di gestire risorse e processi nel cloud ibrido.
+
+VPC e sottorete:: Quando si crea l'agente Console, è necessario specificare la VPC e la subnet in cui deve risiedere.
+
+
+Connessioni alle reti di destinazione:: L'agente Console richiede una connessione di rete alla posizione in cui si prevede di creare e gestire i sistemi.  Ad esempio, la rete in cui intendi creare sistemi Cloud Volumes ONTAP o un sistema di archiviazione nel tuo ambiente locale.
+
+
+Accesso a Internet in uscita:: La posizione di rete in cui si distribuisce l'agente Console deve disporre di una connessione Internet in uscita per contattare endpoint specifici.
+
+
+Endpoint contattati dall'agente della console:: L'agente della console necessita di accesso a Internet in uscita per contattare i seguenti endpoint per gestire risorse e processi all'interno dell'ambiente cloud pubblico per le operazioni quotidiane.
++
+--
+Gli endpoint elencati di seguito sono tutti voci CNAME.
+
+[cols="2a,1a"]
+|===
+| Punti finali | Scopo 
+
+
+ a| 
+Servizi AWS (amazonaws.com):
+
+* Formazione delle nuvole
+* Elastic Compute Cloud (EC2)
+* Gestione dell'identità e degli accessi (IAM)
+* Servizio di gestione delle chiavi (KMS)
+* Servizio token di sicurezza (STS)
+* Servizio di archiviazione semplice (S3)
+
+ a| 
+Per gestire le risorse AWS.  L'endpoint dipende dalla tua regione AWS. https://docs.aws.amazon.com/general/latest/gr/rande.html["Per i dettagli, fare riferimento alla documentazione AWS"^]
+
+
+
+ a| 
+\ https://mysupport.netapp.com
+ a| 
+Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp .
+
+
+
+ a| 
+\ https://signin.b2c.netapp.com
+ a| 
+Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp .
+
+
+
+ a| 
+\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+ a| 
+Per fornire funzionalità e servizi all'interno della NetApp Console.
+
+
+
+ a| 
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+ a| 
+Per ottenere immagini per gli aggiornamenti dell'agente della console.
+
+* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti.  Se usilink:link:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce.  Per evitare questo errore, saltare il controllo di convalida.
++
+Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di aggiornare le regole del firewall agli endpoint correnti il ​​prima possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
+
+* Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
+
+
+|===
+--
+
+
+Endpoint contattati dalla console NetApp:: Utilizzando la console NetApp basata sul Web fornita tramite il livello SaaS, questa contatta diversi endpoint per completare le attività di gestione dei dati.  Sono inclusi gli endpoint contattati per distribuire l'agente della Console dalla Console.
++
+--
+link:reference-networking-saas-console.html["Visualizza l'elenco degli endpoint contattati dalla console NetApp"] .
+
+--
+
+
+Server proxy:: NetApp supporta sia configurazioni proxy esplicite che trasparenti.  Se si utilizza un proxy trasparente, è necessario fornire solo il certificato per il server proxy.  Se si utilizza un proxy esplicito, saranno necessari anche l'indirizzo IP e le credenziali.
++
+--
+* indirizzo IP
+* Credenziali
+* Certificato HTTPS
+
+
+--
+
+
+porti:: Non c'è traffico in entrata verso l'agente della console, a meno che non venga avviato dall'utente o utilizzato come proxy per inviare messaggi AutoSupport da Cloud Volumes ONTAP al supporto NetApp .
++
+--
+* HTTP (80) e HTTPS (443) forniscono l'accesso all'interfaccia utente locale, che utilizzerai in rare circostanze.
+* SSH (22) è necessario solo se è necessario connettersi all'host per la risoluzione dei problemi.
+* Le connessioni in entrata sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
++
+Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in uscita per inviare messaggi AutoSupport , la Console configura automaticamente tali sistemi per utilizzare un server proxy incluso nell'agente della Console.  L'unico requisito è assicurarsi che il gruppo di sicurezza dell'agente Console consenta connessioni in entrata sulla porta 3128.  Sarà necessario aprire questa porta dopo aver distribuito l'agente Console.
+
+
+
+--
+
+
+Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizzare le origini dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della console sia sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione dei dati NetApp"^]
++
+--
+Sarà necessario implementare questo requisito di rete dopo aver creato l'agente Console.
+
+--
+
+
+
+
+== Passaggio 2: impostare le autorizzazioni AWS per l'agente della console
+
+La Console deve autenticarsi con AWS prima di poter distribuire l'istanza dell'agente della Console nella VPC.  Puoi scegliere uno di questi metodi di autenticazione:
+
+* Consentire alla Console di assumere un ruolo IAM che disponga delle autorizzazioni richieste
+* Fornire una chiave di accesso AWS e una chiave segreta per un utente IAM che dispone delle autorizzazioni richieste
+
+
+In entrambe le opzioni, il primo passo è creare un criterio IAM.  Questa policy contiene solo le autorizzazioni necessarie per avviare l'istanza dell'agente Console in AWS dalla Console.
+
+Se necessario, è possibile limitare la policy IAM utilizzando l'IAM `Condition` elemento. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html["Documentazione AWS: Elemento Condizione"^]
+
+.Passi
+. Vai alla console AWS IAM.
+. Selezionare *Criteri > Crea criterio*.
+. Selezionare *JSON*.
+. Copia e incolla la seguente policy:
++
+Questa policy contiene solo le autorizzazioni necessarie per avviare l'istanza dell'agente Console in AWS dalla Console.  Quando la Console crea l'agente della Console, applica un nuovo set di autorizzazioni all'istanza dell'agente della Console che consente all'agente della Console di gestire le risorse AWS. link:reference-permissions-aws.html["Visualizza le autorizzazioni richieste per l'istanza dell'agente Console stessa"] .
+
++
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:PutRolePolicy",
+        "iam:CreateInstanceProfile",
+        "iam:DeleteRolePolicy",
+        "iam:AddRoleToInstanceProfile",
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:DeleteInstanceProfile",
+        "iam:PassRole",
+        "iam:ListRoles",
+        "ec2:DescribeInstanceStatus",
+        "ec2:RunInstances",
+        "ec2:ModifyInstanceAttribute",
+        "ec2:CreateSecurityGroup",
+        "ec2:DeleteSecurityGroup",
+        "ec2:DescribeSecurityGroups",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:CreateNetworkInterface",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DeleteNetworkInterface",
+        "ec2:ModifyNetworkInterfaceAttribute",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeDhcpOptions",
+        "ec2:DescribeKeyPairs",
+        "ec2:DescribeRegions",
+        "ec2:DescribeInstances",
+        "ec2:CreateTags",
+        "ec2:DescribeImages",
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeLaunchTemplates",
+        "ec2:CreateLaunchTemplate",
+        "cloudformation:CreateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:ValidateTemplate",
+        "ec2:AssociateIamInstanceProfile",
+        "ec2:DescribeIamInstanceProfileAssociations",
+        "ec2:DisassociateIamInstanceProfile",
+        "iam:GetRole",
+        "iam:TagRole",
+        "kms:ListAliases",
+        "cloudformation:ListStacks"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:TerminateInstances"
+      ],
+      "Condition": {
+        "StringLike": {
+          "ec2:ResourceTag/OCCMInstance": "*"
+        }
+      },
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*"
+      ]
+    }
+  ]
+}
+----
+. Selezionare *Avanti* e aggiungere tag, se necessario.
+. Selezionare *Avanti* e immettere un nome e una descrizione.
+. Selezionare *Crea policy*.
+. È possibile associare il criterio a un ruolo IAM che la Console può assumere oppure a un utente IAM in modo da poter fornire alla Console le chiavi di accesso:
++
+** (Opzione 1) Impostare un ruolo IAM che la Console può assumere:
++
+... Vai alla console AWS IAM nell'account di destinazione.
+... In Gestione accessi, seleziona *Ruoli > Crea ruolo* e segui i passaggi per creare il ruolo.
+... In *Tipo di entità attendibile*, seleziona *Account AWS*.
+... Seleziona *Un altro account AWS* e inserisci l'ID dell'account SaaS della console: 952013314444
+... Seleziona la policy creata nella sezione precedente.
+... Dopo aver creato il ruolo, copia l'ARN del ruolo in modo da poterlo incollare nella Console quando crei l'agente della Console.
+
+
+** (Opzione 2) Impostare le autorizzazioni per un utente IAM in modo da poter fornire alla Console le chiavi di accesso:
++
+... Dalla console AWS IAM, seleziona *Utenti* e poi seleziona il nome utente.
+... Seleziona *Aggiungi autorizzazioni > Allega direttamente i criteri esistenti*.
+... Seleziona la policy che hai creato.
+... Selezionare *Avanti* e quindi *Aggiungi autorizzazioni*.
+... Assicurati di disporre della chiave di accesso e della chiave segreta per l'utente IAM.
+
+
+
+
+
+
+.Risultato
+Ora dovresti avere un ruolo IAM con le autorizzazioni richieste o un utente IAM con le autorizzazioni richieste.  Quando si crea l'agente Console dalla Console, è possibile fornire informazioni sul ruolo o sulle chiavi di accesso.
+
+
+
+== Passaggio 3: creare l'agente della console
+
+Creare l'agente Console direttamente dalla console basata sul Web.
+
+.Informazioni su questo compito
+* La creazione dell'agente Console dalla Console distribuisce un'istanza EC2 in AWS utilizzando una configurazione predefinita.  Non passare a un'istanza EC2 più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-connector-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
+* Quando la Console crea l'agente Console, crea anche un ruolo IAM e un profilo istanza per l'istanza.  Questo ruolo include autorizzazioni che consentono all'agente della console di gestire le risorse AWS.  Assicurarsi che il ruolo venga aggiornato man mano che verranno aggiunte nuove autorizzazioni nelle versioni future. link:reference-permissions-aws.html["Scopri di più sulla policy IAM per l'agente della console"] .
+
+
+.Prima di iniziare
+Dovresti avere quanto segue:
+
+* Un metodo di autenticazione AWS: un ruolo IAM o chiavi di accesso per un utente IAM con le autorizzazioni richieste.
+* Una VPC e una subnet che soddisfano i requisiti di rete.
+* Una coppia di chiavi per l'istanza EC2.
+* Dettagli su un server proxy, se è necessario un proxy per l'accesso a Internet dall'agente della console.
+* Impostarelink:#networking-aws-agent["requisiti di rete"] .
+* Impostarelink:#aws-permissions-agent["Autorizzazioni AWS"] .
+
+
+.Passi
+. Selezionare *Amministrazione > Agenti*.
+. Nella pagina *Panoramica*, seleziona *Distribuisci agente > AWS*
+. Per creare l'agente Console, seguire i passaggi della procedura guidata:
+. Nella pagina *Introduzione* viene fornita una panoramica del processo
+. Nella pagina *Credenziali AWS*, specifica la tua regione AWS e poi scegli un metodo di autenticazione, che può essere un ruolo IAM che la Console può assumere oppure una chiave di accesso AWS e una chiave segreta.
++
+
+TIP: Se si sceglie *Assumi ruolo*, è possibile creare il primo set di credenziali dalla procedura guidata di distribuzione dell'agente della console.  Ogni ulteriore set di credenziali deve essere creato dalla pagina Credenziali.  Saranno quindi disponibili tramite la procedura guidata in un elenco a discesa. link:task-adding-aws-accounts.html["Scopri come aggiungere credenziali aggiuntive"] .
+
+. Nella pagina *Dettagli*, fornire i dettagli sull'agente della console.
++
+** Inserisci un nome per l'istanza.
+** Aggiungere tag personalizzati (metadati) all'istanza.
+** Scegli se desideri che la Console crei un nuovo ruolo con le autorizzazioni richieste oppure se desideri selezionare un ruolo esistente che hai impostato conlink:reference-permissions-aws.html["i permessi richiesti"] .
+** Scegliere se si desidera crittografare i dischi EBS dell'agente Console.  È possibile utilizzare la chiave di crittografia predefinita oppure una chiave personalizzata.
+
+
+. Nella pagina *Rete*, specifica una VPC, una subnet e una coppia di chiavi per l'istanza, scegli se abilitare un indirizzo IP pubblico e, facoltativamente, specifica una configurazione proxy.
++
+Assicurati di disporre della coppia di chiavi corretta per accedere alla macchina virtuale dell'agente Console.  Senza una coppia di chiavi non è possibile accedervi.
+
+. Nella pagina *Gruppo di sicurezza*, scegliere se creare un nuovo gruppo di sicurezza o se selezionarne uno esistente che consenta le regole in entrata e in uscita richieste.
++
+link:reference-ports-aws.html["Visualizza le regole del gruppo di sicurezza per AWS"] .
+
+. Rivedi le tue selezioni per verificare che la configurazione sia corretta.
++
+.. La casella di controllo *Convalida configurazione agente* è selezionata per impostazione predefinita affinché la Console convalidi i requisiti di connettività di rete durante la distribuzione.  Se la Console non riesce a distribuire l'agente, fornisce un report per aiutarti a risolvere il problema.  Se la distribuzione riesce, non viene fornito alcun report.
+
+
++
+[]
+====
+Se stai ancora utilizzando illink:reference-networking-saas-console-previous.html["punti finali precedenti"] utilizzato per gli aggiornamenti degli agenti, la convalida fallisce con un errore.  Per evitare ciò, deselezionare la casella di controllo per saltare il controllo di convalida.
+
+====
+. Selezionare *Aggiungi*.
++
+La console prepara l'istanza in circa 10 minuti.  Rimani sulla pagina fino al completamento del processo.
+
+
+
+.Risultato
+Una volta completato il processo, l'agente della Console sarà disponibile per l'uso dalla Console.
+
+
+NOTE: Se la distribuzione non riesce, puoi scaricare un report e i registri dalla Console per aiutarti a risolvere i problemi.link:task-troubleshoot-connector.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
+
+Se disponi di bucket Amazon S3 nello stesso account AWS in cui hai creato l'agente della console, vedrai apparire automaticamente un ambiente di lavoro Amazon S3 nella pagina *Sistemi*. https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["Scopri come gestire i bucket S3 dalla console NetApp"^]

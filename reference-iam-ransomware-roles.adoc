@@ -1,0 +1,468 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-ransomware-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
+summary: 'all"interno di NetApp Console, è possibile assegnare ruoli per consentire agli utenti di accedere a NetApp Ransomware Resilience.' 
+---
+= Ruoli di accesso alla resilienza ransomware per NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+I ruoli di Ransomware Resilience forniscono agli utenti l'accesso a NetApp Ransomware Resilience.  I due ruoli sono amministratore della protezione ransomware e visualizzatore della protezione ransomware.  La differenza principale tra i due ruoli riguarda le azioni che possono intraprendere in Ransomware Resilience.
+
+La tabella seguente mostra le azioni che ciascun ruolo può eseguire.
+
+[cols="40,20a,20a,20a,20a"]
+|===
+| Caratteristica e azione | Amministratore di Ransomware Resilience | Visualizzatore di resilienza ransomware | Comportamento utente di Ransomware Resilience amministratore | Visualizzatore del comportamento dell'utente di Ransomware Resilience 
+
+
+| Visualizza la dashboard e tutte le schede  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Nella dashboard, aggiorna lo stato della raccomandazione  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Inizia la prova gratuita  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Avviare la scoperta dei carichi di lavoro  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Avviare la riscoperta dei carichi di lavoro  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+5+| *Nella scheda Proteggi*: 
+
+
+| Aggiungere, modificare o eliminare piani di protezione  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Proteggere i carichi di lavoro  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Identificare l'esposizione ai dati sensibili  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Elencare i piani di protezione e i dettagli  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Elenca i gruppi di protezione  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Visualizza i dettagli del gruppo di protezione  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Crea, modifica o elimina un gruppo di protezione  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Scarica i dati  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+5+| *Nella scheda Avvisi*: 
+
+
+| Visualizza avvisi e dettagli degli avvisi  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Modifica lo stato dell'incidente  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Segnala avviso per il recupero  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Visualizza i dettagli dell'incidente  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Ignorare o risolvere gli incidenti  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Blocca utente  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Ottieni l'elenco completo dei file interessati  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Scarica i dati degli avvisi  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Visualizza attività utente sospette  a| 
+NO
+ a| 
+NO
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+5+| *Nella scheda Recupera*: 
+
+
+| Scarica i file interessati  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Ripristinare il carico di lavoro  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Scarica i dati di recupero  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Scarica i report  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+5+| *Nella scheda Impostazioni*: 
+
+
+| Aggiungere o modificare le destinazioni di backup  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Elenca le destinazioni di backup  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Visualizza gli obiettivi SIEM connessi  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Aggiungere o modificare gli obiettivi SIEM  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Configurare l'esercitazione di preparazione  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Inizia l'esercitazione di preparazione  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Esercitazione di preparazione al reset  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Esercitazione di preparazione alla modifica  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Esaminare lo stato di preparazione dell'esercitazione  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Aggiorna la configurazione di rilevamento  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Visualizza la configurazione di rilevamento  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Configurare le impostazioni relative al comportamento sospetto degli utenti  a| 
+NO
+ a| 
+NO
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+5+| *Nella scheda Report*: 
+
+
+| Scarica i report  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+|===

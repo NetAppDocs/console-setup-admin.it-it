@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, BlueXP, Cloud Volumes ONTAP, days, running, Connectors should remain running, imdsv2, https tokens, agents should remain running, Console agent 
+summary: Le limitazioni note identificano piattaforme, dispositivi o funzioni che non sono supportati da questa versione del prodotto o che non interagiscono correttamente con esso. Esamina attentamente queste limitazioni. 
+---
+= Limitazioni note di NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le limitazioni note identificano piattaforme, dispositivi o funzioni che non sono supportati da questa versione del prodotto o che non interagiscono correttamente con esso. Esamina attentamente queste limitazioni.
+
+Queste limitazioni sono specifiche della configurazione della console e dell'amministrazione di NEtApp: l'agente, la piattaforma SaaS (Software as a Service) e altro ancora.
+
+
+
+== Limitazioni dell'agente della console
+
+
+
+=== Possibile conflitto con indirizzi IP nell'intervallo 172
+
+La console NetApp distribuisce un agente con due interfacce che hanno indirizzi IP compresi negli intervalli 172.17.0.0/16 e 172.18.0.0/16.
+
+Se la rete ha una subnet configurata con uno di questi intervalli, potrebbero verificarsi errori di connettività dalla Console.  Ad esempio, l'individuazione dei cluster ONTAP locali nella Console potrebbe non riuscire.
+
+Vedi l'articolo della Knowledge Baselink:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Manager/Cloud_Manager_shows_inactive_as_Connector_IP_range_in_172.x.x.x_conflict_with_docker_network["Conflitto IP dell'agente con la rete esistente"] per istruzioni su come modificare l'indirizzo IP delle interfacce dell'agente.
+
+
+
+=== La decrittazione SSL non è supportata
+
+La Console non supporta configurazioni firewall in cui è abilitata la decrittografia SSL.  Se la decrittografia SSL è abilitata, nella Console vengono visualizzati messaggi di errore e l'istanza dell'agente viene visualizzata come inattiva.
+
+Per una maggiore sicurezza, hai la possibilità dilink:task-installing-https-cert.html["installare un certificato HTTPS firmato da un'autorità di certificazione (CA)"] .
+
+
+
+=== Pagina vuota durante il caricamento dell'interfaccia utente locale
+
+Se si carica la console basata sul Web in esecuzione su un agente, a volte l'interfaccia potrebbe non essere visualizzata e si otterrebbe solo una pagina vuota.
+
+Questo problema è correlato a un problema di memorizzazione nella cache.  La soluzione alternativa è quella di utilizzare una sessione di navigazione in incognito o privata.
+
+
+
+=== Gli host Linux condivisi non sono supportati
+
+L'agente non è supportato su una VM condivisa con altre applicazioni.  La VM deve essere dedicata al software agente.
+
+
+
+=== Agenti ed estensioni di terze parti
+
+Gli agenti di terze parti o le estensioni VM non sono supportati sulla VM dell'agente.

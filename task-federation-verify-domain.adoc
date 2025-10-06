@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task-federation-verify-domain.html 
+keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
+summary: Per la federazione puoi utilizzare solo domini verificati. Se desideri federarti con un dominio diverso dal tuo dominio di posta elettronica, devi prima verificare di essere il proprietario del dominio.  Per la federazione è possibile utilizzare solo domini verificati. 
+---
+= Verifica il dominio email per la tua connessione federata
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se desideri federarti con un dominio diverso dal tuo dominio di posta elettronica, devi prima verificare di essere il proprietario del dominio.  Per la federazione è possibile utilizzare solo domini verificati.
+
+.Ruoli richiesti
+Il ruolo di amministratore della federazione è necessario per creare e gestire le federazioni.  Il visualizzatore della Federazione può visualizzare la pagina della Federazione.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
+
+La verifica del tuo dominio comporta l'aggiunta di un record TXT alle impostazioni DNS del tuo dominio.  Questo record viene utilizzato per dimostrare che sei il proprietario del dominio e consente alla console NetApp di considerare attendibile il dominio per la federazione.  Potrebbe essere necessario coordinarsi con l'amministratore IT o di rete per completare questo passaggio.
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Selezionare *Federazione* per visualizzare la pagina *Federazioni*.
+. Selezionare *Configura nuova federazione*.
+. Seleziona *Verifica la proprietà del dominio*.
+. Inserisci il dominio che vuoi verificare e seleziona *Continua*.
+. Copiare il record TXT fornito.
+. Vai alle impostazioni DNS del tuo dominio e configura il valore TXT fornito come record TXT per il tuo dominio.  Se necessario, collaborare con l'amministratore IT o di rete.
+. Dopo aver aggiunto il record TXT, tornare alla Console e selezionare *Verifica*.
+

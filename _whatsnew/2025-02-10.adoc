@@ -1,0 +1,97 @@
+= Connettore 3.9.49
+:allow-uri-read: 
+
+
+
+
+=== Connettore 3.9.49
+
+Questa versione di BlueXP Connector include piccoli miglioramenti della sicurezza e correzioni di bug.
+
+Al momento, la versione 3.9.49 è disponibile per la modalità standard e la modalità limitata.
+
+
+
+=== Gestione dell'identità e dell'accesso (IAM) BlueXP
+
+* Supporto per l'assegnazione di più ruoli a un utente BlueXP .
+* Supporto per l'assegnazione di un ruolo su più risorse dell'organizzazione BlueXP (Org/cartella/progetto)
+* I ruoli sono ora associati a una delle due categorie: piattaforma e servizio dati.
+
+
+
+
+==== La modalità limitata ora utilizza BlueXP IAM
+
+La gestione dell'identità e dell'accesso (IAM) BlueXP è ora utilizzata in modalità limitata.
+
+La gestione delle identità e degli accessi (IAM) BlueXP è un modello di gestione delle risorse e degli accessi che sostituisce e migliora le funzionalità precedenti fornite dagli account BlueXP quando si utilizza BlueXP in modalità standard e limitata.
+
+.Informazioni correlate
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-identity-and-access-management.html["Scopri di più su BlueXP IAM"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-get-started.html["Inizia con BlueXP IAM"]
+
+
+BlueXP IAM offre una gestione più granulare delle risorse e delle autorizzazioni:
+
+* Un'_organizzazione_ di primo livello ti consente di gestire l'accesso ai tuoi vari _progetti_.
+* Le _cartelle_ consentono di raggruppare progetti correlati.
+* La gestione avanzata delle risorse consente di associare una risorsa a una o più cartelle o progetti.
++
+Ad esempio, è possibile associare un sistema Cloud Volumes ONTAP a più progetti.
+
+* La gestione avanzata degli accessi consente di assegnare un ruolo ai membri a diversi livelli della gerarchia dell'organizzazione.
+
+
+Questi miglioramenti garantiscono un controllo migliore sulle azioni che gli utenti possono eseguire e sulle risorse a cui possono accedere.
+
+.In che modo BlueXP IAM influisce sul tuo account esistente in modalità limitata
+Quando accedi a BlueXP, noterai questi cambiamenti:
+
+* Il tuo _account_ ora si chiama _organizzazione_
+* I tuoi _spazi di lavoro_ ora si chiamano _progetti_
+* I nomi dei ruoli utente sono cambiati:
++
+** _Amministratore dell'account_ ora è _Amministratore dell'organizzazione_
+** _Amministrazione dell'area di lavoro_ ora è _Amministrazione della cartella o del progetto_
+** _Visualizzatore di conformità_ è ora _Visualizzatore di classificazione_
+
+
+* In Impostazioni, puoi accedere alla gestione dell'identità e dell'accesso BlueXP per sfruttare questi miglioramenti
+
+
+Notare quanto segue:
+
+* Non ci saranno modifiche agli utenti o agli ambienti di lavoro esistenti.
+* Sebbene i nomi dei ruoli siano cambiati, non ci sono differenze dal punto di vista delle autorizzazioni.  Gli utenti continueranno ad avere accesso agli stessi ambienti di lavoro di prima.
+* Non ci sono cambiamenti nel modo in cui accedi a BlueXP.  BlueXP IAM funziona con gli accessi cloud NetApp , le credenziali del sito di supporto NetApp e le connessioni federate, proprio come facevano gli account BlueXP .
+* Se avevi più account BlueXP , ora hai più organizzazioni BlueXP .
+
+
+.API per BlueXP IAM
+Questa modifica introduce una nuova API per BlueXP IAM, ma è retrocompatibile con la precedente API di tenancy. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Scopri di più sull'API per BlueXP IAM"^]
+
+.Modalità di distribuzione supportate
+BlueXP IAM è supportato quando si utilizza BlueXP in modalità standard e limitata.  Se utilizzi BlueXP in modalità privata, continuerai a utilizzare un _account_ BlueXP per gestire spazi di lavoro, utenti e risorse.
+
+
+
+=== Rilascio della modalità privata (3.9.48)
+
+Una nuova versione in modalità privata è ora disponibile per il download da https://mysupport.netapp.com/site/downloads["Sito di supporto NetApp"^]
+
+La versione 3.9.48 include aggiornamenti ai seguenti componenti e servizi BlueXP .
+
+[cols="3*"]
+|===
+| Componente o servizio | Versione inclusa in questa versione | Modifiche rispetto alla precedente versione della modalità privata 
+
+
+| Connettore | 3.9.48 | Vai al https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-48["novità nella pagina del connettore BlueXP"] e fare riferimento alle modifiche incluse per le versioni 3.9.48. 
+
+
+| Backup e ripristino | 21 febbraio 2025 | Vai al https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["novità nella pagina BlueXP backup and recovery"^] e fare riferimento alle modifiche incluse nella versione di febbraio 2025. 
+
+
+| Classificazione | 22 gennaio 2025 (versione 1.39) | Vai al https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["novità nella pagina BlueXP classification"^] e fare riferimento alle modifiche incluse nella versione 1.39. 
+|===

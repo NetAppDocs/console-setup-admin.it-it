@@ -1,0 +1,173 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-platform-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, bluexp 
+summary: Assegna ruoli di piattaforma agli utenti per concedere autorizzazioni per gestire la console NetApp , assegnare ruoli, aggiungere utenti, creare agenti della console e gestire federazioni. 
+---
+= Ruoli di accesso alla piattaforma NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Assegna ruoli di piattaforma agli utenti per concedere autorizzazioni per gestire la console NetApp , assegnare ruoli, aggiungere utenti, creare agenti della console e gestire federazioni.
+
+.Esempio di ruoli organizzativi per una grande organizzazione multinazionale
+XYZ Corporation organizza l'accesso all'archiviazione dei dati per regione (Nord America, Europa e Asia-Pacifico), garantendo un controllo regionale con supervisione centralizzata.
+
+L'*amministratore dell'organizzazione* nella console di XYZ Corporation crea un'organizzazione iniziale e cartelle separate per ogni regione. L'*amministratore della cartella o del progetto* di ogni regione organizza i progetti (con le risorse associate) all'interno della cartella della regione.
+
+Gli amministratori regionali con il ruolo di *Amministratore cartella o progetto* gestiscono attivamente le proprie cartelle aggiungendo risorse e utenti. Questi amministratori regionali possono anche aggiungere, rimuovere o rinominare le cartelle e i progetti che gestiscono. L'*amministratore dell'organizzazione* eredita le autorizzazioni per tutte le nuove risorse, mantenendo la visibilità dell'utilizzo dello spazio di archiviazione nell'intera organizzazione.
+
+All'interno della stessa organizzazione, a un utente viene assegnato il ruolo di *Amministratore federazione* per gestire la federazione dell'organizzazione con il proprio IdP aziendale. Questo utente può aggiungere o rimuovere organizzazioni federate, ma non può gestire utenti o risorse all'interno dell'organizzazione. L'*amministratore dell'organizzazione* assegna a un utente il ruolo di *Visualizzatore federazione* per controllare lo stato della federazione e visualizzare le organizzazioni federate.
+
+Le tabelle seguenti indicano le azioni che ciascun ruolo della piattaforma Console può eseguire.
+
+
+
+== Ruoli di amministrazione dell'organizzazione
+
+[cols="2,1,1"]
+|===
+| Compito | Amministratore dell'organizzazione | Amministratore di cartelle o progetti 
+
+
+| Crea agenti | SÌ | NO 
+
+
+| Crea, modifica o elimina sistemi dalla Console (aggiungi o scopri sistemi) | SÌ | SÌ 
+
+
+| Crea cartelle e progetti, inclusa l'eliminazione | SÌ | NO 
+
+
+| Rinomina cartelle e progetti esistenti | SÌ | SÌ 
+
+
+| Assegna ruoli e aggiungi utenti | SÌ | SÌ 
+
+
+| Associare risorse a cartelle e progetti | SÌ | SÌ 
+
+
+| Associare agenti a cartelle e progetti | SÌ | NO 
+
+
+| Rimuovere gli agenti dalle cartelle e dai progetti | SÌ | NO 
+
+
+| Gestire gli agenti (modificare certificati, impostazioni e così via) | SÌ | NO 
+
+
+| Gestisci le credenziali da Amministrazione > Credenziali | SÌ | SÌ 
+
+
+| Crea, gestisci e visualizza le federazioni | SÌ | NO 
+
+
+| Registrati per ricevere supporto e invia casi tramite la Console | SÌ | SÌ 
+
+
+| Utilizzare servizi dati non associati a un ruolo di accesso esplicito | SÌ | SÌ 
+
+
+| Visualizza la pagina Audit e le notifiche | SÌ | SÌ 
+|===
+
+
+== Ruoli della Federazione
+
+[cols="2,1,1"]
+|===
+| Compito | Amministratore della Federazione | Visualizzatore della federazione 
+
+
+| Creare una federazione | SÌ | NO 
+
+
+| Verificare un dominio | SÌ | NO 
+
+
+| Aggiungere un dominio a una federazione | SÌ | NO 
+
+
+| Disattivare ed eliminare le federazioni | SÌ | NO 
+
+
+| Federazioni di prova | SÌ | NO 
+
+
+| Visualizza le federazioni e i loro dettagli | SÌ | SÌ 
+|===
+
+
+== Ruoli di partnership
+
+[cols="2,1,1"]
+|===
+| Compito | Amministratore della partnership | Visualizzatore di partnership 
+
+
+| Può creare una partnership | SÌ | NO 
+
+
+| Assegnare ruoli ai membri partner | SÌ | NO 
+
+
+| Può aggiungere membri a una partnership | SÌ | NO 
+
+
+| Può visualizzare i dettagli della partnership dell'organizzazione | SÌ | SÌ 
+|===
+
+
+== Ruoli di super amministratore e visualizzatore
+
+Il ruolo di *Super amministratore* fornisce accesso completo alla gestione delle funzionalità della Console, dell'archiviazione e dei servizi dati.  Questo ruolo è adatto a coloro che supervisionano l'amministrazione e la governance.  Al contrario, il ruolo *Super viewer* offre un accesso di sola lettura, ideale per revisori o stakeholder che necessitano di visibilità senza apportare modifiche.
+
+Le organizzazioni dovrebbero utilizzare l'accesso *Super amministratore* con parsimonia per ridurre al minimo i rischi per la sicurezza e allinearsi al principio del privilegio minimo.  La maggior parte delle organizzazioni dovrebbe assegnare ruoli ben definiti, con solo le autorizzazioni necessarie, per ridurre i rischi e migliorare la verificabilità.
+
+.Esempio per i ruoli super
+ABC Corporation dispone di un piccolo team di cinque persone che sfrutta la NetApp Console per la gestione dei servizi dati e dello storage.  Invece di distribuire più ruoli, assegnano il ruolo di *Super amministratore* a due membri senior del team che gestiscono tutte le attività amministrative, tra cui la gestione degli utenti e la configurazione delle risorse.  Ai restanti tre membri del team viene assegnato il ruolo di *Super visualizzatore*, che consente loro di monitorare lo stato dell'archiviazione e del servizio dati senza la possibilità di modificare le impostazioni.
+
+[cols="2,1"]
+|===
+| Ruolo | Ruoli ereditati 
+
+
+ a| 
+Super amministratore
+ a| 
+* Amministratore dell'organizzazione
+* Amministratore di cartelle o progetti
+* Amministratore della Federazione
+* Amministratore della partnership
+* Amministratore di Ransomware Resilience
+* Amministratore del ripristino di emergenza
+* Super amministratore di backup
+* Amministratore di archiviazione
+* Amministratore Keystone
+* Amministratore di Google Cloud NetApp Volumes
+
+
+
+
+ a| 
+Super spettatore
+ a| 
+* Visualizzatore dell'organizzazione
+* Visualizzatore della federazione
+* Visualizzatore di partnership
+* Visualizzatore di resilienza ransomware
+* Visualizzatore di ripristino di emergenza
+* Visualizzatore di backup
+* Visualizzatore di archiviazione
+* Visualizzatore Keystone
+* Visualizzatore Google Cloud NetApp Volumes
+
+
+|===

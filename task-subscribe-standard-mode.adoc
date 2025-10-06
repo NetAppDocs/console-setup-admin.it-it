@@ -1,0 +1,193 @@
+---
+sidebar: sidebar 
+permalink: task-subscribe-standard-mode.html 
+keywords: subscribe, subscription, marketplace subscription, paygo, contract, annual contract 
+summary: 'Abbonati ai servizi dati NetApp dal marketplace del tuo provider cloud per pagare i servizi dati a una tariffa oraria o tramite un contratto annuale.  Se hai acquistato una licenza da NetApp, devi anche abbonarti all"offerta del marketplace.  L"addebito avviene sempre per primo sulla tua licenza, ma ti verrà addebitata la tariffa oraria se superi la capacità consentita o se scade il termine della licenza.' 
+---
+= Iscriviti a NetApp Intelligent Services (modalità standard)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Abbonati a NetApp Intelligent Services dal marketplace del tuo provider cloud per pagare i servizi dati a una tariffa oraria (PAYGO) o tramite un contratto annuale.  Se hai acquistato una licenza da NetApp (BYOL), devi anche abbonarti all'offerta del marketplace.  L'addebito avviene sempre per primo sulla tua licenza, ma ti verrà addebitata la tariffa oraria se superi la capacità consentita o se scade il termine della licenza.
+
+Un abbonamento al marketplace consente di addebitare i seguenti servizi dati NetApp :
+
+* Backup e ripristino NetApp
+* Cloud Volumes ONTAP
+* NetApp Cloud Tiering
+* Resilienza al ransomware NetApp
+* Ripristino di emergenza NetApp
+
+
+NetApp Data Classification è abilitato tramite l'abbonamento, ma l'utilizzo della classificazione è gratuito.
+
+.Prima di iniziare
+Per potersi iscrivere ai servizi dati, è necessario aver già distribuito un agente Console.  È necessario associare un abbonamento al marketplace alle credenziali cloud connesse a un agente della console.
+
+[role="tabbed-block"]
+====
+.AWS
+--
+Il seguente video mostra i passaggi per abbonarsi a NetApp Intelligent Services da AWS Marketplace:
+
+.Iscriviti a NetApp Intelligent Services da AWS Marketplace
+video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
+.Passi
+. Selezionare *Amministrazione > *Credenziali*.
+. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
++
+È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla console NetApp .
+
++
+image:screenshot_aws_configure_subscription.png["Uno screenshot del menu azioni per un set di credenziali esistenti."]
+
+. Per associare le credenziali a un abbonamento esistente, seleziona l'abbonamento dall'elenco a discesa e seleziona *Configura*.
+. Per associare le credenziali a un nuovo abbonamento, seleziona *Aggiungi abbonamento > Continua* e segui i passaggi indicati in AWS Marketplace:
++
+.. Seleziona *Visualizza opzioni di acquisto*.
+.. Seleziona *Iscriviti*.
+.. Seleziona *Configura il tuo account*.
++
+Verrai reindirizzato alla console NetApp .
+
+.. Dalla pagina *Assegnazione abbonamento*:
++
+*** Seleziona le organizzazioni o gli account della Console a cui desideri associare questo abbonamento.
+*** Nel campo *Sostituisci abbonamento esistente*, scegli se desideri sostituire automaticamente l'abbonamento esistente per un'organizzazione o un account con questo nuovo abbonamento.
++
+La Console sostituisce l'abbonamento esistente per tutte le credenziali nell'organizzazione o nell'account con questo nuovo abbonamento.  Se un set di credenziali non è mai stato associato a un abbonamento, questo nuovo abbonamento non sarà associato a tali credenziali.
+
++
+Per tutte le altre organizzazioni o account, sarà necessario associare manualmente l'abbonamento ripetendo questi passaggi.
+
+*** Seleziona *Salva*.
+
+
+
+
+
+
+--
+.Azzurro
+--
+.Passi
+. Selezionare *Amministrazione > *Credenziali*.
+. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
++
+È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla console NetApp .
+
+. Per associare le credenziali a un abbonamento esistente, seleziona l'abbonamento dall'elenco a discesa e seleziona *Configura*.
+. Per associare le credenziali a un nuovo abbonamento, seleziona *Aggiungi abbonamento > Continua* e segui i passaggi in Azure Marketplace:
++
+.. Se richiesto, accedi al tuo account Azure.
+.. Seleziona *Iscriviti*.
+.. Compila il modulo e seleziona *Iscriviti*.
+.. Una volta completato il processo di sottoscrizione, seleziona *Configura account ora*.
++
+Verrai reindirizzato alla console NetApp .
+
+.. Dalla pagina *Assegnazione abbonamento*:
++
+*** Seleziona le organizzazioni o gli account della Console a cui desideri associare questo abbonamento.
+*** Nel campo *Sostituisci abbonamento esistente*, scegli se desideri sostituire automaticamente l'abbonamento esistente per un'organizzazione o un account con questo nuovo abbonamento.
++
+La Console sostituisce l'abbonamento esistente per tutte le credenziali nell'organizzazione o nell'account con questo nuovo abbonamento.  Se un set di credenziali non è mai stato associato a un abbonamento, questo nuovo abbonamento non sarà associato a tali credenziali.
+
++
+Per tutte le altre organizzazioni o account, sarà necessario associare manualmente l'abbonamento ripetendo questi passaggi.
+
+*** Seleziona *Salva*.
++
+Il video seguente mostra i passaggi per abbonarsi da Azure Marketplace:
+
++
+.Iscriviti a NetApp Intelligent Services da Azure Marketplace
+video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
+
+
+
+
+
+
+--
+.Google Cloud
+--
+.Passi
+. Selezionare *Amministrazione > *Credenziali*.
+. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.  +necessario nuovo screenshot (TS)image:screenshot_gcp_add_subscription.png["Uno screenshot del menu azioni per un set di credenziali esistenti."]
+. Per configurare un abbonamento esistente con le credenziali selezionate, seleziona un progetto Google Cloud e un abbonamento dall'elenco a discesa, quindi seleziona *Configura*.
++
+image:screenshot_gcp_associate.gif["Uno screenshot di un progetto Google Cloud e dell'abbonamento selezionato per le credenziali Google Cloud."]
+
+. Se non hai ancora un abbonamento, seleziona *Aggiungi abbonamento > Continua* e segui i passaggi indicati in Google Cloud Marketplace.
++
+
+NOTE: Prima di completare i passaggi seguenti, assicurati di disporre sia dei privilegi di amministratore della fatturazione nel tuo account Google Cloud sia di un accesso alla console NetApp .
+
++
+.. Dopo essere stato reindirizzato al https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Pagina NetApp Intelligent Services su Google Cloud Marketplace"^] , assicurati che nel menu di navigazione in alto sia selezionato il progetto corretto.
++
+image:screenshot_gcp_cvo_marketplace.png["Uno screenshot della pagina del marketplace Cloud Volumes ONTAP in Google Cloud."]
+
+.. Seleziona *Iscriviti*.
+.. Seleziona l'account di fatturazione appropriato e accetta i termini e le condizioni.
+.. Seleziona *Iscriviti*.
++
+Questo passaggio invia la richiesta di trasferimento a NetApp.
+
+.. Nella finestra di dialogo pop-up, seleziona *Registrati con NetApp, Inc.*
++
+Questo passaggio deve essere completato per collegare l'abbonamento a Google Cloud all'organizzazione o all'account della Console.  Il processo di collegamento di un abbonamento non sarà completato finché non verrai reindirizzato da questa pagina e non accederai alla Console.
+
++
+image:screenshot_gcp_marketplace_register.png["Uno screenshot di un pop-up di registrazione."]
+
+.. Completa i passaggi nella pagina *Assegnazione abbonamento*:
++
+
+NOTE: Se qualcuno della tua organizzazione ha già un abbonamento al marketplace dal tuo account di fatturazione, verrai reindirizzato a https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["la pagina Cloud Volumes ONTAP nella console NetApp"^] Invece.  Se ciò non è previsto, contatta il team di vendita NetApp .  Google consente un solo abbonamento per account di fatturazione Google.
+
++
+*** Seleziona le organizzazioni o gli account della Console a cui desideri associare questo abbonamento.
+*** Nel campo *Sostituisci abbonamento esistente*, scegli se desideri sostituire automaticamente l'abbonamento esistente per un'organizzazione o un account con questo nuovo abbonamento.
++
+La Console sostituisce l'abbonamento esistente per tutte le credenziali nell'organizzazione o nell'account con questo nuovo abbonamento.  Se un set di credenziali non è mai stato associato a un abbonamento, questo nuovo abbonamento non sarà associato a tali credenziali.
+
++
+Per tutte le altre organizzazioni o account, sarà necessario associare manualmente l'abbonamento ripetendo questi passaggi.
+
+*** Seleziona *Salva*.
++
+Il seguente video mostra i passaggi per abbonarsi da Google Cloud Marketplace:
+
++
+.Iscriviti da Google Cloud Marketplace
+video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
+
+
+.. Una volta completato questo processo, torna alla pagina Credenziali nella Console e seleziona questo nuovo abbonamento.
++
+image:screenshot_gcp_associate.gif["Uno screenshot della pagina di assegnazione dell'abbonamento."]
+
+
+
+
+
+--
+====
+.Informazioni correlate
+* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-capacity-licenses.html["Gestisci le licenze basate sulla capacità BYOL per Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["Gestire le licenze BYOL per i servizi dati"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["Gestisci le credenziali e gli abbonamenti AWS"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html["Gestisci le credenziali e gli abbonamenti di Azure"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["Gestisci le credenziali e gli abbonamenti di Google Cloud"]
+

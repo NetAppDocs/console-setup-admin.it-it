@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: task-sign-up-saas.html 
+keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
+summary: La console NetApp è accessibile tramite una console basata sul Web.  Per iniziare a utilizzare la Console, il primo passo è registrarsi o accedere utilizzando le credenziali del sito di supporto NetApp oppure creando un account di accesso alla Console NetApp . 
+---
+= Registrati o accedi alla console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La console NetApp è accessibile tramite una console basata sul Web.  Per iniziare a utilizzare la Console, il primo passo è registrarsi o accedere utilizzando le credenziali del sito di supporto NetApp oppure creando un account di accesso alla Console NetApp .
+
+.Informazioni su questo compito
+Quando accedi alla Console per la prima volta, puoi registrarti o effettuare l'accesso utilizzando una delle seguenti opzioni:
+
+Accesso alla console NetApp:: Puoi registrarti creando un login.  Questo metodo di autenticazione richiede di specificare il tuo indirizzo email e una password.  Dopo aver verificato il tuo indirizzo email, puoi effettuare l'accesso e creare un'organizzazione, se non ne fai già parte.
+Credenziali del sito di supporto NetApp (NSS):: Se disponi già delle credenziali del sito di supporto NetApp , non è necessario registrarsi alla Console.  Accedi utilizzando le tue credenziali NSS e la Console ti chiederà di creare un'organizzazione, se non ne fai già parte.
++
+--
+Ti verrà inviato un codice di accesso monouso (OTP) all'indirizzo e-mail registrato.  A ogni tentativo di accesso viene generato un nuovo OTP.
+
+--
+Connessione federata:: Se la tua azienda dispone già di un'istanza di NetApp Console, l'amministratore della console potrebbe aver configurato l'accesso Single Sign-On per accedere utilizzando le credenziali della directory aziendale (identità federata).
++
+--
+link:concept-federation.html["Scopri come utilizzare la federazione delle identità con la console NetApp"] .
+
+--
+
+
+.Passi
+. Apri un browser web e vai su https://console.netapp.com["Console NetApp"^]
+. Se disponi di un account NetApp Support Site o se hai già configurato la federazione delle identità, inserisci l'indirizzo e-mail associato al tuo account direttamente nella pagina *Accedi*.
++
+In entrambi i casi, l'iscrizione alla Console avviene tramite questo accesso iniziale.
+
+. Se vuoi registrarti creando un login alla Console, seleziona *Registrati*.
++
+.. Nella pagina *Iscriviti*, inserisci le informazioni richieste e seleziona *Avanti*.
++
+Si prega di notare che nel modulo di registrazione sono ammessi solo caratteri inglesi.
+
+.. Controlla la tua casella di posta per trovare un'e-mail da NetApp che include le istruzioni per verificare il tuo indirizzo e-mail.
++
+Questo passaggio è obbligatorio prima di poter accedere alla Console.
+
+
+
+. Dopo aver effettuato l'accesso, leggere il Contratto di licenza con l'utente finale e accettare i termini.
++
+Se il tuo account utente non appartiene ancora a un'organizzazione Console, ti verrà chiesto di crearne una.
+
+. Nella pagina *Benvenuto*, inserisci un nome per l'organizzazione della tua Console.
++
+La Console definisce un'organizzazione ed è l'elemento di primo livello nella gestione dell'identità e dell'accesso (IAM) della Console. link:concept-identity-and-access-management.html["Scopri di più su IAM"] .
+
++
+Se la tua azienda ha già un'organizzazione e desideri unirti ad essa, chiudi la Console e chiedi all'amministratore dell'organizzazione di associarti all'organizzazione.  Dopo essere stato aggiunto, potrai effettuare l'accesso e avrai accesso all'organizzazione Console. link:task-iam-manage-members-permissions#add-members["Scopri come aggiungere membri a un'organizzazione esistente"] .
+
+. Seleziona *Iniziamo*.
+

@@ -1,0 +1,262 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-disaster-rec-roles.html 
+keywords: disaster recovery, role-based access control, failover admin, replication plans, job- monitoring, business continuity, compliance- management, operational governance, access delegation, rbac, IAM roles 
+summary: 'È possibile assegnare i seguenti ruoli agli utenti per consentire loro di accedere a NetApp Disaster Recovery all"interno della Console.  I ruoli di Disaster Recovery offrono la flessibilità di assegnare agli utenti un ruolo specifico per le attività che devono svolgere all"interno della tua organizzazione. Il modo in cui si assegnano i ruoli dipende dalle proprie pratiche aziendali e di gestione dell"archiviazione.' 
+---
+= Ruoli di NetApp Disaster Recovery nella console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile assegnare i seguenti ruoli agli utenti per consentire loro di accedere a NetApp Disaster Recovery all'interno della Console.  I ruoli di Disaster Recovery offrono la flessibilità di assegnare agli utenti un ruolo specifico per le attività che devono svolgere all'interno della tua organizzazione. Il modo in cui si assegnano i ruoli dipende dalle proprie pratiche aziendali e di gestione dell'archiviazione.
+
+Il ripristino di emergenza utilizza i seguenti ruoli:
+
+* *Amministratore del ripristino di emergenza*: Esegui qualsiasi azione.
+* *Amministratore failover di disaster recovery*: esegue failover e migrazioni.
+* *Amministratore dell'applicazione di ripristino di emergenza*: crea piani di replica.  Modificare i piani di replicazione.  Avviare i failover di prova.
+* *Visualizzatore di ripristino di emergenza*: visualizza solo le informazioni.
+
+
+La tabella seguente indica le azioni che ciascun ruolo può eseguire.
+
+[cols="30,20a,20a,20a,20a"]
+|===
+| Caratteristica e azione | Amministratore del ripristino di emergenza | Amministratore del failover del ripristino di emergenza | Amministratore dell'applicazione di ripristino di emergenza | Visualizzatore di ripristino di emergenza 
+
+
+| Visualizza la dashboard e tutte le schede  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Inizia la prova gratuita  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Avviare la scoperta dei carichi di lavoro  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Visualizza le informazioni sulla licenza  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Attiva la licenza  a| 
+SÌ
+ a| 
+NO
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+5+| *Nella scheda Siti*: 
+
+
+| Visualizza i siti  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Aggiungere, modificare o eliminare siti  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+5+| *Nella scheda Piani di replicazione*: 
+
+
+| Visualizza i piani di replicazione  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Visualizza i dettagli del piano di replicazione  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Creare o modificare piani di replicazione  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+| Crea report  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Visualizza istantanee  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Eseguire test di failover  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+| Eseguire failover  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Eseguire failback  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Eseguire migrazioni  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+5+| *Nella scheda Gruppi di risorse*: 
+
+
+| Visualizza gruppi di risorse  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Crea, modifica o elimina gruppi di risorse  a| 
+SÌ
+ a| 
+NO
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+5+| *Nella scheda Monitoraggio lavori*: 
+
+
+| Visualizza i lavori  a| 
+SÌ
+ a| 
+NO
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Annulla lavori  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+|===

@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: task-iam-associate-connectors.html 
+keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector, 
+summary: 'Se i membri della tua organizzazione hanno bisogno di utilizzare un agente Console in un altro progetto, devi associare quell"agente Console al rispettivo progetto.' 
+---
+= Associare un agente Console ad altre cartelle e progetti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando un _amministratore dell'organizzazione_ crea un agente della console, l'agente della console viene automaticamente associato al progetto attualmente selezionato all'interno dell'organizzazione.  Sebbene qualcuno con il ruolo di _Amministratore organizzazione_ possa accedere a quell'agente della Console da qualsiasi punto dell'organizzazione.  Gli altri membri della tua organizzazione possono accedere a quell'agente Console solo dal progetto in cui è stato creato, a meno che tu non associ quell'agente Console ad altri progetti.
+
+.Prima di iniziare
+Esaminare il funzionamento dell'associazione degli agenti della console. link:concept-identity-and-access-management.html#associate-agents["Scopri come utilizzare l'agente Console con Identity and Access"] .
+
+.Informazioni su questo compito
+Un _amministratore di cartella o di progetto_ può visualizzare tutti gli agenti della console nella pagina *Agente*, ma può associare gli agenti della console solo alle cartelle e ai progetti per i quali dispone delle autorizzazioni. link:reference-iam-predefined-roles.html["Scopri di più sulle azioni che un _amministratore di cartella o di progetto_ può completare"] .
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso* > *Agenti*.
+. Nella tabella, trova l'agente Console che desideri associare.
++
+Utilizzare la ricerca sopra la tabella per trovare un agente Console specifico o filtrare la tabella in base alla gerarchia delle risorse.
+
+. Per visualizzare le cartelle e i progetti collegati all'agente Console, selezionareimage:icon-action.png["Icona a tre punti"] e poi seleziona *Visualizza dettagli*.
++
+La pagina visualizza i dettagli sulle cartelle e sui progetti associati all'agente Console.
+
+. Seleziona *Associa a cartella o progetto*.
+. Seleziona una cartella o un progetto, quindi seleziona *Accetta*.
+. Per associare l'agente Console a una cartella o a un progetto aggiuntivo, selezionare *Aggiungi una cartella o un progetto*, quindi selezionare la cartella o il progetto.
+. Selezionare *Agente associato*.
+
+
+.Dopo aver finito
+Associare le risorse dell'agente Console alle stesse cartelle e progetti dalla pagina *Risorse*.
+
+link:task-iam-manage-resources.html#associate-resource["Scopri come associare una risorsa a cartelle e progetti"] .
+
+.Informazioni correlate
+* link:concept-connectors.html["Scopri di più sugli agenti della console NetApp"]
+* link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e degli accessi di NetApp Console"]
+* link:task-iam-get-started.html["Inizia con identità e accesso"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Scopri di più sull'API per la gestione dell'identità e degli accessi"^]
+

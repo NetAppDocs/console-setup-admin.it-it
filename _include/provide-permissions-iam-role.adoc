@@ -1,0 +1,11 @@
+= 
+:allow-uri-read: 
+
+
+.Passi
+. Vai alla console Amazon EC2.
+. Selezionare *Istanze*.
+. Selezionare l'istanza dell'agente Console.
+. Selezionare *Azioni > Sicurezza > Modifica ruolo IAM*.
+. Selezionare il ruolo IAM e selezionare *Aggiorna ruolo IAM*.
+

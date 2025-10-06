@@ -1,0 +1,282 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-storage-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: 'È possibile assegnare i seguenti ruoli agli utenti per consentire loro di accedere alle funzionalità di gestione dello storage nella console NetApp .  È possibile assegnare agli utenti un ruolo amministrativo per gestire l"archiviazione o un ruolo di visualizzatore per il monitoraggio.' 
+---
+= Ruoli di accesso all'archiviazione per NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile assegnare i seguenti ruoli agli utenti per consentire loro di accedere alle funzionalità di gestione dello storage nella console NetApp .  È possibile assegnare agli utenti un ruolo amministrativo per gestire l'archiviazione o un ruolo di visualizzatore per il monitoraggio.
+
+
+NOTE: Questi ruoli non sono disponibili dall'API di partnership della console NetApp .
+
+Gli amministratori possono assegnare ruoli di archiviazione agli utenti per le seguenti risorse e funzionalità di archiviazione:
+
+Risorse di archiviazione:
+
+* Cluster ONTAP on-premise
+* StorageGRID
+* Serie E
+
+
+Servizi e funzionalità della console:
+
+* Consulente digitale
+* Aggiornamenti software
+* Pianificazione del ciclo di vita
+* Sostenibilità
+
+
+.Esempio di ruoli di archiviazione nella console NetApp
+XYZ Corporation, una multinazionale, dispone di un ampio team di ingegneri e amministratori di storage.  Consentono a questo team di gestire le risorse di archiviazione per le proprie regioni, limitando al contempo l'accesso alle attività principali della Console, come la gestione degli utenti, la creazione degli agenti e la gestione delle licenze.
+
+All'interno di un team di 12 persone, a due utenti viene assegnato il ruolo di *Visualizzatore di archiviazione*, che consente loro di monitorare le risorse di archiviazione associate ai progetti della Console a cui sono assegnati.  Ai restanti nove viene assegnato il ruolo di *Amministratore di storage*, che include la possibilità di gestire gli aggiornamenti software, accedere a ONTAP System Manager tramite la Console e scoprire le risorse di storage (aggiungere sistemi).  A una persona del team viene assegnato il ruolo di *Specialista dell'integrità del sistema*, in modo che possa gestire l'integrità delle risorse di storage nella propria regione, ma non modificare o eliminare alcun sistema.  Questa persona può anche eseguire aggiornamenti software sulle risorse di archiviazione per i progetti a lei assegnati.
+
+L'organizzazione dispone di altri due utenti con il ruolo di *Amministratore organizzazione* che possono gestire tutti gli aspetti della Console, tra cui la gestione degli utenti, la creazione degli agenti e la gestione delle licenze, nonché di diversi utenti con il ruolo di *Amministratore cartella o progetto* che possono eseguire attività di amministrazione della Console per le cartelle e i progetti a cui sono assegnati.
+
+Nella tabella seguente vengono illustrate le azioni eseguite da ciascun ruolo di archiviazione.
+
+[cols="40,20a,20a,20a"]
+|===
+| Caratteristica e azione | Amministratore di archiviazione | Specialista in salute del sistema | Visualizzatore di archiviazione 
+
+
+4+| *Gestione dell'archiviazione*: 
+
+
+| Scoprire nuove risorse (creare sistemi)  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+| Visualizza i sistemi scoperti  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+| Elimina i sistemi dalla Console  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Modificare i sistemi  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| *Crea agenti*  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+4+| *Consulente digitale* 
+
+
+| Visualizza tutte le pagine e le funzioni  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+4+| *Licenze e abbonamenti* 
+
+
+| Visualizza tutte le pagine e le funzioni  a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+4+| *Aggiornamenti software* 
+
+
+| Visualizza la landing page e i consigli  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Esaminare le potenziali raccomandazioni sulla versione e i principali vantaggi  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Visualizza i dettagli di aggiornamento per un cluster  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Esegui controlli pre-aggiornamento e scarica il piano di aggiornamento  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Installa gli aggiornamenti software  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+4+| *Pianificazione del ciclo di vita* 
+
+
+| Esaminare lo stato di pianificazione della capacità  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Scegli l'azione successiva (migliore pratica, livello)  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Trasferisci i dati inattivi nell'archiviazione cloud e libera spazio di archiviazione  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+| Imposta promemoria  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+4+| *Sostenibilità* 
+
+
+| Visualizza dashboard e consigli  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Scarica i dati del report  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Modifica la percentuale di mitigazione del carbonio  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+| Correggi le raccomandazioni  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+| Rinviare le raccomandazioni  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+4+| *Accesso al gestore del sistema* 
+
+
+| Può inserire le credenziali  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+
+
+4+| *Credenziali* 
+
+
+| Credenziali utente  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+
+|===

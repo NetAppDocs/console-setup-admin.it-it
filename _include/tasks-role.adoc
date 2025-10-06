@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+. Seleziona il menu azioniimage:icon-action.png["un'icona con tre punti verticali"] accanto al membro a cui vuoi assegnare un ruolo e seleziona *Aggiungi un ruolo*.
+. Per aggiungere un ruolo, completare i passaggi indicati nella finestra di dialogo:
++
+** *Seleziona un'organizzazione, una cartella o un progetto*: scegli il livello della gerarchia delle risorse per il quale il membro deve avere le autorizzazioni.
++
+Se selezioni l'organizzazione o una cartella, il membro avrà autorizzazioni per tutto ciò che risiede all'interno dell'organizzazione o della cartella.
+
+** *Seleziona una categoria*: Scegli una categoria di ruolo. link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"^] .
+** Seleziona un *Ruolo*: scegli un ruolo che fornisca al membro le autorizzazioni per le risorse associate all'organizzazione, alla cartella o al progetto selezionato.
+** *Aggiungi ruolo*: se desideri concedere l'accesso a cartelle o progetti aggiuntivi all'interno della tua organizzazione, seleziona *Aggiungi ruolo*, specifica un'altra cartella, un altro progetto o una categoria di ruolo, quindi seleziona una categoria di ruolo e un ruolo corrispondente.
+
+
+. Seleziona *Aggiungi nuovi ruoli*.
+
+
+. Dalla pagina *Membri*, vai a un membro nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Visualizza dettagli*.
+. Nella tabella, espandi la riga corrispondente all'organizzazione, alla cartella o al progetto in cui desideri modificare il ruolo assegnato al membro e seleziona *Visualizza* nella colonna *Ruolo* per visualizzare i ruoli assegnati a questo membro.
+. È possibile modificare un ruolo esistente per un membro o rimuovere un ruolo.
++
+.. Per modificare il ruolo di un membro, seleziona *Modifica* accanto al ruolo che desideri modificare.  È possibile modificare un ruolo solo in un ruolo all'interno della stessa categoria di ruoli.  Ad esempio, è possibile passare da un ruolo di servizio dati a un altro.  Conferma la modifica.
+.. Per annullare l'assegnazione del ruolo a un membro, selezionareimage:icon-delete.png["Un'icona che assomiglia a un cestino della spazzatura"] accanto al ruolo per annullare l'assegnazione del ruolo corrispondente al membro.  Ti verrà chiesto di confermare la rimozione.
+
+
+
+
+. Dalla pagina *Membri*, vai a un membro nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Visualizza dettagli*.
+. Nella tabella, espandi la riga corrispondente all'organizzazione, alla cartella o al progetto in cui desideri visualizzare il ruolo assegnato al membro e seleziona *Visualizza* nella colonna *Ruolo*.
+

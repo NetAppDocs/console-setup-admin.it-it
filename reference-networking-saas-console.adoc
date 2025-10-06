@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: reference-networking-saas-console.html 
+keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
+summary: 'NetApp Console, l"agente NetApp Console e i servizi dati NetApp richiedono l"accesso a Internet in uscita e la possibilità di contattare gli endpoint necessari.' 
+---
+= Preparare l'accesso alla rete per NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console, l'agente NetApp Console e i servizi dati NetApp richiedono l'accesso a Internet in uscita e la possibilità di contattare gli endpoint necessari.
+
+Sarà necessario configurare l'accesso alla rete per quanto segue:
+
+* Computer che accedono alla console NetApp come software come servizio (SaaS)
+* Posizioni di rete in cui distribuire gli agenti della console installati in locale o nel cloud.
+* Endpoint aggiuntivi per determinati servizi dati NetApp , tra cui Cloud Volumes ONTAP.
+
+
+
+NOTE: NetApp ha ridotto gli endpoint di rete richiesti per la Console e gli agenti della Console, migliorando la sicurezza e semplificando la distribuzione.  È importante sottolineare che tutte le distribuzioni precedenti alla versione 4.0.0 continuano a essere pienamente supportate.  Sebbene gli endpoint precedenti rimangano disponibili per gli agenti esistenti, NetApp consiglia vivamente di aggiornare le regole del firewall agli endpoint correnti dopo aver confermato il corretto aggiornamento degli agenti.link:reference-networking-saas-console-previous.html["Scopri come aggiornare l'elenco degli endpoint."]
+
+
+
+== Endpoint contattati dalla console NetApp
+
+Ogni computer che accede alla console NetApp deve disporre di connessioni agli endpoint elencati di seguito.
+
+Il sistema contatta questi endpoint in due scenari:
+
+* Da un computer che accede al https://console.netapp.com["Console NetApp"^] come software come servizio (SaaS).
+* Da un computer che accede direttamente a un host agente della Console, per effettuare l'accesso e configurarlo oppure per accedere alla Console dall'host agente.
+
+
+[cols="2*"]
+|===
+| Punti finali | Scopo 
+
+
+| \ https://mysupport.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp . 
+
+
+| \ https://signin.b2c.netapp.com | Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp . 
+
+
+| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | Per fornire funzionalità e servizi all'interno della NetApp Console. 
+
+
+ a| 
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+ a| 
+Per ottenere immagini per gli aggiornamenti dell'agente della console.
+
+* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti.  Se usilink:link:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce.  Per evitare questo errore, saltare il controllo di convalida.
++
+Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di aggiornare le regole del firewall agli endpoint correnti il ​​prima possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
+
+* Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
+
+
+|===
+
+
+== Preparare la rete per l'agente della console
+
+L'agente Console può essere installato in locale o nel cloud e contatta gli endpoint per completare le azioni avviate dalla console.
+
+Gli agenti della console devono avere accesso agli stessi endpoint della console NetApp , oltre ad endpoint aggiuntivi a seconda di dove si installa l'agente.
+
+Configurare l'accesso all'endpoint di rete prima di installare l'agente Console.
+
+* link:task-install-connector-aws-bluexp.html#networking-aws-agent["Configurare l'accesso alla rete AWS per un agente della console"]
+* link:task-install-connector-azure-bluexp.html#networking-azure-agent["Configurare l'accesso alla rete di Azure per un agente della console"]
+* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["Configurare l'accesso alla rete Google Cloud per un agente della console"]
+* link:task-install-connector-on-prem.html#network-access-agent["Configurare l'accesso alla rete locale per un agente della console"]
+
+
+
+
+== Preparare la rete per Cloud Volumes ONTAP
+
+Alcuni servizi dati NetApp e Cloud Volumes ONTAP richiedono che l'agente disponga di un accesso Internet in uscita aggiuntivo.
+
+
+
+=== Endpoint per Cloud Volumes ONTAP
+
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["Endpoint per Cloud Volumes ONTAP in AWS"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Endpoint per Cloud Volumes ONTAP in Azure"]
+* link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Endpoint per Cloud Volumes ONTAP in Google Cloud"]
+
+
+https://docs.netapp.com/us-en/data-services-family/["Fare riferimento alla documentazione dei rispettivi servizi dati NetApp ."^]

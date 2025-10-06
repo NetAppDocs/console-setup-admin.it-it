@@ -1,0 +1,472 @@
+---
+sidebar: sidebar 
+permalink: task-install-agent-google-gcloud.html 
+keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
+summary: 'Per creare un agente Console in Google Cloud utilizzando Google Cloud, è necessario configurare la rete, preparare le autorizzazioni di Google Cloud, abilitare le API di Google Cloud e quindi creare l"agente Console.' 
+---
+= Crea un agente Console da Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per creare un agente Console in Google Cloud utilizzando Google Cloud, è necessario configurare la rete, preparare le autorizzazioni di Google Cloud, abilitare le API di Google Cloud e quindi creare l'agente Console.
+
+.Prima di iniziare
+* Dovresti avere unlink:concept-connectors.html["comprensione degli agenti della console"] .
+* Dovresti rivederelink:reference-limitations.html["Limitazioni dell'agente della console"] .
+
+
+
+
+== Passaggio 1: configurare la rete
+
+Configurare la rete per consentire all'agente della console di gestire le risorse e connettersi alle reti di destinazione e a Internet.
+
+VPC e sottorete:: Quando si crea l'agente Console, è necessario specificare la VPC e la subnet in cui deve risiedere.
+
+
+Connessioni alle reti di destinazione:: L'agente Console richiede una connessione di rete alla posizione in cui si prevede di creare e gestire i sistemi.  Ad esempio, la rete in cui intendi creare sistemi Cloud Volumes ONTAP o un sistema di archiviazione nel tuo ambiente locale.
+
+
+Accesso a Internet in uscita:: La posizione di rete in cui si distribuisce l'agente Console deve disporre di una connessione Internet in uscita per contattare endpoint specifici.
+
+
+Endpoint contattati dall'agente della console:: L'agente della console necessita di accesso a Internet in uscita per contattare i seguenti endpoint per gestire risorse e processi all'interno dell'ambiente cloud pubblico per le operazioni quotidiane.
++
+--
+Gli endpoint elencati di seguito sono tutti voci CNAME.
+
+[cols="2a,1a"]
+|===
+| Punti finali | Scopo 
+
+
+ a| 
+\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects
+ a| 
+Per gestire le risorse in Google Cloud.
+
+
+
+ a| 
+\ https://mysupport.netapp.com
+ a| 
+Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp .
+
+
+
+ a| 
+\ https://signin.b2c.netapp.com
+ a| 
+Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp .
+
+
+
+ a| 
+\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+ a| 
+Per fornire funzionalità e servizi all'interno della NetApp Console.
+
+
+
+ a| 
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+ a| 
+Per ottenere immagini per gli aggiornamenti dell'agente della console.
+
+* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti.  Se usilink:link:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce.  Per evitare questo errore, saltare il controllo di convalida.
++
+Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di aggiornare le regole del firewall agli endpoint correnti il ​​prima possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
+
+* Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
+
+
+|===
+--
+
+
+Endpoint contattati dalla console NetApp:: Utilizzando la console NetApp basata sul Web fornita tramite il livello SaaS, questa contatta diversi endpoint per completare le attività di gestione dei dati.  Sono inclusi gli endpoint contattati per distribuire l'agente della Console dalla Console.
++
+--
+link:reference-networking-saas-console.html["Visualizza l'elenco degli endpoint contattati dalla console NetApp"] .
+
+--
+
+
+Server proxy:: NetApp supporta sia configurazioni proxy esplicite che trasparenti.  Se si utilizza un proxy trasparente, è necessario fornire solo il certificato per il server proxy.  Se si utilizza un proxy esplicito, saranno necessari anche l'indirizzo IP e le credenziali.
++
+--
+* indirizzo IP
+* Credenziali
+* Certificato HTTPS
+
+
+--
+
+
+porti:: Non c'è traffico in entrata verso l'agente della console, a meno che non venga avviato dall'utente o utilizzato come proxy per inviare messaggi AutoSupport da Cloud Volumes ONTAP al supporto NetApp .
++
+--
+* HTTP (80) e HTTPS (443) forniscono l'accesso all'interfaccia utente locale, che utilizzerai in rare circostanze.
+* SSH (22) è necessario solo se è necessario connettersi all'host per la risoluzione dei problemi.
+* Le connessioni in entrata sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
++
+Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in uscita per inviare messaggi AutoSupport , la Console configura automaticamente tali sistemi per utilizzare un server proxy incluso nell'agente della Console.  L'unico requisito è assicurarsi che il gruppo di sicurezza dell'agente Console consenta connessioni in entrata sulla porta 3128.  Sarà necessario aprire questa porta dopo aver distribuito l'agente Console.
+
+
+
+--
+
+
+Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizzare le origini dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della console sia sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione dei dati NetApp"^]
++
+--
+Implementare questo requisito di rete dopo aver creato l'agente Console.
+
+--
+
+
+
+
+== Passaggio 2: impostare le autorizzazioni per creare l'agente della console
+
+Imposta le autorizzazioni per l'utente di Google Cloud per distribuire la VM dell'agente della console da Google Cloud.
+
+.Passi
+. Crea un ruolo personalizzato in Google Platform:
++
+.. Crea un file YAML che includa le seguenti autorizzazioni:
++
+[source, yaml]
+----
+title: Console agent deployment policy
+description: Permissions for the user who deploys the NetApp Console agent
+stage: GA
+includedPermissions:
+- compute.disks.create
+- compute.disks.get
+- compute.disks.list
+- compute.disks.setLabels
+- compute.disks.use
+- compute.firewalls.create
+- compute.firewalls.delete
+- compute.firewalls.get
+- compute.firewalls.list
+- compute.globalOperations.get
+- compute.images.get
+- compute.images.getFromFamily
+- compute.images.list
+- compute.images.useReadOnly
+- compute.instances.attachDisk
+- compute.instances.create
+- compute.instances.get
+- compute.instances.list
+- compute.instances.setDeletionProtection
+- compute.instances.setLabels
+- compute.instances.setMachineType
+- compute.instances.setMetadata
+- compute.instances.setTags
+- compute.instances.start
+- compute.instances.updateDisplayDevice
+- compute.machineTypes.get
+- compute.networks.get
+- compute.networks.list
+- compute.networks.updatePolicy
+- compute.projects.get
+- compute.regions.get
+- compute.regions.list
+- compute.subnetworks.get
+- compute.subnetworks.list
+- compute.zoneOperations.get
+- compute.zones.get
+- compute.zones.list
+- deploymentmanager.compositeTypes.get
+- deploymentmanager.compositeTypes.list
+- deploymentmanager.deployments.create
+- deploymentmanager.deployments.delete
+- deploymentmanager.deployments.get
+- deploymentmanager.deployments.list
+- deploymentmanager.manifests.get
+- deploymentmanager.manifests.list
+- deploymentmanager.operations.get
+- deploymentmanager.operations.list
+- deploymentmanager.resources.get
+- deploymentmanager.resources.list
+- deploymentmanager.typeProviders.get
+- deploymentmanager.typeProviders.list
+- deploymentmanager.types.get
+- deploymentmanager.types.list
+- resourcemanager.projects.get
+- compute.instances.setServiceAccount
+- iam.serviceAccounts.list
+----
+.. Da Google Cloud, attiva Cloud Shell.
+.. Carica il file YAML che include le autorizzazioni richieste.
+.. Crea un ruolo personalizzato utilizzando `gcloud iam roles create` comando.
++
+L'esempio seguente crea un ruolo denominato "connectorDeployment" a livello di progetto:
+
++
+gcloud iam roles create connectorDeployment --project=myproject --file=connector-deployment.yaml
+
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Documentazione di Google Cloud: creazione e gestione di ruoli personalizzati"^]
+
+
+
+. Assegna questo ruolo personalizzato all'utente che distribuisce l'agente Console da Google Cloud.
++
+https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Documenti di Google Cloud: Concedi un singolo ruolo"^]
+
+
+
+
+
+== Passaggio 3: impostare le autorizzazioni per le operazioni dell'agente della console
+
+È necessario un account di servizio Google Cloud per fornire all'agente della Console le autorizzazioni di cui la Console ha bisogno per gestire le risorse in Google Cloud.  Quando si crea l'agente Console, è necessario associare questo account di servizio alla VM dell'agente Console.
+
+È tua responsabilità aggiornare il ruolo personalizzato man mano che vengono aggiunte nuove autorizzazioni nelle versioni successive.  Se saranno necessarie nuove autorizzazioni, queste saranno elencate nelle note di rilascio.
+
+.Passi
+. Crea un ruolo personalizzato in Google Cloud:
++
+.. Crea un file YAML che includa il contenuto dellink:reference-permissions-gcp.html["autorizzazioni dell'account di servizio per l'agente della console"] .
+.. Da Google Cloud, attiva Cloud Shell.
+.. Carica il file YAML che include le autorizzazioni richieste.
+.. Crea un ruolo personalizzato utilizzando `gcloud iam roles create` comando.
++
+L'esempio seguente crea un ruolo denominato "connettore" a livello di progetto:
+
++
+`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Documentazione di Google Cloud: creazione e gestione di ruoli personalizzati"^]
+
+
+
+. Crea un account di servizio in Google Cloud e assegna il ruolo all'account di servizio:
++
+.. Dal servizio IAM e amministrazione, seleziona *Account di servizio > Crea account di servizio*.
+.. Inserisci i dettagli dell'account di servizio e seleziona *Crea e continua*.
+.. Seleziona il ruolo che hai appena creato.
+.. Completa i passaggi rimanenti per creare il ruolo.
++
+https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Documentazione di Google Cloud: creazione di un account di servizio"^]
+
+
+
+. Se si prevede di distribuire i sistemi Cloud Volumes ONTAP in progetti diversi da quello in cui risiede l'agente della console, sarà necessario fornire all'account di servizio dell'agente della console l'accesso a tali progetti.
++
+Ad esempio, supponiamo che l'agente Console si trovi nel progetto 1 e che si desideri creare sistemi Cloud Volumes ONTAP nel progetto 2.  Sarà necessario concedere l'accesso all'account di servizio nel progetto 2.
+
++
+.. Dal servizio IAM e amministrazione, seleziona il progetto Google Cloud in cui desideri creare i sistemi Cloud Volumes ONTAP .
+.. Nella pagina *IAM*, seleziona *Concedi accesso* e fornisci i dettagli richiesti.
++
+*** Inserisci l'email dell'account di servizio dell'agente della console.
+*** Selezionare il ruolo personalizzato dell'agente della console.
+*** Seleziona *Salva*.
+
+
+
+
++
+Per maggiori dettagli, fare riferimento a https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Documentazione di Google Cloud"^]
+
+
+
+
+
+== Passaggio 4: impostare le autorizzazioni VPC condivise
+
+Se si utilizza una VPC condivisa per distribuire risorse in un progetto di servizio, sarà necessario preparare le autorizzazioni.
+
+Questa tabella è di riferimento e il tuo ambiente dovrebbe riflettere la tabella delle autorizzazioni una volta completata la configurazione IAM.
+
+.Visualizza le autorizzazioni VPC condivise
+[%collapsible]
+====
+[cols="10,10,10,18,18,34"]
+|===
+| Identità | Creatore | Ospitato in | Autorizzazioni del progetto di servizio | Autorizzazioni del progetto host | Scopo 
+
+
+| Account Google per distribuire l'agente | Costume | Progetto di servizio  a| 
+link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Politica di distribuzione degli agenti"]
+ a| 
+compute.networkUser
+| Distribuzione dell'agente nel progetto di servizio 
+
+
+| account di servizio agente | Costume | Progetto di servizio  a| 
+link:reference-permissions-gcp.html["Politica dell'account del servizio agente"]
+| compute.networkUser deploymentmanager.editor | Distribuzione e manutenzione di Cloud Volumes ONTAP e dei servizi nel progetto di servizio 
+
+
+| Account di servizio Cloud Volumes ONTAP | Costume | Progetto di servizio | membro storage.admin: account di servizio NetApp Console come serviceAccount.user | N / A | (Facoltativo) Per NetApp Cloud Tiering e NetApp Backup and Recovery 
+
+
+| Agente di servizio delle API di Google | Google Cloud | Progetto di servizio  a| 
+(Predefinito) Editor
+ a| 
+compute.networkUser
+| Interagisce con le API di Google Cloud per conto della distribuzione.  Consente alla Console di utilizzare la rete condivisa. 
+
+
+| Account di servizio predefinito di Google Compute Engine | Google Cloud | Progetto di servizio  a| 
+(Predefinito) Editor
+ a| 
+compute.networkUser
+| Distribuisce istanze di Google Cloud e infrastrutture di elaborazione per conto della distribuzione.  Consente alla Console di utilizzare la rete condivisa. 
+|===
+Note:
+
+. deploymentmanager.editor è necessario nel progetto host solo se non si passano regole del firewall alla distribuzione e si sceglie di lasciare che la Console le crei per conto proprio.  Se non è specificata alcuna regola, la console NetApp crea una distribuzione nel progetto host che contiene la regola del firewall VPC0.
+. firewall.create e firewall.delete sono necessari solo se non si passano regole del firewall alla distribuzione e si sceglie di lasciare che la Console le crei per conto proprio.  Queste autorizzazioni si trovano nel file .yaml dell'account Console.  Se si distribuisce una coppia HA utilizzando una VPC condivisa, queste autorizzazioni verranno utilizzate per creare le regole del firewall per VPC1, 2 e 3.  Per tutte le altre distribuzioni, queste autorizzazioni verranno utilizzate anche per creare regole per VPC0.
+. Per Cloud Tiering, l'account del servizio di tiering deve avere il ruolo serviceAccount.user sull'account del servizio, non solo a livello di progetto.  Attualmente, se si assegna serviceAccount.user a livello di progetto, le autorizzazioni non vengono visualizzate quando si esegue una query sull'account di servizio con getIAMPolicy.
+
+
+====
+
+
+== Passaggio 5: abilita le API di Google Cloud
+
+Abilitare diverse API di Google Cloud prima di distribuire l'agente Console e Cloud Volumes ONTAP.
+
+.Fare un passo
+. Abilita le seguenti API di Google Cloud nel tuo progetto:
++
+** API di Cloud Deployment Manager V2
+** API di registrazione cloud
+** API di Cloud Resource Manager
+** API di Compute Engine
+** API di gestione dell'identità e dell'accesso (IAM)
+** API del servizio di gestione delle chiavi cloud (KMS)
++
+(Obbligatorio solo se si prevede di utilizzare NetApp Backup and Recovery con chiavi di crittografia gestite dal cliente (CMEK))
+
+
+
+
+
+https://cloud.google.com/apis/docs/getting-started#enabling_apis["Documentazione di Google Cloud: abilitazione delle API"^]
+
+
+
+== Passaggio 6: creare l'agente della console
+
+Crea un agente Console utilizzando Google Cloud.
+
+La creazione dell'agente Console distribuisce un'istanza VM in Google Cloud con la configurazione predefinita.  Non passare a un'istanza VM più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-connector-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
+
+.Prima di iniziare
+Dovresti avere quanto segue:
+
+* Le autorizzazioni Google Cloud richieste per creare l'agente Console e un account di servizio per la VM dell'agente Console.
+* Una VPC e una subnet che soddisfano i requisiti di rete.
+* Comprensione dei requisiti delle istanze VM.
++
+** *CPU*: 8 core o 8 vCPU
+** *RAM*: 32 GB
+** *Tipo di macchina*: Consigliamo n2-standard-8.
++
+L'agente Console è supportato in Google Cloud su un'istanza VM con un sistema operativo che supporta le funzionalità Shielded VM.
+
+
+
+
+
+.Passi
+. Accedi a Google Cloud SDK utilizzando il metodo che preferisci.
++
+In questo esempio viene utilizzata una shell locale con gcloud SDK installato, ma è possibile utilizzare anche Google Cloud Shell.
+
++
+Per ulteriori informazioni su Google Cloud SDK, visitare il sitolink:https://cloud.google.com/sdk["Pagina della documentazione di Google Cloud SDK"^] .
+
+. Verifica di aver effettuato l'accesso come utente che dispone delle autorizzazioni richieste definite nella sezione precedente:
++
+[source, bash]
+----
+gcloud auth list
+----
++
+L'output dovrebbe mostrare quanto segue, dove * è l'account utente desiderato con cui effettuare l'accesso:
+
++
+[listing]
+----
+Credentialed Accounts
+ACTIVE  ACCOUNT
+     some_user_account@domain.com
+*    desired_user_account@domain.com
+To set the active account, run:
+ $ gcloud config set account `ACCOUNT`
+Updates are available for some Cloud SDK components. To install them,
+please run:
+$ gcloud components update
+----
+. Esegui il `gcloud compute instances create` comando:
++
+[source, bash]
+----
+gcloud compute instances create <instance-name>
+  --machine-type=n2-standard-8
+  --image-project=netapp-cloudmanager
+  --image-family=cloudmanager
+  --scopes=cloud-platform
+  --project=<project>
+  --service-account=<service-account>
+  --zone=<zone>
+  --no-address
+  --tags <network-tag>
+  --network <network-path>
+  --subnet <subnet-path>
+  --boot-disk-kms-key <kms-key-path>
+----
++
+nome-istanza:: Nome dell'istanza desiderato per l'istanza VM.
+progetto:: (Facoltativo) Il progetto in cui si desidera distribuire la VM.
+account di servizio:: L'account di servizio specificato nell'output del passaggio 2.
+zona:: La zona in cui si desidera distribuire la VM
+senza indirizzo:: (Facoltativo) Non viene utilizzato alcun indirizzo IP esterno (è necessario un NAT cloud o un proxy per instradare il traffico verso Internet pubblico)
+tag di rete:: (Facoltativo) Aggiungere il tagging di rete per collegare una regola del firewall utilizzando i tag all'istanza dell'agente della console
+percorso di rete:: (Facoltativo) Aggiungi il nome della rete in cui distribuire l'agente della console (per una VPC condivisa, è necessario il percorso completo)
+percorso di sottorete:: (Facoltativo) Aggiungi il nome della subnet in cui distribuire l'agente della console (per una VPC condivisa, è necessario il percorso completo)
+percorso-chiave-kms:: (Facoltativo) Aggiungere una chiave KMS per crittografare i dischi dell'agente della console (è necessario applicare anche le autorizzazioni IAM)
++
+--
+Per maggiori informazioni su queste bandiere, visita illink:https://cloud.google.com/sdk/gcloud/reference/compute/instances/create["Documentazione dell'SDK di Google Cloud Compute"^] .
+
+--
+
+
++
+L'esecuzione del comando distribuisce l'agente Console.  L'istanza dell'agente Console e il software dovrebbero essere in esecuzione entro circa cinque minuti.
+
+. Aprire un browser Web e immettere l'URL dell'host dell'agente della console:
++
+L'URL dell'host della console può essere un localhost, un indirizzo IP privato o un indirizzo IP pubblico, a seconda della configurazione dell'host.  Ad esempio, se l'agente della console si trova nel cloud pubblico senza un indirizzo IP pubblico, è necessario immettere un indirizzo IP privato da un host che ha una connessione all'host dell'agente della console.
+
+. Dopo aver effettuato l'accesso, configura l'agente Console:
++
+.. Specificare l'organizzazione della console da associare all'agente della console.
++
+link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e degli accessi"] .
+
+.. Inserisci un nome per il sistema.
+
+
+
+
+.Risultato
+L'agente Console è ora installato e configurato con la tua organizzazione Console.
+
+Apri un browser web e vai su https://console.netapp.com["Console NetApp"^] per iniziare a utilizzare l'agente Console.

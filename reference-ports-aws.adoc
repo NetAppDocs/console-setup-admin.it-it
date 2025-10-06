@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: reference-ports-aws.html 
+keywords: ports, security group, http, https, inbound, outbound 
+summary: 'Il gruppo di sicurezza AWS per l"agente della console richiede regole sia in entrata che in uscita.  La console NetApp crea automaticamente questo gruppo di sicurezza quando si crea un agente della console dalla console.  È necessario impostare questo gruppo di sicurezza per tutte le altre opzioni di installazione.' 
+---
+= Regole del gruppo di sicurezza dell'agente della console in AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il gruppo di sicurezza AWS per l'agente richiede regole sia in entrata che in uscita.  La console NetApp crea automaticamente questo gruppo di sicurezza quando si crea un agente della console dalla console.  È necessario impostare questo gruppo di sicurezza per tutte le altre opzioni di installazione.
+
+
+
+== Regole in entrata
+
+[cols="10,10,80"]
+|===
+| Protocollo | Porta | Scopo 
+
+
+| SSH | 22 | Fornisce accesso SSH all'host dell'agente 
+
+
+| HTTP | 80  a| 
+* Fornisce l'accesso HTTP dai browser Web client all'interfaccia utente locale
+* Utilizzato durante il processo di aggiornamento Cloud Volumes ONTAP
+
+
+
+
+| HTTPS | 443 | Fornisce accesso HTTPS all'interfaccia utente locale e connessioni dall'istanza di NetApp Data Classification 
+
+
+| TCP | 3128 | Fornisce a Cloud Volumes ONTAP l'accesso a Internet.  Dopo la distribuzione, è necessario aprire manualmente questa porta. 
+|===
+
+
+== Regole in uscita
+
+Il gruppo di sicurezza predefinito per l'agente apre tutto il traffico in uscita.  Se ciò è accettabile, seguite le regole di base per le comunicazioni in uscita.  Se hai bisogno di regole più rigide, usa le regole in uscita avanzate.
+
+
+
+=== Regole di base in uscita
+
+Il gruppo di sicurezza predefinito per l'agente include le seguenti regole in uscita.
+
+[cols="20,20,60"]
+|===
+| Protocollo | Porta | Scopo 
+
+
+| Tutto TCP | Tutto | Tutto il traffico in uscita 
+
+
+| Tutti gli UDP | Tutto | Tutto il traffico in uscita 
+|===
+
+
+=== Regole in uscita avanzate
+
+Se hai bisogno di regole rigide per il traffico in uscita, puoi utilizzare le seguenti informazioni per aprire solo le porte necessarie per la comunicazione in uscita da parte dell'agente
+
+
+NOTE: L'indirizzo IP di origine è l'host dell'agente.
+
+[cols="5*"]
+|===
+| Servizio | Protocollo | Porta | Destinazione | Scopo 
+
+
+| Chiamate API e AutoSupport | HTTPS | 443 | Gestione cluster ONTAP e Internet in uscita LIF | Chiamate API ad AWS, a ONTAP, a NetApp Data Classification e invio di messaggi AutoSupport a NetApp 
+
+
+.2+| chiamate API | TCP | 3000 | Mediatore ONTAP HA | Comunicazione con il mediatore ONTAP HA 
+
+
+| TCP | 8080 | Classificazione dei dati | Sonda per l'istanza di classificazione dei dati durante la distribuzione 
+
+
+| DNS | UDP | 53 | DNS | Utilizzato per la risoluzione DNS da parte della console 
+|===

@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: task-iam-audit-actions-timeline.html 
+keywords: iam, audit, monitor, audit iam actions, monitor iam actions 
+summary: 'Monitora o verifica le azioni di gestione dell"identità e dell"accesso della console NetApp dalla pagina Verifica.' 
+---
+= Monitorare o verificare l'attività IAM
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se è necessario monitorare o verificare un'azione completata relativa all'identità e all'accesso, è possibile visualizzare i dettagli dalla pagina Verifica.  Ad esempio, potresti voler verificare chi ha aggiunto un membro a un'organizzazione o che un progetto sia stato eliminato correttamente.
+
+.Passi
+. Selezionare *Amministrazione > Audit*.
+. Nella pagina *Audit*, utilizzare i filtri per restringere i risultati.  Selezionare *Servizio* e quindi *Affitto*.
+. Utilizza uno qualsiasi degli altri filtri per modificare le azioni da visualizzare nella tabella.
++
+Ad esempio, puoi utilizzare il filtro *Utente* per visualizzare le azioni relative a un account utente specifico.
+
+

@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-roles.html 
+keywords: projects, access, resources, user roles, iam, identity and access management, folder, organization, permissions, roles, members, access roles 
+summary: 'All"interno della console NetApp è possibile assegnare ruoli agli utenti in base a cosa devono fare e dove.' 
+---
+= Utilizzare i ruoli per gestire l'accesso degli utenti alle risorse della console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+All'interno della Console è possibile assegnare ruoli agli utenti in base a cosa devono fare e dove.
+
+Gli utenti con il ruolo di *Amministratore dell'organizzazione* o di *Amministratore della cartella o del progetto* hanno la responsabilità di assegnare ruoli ad altri utenti.  È possibile assegnare ruoli di accesso in base al progetto o alla cartella.  Ad esempio, è possibile assegnare a un utente il ruolo di amministratore della protezione ransomware per un progetto e il ruolo di amministratore SnapCenter per un altro progetto.  In alternativa, se un utente necessita del ruolo di amministratore di classificazione per tutti i progetti all'interno di una cartella specifica, è possibile assegnargli questo ruolo a livello di cartella.
+
+Utilizzare i ruoli di accesso per assegnare l'accesso alle risorse di archiviazione in base alle attività specifiche che gli utenti devono eseguire.  Ad esempio, se un utente deve interagire con i servizi di protezione ransomware, gli deve essere concesso un ruolo di accesso che includa autorizzazioni di visualizzazione o amministrative per il servizio di protezione ransomware per il progetto per cui è concesso il ruolo di accesso.
+
+Assegna ruoli agli utenti in base alla tua strategia IAM per una maggiore sicurezza.  I ruoli IAM garantiscono che gli utenti abbiano solo l'accesso di cui hanno bisogno.
+
+
+NOTE: Ricorda che non puoi concedere direttamente l'accesso alle risorse.  Assegnare prima le risorse ai progetti.  Prima di assegnare l'accesso agli utenti, è opportuno impostare la gerarchia delle risorse.link:task-iam-manage-folders-projects.html["Scopri come organizzare le tue risorse con cartelle e progetti."]
+
+
+
+== Visualizza i ruoli assegnati a un membro
+
+Quando aggiungi un membro alla tua organizzazione, ti verrà chiesto di assegnargli un ruolo.  Puoi consentire ai membri di verificare quali ruoli sono attualmente assegnati loro.
+
+Se si dispone del ruolo di _Amministratore cartella o progetto_, la pagina visualizza tutti i membri dell'organizzazione.  Tuttavia, puoi visualizzare e gestire le autorizzazioni dei membri solo per le cartelle e i progetti per i quali disponi delle autorizzazioni. link:reference-iam-predefined-roles.html["Scopri di più sulle azioni che un _amministratore di cartella o di progetto_ può completare"] .
+
+. Dalla pagina *Membri*, vai a un membro nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Visualizza dettagli*.
+. Nella tabella, espandi la riga corrispondente all'organizzazione, alla cartella o al progetto in cui desideri visualizzare il ruolo assegnato al membro e seleziona *Visualizza* nella colonna *Ruolo*.
+
+
+
+
+== Aggiungere un ruolo di accesso a un membro
+
+Solitamente si assegna un ruolo quando si aggiunge un membro all'organizzazione, ma è possibile aggiornarlo in qualsiasi momento rimuovendo o aggiungendo ruoli.
+
+Puoi assegnare a un utente un ruolo di accesso per la tua organizzazione, cartella o progetto.
+
+I membri possono ricoprire più ruoli all'interno dello stesso progetto e in progetti diversi.  Ad esempio, le organizzazioni più piccole potrebbero assegnare tutti i ruoli di accesso disponibili allo stesso utente, mentre le organizzazioni più grandi potrebbero far svolgere agli utenti attività più specializzate.  In alternativa, è anche possibile assegnare a un utente il ruolo di amministratore della protezione ransomware per un'organizzazione.  In questo esempio, l'utente sarebbe in grado di eseguire attività di protezione dal ransomware su tutti i progetti all'interno della tua organizzazione.
+
+La strategia del ruolo di accesso deve essere in linea con il modo in cui hai organizzato le tue risorse NetApp .
+
+
+TIP: A un membro a cui è assegnato il ruolo di amministratore dell'organizzazione non possono essere assegnati altri ruoli.  Hanno già le autorizzazioni per l'intera organizzazione.  A un membro con il ruolo Cartella o Progetto non possono essere assegnati altri ruoli all'interno della cartella o del progetto in cui ha già quel ruolo.  Entrambi i ruoli forniscono accesso a tutti i servizi nell'ambito a loro assegnato.
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Seleziona il menu azioniimage:icon-action.png["un'icona con tre punti verticali"] accanto al membro a cui vuoi assegnare un ruolo e seleziona *Aggiungi un ruolo*.
+. Per aggiungere un ruolo, completare i passaggi indicati nella finestra di dialogo:
++
+** *Seleziona un'organizzazione, una cartella o un progetto*: scegli il livello della gerarchia delle risorse per il quale il membro deve avere le autorizzazioni.
++
+Se selezioni l'organizzazione o una cartella, il membro avrà autorizzazioni per tutto ciò che risiede all'interno dell'organizzazione o della cartella.
+
+** *Seleziona una categoria*: Scegli una categoria di ruolo. link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"^] .
+** Seleziona un *Ruolo*: scegli un ruolo che fornisca al membro le autorizzazioni per le risorse associate all'organizzazione, alla cartella o al progetto selezionato.
+** *Aggiungi ruolo*: se desideri concedere l'accesso a cartelle o progetti aggiuntivi all'interno della tua organizzazione, seleziona *Aggiungi ruolo*, specifica un'altra cartella, un altro progetto o una categoria di ruolo, quindi seleziona una categoria di ruolo e un ruolo corrispondente.
+
+
+. Seleziona *Aggiungi nuovi ruoli*.
+
+
+
+
+== Modificare il ruolo assegnato a un membro
+
+È possibile modificare i ruoli assegnati a un membro qualora fosse necessario modificare l'accesso di un utente.
+
+
+NOTE: Agli utenti deve essere assegnato almeno un ruolo.  Non è possibile rimuovere tutti i ruoli da un utente.  Se devi rimuovere tutti i ruoli, devi eliminare l'utente dalla tua organizzazione.
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Dalla pagina *Membri*, vai a un membro nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Visualizza dettagli*.
+. Nella tabella, espandi la riga corrispondente all'organizzazione, alla cartella o al progetto in cui desideri modificare il ruolo assegnato al membro e seleziona *Visualizza* nella colonna *Ruolo* per visualizzare i ruoli assegnati a questo membro.
+. È possibile modificare un ruolo esistente per un membro o rimuovere un ruolo.
++
+.. Per modificare il ruolo di un membro, seleziona *Modifica* accanto al ruolo che desideri modificare.  È possibile modificare un ruolo solo in un ruolo all'interno della stessa categoria di ruoli.  Ad esempio, è possibile passare da un ruolo di servizio dati a un altro.  Conferma la modifica.
+.. Per annullare l'assegnazione del ruolo a un membro, selezionareimage:icon-delete.png["Un'icona che assomiglia a un cestino della spazzatura"] accanto al ruolo per annullare l'assegnazione del ruolo corrispondente al membro.  Ti verrà chiesto di confermare la rimozione.
+
+
+

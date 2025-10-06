@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-assign-users.html 
+keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors 
+summary: 'È possibile aggiungere utenti a una partnership aggiungendoli all"organizzazione partner.  Dopo aver aggiunto gli utenti, l"organizzazione partner è tenuta ad assegnare loro ruoli per risorse specifiche nella propria organizzazione.' 
+---
+= Gestire i membri di un'organizzazione di partnership
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile aggiungere utenti a una partnership aggiungendoli all'organizzazione partner.  Dopo aver aggiunto gli utenti, l'organizzazione partner è tenuta ad assegnare loro ruoli per risorse specifiche nella propria organizzazione.
+
+.Ruoli richiesti
+Il ruolo di *Amministratore partnership* è necessario per creare e gestire le partnership.  Il *Visualizzatore partnership* può visualizzare la pagina Partnership.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
+
+Puoi rimuovere gli utenti da una partnership in qualsiasi momento.  La rimozione di un utente da una partnership revoca immediatamente il suo accesso a tutte le risorse nell'organizzazione partner.
+
+
+
+== Aggiungere membri a una partnership
+
+Quando si aggiungono membri a una partnership, l'*amministratore della partnership* dell'organizzazione partner deve assegnare loro ruoli per risorse specifiche nella propria organizzazione prima che possano accedere a tali risorse.
+
+Dopo aver aggiunto membri a una partnership, i membri vengono visualizzati come membri nell'organizzazione partner, dove il partner può assegnarli alle risorse.
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Seleziona *Partnership*.
+. Selezionare la scheda *Partnership ricevuta*.
+. Seleziona il menu azioniimage:icon-action.png["un'icona con tre punti verticali"] accanto alla partnership consolidata di cui vuoi aggiungere i membri e seleziona *Aggiungi membri*.
+. Scegli uno o più membri da aggiungere alla partnership e seleziona *Aggiungi*.
+
+
+
+
+== Rimuovere i membri da una partnership
+
+Puoi rimuovere i membri da una partnership in qualsiasi momento.  La rimozione di un utente da una partnership revoca immediatamente il suo accesso a tutte le risorse nell'organizzazione partner.
+
+Se si desidera modificare il ruolo di un membro o le risorse a cui può accedere, l'amministratore della partnership dell'organizzazione partner deve apportare tali modifiche.
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Seleziona *Partnership*.
+. Selezionare la scheda *Partnership ricevuta*.
+. Seleziona il menu azioniimage:icon-action.png["un'icona con tre punti verticali"] accanto al membro che vuoi rimuovere e seleziona *Rimuovi associazione*.
+. Confermare l'azione selezionando *Rimuovi* nella finestra di dialogo.
+
+
+
+
+== Visualizza le informazioni sul ruolo di un utente
+
+È possibile visualizzare il ruolo assegnato a un utente e le risorse associate.
+
+Non è possibile modificare il ruolo associato a un utente.  In caso di domande sulle risorse o sul ruolo fornito, contattare l'amministratore dell'organizzazione partner.
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Seleziona *Partnership*.
+. Selezionare la scheda *Partnership ricevuta*.
+. Dalla pagina *Membri*, vai a un membro nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Visualizza dettagli*.
+. Nella tabella, espandi la riga corrispondente all'organizzazione, alla cartella o al progetto in cui desideri visualizzare il ruolo assegnato al membro e seleziona il numero nella colonna *Ruolo*.
+

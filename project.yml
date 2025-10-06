@@ -1,0 +1,284 @@
+---
+settings:
+  name: NetApp Console setup and administration
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: it-it,us-en,de-de,es-es,fr-fr,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
+sidebar:
+  entries:
+  - title: Configurazione e amministrazione della console NetApp
+    url: "/index.html"
+  - title: Note di rilascio
+    entries:
+    - title: Cosa c'è di nuovo
+      url: "/whats-new.html"
+    - title: Limitazioni note
+      url: "/reference-limitations.html"
+    - title: Modifiche ai sistemi operativi Linux supportati
+      url: "/reference-connector-operating-system-changes.html"
+  - title: Iniziare
+    entries:
+    - title: Impara le basi
+      entries:
+      - title: Console NetApp
+        url: "/concept-overview.html"
+      - title: Agenti della console
+        url: "/concept-connectors.html"
+      - title: Modalità di distribuzione
+        url: "/concept-modes.html"
+    - title: Inizia con l'assistente NetApp
+      entries:
+      - title: Utilizzare l'assistente NetApp
+        url: "/task-console-assistant.html"
+    - title: Inizia con la modalità standard
+      entries:
+      - title: Flusso di lavoro introduttivo
+        url: "/task-quick-start-standard-mode.html"
+      - title: Preparare l'accesso alla rete per NetApp Console
+        url: "/reference-networking-saas-console.html"
+      - title: Iscriviti alla console NetApp
+        url: "/task-sign-up-saas.html"
+      - title: Creare un agente Console
+        entries:
+        - title: AWS
+          entries:
+          - title: Opzioni di installazione dell'agente console
+            url: "/concept-install-options-aws.html"
+          - title: Creare un agente Console dalla console NetApp
+            url: "/task-install-connector-aws-bluexp.html"
+          - title: Crea un agente Console dal marketplace
+            url: "/task-install-connector-aws-marketplace.html"
+          - title: Installare manualmente l'agente Console
+            url: "/task-install-connector-aws-manual.html"
+        - title: Azzurro
+          entries:
+          - title: Opzioni di installazione dell'agente console
+            url: "/concept-install-options-azure.html"
+          - title: Creare un agente Console dalla console NetApp
+            url: "/task-install-connector-azure-bluexp.html"
+          - title: Crea un agente Console dal marketplace
+            url: "/task-install-connector-azure-marketplace.html"
+          - title: Installare manualmente l'agente Console
+            url: "/task-install-connector-azure-manual.html"
+        - title: Google Cloud
+          entries:
+          - title: Opzioni di installazione dell'agente console
+            url: "/concept-install-options-google.html"
+          - title: Creare un agente Console dalla console NetApp
+            url: "/task-install-connector-google-bluexp-gcloud.html"
+          - title: Crea un agente Console da Google Cloud
+            url: "/task-install-agent-google-gcloud.html"
+          - title: Installare manualmente l'agente Console
+            url: "/task-install-connector-google-manual.html"
+        - title: Installa un agente in locale
+          entries:
+          - title: Installare manualmente un agente in locale
+            url: "/task-install-connector-on-prem.html"
+          - title: Installa un agente on-premise in VCenter
+            url: "/task-install-agent-on-prem-ova.html"
+      - title: Iscriviti a NetApp Intelligent Services
+        url: "/task-subscribe-standard-mode.html"
+      - title: Cosa puoi fare dopo
+        url: "/reference-whats-next.html"
+    - title: Inizia con la modalità limitata
+      entries:
+      - title: Flusso di lavoro introduttivo
+        url: "/task-quick-start-restricted-mode.html"
+      - title: Prepararsi per la distribuzione
+        url: "/task-prepare-restricted-mode.html"
+      - title: Distribuisci l'agente della console
+        url: "/task-install-restricted-mode.html"
+      - title: Iscriviti a NetApp Intelligent Services
+        url: "/task-subscribe-restricted-mode.html"
+      - title: Cosa puoi fare dopo
+        url: "/reference-whats-next-restricted-mode.html"
+    - title: Inizia con l'interfaccia legacy BlueXP (modalità privata)
+      entries:
+      - title: Introduzione all'interfaccia legacy BlueXP (modalità privata)
+        url: "/task-quick-start-private-mode.html"
+  - title: Utilizzare la console NetApp
+    entries:
+    - title: Accedi alla console NetApp
+      url: "/task-logging-in.html"
+    - title: Visualizza le metriche nella home page della console NetApp
+      url: "/task-dashboard.html"
+    - title: Gestisci le impostazioni utente della console NetApp
+      url: "/task-user-settings.html"
+  - title: Amministrare la console NetApp
+    entries:
+    - title: Gestione dell'identità e degli accessi
+      entries:
+      - title: Scopri come gestire l'identità e l'accesso
+        url: "/concept-identity-and-access-management.html"
+      - title: Inizia con identità e accesso
+        url: "/task-iam-get-started.html"
+      - title: Organizza le tue risorse con cartelle e progetti
+        url: "/task-iam-manage-folders-projects.html"
+      - title: Gestire i membri e gli account di servizio
+        url: "/task-iam-manage-members-permissions.html"
+      - title: Utilizzare i ruoli per controllare l'accesso dei membri alle risorse
+        url: "/task-iam-manage-roles.html"
+      - title: Gestisci la gerarchia delle tue risorse
+        url: "/task-iam-manage-resources.html"
+      - title: Associare un agente Console ad altre cartelle e progetti
+        url: "/task-iam-associate-connectors.html"
+      - title: Passare da organizzazioni, progetti e agenti della console
+        url: "/task-iam-switch-organizations-projects.html"
+      - title: ID organizzazione e progetto
+        url: "/task-iam-rename-organization.html"
+      - title: Monitorare o verificare l'attività IAM
+        url: "/task-iam-audit-actions-timeline.html"
+      - title: Ruoli di accesso alla console NetApp
+        entries:
+        - title: Scopri di più sui ruoli di accesso alla console NetApp
+          url: "/reference-iam-predefined-roles.html"
+        - title: Ruoli della piattaforma
+          url: "/reference-iam-platform-roles.html"
+        - title: Ruoli applicativi
+          entries:
+          - title: Ruoli Google Cloud NetApp Volumes
+            url: "/reference-iam-gcnv-roles.html"
+          - title: Keystone
+            url: "/reference-iam-keystone-roles.html"
+          - title: Analista di supporto alle operazioni
+            url: "/reference-iam-analyst-roles.html"
+          - title: Ruoli di archiviazione
+            url: "/reference-iam-storage-roles.html"
+        - title: Ruoli dei servizi dati
+          entries:
+          - title: Ruoli di backup e ripristino
+            url: "/reference-iam-backup-rec-roles.html"
+          - title: Ruoli di ripristino in caso di disastro
+            url: "/reference-iam-disaster-rec-roles.html"
+          - title: Ruoli di protezione dal ransomware
+            url: "/reference-iam-ransomware-roles.html"
+    - title: Organizzazioni partner
+      entries:
+      - title: Scopri di più sulle partnership organizzative
+        url: "/concept-org-partnerships.html"
+      - title: Creare una partnership organizzativa
+        url: "/task-partnerships-create.html"
+      - title: Gestire i membri di un'organizzazione di partnership
+        url: "/task-partnerships-assign-users.html"
+      - title: Gestire l'accesso alle risorse per un'organizzazione di partnership
+        url: "/task-partnerships-resource-access.html"
+      - title: Lavorare in un'organizzazione partner
+        url: "/task-partnerships-work.html"
+    - title: Federazione delle identità
+      entries:
+      - title: Scopri di più sulla federazione delle identità
+        url: "/concept-federation.html"
+      - title: Verifica del dominio
+        entries:
+        - title: Verifica il tuo dominio
+          url: "/task-federation-verify-domain.html"
+      - title: Configurare le federazioni
+        entries:
+        - title: Federare con un provider Active Directory Federation Services (AD
+            FS)
+          url: "/task-federation-adfs.html"
+        - title: Federati con il provider Microsoft Entra ID
+          url: "/task-federation-entra-id.html"
+        - title: Federate con PingFederate
+          url: "/task-federation-ping.html"
+        - title: Federare con un provider di identità SAML
+          url: "/task-federation-saml.html"
+      - title: Gestire le federazioni
+        url: "/task-federation-manage.html"
+      - title: Importa la tua connessione federata esistente
+        url: "/task-federation-import.html"
+    - title: Agenti della console
+      entries:
+      - title: Mantenere la VM e il sistema operativo
+        url: "/task-maintain-connectors.html"
+      - title: Mantenere un agente installato su VCenter
+        url: "/task-agent-vm-config.html"
+      - title: Installa un certificato firmato da una CA per l'accesso alla console
+          Web
+        url: "/task-installing-https-cert.html"
+      - title: Configurare un agente Console per utilizzare un server proxy
+        url: "/task-configuring-proxy.html"
+      - title: Richiedere l'uso di IMDSv2 sulle istanze EC2
+        url: "/task-require-imdsv2.html"
+      - title: Gestisci gli aggiornamenti dei connettori
+        url: "/task-upgrade-connector.html"
+      - title: Lavora con più agenti della console
+        url: "/task-manage-multiple-connectors.html"
+      - title: Risolvere i problemi dell'agente della console
+        url: "/task-troubleshoot-connector.html"
+      - title: Disinstallare e rimuovere l'agente Console
+        url: "/task-uninstall-connector.html"
+      - title: Configurazione predefinita
+        url: "/reference-connector-default-config.html"
+      - title: Applica le autorizzazioni ONTAP nella console NetApp
+        url: "/task-ontap-access-connector.html"
+    - title: Credenziali e abbonamenti
+      entries:
+      - title: AWS
+        entries:
+        - title: Scopri di più sulle credenziali e sulle autorizzazioni
+          url: "/concept-accounts-aws.html"
+        - title: Gestisci credenziali e abbonamenti
+          url: "/task-adding-aws-accounts.html"
+      - title: Azzurro
+        entries:
+        - title: Scopri di più sulle credenziali e sulle autorizzazioni
+          url: "/concept-accounts-azure.html"
+        - title: Gestisci credenziali e abbonamenti
+          url: "/task-adding-azure-accounts.html"
+      - title: Google Cloud
+        entries:
+        - title: Scopri di più su progetti e permessi
+          url: "/concept-accounts-gcp.html"
+        - title: Gestisci credenziali e abbonamenti
+          url: "/task-adding-gcp-accounts.html"
+      - title: Gestire le credenziali NSS associate a un'organizzazione o a un account
+          NetApp Console
+        url: "/task-adding-nss-accounts.html"
+      - title: Gestisci le credenziali associate al tuo accesso alla console NetApp
+        url: "/task-manage-user-credentials.html"
+    - title: Monitorare le operazioni della console NetApp
+      url: "/task-monitor-cm-operations.html"
+  - title: Riferimento
+    entries:
+    - title: Console di manutenzione dell'agente
+      entries:
+      - title: Console di manutenzione dell'agente
+        url: "/reference-connector-maint-console.html"
+    - title: Permessi
+      entries:
+      - title: Riepilogo delle autorizzazioni
+        url: "/reference-permissions.html"
+      - title: Autorizzazioni AWS per l'agente della console
+        url: "/reference-permissions-aws.html"
+      - title: Autorizzazioni di Azure per l'agente della console
+        url: "/reference-permissions-azure.html"
+      - title: Autorizzazioni di Google Cloud per l'agente della console
+        url: "/reference-permissions-gcp.html"
+    - title: porti
+      entries:
+      - title: Regole del gruppo di sicurezza dell'agente della console in AWS
+        url: "/reference-ports-aws.html"
+      - title: Regole del gruppo di sicurezza dell'agente della console in Azure
+        url: "/reference-ports-azure.html"
+      - title: Regole del firewall dell'agente della console in Google Cloud
+        url: "/reference-ports-gcp.html"
+      - title: Porte per l'agente della console locale
+        url: "/reference-ports-on-prem.html"
+    - title: Accesso alla rete della console (legacy)
+      url: "/reference-networking-saas-console-previous.html"
+  - title: Conoscenza e supporto
+    entries:
+    - title: Registrati per ricevere supporto
+      url: "/task-support-registration.html"
+    - title: Ottieni aiuto
+      url: "/task-get-help.html"
+  - title: Note legali
+    url: "/legal-notices.html"
+product-family:
+  name: NetApp Console
+  repo: console-family

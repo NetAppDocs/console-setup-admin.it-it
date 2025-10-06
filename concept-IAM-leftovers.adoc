@@ -1,0 +1,171 @@
+= Organizzazione
+:allow-uri-read: 
+
+
+Le sezioni seguenti descrivono i diversi componenti dell'utilizzo di IAM in BlueXP.
+
+Utilizzando BlueXP IAM, gestirai i seguenti componenti:
+
+* L'organizzazione
+* Cartelle
+* Progetti
+* Risorse
+* Membri
+* Ruoli e permessi
+* Connettori
+
+
+Le risorse BlueXP sono organizzate gerarchicamente:
+
+* L'organizzazione è il vertice della gerarchia.
+* Le cartelle sono elementi figlio dell'organizzazione o di un'altra cartella.
+* I progetti sono figli dell'organizzazione o di una cartella.
+* Le risorse sono associate a una o più cartelle o progetti.
+
+
+L'immagine seguente illustra questa gerarchia a livello di base.
+
+image:diagram-iam-resource-hierarchy.png["Un diagramma concettuale che mostra la gerarchia delle risorse per BlueXP IAM: un'organizzazione, cartelle, progetti e risorse."]
+
+
+
+=== Organizzazione
+
+Un'_organizzazione_ è il livello più alto del sistema IAM di BlueXP e in genere rappresenta la tua azienda.  La tua organizzazione è composta da cartelle, progetti, membri, ruoli e risorse.  I connettori sono associati a progetti specifici nell'organizzazione.
+
+Quando ti registri a BlueXP, ti verrà chiesto di creare una nuova organizzazione.
+
+
+
+=== Cartelle
+
+Una _cartella_ consente di raggruppare progetti correlati e di separarli dagli altri progetti nella tua organizzazione.  Ad esempio, una cartella potrebbe rappresentare una posizione geografica (UE o Stati Uniti orientali), una sede (Londra o Toronto) o un'unità aziendale (ingegneria o marketing).
+
+Le cartelle possono contenere progetti, altre cartelle o una combinazione di entrambi.
+
+
+
+=== Progetti
+
+Un _progetto_ rappresenta un'area di lavoro in BlueXP a cui i membri dell'organizzazione accedono dalla tela BlueXP per gestire le risorse.  Ad esempio, un progetto può includere un sistema Cloud Volumes ONTAP , un cluster ONTAP locale o un file system FSx for ONTAP .
+
+Un'organizzazione può avere uno o più progetti.  Un progetto può risiedere direttamente sotto l'organizzazione o all'interno di una cartella.
+
+
+
+=== Risorse
+
+Una _risorsa_ è un ambiente di lavoro creato o scoperto in BlueXP.
+
+Quando si crea o si scopre una risorsa, la risorsa viene associata al progetto attualmente selezionato.  Potrebbe essere l'unico progetto a cui vuoi associare questa risorsa.  Ma puoi scegliere di associare la risorsa ad altri progetti nella tua organizzazione.
+
+Ad esempio, potresti associare un sistema Cloud Volumes ONTAP a un progetto aggiuntivo o a tutti i progetti della tua organizzazione.  Il modo in cui associare una risorsa dipende dalle esigenze della tua organizzazione.
+
+
+TIP: Puoi anche associare un connettore a un'altra cartella o progetto nella tua organizzazione. <<Connettori,Scopri di più sull'utilizzo dei connettori con BlueXP IAM>> .
+
+
+
+==== Quando associare una risorsa a una cartella
+
+È possibile organizzare le risorse in cartelle quando è necessario separare le responsabilità o aumentare le risorse di archiviazione.
+
+Un _amministratore dell'organizzazione_ potrebbe associare una risorsa a una cartella in modo che un _amministratore della cartella o del progetto_ possa quindi associare tale risorsa ai progetti appropriati che risiedono nella cartella.
+
+Ad esempio, supponiamo di avere una cartella che contiene due progetti:
+
+image:diagram-iam-resource-association-folder-1.png["Un diagramma che mostra una cartella e due progetti che risiedono nella cartella: progetto A e progetto B."]
+
+L'_amministratore dell'organizzazione_ può associare una risorsa alla cartella:
+
+image:diagram-iam-resource-association-folder-2.png["Un diagramma che mostra una cartella, una risorsa associata alla cartella e due progetti che risiedono nella cartella: progetto A e progetto B."]
+
+L'associazione della risorsa alla cartella non rende automaticamente tale risorsa accessibile da tutti i progetti nella cartella.  Ma l'amministratore della cartella o del progetto può quindi decidere a quali progetti rendere disponibile quella risorsa.  Dopo aver preso questa decisione, l'amministratore può associare la risorsa ai progetti giusti.
+
+In questo esempio, l'amministratore associa la risorsa al Progetto A:
+
+image:diagram-iam-resource-association-folder-3.png["Un diagramma che mostra una cartella, due progetti che risiedono nella cartella: progetto A e progetto B, e una risorsa associata al progetto A."]
+
+I membri che dispongono delle autorizzazioni per il progetto A possono ora accedere alla risorsa.
+
+
+
+=== Membri
+
+I membri della tua organizzazione sono account utente o account di servizio.  Un account di servizio viene solitamente utilizzato da un'applicazione per completare attività specifiche senza l'intervento umano.
+
+Un'organizzazione ha almeno un utente con il ruolo di _Amministratore organizzazione_ (all'utente che crea l'organizzazione viene assegnato automaticamente questo ruolo).  È possibile aggiungere altri membri all'organizzazione e assegnare autorizzazioni diverse ai diversi livelli della gerarchia delle risorse.
+
+
+
+=== Ruoli e permessi
+
+In BlueXP IAM, le autorizzazioni non vengono concesse direttamente ai membri dell'organizzazione.  Invece, si assegna un ruolo a ciascun membro.  Un ruolo contiene un insieme di autorizzazioni che consentono a un membro di eseguire azioni specifiche a un livello specifico della gerarchia delle risorse.
+
+Fornendo autorizzazioni a una parte specifica della gerarchia delle risorse, è possibile limitare i diritti di accesso solo alle risorse di cui un membro ha bisogno per completare le proprie attività.
+
+
+
+==== Dove puoi assegnare ruoli nella gerarchia
+
+Quando si associa un membro a un ruolo, è necessario selezionare l'intera organizzazione, una cartella specifica o un progetto specifico.  Il ruolo selezionato conferisce a un membro le autorizzazioni per le risorse nella parte selezionata della gerarchia.
+
+
+
+==== Ereditarietà dei ruoli
+
+Quando si assegna un ruolo, il ruolo viene ereditato lungo la gerarchia dell'organizzazione:
+
+Organizzazione:: I ruoli assegnati a livello di organizzazione vengono ereditati da tutte le cartelle, i progetti e le risorse dell'organizzazione.  Ciò significa che il membro ha autorizzazioni per tutto ciò che riguarda l'organizzazione.
+Cartelle:: I ruoli assegnati a livello di cartella vengono ereditati da tutte le cartelle, i progetti e le risorse presenti nella cartella.
++
+--
+Ad esempio, se assegni un ruolo a livello di cartella e quella cartella contiene tre progetti, il membro avrà le autorizzazioni per quei tre progetti e per tutte le risorse associate.
+
+--
+Progetti:: I ruoli assegnati a livello di progetto vengono ereditati da tutte le risorse associate a quel progetto.
+
+
+
+
+==== Ruoli multipli
+
+È possibile assegnare a ciascun membro dell'organizzazione un ruolo a diversi livelli della gerarchia organizzativa.  Può trattarsi dello stesso ruolo o di un ruolo diverso.  Ad esempio, è possibile assegnare il ruolo di membro A al progetto 1 e al progetto 2.  Oppure puoi assegnare a un membro il ruolo A per il progetto 1 e il ruolo B per il progetto 2.
+
+
+
+==== Ruoli di accesso
+
+BlueXP supporta diversi ruoli di accesso che puoi assegnare ai membri della tua organizzazione.
+
+link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] .
+
+
+
+=== Connettori
+
+Quando un _amministratore dell'organizzazione_ crea un connettore, BlueXP associa automaticamente tale connettore all'organizzazione e al progetto attualmente selezionato.  L'_amministratore dell'organizzazione_ ha automaticamente accesso a quel connettore da qualsiasi punto dell'organizzazione.  Tuttavia, se nella tua organizzazione ci sono altri membri con ruoli diversi, questi membri potranno accedere a quel connettore solo dal progetto in cui è stato creato, a meno che tu non associ quel connettore ad altri progetti.
+
+Potrebbe essere necessario rendere disponibile un connettore per l'utilizzo con un altro progetto nei seguenti casi:
+
+* Desideri consentire ai membri della tua organizzazione di utilizzare un connettore esistente per creare o scoprire ambienti di lavoro aggiuntivi in un altro progetto
+* Hai associato una risorsa esistente a un altro progetto e tale risorsa è gestita da un connettore
++
+Se una risorsa associata a un progetto aggiuntivo viene rilevata tramite un connettore BlueXP , è necessario associare anche il connettore al progetto a cui la risorsa è ora associata.  In caso contrario, il connettore e la risorsa associata non saranno accessibili dalla tela BlueXP dai membri che non dispongono del ruolo di _Amministratore organizzazione_.
+
+
+
+È possibile creare un'associazione dalla pagina *Connettori* in BlueXP IAM:
+
+* Associa un connettore a un progetto
++
+Quando si associa un connettore a un progetto, tale connettore è accessibile dalla tela BlueXP quando si visualizza il progetto.
+
+* Associa un connettore a una cartella
++
+L'associazione di un connettore a una cartella non rende automaticamente quel connettore accessibile da tutti i progetti nella cartella.  I membri dell'organizzazione non possono accedere a un connettore da un progetto finché non associ il connettore a quel progetto specifico.
+
++
+Un _amministratore dell'organizzazione_ potrebbe associare un connettore a una cartella in modo che l'_amministratore della cartella o del progetto_ possa decidere di associare tale connettore ai progetti appropriati che risiedono nella cartella.
+
+

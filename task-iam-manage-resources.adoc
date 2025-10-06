@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-resources.html 
+keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management 
+summary: Gestisci la gerarchia delle risorse della tua organizzazione associando le risorse a progetti e cartelle specifici. 
+---
+= Gestisci la gerarchia delle risorse nella tua organizzazione NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando si utilizza l'opzione Associa un membro alla propria organizzazione, si forniscono autorizzazioni a livello di organizzazione, cartella o progetto.  Per garantire che tali membri abbiano le autorizzazioni necessarie per accedere alle risorse corrette, è necessario gestire la gerarchia delle risorse della propria organizzazione associando le risorse a progetti e cartelle specifici.  Una _risorsa_ è un sistema di archiviazione o un agente della Console che la Console già gestisce o di cui è a conoscenza.
+
+
+
+== Visualizza le risorse nella tua organizzazione
+
+Puoi visualizzare sia le risorse scoperte che quelle non scoperte associate alla tua organizzazione. Le risorse non scoperte sono risorse di archiviazione identificate ma non ancora aggiunte alla Console.
+
+
+NOTE: NOTA: la pagina Risorse esclude le risorse Amazon FSx for NetApp ONTAP perché gli utenti non possono associarle a un ruolo.  Visualizzali nella pagina Sistemi o da Carichi di lavoro.
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Selezionare *Risorse*.
+. Seleziona *Ricerca avanzata e filtri*.
+. Utilizza una qualsiasi delle opzioni disponibili per trovare la risorsa che stai cercando:
++
+** *Cerca per nome della risorsa*: inserisci una stringa di testo e seleziona *Aggiungi*.
+** *Piattaforma*: seleziona una o più piattaforme, ad esempio Amazon Web Services.
+** *Risorse*: seleziona una o più risorse, ad esempio Cloud Volumes ONTAP.
+** *Organizzazione, cartella o progetto*: seleziona l'intera organizzazione, una cartella specifica o un progetto specifico.
+
+
+. Seleziona *Cerca*.
+
+
+
+
+== Associare una risorsa a cartelle e progetti
+
+Associa una risorsa a una cartella o a un progetto per renderla disponibile.
+
+.Prima di iniziare
+Dovresti capire come funziona l'associazione delle risorse. link:concept-identity-and-access-management.html#resources["Scopri di più sulle risorse, incluso quando associare una risorsa a una cartella"] .
+
+.Passi
+. Dalla pagina *Risorse*, vai a una risorsa nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e quindi seleziona *Associa a cartelle o progetti*.
+. Seleziona una cartella o un progetto, quindi seleziona *Accetta*.
+. Per associare una cartella o un progetto aggiuntivo, seleziona *Aggiungi cartella o progetto* e poi seleziona la cartella o il progetto.
++
+Tieni presente che puoi selezionare solo le cartelle e i progetti per i quali disponi dei permessi di amministratore.
+
+. Seleziona *Risorse associate*.
++
+** Se hai associato la risorsa a dei progetti, i membri che dispongono delle autorizzazioni per tali progetti ora possono accedere alla risorsa dalla Console.
+** Se hai associato la risorsa a una cartella, un _amministratore di cartella o di progetto_ può ora accedere alla risorsa e associarla a un progetto all'interno della cartella. link:concept-identity-and-access-management.html#resources["Scopri come associare una risorsa a una cartella"] .
+
+
+
+
+.Dopo aver finito
+Se si individua una risorsa utilizzando un agente Console, associare l'agente Console al progetto per concedere l'accesso.  In caso contrario, l'agente della console e la risorsa associata non saranno accessibili ai membri senza il ruolo di _Amministratore organizzazione_.
+
+link:task-iam-associate-connectors.html["Scopri come associare un agente Console a una cartella o a un progetto"] .
+
+
+
+== Visualizza le cartelle e i progetti associati a una risorsa
+
+È possibile visualizzare le cartelle e i progetti associati a una determinata risorsa.
+
+
+NOTE: Se hai bisogno di scoprire quali membri dell'organizzazione hanno accesso alla risorsa, puoilink:task-iam-manage-folders-projects.html#view-associated-resources-members["visualizzare i membri che hanno accesso alle cartelle e ai progetti associati alla risorsa"] .
+
+.Passi
+. Dalla pagina *Risorse*, vai a una risorsa nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Visualizza dettagli*.
+
+
+L'esempio seguente mostra una risorsa associata a un progetto.
+
+image:screenshot-iam-resource-details.png["Uno screenshot della pagina dei dettagli della risorsa che mostra una risorsa associata a un progetto che si trova direttamente sotto l'organizzazione."]
+
+
+NOTE: Se è necessario determinare quali membri dell'organizzazione hanno accesso alla risorsa, è possibilelink:task-iam-manage-folders-projects.html#view-associated-resources-members["visualizzare i membri che hanno accesso alle cartelle e ai progetti associati alla risorsa"] .
+
+
+
+== Rimuovere una risorsa da una cartella o da un progetto
+
+Per rimuovere una risorsa da una cartella o da un progetto, è necessario rimuovere l'associazione tra la cartella o il progetto e la risorsa. Quando si rimuove l'associazione, si impedisce ai membri di gestire la risorsa nella cartella o nel progetto.
+
+
+NOTE: Per rimuovere una risorsa rilevata dall'intera organizzazione, rimuovere il sistema dalla pagina *Sistemi*.
+
+.Passi
+. Dalla pagina *Risorse*, vai a una risorsa nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Visualizza dettagli*.
+. Per la cartella o il progetto per cui si desidera rimuovere la risorsa, selezionareimage:icon-delete.png["Un'icona di un bidone della spazzatura"]
+. Conferma di voler rimuovere l'associazione selezionando *Elimina*.
+
+
+
+
+== Informazioni correlate
+
+* link:concept-identity-and-access-management.html["Scopri di più su identità e accesso nella console NetApp"]
+* link:task-iam-get-started.html["Inizia con l'identità e l'accesso nella console NetApp"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Scopri di più sull'API per l'identità e l'accesso"^]
+

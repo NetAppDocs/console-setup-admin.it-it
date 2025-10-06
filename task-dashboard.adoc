@@ -1,0 +1,224 @@
+---
+sidebar: sidebar 
+permalink: task-dashboard.html 
+keywords: bluexp, dashboard, console, home page 
+summary: Nella console NetApp è possibile visualizzare le metriche nella home page. 
+---
+= Visualizza le metriche nella home page della console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Monitorando lo stato di salute del tuo spazio di archiviazione, sarai a conoscenza di eventuali problemi di protezione e potrai adottare misure per risolverli.  Utilizzando la home page della console NetApp , puoi visualizzare lo stato dei backup e dei ripristini da NetApp Backup and Recovery e il numero di carichi di lavoro a rischio di attacco ransomware o protetti, come indicato da NetApp Ransomware Resilience.  È possibile esaminare la capacità di archiviazione per singoli cluster e Cloud Volumes ONTAP, gli avvisi ONTAP , la capacità delle prestazioni di archiviazione per cluster o sistema Cloud Volumes ONTAP , i diversi tipi di licenze in uso e altro ancora.
+
+Tutti i riquadri della home page mostrano i dati a livello di organizzazione.  I riquadri Capacità di archiviazione e Prestazioni di archiviazione mostrano i sistemi associati ai progetti a cui l'utente può accedere in base alle autorizzazioni IAM.
+
+Il sistema aggiorna i dati nella home page ogni cinque minuti.  La memorizzazione nella cache potrebbe far sì che i dati presenti in questa pagina differiscano dai valori reali per un massimo di 15 minuti.
+
+
+NOTE: Per ottenere metriche precise nella home page sono necessari agenti della console opportunamente dimensionati e configurati.
+
+
+
+== Ruoli richiesti della console NetApp
+
+Ogni riquadro nella home page richiede ruoli utente diversi:
+
+* *Riquadro Capacità di archiviazione*: possibilità di visualizzare la pagina Sistemi console NetApp
+* * Riquadro avvisi ONTAP *: Amministratore cartella o progetto, Analista supporto operativo, Amministratore organizzazione, Visualizzatore organizzazione, Super amministratore, Super visualizzatore
+* *Riquadro Capacità delle prestazioni di storage*: possibilità di visualizzare la pagina Sistemi della console NetApp
+* *Riquadro Licenze e abbonamenti*: Amministratore cartella o progetto, Amministratore organizzazione, Visualizzatore organizzazione, Super amministratore, Super visualizzatore
+* *Riquadro Resilienza ransomware*: Amministratore cartella o progetto, Amministratore organizzazione, Amministratore protezione ransomware, Visualizzatore protezione ransomware, Super amministratore, Super visualizzatore
+* *Riquadro Backup e ripristino*: Amministratore di backup e ripristino, Super amministratore di backup e ripristino, Visualizzatore di backup e ripristino, Amministratore di clonazione di backup e ripristino, Amministratore di cartelle o progetti, Amministratore dell'organizzazione, Amministratore di ripristino e backup, Super amministratore, Super visualizzatore
+
+
+Se non si dispone delle autorizzazioni per accedere a un riquadro, nel riquadro viene visualizzato un messaggio che indica che non si dispone delle autorizzazioni per utilizzarlo.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso alla console NetApp ."] .
+
+.Passi
+. Dal menu della console NetApp , selezionare *Home*.
++
+Se si dispone del ruolo di amministratore dell'organizzazione e non è configurato alcun agente o sistema di archiviazione, nella home page vengono visualizzate le informazioni introduttive.
+
++
+image:screenshot-home-greenfield.png["La home page della console NetApp dà il benvenuto ai nuovi utenti"]
+
++
+Se hai già configurato la console NetApp , almeno un agente della console è abilitato e almeno un cluster o un sistema Cloud Volumes ONTAP è stato aggiunto a tale agente, la pagina Home mostra le metriche relative al tuo ambiente di storage.
+
++
+image:screenshot-home-metrics.png["Pagina iniziale della console NetApp che mostra le metriche"]
+
+
+
+
+
+== Abilita la visualizzazione delle metriche nella home page
+
+È possibile visualizzare le metriche nella Home page quando sono soddisfatte le seguenti condizioni:
+
+* Hai effettuato l'accesso a un'istanza SaaS della NetApp Console.
+* Appartieni a un'organizzazione con risorse di archiviazione esistenti (agente e cluster o sistema Cloud Volumes ONTAP ).
+* Almeno un agente Console è abilitato.
+* Almeno un cluster o un sistema Cloud Volumes ONTAP è stato aggiunto a quell'agente.
+
+
+Per consentire la visualizzazione delle metriche nella home page, completare le seguenti attività:
+
+* Abilitare almeno un agente Console.
+* Aggiungere almeno un cluster o un Cloud Volumes ONTAP utilizzando quell'agente.
+
+
+
+
+== Visualizza la capacità di archiviazione complessiva
+
+Il riquadro Capacità di archiviazione fornisce le seguenti informazioni sui cluster ONTAP e sui sistemi Cloud Volumes ONTAP :
+
+* Numero di sistemi ONTAP rilevati nella Console
+* Numero di sistemi Cloud Volumes ONTAP rilevati nella Console
+* Utilizzo della capacità per cluster
+
+
+L'ordine dei cluster o dei sistemi Cloud Volumes ONTAP si basa sulla quantità di capacità utilizzata.  Per facilitarne l'identificazione, il cluster o il sistema con la capacità più elevata viene visualizzato per primo.
+
+Gli indicatori di avviso indicano cluster all'80% della capacità, con dati aggiornati ogni cinque minuti.
+
+
+TIP: Se hai più progetti, potresti visualizzare dati diversi nel riquadro Capacità di archiviazione rispetto alla pagina Sistemi.  Ciò avviene perché la pagina Sistemi mostra informazioni basate sul livello di progetto, mentre il riquadro Capacità di archiviazione mostra informazioni a livello di organizzazione.  Inoltre, i dati in questo riquadro potrebbero differire dai valori reali per un massimo di 15 minuti, perché i dati vengono memorizzati nella cache per tale periodo di tempo per ottimizzare le prestazioni.
+
+.Passi
+. Dal menu NetApp Console, esaminare il riquadro Capacità di archiviazione.
+. Nel riquadro Capacità di archiviazione, selezionare *Visualizza* per andare alla pagina Sistemi console.
+. Nella pagina Sistemi, seleziona il progetto contenente il cluster che desideri visualizzare.
+. Nella pagina Sistemi, seleziona un cluster per visualizzare maggiori dettagli su di esso.
+
+
+
+
+== Visualizza gli avvisi ONTAP
+
+Visualizza i problemi o i potenziali rischi nei tuoi ambienti ONTAP locali NetApp . Puoi visualizzare alcuni avvisi non EMS e alcuni avvisi EMS.
+
+I dati vengono aggiornati ogni 5 minuti.
+
+È possibile visualizzare gli avvisi ONTAP con questi livelli di gravità:
+
+* Critico
+* Avvertimento
+* Informativo
+
+
+È possibile visualizzare gli avvisi ONTAP per queste aree di impatto:
+
+* Capacità
+* Prestazione
+* Protezione
+* Disponibilità
+* Sicurezza
+
+
+
+TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare differenze nei dati in questo riquadro rispetto ai valori effettivi per un massimo di 15 minuti.
+
+*Sistemi supportati*
+
+* È supportato un sistema ONTAP NAS o SAN locale.
+* I sistemi Cloud Volumes ONTAP non sono supportati.
+
+
+*Fonti dati supportate*
+
+Visualizza gli avvisi relativi a determinati eventi che si verificano in ONTAP. Si tratta di una combinazione di avvisi EMS e basati su parametri.
+
+Per i dettagli sugli avvisi ONTAP , fare riferimento a https://docs.netapp.com/us-en/bluexp-alerts/index.html["Informazioni sugli avvisi ONTAP"^] .
+
+Per un elenco degli avvisi che potresti visualizzare, fai riferimento a https://docs.netapp.com/us-en/bluexp-alerts/alerts-use-dashboard.html["Visualizza i potenziali rischi nell'archiviazione ONTAP"^] .
+
+.Passi
+. Dal menu NetApp Console, esaminare il riquadro degli avvisi ONTAP .
+. Facoltativamente, filtra gli avvisi selezionando il livello di gravità oppure modifica il filtro per visualizzare gli avvisi in base all'area di impatto.
+. Nel riquadro Avvisi ONTAP , selezionare *Visualizza* per andare alla pagina Avvisi della console.
+
+
+
+
+== Visualizza la capacità delle prestazioni di archiviazione
+
+Esaminare la capacità di prestazioni di archiviazione utilizzata per cluster o sistema Cloud Volumes ONTAP per determinare in che modo la capacità di prestazioni, la latenza e gli IOPS influiscono sui carichi di lavoro.  Ad esempio, potresti scoprire di dover spostare i carichi di lavoro per ridurre al minimo la latenza e massimizzare IOPS e throughput per i carichi di lavoro critici.
+
+Il sistema organizza i cluster e i sistemi in base alla capacità prestazionale, elencando per primi quelli con la capacità più elevata per facilitarne l'identificazione.
+
+
+TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare differenze nei dati in questo riquadro rispetto ai valori effettivi per un massimo di 15 minuti.
+
+.Passi
+. Dal menu NetApp Console, esaminare il riquadro Prestazioni di archiviazione.
+. Nel riquadro Prestazioni di archiviazione, seleziona *Visualizza* per accedere alla pagina Prestazioni in cui sono elencati tutti i cluster e i dati dei sistemi Cloud Volumes ONTAP per capacità di prestazioni, IOPS e latenza.
+. Selezionare un cluster per visualizzarne i dettagli in System Manager.
+
+
+
+
+== Visualizza le licenze e gli abbonamenti che possiedi
+
+Esaminare le seguenti informazioni nel riquadro Licenze e abbonamenti:
+
+* Il numero totale di licenze e abbonamenti di cui disponi.
+* Il numero di ogni tipo di licenza e abbonamento di cui disponi (licenza diretta, contratto annuale o PAYGO).
+* Numero di licenze e abbonamenti attivi, che richiedono un intervento o che stanno per scadere.
+* Il sistema visualizza degli indicatori accanto ai tipi di licenza che richiedono un intervento o che stanno per scadere.
+
+
+I dati vengono aggiornati ogni 5 minuti.
+
+
+TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare differenze nei dati in questo riquadro rispetto ai valori effettivi per un massimo di 15 minuti.
+
+.Passi
+. Dal menu NetApp Console, esaminare il riquadro Licenze e abbonamenti.
+. Nel riquadro Licenze e abbonamenti, seleziona *Visualizza* per andare alla pagina Licenze e abbonamenti della console.
+
+
+
+
+== Visualizza lo stato di resilienza del ransomware
+
+Scopri se i carichi di lavoro sono a rischio di attacchi ransomware o protetti con il servizio dati NetApp Ransomware Resilience.  È possibile esaminare la quantità totale di dati protetti, visualizzare il numero di azioni consigliate e visualizzare il numero di avvisi relativi alla protezione dal ransomware.
+
+I dati vengono aggiornati ogni 5 minuti e corrispondono ai dati mostrati nella NetApp Ransomware Resilience Dashboard.
+
+https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["Scopri di più sulla resilienza al ransomware NetApp"^] .
+
+.Passi
+. Dal menu NetApp Console, esaminare il riquadro Ransomware Resilience.
+. Nel riquadro Ransomware Resilience, esegui una delle seguenti operazioni:
++
+** Selezionare *Visualizza* per accedere alla dashboard NetApp Ransomware Resilience. Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["Monitora lo stato del carico di lavoro utilizzando la dashboard di resilienza ransomware NetApp"^] .
+** Consultare le "Azioni consigliate" nella dashboard NetApp Ransomware Resilience. Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["Esaminare i consigli di protezione sulla dashboard NetApp Ransomware Resilience"^] .
+** Selezionare il collegamento agli avvisi per rivedere gli avvisi nella pagina Avvisi di NetApp Ransomware Resilience.  Per i dettagli, fare riferimento https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["Gestisci gli avvisi ransomware rilevati con NetApp Ransomware Resilience"^] .
+
+
+
+
+
+
+== Visualizza lo stato di backup e ripristino
+
+Esamina lo stato generale dei backup e dei ripristini eseguiti da NetApp Backup and Recovery.  È possibile visualizzare il numero di risorse protette e non protette.  Puoi anche visualizzare la percentuale di backup e operazioni di ripristino per la protezione dei tuoi carichi di lavoro.  Una percentuale più alta indica una migliore protezione dei dati.
+
+I dati vengono aggiornati ogni 5 minuti.
+
+
+TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare differenze nei dati in questo riquadro rispetto ai valori effettivi per un massimo di 15 minuti.
+
+.Passi
+. Dal menu NetApp Console, esaminare il riquadro Backup e ripristino.
+. Selezionare *Visualizza* per accedere alla dashboard di NetApp Backup and Recovery. Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["Documentazione NetApp Backup e Recovery"^] .
+

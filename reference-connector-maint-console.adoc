@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: reference-connector-maint-console.html 
+keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
+summary: 'È possibile utilizzare la console di manutenzione dell"agente Console per configurare un agente Console in modo che utilizzi un server proxy trasparente.' 
+---
+= Console di manutenzione dell'agente della console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile utilizzare la console di manutenzione dell'agente Console per configurare un agente Console in modo che utilizzi un server proxy trasparente.
+
+
+
+== Accedi alla console di manutenzione dell'agente
+
+È possibile accedere alla Console di manutenzione dall'host dell'agente della Console.  Passare alla seguente directory:
+
+[source, CLI]
+----
+/opt/application/netapp/service-manager-2/agent-maint-console
+----
+
+
+== Comandi proxy trasparenti
+
+La console di manutenzione dell'agente fornisce comandi per configurare l'agente in modo che utilizzi un server proxy trasparente.
+
+
+
+=== Visualizza la configurazione corrente del proxy trasparente
+
+Per visualizzare la configurazione corrente del proxy trasparente, utilizzare il seguente comando:
+
+[source, CLI]
+----
+./agent-maint-console proxy get
+----
+
+
+=== Aggiungi un server proxy trasparente
+
+Per aggiungere un server proxy trasparente, utilizzare il seguente comando, dove `/home/ubuntu/myCA1.pem` è il percorso al file del certificato per il server proxy.  Il file del certificato deve essere in formato PEM:
+
+[source, CLI]
+----
+./agent-maint-console proxy add -c /home/ubuntu/myCA1.pem
+----
+Assicurarsi che il file del certificato si trovi nella stessa directory del comando oppure specificare il percorso completo del file del certificato.
+
+
+
+=== Aggiorna il certificato per un server proxy trasparente
+
+Per aggiornare il certificato per un server proxy trasparente, utilizzare il seguente comando, dove `/home/ubuntu/myCA1.pem` è il percorso al nuovo file di certificato per il server proxy.  Il file del certificato deve essere in formato PEM:
+
+[source, CLI]
+----
+./agent-maint-console proxy update -c /home/ubuntu/myCA1.pem
+----
+Assicurarsi che il file del certificato si trovi nella stessa directory del comando oppure specificare il percorso completo del file del certificato.
+
+
+
+=== Rimuovere un server proxy trasparente
+
+Per rimuovere il server proxy trasparente, utilizzare il seguente comando:
+
+[source, CLI]
+----
+./agent-maint-console proxy remove
+----
+
+
+=== Visualizza la guida per qualsiasi comando
+
+Per visualizzare la guida per qualsiasi comando, aggiungi `--help` al comando.  Ad esempio, per visualizzare la guida per `proxy add` comando, utilizzare il seguente comando:
+
+[source, CLI]
+----
+./agent-maint-console proxy add --help
+----

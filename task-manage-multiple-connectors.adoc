@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: task-manage-multiple-connectors.html 
+keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors 
+summary: 'Se si utilizzano più agenti della Console, è possibile passare da un agente all"altro direttamente dalla Console.  È anche possibile gestire un singolo sistema con più agenti Console.' 
+---
+= Lavora con più agenti della console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se si utilizzano più agenti della Console, è possibile passare da un agente all'altro direttamente dalla Console per visualizzare i sistemi associati.
+
+
+
+== Passare da un agente della console all'altro
+
+Se si dispone di più agenti Console, è possibile passare da uno all'altro per visualizzare i sistemi associati a un agente specifico.
+
+Ad esempio, in un ambiente multi-cloud, potresti avere un agente in AWS e un altro in Google Cloud.  Passa da un agente all'altro per gestire i sistemi Cloud Volumes ONTAP nei rispettivi ambienti cloud.
+
+
+NOTE: Questa opzione non è disponibile quando si visualizza la console NetApp dall'interfaccia utente locale dell'agente
+
+.Fare un passo
+. Selezionare l'icona Agenti della console (image:icon-agent.png["icona dell'agente"] ) in alto a destra per visualizzare l'elenco degli agenti disponibili.
++
+image:screenshot-connector-switch.png["Uno screenshot che mostra l'icona Agenti nell'intestazione e l'azione Cambia."]
+
+
+
+.Risultato
+La console si aggiorna e mostra i sistemi associati all'agente selezionato.
+
+
+
+== Impostare una configurazione di ripristino di emergenza
+
+È possibile gestire un sistema con più agenti Console contemporaneamente per scopi di disaster recovery.  Se un agente della Console si guasta, è possibile passare all'altro agente per gestire immediatamente il sistema.
+
+.Passi
+. Passare all'altro agente Console che si desidera gestire con l'agente Console.
+. Scopri il sistema esistente.
++
+** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-adding-systems.html["Aggiungere i sistemi Cloud Volumes ONTAP esistenti alla console"^]
+** https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["Scopri i cluster ONTAP"^]
+
+
+. Se si gestisce un sistema Cloud Volumes ONTAP , impostare la modalità di gestione della capacità su *Modalità manuale*.
++
+Per evitare problemi di contesa, solo l'agente della console principale dovrebbe essere impostato su *Modalità automatica*.
+
++
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-settings.html["Scopri di più sulla modalità di gestione della capacità"^]
+
+

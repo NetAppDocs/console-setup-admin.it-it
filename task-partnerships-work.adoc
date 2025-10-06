@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-work.html 
+keywords: partner organizations, create partnership, MSPs, service provider access 
+summary: 'Una volta assegnato un ruolo in un"organizzazione partner, puoi passare a quell"organizzazione ed eseguire le azioni per cui sei autorizzato a farlo.' 
+---
+= Lavorare in un'organizzazione partner
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Una volta assegnato un ruolo in un'organizzazione partner, puoi passare a quell'organizzazione ed eseguire le azioni per cui sei autorizzato a farlo.
+
+Utilizza il menu Organizzazione per passare dalla tua organizzazione a qualsiasi organizzazione partner a cui hai accesso.link:task-iam-switch-organizations-projects.html["Scopri di più sul passaggio da un'organizzazione all'altra e da un progetto all'altro."]
+
+Potrai visualizzare le risorse che sono state condivise con te nell'organizzazione partner ed eseguire azioni in base al ruolo che ti è stato assegnato.  Collabora con l'amministratore della tua partnership per assicurarti di avere il ruolo appropriato per le risorse a cui devi accedere.

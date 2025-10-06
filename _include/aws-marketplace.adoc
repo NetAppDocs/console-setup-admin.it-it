@@ -1,0 +1,42 @@
+= 
+:allow-uri-read: 
+
+
+.Passi
+. Vai al https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Elenco degli agenti della console NetApp su AWS Marketplace"^]
+. Nella pagina Marketplace, seleziona *Continua ad abbonarti*.
+. Per abbonarsi al software, selezionare *Accetta i termini*.
++
+Il processo di iscrizione può richiedere alcuni minuti.
+
+. Una volta completato il processo di sottoscrizione, seleziona *Continua alla configurazione*.
+. Nella pagina *Configura questo software*, assicurati di aver selezionato la regione corretta, quindi seleziona *Continua per avviare*.
+. Nella pagina *Avvia questo software*, in *Scegli azione*, seleziona *Avvia tramite EC2* e poi seleziona *Avvia*.
++
+Utilizzare la console EC2 per avviare l'istanza e associare un ruolo IAM.  Ciò non è possibile con l'azione *Avvia dal sito Web*.
+
+. Seguire le istruzioni per configurare e distribuire l'istanza:
++
+** *Nome e tag*: inserisci un nome e dei tag per l'istanza.
+** *Immagini dell'applicazione e del sistema operativo*: saltare questa sezione.  L'AMI dell'agente Console è già selezionata.
+** *Tipo di istanza*: a seconda della disponibilità regionale, scegli un tipo di istanza che soddisfi i requisiti di RAM e CPU (t3.2xlarge è preselezionato e consigliato).
+** *Coppia di chiavi (accesso)*: seleziona la coppia di chiavi che desideri utilizzare per connetterti in modo sicuro all'istanza.
+** *Impostazioni di rete*: modifica le impostazioni di rete secondo necessità:
++
+*** Selezionare la VPC e la subnet desiderate.
+*** Specificare se l'istanza deve avere un indirizzo IP pubblico.
+*** Specificare le impostazioni del gruppo di sicurezza che abilitano i metodi di connessione richiesti per l'istanza dell'agente Console: SSH, HTTP e HTTPS.
++
+link:reference-ports-aws.html["Visualizza le regole del gruppo di sicurezza per AWS"] .
+
+
+
+** *Configura archiviazione*: mantieni le dimensioni e il tipo di disco predefiniti per il volume root.
++
+Se si desidera abilitare la crittografia Amazon EBS sul volume root, selezionare *Avanzate*, espandere *Volume 1*, selezionare *Crittografato* e quindi scegliere una chiave KMS.
+
+** *Dettagli avanzati*: in *Profilo istanza IAM*, seleziona il ruolo IAM che include le autorizzazioni richieste per l'agente della console.
+** *Riepilogo*: rivedere il riepilogo e selezionare *Avvia istanza*.
+
+
+

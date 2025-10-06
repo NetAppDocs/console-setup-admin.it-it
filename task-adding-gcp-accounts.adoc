@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: task-adding-gcp-accounts.html 
+keywords: permissions, gcp, marketplace, gcp subscription, subscription, gcp marketplace, subscribe, data tiering, tiering, setup, requirements, account for data tiering, account for tiering, interoperable, interoperability, interoperable storage access keys, access keys, bluexp 
+summary: 'È possibile gestire le credenziali di Google Cloud associate all"istanza VM dell"agente Console associando un abbonamento al marketplace e risolvendo i problemi del processo di abbonamento.  Entrambe queste attività garantiscono che tu possa utilizzare il tuo abbonamento al marketplace per pagare i servizi dati.' 
+---
+= Gestisci le credenziali e gli abbonamenti di Google Cloud per NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile gestire le credenziali di Google Cloud associate a un'istanza VM dell'agente Console associando un abbonamento al marketplace e risolvendo i problemi del processo di abbonamento.  Entrambe queste attività garantiscono che tu possa utilizzare il tuo abbonamento al marketplace per pagare i servizi dati.
+
+
+
+== Associa un abbonamento Marketplace alle credenziali di Google Cloud
+
+Quando distribuisci un agente Console in Google Cloud, la Console crea un set predefinito di credenziali associate a un'istanza VM dell'agente Console.  Puoi modificare in qualsiasi momento l'abbonamento a Google Cloud Marketplace associato a queste credenziali.  L'abbonamento consente di creare un sistema Cloud Volumes ONTAP a consumo e di utilizzare altri servizi dati.
+
+La sostituzione dell'attuale abbonamento al marketplace con un nuovo abbonamento modifica l'abbonamento al marketplace per tutti i sistemi Cloud Volumes ONTAP esistenti e per tutti i nuovi sistemi.
+
+.Passi
+. Selezionare *Amministrazione > *Credenziali*.
+. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.  +necessario nuovo screenshot (TS)image:screenshot_gcp_add_subscription.png["Uno screenshot del menu azioni per un set di credenziali esistenti."]
+. Per configurare un abbonamento esistente con le credenziali selezionate, seleziona un progetto Google Cloud e un abbonamento dall'elenco a discesa, quindi seleziona *Configura*.
++
+image:screenshot_gcp_associate.gif["Uno screenshot di un progetto Google Cloud e dell'abbonamento selezionato per le credenziali Google Cloud."]
+
+. Se non hai ancora un abbonamento, seleziona *Aggiungi abbonamento > Continua* e segui i passaggi indicati in Google Cloud Marketplace.
++
+
+NOTE: Prima di completare i passaggi seguenti, assicurati di disporre sia dei privilegi di amministratore della fatturazione nel tuo account Google Cloud sia di un accesso alla console NetApp .
+
++
+.. Dopo essere stato reindirizzato al https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Pagina NetApp Intelligent Services su Google Cloud Marketplace"^] , assicurati che nel menu di navigazione in alto sia selezionato il progetto corretto.
++
+image:screenshot_gcp_cvo_marketplace.png["Uno screenshot della pagina del marketplace Cloud Volumes ONTAP in Google Cloud."]
+
+.. Seleziona *Iscriviti*.
+.. Seleziona l'account di fatturazione appropriato e accetta i termini e le condizioni.
+.. Seleziona *Iscriviti*.
++
+Questo passaggio invia la richiesta di trasferimento a NetApp.
+
+.. Nella finestra di dialogo pop-up, seleziona *Registrati con NetApp, Inc.*
++
+Questo passaggio deve essere completato per collegare l'abbonamento a Google Cloud all'organizzazione o all'account della Console.  Il processo di collegamento di un abbonamento non sarà completato finché non verrai reindirizzato da questa pagina e non accederai alla Console.
+
++
+image:screenshot_gcp_marketplace_register.png["Uno screenshot di un pop-up di registrazione."]
+
+.. Completa i passaggi nella pagina *Assegnazione abbonamento*:
++
+
+NOTE: Se qualcuno della tua organizzazione ha già un abbonamento al marketplace dal tuo account di fatturazione, verrai reindirizzato a https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["la pagina Cloud Volumes ONTAP nella console NetApp"^] Invece.  Se ciò non è previsto, contatta il team di vendita NetApp .  Google consente un solo abbonamento per account di fatturazione Google.
+
++
+*** Seleziona le organizzazioni o gli account della Console a cui desideri associare questo abbonamento.
+*** Nel campo *Sostituisci abbonamento esistente*, scegli se desideri sostituire automaticamente l'abbonamento esistente per un'organizzazione o un account con questo nuovo abbonamento.
++
+La Console sostituisce l'abbonamento esistente per tutte le credenziali nell'organizzazione o nell'account con questo nuovo abbonamento.  Se un set di credenziali non è mai stato associato a un abbonamento, questo nuovo abbonamento non sarà associato a tali credenziali.
+
++
+Per tutte le altre organizzazioni o account, sarà necessario associare manualmente l'abbonamento ripetendo questi passaggi.
+
+*** Seleziona *Salva*.
++
+Il seguente video mostra i passaggi per abbonarsi da Google Cloud Marketplace:
+
++
+.Iscriviti da Google Cloud Marketplace
+video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
+
+
+.. Una volta completato questo processo, torna alla pagina Credenziali nella Console e seleziona questo nuovo abbonamento.
++
+image:screenshot_gcp_associate.gif["Uno screenshot della pagina di assegnazione dell'abbonamento."]
+
+
+
+
+
+
+
+== Risolvere i problemi del processo di abbonamento al Marketplace
+
+Talvolta l'abbonamento ai servizi dati NetApp tramite Google Cloud Marketplace può risultare frammentato a causa di autorizzazioni errate o perché non si segue accidentalmente il reindirizzamento alla Console.  In tal caso, attenersi alla seguente procedura per completare la procedura di abbonamento.
+
+.Passi
+. Vai al https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Pagina NetApp su Google Cloud Marketplace"^] per verificare lo stato dell'ordine.  Se nella pagina è indicato *Gestisci sul fornitore*, scorri verso il basso e seleziona *Gestisci ordini*.
++
+image:screenshot_gcp_manage_orders.png["Uno screenshot della pagina del marketplace dopo l'iscrizione."]
+
++
+** Se l'ordine mostra un segno di spunta verde e ciò è inaspettato, è possibile che qualcun altro nell'organizzazione che utilizza lo stesso account di fatturazione sia già abbonato.  Se ciò non è previsto o hai bisogno dei dettagli di questo abbonamento, contatta il tuo team di vendita NetApp .
++
+image:screenshot_gcp_green_marketplace.png["Uno screenshot di un diritto accettato."]
+
+** Se l'ordine mostra un orologio e lo stato *In sospeso*, torna alla pagina del marketplace e seleziona *Gestisci sul fornitore* per completare il processo come descritto sopra.
++
+image:screenshot_gcp_pending_marketplace.png["Uno screenshot di un diritto di marketplace in sospeso."]
+
+
+
+

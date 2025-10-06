@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: task-console-assistant.html 
+keywords: bluexp,netapp console,console assistant,assistant,setup assistant,get started,quick start,first time user,first time setup,setup wizard 
+summary: 'Se è la prima volta che utilizzi NetApp Console, Console Assistant ti guiderà attraverso il processo di configurazione iniziale.  L"Assistente ti aiuta ad aggiungere un account NetApp Support Site (NSS), un agente della console, un cluster e una licenza o un abbonamento, semplificando l"avvio della gestione dei tuoi dati.' 
+---
+= Inizia a utilizzare NetApp Console Assistant
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se sei un utente alle prime armi della NetApp Console con il ruolo di amministratore dell'organizzazione, puoi utilizzare Console Assistant per ricevere assistenza durante il processo di configurazione iniziale.  L'Assistente ti aiuta ad aggiungere un account NetApp Support Site (NSS), un agente della console, un cluster e una licenza o un abbonamento, semplificando l'avvio della gestione dei tuoi dati.
+
+
+
+== Ruoli richiesti per accedere all'Assistente Console
+
+L'Assistente Console è disponibile solo per gli utenti con ruolo di amministratore dell'organizzazione.
+
+
+
+== Quando appare l'Assistente Console?
+
+Console Assistant è disponibile nella home page della console NetApp fino al completamento delle attività di configurazione obbligatorie.
+
+Utilizza l'Assistente per completare queste attività, alcune delle quali sono obbligatorie:
+
+* Aggiungi un account NetApp Support Site (NSS).
+* Connettiti al tuo spazio di archiviazione distribuendo un agente Console (passaggio obbligatorio).
+* Gestisci il tuo sistema aggiungendo o scoprendo un cluster (passaggio obbligatorio).
+* Aggiungi un abbonamento al marketplace o una licenza PAYGO.
+* Link ai servizi dati aperti.
+
+
+
+
+== Abilita l'Assistente Console
+
+Per impostazione predefinita, la console NetApp visualizza l'Assistente console nella home page per gli utenti che accedono per la prima volta e hanno il ruolo di amministratore dell'organizzazione.
+
+
+TIP: Puoi licenziare l'Assistente solo dopo che tu o qualcun altro avrete completato gli elementi obbligatori.  Dopo aver completato gli elementi obbligatori, l'Assistente verrà disattivato per tutti gli utenti della tua organizzazione e non verrà più visualizzato.
+
+
+
+== Utilizzare l'Assistente Console per iniziare
+
+Console Assistant ti guida attraverso la configurazione del tuo ambiente NetApp Console con queste attività:
+
+* Aggiungi un account NetApp Support Site (NSS).
+* Connettiti al tuo spazio di archiviazione distribuendo un agente Console, in locale o nel cloud.  È possibile distribuirlo manualmente o scaricando un file OVA.  Questo passaggio è obbligatorio.
+* Gestisci il tuo sistema aggiungendo o scoprendo un cluster.  Questo passaggio è obbligatorio.
+* Aggiungi un abbonamento al marketplace o una licenza PAYGO.
+* Scopri di più sui servizi dati NetApp .
+

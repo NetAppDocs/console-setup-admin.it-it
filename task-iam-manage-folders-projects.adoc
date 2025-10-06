@@ -1,0 +1,165 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-folders-projects.html 
+keywords: folders, projects, resource hierarchy, create folders, create projects, iam, identity and access management, project id 
+summary: 'all"interno della console NetApp , l"utilizzo della gestione delle identità e degli accessi consente di rappresentare una gerarchia completa delle risorse utilizzando cartelle e progetti.' 
+---
+= Organizza le risorse della console NetApp con cartelle e progetti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+All'interno della console NetApp puoi organizzare le tue risorse NetApp utilizzando progetti e cartelle.  Un _progetto_ rappresenta un'area di lavoro nella Console a cui i membri dell'organizzazione accedono per gestire le _risorse_ (ad esempio, un sistema Cloud Volumes ONTAP ).  Una _cartella_ raggruppa insieme progetti correlati.  Dopo aver organizzato le risorse in cartelle e progetti, puoi concedere un accesso granulare alle risorse fornendo ai membri dell'organizzazione autorizzazioni per cartelle e progetti specifici.
+
+
+
+== Aggiungi una cartella o un progetto
+
+Quando crei la tua organizzazione, questa include un singolo progetto.  Aggiungi progetti per gestire risorse e cartelle per raggruppare progetti correlati.
+
+La gerarchia delle risorse della tua organizzazione può avere fino a sette livelli, con le cartelle annidate a sei livelli di profondità e i progetti al settimo.
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Seleziona *Organizzazione*.
+. Dalla pagina *Organizzazione*, seleziona *Aggiungi cartella o progetto*.
+. Selezionare *Cartella* o *Progetto*.
+. Fornisci dettagli sulla cartella o sul progetto:
++
+** *Nome e posizione*: inserisci un nome e scegli una posizione nella gerarchia per la cartella o il progetto.  Una cartella o un progetto possono trovarsi direttamente sotto l'organizzazione o all'interno di una cartella.
+** *Risorse*: seleziona le risorse che desideri associare a questa cartella o progetto.
++
+È possibile selezionare le risorse associate alla cartella padre o al progetto.
+
++
+link:concept-identity-and-access-management.html#associate-resource-folder["Scopri quando associare una risorsa a una cartella"] .
+
+** *Accesso*: visualizza i membri che avranno accesso alla cartella o al progetto in base alle autorizzazioni esistenti già definite nella gerarchia delle risorse.
++
+Seleziona *Aggiungi un membro* per assegnare l'accesso e un ruolo ad altri membri. Un ruolo definisce le autorizzazioni che i membri hanno per la cartella o il progetto.
+
++
+link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] .
+
+
+
+. Selezionare *Aggiungi*.
+
+
+
+
+== Rinomina una cartella o un progetto
+
+Se necessario, puoi modificare il nome delle tue cartelle e dei tuoi progetti.
+
+.Passi
+. Dalla pagina *Organizzazione*, vai a un progetto o a una cartella nella tabella, selezionaimage:icon-action.png["Un'icona con tre punti"] e poi seleziona *Modifica cartella* o *Modifica progetto*.
+. Nella pagina *Modifica*, inserisci un nuovo nome e seleziona *Applica*.
+
+
+
+
+== Elimina una cartella o un progetto
+
+Elimina le cartelle e i progetti di cui non hai più bisogno.
+
+.Prima di iniziare
+* Assicurarsi che la cartella o il progetto non abbiano risorse associate. <<modify-resources,Scopri come dissociare le risorse>> .
+* Assicurati che la cartella o il progetto non abbiano risorse associate.
+
+
+.Passi
+. Dalla pagina *Organizzazione*, vai a un progetto o a una cartella nella tabella, selezionaimage:icon-action.png["Un'icona con tre punti"] e quindi seleziona *Elimina*.
+. Conferma che vuoi eliminare la cartella o il progetto.
+
+
+
+
+== Visualizza le risorse associate a una cartella o a un progetto
+
+Visualizza quali risorse e membri sono associati a una cartella o a un progetto.
+
+.Passi
+. Dalla pagina *Organizzazione*, vai a un progetto o a una cartella nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Modifica cartella* o *Modifica progetto*.
++
+image:screenshot-iam-edit-project.png["Uno screenshot della pagina Organizzazione che mostra l'opzione Modifica progetto quando si seleziona il menu Azione per un progetto nella tabella."]
+
+. Nella pagina *Modifica*, puoi visualizzare i dettagli sulla cartella o sul progetto selezionato espandendo le sezioni *Risorse* o *Accesso*.
++
+** Selezionare *Risorse* per visualizzare le risorse associate.  Nella tabella, la colonna *Stato* identifica le risorse associate alla cartella o al progetto.
++
+image:screenshot-iam-allocated-resources.png["Uno screenshot della pagina Modifica progetto che mostra le risorse disponibili che è possibile associare o dissociare dal progetto."]
+
+
+
+
+
+
+
+== Modificare le risorse associate a una cartella o a un progetto
+
+I membri con autorizzazioni per una cartella o un progetto possono accedere alle risorse associate.
+
+.Prima di iniziare
+link:concept-identity-and-access-management.html#associate-resource-folder["Scopri quando associare una risorsa a una cartella"] .
+
+.Passi
+. Dalla pagina *Organizzazione*, vai a un progetto o a una cartella nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Modifica cartella* o *Modifica progetto*.
+. Nella pagina *Modifica*, seleziona *Risorse*.
++
+Nella tabella, la colonna *Stato* identifica le risorse associate alla cartella o al progetto.
+
+. Seleziona le risorse che desideri associare o dissociare.
+. A seconda delle risorse selezionate, seleziona *Associa al progetto* o *Disassocia dal progetto*.
++
+image:screenshot-iam-associate-resources.png["Uno screenshot della pagina Modifica progetto che mostra l'opzione Associa risorse, disponibile dopo aver selezionato risorse che non sono attualmente associate."]
+
+. Seleziona *Applica*
+
+
+
+
+== Visualizza i membri associati a una cartella o a un progetto
+
+* Selezionare *Accesso* per visualizzare i membri che hanno accesso alla cartella o al progetto.
++
+image:screenshot-iam-member-access.png["Uno screenshot della pagina Modifica progetto che mostra i membri che hanno accesso al progetto."]
+
+
+
+
+
+== Modificare l'accesso dei membri a una cartella o a un progetto
+
+Modificare l'accesso dei membri per garantire che solo i membri autorizzati possano accedere alle risorse associate.
+
+L'accesso dei membri concesso a un livello gerarchico superiore non può essere modificato a livelli inferiori.  Aggiornare le autorizzazioni dei membri al livello gerarchico superiore per modificare l'accesso.  In alternativa, puoilink:task-iam-manage-roles.html#manage-permissions["gestire i permessi dalla pagina Membri"] .
+
+link:concept-identity-and-access-management.html#role-inheritance["Scopri di più sull'ereditarietà dei ruoli"] .
+
+.Passi
+. Dalla pagina *Organizzazione*, vai a un progetto o a una cartella nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Modifica cartella* o *Modifica progetto*.
+. Nella pagina *Modifica*, seleziona *Accesso* per visualizzare l'elenco dei membri che hanno accesso alla cartella o al progetto selezionato.
+. Modifica l'accesso dei membri:
++
+** *Aggiungi un membro*: seleziona il membro che desideri aggiungere alla cartella o al progetto e assegnagli un ruolo.
+** *Modifica il ruolo di un membro*: per tutti i membri con un ruolo diverso da Amministratore dell'organizzazione, seleziona il ruolo esistente e poi scegli un nuovo ruolo.
+** *Rimuovi accesso membro*: puoi rimuovere l'accesso ai membri che hanno un ruolo definito nella cartella o nel progetto che stai visualizzando.
+
+
+. Selezionare *Applica*.
+
+
+
+
+== Informazioni correlate
+
+* link:concept-identity-and-access-management.html["Scopri di più su identità e accesso nella console NetApp"]
+* link:task-iam-get-started.html["Inizia con identità e accesso"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Scopri di più sull'API di identità e accesso"]
+

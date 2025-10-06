@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: concept-install-options-google.html 
+keywords: install connector google cloud, google cloud install connector, connector google cloud, google cloud connector, install connector gcp, gcp install connector, connector gcp, gcp connector, installation options, manual install 
+summary: Esistono diversi modi per creare un agente Console in Google Cloud.  Il metodo più comune è quello diretto dalla console NetApp . 
+---
+= Opzioni di installazione dell'agente della console in Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Esistono diversi modi per creare un agente Console in Google Cloud.  Il metodo più comune è quello diretto dalla console NetApp .  ---
+
+Sono disponibili le seguenti opzioni di installazione:
+
+* link:task-install-connector-google-bluexp-gcloud.html["Crea l'agente Console direttamente dalla Console"](questa è l'opzione standard)
++
+Questa azione avvia un'istanza VM che esegue Linux e il software dell'agente Console in una VPC di tua scelta.
+
+* link:task-install-connector-google-bluexp-gcloud.html["Crea l'agente della console utilizzando Google Platform"]
++
+Questa azione avvia anche un'istanza VM che esegue Linux e il software dell'agente Console, ma la distribuzione viene avviata direttamente da Google Cloud, anziché dalla Console.
+
+* link:task-install-connector-google-manual.html["Scarica e installa manualmente il software sul tuo host Linux"]
+
+
+L'opzione di installazione scelta influisce sul modo in cui ci si prepara all'installazione.  Ciò include il modo in cui fornisci alla Console le autorizzazioni necessarie per autenticare e gestire le risorse in Google Cloud.

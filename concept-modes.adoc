@@ -1,0 +1,326 @@
+---
+sidebar: sidebar 
+permalink: concept-modes.html 
+keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
+summary: 'NetApp Console offre diverse _modalità di distribuzione_ che ti consentono di soddisfare i requisiti aziendali e di sicurezza. La _modalità standard_ sfrutta un livello di software come servizio (SaaS) per fornire funzionalità complete, mentre la _modalità limitata_ e la _modalità privata_ sono disponibili per le organizzazioni che hanno restrizioni di connettività.' 
+---
+= Scopri di più sulle modalità di distribuzione della console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console offre diverse _modalità di distribuzione_ che ti consentono di soddisfare i requisiti aziendali e di sicurezza.
+
+* La _modalità standard_ sfrutta un livello di software come servizio (SaaS) per fornire funzionalità complete.  Gli utenti accedono alla Console tramite un'interfaccia ospitata basata sul Web
+* La _Modalità limitata_ è disponibile per le organizzazioni con restrizioni di connettività che desiderano installare NetApp Console nel proprio cloud pubblico.  Gli utenti accedono alla Console tramite un'interfaccia basata sul Web ospitata su un agente Console nel loro ambiente cloud.
++
+NetApp Console limita il traffico, le comunicazioni e i dati in modalità limitata, ed è necessario assicurarsi che l'ambiente (in sede e nel cloud) sia conforme alle normative richieste.
+
+
+
+
+
+== Panoramica
+
+Ogni modalità di distribuzione differisce in termini di connettività in uscita, posizione, installazione, autenticazione, servizi dati e metodi di addebito.
+
+Modalità standard:: Si utilizza un servizio SaaS dalla console basata sul Web.  A seconda dei servizi dati e delle funzionalità che intendi utilizzare, un amministratore dell'organizzazione Console crea uno o più agenti Console per gestire i dati all'interno del tuo ambiente cloud ibrido.
++
+--
+Questa modalità utilizza la trasmissione crittografata dei dati tramite la rete Internet pubblica.
+
+--
+Modalità limitata:: Si installa un agente Console nel cloud (in una regione governativa, sovrana o commerciale) e ha una connettività in uscita limitata al livello SaaS della console NetApp .
++
+--
+Questa modalità è solitamente utilizzata dagli enti governativi statali e locali e dalle aziende regolamentate.
+
+<<Modalità limitata,Scopri di più sulla connettività in uscita al livello SaaS>> .
+
+--
+Modalità privata BlueXP (solo interfaccia BlueXP legacy):: La modalità privata BlueXP (interfaccia BlueXP legacy) viene in genere utilizzata con ambienti locali privi di connessione Internet e con regioni cloud sicure, tra cui AWS Secret Cloud, AWS Top Secret Cloud e Azure IL6.  NetApp continua a supportare questi ambienti con l'interfaccia legacy BlueXP .link:media/BlueXP-Private-Mode-legacy-interface.pdf["Documentazione PDF per la modalità privata BlueXP"^]
+
+
+La tabella seguente fornisce un confronto della console NetApp .
+
+[cols="16h,28,28"]
+|===
+|  | Modalità standard | Modalità limitata 
+
+
+| È richiesta la connessione al livello SaaS della console NetApp ? | SÌ | Solo in uscita 
+
+
+| È richiesta la connessione al tuo provider cloud? | SÌ | Sì, all'interno della regione 
+
+
+| Installazione dell'agente della console | Dalla console, dal cloud marketplace o dall'installazione manuale | Marketplace cloud o installazione manuale 
+
+
+| Aggiornamenti dell'agente della console | Aggiornamenti automatici | Aggiornamenti automatici 
+
+
+| Accesso UI | Dal livello SaaS della console | Localmente da una VM agente 
+
+
+| Punto finale dell'API | Il livello SaaS della console | Un agente della console 
+
+
+| Autenticazione | Tramite SaaS utilizzando auth0, login NSS o federazione delle identità | Tramite SaaS utilizzando auth0 o federazione delle identità 
+
+
+| Autenticazione multifattoriale | Disponibile per gli utenti locali | Non disponibile 
+
+
+| Servizi di archiviazione e dati | Tutti sono supportati | Molti sono supportati 
+
+
+| Opzioni di licenza del servizio dati | Abbonamenti al Marketplace e BYOL | Abbonamenti al Marketplace e BYOL 
+|===
+Per saperne di più su queste modalità, comprese le funzionalità e i servizi di NetApp Console supportati, leggere le sezioni seguenti.
+
+
+
+== Modalità standard
+
+L'immagine seguente è un esempio di distribuzione in modalità standard.
+
+image:diagram-standard-mode.png["Un'immagine concettuale che mostra la rete Internet pubblica in cui sono disponibili la console basata sul Web, il livello SaaS e l'autenticazione auth0, una rete virtuale nel cloud in cui un agente Console è in esecuzione e gestisce Cloud Volumes ONTAP e un cluster AFF in un data center locale."]
+
+In modalità standard la console funziona come segue:
+
+Comunicazione in uscita:: È richiesta la connettività da un agente della console al livello SaaS della console, alle risorse disponibili al pubblico del tuo provider cloud e ad altri componenti essenziali per le operazioni quotidiane.
++
+--
+* link:task-install-connector-aws-bluexp.html#networking-aws-agent["Endpoint che un agente contatta in AWS"]
+* link:task-install-connector-azure-bluexp.html#networking-azure-agent["Endpoint contattati da un agente in Azure"]
+* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["Endpoint che un agente contatta in Google Cloud"]
+
+
+--
+Posizione supportata per un agente:: Nella modalità standard, un agente è supportato nel cloud o presso la tua sede.
+Installazione dell'agente della console:: È possibile installare un agente utilizzando uno dei seguenti metodi:
++
+--
+* Dalla console
+* Da AWS o Azure Marketplace
+* Da Google Cloud SDK
+* Utilizzando manualmente un programma di installazione su un host Linux nel tuo data center o cloud
+* Utilizzare l'OVA fornito nel proprio ambiente VCenter.
+
+
+--
+Aggiornamenti dell'agente della console:: NetApp aggiorna automaticamente il tuo agente ogni mese.
+Accesso all'interfaccia utente:: L'interfaccia utente è accessibile dalla console basata sul Web fornita tramite il livello SaaS.
+Punto finale dell'API:: Le chiamate API vengono effettuate al seguente endpoint: \ https://api.bluexp.netapp.com
+Autenticazione:: Autenticazione con accessi auth0 o NetApp Support Site (NSS).  È disponibile la federazione delle identità.
+Servizi dati supportati:: Sono supportati tutti i servizi dati NetApp . link:https://docs.netapp.com/us-en/data-services-family/index.html["Scopri di più sui servizi dati NetApp"^] .
+Opzioni di licenza supportate:: Gli abbonamenti Marketplace e BYOL sono supportati con la modalità standard; tuttavia, le opzioni di licenza supportate dipendono dal servizio dati NetApp utilizzato.  Consultare la documentazione di ciascun servizio per saperne di più sulle opzioni di licenza disponibili.
+Come iniziare con la modalità standard:: Vai al https://console.netapp.com["Console NetApp"^] e iscriviti.
++
+--
+link:task-quick-start-standard-mode.html["Scopri come iniziare con la modalità standard"] .
+
+--
+
+
+
+
+== Modalità limitata
+
+L'immagine seguente è un esempio di distribuzione in modalità limitata.
+
+image:diagram-restricted-mode.png["Un'immagine concettuale che mostra la rete Internet pubblica in cui sono disponibili il livello SaaS e l'autenticazione auth0, una rete virtuale nel cloud in cui è in esecuzione un agente Console che fornisce accesso alla console basata sul Web e gestisce Cloud Volumes ONTAP e un cluster AFF in un data center locale."]
+
+La console funziona come segue in modalità limitata:
+
+Comunicazione in uscita:: Un agente necessita di connettività in uscita al livello SaaS della console per servizi dati, aggiornamenti software, autenticazione e trasmissione di metadati.
++
+--
+Il livello SaaS della console non avvia la comunicazione con un agente.  Gli agenti avviano tutte le comunicazioni con il livello SaaS della console, estraendo o inviando dati in base alle necessità.
+
+È inoltre richiesta una connessione alle risorse del provider cloud all'interno della regione.
+
+--
+Posizione supportata per un agente:: In modalità limitata, un agente è supportato nel cloud: in una regione governativa, sovrana o commerciale.
+Installazione dell'agente della console:: Puoi effettuare l'installazione da AWS o Azure Marketplace oppure manualmente sul tuo host Linux oppure tramite un OVA scaricabile nel tuo ambiente VCenter.
+Aggiornamenti dell'agente della console:: NetApp aggiorna automaticamente il software dell'agente con aggiornamenti mensili.
+Accesso all'interfaccia utente:: L'interfaccia utente è accessibile da una macchina virtuale agente distribuita nella tua regione cloud.
+Punto finale dell'API:: Le chiamate API vengono effettuate alla macchina virtuale dell'agente.
+Autenticazione:: L'autenticazione viene fornita tramite auth0.  È disponibile anche la federazione delle identità.
+Gestione dell'archiviazione e servizi dati supportati:: I seguenti servizi di archiviazione e dati con modalità limitata:
++
+--
+[cols="2*"]
+|===
+| Servizi supportati | Note 
+
+
+| Azure NetApp Files | Supporto completo 
+
+
+| Backup e ripristino | Supportato nelle regioni governative e commerciali con modalità limitata. Non supportato nelle regioni sovrane con modalità limitata. In modalità limitata, NetApp Backup and Recovery supporta solo il backup e il ripristino dei dati del volume ONTAP . https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati ONTAP"^] Il backup e il ripristino dei dati delle applicazioni e dei dati delle macchine virtuali non sono supportati. 
+
+
+| Classificazione dei dati NetApp  a| 
+Supportato nelle regioni governative con modalità limitata.  Non supportato nelle regioni commerciali o nelle regioni sovrane con modalità limitata.
+
+
+
+| Cloud Volumes ONTAP | Supporto completo 
+
+
+| Licenze e abbonamenti | È possibile accedere alle informazioni sulla licenza e sull'abbonamento con le opzioni di licenza supportate elencate di seguito per la modalità limitata. 
+
+
+| Cluster ONTAP on-premise | Sono supportate sia la rilevazione con un agente Console sia la rilevazione senza un agente Console (rilevazione diretta).  Quando si rileva un cluster locale senza un agente Console, la visualizzazione avanzata (System Manager) non è supportata. 
+
+
+| Replicazione | Supportato nelle regioni governative con modalità limitata.  Non supportato nelle regioni commerciali o nelle regioni sovrane con modalità limitata. 
+|===
+--
+Opzioni di licenza supportate:: Le seguenti opzioni di licenza sono supportate con la modalità limitata:
++
+--
+* Abbonamenti Marketplace (contratti orari e annuali)
++
+Notare quanto segue:
+
++
+** Per Cloud Volumes ONTAP, è supportata solo la licenza basata sulla capacità.
+** In Azure, i contratti annuali non sono supportati con le aree governative.
+
+
+* BYOL
++
+Per Cloud Volumes ONTAP, con BYOL sono supportate sia le licenze basate sulla capacità che quelle basate sui nodi.
+
+
+
+--
+Come iniziare con la modalità limitata:: Quando si crea l'organizzazione NetApp Console, è necessario abilitare la modalità limitata.
+
+
+Se non hai ancora un'organizzazione, ti verrà chiesto di crearne una e di abilitare la modalità con restrizioni quando accedi alla Console per la prima volta da un agente della Console installato manualmente o creato dal marketplace del tuo provider cloud.
+
+
+NOTE: Non è possibile modificare l'impostazione della modalità limitata dopo aver creato l'organizzazione.
+
+link:task-quick-start-restricted-mode.html["Scopri come iniziare con la modalità limitata"] .
+
+
+
+== Confronto tra servizi e funzionalità
+
+La tabella seguente può aiutarti a identificare rapidamente quali servizi e funzionalità sono supportati dalla modalità con restrizioni.
+
+Tieni presente che alcuni servizi potrebbero essere supportati con limitazioni.  Per maggiori dettagli su come questi servizi sono supportati con la modalità limitata, fare riferimento alle sezioni precedenti.
+
+[cols="19,27,27"]
+|===
+| Area di prodotto | Servizio o funzionalità dati NetApp | Modalità limitata 
+
+
+.10+| *Archiviazione* Questa parte della tabella elenca il supporto per la gestione dei sistemi di archiviazione dalla Console.  Non indica le destinazioni di backup supportate per NetApp Backup and Recovery. | Amazon FSx per ONTAP | NO 
+
+
+| Amazon S3 | NO 
+
+
+| Blob azzurro | NO 
+
+
+| Azure NetApp Files | SÌ 
+
+
+| Cloud Volumes ONTAP | SÌ 
+
+
+| Google Cloud NetApp Volumes | NO 
+
+
+| Google Cloud Storage | NO 
+
+
+| Cluster ONTAP on-premise | SÌ 
+
+
+| Serie E | NO 
+
+
+| StorageGRID | NO 
+
+
+.9+| *Servizi dati* | Backup e ripristino NetApp | SÌhttps://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] 
+
+
+| Classificazione dei dati NetApp | SÌ 
+
+
+| Copia e sincronizzazione NetApp | NO 
+
+
+| Ripristino di emergenza NetApp | NO 
+
+
+| Resilienza al ransomware NetApp | NO 
+
+
+| Replicazione NetApp | SÌ 
+
+
+| NetApp Cloud Tiering | NO 
+
+
+| Memorizzazione nella cache del volume NetApp | NO 
+
+
+| Fabbrica di carichi di lavoro NetApp | NO 
+
+
+.14+| *Caratteristiche* | Avvisi | NO 
+
+
+| Digital Advisor | NO 
+
+
+| Gestione delle licenze e degli abbonamenti | SÌ 
+
+
+| Gestione dell'identità e degli accessi | SÌ 
+
+
+| Credenziali | SÌ 
+
+
+| Federazione | SÌ 
+
+
+| Pianificazione del ciclo di vita | NO 
+
+
+| Autenticazione multifattoriale | SÌ 
+
+
+| Conti NSS | SÌ 
+
+
+| Notifiche | SÌ 
+
+
+| Ricerca | SÌ 
+
+
+| Aggiornamenti software | NO 
+
+
+| Sostenibilità | NO 
+
+
+| Revisione contabile | SÌ 
+|===

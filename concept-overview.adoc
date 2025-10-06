@@ -1,0 +1,164 @@
+---
+sidebar: sidebar 
+permalink: concept-overview.html 
+keywords: overview, concepts, features, use case, cloud manager, bluexp, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works 
+summary: NetApp Console offre una gestione centralizzata dei servizi di archiviazione e dati NetApp in ambienti on-premise e cloud su scala aziendale. 
+---
+= Scopri di più su NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console offre una gestione centralizzata dello storage NetApp e dei servizi dati NetApp in ambienti on-premise e cloud di livello aziendale, offrendo informazioni in tempo reale, flussi di lavoro più rapidi e un'amministrazione semplificata, il tutto in modo altamente sicuro e conforme.
+
+È una piattaforma disponibile come servizio (SaaS) che fornisce gestione dell'archiviazione, mobilità dei dati, protezione dei dati, analisi e controllo dei dati.  Le funzionalità di gestione sono fornite tramite una console basata sul Web e API.
+
+
+
+== Caratteristiche
+
+La console unifica la gestione e la protezione dello storage su cloud multi-ibridi con servizi dati integrati per proteggere e ottimizzare i dati.
+
+
+
+=== Gestione centralizzata dell'archiviazione
+
+Scopri, distribuisci e gestisci l'archiviazione cloud e on-premise con la Console.
+
+
+
+==== Archiviazione cloud e on-premise supportata
+
+Dalla Console è possibile gestire i seguenti tipi di archiviazione:
+
+Soluzioni di archiviazione cloud::
++
+--
+* Amazon FSx for NetApp ONTAP
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* Google Cloud NetApp Volumes
+
+
+--
+Archiviazione flash e di oggetti in sede::
++
+--
+* Sistemi della serie E
+* Cluster ONTAP
+* Sistemi StorageGRID
+
+
+--
+Archiviazione di oggetti nel cloud::
++
+--
+* Archiviazione Amazon S3
+* Archiviazione BLOB di Azure
+* Google Cloud Storage
+
+
+--
+
+
+
+
+==== Gestione dello storage
+
+All'interno della Console, i _sistemi_ rappresentano lo storage scoperto o distribuito.  È possibile selezionare un _sistema_ per integrarlo con i servizi dati NetApp o per gestire l'archiviazione, ad esempio aggiungendo volumi.
+
+image:screenshot-canvas.png["Uno screenshot della Console che mostra diversi sistemi, uno dei quali è selezionato e mostra la possibilità di abilitare i servizi dati NetApp o di selezionare *Inserisci sistema* per gestire l'archiviazione."]
+
+
+
+=== Servizi dati integrati e gestione dell'archiviazione per proteggere, proteggere e ottimizzare i dati
+
+La Console fornisce servizi dati per proteggere e mantenere la disponibilità dell'archiviazione.
+
+Avvisi di archiviazione:: Visualizza i problemi relativi a capacità, disponibilità, prestazioni, protezione e sicurezza nel tuo ambiente ONTAP .
+Hub di automazione:: Utilizzare soluzioni con script per automatizzare la distribuzione e l'integrazione dei prodotti e dei servizi NetApp .
+Backup e ripristino NetApp:: Esegui il backup e il ripristino dei dati nel cloud e in locale.
+Classificazione dei dati NetApp:: Proteggi la privacy dei dati delle tue applicazioni e degli ambienti cloud.
+Copia e sincronizzazione NetApp:: Sincronizza i dati tra archivi dati locali e cloud.
+Consulente digitale NetApp (Active IQ):: Utilizza analisi predittive e supporto proattivo per ottimizzare la tua infrastruttura dati.
+Licenze e abbonamenti:: Gestisci e monitora le tue licenze e i tuoi abbonamenti.
+Ripristino di emergenza NetApp:: Proteggi i carichi di lavoro VMware on-premise utilizzando VMware Cloud su Amazon FSx per ONTAP come sito di disaster recovery.
+Pianificazione del ciclo di vita:: Identificare i cluster con capacità attuale o prevista bassa e implementare la suddivisione in livelli dei dati o raccomandazioni sulla capacità aggiuntiva.
+Resilienza al ransomware NetApp:: Rileva anomalie che potrebbero causare attacchi ransomware.  Proteggere e ripristinare i carichi di lavoro.
+Replicazione NetApp:: Replicare i dati tra i sistemi di archiviazione per supportare il backup e il ripristino di emergenza.
+Aggiornamenti software:: Automatizzare la valutazione, la pianificazione e l'esecuzione degli aggiornamenti ONTAP .
+Dashboard della sostenibilità:: Analizza la sostenibilità dei tuoi sistemi di storage.
+NetApp Cloud Tiering:: Estendi il tuo storage ONTAP on-premise al cloud.
+Caching del volume NetApp:: Crea un volume di cache scrivibile per velocizzare l'accesso ai dati o per scaricare il traffico dai volumi a cui si accede più frequentemente.
+Carichi di lavoro NetApp:: Progetta, configura e gestisci carichi di lavoro chiave utilizzando Amazon FSx for NetApp ONTAP.
+
+
+https://www.netapp.com/bluexp/["Scopri di più sulla console NetApp e sui servizi dati disponibili"^]
+
+
+
+== Fornitori cloud supportati
+
+La Console consente di gestire l'archiviazione cloud e di utilizzare i servizi cloud in Amazon Web Services, Microsoft Azure e Google Cloud.
+
+
+
+== Costo
+
+L'utilizzo della NetApp Console è gratuito.  Se distribuisci agenti Console nel cloud o utilizzi la modalità con restrizioni distribuita nel cloud, verranno addebitati dei costi.  Alcuni servizi dati NetApp prevedono dei costi.https://bluexp.netapp.com/pricing["Scopri i prezzi dei servizi dati NetApp"^]
+
+
+
+== Come funziona NetApp Console
+
+NetApp Console è una console basata sul Web fornita tramite il livello SaaS, un sistema di gestione delle risorse e degli accessi, agenti della console che gestiscono i sistemi di storage e abilitano i servizi dati NetApp e diverse modalità di distribuzione per soddisfare i requisiti aziendali.
+
+
+
+=== Software come servizio
+
+Si accede alla Console tramite un https://console.netapp.com["interfaccia basata sul web"^] e API.  Questa esperienza SaaS ti consente di accedere automaticamente alle funzionalità più recenti non appena vengono rilasciate.
+
+
+
+=== Gestione dell'identità e dell'accesso (IAM)
+
+La Console fornisce la gestione delle identità e degli accessi (IAM) per la gestione delle risorse e degli accessi.  Questo modello IAM fornisce una gestione granulare delle risorse e delle autorizzazioni:
+
+* Un'organizzazione di primo livello ti consente di gestire l'accesso tra i tuoi vari progetti
+* Le _cartelle_ consentono di raggruppare insieme progetti correlati
+* La gestione delle risorse consente di associare una risorsa a una o più cartelle o progetti
+* La gestione degli accessi consente di assegnare un ruolo ai membri a diversi livelli della gerarchia dell'organizzazione
+* link:concept-identity-and-access-management.html["Scopri di più su IAM nella console NetApp"]
+
+
+
+
+=== Agenti della console
+
+Per alcune funzionalità e servizi dati aggiuntivi è necessario un agente Console.  Ti consente di gestire risorse e processi nei tuoi ambienti on-premise e cloud.  È necessario per gestire alcuni sistemi (ad esempio, Cloud Volumes ONTAP) e per utilizzare alcuni servizi dati NetApp .
+
+link:concept-connectors.html["Scopri di più sugli agenti della console"] .
+
+
+
+=== Modalità di distribuzione
+
+NetApp offre due modalità di distribuzione per NetApp Console: la _modalità standard_ utilizza un livello di software come servizio (SaaS) per la piena funzionalità, mentre la _modalità limitata_ limita la connettività in uscita.
+
+NetApp continua a offrire BlueXP per i siti che non necessitano di connettività in uscita.  BlueXP è disponibile solo in modalità privata.link:task-quick-start-private-mode.html["Scopri di più su BlueXP (modalità privata) per i siti senza connettività Internet."]
+
+link:concept-modes.html["Scopri di più sulle modalità di distribuzione"] .
+
+
+
+== Certificazione SOC 2 Tipo 2
+
+Uno studio contabile certificato indipendente e un revisore dei servizi hanno esaminato la Console e hanno confermato che ha ottenuto i report SOC 2 Tipo 2 in base ai criteri applicabili ai servizi fiduciari.
+
+https://www.netapp.com/company/trust-center/compliance/soc-2/["Visualizza i report SOC 2 di NetApp"^]

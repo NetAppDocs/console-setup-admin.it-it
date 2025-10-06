@@ -1,0 +1,247 @@
+---
+sidebar: sidebar 
+permalink: reference-permissions.html 
+keywords: permissions, actions 
+summary: Per utilizzare le funzionalità e i servizi di NetApp Console, è necessario fornire le autorizzazioni necessarie affinché la Console possa eseguire operazioni nel tuo ambiente cloud.  Utilizza i link presenti in questa pagina per accedere rapidamente alle autorizzazioni di cui hai bisogno in base al tuo obiettivo. 
+---
+= Riepilogo delle autorizzazioni per NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per utilizzare le funzionalità e i servizi di NetApp Console, è necessario fornire le autorizzazioni necessarie affinché la Console possa eseguire operazioni nel tuo ambiente cloud.  Utilizza i link presenti in questa pagina per accedere rapidamente alle autorizzazioni di cui hai bisogno in base al tuo obiettivo.
+
+
+
+== Autorizzazioni AWS
+
+La console NetApp richiede le autorizzazioni AWS per un agente della console e per i singoli servizi.
+
+
+
+=== Agenti della console
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Distribuisci un agente Console dalla Console | L'utente che crea un agente della Console dalla Console necessita di autorizzazioni specifiche per distribuire l'istanza in AWS. | link:task-install-connector-aws-bluexp.html#aws-permissions-agent["Imposta le autorizzazioni AWS"] 
+
+
+| Fornire autorizzazioni per un agente della console | Quando la Console distribuisce un agente della Console, associa una policy all'istanza che fornisce le autorizzazioni necessarie per gestire risorse e processi nel tuo account AWS.  È necessario impostare autonomamente la policy se si distribuisce un agente della console da AWS Marketplace, se si installa manualmente un agente della console o selink:task-adding-aws-accounts.html#add-credentials-agent-aws["aggiungere più credenziali AWS a un agente della console"] .  È inoltre necessario assicurarsi che la policy sia aggiornata poiché nelle versioni successive verranno aggiunte nuove autorizzazioni. | link:reference-permissions-aws.html["Autorizzazioni AWS per un agente della console"] 
+|===
+
+
+=== Backup e ripristino NetApp
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Esegui il backup dei cluster ONTAP locali su Amazon S3 con NetApp Backup and Recovery | Quando si attivano i backup sui volumi ONTAP , NetApp Backup and Recovery richiede di immettere una chiave di accesso e un segreto per un utente IAM che dispone di autorizzazioni specifiche. | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-aws.html["Impostare le autorizzazioni S3 per i backup"^] 
+|===
+
+
+=== Cloud Volumes ONTAP
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Fornire autorizzazioni per i nodi Cloud Volumes ONTAP | Un ruolo IAM deve essere associato a ciascun nodo Cloud Volumes ONTAP in AWS.  Lo stesso vale per il mediatore HA.  L'opzione predefinita è quella di lasciare che la Console crei i ruoli IAM per te, ma puoi utilizzare i tuoi ruoli quando crei il sistema nella Console. | https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-set-up-iam-roles.html["Scopri come impostare autonomamente i ruoli IAM"^] 
+|===
+
+
+=== Copia e sincronizzazione NetApp
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Distribuisci il broker di dati in AWS | L'account utente AWS utilizzato per distribuire il broker di dati deve disporre di autorizzazioni specifiche. | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws["Autorizzazioni necessarie per distribuire il broker di dati in AWS"^] 
+
+
+| Fornire autorizzazioni per il broker di dati | Quando NetApp Copy and Sync distribuisce il broker di dati, crea un ruolo IAM per l'istanza del broker di dati.  Se preferisci, puoi distribuire il data broker utilizzando il tuo ruolo IAM. | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker["Requisiti per utilizzare il proprio ruolo IAM con AWS Data Broker"^] 
+
+
+| Abilita l'accesso AWS per un broker di dati installato manualmente | Se si utilizza il broker di dati con una relazione di sincronizzazione che include un bucket S3, è necessario preparare l'host Linux per l'accesso ad AWS.  Quando installi il broker di dati, dovrai fornire le chiavi AWS per un utente IAM che dispone di accesso programmatico e autorizzazioni specifiche. | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#enabling-access-to-aws["Abilitazione dell'accesso ad AWS"^] 
+|===
+
+
+=== FSx per ONTAP
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Crea e gestisci FSx per ONTAP | Per creare o gestire un sistema Amazon FSx for NetApp ONTAP , è necessario aggiungere le credenziali AWS alla Console fornendo l'ARN di un ruolo IAM che fornisce alla Console le autorizzazioni necessarie. | https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Scopri come configurare le credenziali AWS per FSx"^] 
+|===
+
+
+=== NetApp Cloud Tiering
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Cluster ONTAP locali di livello superiore su Amazon S3 | Quando si abilita NetApp Cloud Tiering su AWS, la procedura guidata richiede di immettere una chiave di accesso e una chiave segreta.  Queste credenziali vengono trasmesse al cluster ONTAP in modo che ONTAP possa suddividere i dati nel bucket S3. | https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#set-up-s3-permissions["Impostare le autorizzazioni S3 per la suddivisione in livelli"^] 
+|===
+
+
+== Autorizzazioni di Azure
+
+La console richiede le autorizzazioni di Azure per un agente della console e per i singoli servizi.
+
+
+
+=== Agente console
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Distribuisci un agente Console dalla Console | Quando si distribuisce un agente Console dalla Console, è necessario utilizzare un account Azure o un'entità servizio che disponga delle autorizzazioni per distribuire una VM dell'agente Console in Azure. | link:task-install-connector-azure-bluexp.html#connector-custom-role["Configurare le autorizzazioni di Azure"] 
+
+
+| Fornire autorizzazioni per un agente della console  a| 
+Quando la Console distribuisce una VM dell'agente Console in Azure, crea un ruolo personalizzato che fornisce le autorizzazioni necessarie per gestire risorse e processi all'interno di tale sottoscrizione di Azure.
+
+È necessario impostare autonomamente il ruolo personalizzato se si avvia un agente Console dal marketplace, se si installa manualmente un agente Console o selink:task-adding-azure-accounts.html#add-credentials-azure["aggiungere altre credenziali di Azure a un agente della console"] .
+
+È inoltre necessario assicurarsi che la policy sia aggiornata poiché nelle versioni successive verranno aggiunte nuove autorizzazioni.
+ a| 
+link:reference-permissions-azure.html["Autorizzazioni di Azure per un agente della console"]
+
+|===
+
+
+=== Backup e ripristino NetApp
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Backup Cloud Volumes ONTAP nell'archiviazione BLOB di Azure  a| 
+Quando si utilizza NetApp Backup and Recovery per eseguire il backup Cloud Volumes ONTAP, è necessario aggiungere autorizzazioni a un agente Console nei seguenti scenari:
+
+* Vuoi utilizzare la funzionalità "Cerca e ripristina"
+* Vuoi utilizzare chiavi di crittografia gestite dal cliente (CMEK)
+
+ a| 
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-azure.html["Esegui il backup dei dati Cloud Volumes ONTAP nell'archiviazione BLOB di Azure con Backup e ripristino"^]
+
+
+
+
+| Eseguire il backup dei cluster ONTAP locali nell'archiviazione BLOB di Azure | Quando si utilizza NetApp Backup and Recovery per eseguire il backup di cluster ONTAP locali, è necessario aggiungere autorizzazioni a un agente della console per poter utilizzare la funzionalità "Cerca e ripristina". | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-azure.html["Esegui il backup dei dati ONTAP locali nell'archiviazione BLOB di Azure con Backup e ripristino"^] 
+|===
+
+
+=== Copia e sincronizzazione NetApp
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Distribuire il broker di dati in Azure | L'account utente di Azure utilizzato per distribuire il broker di dati deve disporre delle autorizzazioni richieste. | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-azure.html#permissions-required-to-deploy-the-data-broker-in-azure["Autorizzazioni necessarie per distribuire il broker di dati in Azure"^] 
+|===
+
+
+== Autorizzazioni di Google Cloud
+
+La Console richiede le autorizzazioni di Google Cloud per un agente della Console e per i singoli servizi.
+
+
+
+=== Agenti della console
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Distribuisci un agente Console dalla Console | L'utente di Google Cloud che distribuisce un agente Console dalla Console necessita di autorizzazioni specifiche per distribuire un agente Console in Google Cloud. | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["Imposta le autorizzazioni per creare un agente Console"] 
+
+
+| Fornire autorizzazioni per un agente della console | L'account di servizio per un'istanza di VM dell'agente Console deve disporre di autorizzazioni specifiche per le operazioni quotidiane.  Durante la distribuzione è necessario associare l'account di servizio a un agente della console.  È inoltre necessario assicurarsi che la policy sia aggiornata poiché nelle versioni successive verranno aggiunte nuove autorizzazioni. | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["Impostare le autorizzazioni per un agente della console"] 
+|===
+
+
+=== Backup e ripristino NetApp
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Esegui il backup Cloud Volumes ONTAP su Google Cloud  a| 
+Quando si utilizza NetApp Backup and Recovery per eseguire il backup Cloud Volumes ONTAP, è necessario aggiungere autorizzazioni a un agente Console nei seguenti scenari:
+
+* Vuoi utilizzare la funzionalità "Cerca e ripristina"
+* Vuoi utilizzare chiavi di crittografia gestite dal cliente (CMEK)
+
+ a| 
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-gcp.html["Esegui il backup dei dati Cloud Volumes ONTAP su Google Cloud Storage con Backup e ripristino"^]
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-gcp.html["Autorizzazioni per CMEK"^]
+
+
+
+
+| Eseguire il backup dei cluster ONTAP locali su Google Cloud | Quando si utilizza NetApp Backup and Recovery per eseguire il backup di cluster ONTAP locali, è necessario aggiungere autorizzazioni a un agente della console per poter utilizzare la funzionalità "Cerca e ripristina". | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-gcp.html["Esegui il backup dei dati ONTAP locali su Google Cloud Storage con Backup e ripristino"^] 
+|===
+
+
+=== Copia e sincronizzazione NetApp
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Distribuisci il broker di dati in Google Cloud | Assicurarsi che l'utente di Google Cloud che distribuisce il broker di dati disponga delle autorizzazioni necessarie. | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-gcp.html#permissions-required-to-deploy-the-data-broker-in-google-cloud["Autorizzazioni necessarie per distribuire il broker di dati in Google Cloud"^] 
+
+
+| Abilita l'accesso a Google Cloud per un broker di dati installato manualmente | Se si prevede di utilizzare il broker di dati con una relazione di sincronizzazione che include un bucket di Google Cloud Storage, è necessario preparare l'host Linux per l'accesso a Google Cloud.  Quando installi il broker di dati, dovrai fornire una chiave per un account di servizio che abbia autorizzazioni specifiche. | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#enabling-access-to-google-cloud["Abilitazione dell'accesso a Google Cloud"^] 
+|===
+
+
+== Autorizzazioni StorageGRID
+
+La console richiede le autorizzazioni StorageGRID per due servizi.
+
+
+
+=== Backup e ripristino NetApp
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Eseguire il backup dei cluster ONTAP locali su StorageGRID | Quando si prepara StorageGRID come destinazione di backup per i cluster ONTAP , NetApp Backup and Recovery richiede di immettere una chiave di accesso e un segreto per un utente IAM che dispone di autorizzazioni specifiche. | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["Prepara StorageGRID come destinazione di backup"^] 
+|===
+
+
+=== NetApp Cloud Tiering
+
+[cols="20,60,20"]
+|===
+| Obiettivo | Descrizione | Collegamento 
+
+
+| Suddivisione dei cluster ONTAP locali in livelli su StorageGRID | Quando si configura NetApp Cloud Tiering su StorageGRID, è necessario fornire a Cloud Tiering una chiave di accesso S3 e una chiave segreta.  Il cloud tiering utilizza le chiavi per accedere ai bucket. | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["Preparare il tiering per StorageGRID"^] 
+|===

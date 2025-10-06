@@ -1,0 +1,24 @@
+= Supporto per Google Cloud NetApp Volumes
+:allow-uri-read: 
+
+
+
+
+=== Supporto per Google Cloud NetApp Volumes
+
+Ora puoi visualizzare Google Cloud NetApp Volumes in BlueXP.link:https://docs.netapp.com/us-en//bluexp-google-cloud-netapp-volumes/index.html["Scopri di più su Google Cloud NetApp Volumes."]
+
+
+
+=== Gestione dell'identità e degli accessi (IAM) BlueXP
+
+
+
+==== Nuovo ruolo di accesso per Google Cloud NetApp Volumes
+
+BlueXP ora supporta l'utilizzo di un ruolo di accesso per il seguente sistema di archiviazione:
+
+* Google Cloud NetApp Volumes
+
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Scopri di più sull'utilizzo dei ruoli di accesso."]

@@ -1,0 +1,144 @@
+---
+sidebar: sidebar 
+permalink: reference-connector-default-config.html 
+keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
+summary: 'Scopri di più sull"agente Console prima di distribuirlo.' 
+---
+= Configurazione predefinita per l'agente della console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Scopri di più sulla configurazione dell'agente Console prima di distribuirlo.
+
+
+
+== Configurazione predefinita con accesso a Internet
+
+I seguenti dettagli di configurazione si applicano se hai distribuito un agente Console dalla console NetApp , dal marketplace del tuo provider cloud o se hai installato manualmente un agente Console su un host Linux locale con accesso a Internet.
+
+
+
+=== Dettagli AWS
+
+Se hai distribuito un agente Console dalla Console o dal marketplace del provider cloud, tieni presente quanto segue:
+
+* Il tipo di istanza EC2 è t3.2xlarge.
+* Il sistema operativo per l'immagine è Ubuntu 22.04 LTS.
++
+Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per accedere al sistema è necessario utilizzare un terminale.
+
+* L'installazione include Docker Engine, lo strumento di orchestrazione dei container richiesto.
+* Il nome utente per l'istanza EC2 Linux è ubuntu (per gli agenti creati prima di maggio 2023, il nome utente era ec2-user).
+* Il disco di sistema predefinito è un disco gp2 da 100 GiB.
+
+
+
+
+=== Dettagli azzurri
+
+Se hai distribuito un agente Console dalla Console o dal marketplace del provider cloud, tieni presente quanto segue:
+
+* Il tipo di VM è Standard_D8s_v3.
+* Il sistema operativo per l'immagine è Ubuntu 22.04 LTS.
++
+Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per accedere al sistema è necessario utilizzare un terminale.
+
+* L'installazione include Docker Engine, lo strumento di orchestrazione dei container richiesto.
+* Il disco di sistema predefinito è un disco SSD premium da 100 GiB.
+
+
+
+
+=== Dettagli di Google Cloud
+
+Se hai distribuito un agente Console dalla Console, tieni presente quanto segue:
+
+* L'istanza della VM è n2-standard-8.
+* Il sistema operativo per l'immagine è Ubuntu 22.04 LTS.
++
+Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per accedere al sistema è necessario utilizzare un terminale.
+
+* L'installazione include Docker Engine, lo strumento di orchestrazione dei container richiesto.
+* Il disco di sistema predefinito è un disco persistente SSD da 100 GiB.
+
+
+
+
+=== Cartella di installazione
+
+La cartella di installazione dell'agente si trova nel seguente percorso:
+
+/opt/application/netapp/cloudmanager
+
+
+
+=== File di registro
+
+I file di registro sono contenuti nelle seguenti cartelle:
+
+* /opt/application/netapp/cloudmanager/log o
+* /opt/application/netapp/service-manager-2/logs (a partire dalle nuove installazioni 3.9.23)
++
+I registri in queste cartelle forniscono dettagli sull'agente della console.
+
+* /opt/application/netapp/cloudmanager/docker_occm/data/log
++
+I registri in questa cartella forniscono dettagli sui servizi cloud e sul servizio Console in esecuzione sull'agente Console.
+
+
+
+
+
+=== Servizio agente console
+
+* Il servizio agente della console si chiama occm.
+* Il servizio occm dipende dal servizio MySQL.
++
+Se il servizio MySQL è inattivo, lo è anche il servizio occm.
+
+
+
+
+
+=== porti
+
+L'agente utilizza le seguenti porte sull'host Linux:
+
+* 80 per l'accesso HTTP
+* 443 per l'accesso HTTPS
+
+
+
+
+== Configurazione predefinita senza accesso a Internet
+
+La seguente configurazione si applica se hai installato manualmente l'agente Console su un host Linux locale che non ha accesso a Internet. link:task-quick-start-private-mode.html["Scopri di più su questa opzione di installazione"] .
+
+* La cartella di installazione dell'agente si trova nel seguente percorso:
++
+/opt/applicazione/netapp/ds
+
+* I file di registro sono contenuti nelle seguenti cartelle:
++
+/var/lib/docker/volumes/ds_occmdata/_data/log
+
++
+I registri in questa cartella forniscono dettagli sull'agente Console e sulle immagini Docker.
+
+* Tutti i servizi sono in esecuzione all'interno di contenitori Docker
++
+I servizi dipendono dal servizio runtime Docker in esecuzione
+
+* L'agente utilizza le seguenti porte sull'host Linux:
++
+** 80 per l'accesso HTTP
+** 443 per l'accesso HTTPS
+
+
+

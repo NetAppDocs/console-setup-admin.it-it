@@ -1,0 +1,124 @@
+= 
+:allow-uri-read: 
+
+
+Endpoint contattati durante l'installazione manuale:: Quando si installa manualmente l'agente Console sul proprio host Linux, il programma di installazione dell'agente Console richiede l'accesso ai seguenti URL durante il processo di installazione:
+
+
+[cols="2*"]
+|===
+| Punti finali | Scopo 
+
+
+| \ https://mysupport.netapp.com |  
+
+
+| \ https://signin.b2c.netapp.com | (questo endpoint è l'URL CNAME per \ https://mysupport.netapp.com ) 
+
+
+| \ https://cloudmanager.cloud.netapp.com/tenancy |  
+
+
+| \ https://stream.cloudmanager.cloud.netapp.com |  
+
+
+| \ https://production-artifacts.cloudmanager.cloud.netapp.com |  
+
+
+ a| 
+* Opzione 1 (consigliata):
++
+** \ https://bluexpinfraprod.eastus2.data.azurecr.io
+** \ https://bluexpinfraprod.azurecr.io
+
+
+* Opzione 2:
++
+** \https://*.blob.core.windows.net
+** \ https://cloudmanagerinfraprod.azurecr.io
+
+
+
+ a| 
+Per ottenere le immagini, il programma di installazione deve avere accesso a uno di questi due set di endpoint.  ^1^ Gli endpoint elencati nell'opzione 1 sono consigliati perché sono più sicuri.  Ti consigliamo di configurare il firewall in modo da consentire gli endpoint elencati nell'opzione 1 e di non consentire gli endpoint elencati nell'opzione 2.  Si tenga presente quanto segue in merito a questi endpoint:
+
+* Gli endpoint elencati nell'opzione 1 sono supportati a partire dalla versione 3.9.47 dell'agente Console.  Non esiste alcuna compatibilità con le versioni precedenti dell'agente Console.
+* L'agente della console contatta prima gli endpoint elencati nell'opzione 2.  Se tali endpoint non sono accessibili, l'agente della console contatta automaticamente gli endpoint elencati nell'opzione 1.
+* Gli endpoint nell'opzione 1 non sono supportati se si utilizza l'agente Console con NetApp Backup and Recovery o NetApp Ransomware Resilience.  In questo caso, è possibile non consentire gli endpoint elencati nell'opzione 1, consentendo invece quelli elencati nell'opzione 2.
+
+
+|===
+Endpoint contattati durante l'installazione manuale:: Quando si installa manualmente l'agente Console sul proprio host Linux, il programma di installazione dell'agente Console richiede l'accesso a diversi URL durante il processo di installazione.
+
+
+[cols="2*"]
+|===
+| Punti finali | Scopo 
+
+
+| \ https://mysupport.netapp.com |  
+
+
+| \ https://signin.b2c.netapp.com | Questo endpoint è l'URL CNAME per \ https://mysupport.netapp.com 
+
+
+| \ https://cloudmanager.cloud.netapp.com/tenancy |  
+
+
+| \ https://stream.cloudmanager.cloud.netapp.com |  
+
+
+| \ https://production-artifacts.cloudmanager.cloud.netapp.com |  
+
+
+2+| *Regione AWS Government* Se installi l'agente Console in una regione AWS Government, il programma di installazione deve anche accedere a questi endpoint: 
+
+
+ a| 
+\https://*.blob.core.windows.net
+ a| 
+
+
+
+ a| 
+\ https://cloudmanagerinfraprod.azurecr.io
+ a| 
+
+
+
+2+| *Area di Azure Government* Se si installa l'agente Console in un'area di Azure Government, il programma di installazione deve anche accedere a questi endpoint: 
+
+
+ a| 
+\https://*.blob.core.windows.net
+ a| 
+
+
+
+ a| 
+\ https://occmclientinfragov.azurecr.us
+ a| 
+
+
+
+2+| *Regioni commerciali o sovrane* Se installi l'agente Console in una regione commerciale o sovrana, puoi scegliere tra due set di endpoint: 
+
+
+ a| 
+**Opzione 1 (consigliata):** * \ https://bluexpinfraprod.eastus2.data.azurecr.io * \ https://bluexpinfraprod.azurecr.io
+
+**Opzione 2:** * \https://*.blob.core.windows.net * \ https://cloudmanagerinfraprod.azurecr.io
+ a| 
+Gli endpoint elencati nell'opzione 1 sono consigliati perché sono più sicuri.  Ti consigliamo di configurare il firewall in modo da consentire gli endpoint elencati nell'opzione 1 e di non consentire gli endpoint elencati nell'opzione 2.  Si tenga presente quanto segue in merito a questi endpoint:
+
+* Gli endpoint elencati nell'opzione 1 sono supportati a partire dalla versione 3.9.47 dell'agente Console.  Non esiste alcuna compatibilità con le versioni precedenti dell'agente Console.
+* L'agente della console contatta prima gli endpoint elencati nell'opzione 2.  Se tali endpoint non sono accessibili, l'agente della console contatta automaticamente gli endpoint elencati nell'opzione 1.
+* Gli endpoint nell'opzione 1 non sono supportati se si utilizza l'agente Console con NetApp Backup and Recovery o NetApp Ransomware Resilience.  In questo caso, è possibile non consentire gli endpoint elencati nell'opzione 1, consentendo invece quelli elencati nell'opzione 2.
+
+
+|===
++
+
+Gli endpoint elencati nell'opzione 1 sono consigliati perché sono più sicuri.  Ti consigliamo di configurare il firewall in modo da consentire gli endpoint elencati nell'opzione 1 e di non consentire gli endpoint elencati nell'opzione 2.  Si noti quanto segue in merito a questi endpoint: ** Gli endpoint elencati nell'opzione 1 sono supportati a partire dalla versione 3.9.47 dell'agente Console.  Non esiste alcuna compatibilità con le versioni precedenti dell'agente Console.  ** L'agente della console contatta prima gli endpoint elencati nell'opzione 2.  Se tali endpoint non sono accessibili, l'agente della console contatta automaticamente gli endpoint elencati nell'opzione 1.  ** Gli endpoint nell'opzione 1 non sono supportati se si utilizza l'agente Console con NetApp Backup and Recovery o NetpApp Ransomware Resilience.  In questo caso, è possibile non consentire gli endpoint elencati nell'opzione 1, consentendo invece quelli elencati nell'opzione 2.
+
+L'host potrebbe tentare di aggiornare i pacchetti del sistema operativo durante l'installazione.  L'host può contattare diversi siti di mirroring per questi pacchetti del sistema operativo.

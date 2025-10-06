@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: concept-org-partnerships.html 
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+summary: La creazione di partnership tra organizzazioni nella NetApp Console consente ai partner aziendali di gestire in modo sicuro le risorse NetApp oltre i confini aziendali, semplificando la collaborazione e migliorando la sicurezza. 
+---
+= Partnership nella console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Creando partnership tra organizzazioni, la console NetApp consente ai partner di gestire in modo sicuro le risorse NetApp oltre i confini aziendali, semplificando la collaborazione e migliorando la sicurezza.
+
+.Ruoli richiesti
+Amministratore della partnershiplink:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
+
+Le partnership consentono una gestione sicura delle risorse NetApp tra le organizzazioni utilizzando relazioni basate sui ruoli nella Console.  L'organizzazione che avvia l'operazione concede l'accesso alle proprie risorse, mentre l'organizzazione che accetta fornisce gli utenti o gli account di servizio a cui concedere l'accesso.  Le partnership vengono stabilite tramite un flusso di lavoro self-service, che offre all'organizzazione che le avvia il controllo completo sulle risorse condivise, sui ruoli assegnati e sulla possibilità di integrare, gestire o revocare l'accesso dei partner in base alle necessità.
+
+I clienti possono autorizzare MSP o rivenditori a gestire gli ambienti NetApp senza dover eseguire configurazioni complesse.  I clienti possono controllare a quali cluster i partner possono accedere e quali ruoli hanno, e possono revocare l'accesso in qualsiasi momento per mantenere la sicurezza e la conformità.
+
+In qualità di partner, ottieni visibilità e controllo centralizzati su tutti gli ambienti dei clienti.  È possibile passare facilmente all'organizzazione di un cliente per gestire le risorse, eseguire servizi dati e monitorare lo stato entro limiti definiti, riducendo gli strumenti personalizzati e garantendo l'allineamento con le policy di ciascun cliente.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]Assegnare a uno o più utenti il ruolo di amministratore della partnership
+Assegnare a uno o più utenti, sia nell'organizzazione di avvio che in quella di ricezione, il ruolo di amministratore della partnership per creare e gestire le partnership. È possibile assegnare il ruolo di visualizzatore della partnership agli utenti che devono solo visualizzare le partnership e non gestirle.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]Condividi l'ID della tua organizzazione con l'organizzazione che ha avviato l'operazione
+[role="quick-margin-para"]
+Per avviare una partnership, l'iniziatore deve conoscere l'ID dell'organizzazione di destinazione.  Solo la rispettiva organizzazione può accedere a questo ID organizzazione.  Condividilo direttamente con l'organizzazione che lo ha avviato al di fuori della NetApp Console tramite e-mail o un altro metodo.
+
+L'organizzazione che avvia l'iniziativa è l'organizzazione che concede l'accesso alle proprie risorse.
+
+image:diagram-partnership-org-id.png["diagramma che mostra le organizzazioni iniziali"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]Avviare la partnership all'interno di NetApp Console
+[role="quick-margin-para"]
+L'organizzazione che avvia la partnership lo fa dall'interno della console NetApp inviando una richiesta di partnership.
+
+image:diagram-partnership-accept.png["diagramma che mostra l'accettazione della partnership"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]Approvare la partnership
+[role="quick-margin-para"]
+L'organizzazione ricevente deve accettare la richiesta.
+
+L'organizzazione ricevente è l'organizzazione a cui viene concesso l'accesso alle risorse.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]Assegnare gli utenti alla partnership
+[role="quick-margin-para"]
+L'organizzazione ricevente assegna utenti o account di servizio specifici dalla tua organizzazione alla partnership.  L'organizzazione che avvia l'operazione assegna i ruoli a questi utenti.
+
+image:diagram-partnership-add-user.png["diagramma che mostra le assegnazioni degli utenti"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"]Concedi agli utenti assegnati l'accesso alle risorse
+[role="quick-margin-para"]
+Se sei l'organizzazione che avvia la partnership, puoi concedere l'accesso a risorse specifiche agli utenti assegnati alla partnership.  Puoi revocare l'accesso in qualsiasi momento.
+
+Ciò è possibile assegnando ruoli a progetti o cartelle specifici all'interno della propria organizzazione.
+
+image:diagram-partnership-resources.png["diagramma che mostra la condivisione delle risorse"]

@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+. Accedi alla console AWS e vai al servizio IAM.
+. Crea una policy:
++
+.. Selezionare *Criteri > Crea criterio*.
+.. Seleziona *JSON* e copia e incolla il contenuto dellink:reference-permissions-aws.html["Criterio IAM per l'agente della console"] .
+.. Completare i passaggi rimanenti per creare la policy.
+
+
+
+
+. Crea un ruolo IAM:
++
+.. Selezionare *Ruoli > Crea ruolo*.
+.. Selezionare *Servizio AWS > EC2*.
+.. Aggiungi autorizzazioni allegando la policy appena creata.
+.. Completa i passaggi rimanenti per creare il ruolo.
+
+
+
+
+. Associare i criteri a un utente IAM.
++
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["Documentazione AWS: creazione di ruoli IAM"^]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["Documentazione AWS: aggiunta e rimozione di policy IAM"^]
+
+
+. Assicurarsi che l'utente disponga di una chiave di accesso che è possibile aggiungere alla console NetApp dopo aver installato l'agente della console.
+

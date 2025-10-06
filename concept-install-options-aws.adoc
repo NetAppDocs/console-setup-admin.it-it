@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: concept-install-options-aws.html 
+keywords: install connector aws, aws install connector, connector aws, aws connector, installation options, aws marketplace, manual install, deploy 
+summary: Esistono diversi modi per creare un agente Console in AWS.  Il metodo più comune è quello diretto dalla console NetApp . 
+---
+= Opzioni di installazione dell'agente console in AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Esistono diversi modi per creare un agente Console in AWS.  Il metodo più comune è quello diretto dalla console NetApp .
+
+Sono disponibili le seguenti opzioni di installazione:
+
+* link:task-install-connector-aws-bluexp.html["Crea l'agente Console direttamente dalla Console"](questa è l'opzione standard)
++
+Questa azione avvia un'istanza EC2 che esegue Linux e il software dell'agente Console in una VPC di tua scelta.
+
+* link:task-install-connector-aws-marketplace.html["Creare un agente della console da AWS Marketplace"]
++
+Questa azione avvia anche un'istanza EC2 che esegue Linux e il software dell'agente della console, ma la distribuzione viene avviata direttamente da AWS Marketplace anziché dalla console.
+
+* link:task-install-connector-aws-manual.html["Scarica e installa manualmente il software sul tuo host Linux"]
+
+
+L'opzione di installazione scelta influisce sul modo in cui ci si prepara all'installazione.  Ciò include il modo in cui fornisci alla Console le autorizzazioni necessarie per autenticare e gestire le risorse in AWS.
