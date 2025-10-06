@@ -30,7 +30,7 @@ Il menu *Archiviazione* include anche *Avvisi* per visualizzare gli avvisi del s
 
 NetApp ha inoltre spostato Keystone nel menu *Archiviazione*, dove è possibile gestire gli abbonamenti NetApp Keystone e visualizzarne l'utilizzo.
 
-image:https://docs.netapp.com/us-en/console-setup-admin/screenshot-storage-menu.png["Uno screenshot del menu Archiviazione."]
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-menu.png["Uno screenshot del menu Archiviazione."]
 
 
 
