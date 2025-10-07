@@ -24,7 +24,7 @@ Scopri le novità sulle funzionalità di amministrazione della console NetApp : 
 
 == BlueXP è ora NetApp Console
 
-NetApp Console, basata sulle fondamenta BlueXP migliorate e ristrutturate, offre una gestione centralizzata dello storage NetApp e dei NetApp Data Services in ambienti on-premise e cloud di livello aziendale, offrendo informazioni in tempo reale, flussi di lavoro più rapidi e un'amministrazione semplificata, il tutto in modo altamente sicuro e conforme.
+NetApp Console, basata sulle fondamenta BlueXP migliorate e ristrutturate, offre una gestione centralizzata dello storage NetApp e dei NetApp Data Services in ambienti on-premise e cloud di livello aziendale, offrendo informazioni in tempo reale, flussi di lavoro più rapidi e un'amministrazione semplificata, altamente sicura e conforme.
 
 
 
@@ -44,9 +44,9 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage
 
 ==== Menu di archiviazione espanso
 
-Il menu *Archiviazione* include anche *Avvisi* per visualizzare gli avvisi del sistema ONTAP e *Pianificazione del ciclo di vita* (in precedenza *Efficienza economica*) per identificare risorse inutilizzate o sottoutilizzate.
+Il menu *Archiviazione* include *Avvisi* per visualizzare gli avvisi del sistema ONTAP e *Pianificazione del ciclo di vita* (in precedenza *Efficienza economica*) per identificare risorse inutilizzate o sottoutilizzate.
 
-NetApp ha inoltre spostato Keystone nel menu *Archiviazione*, dove è possibile gestire gli abbonamenti NetApp Keystone e visualizzarne l'utilizzo.
+NetApp ha spostato Keystone nel menu *Archiviazione*, dove puoi gestire i tuoi abbonamenti NetApp Keystone e visualizzarne l'utilizzo.
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-menu.png["Uno screenshot del menu Archiviazione."]
 

@@ -31,6 +31,13 @@ Prima dell'installazione, assicurati che l'host della VM soddisfi i requisiti e 
 
 Prima di installare l'agente Console, assicurarsi che il computer host soddisfi i requisiti di installazione.
 
+* CPU: 8 core o 8 vCPU
+* RAM: 32 GB
+* Spazio su disco: 165 GB (con provisioning spesso)
+* vSphere 7.0 o versione successiva
+* Host ESXi 7.03 o superiore
+
+
 
 NOTE: Installare l'agente in un ambiente vCenter anziché direttamente su un host ESXi.
 
