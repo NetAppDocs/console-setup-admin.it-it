@@ -46,6 +46,9 @@ Il sistema contatta questi endpoint in due scenari:
 | \ https://mysupport.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp . 
 
 
+| \ https://support.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp . 
+
+
 | \ https://signin.b2c.netapp.com | Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp . 
 
 
