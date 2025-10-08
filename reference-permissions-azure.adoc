@@ -28,8 +28,8 @@ Sarà necessario assicurarsi che il ruolo sia aggiornato poiché nelle versioni 
 
 * Per visualizzare le istruzioni dettagliate sull'utilizzo di queste policy, fare riferimento alle seguenti pagine:
 +
-** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["Impostare le autorizzazioni per una distribuzione di Azure Marketplace"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Impostare le autorizzazioni per le distribuzioni in locale"]
+** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions["Impostare le autorizzazioni per una distribuzione di Azure Marketplace"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Impostare le autorizzazioni per le distribuzioni in locale"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Imposta le autorizzazioni per la modalità limitata"]
 
 

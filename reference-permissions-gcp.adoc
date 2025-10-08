@@ -24,7 +24,7 @@ Il ruolo personalizzato mostrato di seguito fornisce le autorizzazioni di cui un
 
 Sarà necessario applicare questo ruolo personalizzato a un account di servizio che verrà collegato alla VM dell'agente della console.
 
-* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Imposta le autorizzazioni di Google Cloud per la modalità standard"]
+* link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Imposta le autorizzazioni di Google Cloud per la modalità standard"]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Imposta le autorizzazioni per la modalità limitata"]
 
 

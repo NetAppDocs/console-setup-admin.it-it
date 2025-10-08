@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-azure-bluexp.html 
+permalink: task-install-agent-azure-console.html 
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector 
 summary: 'Per creare un agente Console in Azure dalla console NetApp , è necessario configurare la rete, preparare le autorizzazioni di Azure e quindi creare l"agente Console.' 
 ---
@@ -17,7 +17,7 @@ summary: 'Per creare un agente Console in Azure dalla console NetApp , è necess
 Per creare un agente Console in Azure dalla console NetApp , è necessario configurare la rete, preparare le autorizzazioni di Azure e quindi creare l'agente Console.
 
 .Prima di iniziare
-* Dovresti avere unlink:concept-connectors.html["comprensione degli agenti della console"] .
+* Dovresti avere unlink:concept-agents.html["comprensione degli agenti della console"] .
 * Dovresti rivederelink:reference-limitations.html["Limitazioni dell'agente della console"] .
 
 
@@ -429,7 +429,7 @@ Il tuo service principal è ora configurato e dovresti aver copiato l'ID dell'ap
 Creare l'agente Console direttamente dalla console NetApp .
 
 .Informazioni su questo compito
-* La creazione dell'agente Console dalla Console distribuisce una macchina virtuale in Azure utilizzando una configurazione predefinita.  Non passare a un'istanza VM più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-connector-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
+* La creazione dell'agente Console dalla Console distribuisce una macchina virtuale in Azure utilizzando una configurazione predefinita. Non passare a un'istanza VM più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-agent-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
 * Quando la Console distribuisce l'agente Console, crea un ruolo personalizzato e lo assegna alla VM dell'agente Console.  Questo ruolo include autorizzazioni che consentono all'agente della console di gestire le risorse di Azure.  È necessario assicurarsi che il ruolo venga mantenuto aggiornato man mano che vengono aggiunte nuove autorizzazioni nelle versioni successive. link:reference-permissions-azure.html["Scopri di più sul ruolo personalizzato per l'agente della console"] .
 
 

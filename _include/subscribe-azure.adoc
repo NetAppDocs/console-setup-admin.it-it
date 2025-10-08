@@ -3,7 +3,7 @@
 
 
 .Passi
-. Selezionare *Amministrazione > *Credenziali*.
+. Selezionare *Amministrazione > Credenziali*.
 . Seleziona *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
 +

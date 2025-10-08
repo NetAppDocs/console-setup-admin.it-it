@@ -39,7 +39,7 @@ Il seguente video mostra i passaggi per abbonarsi a NetApp Intelligent Services 
 .Iscriviti a NetApp Intelligent Services da AWS Marketplace
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Passi
-. Selezionare *Amministrazione > *Credenziali*.
+. Selezionare *Amministrazione > Credenziali*.
 . Seleziona *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
 +
@@ -78,7 +78,7 @@ Per tutte le altre organizzazioni o account, sarà necessario associare manualme
 .Azzurro
 --
 .Passi
-. Selezionare *Amministrazione > *Credenziali*.
+. Selezionare *Amministrazione > Credenziali*.
 . Seleziona *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
 +

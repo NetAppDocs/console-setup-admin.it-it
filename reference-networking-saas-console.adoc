@@ -81,10 +81,10 @@ Gli agenti della console devono avere accesso agli stessi endpoint della console
 
 Configurare l'accesso all'endpoint di rete prima di installare l'agente Console.
 
-* link:task-install-connector-aws-bluexp.html#networking-aws-agent["Configurare l'accesso alla rete AWS per un agente della console"]
-* link:task-install-connector-azure-bluexp.html#networking-azure-agent["Configurare l'accesso alla rete di Azure per un agente della console"]
-* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["Configurare l'accesso alla rete Google Cloud per un agente della console"]
-* link:task-install-connector-on-prem.html#network-access-agent["Configurare l'accesso alla rete locale per un agente della console"]
+* link:task-install-agent-aws-console.html#networking-aws-agent["Configurare l'accesso alla rete AWS per un agente della console"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["Configurare l'accesso alla rete di Azure per un agente della console"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["Configurare l'accesso alla rete Google Cloud per un agente della console"]
+* link:task-install-agent-on-prem.html#network-access-agent["Configurare l'accesso alla rete locale per un agente della console"]
 
 
 

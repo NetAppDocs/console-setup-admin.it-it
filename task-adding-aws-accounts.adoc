@@ -195,7 +195,7 @@ Fare riferimento a link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_
 ** Creare un criterio che includa le autorizzazioni necessarie per creare un agente Console.
 +
 *** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Visualizza le autorizzazioni necessarie per FSx per ONTAP"^]
-*** link:task-install-connector-aws-bluexp.html#aws-permissions-agent["Visualizza la politica di distribuzione dell'agente"]
+*** link:task-install-agent-aws-console.html#aws-permissions-agent["Visualizza la politica di distribuzione dell'agente"]
 
 
 
@@ -251,14 +251,14 @@ La sostituzione dell'attuale abbonamento al marketplace con un nuovo abbonamento
 
 
 .Prima di iniziare
-Prima di poter configurare un abbonamento, è necessario creare un agente Console. link:concept-connectors.html#connector-installation["Scopri come creare un agente Console"] .
+Prima di poter configurare un abbonamento, è necessario creare un agente Console. link:concept-agents.html#agent-installation["Scopri come creare un agente Console"] .
 
 Il seguente video mostra i passaggi per abbonarsi a NetApp Intelligent Services da AWS Marketplace:
 
 .Iscriviti a NetApp Intelligent Services da AWS Marketplace
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Passi
-. Selezionare *Amministrazione > *Credenziali*.
+. Selezionare *Amministrazione > Credenziali*.
 . Seleziona *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
 +

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-google-manual.html 
+permalink: task-install-agent-google-manual.html 
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, manual install, create connector, gcp installation, gcp connector 
 summary: 'Per installare manualmente l"agente Console sul tuo host Linux, devi esaminare i requisiti dell"host, configurare la rete, preparare le autorizzazioni di Google Cloud, abilitare le API di Google Cloud, installare la Console e quindi fornire le autorizzazioni preparate.' 
 ---
@@ -17,7 +17,7 @@ summary: 'Per installare manualmente l"agente Console sul tuo host Linux, devi e
 Per installare manualmente l'agente Console sul tuo host Linux, devi esaminare i requisiti dell'host, configurare la rete, preparare le autorizzazioni di Google Cloud, abilitare le API di Google Cloud, installare la Console e quindi fornire le autorizzazioni preparate.
 
 .Prima di iniziare
-* Dovresti avere unlink:concept-connectors.html["comprensione degli agenti della console"] .
+* Dovresti avere unlink:concept-agents.html["comprensione degli agenti della console"] .
 * Dovresti rivederelink:reference-limitations.html["Limitazioni dell'agente della console"] .
 
 
@@ -484,7 +484,7 @@ Questa tabella è di riferimento e il tuo ambiente dovrebbe riflettere la tabell
 
 
 | Account Google per distribuire l'agente | Costume | Progetto di servizio  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Politica di distribuzione degli agenti"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Politica di distribuzione degli agenti"]
  a| 
 compute.networkUser
 | Distribuzione dell'agente nel progetto di servizio 
@@ -561,7 +561,7 @@ Dopo l'installazione è possibile configurare un server proxy, ma per farlo è n
 
 
 
-NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console.  Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-connector-maint-console.html["Console di manutenzione dell'agente"] .
+NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console. Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console.html["Console di manutenzione dell'agente"] .
 
 .Informazioni su questo compito
 Il programma di installazione disponibile sul sito di supporto NetApp potrebbe essere una versione precedente.  Dopo l'installazione, l'agente Console si aggiorna automaticamente se è disponibile una nuova versione.

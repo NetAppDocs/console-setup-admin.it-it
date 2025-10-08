@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-google-bluexp-gcloud.html 
+permalink: task-install-agent-google-console-gcloud.html 
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
 summary: 'Per creare un agente Console in Google Cloud da NetApp Console o tramite Google Cloud, è necessario configurare la rete, preparare le autorizzazioni di Google Cloud, abilitare le API di Google Cloud e quindi creare l"agente Console.' 
 ---
@@ -17,7 +17,7 @@ summary: 'Per creare un agente Console in Google Cloud da NetApp Console o trami
 È possibile creare un agente Console in Google Cloud dalla Console.  È necessario configurare la rete, preparare le autorizzazioni di Google Cloud, abilitare le API di Google Cloud e quindi creare l'agente della console.
 
 .Prima di iniziare
-* Dovresti avere unlink:concept-connectors.html["comprensione degli agenti della console"] .
+* Dovresti avere unlink:concept-agents.html["comprensione degli agenti della console"] .
 * Dovresti rivederelink:reference-limitations.html["Limitazioni dell'agente della console"] .
 
 
@@ -313,7 +313,7 @@ Questa tabella è di riferimento e il tuo ambiente dovrebbe riflettere la tabell
 
 
 | Account Google per distribuire l'agente | Costume | Progetto di servizio  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Politica di distribuzione degli agenti"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Politica di distribuzione degli agenti"]
  a| 
 compute.networkUser
 | Distribuzione dell'agente nel progetto di servizio 
@@ -379,7 +379,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Documentazione
 Crea un agente Console direttamente dalla Console.
 
 .Informazioni su questo compito
-La creazione dell'agente Console distribuisce un'istanza di macchina virtuale in Google Cloud utilizzando una configurazione predefinita.  Non passare a un'istanza VM più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-connector-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
+La creazione dell'agente Console distribuisce un'istanza di macchina virtuale in Google Cloud utilizzando una configurazione predefinita. Non passare a un'istanza VM più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-agent-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
 
 .Prima di iniziare
 Dovresti avere quanto segue:

@@ -15,7 +15,7 @@ Questa tabella è di riferimento e il tuo ambiente dovrebbe riflettere la tabell
 
 
 | Account Google per distribuire l'agente | Costume | Progetto di servizio  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Politica di distribuzione degli agenti"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Politica di distribuzione degli agenti"]
  a| 
 compute.networkUser
 | Distribuzione dell'agente nel progetto di servizio 

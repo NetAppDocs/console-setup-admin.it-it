@@ -69,7 +69,7 @@ Se si dispone di più agenti Console, è possibile passare da uno all'altro per 
 
 
 .Informazioni correlate
-link:task-iam-associate-connectors.html["Associare agenti a cartelle e progetti"] .
+link:task-iam-associate-agents.html["Associare agenti a cartelle e progetti"] .
 
 
 

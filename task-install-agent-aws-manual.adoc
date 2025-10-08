@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-aws-manual.html 
+permalink: task-install-agent-aws-manual.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector 
 summary: 'È possibile installare manualmente un agente Console su un host Linux in esecuzione su AWS.  Per installare manualmente l"agente Console sul tuo host Linux, devi esaminare i requisiti dell"host, configurare la rete, preparare le autorizzazioni AWS, installare l"agente Console e quindi fornire le autorizzazioni preparate.' 
 ---
@@ -17,7 +17,7 @@ summary: 'È possibile installare manualmente un agente Console su un host Linux
 È possibile installare manualmente un agente Console su un host Linux in esecuzione su AWS.  Per installare manualmente l'agente Console sul tuo host Linux, devi esaminare i requisiti dell'host, configurare la rete, preparare le autorizzazioni AWS, installare l'agente Console e quindi fornire le autorizzazioni preparate.
 
 .Prima di iniziare
-* Dovresti avere unlink:concept-connectors.html["comprensione degli agenti della console"] .
+* Dovresti avere unlink:concept-agents.html["comprensione degli agenti della console"] .
 * Dovresti rivederelink:reference-limitations.html["Limitazioni dell'agente della console"] .
 
 
@@ -513,7 +513,7 @@ Dopo l'installazione è possibile configurare un server proxy, ma per farlo è n
 
 
 
-NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console.  Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-connector-maint-console.html["Console di manutenzione dell'agente"] .
+NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console. Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console.html["Console di manutenzione dell'agente"] .
 
 .Informazioni su questo compito
 Il programma di installazione disponibile sul sito di supporto NetApp potrebbe essere una versione precedente.  Dopo l'installazione, l'agente Console si aggiorna automaticamente se è disponibile una nuova versione.

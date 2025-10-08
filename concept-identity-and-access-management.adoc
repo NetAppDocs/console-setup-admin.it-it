@@ -234,7 +234,7 @@ Gli esempi seguenti descrivono come è possibile utilizzare IAM per gestire l'or
 * link:task-iam-manage-folders-projects.html["Organizza le tue risorse in NetApp Console con cartelle e progetti"]
 * link:task-iam-manage-members-permissions.html["Gestisci i membri della console NetApp e le relative autorizzazioni"]
 * link:task-iam-manage-resources.html["Gestisci la gerarchia delle risorse nella tua organizzazione NetApp Console"]
-* link:task-iam-associate-connectors.html["Associare agenti a cartelle e progetti"]
+* link:task-iam-associate-agents.html["Associare agenti a cartelle e progetti"]
 * link:task-iam-switch-organizations-projects.html["Passare tra progetti e organizzazioni della console NetApp"]
 * link:task-iam-rename-organization.html["Rinomina l'organizzazione della console NetApp"]
 * link:task-iam-audit-actions-timeline.html["Monitorare o verificare l'attività IAM"]

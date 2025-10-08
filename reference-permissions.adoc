@@ -31,7 +31,7 @@ La console NetApp richiede le autorizzazioni AWS per un agente della console e p
 | Obiettivo | Descrizione | Collegamento 
 
 
-| Distribuisci un agente Console dalla Console | L'utente che crea un agente della Console dalla Console necessita di autorizzazioni specifiche per distribuire l'istanza in AWS. | link:task-install-connector-aws-bluexp.html#aws-permissions-agent["Imposta le autorizzazioni AWS"] 
+| Distribuisci un agente Console dalla Console | L'utente che crea un agente della Console dalla Console necessita di autorizzazioni specifiche per distribuire l'istanza in AWS. | link:task-install-agent-aws-console.html#aws-permissions-agent["Imposta le autorizzazioni AWS"] 
 
 
 | Fornire autorizzazioni per un agente della console | Quando la Console distribuisce un agente della Console, associa una policy all'istanza che fornisce le autorizzazioni necessarie per gestire risorse e processi nel tuo account AWS.  È necessario impostare autonomamente la policy se si distribuisce un agente della console da AWS Marketplace, se si installa manualmente un agente della console o selink:task-adding-aws-accounts.html#add-credentials-agent-aws["aggiungere più credenziali AWS a un agente della console"] .  È inoltre necessario assicurarsi che la policy sia aggiornata poiché nelle versioni successive verranno aggiunte nuove autorizzazioni. | link:reference-permissions-aws.html["Autorizzazioni AWS per un agente della console"] 
@@ -112,7 +112,7 @@ La console richiede le autorizzazioni di Azure per un agente della console e per
 | Obiettivo | Descrizione | Collegamento 
 
 
-| Distribuisci un agente Console dalla Console | Quando si distribuisce un agente Console dalla Console, è necessario utilizzare un account Azure o un'entità servizio che disponga delle autorizzazioni per distribuire una VM dell'agente Console in Azure. | link:task-install-connector-azure-bluexp.html#connector-custom-role["Configurare le autorizzazioni di Azure"] 
+| Distribuisci un agente Console dalla Console | Quando si distribuisce un agente Console dalla Console, è necessario utilizzare un account Azure o un'entità servizio che disponga delle autorizzazioni per distribuire una VM dell'agente Console in Azure. | link:task-install-agent-azure-console.html#agent-custom-role["Configurare le autorizzazioni di Azure"] 
 
 
 | Fornire autorizzazioni per un agente della console  a| 
@@ -174,10 +174,10 @@ La Console richiede le autorizzazioni di Google Cloud per un agente della Consol
 | Obiettivo | Descrizione | Collegamento 
 
 
-| Distribuisci un agente Console dalla Console | L'utente di Google Cloud che distribuisce un agente Console dalla Console necessita di autorizzazioni specifiche per distribuire un agente Console in Google Cloud. | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["Imposta le autorizzazioni per creare un agente Console"] 
+| Distribuisci un agente Console dalla Console | L'utente di Google Cloud che distribuisce un agente Console dalla Console necessita di autorizzazioni specifiche per distribuire un agente Console in Google Cloud. | link:task-install-agent-google-console-gcloud.html#console-permissions-google["Imposta le autorizzazioni per creare un agente Console"] 
 
 
-| Fornire autorizzazioni per un agente della console | L'account di servizio per un'istanza di VM dell'agente Console deve disporre di autorizzazioni specifiche per le operazioni quotidiane.  Durante la distribuzione è necessario associare l'account di servizio a un agente della console.  È inoltre necessario assicurarsi che la policy sia aggiornata poiché nelle versioni successive verranno aggiunte nuove autorizzazioni. | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["Impostare le autorizzazioni per un agente della console"] 
+| Fornire autorizzazioni per un agente della console | L'account di servizio per un'istanza di VM dell'agente Console deve disporre di autorizzazioni specifiche per le operazioni quotidiane.  Durante la distribuzione è necessario associare l'account di servizio a un agente della console.  È inoltre necessario assicurarsi che la policy sia aggiornata poiché nelle versioni successive verranno aggiunte nuove autorizzazioni. | link:task-install-agent-google-console-gcloud.html#console-permissions-google["Impostare le autorizzazioni per un agente della console"] 
 |===
 
 

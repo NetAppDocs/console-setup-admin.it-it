@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-manage-multiple-connectors.html 
+permalink: task-manage-multiple-agents.html 
 keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors 
 summary: 'Se si utilizzano più agenti della Console, è possibile passare da un agente all"altro direttamente dalla Console.  È anche possibile gestire un singolo sistema con più agenti Console.' 
 ---

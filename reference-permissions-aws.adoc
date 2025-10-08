@@ -30,8 +30,8 @@ Notare quanto segue:
 * Se necessario, è possibile limitare i criteri IAM utilizzando IAM `Condition` elemento. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html["Documentazione AWS: Elemento Condizione"^]
 * Per visualizzare le istruzioni dettagliate sull'utilizzo di queste policy, fare riferimento alle seguenti pagine:
 +
-** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions["Impostare le autorizzazioni per una distribuzione AWS Marketplace"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Impostare le autorizzazioni per le distribuzioni in locale"]
+** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions["Impostare le autorizzazioni per una distribuzione AWS Marketplace"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Impostare le autorizzazioni per le distribuzioni in locale"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Imposta le autorizzazioni per la modalità limitata"]
 
 

@@ -67,7 +67,7 @@ Tieni presente che puoi selezionare solo le cartelle e i progetti per i quali di
 .Dopo aver finito
 Se si individua una risorsa utilizzando un agente Console, associare l'agente Console al progetto per concedere l'accesso.  In caso contrario, l'agente della console e la risorsa associata non saranno accessibili ai membri senza il ruolo di _Amministratore organizzazione_.
 
-link:task-iam-associate-connectors.html["Scopri come associare un agente Console a una cartella o a un progetto"] .
+link:task-iam-associate-agents.html["Scopri come associare un agente Console a una cartella o a un progetto"] .
 
 
 

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-aws-bluexp.html 
+permalink: task-install-agent-aws-console.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector 
 summary: È possibile creare un agente Console in AWS direttamente dalla console NetApp .  Prima di creare un agente Console in AWS dalla Console, è necessario configurare la rete e preparare le autorizzazioni AWS. 
 ---
@@ -17,7 +17,7 @@ summary: È possibile creare un agente Console in AWS direttamente dalla console
 È possibile creare un agente Console in AWS direttamente dalla console NetApp .  Prima di creare un agente Console in AWS dalla Console, è necessario configurare la rete e preparare le autorizzazioni AWS.
 
 .Prima di iniziare
-* Dovresti avere unlink:concept-connectors.html["comprensione degli agenti della console"] .
+* Dovresti avere unlink:concept-agents.html["comprensione degli agenti della console"] .
 * Dovresti rivederelink:reference-limitations.html["Limitazioni dell'agente della console"] .
 
 
@@ -289,7 +289,7 @@ Ora dovresti avere un ruolo IAM con le autorizzazioni richieste o un utente IAM 
 Creare l'agente Console direttamente dalla console basata sul Web.
 
 .Informazioni su questo compito
-* La creazione dell'agente Console dalla Console distribuisce un'istanza EC2 in AWS utilizzando una configurazione predefinita.  Non passare a un'istanza EC2 più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-connector-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
+* La creazione dell'agente Console dalla Console distribuisce un'istanza EC2 in AWS utilizzando una configurazione predefinita. Non passare a un'istanza EC2 più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-agent-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
 * Quando la Console crea l'agente Console, crea anche un ruolo IAM e un profilo istanza per l'istanza.  Questo ruolo include autorizzazioni che consentono all'agente della console di gestire le risorse AWS.  Assicurarsi che il ruolo venga aggiornato man mano che verranno aggiunte nuove autorizzazioni nelle versioni future. link:reference-permissions-aws.html["Scopri di più sulla policy IAM per l'agente della console"] .
 
 

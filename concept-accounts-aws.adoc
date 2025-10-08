@@ -20,7 +20,7 @@ Scopri come la console NetApp utilizza le credenziali AWS per eseguire azioni pe
 
 == Credenziali AWS iniziali
 
-Quando si distribuisce un agente Console dalla Console, è necessario fornire l'ARN di un ruolo IAM o le chiavi di accesso per un utente IAM.  Il metodo di autenticazione deve disporre delle autorizzazioni per distribuire la console in AWS.  Le autorizzazioni richieste sono elencate nel collegamento:task-install-connector-aws-the Console.html#console-permissions-aws[Criterio di distribuzione dell'agente per AWS].
+Quando si distribuisce un agente Console dalla Console, è necessario fornire l'ARN di un ruolo IAM o le chiavi di accesso per un utente IAM. Il metodo di autenticazione deve disporre delle autorizzazioni per distribuire la console in AWS. Le autorizzazioni richieste sono elencate nel collegamento:task-install-agent-aws-the Console.html#console-permissions-aws[Criterio di distribuzione dell'agente per AWS].
 
 Quando la Console avvia l'istanza dell'agente Console in AWS, crea un ruolo IAM e un profilo istanza per l'istanza.  Associa inoltre una policy che fornisce all'agente della console le autorizzazioni per gestire risorse e processi all'interno di quell'account AWS. link:reference-permissions-aws.html["Esaminare come la Console utilizza le autorizzazioni"] .
 
@@ -141,8 +141,8 @@ Per informazioni su come impostare le autorizzazioni, fare riferimento alle segu
 
 * Modalità standard
 +
-** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions["Impostare le autorizzazioni per una distribuzione AWS Marketplace"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Impostare le autorizzazioni per le distribuzioni in locale"]
+** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions["Impostare le autorizzazioni per una distribuzione AWS Marketplace"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Impostare le autorizzazioni per le distribuzioni in locale"]
 
 
 * Modalità limitata

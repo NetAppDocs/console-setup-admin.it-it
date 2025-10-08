@@ -20,7 +20,7 @@ Scopri come la console NetApp utilizza le credenziali di Azure per eseguire azio
 
 == Credenziali iniziali di Azure
 
-Quando si distribuisce un agente Console dalla Console, è necessario utilizzare un account Azure o un'entità servizio che disponga delle autorizzazioni per distribuire la macchina virtuale dell'agente Console.  Le autorizzazioni richieste sono elencate nellink:task-install-connector-azure-bluexp.html#connector-custom-role["Criteri di distribuzione dell'agente per Azure"] .
+Quando si distribuisce un agente Console dalla Console, è necessario utilizzare un account Azure o un'entità servizio che disponga delle autorizzazioni per distribuire la macchina virtuale dell'agente Console. Le autorizzazioni richieste sono elencate nellink:task-install-agent-azure-console.html#agent-custom-role["Criteri di distribuzione dell'agente per Azure"] .
 
 Quando la Console distribuisce la macchina virtuale dell'agente Console in Azure, abilita un https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identità gestita assegnata dal sistema"^] sulla macchina virtuale, crea un ruolo personalizzato e lo assegna alla macchina virtuale.  Il ruolo fornisce alla Console le autorizzazioni necessarie per gestire risorse e processi all'interno di tale sottoscrizione di Azure. link:reference-permissions-azure.html["Esaminare come la Console utilizza le autorizzazioni"] .
 
@@ -108,8 +108,8 @@ Per informazioni su come impostare le autorizzazioni, fare riferimento alle segu
 
 * Modalità standard
 +
-** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["Impostare le autorizzazioni per una distribuzione di Azure Marketplace"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Impostare le autorizzazioni per le distribuzioni in locale"]
+** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions["Impostare le autorizzazioni per una distribuzione di Azure Marketplace"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Impostare le autorizzazioni per le distribuzioni in locale"]
 
 
 * Modalità limitata

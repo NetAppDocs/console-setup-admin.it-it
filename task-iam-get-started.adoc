@@ -56,7 +56,7 @@ L'aggiunta o la scoperta di un sistema nella Console associa automaticamente la 
 
 [role="quick-margin-list"]
 * link:task-iam-manage-resources.html["Scopri come gestire la gerarchia delle risorse della tua organizzazione"] .
-* link:task-iam-associate-connectors.html["Scopri come associare un agente Console a una cartella o a un progetto"] .
+* link:task-iam-associate-agents.html["Scopri come associare un agente Console a una cartella o a un progetto"] .
 
 
 .Informazioni correlate

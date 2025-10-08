@@ -83,7 +83,7 @@ Utilizzare uno dei seguenti comandi per verificare l'agente della console.  Tutt
 ====
 Per informazioni più dettagliate sull'accesso alla diagnostica dell'agente Console, vedere i seguenti argomenti:
 
-* link:task-maintain-connectors.html#connect-linux-host["Controllare lo stato dell'agente della console (per le distribuzioni host Linux)"]
+* link:task-maintain-agents.html#connect-linux-host["Controllare lo stato dell'agente della console (per le distribuzioni host Linux)"]
 * link:task-agent-vm-config.html#connect-vcenter-host["Controllare lo stato dell'agente della console (per le distribuzioni VCenter)"]
 
 

@@ -276,7 +276,7 @@ Dopo aver fornito a un account Azure le autorizzazioni necessarie, è possibile 
 Se hai appena creato queste credenziali nel tuo provider cloud, potrebbero volerci alcuni minuti prima che siano disponibili per l'uso.  Attendi qualche minuto prima di aggiungere le credenziali alla Console.
 
 .Prima di iniziare
-Prima di poter modificare le impostazioni della console, è necessario creare un agente della console. link:concept-connectors.html#connector-installation["Scopri come creare un agente Console"] .
+Prima di poter modificare le impostazioni della console, è necessario creare un agente della console. link:concept-agents.html#agent-installation["Scopri come creare un agente Console"] .
 
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
@@ -323,7 +323,7 @@ La sostituzione dell'attuale abbonamento al marketplace lo aggiorna per i sistem
 
 
 .Passi
-. Selezionare *Amministrazione > *Credenziali*.
+. Selezionare *Amministrazione > Credenziali*.
 . Seleziona *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
 +

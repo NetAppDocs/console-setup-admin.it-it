@@ -18,15 +18,15 @@ Esistono diversi modi per creare un agente Console in Azure.  Il metodo più com
 
 Sono disponibili le seguenti opzioni di installazione:
 
-* link:task-install-connector-azure-bluexp.html["Crea un agente Console direttamente dalla console NetApp"](questa è l'opzione standard)
+* link:task-install-agent-azure-console.html["Crea un agente Console direttamente dalla console NetApp"](questa è l'opzione standard)
 +
 Questa azione avvia una macchina virtuale che esegue Linux e il software dell'agente Console in una rete virtuale di tua scelta.
 
-* link:task-install-connector-azure-marketplace.html["Creare un agente console da Azure Marketplace"]
+* link:task-install-agent-azure-marketplace.html["Creare un agente console da Azure Marketplace"]
 +
 Questa azione avvia anche una macchina virtuale che esegue Linux e il software dell'agente della console, ma la distribuzione viene avviata direttamente da Azure Marketplace anziché dalla console.
 
-* link:task-install-connector-azure-manual.html["Scarica e installa manualmente il software sul tuo host Linux"]
+* link:task-install-agent-azure-manual.html["Scarica e installa manualmente il software sul tuo host Linux"]
 
 
 L'opzione di installazione scelta influisce sul modo in cui ci si prepara all'installazione.  Ciò include il modo in cui si forniscono all'agente della console le autorizzazioni necessarie per autenticare e gestire le risorse in Azure.

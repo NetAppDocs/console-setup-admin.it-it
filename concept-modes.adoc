@@ -97,9 +97,9 @@ In modalità standard la console funziona come segue:
 Comunicazione in uscita:: È richiesta la connettività da un agente della console al livello SaaS della console, alle risorse disponibili al pubblico del tuo provider cloud e ad altri componenti essenziali per le operazioni quotidiane.
 +
 --
-* link:task-install-connector-aws-bluexp.html#networking-aws-agent["Endpoint che un agente contatta in AWS"]
-* link:task-install-connector-azure-bluexp.html#networking-azure-agent["Endpoint contattati da un agente in Azure"]
-* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["Endpoint che un agente contatta in Google Cloud"]
+* link:task-install-agent-aws-console.html#networking-aws-agent["Endpoint che un agente contatta in AWS"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["Endpoint contattati da un agente in Azure"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["Endpoint che un agente contatta in Google Cloud"]
 
 
 --
