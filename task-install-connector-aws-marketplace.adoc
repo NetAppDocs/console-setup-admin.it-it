@@ -83,6 +83,13 @@ Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp , nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
+
+
+
+ a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
 Per fornire funzionalità e servizi all'interno della NetApp Console.
@@ -130,7 +137,7 @@ Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in u
 --
 
 
-Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizzare le origini dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della console sia sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione dei dati NetApp"^]
+Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizzare le origini dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della console sia sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione dei dati NetApp"^]
 +
 --
 Implementare questo accesso alla rete dopo aver creato l'agente Console.
@@ -241,7 +248,7 @@ AWS avvia l'agente della console con le impostazioni specificate e l'agente dell
 
 +
 
-NOTE: Se l'installazione non riesce, è possibile visualizzare i registri e un report per risolvere il problema.link:task-troubleshoot-connector.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
+NOTE: Se l'installazione non riesce, è possibile visualizzare i registri e un report per risolvere il problema.link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
 
 . Aprire un browser Web da un host che dispone di una connessione alla macchina virtuale dell'agente Console e all'URL dell'agente Console.
 . Dopo aver effettuato l'accesso, configura l'agente Console:

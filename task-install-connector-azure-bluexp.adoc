@@ -90,6 +90,13 @@ Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp , nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
+
+
+
+ a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
 Per fornire funzionalità e servizi all'interno della NetApp Console.
@@ -145,7 +152,7 @@ Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in u
 --
 
 
-Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizzare le origini dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della console sia sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione dei dati NetApp"^]
+Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizzare le origini dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della console sia sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione dei dati NetApp"^]
 +
 --
 Dopo aver creato l'agente Console, è necessario implementare questo requisito di rete.
@@ -514,6 +521,6 @@ La console prepara l'istanza in circa 10 minuti.  Rimani sulla pagina fino al co
 Una volta completato il processo, l'agente della Console sarà disponibile per l'uso dalla Console.
 
 
-NOTE: Se la distribuzione non riesce, puoi scaricare un report e i registri dalla Console per aiutarti a risolvere i problemi.link:task-troubleshoot-connector.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
+NOTE: Se la distribuzione non riesce, puoi scaricare un report e i registri dalla Console per aiutarti a risolvere i problemi.link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
 
 Se si dispone di un archivio BLOB di Azure nella stessa sottoscrizione di Azure in cui è stato creato l'agente della console, nella pagina *Sistemi* verrà visualizzato automaticamente un sistema di archiviazione BLOB di Azure. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Scopri come gestire l'archiviazione BLOB di Azure dalla console NetApp"^]

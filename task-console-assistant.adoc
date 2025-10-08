@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-console-assistant.html 
 keywords: bluexp,netapp console,console assistant,assistant,setup assistant,get started,quick start,first time user,first time setup,setup wizard 
-summary: 'Se è la prima volta che utilizzi NetApp Console, Console Assistant ti guiderà attraverso il processo di configurazione iniziale.  L"Assistente ti aiuta ad aggiungere un account NetApp Support Site (NSS), un agente della console, un cluster e una licenza o un abbonamento, semplificando l"avvio della gestione dei tuoi dati.' 
+summary: 'Se è la prima volta che utilizzi NetApp Console, l"assistente della console ti guiderà attraverso il processo di configurazione iniziale.  L"assistente ti aiuta ad aggiungere un account NetApp Support Site (NSS), un agente della console, un cluster e una licenza o un abbonamento, semplificando l"avvio della gestione dei tuoi dati.' 
 ---
-= Inizia a utilizzare NetApp Console Assistant
+= Inizia a utilizzare l'assistente NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,21 @@ summary: 'Se è la prima volta che utilizzi NetApp Console, Console Assistant ti
 
 
 [role="lead"]
-Se sei un utente alle prime armi della NetApp Console con il ruolo di amministratore dell'organizzazione, puoi utilizzare Console Assistant per ricevere assistenza durante il processo di configurazione iniziale.  L'Assistente ti aiuta ad aggiungere un account NetApp Support Site (NSS), un agente della console, un cluster e una licenza o un abbonamento, semplificando l'avvio della gestione dei tuoi dati.
+Se sei un utente alle prime armi della NetApp Console con il ruolo di amministratore dell'organizzazione, puoi utilizzare l'assistente della console per ricevere assistenza durante il processo di configurazione iniziale.  L'assistente ti aiuta ad aggiungere un account NetApp Support Site (NSS), un agente della console, un cluster e una licenza o un abbonamento, semplificando l'avvio della gestione dei tuoi dati.
 
 
 
-== Ruoli richiesti per accedere all'Assistente Console
+== Ruoli richiesti per accedere all'assistente della console
 
-L'Assistente Console è disponibile solo per gli utenti con ruolo di amministratore dell'organizzazione.
+L'assistente della console è disponibile solo per gli utenti con ruolo di amministratore dell'organizzazione.
 
 
 
-== Quando appare l'Assistente Console?
+== Quando appare l'assistente della console?
 
-Console Assistant è disponibile nella home page della console NetApp fino al completamento delle attività di configurazione obbligatorie.
+L'assistente della console è disponibile nella home page della console NetApp fino al completamento delle attività di configurazione obbligatorie.
 
-Utilizza l'Assistente per completare queste attività, alcune delle quali sono obbligatorie:
+Utilizza l'assistente per completare queste attività, alcune delle quali sono obbligatorie:
 
 * Aggiungi un account NetApp Support Site (NSS).
 * Connettiti al tuo spazio di archiviazione distribuendo un agente Console (passaggio obbligatorio).
@@ -39,18 +39,18 @@ Utilizza l'Assistente per completare queste attività, alcune delle quali sono o
 
 
 
-== Abilita l'Assistente Console
+== Abilita l'assistente della console
 
-Per impostazione predefinita, la console NetApp visualizza l'Assistente console nella home page per gli utenti che accedono per la prima volta e hanno il ruolo di amministratore dell'organizzazione.
-
-
-TIP: Puoi licenziare l'Assistente solo dopo che tu o qualcun altro avrete completato gli elementi obbligatori.  Dopo aver completato gli elementi obbligatori, l'Assistente verrà disattivato per tutti gli utenti della tua organizzazione e non verrà più visualizzato.
+Per impostazione predefinita, la console NetApp visualizza l'assistente della console nella home page per gli utenti che accedono per la prima volta e che dispongono del ruolo di amministratore dell'organizzazione.
 
 
+TIP: Puoi licenziare l'assistente solo dopo che tu o qualcun altro avrete completato gli elementi obbligatori.  Dopo aver completato gli elementi obbligatori, l'assistente verrà disattivato per tutti gli utenti della tua organizzazione e non verrà più visualizzato.
 
-== Utilizzare l'Assistente Console per iniziare
 
-Console Assistant ti guida attraverso la configurazione del tuo ambiente NetApp Console con queste attività:
+
+== Utilizzare l'assistente della console per iniziare
+
+L'assistente della console ti guida attraverso la configurazione del tuo ambiente NetApp Console con queste attività:
 
 * Aggiungi un account NetApp Support Site (NSS).
 * Connettiti al tuo spazio di archiviazione distribuendo un agente Console, in locale o nel cloud.  È possibile distribuirlo manualmente o scaricando un file OVA.  Questo passaggio è obbligatorio.

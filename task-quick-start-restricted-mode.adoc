@@ -19,8 +19,6 @@ Inizia a utilizzare la console NetApp in modalità limitata preparando l'ambient
 La modalità limitata è in genere utilizzata da enti governativi statali e locali e da aziende regolamentate, comprese le distribuzioni nelle regioni AWS GovCloud e Azure Government.  Prima di iniziare, assicurati di aver compresolink:concept-connectors.html["Agenti della console"] Elink:concept-modes.html["modalità di distribuzione"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] link:task-prepare-restricted-mode.html["Prepararsi per la distribuzione"]
-https://raw.githubusercontent.com/NetAppDocs/console-setup-admin-internal/blob/main/media/screenshot-canvas.png[]
-
 [role="quick-margin-list"]
 . Preparare un host Linux dedicato che soddisfi i requisiti di CPU, RAM, spazio su disco, strumento di orchestrazione dei container e altro ancora.
 . Impostare una rete che fornisca l'accesso alle reti di destinazione, l'accesso a Internet in uscita per le installazioni manuali e l'accesso a Internet in uscita per l'accesso quotidiano.

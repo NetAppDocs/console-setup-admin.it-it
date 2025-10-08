@@ -162,7 +162,7 @@ Fare riferimento alle pagine seguenti per riscoprire i sistemi dopo aver distrib
 * https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-adding-systems.html["Aggiungere sistemi Cloud Volumes ONTAP esistenti"^]
 * https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["Scopri i cluster ONTAP on-premise"^]
 * https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html["Creare o scoprire un sistema FSx per ONTAP"^]
-* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-create-working-env.html["Creare un sistema Azure NetApp Files"^]
+* https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-create-system.html["Creare un sistema Azure NetApp Files"^]
 * https://docs.netapp.com/us-en/bluexp-e-series/task-discover-e-series.html["Scopri i sistemi della serie E"^]
 * https://docs.netapp.com/us-en/bluexp-storagegrid/task-discover-storagegrid.html["Scopri i sistemi StorageGRID"^]
 

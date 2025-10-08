@@ -33,7 +33,7 @@ Ogni riquadro nella home page richiede ruoli utente diversi:
 * * Riquadro avvisi ONTAP *: Amministratore cartella o progetto, Analista supporto operativo, Amministratore organizzazione, Visualizzatore organizzazione, Super amministratore, Super visualizzatore
 * *Riquadro Capacità delle prestazioni di storage*: possibilità di visualizzare la pagina Sistemi della console NetApp
 * *Riquadro Licenze e abbonamenti*: Amministratore cartella o progetto, Amministratore organizzazione, Visualizzatore organizzazione, Super amministratore, Super visualizzatore
-* *Riquadro Resilienza ransomware*: Amministratore cartella o progetto, Amministratore organizzazione, Amministratore protezione ransomware, Visualizzatore protezione ransomware, Super amministratore, Super visualizzatore
+* *Riquadro Ransomware Resilience*: Amministratore cartella o progetto, Amministratore organizzazione, Amministratore Ransomware Resilience, Visualizzatore Ransomware Resilience, Super amministratore, Super visualizzatore
 * *Riquadro Backup e ripristino*: Amministratore di backup e ripristino, Super amministratore di backup e ripristino, Visualizzatore di backup e ripristino, Amministratore di clonazione di backup e ripristino, Amministratore di cartelle o progetti, Amministratore dell'organizzazione, Amministratore di ripristino e backup, Super amministratore, Super visualizzatore
 
 
@@ -194,7 +194,7 @@ Scopri se i carichi di lavoro sono a rischio di attacchi ransomware o protetti c
 
 I dati vengono aggiornati ogni 5 minuti e corrispondono ai dati mostrati nella NetApp Ransomware Resilience Dashboard.
 
-https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["Scopri di più sulla resilienza al ransomware NetApp"^] .
+https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["Scopri di più sulla resilienza al ransomware NetApp"^] .
 
 .Passi
 . Dal menu NetApp Console, esaminare il riquadro Ransomware Resilience.

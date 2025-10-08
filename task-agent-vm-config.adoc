@@ -148,7 +148,7 @@ Accedi agli strumenti diagnostici per risolvere i problemi con l'agente Console.
 . Selezionare *Avvia Web Console*.
 . Accedi all'istanza della VM utilizzando il nome utente e la password specificati al momento della creazione dell'istanza della VM.  Il nome utente è `maint` e la password è quella specificata quando hai creato l'istanza della VM.
 . Entra `3` per visualizzare il menu Supporto e diagnostica.
-. Entra `1` per accedere agli strumenti diagnostici e seguire le istruzioni visualizzate sullo schermo.  + Ad esempio, è possibile verificare che tutti i servizi dell'agente siano in esecuzione. link:task-troubleshoot-connector.html#check-agent-status["Controllare lo stato dell'agente della console"^] .
+. Entra `1` per accedere agli strumenti diagnostici e seguire le istruzioni visualizzate sullo schermo. + Ad esempio, è possibile verificare che tutti i servizi dell'agente siano in esecuzione. link:task-troubleshoot-agent.html#check-agent-status["Controllare lo stato dell'agente della console"^] .
 
 
 

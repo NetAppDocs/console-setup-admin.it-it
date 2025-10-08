@@ -156,7 +156,7 @@ Quando si distribuisce un agente Console dalla console NetApp , ora è possibile
 
 === Risoluzione dei problemi migliorata per gli agenti della console
 
-L'agente Console ha migliorato i messaggi di errore che aiutano a comprendere meglio i problemi.link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-connector.html["Scopri come risolvere i problemi degli agenti della console."]
+L'agente Console ha migliorato i messaggi di errore che aiutano a comprendere meglio i problemi.link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Scopri come risolvere i problemi degli agenti della console."]
 
 
 

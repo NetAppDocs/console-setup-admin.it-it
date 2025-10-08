@@ -70,5 +70,5 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 --
 
 
-Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizzare le origini dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della console sia sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione dei dati NetApp"^]
+Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizzare le origini dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della console sia sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione dei dati NetApp"^]
 

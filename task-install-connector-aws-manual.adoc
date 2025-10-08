@@ -365,6 +365,13 @@ Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp , nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
+
+
+
+ a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
 Per fornire funzionalità e servizi all'interno della NetApp Console.
@@ -412,7 +419,7 @@ Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in u
 --
 
 
-Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizzare le origini dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della console sia sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione dei dati NetApp"^]
+Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizzare le origini dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della console sia sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione dei dati NetApp"^]
 
 
 
@@ -535,7 +542,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 Dove <versione> è la versione dell'agente Console scaricato.
 
-. Se si esegue l'installazione in un ambiente Government Cloud, disattivare i controlli di configurazione.link:task-troubleshoot-connector.html#disable-config-check["Scopri come disattivare i controlli di configurazione per le installazioni manuali."]
+. Se si esegue l'installazione in un ambiente Government Cloud, disattivare i controlli di configurazione.link:task-troubleshoot-agent.html#disable-config-check["Scopri come disattivare i controlli di configurazione per le installazioni manuali."]
 . Eseguire lo script di installazione.
 +
 [source, cli]
@@ -621,7 +628,7 @@ Al termine dell'installazione, il servizio agente della console (occm) viene ria
 
 
 
-NOTE: Se l'installazione non riesce, puoi visualizzare il report e i registri di installazione per aiutarti a risolvere i problemi.link:task-troubleshoot-connector.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
+NOTE: Se l'installazione non riesce, puoi visualizzare il report e i registri di installazione per aiutarti a risolvere i problemi.link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
 
 . Aprire un browser Web da un host che dispone di una connessione alla macchina virtuale dell'agente Console e immettere il seguente URL:
 +
