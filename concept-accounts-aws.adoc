@@ -75,7 +75,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["Scopri come aggiun
 
 Aggiungere le credenziali AWS alla Console per fornire le autorizzazioni necessarie per creare e gestire un sistema FSx for ONTAP .
 
-https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Scopri come aggiungere le credenziali AWS alla console per Amazon FSx per ONTAP"^]
+https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Scopri come aggiungere le credenziali AWS alla console per Amazon FSx per ONTAP"^]
 
 
 

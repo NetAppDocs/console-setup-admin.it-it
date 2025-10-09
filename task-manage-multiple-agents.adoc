@@ -56,6 +56,6 @@ La console si aggiorna e mostra i sistemi associati all'agente selezionato.
 Per evitare problemi di contesa, solo l'agente della console principale dovrebbe essere impostato su *Modalità automatica*.
 
 +
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-settings.html["Scopri di più sulla modalità di gestione della capacità"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-capacity-settings.html["Scopri di più sulla modalità di gestione della capacità"^]
 
 

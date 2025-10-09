@@ -353,4 +353,4 @@ Una volta completato il processo, l'agente della Console sarà disponibile per l
 
 NOTE: Se la distribuzione non riesce, puoi scaricare un report e i registri dalla Console per aiutarti a risolvere i problemi.link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
 
-Se disponi di bucket Amazon S3 nello stesso account AWS in cui hai creato l'agente della console, vedrai apparire automaticamente un ambiente di lavoro Amazon S3 nella pagina *Sistemi*. https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["Scopri come gestire i bucket S3 dalla console NetApp"^]
+Se disponi di bucket Amazon S3 nello stesso account AWS in cui hai creato l'agente della console, vedrai apparire automaticamente un ambiente di lavoro Amazon S3 nella pagina *Sistemi*. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Scopri come gestire i bucket S3 dalla console NetApp"^]

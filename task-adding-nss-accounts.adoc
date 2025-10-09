@@ -60,10 +60,10 @@ NOTE: NetApp utilizza Microsoft Entra ID come provider di identità per i serviz
 Dopo aver effettuato l'accesso, NetApp memorizzerà il nome utente NSS.
 
 +
-Si tratta di un ID generato dal sistema che corrisponde al tuo indirizzo email. Nella pagina *Gestione NSS*, puoi visualizzare la tua email daimage:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["Un'icona di tre punti orizzontali"] menu.
+Si tratta di un ID generato dal sistema che corrisponde al tuo indirizzo email. Nella pagina *Gestione NSS*, puoi visualizzare la tua email daimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Un'icona di tre punti orizzontali"] menu.
 
 +
-** Se hai bisogno di aggiornare i token delle tue credenziali di accesso, c'è anche un'opzione *Aggiorna credenziali* inimage:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["Un'icona di tre punti orizzontali"] menu.
+** Se hai bisogno di aggiornare i token delle tue credenziali di accesso, c'è anche un'opzione *Aggiorna credenziali* inimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Un'icona di tre punti orizzontali"] menu.
 +
 Utilizzando questa opzione ti verrà richiesto di effettuare nuovamente l'accesso. Si noti che il token per questi account scade dopo 90 giorni. Verrà pubblicata una notifica per avvisarti di ciò.
 
@@ -74,10 +74,10 @@ Utilizzando questa opzione ti verrà richiesto di effettuare nuovamente l'access
 .Cosa succederà ora?
 Gli utenti possono ora selezionare l'account quando creano nuovi sistemi Cloud Volumes ONTAP e quando registrano sistemi Cloud Volumes ONTAP esistenti.
 
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html["Avvio di Cloud Volumes ONTAP in AWS"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["Avvio di Cloud Volumes ONTAP in Azure"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["Avvio di Cloud Volumes ONTAP in Google Cloud"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-registering.html["Registrazione dei sistemi pay-as-you-go"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-aws.html["Avvio di Cloud Volumes ONTAP in AWS"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-azure.html["Avvio di Cloud Volumes ONTAP in Azure"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html["Avvio di Cloud Volumes ONTAP in Google Cloud"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-registering.html["Registrazione dei sistemi pay-as-you-go"^]
 
 
 

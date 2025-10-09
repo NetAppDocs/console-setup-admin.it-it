@@ -437,4 +437,4 @@ Una volta completato il processo, l'agente Console è disponibile per l'uso.
 
 NOTE: Se la distribuzione non riesce, puoi scaricare un report e i registri dalla Console per aiutarti a risolvere i problemi.link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
 
-Se disponi di bucket Google Cloud Storage nello stesso account Google Cloud in cui hai creato l'agente Console, vedrai automaticamente un sistema Google Cloud Storage apparire nella pagina *Sistemi*. https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html["Scopri come gestire Google Cloud Storage dalla Console"]
+Se disponi di bucket Google Cloud Storage nello stesso account Google Cloud in cui hai creato l'agente Console, vedrai automaticamente un sistema Google Cloud Storage apparire nella pagina *Sistemi*. https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["Scopri come gestire Google Cloud Storage dalla Console"]

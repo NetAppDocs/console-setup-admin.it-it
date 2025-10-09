@@ -41,9 +41,9 @@ Per saperne di più su cosa è incluso nelle versioni di questi componenti e ser
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#9-september-2024["Novità della versione di settembre 2024 del Connector"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#8-august-2024["Novità della versione di agosto 2024 del Connector"]
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Novità sul BlueXP backup and recovery"^]
-* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["Novità sulla BlueXP classification"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Novità nella gestione Cloud Volumes ONTAP in BlueXP"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["Novità sul BlueXP backup and recovery"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["Novità sulla BlueXP classification"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Novità nella gestione Cloud Volumes ONTAP in BlueXP"^]
 
 
 Per maggiori dettagli sulla modalità privata, incluso come effettuare l'aggiornamento, fare riferimento a quanto segue:

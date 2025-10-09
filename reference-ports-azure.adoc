@@ -38,7 +38,7 @@ Il gruppo di sicurezza di Azure per l'agente richiede regole sia in ingresso che
 | HTTPS | 443 | Fornisce l'accesso HTTPS dai browser Web client all'interfaccia utente locale e connessioni dall'istanza di NetApp Data Classification 
 
 
-| TCP | 3128 | Fornisce a Cloud Volumes ONTAP l'accesso a Internet per inviare messaggi AutoSupport al supporto NetApp .  Dopo la distribuzione, è necessario aprire manualmente questa porta. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-verify-autosupport.html["Scopri come l'agente viene utilizzato come proxy per i messaggi AutoSupport"^] 
+| TCP | 3128 | Fornisce a Cloud Volumes ONTAP l'accesso a Internet per inviare messaggi AutoSupport al supporto NetApp . Dopo la distribuzione, è necessario aprire manualmente questa porta. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-verify-autosupport.html["Scopri come l'agente viene utilizzato come proxy per i messaggi AutoSupport"^] 
 |===
 
 

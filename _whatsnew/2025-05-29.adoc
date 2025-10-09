@@ -18,10 +18,10 @@ La versione 3.9.52 include aggiornamenti ai seguenti componenti e servizi BlueXP
 | Connettore | 3.9.52, 3.9.51 | Vai al https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["novità nella pagina del connettore BlueXP"] e fare riferimento alle modifiche incluse nelle versioni 3.9.52 e 3.9.50. 
 
 
-| Backup e ripristino | 12 maggio 2025 | Vai al https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["novità nella pagina BlueXP backup and recovery"^] e fare riferimento alle modifiche incluse nella versione di maggio 2025. 
+| Backup e ripristino | 12 maggio 2025 | Vai al https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["novità nella pagina BlueXP backup and recovery"^] e fare riferimento alle modifiche incluse nella versione di maggio 2025. 
 
 
-| Classificazione | 12 maggio 2025 (versione 1.43) | Vai al https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["novità nella pagina BlueXP classification"^] e fare riferimento alle modifiche incluse nelle versioni da 1.38 a 1.371.41. 
+| Classificazione | 12 maggio 2025 (versione 1.43) | Vai al https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["novità nella pagina BlueXP classification"^] e fare riferimento alle modifiche incluse nelle versioni da 1.38 a 1.371.41. 
 |===
 Per maggiori dettagli sulla modalità privata, incluso come effettuare l'aggiornamento, fare riferimento a quanto segue:
 

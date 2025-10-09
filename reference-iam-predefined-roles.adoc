@@ -146,5 +146,5 @@ Di seguito è riportato un elenco dei ruoli nella categoria dei servizi dati.  O
 * link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e degli accessi di NetApp Console"]
 * link:task-iam-get-started.html["Inizia con NetApp Console IAM"]
 * link:task-iam-manage-members-permissions.html["Gestisci i membri della console NetApp e le relative autorizzazioni"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Scopri di più sull'API per NetApp Console IAM"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Scopri di più sull'API per NetApp Console IAM"^]
 

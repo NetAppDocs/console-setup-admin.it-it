@@ -137,9 +137,9 @@ TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare
 
 Visualizza gli avvisi relativi a determinati eventi che si verificano in ONTAP. Si tratta di una combinazione di avvisi EMS e basati su parametri.
 
-Per i dettagli sugli avvisi ONTAP , fare riferimento a https://docs.netapp.com/us-en/bluexp-alerts/index.html["Informazioni sugli avvisi ONTAP"^] .
+Per i dettagli sugli avvisi ONTAP , fare riferimento a https://docs.netapp.com/us-en/console-alerts/index.html["Informazioni sugli avvisi ONTAP"^] .
 
-Per un elenco degli avvisi che potresti visualizzare, fai riferimento a https://docs.netapp.com/us-en/bluexp-alerts/alerts-use-dashboard.html["Visualizza i potenziali rischi nell'archiviazione ONTAP"^] .
+Per un elenco degli avvisi che potresti visualizzare, fai riferimento a https://docs.netapp.com/us-en/console-alerts/alerts-use-dashboard.html["Visualizza i potenziali rischi nell'archiviazione ONTAP"^] .
 
 .Passi
 . Dal menu NetApp Console, esaminare il riquadro degli avvisi ONTAP .
@@ -200,9 +200,9 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransom
 . Dal menu NetApp Console, esaminare il riquadro Ransomware Resilience.
 . Nel riquadro Ransomware Resilience, esegui una delle seguenti operazioni:
 +
-** Selezionare *Visualizza* per accedere alla dashboard NetApp Ransomware Resilience. Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["Monitora lo stato del carico di lavoro utilizzando la dashboard di resilienza ransomware NetApp"^] .
-** Consultare le "Azioni consigliate" nella dashboard NetApp Ransomware Resilience. Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["Esaminare i consigli di protezione sulla dashboard NetApp Ransomware Resilience"^] .
-** Selezionare il collegamento agli avvisi per rivedere gli avvisi nella pagina Avvisi di NetApp Ransomware Resilience.  Per i dettagli, fare riferimento https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["Gestisci gli avvisi ransomware rilevati con NetApp Ransomware Resilience"^] .
+** Selezionare *Visualizza* per accedere alla dashboard NetApp Ransomware Resilience. Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["Monitora lo stato del carico di lavoro utilizzando la dashboard di resilienza ransomware NetApp"^] .
+** Consultare le "Azioni consigliate" nella dashboard NetApp Ransomware Resilience. Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["Esaminare i consigli di protezione sulla dashboard NetApp Ransomware Resilience"^] .
+** Selezionare il collegamento agli avvisi per rivedere gli avvisi nella pagina Avvisi di NetApp Ransomware Resilience. Per i dettagli, fare riferimento https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["Gestisci gli avvisi ransomware rilevati con NetApp Ransomware Resilience"^] .
 
 
 
@@ -220,5 +220,5 @@ TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare
 
 .Passi
 . Dal menu NetApp Console, esaminare il riquadro Backup e ripristino.
-. Selezionare *Visualizza* per accedere alla dashboard di NetApp Backup and Recovery. Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["Documentazione NetApp Backup e Recovery"^] .
+. Selezionare *Visualizza* per accedere alla dashboard di NetApp Backup and Recovery. Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Documentazione NetApp Backup e Recovery"^] .
 

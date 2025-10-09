@@ -82,7 +82,7 @@ Le notifiche monitorano le operazioni della Console per confermarne il successo.
 
 Il Centro notifiche consente di visualizzare lo stato delle operazioni avviate e di impostare notifiche di avviso per determinati tipi di attività di sistema.  Nel frattempo, gli avvisi consentono di visualizzare problemi o potenziali rischi nel tuo ambiente di archiviazione ONTAP in relazione a capacità, disponibilità, prestazioni, protezione e sicurezza.
 
-https://docs.netapp.com/us-en/bluexp-alerts/index.html["Scopri di più sugli avvisi della console NetApp"^]
+https://docs.netapp.com/us-en/console-alerts/index.html["Scopri di più sugli avvisi della console NetApp"^]
 
 
 

@@ -19,7 +19,7 @@ Ora che hai effettuato l'accesso e configurato NetApp Console in modalità stand
 
 TIP: Se hai installato un agente Console in AWS, Microsoft Azure o Google Cloud, la Console rileva automaticamente informazioni sui bucket Amazon S3, Azure Blob Storage o Google Cloud Storage nella posizione in cui è installato l'agente.  Questi sistemi vengono aggiunti automaticamente alla pagina *Sistemi*.
 
-Per assistenza, vai a https://docs.netapp.com/us-en/bluexp-family/["home page per la documentazione della console NetApp"^] per visualizzare la documentazione della console NetApp .
+Per assistenza, vai a https://docs.netapp.com/us-en/console-family/["home page per la documentazione della console NetApp"^] per visualizzare la documentazione della console NetApp .
 
 .Informazioni correlate
 link:concept-modes.html["Modalità di distribuzione della console NetApp"]

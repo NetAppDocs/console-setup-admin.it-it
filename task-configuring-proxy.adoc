@@ -131,7 +131,7 @@ Se hai configurato un agente Console per utilizzare un server proxy, puoi abilit
 
 Se si disabilita Azure Private Links con Cloud Volumes ONTAP e si utilizzano endpoint di servizio, abilitare il traffico API diretto.  Altrimenti il ​​traffico non verrà instradato correttamente.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["Scopri di più sull'utilizzo di un collegamento privato di Azure o di endpoint di servizio con Cloud Volumes ONTAP"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html["Scopri di più sull'utilizzo di un collegamento privato di Azure o di endpoint di servizio con Cloud Volumes ONTAP"^]
 
 .Passi
 . Selezionare *Amministrazione > Agenti*.

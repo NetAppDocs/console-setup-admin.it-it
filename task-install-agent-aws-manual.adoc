@@ -647,7 +647,7 @@ https://_ipaddress_[]
 
 
 
-Se disponi di bucket Amazon S3 nello stesso account AWS in cui hai creato l'agente della console, vedrai apparire automaticamente un sistema di archiviazione Amazon S3 nella pagina *Sistemi*. https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["Scopri come gestire i bucket S3 da NetApp ConsoleP"^]
+Se disponi di bucket Amazon S3 nello stesso account AWS in cui hai creato l'agente della console, vedrai apparire automaticamente un sistema di archiviazione Amazon S3 nella pagina *Sistemi*. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Scopri come gestire i bucket S3 da NetApp ConsoleP"^]
 
 
 

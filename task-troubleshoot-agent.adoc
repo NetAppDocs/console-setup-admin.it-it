@@ -271,7 +271,7 @@ Si noti che 32 è un valore di esempio.  Il valore dipende dalla configurazione 
 
 
 
-https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#occmconfig["Scopri di più sulla chiamata API /occm/config"^]
+https://docs.netapp.com/us-en/console-automation/cm/api_ref_resources.html#occmconfig["Scopri di più sulla chiamata API /occm/config"^]
 
 
 
