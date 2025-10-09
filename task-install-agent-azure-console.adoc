@@ -90,7 +90,7 @@ Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere
 
 
  a| 
-\https:\\support.netapp.com
+\ https://support.netapp.com
  a| 
 Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp , nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
 
