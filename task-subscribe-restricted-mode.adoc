@@ -18,11 +18,11 @@ Abbonati a NetApp Intelligent Services dal marketplace del tuo provider cloud pe
 
 Un abbonamento al marketplace consente di addebitare i seguenti servizi dati con modalità limitata:
 
-* Backup e ripristino NetApp
+* NetApp Backup and Recovery
 * Cloud Volumes ONTAP
 * NetApp Cloud Tiering
-* Resilienza al ransomware NetApp
-* Ripristino di emergenza NetApp
+* NetApp Ransomware Resilience
+* NetApp Disaster Recovery
 
 
 NetApp Data Classification è abilitato tramite l'abbonamento, ma l'utilizzo della classificazione è gratuito.
@@ -40,10 +40,10 @@ Il seguente video mostra i passaggi per abbonarsi a NetApp Intelligent Services 
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
-. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
 +
-È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla console NetApp .
+È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla NetApp Console.
 
 +
 image:screenshot_aws_configure_subscription.png["Uno screenshot del menu azioni per un set di credenziali esistenti."]
@@ -55,7 +55,7 @@ image:screenshot_aws_configure_subscription.png["Uno screenshot del menu azioni 
 .. Seleziona *Iscriviti*.
 .. Seleziona *Configura il tuo account*.
 +
-Verrai reindirizzato alla console NetApp .
+Verrai reindirizzato alla NetApp Console.
 
 .. Dalla pagina *Assegnazione abbonamento*:
 +
@@ -79,10 +79,10 @@ Per tutte le altre organizzazioni o account, sarà necessario associare manualme
 --
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
-. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
 +
-È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla console NetApp .
+È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla NetApp Console.
 
 . Per associare le credenziali a un abbonamento esistente, seleziona l'abbonamento dall'elenco a discesa e seleziona *Configura*.
 . Per associare le credenziali a un nuovo abbonamento, seleziona *Aggiungi abbonamento > Continua* e segui i passaggi in Azure Marketplace:
@@ -92,7 +92,7 @@ Per tutte le altre organizzazioni o account, sarà necessario associare manualme
 .. Compila il modulo e seleziona *Iscriviti*.
 .. Una volta completato il processo di sottoscrizione, seleziona *Configura account ora*.
 +
-Verrai reindirizzato alla console NetApp .
+Verrai reindirizzato alla NetApp Console.
 
 .. Dalla pagina *Assegnazione abbonamento*:
 +
@@ -122,7 +122,7 @@ video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 --
 .Passi
 . Selezionare *Amministrazione > *Credenziali*.
-. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.  +necessario nuovo screenshot (TS)image:screenshot_gcp_add_subscription.png["Uno screenshot del menu azioni per un set di credenziali esistenti."]
 . Per configurare un abbonamento esistente con le credenziali selezionate, seleziona un progetto Google Cloud e un abbonamento dall'elenco a discesa, quindi seleziona *Configura*.
 +
@@ -131,7 +131,7 @@ image:screenshot_gcp_associate.gif["Uno screenshot di un progetto Google Cloud e
 . Se non hai ancora un abbonamento, seleziona *Aggiungi abbonamento > Continua* e segui i passaggi indicati in Google Cloud Marketplace.
 +
 
-NOTE: Prima di completare i passaggi seguenti, assicurati di disporre sia dei privilegi di amministratore della fatturazione nel tuo account Google Cloud sia di un accesso alla console NetApp .
+NOTE: Prima di completare i passaggi seguenti, assicurati di disporre sia dei privilegi di amministratore della fatturazione nel tuo account Google Cloud sia di un accesso alla NetApp Console .
 
 +
 .. Dopo essere stato reindirizzato al https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Pagina NetApp Intelligent Services su Google Cloud Marketplace"^] , assicurati che nel menu di navigazione in alto sia selezionato il progetto corretto.
@@ -154,7 +154,7 @@ image:screenshot_gcp_marketplace_register.png["Uno screenshot di un pop-up di re
 .. Completa i passaggi nella pagina *Assegnazione abbonamento*:
 +
 
-NOTE: Se qualcuno della tua organizzazione ha già un abbonamento al marketplace dal tuo account di fatturazione, verrai reindirizzato a https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["la pagina Cloud Volumes ONTAP nella console NetApp"^] Invece.  Se ciò non è previsto, contatta il team di vendita NetApp .  Google consente un solo abbonamento per account di fatturazione Google.
+NOTE: Se qualcuno della tua organizzazione ha già un abbonamento al marketplace dal tuo account di fatturazione, verrai reindirizzato a https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["la pagina Cloud Volumes ONTAP nella NetApp Console"^] Invece.  Se ciò non è previsto, contatta il team di vendita NetApp .  Google consente un solo abbonamento per account di fatturazione Google.
 
 +
 *** Seleziona le organizzazioni o gli account della Console a cui desideri associare questo abbonamento.

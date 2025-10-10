@@ -10,7 +10,7 @@ settings:
   langs: it-it,us-en,de-de,es-es,fr-fr,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: Configurazione e amministrazione della console NetApp
+  - title: Configurazione e amministrazione NetApp Console
     url: "/index.html"
   - title: Note di rilascio
     entries:
@@ -24,7 +24,7 @@ sidebar:
     entries:
     - title: Impara le basi
       entries:
-      - title: Console NetApp
+      - title: NetApp Console
         url: "/concept-overview.html"
       - title: Agenti della console
         url: "/concept-agents.html"
@@ -40,7 +40,7 @@ sidebar:
         url: "/task-quick-start-standard-mode.html"
       - title: Preparare l'accesso alla rete per NetApp Console
         url: "/reference-networking-saas-console.html"
-      - title: Iscriviti alla console NetApp
+      - title: Iscriviti alla NetApp Console
         url: "/task-sign-up-saas.html"
       - title: Creare un agente Console
         entries:
@@ -48,7 +48,7 @@ sidebar:
           entries:
           - title: Opzioni di installazione dell'agente console
             url: "/concept-install-options-aws.html"
-          - title: Creare un agente Console dalla console NetApp
+          - title: Creare un agente Console dalla NetApp Console
             url: "/task-install-agent-aws-console.html"
           - title: Crea un agente Console dal marketplace
             url: "/task-install-agent-aws-marketplace.html"
@@ -58,7 +58,7 @@ sidebar:
           entries:
           - title: Opzioni di installazione dell'agente console
             url: "/concept-install-options-azure.html"
-          - title: Creare un agente Console dalla console NetApp
+          - title: Creare un agente Console dalla NetApp Console
             url: "/task-install-agent-azure-console.html"
           - title: Crea un agente Console dal marketplace
             url: "/task-install-agent-azure-marketplace.html"
@@ -68,7 +68,7 @@ sidebar:
           entries:
           - title: Opzioni di installazione dell'agente console
             url: "/concept-install-options-google.html"
-          - title: Creare un agente Console dalla console NetApp
+          - title: Creare un agente Console dalla NetApp Console
             url: "/task-install-agent-google-console-gcloud.html"
           - title: Crea un agente Console da Google Cloud
             url: "/task-install-agent-google-gcloud.html"
@@ -100,15 +100,15 @@ sidebar:
       entries:
       - title: Introduzione all'interfaccia legacy BlueXP (modalità privata)
         url: "/task-quick-start-private-mode.html"
-  - title: Utilizzare la console NetApp
+  - title: Utilizzare la NetApp Console
     entries:
-    - title: Accedi alla console NetApp
+    - title: Accedi alla NetApp Console
       url: "/task-logging-in.html"
-    - title: Visualizza le metriche nella home page della console NetApp
+    - title: Visualizza le metriche nella home page NetApp Console
       url: "/task-dashboard.html"
-    - title: Gestisci le impostazioni utente della console NetApp
+    - title: Gestisci le impostazioni utente NetApp Console
       url: "/task-user-settings.html"
-  - title: Amministrare la console NetApp
+  - title: Amministrare la NetApp Console
     entries:
     - title: Gestione dell'identità e degli accessi
       entries:
@@ -132,9 +132,9 @@ sidebar:
         url: "/task-iam-rename-organization.html"
       - title: Monitorare o verificare l'attività IAM
         url: "/task-iam-audit-actions-timeline.html"
-      - title: Ruoli di accesso alla console NetApp
+      - title: Ruoli di accesso NetApp Console
         entries:
-        - title: Scopri di più sui ruoli di accesso alla console NetApp
+        - title: Scopri di più sui ruoli di accesso NetApp Console
           url: "/reference-iam-predefined-roles.html"
         - title: Ruoli della piattaforma
           url: "/reference-iam-platform-roles.html"
@@ -214,7 +214,7 @@ sidebar:
         url: "/task-uninstall-agent.html"
       - title: Configurazione predefinita
         url: "/reference-agent-default-config.html"
-      - title: Applica le autorizzazioni ONTAP nella console NetApp
+      - title: Applica le autorizzazioni ONTAP nella NetApp Console
         url: "/task-ontap-access-agent.html"
     - title: Credenziali e abbonamenti
       entries:
@@ -239,9 +239,9 @@ sidebar:
       - title: Gestire le credenziali NSS associate a un'organizzazione o a un account
           NetApp Console
         url: "/task-adding-nss-accounts.html"
-      - title: Gestisci le credenziali associate al tuo accesso alla console NetApp
+      - title: Gestisci le credenziali associate al tuo accesso NetApp Console
         url: "/task-manage-user-credentials.html"
-    - title: Monitorare le operazioni della console NetApp
+    - title: Monitorare le operazioni NetApp Console
       url: "/task-monitor-cm-operations.html"
   - title: Riferimento
     entries:

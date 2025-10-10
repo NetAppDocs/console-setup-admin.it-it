@@ -4,7 +4,7 @@ permalink: task-iam-get-started.html
 keywords: iam, quick start, get started, get started with iam, identity and access management 
 summary: 'Per iniziare a gestire identità e accessi in NetApp Console, personalizza la gerarchia dell"organizzazione, aggiungi altri membri, aggiungi o scopri risorse e associa tali risorse ai progetti.' 
 ---
-= Inizia con l'identità e l'accesso nella console NetApp
+= Inizia con l'identità e l'accesso nella NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -60,6 +60,6 @@ L'aggiunta o la scoperta di un sistema nella Console associa automaticamente la 
 
 
 .Informazioni correlate
-* link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e degli accessi nella console NetApp"]
+* link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e degli accessi nella NetApp Console"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Scopri di più sull'API per l'identità e l'accesso"^]
 

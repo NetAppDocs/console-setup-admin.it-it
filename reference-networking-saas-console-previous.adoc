@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-networking-saas-console-previous.html 
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
-summary: 'Quando si effettua l"accesso e si utilizza la console basata sul Web, questa contatta diversi endpoint per completare le azioni avviate.  I computer che accedono alla console NetApp devono disporre di connessioni a questi endpoint.' 
+summary: 'Quando si effettua l"accesso e si utilizza la console basata sul Web, questa contatta diversi endpoint per completare le azioni avviate.  I computer che accedono alla NetApp Console devono disporre di connessioni a questi endpoint.' 
 ---
 = Punti di accesso alla rete richiesti per 3.9.55 e versioni precedenti
 :hardbreaks:
@@ -47,13 +47,13 @@ systemctl status netapp-service-manager.service
 
 
 
-== Endpoint contattati dalla console NetApp
+== Endpoint contattati dalla NetApp Console
 
-Ogni computer che accede alla console NetApp deve disporre di connessioni agli endpoint elencati di seguito.
+Ogni computer che accede alla NetApp Console deve disporre di connessioni agli endpoint elencati di seguito.
 
 Il sistema contatta questi endpoint in due scenari:
 
-* Da un computer che accede al https://console.netapp.com["Console NetApp"^] come software come servizio (SaaS).
+* Da un computer che accede al https://console.netapp.com["NetApp Console"^] come software come servizio (SaaS).
 * Da un computer che accede direttamente a un host agente, per effettuare l'accesso e configurarlo oppure per accedere alla Console dall'host agente.
 
 
@@ -97,7 +97,7 @@ NetApp consiglia di consentire gli endpoint dell'Opzione 1 nel firewall in quant
 
 L'agente Console può essere installato in locale o nel cloud e contatta gli endpoint per completare le azioni avviate dalla console.
 
-Gli agenti della console devono avere accesso agli stessi endpoint della console NetApp , oltre ad endpoint aggiuntivi se si distribuisce l'agente nel provider cloud.
+Gli agenti della console necessitano dell'accesso agli stessi endpoint della NetApp Console, oltre ad endpoint aggiuntivi se si distribuisce l'agente nel provider cloud.
 
 
 

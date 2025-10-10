@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-ports-azure.html 
 keywords: ports, security group, http, https, inbound, outbound 
-summary: 'Il gruppo di sicurezza di Azure per l"agente richiede regole sia in ingresso che in uscita.  La console NetApp crea automaticamente questo gruppo di sicurezza quando si crea un agente della console dalla console. Per altre opzioni di installazione, è necessario impostare manualmente questo gruppo di sicurezza.' 
+summary: 'Il gruppo di sicurezza di Azure per l"agente richiede regole sia in ingresso che in uscita.  La NetApp Console crea automaticamente questo gruppo di sicurezza quando si crea un agente della console dalla console. Per altre opzioni di installazione, è necessario impostare manualmente questo gruppo di sicurezza.' 
 ---
 = Regole del gruppo di sicurezza dell'agente della console in Azure
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Il gruppo di sicurezza di Azure per l"agente richiede regole sia in in
 
 
 [role="lead"]
-Il gruppo di sicurezza di Azure per l'agente richiede regole sia in ingresso che in uscita.  La console NetApp crea automaticamente questo gruppo di sicurezza quando si crea un agente della console dalla console. Per altre opzioni di installazione, è necessario impostare manualmente questo gruppo di sicurezza.
+Il gruppo di sicurezza di Azure per l'agente richiede regole sia in ingresso che in uscita.  La NetApp Console crea automaticamente questo gruppo di sicurezza quando si crea un agente della console dalla console. Per altre opzioni di installazione, è necessario impostare manualmente questo gruppo di sicurezza.
 
 
 
@@ -35,10 +35,10 @@ Il gruppo di sicurezza di Azure per l'agente richiede regole sia in ingresso che
 
 
 
-| HTTPS | 443 | Fornisce l'accesso HTTPS dai browser Web client all'interfaccia utente locale e connessioni dall'istanza di NetApp Data Classification 
+| HTTPS | 443 | Fornisce l'accesso HTTPS dai browser Web client all'interfaccia utente locale e connessioni dall'istanza NetApp Data Classification 
 
 
-| TCP | 3128 | Fornisce a Cloud Volumes ONTAP l'accesso a Internet per inviare messaggi AutoSupport al supporto NetApp . Dopo la distribuzione, è necessario aprire manualmente questa porta. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-verify-autosupport.html["Scopri come l'agente viene utilizzato come proxy per i messaggi AutoSupport"^] 
+| TCP | 3128 | Fornisce a Cloud Volumes ONTAP l'accesso a Internet per inviare messaggi AutoSupport al supporto NetApp .  Dopo la distribuzione, è necessario aprire manualmente questa porta. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-verify-autosupport.html["Scopri come l'agente viene utilizzato come proxy per i messaggi AutoSupport"^] 
 |===
 
 

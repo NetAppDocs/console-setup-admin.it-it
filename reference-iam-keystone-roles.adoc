@@ -4,7 +4,7 @@ permalink: reference-iam-keystone-roles.html
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
 summary: 'La gestione dell"identità e dell"accesso NetApp Console fornisce due ruoli Keystone che puoi assegnare ai membri della tua organizzazione.' 
 ---
-= Ruoli di accesso Keystone nella console NetApp
+= Ruoli di accesso Keystone nella NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: 'La gestione dell"identità e dell"accesso NetApp Console fornisce due 
 [role="lead"]
 I ruoli Keystone forniscono l'accesso alle dashboard Keystone e consentono agli utenti di visualizzare e gestire il proprio abbonamento Keystone .  Esistono due ruoli Keystone : amministratore Keystone e visualizzatore Keystone .  La differenza principale tra i due ruoli riguarda le azioni che possono intraprendere in Keystone.  Il ruolo di amministratore Keystone è l'unico a cui è consentito creare richieste di servizio o modificare abbonamenti.
 
-.Esempio di ruoli Keystone nella console NetApp
+.Esempio di ruoli Keystone nella NetApp Console
 XYZ Corporation dispone di quattro tecnici di archiviazione provenienti da reparti diversi che visualizzano le informazioni sugli abbonamenti Keystone .  Sebbene tutti questi utenti debbano monitorare l'abbonamento Keystone , solo il responsabile del team è autorizzato a effettuare richieste di assistenza.  A tre membri del team viene assegnato il ruolo di * Keystone viewer*, mentre al responsabile del team viene assegnato il ruolo di * Keystone admin*, in modo che vi sia un punto di controllo sulle richieste di servizio per l'azienda.
 
 La tabella seguente indica le azioni che ciascun ruolo Keystone può eseguire.
@@ -91,7 +91,7 @@ SÌ
 
 
 
-3+| *Licenze e abbonamenti*: 
+3+| * Licenses and subscriptions*: 
 
 
 | Può visualizzare licenze e abbonamenti  a| 

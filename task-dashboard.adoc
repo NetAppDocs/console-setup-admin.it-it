@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-dashboard.html 
 keywords: bluexp, dashboard, console, home page 
-summary: Nella console NetApp è possibile visualizzare le metriche nella home page. 
+summary: 'All"interno della NetApp Console, è possibile visualizzare le metriche nella home page.' 
 ---
-= Visualizza le metriche nella home page della console NetApp
+= Visualizza le metriche nella home page NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Nella console NetApp è possibile visualizzare le metriche nella home p
 
 
 [role="lead"]
-Monitorando lo stato di salute del tuo spazio di archiviazione, sarai a conoscenza di eventuali problemi di protezione e potrai adottare misure per risolverli.  Utilizzando la home page della console NetApp , puoi visualizzare lo stato dei backup e dei ripristini da NetApp Backup and Recovery e il numero di carichi di lavoro a rischio di attacco ransomware o protetti, come indicato da NetApp Ransomware Resilience.  È possibile esaminare la capacità di archiviazione per singoli cluster e Cloud Volumes ONTAP, gli avvisi ONTAP , la capacità delle prestazioni di archiviazione per cluster o sistema Cloud Volumes ONTAP , i diversi tipi di licenze in uso e altro ancora.
+Monitorando lo stato di salute del tuo spazio di archiviazione, sarai a conoscenza di eventuali problemi di protezione e potrai adottare misure per risolverli.  Utilizzando la home page NetApp Console , puoi visualizzare lo stato dei backup e dei ripristini da NetApp Backup and Recovery e il numero di carichi di lavoro a rischio di attacco ransomware o protetti, come indicato da NetApp Ransomware Resilience.  È possibile esaminare la capacità di archiviazione per singoli cluster e Cloud Volumes ONTAP, gli avvisi ONTAP , la capacità delle prestazioni di archiviazione per cluster o sistema Cloud Volumes ONTAP , i diversi tipi di licenze in uso e altro ancora.
 
 Tutti i riquadri della home page mostrano i dati a livello di organizzazione.  I riquadri Capacità di archiviazione e Prestazioni di archiviazione mostrano i sistemi associati ai progetti a cui l'utente può accedere in base alle autorizzazioni IAM.
 
@@ -25,35 +25,35 @@ NOTE: Per ottenere metriche precise nella home page sono necessari agenti della 
 
 
 
-== Ruoli richiesti della console NetApp
+== Ruoli richiesti NetApp Console
 
 Ogni riquadro nella home page richiede ruoli utente diversi:
 
-* *Riquadro Capacità di archiviazione*: possibilità di visualizzare la pagina Sistemi console NetApp
+* *Riquadro Capacità di archiviazione*: possibilità di visualizzare la pagina Sistemi NetApp Console
 * * Riquadro avvisi ONTAP *: Amministratore cartella o progetto, Analista supporto operativo, Amministratore organizzazione, Visualizzatore organizzazione, Super amministratore, Super visualizzatore
-* *Riquadro Capacità delle prestazioni di storage*: possibilità di visualizzare la pagina Sistemi della console NetApp
-* *Riquadro Licenze e abbonamenti*: Amministratore cartella o progetto, Amministratore organizzazione, Visualizzatore organizzazione, Super amministratore, Super visualizzatore
+* *Riquadro Capacità delle prestazioni di storage*: possibilità di visualizzare la pagina Sistemi NetApp Console
+* * Riquadro Licenses and subscriptions *: Amministratore cartella o progetto, Amministratore organizzazione, Visualizzatore organizzazione, Super amministratore, Super visualizzatore
 * *Riquadro Ransomware Resilience*: Amministratore cartella o progetto, Amministratore organizzazione, Amministratore Ransomware Resilience, Visualizzatore Ransomware Resilience, Super amministratore, Super visualizzatore
 * *Riquadro Backup e ripristino*: Amministratore di backup e ripristino, Super amministratore di backup e ripristino, Visualizzatore di backup e ripristino, Amministratore di clonazione di backup e ripristino, Amministratore di cartelle o progetti, Amministratore dell'organizzazione, Amministratore di ripristino e backup, Super amministratore, Super visualizzatore
 
 
 Se non si dispone delle autorizzazioni per accedere a un riquadro, nel riquadro viene visualizzato un messaggio che indica che non si dispone delle autorizzazioni per utilizzarlo.
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso alla console NetApp ."] .
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso NetApp Console ."] .
 
 .Passi
-. Dal menu della console NetApp , selezionare *Home*.
+. Dal menu NetApp Console , selezionare *Home*.
 +
 Se si dispone del ruolo di amministratore dell'organizzazione e non è configurato alcun agente o sistema di archiviazione, nella home page vengono visualizzate le informazioni introduttive.
 
 +
-image:screenshot-home-greenfield.png["La home page della console NetApp dà il benvenuto ai nuovi utenti"]
+image:screenshot-home-greenfield.png["La home page NetApp Console dà il benvenuto ai nuovi utenti"]
 
 +
-Se hai già configurato la console NetApp , almeno un agente della console è abilitato e almeno un cluster o un sistema Cloud Volumes ONTAP è stato aggiunto a tale agente, la pagina Home mostra le metriche relative al tuo ambiente di storage.
+Se hai già configurato la NetApp Console, almeno un agente della console è abilitato e almeno un cluster o un sistema Cloud Volumes ONTAP è stato aggiunto a tale agente, la pagina Home mostra le metriche relative al tuo ambiente di storage.
 
 +
-image:screenshot-home-metrics.png["Pagina iniziale della console NetApp che mostra le metriche"]
+image:screenshot-home-metrics.png["Pagina iniziale NetApp Console che mostra le metriche"]
 
 
 
@@ -65,7 +65,7 @@ image:screenshot-home-metrics.png["Pagina iniziale della console NetApp che most
 
 * Hai effettuato l'accesso a un'istanza SaaS della NetApp Console.
 * Appartieni a un'organizzazione con risorse di archiviazione esistenti (agente e cluster o sistema Cloud Volumes ONTAP ).
-* Almeno un agente Console è abilitato.
+* È abilitato almeno un agente Console.
 * Almeno un cluster o un sistema Cloud Volumes ONTAP è stato aggiunto a quell'agente.
 
 
@@ -94,7 +94,7 @@ Gli indicatori di avviso indicano cluster all'80% della capacità, con dati aggi
 TIP: Se hai più progetti, potresti visualizzare dati diversi nel riquadro Capacità di archiviazione rispetto alla pagina Sistemi.  Ciò avviene perché la pagina Sistemi mostra informazioni basate sul livello di progetto, mentre il riquadro Capacità di archiviazione mostra informazioni a livello di organizzazione.  Inoltre, i dati in questo riquadro potrebbero differire dai valori reali per un massimo di 15 minuti, perché i dati vengono memorizzati nella cache per tale periodo di tempo per ottimizzare le prestazioni.
 
 .Passi
-. Dal menu NetApp Console, esaminare il riquadro Capacità di archiviazione.
+. Dal menu NetApp Console , esaminare il riquadro Capacità di archiviazione.
 . Nel riquadro Capacità di archiviazione, selezionare *Visualizza* per andare alla pagina Sistemi console.
 . Nella pagina Sistemi, seleziona il progetto contenente il cluster che desideri visualizzare.
 . Nella pagina Sistemi, seleziona un cluster per visualizzare maggiori dettagli su di esso.
@@ -104,7 +104,7 @@ TIP: Se hai più progetti, potresti visualizzare dati diversi nel riquadro Capac
 
 == Visualizza gli avvisi ONTAP
 
-Visualizza i problemi o i potenziali rischi nei tuoi ambienti ONTAP locali NetApp . Puoi visualizzare alcuni avvisi non EMS e alcuni avvisi EMS.
+Visualizza i problemi o i potenziali rischi nei tuoi ambienti ONTAP locali NetApp .  Puoi visualizzare alcuni avvisi non EMS e alcuni avvisi EMS.
 
 I dati vengono aggiornati ogni 5 minuti.
 
@@ -135,14 +135,14 @@ TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare
 
 *Fonti dati supportate*
 
-Visualizza gli avvisi relativi a determinati eventi che si verificano in ONTAP. Si tratta di una combinazione di avvisi EMS e basati su parametri.
+Visualizza gli avvisi relativi a determinati eventi che si verificano in ONTAP.  Si tratta di una combinazione di avvisi EMS e basati su parametri.
 
 Per i dettagli sugli avvisi ONTAP , fare riferimento a https://docs.netapp.com/us-en/console-alerts/index.html["Informazioni sugli avvisi ONTAP"^] .
 
 Per un elenco degli avvisi che potresti visualizzare, fai riferimento a https://docs.netapp.com/us-en/console-alerts/alerts-use-dashboard.html["Visualizza i potenziali rischi nell'archiviazione ONTAP"^] .
 
 .Passi
-. Dal menu NetApp Console, esaminare il riquadro degli avvisi ONTAP .
+. Dal menu NetApp Console , esaminare il riquadro degli avvisi ONTAP .
 . Facoltativamente, filtra gli avvisi selezionando il livello di gravità oppure modifica il filtro per visualizzare gli avvisi in base all'area di impatto.
 . Nel riquadro Avvisi ONTAP , selezionare *Visualizza* per andare alla pagina Avvisi della console.
 
@@ -159,7 +159,7 @@ Il sistema organizza i cluster e i sistemi in base alla capacità prestazionale,
 TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare differenze nei dati in questo riquadro rispetto ai valori effettivi per un massimo di 15 minuti.
 
 .Passi
-. Dal menu NetApp Console, esaminare il riquadro Prestazioni di archiviazione.
+. Dal menu NetApp Console , esaminare il riquadro Prestazioni di archiviazione.
 . Nel riquadro Prestazioni di archiviazione, seleziona *Visualizza* per accedere alla pagina Prestazioni in cui sono elencati tutti i cluster e i dati dei sistemi Cloud Volumes ONTAP per capacità di prestazioni, IOPS e latenza.
 . Selezionare un cluster per visualizzarne i dettagli in System Manager.
 
@@ -168,7 +168,7 @@ TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare
 
 == Visualizza le licenze e gli abbonamenti che possiedi
 
-Esaminare le seguenti informazioni nel riquadro Licenze e abbonamenti:
+Esaminare le seguenti informazioni nel riquadro Licenses and subscriptions :
 
 * Il numero totale di licenze e abbonamenti di cui disponi.
 * Il numero di ogni tipo di licenza e abbonamento di cui disponi (licenza diretta, contratto annuale o PAYGO).
@@ -182,27 +182,27 @@ I dati vengono aggiornati ogni 5 minuti.
 TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare differenze nei dati in questo riquadro rispetto ai valori effettivi per un massimo di 15 minuti.
 
 .Passi
-. Dal menu NetApp Console, esaminare il riquadro Licenze e abbonamenti.
-. Nel riquadro Licenze e abbonamenti, seleziona *Visualizza* per andare alla pagina Licenze e abbonamenti della console.
+. Dal menu NetApp Console , esaminare il riquadro Licenses and subscriptions .
+. Nel riquadro Licenses and subscriptions , seleziona *Visualizza* per andare alla pagina Licenses and subscriptions della console.
 
 
 
 
 == Visualizza lo stato di resilienza del ransomware
 
-Scopri se i carichi di lavoro sono a rischio di attacchi ransomware o protetti con il servizio dati NetApp Ransomware Resilience.  È possibile esaminare la quantità totale di dati protetti, visualizzare il numero di azioni consigliate e visualizzare il numero di avvisi relativi alla protezione dal ransomware.
+Scopri se i carichi di lavoro sono a rischio di attacchi ransomware o protetti con il servizio dati NetApp Ransomware Resilience .  È possibile esaminare la quantità totale di dati protetti, visualizzare il numero di azioni consigliate e visualizzare il numero di avvisi relativi alla protezione dal ransomware.
 
 I dati vengono aggiornati ogni 5 minuti e corrispondono ai dati mostrati nella NetApp Ransomware Resilience Dashboard.
 
-https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["Scopri di più sulla resilienza al ransomware NetApp"^] .
+https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["Scopri di più sulla NetApp Ransomware Resilience"^] .
 
 .Passi
-. Dal menu NetApp Console, esaminare il riquadro Ransomware Resilience.
+. Dal menu NetApp Console , esaminare il riquadro Ransomware Resilience.
 . Nel riquadro Ransomware Resilience, esegui una delle seguenti operazioni:
 +
-** Selezionare *Visualizza* per accedere alla dashboard NetApp Ransomware Resilience. Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["Monitora lo stato del carico di lavoro utilizzando la dashboard di resilienza ransomware NetApp"^] .
-** Consultare le "Azioni consigliate" nella dashboard NetApp Ransomware Resilience. Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["Esaminare i consigli di protezione sulla dashboard NetApp Ransomware Resilience"^] .
-** Selezionare il collegamento agli avvisi per rivedere gli avvisi nella pagina Avvisi di NetApp Ransomware Resilience. Per i dettagli, fare riferimento https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["Gestisci gli avvisi ransomware rilevati con NetApp Ransomware Resilience"^] .
+** Selezionare *Visualizza* per accedere alla dashboard NetApp Ransomware Resilience . Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["Monitora lo stato del carico di lavoro utilizzando la dashboard NetApp Ransomware Resilience"^] .
+** Consultare le "Azioni consigliate" nella dashboard NetApp Ransomware Resilience . Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["Esaminare i consigli di protezione sulla dashboard NetApp Ransomware Resilience"^] .
+** Selezionare il collegamento agli avvisi per rivedere gli avvisi nella pagina Avvisi NetApp Ransomware Resilience .  Per i dettagli, fare riferimento https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["Gestisci gli avvisi ransomware rilevati con NetApp Ransomware Resilience"^] .
 
 
 
@@ -211,7 +211,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransom
 
 == Visualizza lo stato di backup e ripristino
 
-Esamina lo stato generale dei backup e dei ripristini eseguiti da NetApp Backup and Recovery.  È possibile visualizzare il numero di risorse protette e non protette.  Puoi anche visualizzare la percentuale di backup e operazioni di ripristino per la protezione dei tuoi carichi di lavoro.  Una percentuale più alta indica una migliore protezione dei dati.
+Esamina lo stato generale dei tuoi backup e ripristini da NetApp Backup and Recovery.  È possibile visualizzare il numero di risorse protette e non protette.  Puoi anche visualizzare la percentuale di backup e operazioni di ripristino per la protezione dei tuoi carichi di lavoro.  Una percentuale più alta indica una migliore protezione dei dati.
 
 I dati vengono aggiornati ogni 5 minuti.
 
@@ -219,6 +219,6 @@ I dati vengono aggiornati ogni 5 minuti.
 TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare differenze nei dati in questo riquadro rispetto ai valori effettivi per un massimo di 15 minuti.
 
 .Passi
-. Dal menu NetApp Console, esaminare il riquadro Backup e ripristino.
-. Selezionare *Visualizza* per accedere alla dashboard di NetApp Backup and Recovery. Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Documentazione NetApp Backup e Recovery"^] .
+. Dal menu NetApp Console , esaminare il riquadro Backup e ripristino.
+. Selezionare *Visualizza* per accedere alla dashboard NetApp Backup and Recovery . Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Documentazione NetApp Backup and Recovery"^] .
 

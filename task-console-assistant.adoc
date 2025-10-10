@@ -26,7 +26,7 @@ L'assistente della console è disponibile solo per gli utenti con ruolo di ammin
 
 == Quando appare l'assistente della console?
 
-L'assistente della console è disponibile nella home page della console NetApp fino al completamento delle attività di configurazione obbligatorie.
+L'assistente della console è disponibile nella home page NetApp Console fino al completamento delle attività di configurazione obbligatorie.
 
 Utilizza l'assistente per completare queste attività, alcune delle quali sono obbligatorie:
 
@@ -41,7 +41,7 @@ Utilizza l'assistente per completare queste attività, alcune delle quali sono o
 
 == Abilita l'assistente della console
 
-Per impostazione predefinita, la console NetApp visualizza l'assistente della console nella home page per gli utenti che accedono per la prima volta e che dispongono del ruolo di amministratore dell'organizzazione.
+Per impostazione predefinita, la NetApp Console visualizza l'assistente della console nella home page per gli utenti che accedono per la prima volta e hanno il ruolo di amministratore dell'organizzazione.
 
 
 TIP: Puoi licenziare l'assistente solo dopo che tu o qualcun altro avrete completato gli elementi obbligatori.  Dopo aver completato gli elementi obbligatori, l'assistente verrà disattivato per tutti gli utenti della tua organizzazione e non verrà più visualizzato.

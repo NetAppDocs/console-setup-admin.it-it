@@ -4,7 +4,7 @@ permalink: concept-modes.html
 keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
 summary: 'NetApp Console offre diverse _modalità di distribuzione_ che ti consentono di soddisfare i requisiti aziendali e di sicurezza. La _modalità standard_ sfrutta un livello di software come servizio (SaaS) per fornire funzionalità complete, mentre la _modalità limitata_ e la _modalità privata_ sono disponibili per le organizzazioni che hanno restrizioni di connettività.' 
 ---
-= Scopri di più sulle modalità di distribuzione della console NetApp
+= Scopri di più sulle modalità di distribuzione NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -35,7 +35,7 @@ Modalità standard:: Si utilizza un servizio SaaS dalla console basata sul Web. 
 Questa modalità utilizza la trasmissione crittografata dei dati tramite la rete Internet pubblica.
 
 --
-Modalità limitata:: Si installa un agente Console nel cloud (in una regione governativa, sovrana o commerciale) e ha una connettività in uscita limitata al livello SaaS della console NetApp .
+Modalità limitata:: Si installa un agente Console nel cloud (in una regione governativa, sovrana o commerciale) e ha una connettività in uscita limitata al livello SaaS NetApp Console .
 +
 --
 Questa modalità è solitamente utilizzata dagli enti governativi statali e locali e dalle aziende regolamentate.
@@ -53,7 +53,7 @@ La tabella seguente fornisce un confronto della console NetApp .
 |  | Modalità standard | Modalità limitata 
 
 
-| È richiesta la connessione al livello SaaS della console NetApp ? | SÌ | Solo in uscita 
+| È richiesta la connessione al livello SaaS NetApp Console ? | SÌ | Solo in uscita 
 
 
 | È richiesta la connessione al tuo provider cloud? | SÌ | Sì, all'interno della regione 
@@ -82,7 +82,7 @@ La tabella seguente fornisce un confronto della console NetApp .
 
 | Opzioni di licenza del servizio dati | Abbonamenti al Marketplace e BYOL | Abbonamenti al Marketplace e BYOL 
 |===
-Per saperne di più su queste modalità, comprese le funzionalità e i servizi di NetApp Console supportati, leggere le sezioni seguenti.
+Per saperne di più su queste modalità, comprese le funzionalità e i servizi NetApp Console supportati, leggere le sezioni seguenti.
 
 
 
@@ -94,7 +94,7 @@ image:diagram-standard-mode.png["Un'immagine concettuale che mostra la rete Inte
 
 In modalità standard la console funziona come segue:
 
-Comunicazione in uscita:: È richiesta la connettività da un agente della console al livello SaaS della console, alle risorse disponibili al pubblico del tuo provider cloud e ad altri componenti essenziali per le operazioni quotidiane.
+Comunicazione in uscita:: È richiesta la connettività da un agente della console al livello SaaS della console, alle risorse pubbliche del tuo provider cloud e ad altri componenti essenziali per le operazioni quotidiane.
 +
 --
 * link:task-install-agent-aws-console.html#networking-aws-agent["Endpoint che un agente contatta in AWS"]
@@ -121,7 +121,7 @@ Punto finale dell'API:: Le chiamate API vengono effettuate al seguente endpoint:
 Autenticazione:: Autenticazione con accessi auth0 o NetApp Support Site (NSS).  È disponibile la federazione delle identità.
 Servizi dati supportati:: Sono supportati tutti i servizi dati NetApp . link:https://docs.netapp.com/us-en/data-services-family/index.html["Scopri di più sui servizi dati NetApp"^] .
 Opzioni di licenza supportate:: Gli abbonamenti Marketplace e BYOL sono supportati con la modalità standard; tuttavia, le opzioni di licenza supportate dipendono dal servizio dati NetApp utilizzato.  Consultare la documentazione di ciascun servizio per saperne di più sulle opzioni di licenza disponibili.
-Come iniziare con la modalità standard:: Vai al https://console.netapp.com["Console NetApp"^] e iscriviti.
+Come iniziare con la modalità standard:: Vai al https://console.netapp.com["NetApp Console"^] e iscriviti.
 +
 --
 link:task-quick-start-standard-mode.html["Scopri come iniziare con la modalità standard"] .
@@ -167,7 +167,7 @@ Gestione dell'archiviazione e servizi dati supportati:: I seguenti servizi di ar
 | Backup e ripristino | Supportato nelle regioni governative e commerciali con modalità limitata. Non supportato nelle regioni sovrane con modalità limitata. In modalità limitata, NetApp Backup and Recovery supporta solo il backup e il ripristino dei dati del volume ONTAP . https://docs.netapp.com/us-en/data-services-disaster-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati ONTAP"^] Il backup e il ripristino dei dati delle applicazioni e dei dati delle macchine virtuali non sono supportati. 
 
 
-| Classificazione dei dati NetApp  a| 
+| NetApp Data Classification  a| 
 Supportato nelle regioni governative con modalità limitata.  Non supportato nelle regioni commerciali o nelle regioni sovrane con modalità limitata.
 
 
@@ -175,7 +175,7 @@ Supportato nelle regioni governative con modalità limitata.  Non supportato nel
 | Cloud Volumes ONTAP | Supporto completo 
 
 
-| Licenze e abbonamenti | È possibile accedere alle informazioni sulla licenza e sull'abbonamento con le opzioni di licenza supportate elencate di seguito per la modalità limitata. 
+| Licenses and subscriptions | È possibile accedere alle informazioni sulla licenza e sull'abbonamento con le opzioni di licenza supportate elencate di seguito per la modalità con restrizioni. 
 
 
 | Cluster ONTAP on-premise | Sono supportate sia la rilevazione con un agente Console sia la rilevazione senza un agente Console (rilevazione diretta).  Quando si rileva un cluster locale senza un agente Console, la visualizzazione avanzata (System Manager) non è supportata. 
@@ -184,7 +184,7 @@ Supportato nelle regioni governative con modalità limitata.  Non supportato nel
 | Replicazione | Supportato nelle regioni governative con modalità limitata.  Non supportato nelle regioni commerciali o nelle regioni sovrane con modalità limitata. 
 |===
 --
-Opzioni di licenza supportate:: Le seguenti opzioni di licenza sono supportate con la modalità limitata:
+Opzioni di licenza supportate:: Con la modalità limitata sono supportate le seguenti opzioni di licenza:
 +
 --
 * Abbonamenti Marketplace (contratti orari e annuali)
@@ -203,7 +203,7 @@ Per Cloud Volumes ONTAP, con BYOL sono supportate sia le licenze basate sulla ca
 
 
 --
-Come iniziare con la modalità limitata:: Quando si crea l'organizzazione NetApp Console, è necessario abilitare la modalità limitata.
+Come iniziare con la modalità limitata:: Quando si crea l'organizzazione NetApp Console , è necessario abilitare la modalità limitata.
 
 
 Se non hai ancora un'organizzazione, ti verrà chiesto di crearne una e di abilitare la modalità con restrizioni quando accedi alla Console per la prima volta da un agente della Console installato manualmente o creato dal marketplace del tuo provider cloud.
@@ -259,19 +259,19 @@ Tieni presente che alcuni servizi potrebbero essere supportati con limitazioni. 
 .9+| *Servizi dati* | Backup e ripristino NetApp | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] 
 
 
-| Classificazione dei dati NetApp | SÌ 
+| NetApp Data Classification | SÌ 
 
 
-| Copia e sincronizzazione NetApp | NO 
+| NetApp Copy and Sync | NO 
 
 
-| Ripristino di emergenza NetApp | NO 
+| NetApp Disaster Recovery | NO 
 
 
-| Resilienza al ransomware NetApp | NO 
+| NetApp Ransomware Resilience | NO 
 
 
-| Replicazione NetApp | SÌ 
+| NetApp Replication | SÌ 
 
 
 | NetApp Cloud Tiering | NO 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-accounts-gcp.html 
 keywords: cloud provider accounts, gcp, gcp accounts, google cloud platform, google accounts, google cloud platform accounts, permissions, project, google cloud project, credential, bluexp 
-summary: 'Scopri come la console NetApp utilizza le credenziali di Google Cloud per eseguire azioni per tuo conto e come tali credenziali sono associate agli abbonamenti del marketplace.  Comprendere questi dettagli può essere utile quando si gestiscono le credenziali per uno o più progetti Google Cloud.  Ad esempio, potresti voler ottenere informazioni sull"account di servizio associato alla VM dell"agente Console.' 
+summary: 'Scopri come la NetApp Console utilizza le credenziali di Google Cloud per eseguire azioni per tuo conto e come tali credenziali sono associate agli abbonamenti al marketplace.  Comprendere questi dettagli può essere utile quando si gestiscono le credenziali per uno o più progetti Google Cloud.  Ad esempio, potresti voler ottenere informazioni sull"account di servizio associato alla VM dell"agente Console.' 
 ---
 = Scopri di più sui progetti e sulle autorizzazioni di Google Cloud
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Scopri come la console NetApp utilizza le credenziali di Google Cloud 
 
 
 [role="lead"]
-Scopri come la console NetApp utilizza le credenziali di Google Cloud per eseguire azioni per tuo conto e come tali credenziali sono associate agli abbonamenti del marketplace.  Comprendere questi dettagli può essere utile quando si gestiscono le credenziali per uno o più progetti Google Cloud.  Ad esempio, potresti voler ottenere informazioni sull'account di servizio associato alla VM dell'agente Console.
+Scopri come la NetApp Console utilizza le credenziali di Google Cloud per eseguire azioni per tuo conto e come tali credenziali sono associate agli abbonamenti al marketplace.  Comprendere questi dettagli può essere utile quando si gestiscono le credenziali per uno o più progetti Google Cloud.  Ad esempio, potresti voler ottenere informazioni sull'account di servizio associato alla VM dell'agente Console.
 
 
 
@@ -49,7 +49,7 @@ link:task-adding-gcp-accounts.html["Scopri come associare un abbonamento a Googl
 Tieni presente quanto segue in merito alle credenziali di Google Cloud e agli abbonamenti al marketplace:
 
 * È possibile associare un solo set di credenziali Google Cloud a un agente Console
-* È possibile associare un solo abbonamento a Google Cloud Marketplace alle credenziali
+* È possibile associare solo un abbonamento a Google Cloud Marketplace alle credenziali
 * Puoi sostituire un abbonamento esistente al marketplace con un nuovo abbonamento
 
 

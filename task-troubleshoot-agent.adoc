@@ -236,7 +236,7 @@ image:screenshot-system-id.png["Uno screenshot che mostra l'ID di sistema visual
 In caso di problemi, NetApp potrebbe chiederti di inviare un messaggio AutoSupport al supporto NetApp per la risoluzione dei problemi.
 
 
-NOTE: A causa del bilanciamento del carico, la console NetApp impiega fino a cinque ore per inviare messaggi AutoSupport .  Per comunicazioni urgenti, scaricare il file e inviarlo manualmente.
+NOTE: A causa del bilanciamento del carico, la NetApp Console impiega fino a cinque ore per inviare messaggi AutoSupport .  Per comunicazioni urgenti, scaricare il file e inviarlo manualmente.
 
 .Passi
 . Selezionare *Amministrazione > Supporto > Agenti*.

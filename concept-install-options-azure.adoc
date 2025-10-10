@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-install-options-azure.html 
 keywords: install connector azure, azure install connector, connector azure, azure connector, installation options, azure marketplace, manual install 
-summary: Esistono diversi modi per creare un agente Console in Azure.  Il metodo più comune è quello diretto dalla console NetApp . 
+summary: Esistono diversi modi per creare un agente Console in Azure.  Il metodo più comune è quello diretto dalla NetApp Console . 
 ---
 = Opzioni di installazione dell'agente console in Azure
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: Esistono diversi modi per creare un agente Console in Azure.  Il metodo
 
 
 [role="lead"]
-Esistono diversi modi per creare un agente Console in Azure.  Il metodo più comune è quello diretto dalla console NetApp .
+Esistono diversi modi per creare un agente Console in Azure.  Il metodo più comune è quello diretto dalla NetApp Console .
 
 Sono disponibili le seguenti opzioni di installazione:
 
-* link:task-install-agent-azure-console.html["Crea un agente Console direttamente dalla console NetApp"](questa è l'opzione standard)
+* link:task-install-agent-azure-console.html["Crea un agente Console direttamente dalla NetApp Console"](questa è l'opzione standard)
 +
 Questa azione avvia una macchina virtuale che esegue Linux e il software dell'agente Console in una rete virtuale di tua scelta.
 

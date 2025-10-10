@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions.html 
 keywords: permissions, actions 
-summary: Per utilizzare le funzionalità e i servizi di NetApp Console, è necessario fornire le autorizzazioni necessarie affinché la Console possa eseguire operazioni nel tuo ambiente cloud.  Utilizza i link presenti in questa pagina per accedere rapidamente alle autorizzazioni di cui hai bisogno in base al tuo obiettivo. 
+summary: Per utilizzare le funzionalità e i servizi NetApp Console , è necessario fornire le autorizzazioni necessarie affinché la Console possa eseguire operazioni nel tuo ambiente cloud.  Utilizza i link presenti in questa pagina per accedere rapidamente alle autorizzazioni di cui hai bisogno in base al tuo obiettivo. 
 ---
 = Riepilogo delle autorizzazioni per NetApp Console
 :hardbreaks:
@@ -14,13 +14,13 @@ summary: Per utilizzare le funzionalità e i servizi di NetApp Console, è neces
 
 
 [role="lead"]
-Per utilizzare le funzionalità e i servizi di NetApp Console, è necessario fornire le autorizzazioni necessarie affinché la Console possa eseguire operazioni nel tuo ambiente cloud.  Utilizza i link presenti in questa pagina per accedere rapidamente alle autorizzazioni di cui hai bisogno in base al tuo obiettivo.
+Per utilizzare le funzionalità e i servizi NetApp Console , è necessario fornire le autorizzazioni necessarie affinché la Console possa eseguire operazioni nel tuo ambiente cloud.  Utilizza i link presenti in questa pagina per accedere rapidamente alle autorizzazioni di cui hai bisogno in base al tuo obiettivo.
 
 
 
 == Autorizzazioni AWS
 
-La console NetApp richiede le autorizzazioni AWS per un agente della console e per i singoli servizi.
+La NetApp Console richiede le autorizzazioni AWS per un agente della console e per i singoli servizi.
 
 
 
@@ -38,7 +38,7 @@ La console NetApp richiede le autorizzazioni AWS per un agente della console e p
 |===
 
 
-=== Backup e ripristino NetApp
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -60,7 +60,7 @@ La console NetApp richiede le autorizzazioni AWS per un agente della console e p
 |===
 
 
-=== Copia e sincronizzazione NetApp
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===
@@ -73,7 +73,7 @@ La console NetApp richiede le autorizzazioni AWS per un agente della console e p
 | Fornire autorizzazioni per il broker di dati | Quando NetApp Copy and Sync distribuisce il broker di dati, crea un ruolo IAM per l'istanza del broker di dati.  Se preferisci, puoi distribuire il data broker utilizzando il tuo ruolo IAM. | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker["Requisiti per utilizzare il proprio ruolo IAM con AWS Data Broker"^] 
 
 
-| Abilita l'accesso AWS per un broker di dati installato manualmente | Se si utilizza il broker di dati con una relazione di sincronizzazione che include un bucket S3, è necessario preparare l'host Linux per l'accesso ad AWS.  Quando installi il broker di dati, dovrai fornire le chiavi AWS per un utente IAM che dispone di accesso programmatico e autorizzazioni specifiche. | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-linux.html#enabling-access-to-aws["Abilitazione dell'accesso ad AWS"^] 
+| Abilitare l'accesso AWS per un broker di dati installato manualmente | Se si utilizza il broker di dati con una relazione di sincronizzazione che include un bucket S3, è necessario preparare l'host Linux per l'accesso ad AWS.  Quando installi il broker di dati, dovrai fornire le chiavi AWS per un utente IAM che dispone di accesso programmatico e autorizzazioni specifiche. | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-linux.html#enabling-access-to-aws["Abilitazione dell'accesso ad AWS"^] 
 |===
 
 
@@ -127,7 +127,7 @@ link:reference-permissions-azure.html["Autorizzazioni di Azure per un agente del
 |===
 
 
-=== Backup e ripristino NetApp
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -181,7 +181,7 @@ La Console richiede le autorizzazioni di Google Cloud per un agente della Consol
 |===
 
 
-=== Backup e ripristino NetApp
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -205,7 +205,7 @@ Quando si utilizza NetApp Backup and Recovery per eseguire il backup Cloud Volum
 |===
 
 
-=== Copia e sincronizzazione NetApp
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===
@@ -225,7 +225,7 @@ La console richiede le autorizzazioni StorageGRID per due servizi.
 
 
 
-=== Backup e ripristino NetApp
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===

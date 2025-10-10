@@ -40,7 +40,7 @@ Installazione manuale::
 
 
 --
-Distribuzione dalla console NetApp:: Ubuntu 22.04 LTS
+Distribuzione dalla NetApp Console:: Ubuntu 22.04 LTS
 Distribuzione da AWS Marketplace:: Ubuntu 22.04 LTS
 Distribuzione da Azure Marketplace:: Ubuntu 22.04 LTS
 
@@ -149,7 +149,7 @@ Per informazioni dettagliate sui requisiti dell'host, sui requisiti di Podman e 
 --
 .Modalità limitata
 --
-https://docs.netapp.com/us-en/bluexp-setup-admin/task-prepare-restricted-mode.html["Prepararsi alla distribuzione in modalità limitata"]
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-prepare-restricted-mode.html["Prepararsi per la distribuzione in modalità limitata"]
 
 --
 ====

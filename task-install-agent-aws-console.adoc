@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-install-agent-aws-console.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector 
-summary: È possibile creare un agente Console in AWS direttamente dalla console NetApp .  Prima di creare un agente Console in AWS dalla Console, è necessario configurare la rete e preparare le autorizzazioni AWS. 
+summary: È possibile creare un agente Console in AWS direttamente dalla NetApp Console.  Prima di creare un agente Console in AWS dalla Console, è necessario configurare la rete e preparare le autorizzazioni AWS. 
 ---
-= Crea un agente Console in AWS dalla console NetApp
+= Crea un agente Console in AWS dalla NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: È possibile creare un agente Console in AWS direttamente dalla console
 
 
 [role="lead"]
-È possibile creare un agente Console in AWS direttamente dalla console NetApp .  Prima di creare un agente Console in AWS dalla Console, è necessario configurare la rete e preparare le autorizzazioni AWS.
+È possibile creare un agente Console in AWS direttamente dalla NetApp Console.  Prima di creare un agente Console in AWS dalla Console, è necessario configurare la rete e preparare le autorizzazioni AWS.
 
 .Prima di iniziare
 * Dovresti avere unlink:concept-agents.html["comprensione degli agenti della console"] .
@@ -78,7 +78,7 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp .
+Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
 
 
 
@@ -112,7 +112,7 @@ Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di agg
 --
 
 
-Endpoint contattati dalla console NetApp:: Utilizzando la console NetApp basata sul Web fornita tramite il livello SaaS, questa contatta diversi endpoint per completare le attività di gestione dei dati.  Sono inclusi gli endpoint contattati per distribuire l'agente della Console dalla Console.
+Endpoint contattati dalla console NetApp:: Utilizzando la NetApp Console basata sul Web fornita tramite il livello SaaS, questa contatta diversi endpoint per completare le attività di gestione dei dati.  Sono inclusi gli endpoint contattati per distribuire l'agente della Console dalla Console.
 +
 --
 link:reference-networking-saas-console.html["Visualizza l'elenco degli endpoint contattati dalla console NetApp"] .
@@ -136,7 +136,7 @@ porti:: Non c'è traffico in entrata verso l'agente della console, a meno che no
 --
 * HTTP (80) e HTTPS (443) forniscono l'accesso all'interfaccia utente locale, che utilizzerai in rare circostanze.
 * SSH (22) è necessario solo se è necessario connettersi all'host per la risoluzione dei problemi.
-* Le connessioni in entrata sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
+* Le connessioni in ingresso sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
 +
 Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in uscita per inviare messaggi AutoSupport , la Console configura automaticamente tali sistemi per utilizzare un server proxy incluso nell'agente della Console.  L'unico requisito è assicurarsi che il gruppo di sicurezza dell'agente Console consenta connessioni in entrata sulla porta 3128.  Sarà necessario aprire questa porta dopo aver distribuito l'agente Console.
 
@@ -289,8 +289,8 @@ Ora dovresti avere un ruolo IAM con le autorizzazioni richieste o un utente IAM 
 Creare l'agente Console direttamente dalla console basata sul Web.
 
 .Informazioni su questo compito
-* La creazione dell'agente Console dalla Console distribuisce un'istanza EC2 in AWS utilizzando una configurazione predefinita. Non passare a un'istanza EC2 più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-agent-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
-* Quando la Console crea l'agente Console, crea anche un ruolo IAM e un profilo istanza per l'istanza.  Questo ruolo include autorizzazioni che consentono all'agente della console di gestire le risorse AWS.  Assicurarsi che il ruolo venga aggiornato man mano che verranno aggiunte nuove autorizzazioni nelle versioni future. link:reference-permissions-aws.html["Scopri di più sulla policy IAM per l'agente della console"] .
+* La creazione dell'agente Console dalla Console distribuisce un'istanza EC2 in AWS utilizzando una configurazione predefinita.  Non passare a un'istanza EC2 più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-agent-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
+* Quando la Console crea l'agente Console, crea anche un ruolo IAM e un profilo istanza per l'istanza.  Questo ruolo include autorizzazioni che consentono all'agente della console di gestire le risorse AWS.  Assicurarsi che il ruolo venga aggiornato man mano che nelle versioni future verranno aggiunte nuove autorizzazioni. link:reference-permissions-aws.html["Scopri di più sulla policy IAM per l'agente della console"] .
 
 
 .Prima di iniziare
@@ -353,4 +353,4 @@ Una volta completato il processo, l'agente della Console sarà disponibile per l
 
 NOTE: Se la distribuzione non riesce, puoi scaricare un report e i registri dalla Console per aiutarti a risolvere i problemi.link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
 
-Se disponi di bucket Amazon S3 nello stesso account AWS in cui hai creato l'agente della console, vedrai apparire automaticamente un ambiente di lavoro Amazon S3 nella pagina *Sistemi*. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Scopri come gestire i bucket S3 dalla console NetApp"^]
+Se disponi di bucket Amazon S3 nello stesso account AWS in cui hai creato l'agente della console, vedrai apparire automaticamente un ambiente di lavoro Amazon S3 nella pagina *Sistemi*. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Scopri come gestire i bucket S3 dalla NetApp Console"^]

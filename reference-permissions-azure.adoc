@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-azure.html 
 keywords: permissions, azure, azure permissions, bluexp 
-summary: 'Quando la console NetApp avvia un agente console in Azure, associa un ruolo personalizzato alla macchina virtuale che fornisce all"agente le autorizzazioni per gestire risorse e processi all"interno di tale sottoscrizione di Azure.  L"agente utilizza le autorizzazioni per effettuare chiamate API a diversi servizi di Azure.' 
+summary: 'Quando la NetApp Console avvia un agente console in Azure, associa un ruolo personalizzato alla macchina virtuale che fornisce all"agente le autorizzazioni per gestire risorse e processi all"interno di tale sottoscrizione di Azure.  L"agente utilizza le autorizzazioni per effettuare chiamate API a diversi servizi di Azure.' 
 ---
 = Autorizzazioni di Azure per l'agente della console
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: 'Quando la console NetApp avvia un agente console in Azure, associa un 
 
 
 [role="lead"]
-Quando la console NetApp avvia un agente console in Azure, associa un ruolo personalizzato alla macchina virtuale che fornisce all'agente le autorizzazioni per gestire risorse e processi all'interno di tale sottoscrizione di Azure.  L'agente utilizza le autorizzazioni per effettuare chiamate API a diversi servizi di Azure.
+Quando la NetApp Console avvia un agente console in Azure, associa un ruolo personalizzato alla macchina virtuale che fornisce all'agente le autorizzazioni per gestire risorse e processi all'interno di tale sottoscrizione di Azure.  L'agente utilizza le autorizzazioni per effettuare chiamate API a diversi servizi di Azure.
 
 La necessità o meno di creare questo ruolo personalizzato per l'agente dipende da come lo hai distribuito.
 
-.Distribuzione dalla console NetApp
+.Distribuzione dalla NetApp Console
 Quando si utilizza la console per distribuire la macchina virtuale dell'agente in Azure, viene abilitato un https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identità gestita assegnata dal sistema"^] sulla macchina virtuale, crea un ruolo personalizzato e lo assegna alla macchina virtuale.  Il ruolo fornisce alla Console le autorizzazioni necessarie per gestire risorse e processi all'interno di tale sottoscrizione di Azure.  Le autorizzazioni del ruolo vengono mantenute aggiornate quando l'agente viene aggiornato.  Non è necessario creare questo ruolo per l'agente né gestire gli aggiornamenti.
 
 .Distribuzione manuale o da Azure Marketplace
@@ -194,7 +194,7 @@ L'agente effettua le seguenti richieste API quando si utilizza NetApp Data Class
 
 
 
-=== Backup e ripristino NetApp
+=== NetApp Backup and Recovery
 
 L'agente Console effettua le seguenti richieste API per NetApp Backup and Recovery:
 
@@ -242,7 +242,7 @@ L'agente effettua le seguenti richieste API quando si utilizza la funzionalità 
 
 
 
-=== Classificazione dei dati NetApp
+=== NetApp Data Classification
 
 L'agente effettua le seguenti richieste API quando si utilizza la classificazione dei dati.
 
@@ -468,7 +468,7 @@ L'agente effettua le seguenti richieste API per distribuire e gestire Cloud Volu
 | Microsoft.Network/networkSecurityGroups/delete | NO | SÌ | SÌ 
 
 
-.8+| Ottieni informazioni di rete sulle regioni, sulla VNet e sulla subnet di destinazione e aggiungi le VM alle VNet | Microsoft.Network/locations/operationResults/read | SÌ | SÌ | NO 
+.8+| Ottieni informazioni di rete sulle regioni, sulla VNet di destinazione e sulla subnet e aggiungi le VM alle VNet | Microsoft.Network/locations/operationResults/read | SÌ | SÌ | NO 
 
 
 | Microsoft.Network/locations/operations/read | SÌ | SÌ | NO 

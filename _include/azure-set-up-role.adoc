@@ -5,7 +5,7 @@
 . Copia il contenuto dellink:reference-permissions-azure.html["autorizzazioni di ruolo personalizzate per il connettore"] e salvarli in un file JSON.
 . Modificare il file JSON aggiungendo gli ID di sottoscrizione di Azure all'ambito assegnabile.
 +
-Dovresti aggiungere l'ID per ogni sottoscrizione Azure che desideri utilizzare con NetApp Console.
+Dovresti aggiungere l'ID per ogni sottoscrizione di Azure che desideri utilizzare con NetApp Console.
 
 +
 *Esempio*

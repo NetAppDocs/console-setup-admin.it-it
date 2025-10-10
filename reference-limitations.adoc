@@ -26,7 +26,7 @@ Queste limitazioni sono specifiche della configurazione della console e dell'amm
 
 === Possibile conflitto con indirizzi IP nell'intervallo 172
 
-La console NetApp distribuisce un agente con due interfacce che hanno indirizzi IP compresi negli intervalli 172.17.0.0/16 e 172.18.0.0/16.
+La NetApp Console distribuisce un agente con due interfacce che hanno indirizzi IP compresi negli intervalli 172.17.0.0/16 e 172.18.0.0/16.
 
 Se la rete ha una subnet configurata con uno di questi intervalli, potrebbero verificarsi errori di connettività dalla Console.  Ad esempio, l'individuazione dei cluster ONTAP locali nella Console potrebbe non riuscire.
 

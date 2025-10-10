@@ -18,7 +18,7 @@ NetApp Console, l'agente NetApp Console e i servizi dati NetApp richiedono l'acc
 
 Sarà necessario configurare l'accesso alla rete per quanto segue:
 
-* Computer che accedono alla console NetApp come software come servizio (SaaS)
+* Computer che accedono alla NetApp Console come software come servizio (SaaS)
 * Posizioni di rete in cui distribuire gli agenti della console installati in locale o nel cloud.
 * Endpoint aggiuntivi per determinati servizi dati NetApp , tra cui Cloud Volumes ONTAP.
 
@@ -28,13 +28,13 @@ NOTE: NetApp ha ridotto gli endpoint di rete richiesti per la Console e gli agen
 
 
 
-== Endpoint contattati dalla console NetApp
+== Endpoint contattati dalla NetApp Console
 
-Ogni computer che accede alla console NetApp deve disporre di connessioni agli endpoint elencati di seguito.
+Ogni computer che accede alla NetApp Console deve disporre di connessioni agli endpoint elencati di seguito.
 
 Il sistema contatta questi endpoint in due scenari:
 
-* Da un computer che accede al https://console.netapp.com["Console NetApp"^] come software come servizio (SaaS).
+* Da un computer che accede al https://console.netapp.com["NetApp Console"^] come software come servizio (SaaS).
 * Da un computer che accede direttamente a un host agente della Console, per effettuare l'accesso e configurarlo oppure per accedere alla Console dall'host agente.
 
 
@@ -49,7 +49,7 @@ Il sistema contatta questi endpoint in due scenari:
 | \ https://support.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp . 
 
 
-| \ https://signin.b2c.netapp.com | Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp . 
+| \ https://signin.b2c.netapp.com | Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console. 
 
 
 | \ https://support.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp , nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP. 
@@ -77,7 +77,7 @@ Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di agg
 
 L'agente Console può essere installato in locale o nel cloud e contatta gli endpoint per completare le azioni avviate dalla console.
 
-Gli agenti della console devono avere accesso agli stessi endpoint della console NetApp , oltre ad endpoint aggiuntivi a seconda di dove si installa l'agente.
+Gli agenti della console devono avere accesso agli stessi endpoint della NetApp Console, oltre ad endpoint aggiuntivi a seconda di dove si installa l'agente.
 
 Configurare l'accesso all'endpoint di rete prima di installare l'agente Console.
 

@@ -8,10 +8,10 @@ Il seguente video mostra i passaggi per abbonarsi a NetApp Intelligent Services 
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
-. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
 +
-È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla console NetApp .
+È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla NetApp Console.
 
 +
 image:screenshot_aws_configure_subscription.png["Uno screenshot del menu azioni per un set di credenziali esistenti."]
@@ -23,7 +23,7 @@ image:screenshot_aws_configure_subscription.png["Uno screenshot del menu azioni 
 .. Seleziona *Iscriviti*.
 .. Seleziona *Configura il tuo account*.
 +
-Verrai reindirizzato alla console NetApp .
+Verrai reindirizzato alla NetApp Console.
 
 .. Dalla pagina *Assegnazione abbonamento*:
 +

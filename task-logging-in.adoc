@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-logging-in.html 
 keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account, federated, federation, federated login, federation login, login with netapp, log in with netapp, sign up, create account 
-summary: La modalità di accesso alla console NetApp dipende dalla modalità di distribuzione utilizzata. 
+summary: La modalità di accesso alla NetApp Console dipende dalla modalità di distribuzione utilizzata. 
 ---
-= Accedi alla console NetApp
+= Accedi alla NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: La modalità di accesso alla console NetApp dipende dalla modalità di 
 
 
 [role="lead"]
-La modalità di accesso alla console NetApp dipende dalla modalità di distribuzione utilizzata.
+La modalità di accesso alla NetApp Console dipende dalla modalità di distribuzione utilizzata.
 
 Verrai disconnesso automaticamente dopo 24 ore o se chiudi il browser.
 
@@ -27,7 +27,7 @@ link:concept-modes.html["Scopri di più sulle modalità di distribuzione della c
 Dopo esserti registrato alla NetApp Console, puoi accedere dalla console basata sul Web per iniziare a gestire la tua infrastruttura di dati e storage.
 
 .Informazioni su questo compito
-È possibile accedere alla console NetApp utilizzando una delle seguenti opzioni:
+È possibile accedere alla NetApp Console utilizzando una delle seguenti opzioni:
 
 * Le tue credenziali NSS ( NetApp Support Site) esistenti
 * Un account NetApp Console utilizzando il tuo indirizzo email e una password
@@ -38,7 +38,7 @@ Dopo esserti registrato alla NetApp Console, puoi accedere dalla console basata 
 
 
 .Passi
-. Apri un browser web e vai su https://console.netapp.com["Console NetApp"]
+. Apri un browser web e vai su https://console.netapp.com["NetApp Console"]
 . Nella pagina *Accedi*, inserisci l'indirizzo email associato al tuo accesso.
 . A seconda del metodo di autenticazione associato al tuo accesso, ti verrà richiesto di inserire le tue credenziali:
 +
@@ -60,7 +60,7 @@ Quando si utilizza la Console in modalità limitata, è necessario accedere alla
 .Informazioni su questo compito
 La Console supporta l'accesso con una delle seguenti opzioni quando è in modalità limitata:
 
-* Un accesso alla console NetApp utilizzando il tuo indirizzo email e una password
+* Un accesso NetApp Console utilizzando il tuo indirizzo email e una password
 * Una connessione federata
 +
 È possibile utilizzare l'accesso Single Sign-On per effettuare l'accesso utilizzando le credenziali della directory aziendale (identità federata). link:concept-federation.html["Scopri come utilizzare la federazione delle identità"] .

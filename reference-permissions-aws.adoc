@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-aws.html 
 keywords: permissions, actions, aws, aws permissions, top secret, secret, aws top secret, aws secret, aws govcloud, govcloud, govcloud permissions, secret permissions, top secret permissions 
-summary: 'Quando la console NetApp avvia l"istanza dell"agente in AWS, associa all"istanza una policy che fornisce all"agente le autorizzazioni per gestire risorse e processi all"interno di quell"account AWS.  L"agente utilizza le autorizzazioni per effettuare chiamate API a diversi servizi AWS, tra cui EC2, S3, CloudFormation, IAM, Key Management Service e altri ancora.' 
+summary: 'Quando la NetApp Console avvia l"istanza dell"agente in AWS, associa all"istanza una policy che fornisce all"agente le autorizzazioni per gestire risorse e processi all"interno di quell"account AWS.  L"agente utilizza le autorizzazioni per effettuare chiamate API a diversi servizi AWS, tra cui EC2, S3, CloudFormation, IAM, Key Management Service e altri ancora.' 
 ---
 = Autorizzazioni AWS per l'agente della console
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Quando la console NetApp avvia l"istanza dell"agente in AWS, associa a
 
 
 [role="lead"]
-Quando la console NetApp avvia un'istanza dell'agente della console in AWS, associa all'istanza una policy che fornisce all'agente le autorizzazioni per gestire risorse e processi all'interno di quell'account AWS.  L'agente utilizza le autorizzazioni per effettuare chiamate API a diversi servizi AWS, tra cui EC2, S3, CloudFormation, IAM, Key Management Service (KMS) e altri ancora.
+Quando la NetApp Console avvia un'istanza dell'agente della console in AWS, associa all'istanza una policy che fornisce all'agente le autorizzazioni per gestire risorse e processi all'interno di quell'account AWS.  L'agente utilizza le autorizzazioni per effettuare chiamate API a diversi servizi AWS, tra cui EC2, S3, CloudFormation, IAM, Key Management Service (KMS) e altri ancora.
 
 
 
@@ -757,7 +757,7 @@ Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono
 
 == Come vengono utilizzate le autorizzazioni AWS
 
-Le sezioni seguenti descrivono come vengono utilizzate le autorizzazioni per ogni servizio dati o di gestione della console NetApp .  Queste informazioni possono essere utili se le politiche aziendali stabiliscono che le autorizzazioni vengano concesse solo se necessario.
+Le sezioni seguenti descrivono come vengono utilizzate le autorizzazioni per ogni servizio dati o di gestione NetApp Console .  Queste informazioni possono essere utili se le politiche aziendali stabiliscono che le autorizzazioni vengano concesse solo se necessario.
 
 
 
@@ -805,7 +805,7 @@ s3:Ottieni configurazione crittografia
 
 
 
-=== Backup e ripristino NetApp
+=== NetApp Backup and Recovery
 
 L'agente effettua le seguenti richieste API per gestire i backup in Amazon S3:
 
@@ -882,7 +882,7 @@ L'agente effettua le seguenti richieste API quando si utilizzano DataLock e NetA
 * s3:GetObjectVersion
 
 
-L'agente effettua le seguenti richieste API se utilizzi un account AWS diverso per i backup Cloud Volumes ONTAP rispetto a quello utilizzato per i volumi di origine:
+L'agente effettua le seguenti richieste API se per i backup Cloud Volumes ONTAP utilizzi un account AWS diverso da quello utilizzato per i volumi di origine:
 
 * s3:PoliticaPutBucket
 * s3:PutBucketOwnershipControls
@@ -902,7 +902,7 @@ L'agente effettua le seguenti richieste API per distribuire NetApp Data Classifi
 * ec2:CreaVolume
 * ec2:AttachVolume
 * ec2:CreateSecurityGroup
-* ec2:EliminaGruppoSicurezza
+* ec2:EliminaGruppoDiSicurezza
 * ec2:Descrivi gruppi di sicurezza
 * ec2:CreateNetworkInterface
 * ec2:DescriviInterfacceDiRete
@@ -920,7 +920,7 @@ L'agente effettua le seguenti richieste API per distribuire NetApp Data Classifi
 * ec2:DescribeIamInstanceProfileAssociations
 
 
-L'agente effettua le seguenti richieste API per analizzare i bucket S3 quando si utilizza NetApp Data Classification:
+L'agente effettua le seguenti richieste API per eseguire la scansione dei bucket S3 quando si utilizza NetApp Data Classification:
 
 * iam:AddRoleToInstanceProfile
 * ec2:AssociateIamInstanceProfile
@@ -1047,7 +1047,7 @@ L'agente effettua le seguenti richieste API per distribuire e gestire Cloud Volu
 .7+| Crea e gestisci gruppi di sicurezza per Cloud Volumes ONTAP | ec2:CreateSecurityGroup | SÌ | NO | NO 
 
 
-| ec2:EliminaGruppoSicurezza | NO | SÌ | SÌ 
+| ec2:EliminaGruppoDiSicurezza | NO | SÌ | SÌ 
 
 
 | ec2:Descrivi gruppi di sicurezza | SÌ | SÌ | SÌ 
@@ -1215,7 +1215,7 @@ Man mano che vengono aggiunte o rimosse autorizzazioni, ne daremo nota nelle sez
 
 === 9 settembre 2024
 
-Le autorizzazioni sono state rimosse dalla policy n. 2 per le regioni standard perché la console NetApp non supporta più la memorizzazione nella cache edge NetApp né la scoperta e la gestione dei cluster Kubernetes.
+Le autorizzazioni sono state rimosse dalla policy n. 2 per le regioni standard perché la NetApp Console non supporta più la memorizzazione nella cache edge NetApp e la scoperta e la gestione dei cluster Kubernetes.
 
 .Visualizza le autorizzazioni che sono state rimosse dalla policy
 [%collapsible]

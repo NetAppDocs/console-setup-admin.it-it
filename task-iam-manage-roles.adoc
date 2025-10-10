@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-manage-roles.html 
 keywords: projects, access, resources, user roles, iam, identity and access management, folder, organization, permissions, roles, members, access roles 
-summary: 'All"interno della console NetApp è possibile assegnare ruoli agli utenti in base a cosa devono fare e dove.' 
+summary: 'All"interno della NetApp Console è possibile assegnare ruoli agli utenti in base a cosa devono fare e dove.' 
 ---
-= Utilizzare i ruoli per gestire l'accesso degli utenti alle risorse della console NetApp
+= Utilizzare i ruoli per gestire l'accesso degli utenti alle risorse NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -55,7 +55,7 @@ TIP: A un membro a cui è assegnato il ruolo di amministratore dell'organizzazio
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.
 . Seleziona il menu azioniimage:icon-action.png["un'icona con tre punti verticali"] accanto al membro a cui vuoi assegnare un ruolo e seleziona *Aggiungi un ruolo*.
-. Per aggiungere un ruolo, completare i passaggi indicati nella finestra di dialogo:
+. Per aggiungere un ruolo, completare i passaggi nella finestra di dialogo:
 +
 ** *Seleziona un'organizzazione, una cartella o un progetto*: scegli il livello della gerarchia delle risorse per il quale il membro deve avere le autorizzazioni.
 +

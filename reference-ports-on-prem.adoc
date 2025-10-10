@@ -16,7 +16,7 @@ summary: 'L"agente Console utilizza porte _in entrata_ quando installato manualm
 [role="lead"]
 L'agente Console utilizza porte _in entrata_ quando installato manualmente su un host Linux locale.  Fare riferimento a queste porte per scopi di pianificazione.
 
-Queste regole in entrata si applicano a tutte le modalità di distribuzione della console NetApp .
+Queste regole in entrata si applicano a tutte le modalità di distribuzione NetApp Console .
 
 [cols="10,10,80"]
 |===

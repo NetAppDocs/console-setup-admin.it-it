@@ -1,10 +1,10 @@
-= Versione in modalità privata (3.9.50)
+= Rilascio della modalità privata (3.9.50)
 :allow-uri-read: 
 
 
 
 
-=== Versione in modalità privata (3.9.50)
+=== Rilascio della modalità privata (3.9.50)
 
 Una nuova versione in modalità privata è ora disponibile per il download da https://mysupport.netapp.com/site/downloads["Sito di supporto NetApp"^]
 

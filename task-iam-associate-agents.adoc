@@ -44,8 +44,8 @@ Associare le risorse dell'agente Console alle stesse cartelle e progetti dalla p
 link:task-iam-manage-resources.html#associate-resource["Scopri come associare una risorsa a cartelle e progetti"] .
 
 .Informazioni correlate
-* link:concept-agents.html["Scopri di più sugli agenti della console NetApp"]
-* link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e degli accessi di NetApp Console"]
+* link:concept-agents.html["Scopri di più sugli agenti NetApp Console"]
+* link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e degli accessi NetApp Console"]
 * link:task-iam-get-started.html["Inizia con identità e accesso"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Scopri di più sull'API per la gestione dell'identità e degli accessi"^]
 

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-accounts-azure.html 
 keywords: cloud provider accounts, azure, azure accounts, service principal, multiple accounts, permissions, policy, policies, subscriptions, credentials, marketplace subscription, replace subscription, subscription, bluexp 
-summary: Scopri come la console NetApp utilizza le credenziali di Azure per eseguire azioni per tuo conto e come tali credenziali sono associate agli abbonamenti del marketplace.  La comprensione di questi dettagli può essere utile quando si gestiscono le credenziali per una o più sottoscrizioni di Azure.  Ad esempio, potresti voler sapere quando aggiungere ulteriori credenziali di Azure alla console. 
+summary: Scopri come la NetApp Console utilizza le credenziali di Azure per eseguire azioni per tuo conto e come tali credenziali sono associate agli abbonamenti del marketplace.  La comprensione di questi dettagli può essere utile quando si gestiscono le credenziali per una o più sottoscrizioni di Azure.  Ad esempio, potresti voler sapere quando aggiungere ulteriori credenziali di Azure alla console. 
 ---
-= Scopri di più sulle credenziali e le autorizzazioni di Azure nella console NetApp
+= Scopri di più sulle credenziali e le autorizzazioni di Azure nella NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,15 +14,15 @@ summary: Scopri come la console NetApp utilizza le credenziali di Azure per eseg
 
 
 [role="lead"]
-Scopri come la console NetApp utilizza le credenziali di Azure per eseguire azioni per tuo conto e come tali credenziali sono associate agli abbonamenti del marketplace.  La comprensione di questi dettagli può essere utile quando si gestiscono le credenziali per una o più sottoscrizioni di Azure.  Ad esempio, potresti voler sapere quando aggiungere ulteriori credenziali di Azure alla console.
+Scopri come la NetApp Console utilizza le credenziali di Azure per eseguire azioni per tuo conto e come tali credenziali sono associate agli abbonamenti del marketplace.  La comprensione di questi dettagli può essere utile quando si gestiscono le credenziali per una o più sottoscrizioni di Azure.  Ad esempio, potresti voler sapere quando aggiungere ulteriori credenziali di Azure alla console.
 
 
 
 == Credenziali iniziali di Azure
 
-Quando si distribuisce un agente Console dalla Console, è necessario utilizzare un account Azure o un'entità servizio che disponga delle autorizzazioni per distribuire la macchina virtuale dell'agente Console. Le autorizzazioni richieste sono elencate nellink:task-install-agent-azure-console.html#agent-custom-role["Criteri di distribuzione dell'agente per Azure"] .
+Quando si distribuisce un agente Console dalla Console, è necessario utilizzare un account Azure o un'entità servizio che disponga delle autorizzazioni per distribuire la macchina virtuale dell'agente Console.  Le autorizzazioni richieste sono elencate nellink:task-install-agent-azure-console.html#agent-custom-role["Criteri di distribuzione degli agenti per Azure"] .
 
-Quando la Console distribuisce la macchina virtuale dell'agente Console in Azure, abilita un https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identità gestita assegnata dal sistema"^] sulla macchina virtuale, crea un ruolo personalizzato e lo assegna alla macchina virtuale.  Il ruolo fornisce alla Console le autorizzazioni necessarie per gestire risorse e processi all'interno di tale sottoscrizione di Azure. link:reference-permissions-azure.html["Esaminare come la Console utilizza le autorizzazioni"] .
+Quando la console distribuisce la macchina virtuale dell'agente console in Azure, abilita un https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identità gestita assegnata dal sistema"^] sulla macchina virtuale, crea un ruolo personalizzato e lo assegna alla macchina virtuale.  Il ruolo fornisce alla Console le autorizzazioni necessarie per gestire risorse e processi all'interno di tale sottoscrizione di Azure. link:reference-permissions-azure.html["Esaminare come la Console utilizza le autorizzazioni"] .
 
 image:diagram_permissions_initial_azure.png["Un'immagine concettuale che mostra la Console che distribuisce un agente della console in un account e in una sottoscrizione di Azure.  Viene abilitata un'identità gestita assegnata dal sistema e viene assegnato un ruolo personalizzato alla macchina virtuale dell'agente della console."]
 

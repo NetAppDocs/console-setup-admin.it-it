@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-iam-platform-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, bluexp 
-summary: Assegna ruoli di piattaforma agli utenti per concedere autorizzazioni per gestire la console NetApp , assegnare ruoli, aggiungere utenti, creare agenti della console e gestire federazioni. 
+summary: Assegna ruoli di piattaforma agli utenti per concedere autorizzazioni per gestire la NetApp Console, assegnare ruoli, aggiungere utenti, creare agenti della console e gestire federazioni. 
 ---
 = Ruoli di accesso alla piattaforma NetApp Console
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Assegna ruoli di piattaforma agli utenti per concedere autorizzazioni p
 
 
 [role="lead"]
-Assegna ruoli di piattaforma agli utenti per concedere autorizzazioni per gestire la console NetApp , assegnare ruoli, aggiungere utenti, creare agenti della console e gestire federazioni.
+Assegna ruoli di piattaforma agli utenti per concedere autorizzazioni per gestire la NetApp Console, assegnare ruoli, aggiungere utenti, creare agenti della console e gestire federazioni.
 
 .Esempio di ruoli organizzativi per una grande organizzazione multinazionale
 XYZ Corporation organizza l'accesso all'archiviazione dei dati per regione (Nord America, Europa e Asia-Pacifico), garantendo un controllo regionale con supervisione centralizzata.

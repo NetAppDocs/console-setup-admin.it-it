@@ -14,7 +14,7 @@ summary: 'Installare un certificato firmato da una CA per l"accesso utente alla 
 
 
 [role="lead"]
-Quando si utilizza la console NetApp in modalità limitata, l'interfaccia utente è accessibile dalla macchina virtuale dell'agente della console distribuita nella propria regione cloud o in locale.  Per impostazione predefinita, la Console utilizza un certificato SSL autofirmato per fornire un accesso HTTPS sicuro alla console basata sul Web in esecuzione sull'agente della Console.
+Quando si utilizza la NetApp Console in modalità limitata, l'interfaccia utente è accessibile dalla macchina virtuale dell'agente della console distribuita nella propria regione cloud o in locale.  Per impostazione predefinita, la Console utilizza un certificato SSL autofirmato per fornire un accesso HTTPS sicuro alla console basata sul Web in esecuzione sull'agente della Console.
 
 Se richiesto dalla tua azienda, puoi installare un certificato firmato da un'autorità di certificazione (CA), che garantisce una protezione di sicurezza migliore rispetto a un certificato autofirmato.  Dopo aver installato il certificato, la Console utilizza il certificato firmato dalla CA quando gli utenti accedono alla console basata sul Web.
 

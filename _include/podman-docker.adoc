@@ -106,7 +106,7 @@ sudo dnf install podman-compose-1.0.6
 ----
 +
 
-NOTE: Utilizzando il `dnf install` Il comando soddisfa il requisito per aggiungere podman-compose alla variabile d'ambiente PATH.  Il comando di installazione aggiunge podman-compose a /usr/bin, che è già incluso nel `secure_path` opzione sull'host.
+NOTE: Utilizzando il `dnf install` il comando soddisfa il requisito per aggiungere podman-compose alla variabile d'ambiente PATH.  Il comando di installazione aggiunge podman-compose a /usr/bin, che è già incluso nel `secure_path` opzione sull'host.
 
 . Se si utilizza Red Hat Enterprise Linux 8, verificare che la versione di Podman utilizzi NetAvark con Aardvark DNS anziché CNI.
 +
@@ -135,7 +135,7 @@ Se `/etc/containers/containers.conf` non esiste, apportare le modifiche alla con
 ----
 systemctl restart podman
 ----
-. Confermare che networkBackend sia ora cambiato in "netavark" utilizzando il seguente comando:
+. Verificare che networkBackend sia ora modificato in "netavark" utilizzando il seguente comando:
 +
 [source, cli]
 ----

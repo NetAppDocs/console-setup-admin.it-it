@@ -16,7 +16,7 @@ summary: 'Disinstallare un agente Console per risolvere i problemi o per rimuove
 [role="lead"]
 Disinstallare un agente Console per risolvere i problemi o per rimuoverlo definitivamente dall'host.  I passaggi da seguire dipendono dalla modalità di distribuzione utilizzata.  Dopo aver rimosso un agente Console dal tuo ambiente, puoi rimuoverlo dalla Console.
 
-link:concept-modes.html["Scopri di più sulle modalità di distribuzione della console NetApp"] .
+link:concept-modes.html["Scopri di più sulle modalità di distribuzione NetApp Console"] .
 
 
 

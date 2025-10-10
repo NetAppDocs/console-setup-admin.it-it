@@ -35,6 +35,6 @@ Notare quanto segue:
 
 
 +
-Per entrambi gli scenari, è possibile continuare a utilizzare gli endpoint esistenti.
+In entrambi gli scenari è possibile continuare a utilizzare gli endpoint esistenti.
 
 

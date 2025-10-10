@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-install-options-aws.html 
 keywords: install connector aws, aws install connector, connector aws, aws connector, installation options, aws marketplace, manual install, deploy 
-summary: Esistono diversi modi per creare un agente Console in AWS.  Il metodo più comune è quello diretto dalla console NetApp . 
+summary: Esistono diversi modi per creare un agente Console in AWS.  Il metodo più comune è quello diretto dalla NetApp Console . 
 ---
 = Opzioni di installazione dell'agente console in AWS
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Esistono diversi modi per creare un agente Console in AWS.  Il metodo p
 
 
 [role="lead"]
-Esistono diversi modi per creare un agente Console in AWS.  Il metodo più comune è quello diretto dalla console NetApp .
+Esistono diversi modi per creare un agente Console in AWS.  Il metodo più comune è quello diretto dalla NetApp Console .
 
 Sono disponibili le seguenti opzioni di installazione:
 

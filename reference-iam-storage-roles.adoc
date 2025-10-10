@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-iam-storage-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
-summary: 'È possibile assegnare i seguenti ruoli agli utenti per consentire loro di accedere alle funzionalità di gestione dello storage nella console NetApp .  È possibile assegnare agli utenti un ruolo amministrativo per gestire l"archiviazione o un ruolo di visualizzatore per il monitoraggio.' 
+summary: 'È possibile assegnare i seguenti ruoli agli utenti per consentire loro di accedere alle funzionalità di gestione dello storage nella NetApp Console.  È possibile assegnare agli utenti un ruolo amministrativo per gestire l"archiviazione o un ruolo di visualizzatore per il monitoraggio.' 
 ---
 = Ruoli di accesso all'archiviazione per NetApp Console
 :hardbreaks:
@@ -14,10 +14,10 @@ summary: 'È possibile assegnare i seguenti ruoli agli utenti per consentire lor
 
 
 [role="lead"]
-È possibile assegnare i seguenti ruoli agli utenti per consentire loro di accedere alle funzionalità di gestione dello storage nella console NetApp .  È possibile assegnare agli utenti un ruolo amministrativo per gestire l'archiviazione o un ruolo di visualizzatore per il monitoraggio.
+È possibile assegnare i seguenti ruoli agli utenti per consentire loro di accedere alle funzionalità di gestione dello storage nella NetApp Console.  È possibile assegnare agli utenti un ruolo amministrativo per gestire l'archiviazione o un ruolo di visualizzatore per il monitoraggio.
 
 
-NOTE: Questi ruoli non sono disponibili dall'API di partnership della console NetApp .
+NOTE: Questi ruoli non sono disponibili dall'API di partnership NetApp Console .
 
 Gli amministratori possono assegnare ruoli di archiviazione agli utenti per le seguenti risorse e funzionalità di archiviazione:
 
@@ -36,7 +36,7 @@ Servizi e funzionalità della console:
 * Sostenibilità
 
 
-.Esempio di ruoli di archiviazione nella console NetApp
+.Esempio di ruoli di archiviazione nella NetApp Console
 XYZ Corporation, una multinazionale, dispone di un ampio team di ingegneri e amministratori di storage.  Consentono a questo team di gestire le risorse di archiviazione per le proprie regioni, limitando al contempo l'accesso alle attività principali della Console, come la gestione degli utenti, la creazione degli agenti e la gestione delle licenze.
 
 All'interno di un team di 12 persone, a due utenti viene assegnato il ruolo di *Visualizzatore di archiviazione*, che consente loro di monitorare le risorse di archiviazione associate ai progetti della Console a cui sono assegnati.  Ai restanti nove viene assegnato il ruolo di *Amministratore di storage*, che include la possibilità di gestire gli aggiornamenti software, accedere a ONTAP System Manager tramite la Console e scoprire le risorse di storage (aggiungere sistemi).  A una persona del team viene assegnato il ruolo di *Specialista dell'integrità del sistema*, in modo che possa gestire l'integrità delle risorse di storage nella propria regione, ma non modificare o eliminare alcun sistema.  Questa persona può anche eseguire aggiornamenti software sulle risorse di archiviazione per i progetti a lei assegnati.
@@ -110,7 +110,7 @@ SÌ
 
 
 
-4+| *Licenze e abbonamenti* 
+4+| * Licenses and subscriptions* 
 
 
 | Visualizza tutte le pagine e le funzioni  a| 

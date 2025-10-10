@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-install-agent-on-prem-ova.html 
 keywords: install agent, on prem agent installation, on prem connector, vmware, OVA, manual install 
-summary: 'Se sei un utente VMWare, puoi utilizzare un OVA per installare un agente Console nel tuo VCenter.  Il download dell"OVA o l"URL sono disponibili tramite la console NetApp .' 
+summary: 'Se sei un utente VMWare, puoi utilizzare un OVA per installare un agente Console nel tuo VCenter.  Il download dell"OVA o l"URL sono disponibili tramite la NetApp Console.' 
 ---
 = Installa un agente Console in locale utilizzando VCenter
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Se sei un utente VMWare, puoi utilizzare un OVA per installare un agen
 
 
 [role="lead"]
-Se sei un utente VMWare, puoi utilizzare un OVA per installare un agente Console nel tuo VCenter.  Il download dell'OVA o l'URL sono disponibili tramite la console NetApp .
+Se sei un utente VMWare, puoi utilizzare un OVA per installare un agente Console nel tuo VCenter.  Il download dell'OVA o l'URL sono disponibili tramite la NetApp Console.
 
 
 NOTE: Quando si installa un agente Console con gli strumenti VCenter, è possibile utilizzare la console Web della VM per eseguire attività di manutenzione.link:task-agent-vm-config.html["Scopri di più sulla console VM per l'agente."]
@@ -53,7 +53,7 @@ Connessioni alle reti di destinazione:: L'agente Console richiede una connession
 Accesso a Internet in uscita:: La posizione di rete in cui si distribuisce l'agente Console deve disporre di una connessione Internet in uscita per contattare endpoint specifici.
 
 
-Endpoint contattati dai computer quando si utilizza la console NetApp basata sul Web::
+Endpoint contattati dai computer quando si utilizza la NetApp Console basata sul Web::
 +
 --
 I computer che accedono alla Console da un browser Web devono avere la possibilità di contattare più endpoint.  Sarà necessario utilizzare la Console per configurare l'agente della Console e per l'utilizzo quotidiano della Console.
@@ -122,7 +122,7 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp .
+Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
 
 
 
@@ -197,7 +197,7 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp .
+Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
 
 
 
@@ -246,7 +246,7 @@ porti:: Non c'è traffico in entrata verso l'agente della console, a meno che no
 --
 * HTTP (80) e HTTPS (443) forniscono l'accesso all'interfaccia utente locale, che utilizzerai in rare circostanze.
 * SSH (22) è necessario solo se è necessario connettersi all'host per la risoluzione dei problemi.
-* Le connessioni in entrata sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
+* Le connessioni in ingresso sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
 +
 Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in uscita per inviare messaggi AutoSupport , la Console configura automaticamente tali sistemi per utilizzare un server proxy incluso nell'agente della Console.  L'unico requisito è assicurarsi che il gruppo di sicurezza dell'agente Console consenta connessioni in entrata sulla porta 3128.  Sarà necessario aprire questa porta dopo aver distribuito l'agente Console.
 
@@ -271,7 +271,7 @@ NOTE: Non è possibile gestire le risorse in Google Cloud con un agente Console 
 ====
 .AWS
 --
-Per gli agenti della console locale, fornire le autorizzazioni AWS aggiungendo le chiavi di accesso utente IAM.
+Per gli agenti della console in locale, fornire le autorizzazioni AWS aggiungendo le chiavi di accesso utente IAM.
 
 Utilizzare le chiavi di accesso utente IAM per gli agenti della console locale; i ruoli IAM non sono supportati per gli agenti della console locale.
 
@@ -296,7 +296,7 @@ Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["Documentazione AWS: aggiunta e rimozione di policy IAM"^]
 
 
-. Assicurarsi che l'utente disponga di una chiave di accesso che è possibile aggiungere alla console NetApp dopo aver installato l'agente della console.
+. Assicurarsi che l'utente disponga di una chiave di accesso che è possibile aggiungere alla NetApp Console dopo aver installato l'agente della console.
 
 
 .Risultato
@@ -321,7 +321,7 @@ image:screenshot_azure_ad.png["Mostra il servizio Active Directory in Microsoft 
 . Specificare i dettagli sull'applicazione:
 +
 ** *Nome*: inserisci un nome per l'applicazione.
-** *Tipo di account*: seleziona un tipo di account (qualsiasi funzionerà con la console NetApp ).
+** *Tipo di account*: seleziona un tipo di account (qualsiasi funzionerà con la NetApp Console).
 ** *URI di reindirizzamento*: puoi lasciare vuoto questo campo.
 
 
@@ -405,7 +405,7 @@ image:screenshot_azure_service_principal_role.png["Uno screenshot del portale di
 L'entità servizio ora dispone delle autorizzazioni di Azure necessarie per distribuire l'agente della console.
 
 +
-Se si desidera distribuire Cloud Volumes ONTAP da più sottoscrizioni di Azure, è necessario associare l'entità servizio a ciascuna di tali sottoscrizioni.  Nella console NetApp è possibile selezionare l'abbonamento che si desidera utilizzare durante la distribuzione Cloud Volumes ONTAP.
+Se si desidera distribuire Cloud Volumes ONTAP da più sottoscrizioni di Azure, è necessario associare l'entità servizio a ciascuna di tali sottoscrizioni.  Nella NetApp Console, puoi selezionare l'abbonamento che desideri utilizzare durante la distribuzione Cloud Volumes ONTAP.
 
 
 
@@ -453,13 +453,13 @@ image:screenshot_azure_client_secret.gif["Uno screenshot del portale di Azure ch
 
 == Installa un agente Console nel tuo ambiente VCenter
 
-NetApp supporta l'installazione dell'agente Console nel tuo ambiente VCenter.  Il file OVA include un'immagine VM preconfigurata che puoi distribuire nel tuo ambiente VMware.  È possibile scaricare un file o distribuire un URL direttamente dalla console NetApp .  Include il software dell'agente Console e un certificato autofirmato.
+NetApp supporta l'installazione dell'agente Console nel tuo ambiente VCenter.  Il file OVA include un'immagine VM preconfigurata che puoi distribuire nel tuo ambiente VMware.  È possibile scaricare un file o distribuire un URL direttamente dalla NetApp Console.  Include il software dell'agente Console e un certificato autofirmato.
 
 
 
 === Scarica l'OVA o copia l'URL
 
-Scarica l'OVA o copia l'URL dell'OVA direttamente dalla console NetApp .
+Scarica l'OVA o copia l'URL dell'OVA direttamente dalla NetApp Console.
 
 . Selezionare *Amministrazione > Agenti*.
 . Nella pagina *Panoramica*, seleziona *Distribuisci agente > In locale*.
@@ -505,7 +505,7 @@ Accedi al tuo ambiente VCenter per distribuire l'agente.
 +
 *** *Salta controllo configurazione*: questa casella di controllo è deselezionata per impostazione predefinita, il che significa che l'agente esegue un controllo della configurazione per convalidare l'accesso alla rete.
 +
-**** NetApp consiglia di lasciare questa casella deselezionata in modo che l'installazione includa un controllo della configurazione dell'agente.  Il controllo della configurazione verifica che l'agente abbia accesso alla rete agli endpoint richiesti.  Se la distribuzione non riesce a causa di problemi di connettività, è possibile accedere al report di convalida e ai registri dall'host dell'agente.  In alcuni casi, se sei sicuro che l'agente abbia accesso alla rete, puoi scegliere di saltare il controllo.  Ad esempio, se stai ancora utilizzando illink:reference-networking-saas-console-previous.html["punti finali precedenti"] utilizzato per gli aggiornamenti degli agenti, la convalida fallisce con un errore.  Per evitare ciò, seleziona la casella di controllo per installare senza controllo di convalida. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
+**** NetApp consiglia di lasciare questa casella deselezionata in modo che l'installazione includa un controllo della configurazione dell'agente.  Il controllo della configurazione verifica che l'agente abbia accesso alla rete agli endpoint richiesti.  Se la distribuzione non riesce a causa di problemi di connettività, è possibile accedere al report di convalida e ai registri dall'host dell'agente.  In alcuni casi, se sei sicuro che l'agente abbia accesso alla rete, puoi scegliere di saltare il controllo.  Ad esempio, se stai ancora utilizzando illink:reference-networking-saas-console-previous.html["punti finali precedenti"] utilizzato per gli aggiornamenti degli agenti, la convalida fallisce con un errore.  Per evitare ciò, selezionare la casella di controllo per installare senza controllo di convalida. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
 
 
 *** *Password di manutenzione*: Imposta la password per `maint` utente che consente l'accesso alla console di manutenzione dell'agente.
@@ -572,7 +572,7 @@ Se hai appena creato queste credenziali AWS, potrebbero volerci alcuni minuti pr
 
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
-. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare *Credenziali dell'organizzazione*.
 . Selezionare *Aggiungi credenziali* e seguire i passaggi della procedura guidata.
 +
 .. *Posizione delle credenziali*: seleziona *Amazon Web Services > Agente.
@@ -583,7 +583,7 @@ Se hai appena creato queste credenziali AWS, potrebbero volerci alcuni minuti pr
 
 
 
-Ora puoi andare al https://console.netapp.com["Console NetApp"^] per iniziare a utilizzare l'agente Console.
+Ora puoi andare al https://console.netapp.com["NetApp Console"^] per iniziare a utilizzare l'agente Console.
 
 --
 .Azzurro
@@ -610,7 +610,7 @@ Se hai appena creato queste credenziali di Azure, potrebbero volerci alcuni minu
 
 
 .Risultato
-L'agente della console ora dispone delle autorizzazioni necessarie per eseguire azioni in Azure per tuo conto.  Ora puoi andare al https://console.netapp.com["Console NetApp"^] per iniziare a utilizzare l'agente Console.
+L'agente della console ora dispone delle autorizzazioni necessarie per eseguire azioni in Azure per tuo conto.  Ora puoi andare al https://console.netapp.com["NetApp Console"^] per iniziare a utilizzare l'agente Console.
 
 --
 ====

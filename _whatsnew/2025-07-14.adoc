@@ -42,7 +42,7 @@ BlueXP offre ora un'interfaccia più intuitiva per la gestione della federazione
 
 Abilitando l'accesso Single Sign-On (SSO) tramite la federazione delle identità, gli utenti possono accedere a BlueXP con le proprie credenziali aziendali.  Ciò migliora la sicurezza, riduce l'uso delle password e semplifica l'onboarding.
 
-Ti verrà chiesto di importare tutte le connessioni federate esistenti nella nuova interfaccia per ottenere l'accesso alle nuove funzionalità di gestione.  Ciò consente di sfruttare i più recenti miglioramenti senza dover ricreare le connessioni federate.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-federation-import.html["Scopri di più sull'importazione della tua connessione federata esistente in BlueXP."]
+Ti verrà chiesto di importare tutte le connessioni federate esistenti nella nuova interfaccia per ottenere l'accesso alle nuove funzionalità di gestione.  Ciò consente di sfruttare i miglioramenti più recenti senza dover ricreare le connessioni federate.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-federation-import.html["Scopri di più sull'importazione della tua connessione federata esistente in BlueXP."]
 
 Una gestione migliorata della federazione consente di:
 

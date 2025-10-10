@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-install-agent-azure-console.html 
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector 
-summary: 'Per creare un agente Console in Azure dalla console NetApp , è necessario configurare la rete, preparare le autorizzazioni di Azure e quindi creare l"agente Console.' 
+summary: 'Per creare un agente Console in Azure dalla NetApp Console, è necessario configurare la rete, preparare le autorizzazioni di Azure e quindi creare l"agente Console.' 
 ---
-= Creare un agente console in Azure dalla console NetApp
+= Creare un agente console in Azure dalla NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Per creare un agente Console in Azure dalla console NetApp , è necess
 
 
 [role="lead"]
-Per creare un agente Console in Azure dalla console NetApp , è necessario configurare la rete, preparare le autorizzazioni di Azure e quindi creare l'agente Console.
+Per creare un agente Console in Azure dalla NetApp Console, è necessario configurare la rete, preparare le autorizzazioni di Azure e quindi creare l'agente Console.
 
 .Prima di iniziare
 * Dovresti avere unlink:concept-agents.html["comprensione degli agenti della console"] .
@@ -85,7 +85,7 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp .
+Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
 
 
 
@@ -119,7 +119,7 @@ Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di agg
 --
 
 
-Endpoint contattati dalla console NetApp:: Utilizzando la console NetApp basata sul Web fornita tramite il livello SaaS, questa contatta diversi endpoint per completare le attività di gestione dei dati.  Sono inclusi gli endpoint contattati per distribuire l'agente della Console dalla Console.
+Endpoint contattati dalla console NetApp:: Utilizzando la NetApp Console basata sul Web fornita tramite il livello SaaS, questa contatta diversi endpoint per completare le attività di gestione dei dati.  Sono inclusi gli endpoint contattati per distribuire l'agente della Console dalla Console.
 +
 --
 link:reference-networking-saas-console.html["Visualizza l'elenco degli endpoint contattati dalla console NetApp"] .
@@ -143,7 +143,7 @@ porti:: Non c'è traffico in entrata verso l'agente della console, a meno che no
 --
 * HTTP (80) e HTTPS (443) forniscono l'accesso all'interfaccia utente locale, che utilizzerai in rare circostanze.
 * SSH (22) è necessario solo se è necessario connettersi all'host per la risoluzione dei problemi.
-* Le connessioni in entrata sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
+* Le connessioni in ingresso sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
 +
 Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in uscita per inviare messaggi AutoSupport , la Console configura automaticamente tali sistemi per utilizzare un server proxy incluso nell'agente della Console.  L'unico requisito è assicurarsi che il gruppo di sicurezza dell'agente Console consenta connessioni in entrata sulla porta 3128.  Sarà necessario aprire questa porta dopo aver distribuito l'agente Console.
 
@@ -339,7 +339,7 @@ image:screenshot_azure_ad.png["Mostra il servizio Active Directory in Microsoft 
 . Specificare i dettagli sull'applicazione:
 +
 ** *Nome*: inserisci un nome per l'applicazione.
-** *Tipo di account*: seleziona un tipo di account (qualsiasi funzionerà con la console NetApp ).
+** *Tipo di account*: seleziona un tipo di account (qualsiasi funzionerà con la NetApp Console).
 ** *URI di reindirizzamento*: puoi lasciare vuoto questo campo.
 
 
@@ -426,10 +426,10 @@ Il tuo service principal è ora configurato e dovresti aver copiato l'ID dell'ap
 
 == Passaggio 4: creare l'agente della console
 
-Creare l'agente Console direttamente dalla console NetApp .
+Creare l'agente Console direttamente dalla NetApp Console.
 
 .Informazioni su questo compito
-* La creazione dell'agente Console dalla Console distribuisce una macchina virtuale in Azure utilizzando una configurazione predefinita. Non passare a un'istanza VM più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-agent-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
+* La creazione dell'agente Console dalla Console distribuisce una macchina virtuale in Azure utilizzando una configurazione predefinita.  Non passare a un'istanza VM più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-agent-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
 * Quando la Console distribuisce l'agente Console, crea un ruolo personalizzato e lo assegna alla VM dell'agente Console.  Questo ruolo include autorizzazioni che consentono all'agente della console di gestire le risorse di Azure.  È necessario assicurarsi che il ruolo venga mantenuto aggiornato man mano che vengono aggiunte nuove autorizzazioni nelle versioni successive. link:reference-permissions-azure.html["Scopri di più sul ruolo personalizzato per l'agente della console"] .
 
 
@@ -488,7 +488,7 @@ Il metodo di autenticazione per la macchina virtuale può essere una password o 
 +
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Scopri come connetterti a una VM Linux in Azure"^]
 
-. Nella pagina *Dettagli*, inserisci un nome per l'istanza, specifica i tag e scegli se desideri che la Console crei un nuovo ruolo con le autorizzazioni richieste oppure se desideri selezionare un ruolo esistente che hai impostato conlink:reference-permissions-azure.html["i permessi richiesti"] .
+. Nella pagina *Dettagli*, inserisci un nome per l'istanza, specifica i tag e scegli se desideri che la Console crei un nuovo ruolo con le autorizzazioni richieste o se desideri selezionare un ruolo esistente che hai impostato conlink:reference-permissions-azure.html["i permessi richiesti"] .
 +
 Tieni presente che puoi scegliere gli abbonamenti Azure associati a questo ruolo.  Ogni sottoscrizione scelta fornisce all'agente della console le autorizzazioni per gestire le risorse in tale sottoscrizione (ad esempio, Cloud Volumes ONTAP).
 
@@ -523,4 +523,4 @@ Una volta completato il processo, l'agente della Console sarà disponibile per l
 
 NOTE: Se la distribuzione non riesce, puoi scaricare un report e i registri dalla Console per aiutarti a risolvere i problemi.link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
 
-Se si dispone di un archivio BLOB di Azure nella stessa sottoscrizione di Azure in cui è stato creato l'agente della console, nella pagina *Sistemi* verrà visualizzato automaticamente un sistema di archiviazione BLOB di Azure. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Scopri come gestire l'archiviazione BLOB di Azure dalla console NetApp"^]
+Se si dispone di un archivio BLOB di Azure nella stessa sottoscrizione di Azure in cui è stato creato l'agente della console, nella pagina *Sistemi* verrà visualizzato automaticamente un sistema di archiviazione BLOB di Azure. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Scopri come gestire l'archiviazione BLOB di Azure dalla NetApp Console"^]

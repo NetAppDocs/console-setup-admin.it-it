@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-quick-start-standard-mode.html 
 keywords: quick start, standard mode quick start 
-summary: Per iniziare a utilizzare la console NetApp in modalità standard, prepara la rete per la console, registrandoti e creando un account e, facoltativamente, creando un agente della console. 
+summary: Per iniziare a utilizzare la NetApp Console in modalità standard, prepara la rete per la console, registrandoti e creando un account e, facoltativamente, creando un agente della console. 
 ---
 = Flusso di lavoro introduttivo (modalità standard)
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: Per iniziare a utilizzare la console NetApp in modalità standard, prep
 
 
 [role="lead"]
-Per iniziare a utilizzare la console NetApp in modalità standard, prepara la rete per la console, registrandoti e creando un account e, facoltativamente, creando un agente della console.
+Per iniziare a utilizzare la NetApp Console in modalità standard, prepara la rete per la console, registrandoti e creando un account e, facoltativamente, creando un agente della console.
 
-In modalità standard, si accede a una console basata sul Web ospitata come prodotto Software-as-a-service (SaaS) di NetApp. Prima di iniziare, assicurati di aver capitolink:concept-modes.html["modalità di distribuzione"] Elink:concept-agents.html["Agenti della console"] .
+In modalità standard, si accede a una console basata sul Web ospitata come prodotto Software-as-a-service (SaaS) di NetApp.  Prima di iniziare, assicurati di aver capitolink:concept-modes.html["modalità di distribuzione"] Elink:concept-agents.html["Agenti della console"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] link:reference-networking-saas-console.html["Preparare la rete per l'utilizzo della console NetApp"]
 [role="quick-margin-para"]
@@ -49,4 +49,4 @@ Per utilizzare NetApp Intelligent Data Services per la gestione dell'archiviazio
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] link:task-subscribe-standard-mode.html["Iscriviti a NetApp Intelligent Services (facoltativo)"]
 [role="quick-margin-para"]
-Iscriviti a NetApp Intelligent Services tramite il tuo provider cloud per pagare a ore (PAYGO) o tramite un contratto annuale.  I servizi intelligenti NetApp includono NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience e NetApp Disaster Recovery.  NetApp Data Classification è incluso nel tuo abbonamento senza costi aggiuntivi.
+Iscriviti a NetApp Intelligent Services tramite il tuo provider cloud per pagare a ore (PAYGO) o tramite un contratto annuale.  I NetApp Intelligent Services includono NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience e NetApp Disaster Recovery.  NetApp Data Classification è incluso nel tuo abbonamento senza costi aggiuntivi.

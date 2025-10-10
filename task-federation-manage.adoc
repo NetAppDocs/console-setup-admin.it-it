@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-federation-manage.html 
 keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
-summary: Dopo aver aggiunto una connessione federata, puoi gestirla nella console NetApp .  È possibile visualizzare lo stato della connessione, attivarla o disattivarla a seconda delle esigenze. 
+summary: Dopo aver aggiunto una connessione federata, puoi gestirla nella NetApp Console.  È possibile visualizzare lo stato della connessione, attivarla o disattivarla a seconda delle esigenze. 
 ---
-= Gestisci le federazioni nella console NetApp
+= Gestisci le federazioni nella NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -82,7 +82,7 @@ Testare la connessione di una federazione esistente per verificarne il funzionam
 . Selezionare *Amministrazione > Identità e accesso*.
 . Selezionare la scheda *Federazione*.
 . Seleziona il menu azioniimage:button_3_vert_dots.png["un'icona con tre punti verticali"] accanto alla federazione a cui vuoi aggiungere un dominio verificato e seleziona *Test connessione*.
-. Selezionare *Test*.  Il sistema ti chiederà di accedere con le tue credenziali aziendali.  Se la connessione riesce, verrai reindirizzato alla console NetApp .  Se la connessione fallisce, viene visualizzato un messaggio di errore che indica il problema con la federazione.
+. Selezionare *Test*.  Il sistema ti chiederà di accedere con le tue credenziali aziendali.  Se la connessione riesce, verrai reindirizzato alla NetApp Console.  Se la connessione fallisce, viene visualizzato un messaggio di errore che indica il problema con la federazione.
 . Selezionare *Fine* per tornare alla scheda *Federazione*.
 
 

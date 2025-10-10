@@ -44,7 +44,7 @@ compute.networkUser
 |===
 Note:
 
-. deploymentmanager.editor è necessario nel progetto host solo se non si passano regole del firewall alla distribuzione e si sceglie di lasciare che la Console le crei per conto proprio.  Se non è specificata alcuna regola, la console NetApp crea una distribuzione nel progetto host che contiene la regola del firewall VPC0.
+. deploymentmanager.editor è necessario nel progetto host solo se non si passano regole del firewall alla distribuzione e si sceglie di lasciare che la Console le crei per conto proprio.  Se non è specificata alcuna regola, la NetApp Console crea una distribuzione nel progetto host che contiene la regola del firewall VPC0.
 . firewall.create e firewall.delete sono necessari solo se non si passano regole del firewall alla distribuzione e si sceglie di lasciare che la Console le crei per conto proprio.  Queste autorizzazioni si trovano nel file .yaml dell'account Console.  Se si distribuisce una coppia HA utilizzando una VPC condivisa, queste autorizzazioni verranno utilizzate per creare le regole del firewall per VPC1, 2 e 3.  Per tutte le altre distribuzioni, queste autorizzazioni verranno utilizzate anche per creare regole per VPC0.
 . Per Cloud Tiering, l'account del servizio di tiering deve avere il ruolo serviceAccount.user sull'account del servizio, non solo a livello di progetto.  Attualmente, se si assegna serviceAccount.user a livello di progetto, le autorizzazioni non vengono visualizzate quando si esegue una query sull'account di servizio con getIAMPolicy.
 

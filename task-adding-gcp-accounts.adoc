@@ -26,7 +26,7 @@ La sostituzione dell'attuale abbonamento al marketplace con un nuovo abbonamento
 
 .Passi
 . Selezionare *Amministrazione > *Credenziali*.
-. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.  +necessario nuovo screenshot (TS)image:screenshot_gcp_add_subscription.png["Uno screenshot del menu azioni per un set di credenziali esistenti."]
 . Per configurare un abbonamento esistente con le credenziali selezionate, seleziona un progetto Google Cloud e un abbonamento dall'elenco a discesa, quindi seleziona *Configura*.
 +
@@ -35,7 +35,7 @@ image:screenshot_gcp_associate.gif["Uno screenshot di un progetto Google Cloud e
 . Se non hai ancora un abbonamento, seleziona *Aggiungi abbonamento > Continua* e segui i passaggi indicati in Google Cloud Marketplace.
 +
 
-NOTE: Prima di completare i passaggi seguenti, assicurati di disporre sia dei privilegi di amministratore della fatturazione nel tuo account Google Cloud sia di un accesso alla console NetApp .
+NOTE: Prima di completare i passaggi seguenti, assicurati di disporre sia dei privilegi di amministratore della fatturazione nel tuo account Google Cloud sia di un accesso alla NetApp Console .
 
 +
 .. Dopo essere stato reindirizzato al https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Pagina NetApp Intelligent Services su Google Cloud Marketplace"^] , assicurati che nel menu di navigazione in alto sia selezionato il progetto corretto.
@@ -58,7 +58,7 @@ image:screenshot_gcp_marketplace_register.png["Uno screenshot di un pop-up di re
 .. Completa i passaggi nella pagina *Assegnazione abbonamento*:
 +
 
-NOTE: Se qualcuno della tua organizzazione ha già un abbonamento al marketplace dal tuo account di fatturazione, verrai reindirizzato a https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["la pagina Cloud Volumes ONTAP nella console NetApp"^] Invece.  Se ciò non è previsto, contatta il team di vendita NetApp .  Google consente un solo abbonamento per account di fatturazione Google.
+NOTE: Se qualcuno della tua organizzazione ha già un abbonamento al marketplace dal tuo account di fatturazione, verrai reindirizzato a https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["la pagina Cloud Volumes ONTAP nella NetApp Console"^] Invece.  Se ciò non è previsto, contatta il team di vendita NetApp .  Google consente un solo abbonamento per account di fatturazione Google.
 
 +
 *** Seleziona le organizzazioni o gli account della Console a cui desideri associare questo abbonamento.

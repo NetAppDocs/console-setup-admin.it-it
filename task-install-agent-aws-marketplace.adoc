@@ -78,7 +78,7 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp .
+Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
 
 
 
@@ -128,7 +128,7 @@ porti:: Non c'è traffico in entrata verso l'agente della console, a meno che no
 --
 * HTTP (80) e HTTPS (443) forniscono l'accesso all'interfaccia utente locale, che utilizzerai in rare circostanze.
 * SSH (22) è necessario solo se è necessario connettersi all'host per la risoluzione dei problemi.
-* Le connessioni in entrata sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
+* Le connessioni in ingresso sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
 +
 Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in uscita per inviare messaggi AutoSupport , la Console configura automaticamente tali sistemi per utilizzare un server proxy incluso nell'agente della Console.  L'unico requisito è assicurarsi che il gruppo di sicurezza dell'agente Console consenta connessioni in entrata sulla porta 3128.  Sarà necessario aprire questa porta dopo aver distribuito l'agente Console.
 
@@ -207,7 +207,7 @@ Dovresti avere quanto segue:
 
 
 .Passi
-. Vai al https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Elenco degli agenti della console NetApp su AWS Marketplace"^]
+. Vai al https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Elenco degli agenti NetApp Console su AWS Marketplace"^]
 . Nella pagina Marketplace, seleziona *Continua ad abbonarti*.
 . Per abbonarsi al software, selezionare *Accetta i termini*.
 +
@@ -267,6 +267,6 @@ Per utilizzare la Console in modalità standard, disattivare la modalità limita
 .Risultato
 L'agente Console è ora installato e configurato con la tua organizzazione Console.
 
-Apri un browser web e vai su https://console.netapp.com["Console NetApp"^] per iniziare a utilizzare l'agente Console con la Console.
+Apri un browser web e vai su https://console.netapp.com["NetApp Console"^] per iniziare a utilizzare l'agente Console con la Console.
 
-Se disponi di bucket Amazon S3 nello stesso account AWS in cui hai creato l'agente della console, vedrai apparire automaticamente un ambiente di lavoro Amazon S3 nella pagina *Sistemi*. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Scopri come gestire i bucket S3 dalla console NetApp"^]
+Se disponi di bucket Amazon S3 nello stesso account AWS in cui hai creato l'agente della console, vedrai apparire automaticamente un ambiente di lavoro Amazon S3 nella pagina *Sistemi*. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Scopri come gestire i bucket S3 dalla NetApp Console"^]

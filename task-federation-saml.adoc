@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-federation-saml.html 
 keywords: federation, SAML protocol, SAML, federation services,  federate, federated connection, SSO, identity federation, identity management, corporate identity 
-summary: 'Federati con il tuo provider IdP SAML 2.0 per abilitare l"accesso Single Sign-On (SSO) per la console NetApp .  Ciò consente agli utenti di accedere utilizzando le proprie credenziali aziendali.' 
+summary: 'Federati con il tuo provider IdP SAML 2.0 per abilitare l"accesso Single Sign-On (SSO) per la NetApp Console.  Ciò consente agli utenti di accedere utilizzando le proprie credenziali aziendali.' 
 ---
 = Federare con un provider di identità SAML
 :hardbreaks:
@@ -27,8 +27,8 @@ NetApp supporta solo SSO avviato dal provider di servizi (SP).  Per prima cosa �
 È possibile impostare una connessione federata con il provider SAML 2.0 per abilitare l'accesso Single Sign-On (SSO) per la Console.  Il processo prevede la configurazione del provider in modo che consideri attendibile NetApp come fornitore di servizi e la successiva creazione della connessione nella Console.
 
 .Prima di iniziare
-* È richiesto un account IdP con privilegi amministrativi.  Coordinati con l'amministratore del tuo IdP per completare i passaggi.
-* Identifica il dominio che vuoi utilizzare per la federazione.  Puoi utilizzare il tuo dominio di posta elettronica o un dominio diverso di tua proprietà.  Se desideri utilizzare un dominio diverso dal tuo dominio di posta elettronica, devi prima verificare il dominio nella Console.  Puoi farlo seguendo i passaggi indicati inlink:task-federation-verify-domain.html["Verifica il tuo dominio nella console NetApp"] argomento.
+* È richiesto un account IdP con privilegi amministrativi.  Coordinati con l'amministratore dell'IdP per completare i passaggi.
+* Identifica il dominio che vuoi utilizzare per la federazione.  Puoi utilizzare il tuo dominio di posta elettronica o un dominio diverso di tua proprietà.  Se desideri utilizzare un dominio diverso dal tuo dominio di posta elettronica, devi prima verificare il dominio nella Console.  Puoi farlo seguendo i passaggi indicati inlink:task-federation-verify-domain.html["Verifica il tuo dominio nella NetApp Console"] argomento.
 
 
 .Passi

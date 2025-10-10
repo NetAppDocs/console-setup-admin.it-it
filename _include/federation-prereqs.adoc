@@ -3,6 +3,6 @@
 
 
 .Prima di iniziare
-* È richiesto un account IdP con privilegi amministrativi.  Coordinati con l'amministratore del tuo IdP per completare i passaggi.
-* Identifica il dominio che vuoi utilizzare per la federazione.  Puoi utilizzare il tuo dominio di posta elettronica o un dominio diverso di tua proprietà.  Se desideri utilizzare un dominio diverso dal tuo dominio di posta elettronica, devi prima verificare il dominio nella Console.  Puoi farlo seguendo i passaggi indicati inlink:task-federation-verify-domain.html["Verifica il tuo dominio nella console NetApp"] argomento.
+* È richiesto un account IdP con privilegi amministrativi.  Coordinati con l'amministratore dell'IdP per completare i passaggi.
+* Identifica il dominio che vuoi utilizzare per la federazione.  Puoi utilizzare il tuo dominio di posta elettronica o un dominio diverso di tua proprietà.  Se desideri utilizzare un dominio diverso dal tuo dominio di posta elettronica, devi prima verificare il dominio nella Console.  Puoi farlo seguendo i passaggi indicati inlink:task-federation-verify-domain.html["Verifica il tuo dominio nella NetApp Console"] argomento.
 

@@ -4,7 +4,7 @@ permalink: task-prepare-restricted-mode.html
 keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode 
 summary: 'Preparare l"ambiente prima di distribuire NetApp Console in modalità limitata.  È necessario esaminare i requisiti dell"host, preparare la rete, impostare le autorizzazioni e altro ancora.' 
 ---
-= Prepararsi alla distribuzione in modalità limitata
+= Prepararsi per la distribuzione in modalità limitata
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,9 +20,9 @@ Preparare l'ambiente prima di distribuire NetApp Console in modalità limitata. 
 
 == Passaggio 1: comprendere come funziona la modalità con restrizioni
 
-Prima di iniziare, è necessario comprendere il funzionamento della console NetApp in modalità limitata.
+Prima di iniziare, è necessario comprendere il funzionamento della NetApp Console in modalità limitata.
 
-Utilizzare l'interfaccia basata su browser disponibile localmente dall'agente NetApp Console installato.  Non è possibile accedere alla console NetApp dalla console basata sul Web fornita tramite il livello SaaS.
+Utilizzare l'interfaccia basata su browser disponibile localmente dall'agente NetApp Console installato.  Non è possibile accedere alla NetApp Console dalla console basata sul Web fornita tramite il livello SaaS.
 
 Inoltre, non tutte le funzionalità della Console e i servizi dati NetApp sono disponibili.
 
@@ -87,7 +87,7 @@ da 8,6 a 8,10
 * L'host deve essere registrato presso Red Hat Subscription Management.  Se non è registrato, l'host non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione dell'agente.
 
  a| 
-3.9.50 o versione successiva con la console in modalità standard o modalità limitata
+3.9.50 o versione successiva con la Console in modalità standard o modalità limitata
  a| 
 Podman versione 4.6.1 o 4.9.4
 
@@ -105,7 +105,7 @@ Ubuntu
  a| 
 24,04 LTS
  a| 
-3.9.45 o versione successiva con la console NetApp in modalità standard o modalità limitata
+3.9.45 o versione successiva con la NetApp Console in modalità standard o in modalità limitata
  a| 
 Docker Engine dalla versione 23.06 alla 28.0.0.
  a| 
@@ -256,7 +256,7 @@ sudo dnf install podman-compose-1.0.6
 ----
 +
 
-NOTE: Utilizzando il `dnf install` Il comando soddisfa il requisito per aggiungere podman-compose alla variabile d'ambiente PATH.  Il comando di installazione aggiunge podman-compose a /usr/bin, che è già incluso nel `secure_path` opzione sull'host.
+NOTE: Utilizzando il `dnf install` il comando soddisfa il requisito per aggiungere podman-compose alla variabile d'ambiente PATH.  Il comando di installazione aggiunge podman-compose a /usr/bin, che è già incluso nel `secure_path` opzione sull'host.
 
 . Se si utilizza Red Hat Enterprise Linux 8, verificare che la versione di Podman utilizzi NetAvark con Aardvark DNS anziché CNI.
 +
@@ -285,7 +285,7 @@ Se `/etc/containers/containers.conf` non esiste, apportare le modifiche alla con
 ----
 systemctl restart podman
 ----
-. Confermare che networkBackend sia ora cambiato in "netavark" utilizzando il seguente comando:
+. Verificare che networkBackend sia ora modificato in "netavark" utilizzando il seguente comando:
 +
 [source, cli]
 ----
@@ -320,7 +320,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 Configura l'accesso alla rete in modo che l'agente della console possa gestire le risorse nel tuo cloud pubblico.  Oltre a disporre di una rete virtuale e di una subnet per l'agente della console, è necessario assicurarsi che siano soddisfatti i seguenti requisiti.
 
 Connessioni alle reti di destinazione:: Assicurarsi che l'agente della console disponga di una connessione di rete alle posizioni di archiviazione.  Ad esempio, la VPC o la VNet in cui si prevede di distribuire Cloud Volumes ONTAP oppure il data center in cui risiedono i cluster ONTAP locali.
-Preparare la rete per l'accesso degli utenti alla console NetApp:: In modalità limitata, gli utenti accedono alla Console dalla VM dell'agente Console.  L'agente della console contatta alcuni endpoint per completare le attività di gestione dei dati.  Questi endpoint vengono contattati dal computer di un utente quando vengono completate azioni specifiche dalla Console.
+Preparare la rete per l'accesso degli utenti alla NetApp Console:: In modalità limitata, gli utenti accedono alla Console dalla VM dell'agente Console.  L'agente della console contatta alcuni endpoint per completare le attività di gestione dei dati.  Questi endpoint vengono contattati dal computer di un utente quando vengono completate azioni specifiche dalla Console.
 
 
 
@@ -336,7 +336,7 @@ NOTE: Gli agenti della console precedenti alla versione 4.0.0 necessitano di end
 | \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | Per fornire funzionalità e servizi all'interno della NetApp Console. 
 
 
-| \ https://cdn.auth0.com \ https://services.cloud.netapp.com | Il browser Web si connette a questi endpoint per l'autenticazione centralizzata degli utenti tramite la console NetApp . 
+| \ https://cdn.auth0.com \ https://services.cloud.netapp.com | Il browser Web si connette a questi endpoint per l'autenticazione centralizzata degli utenti tramite la NetApp Console. 
 |===
 Accesso a Internet in uscita per le operazioni quotidiane:: La posizione di rete dell'agente della console deve disporre di accesso a Internet in uscita.  Deve essere in grado di raggiungere i servizi SaaS della NetApp Console e gli endpoint all'interno del rispettivo ambiente cloud pubblico.
 +
@@ -405,7 +405,7 @@ Per gestire le risorse in Google Cloud.
 
 
  a| 
-* Endpoint della console NetApp *
+* Endpoint NetApp Console *
 
 
 
@@ -426,7 +426,7 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp .
+Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
 
 
 
@@ -488,7 +488,7 @@ porti:: Non c'è traffico in entrata verso l'agente della console, a meno che no
 --
 * HTTP (80) e HTTPS (443) forniscono l'accesso all'interfaccia utente locale, che utilizzerai in rare circostanze.
 * SSH (22) è necessario solo se è necessario connettersi all'host per la risoluzione dei problemi.
-* Le connessioni in entrata sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
+* Le connessioni in ingresso sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
 +
 Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in uscita per inviare messaggi AutoSupport , la Console configura automaticamente tali sistemi per utilizzare un server proxy incluso nell'agente della Console.  L'unico requisito è assicurarsi che il gruppo di sicurezza dell'agente Console consenta connessioni in entrata sulla porta 3128.  Sarà necessario aprire questa porta dopo aver distribuito l'agente Console.
 
@@ -571,7 +571,7 @@ Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["Documentazione AWS: aggiunta e rimozione di policy IAM"^]
 
 
-. Assicurarsi che l'utente disponga di una chiave di accesso che è possibile aggiungere alla console NetApp dopo aver installato l'agente della console.
+. Assicurarsi che l'utente disponga di una chiave di accesso che è possibile aggiungere alla NetApp Console dopo aver installato l'agente della console.
 
 
 --
@@ -589,7 +589,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azur
 . Copia il contenuto dellink:reference-permissions-azure.html["autorizzazioni di ruolo personalizzate per il connettore"] e salvarli in un file JSON.
 . Modificare il file JSON aggiungendo gli ID di sottoscrizione di Azure all'ambito assegnabile.
 +
-Dovresti aggiungere l'ID per ogni sottoscrizione Azure che desideri utilizzare con NetApp Console.
+Dovresti aggiungere l'ID per ogni sottoscrizione di Azure che desideri utilizzare con NetApp Console.
 
 +
 *Esempio*
@@ -641,7 +641,7 @@ image:screenshot_azure_ad.png["Mostra il servizio Active Directory in Microsoft 
 . Specificare i dettagli sull'applicazione:
 +
 ** *Nome*: inserisci un nome per l'applicazione.
-** *Tipo di account*: seleziona un tipo di account (qualsiasi funzionerà con la console NetApp ).
+** *Tipo di account*: seleziona un tipo di account (qualsiasi funzionerà con la NetApp Console).
 ** *URI di reindirizzamento*: puoi lasciare vuoto questo campo.
 
 
@@ -725,7 +725,7 @@ image:screenshot_azure_service_principal_role.png["Uno screenshot del portale di
 L'entità servizio ora dispone delle autorizzazioni di Azure necessarie per distribuire l'agente della console.
 
 +
-Se si desidera distribuire Cloud Volumes ONTAP da più sottoscrizioni di Azure, è necessario associare l'entità servizio a ciascuna di tali sottoscrizioni.  Nella console NetApp è possibile selezionare l'abbonamento che si desidera utilizzare durante la distribuzione Cloud Volumes ONTAP.
+Se si desidera distribuire Cloud Volumes ONTAP da più sottoscrizioni di Azure, è necessario associare l'entità servizio a ciascuna di tali sottoscrizioni.  Nella NetApp Console, puoi selezionare l'abbonamento che desideri utilizzare durante la distribuzione Cloud Volumes ONTAP.
 
 
 

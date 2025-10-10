@@ -4,7 +4,7 @@ permalink: task-iam-manage-members-permissions.html
 keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management 
 summary: Gestisci i membri della tua organizzazione per fornire autorizzazioni ai diversi livelli della gerarchia delle risorse della tua organizzazione. 
 ---
-= Aggiungi membri e account di servizio alla console NetApp
+= Aggiungi membri e account di servizio alla NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -45,12 +45,12 @@ Per gestire gli utenti e le relative autorizzazioni, è necessario disporre del 
 
 === Aggiungi un account utente
 
-Sebbene gli utenti si iscrivano autonomamente alla NetApp Console, per accedere alle risorse nella Console devono essere aggiunti esplicitamente a un'organizzazione o a cartelle o progetti specifici.
+Sebbene gli utenti si iscrivano autonomamente alla NetApp Console , per accedere alle risorse nella Console devono essere aggiunti esplicitamente a un'organizzazione o a cartelle o progetti specifici.
 
 .Passi
-. Indirizzare l'utente a visitare https://console.netapp.com/["Console NetApp"^] per iscriversi.
+. Indirizzare l'utente a visitare https://console.netapp.com/["NetApp Console"^] per iscriversi.
 +
-Una volta registrati, gli utenti completano la pagina di *Registrazione*, controllano la posta elettronica e accedono. Se la Console richiede agli utenti di creare un'organizzazione, la chiudono e ti avvisano della creazione del loro account.  Puoi quindi aggiungere l'utente alla tua organizzazione esistente.
+Una volta registrati, gli utenti completano la pagina *Registrati*, controllano la posta elettronica e accedono. Se la Console chiede agli utenti di creare un'organizzazione, la chiudono e ti avvisano della creazione del loro account.  Puoi quindi aggiungere l'utente alla tua organizzazione esistente.
 
 +
 link:task-sign-up-saas.html["Scopri come registrarti alla NetApp Console"] .

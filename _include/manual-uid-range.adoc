@@ -125,7 +125,7 @@ https://_ipaddress_[]
 .. Inserisci un nome per il sistema.
 .. In *Stai utilizzando un ambiente protetto?* mantieni disattivata la modalità con restrizioni.
 +
-È consigliabile disattivare la modalità limitata perché questi passaggi descrivono come utilizzare la Console in modalità standard.  Dovresti abilitare la modalità limitata solo se disponi di un ambiente sicuro e desideri disconnettere questo account dai servizi backend della Console.  Se è così,link:task-quick-start-restricted-mode.html["segui i passaggi per iniziare a utilizzare la console NetApp in modalità limitata"] .
+È consigliabile disattivare la modalità limitata perché questi passaggi descrivono come utilizzare la Console in modalità standard.  Dovresti abilitare la modalità limitata solo se disponi di un ambiente sicuro e desideri disconnettere questo account dai servizi backend della Console.  Se è così,link:task-quick-start-restricted-mode.html["segui i passaggi per iniziare a utilizzare la NetApp Console in modalità limitata"] .
 
 .. Seleziona *Iniziamo*.
 

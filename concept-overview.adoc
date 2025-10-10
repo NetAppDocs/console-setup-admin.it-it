@@ -14,7 +14,7 @@ summary: NetApp Console offre una gestione centralizzata dei servizi di archivia
 
 
 [role="lead"]
-NetApp Console offre una gestione centralizzata dello storage NetApp e dei servizi dati NetApp in ambienti on-premise e cloud di livello aziendale, offrendo informazioni in tempo reale, flussi di lavoro più rapidi e un'amministrazione semplificata, il tutto in modo altamente sicuro e conforme.
+NetApp Console offre una gestione centralizzata dello storage NetApp e NetApp Data Services in ambienti on-premise e cloud di livello aziendale, offrendo informazioni in tempo reale, flussi di lavoro più rapidi e un'amministrazione semplificata, il tutto in modo altamente sicuro e conforme.
 
 È una piattaforma disponibile come servizio (SaaS) che fornisce gestione dell'archiviazione, mobilità dei dati, protezione dei dati, analisi e controllo dei dati.  Le funzionalità di gestione sono fornite tramite una console basata sul Web e API.
 
@@ -82,23 +82,23 @@ La Console fornisce servizi dati per proteggere e mantenere la disponibilità de
 
 Avvisi di archiviazione:: Visualizza i problemi relativi a capacità, disponibilità, prestazioni, protezione e sicurezza nel tuo ambiente ONTAP .
 Hub di automazione:: Utilizzare soluzioni con script per automatizzare la distribuzione e l'integrazione dei prodotti e dei servizi NetApp .
-Backup e ripristino NetApp:: Esegui il backup e il ripristino dei dati nel cloud e in locale.
-Classificazione dei dati NetApp:: Proteggi la privacy dei dati delle tue applicazioni e degli ambienti cloud.
-Copia e sincronizzazione NetApp:: Sincronizza i dati tra archivi dati locali e cloud.
+NetApp Backup and Recovery:: Esegui il backup e il ripristino dei dati nel cloud e in locale.
+NetApp Data Classification:: Proteggi la privacy dei dati delle tue applicazioni e degli ambienti cloud.
+NetApp Copy and Sync:: Sincronizza i dati tra archivi dati locali e cloud.
 Consulente digitale NetApp (Active IQ):: Utilizza analisi predittive e supporto proattivo per ottimizzare la tua infrastruttura dati.
-Licenze e abbonamenti:: Gestisci e monitora le tue licenze e i tuoi abbonamenti.
-Ripristino di emergenza NetApp:: Proteggi i carichi di lavoro VMware on-premise utilizzando VMware Cloud su Amazon FSx per ONTAP come sito di disaster recovery.
+Licenses and subscriptions:: Gestisci e monitora le tue licenze e i tuoi abbonamenti.
+NetApp Disaster Recovery:: Proteggi i carichi di lavoro VMware on-premise utilizzando VMware Cloud su Amazon FSx per ONTAP come sito di disaster recovery.
 Pianificazione del ciclo di vita:: Identificare i cluster con capacità attuale o prevista bassa e implementare la suddivisione in livelli dei dati o raccomandazioni sulla capacità aggiuntiva.
-Resilienza al ransomware NetApp:: Rileva anomalie che potrebbero causare attacchi ransomware.  Proteggere e ripristinare i carichi di lavoro.
-Replicazione NetApp:: Replicare i dati tra i sistemi di archiviazione per supportare il backup e il ripristino di emergenza.
+NetApp Ransomware Resilience:: Rileva anomalie che potrebbero causare attacchi ransomware.  Proteggere e ripristinare i carichi di lavoro.
+NetApp Replication:: Replicare i dati tra i sistemi di archiviazione per supportare il backup e il ripristino di emergenza.
 Aggiornamenti software:: Automatizzare la valutazione, la pianificazione e l'esecuzione degli aggiornamenti ONTAP .
 Dashboard della sostenibilità:: Analizza la sostenibilità dei tuoi sistemi di storage.
 NetApp Cloud Tiering:: Estendi il tuo storage ONTAP on-premise al cloud.
-Caching del volume NetApp:: Crea un volume di cache scrivibile per velocizzare l'accesso ai dati o per scaricare il traffico dai volumi a cui si accede più frequentemente.
+NetApp Volume Caching:: Crea un volume di cache scrivibile per velocizzare l'accesso ai dati o per scaricare il traffico dai volumi a cui si accede più frequentemente.
 Carichi di lavoro NetApp:: Progetta, configura e gestisci carichi di lavoro chiave utilizzando Amazon FSx for NetApp ONTAP.
 
 
-https://www.netapp.com/bluexp/["Scopri di più sulla console NetApp e sui servizi dati disponibili"^]
+https://www.netapp.com/bluexp/["Scopri di più sulla NetApp Console e sui servizi dati disponibili"^]
 
 
 
@@ -134,7 +134,7 @@ La Console fornisce la gestione delle identità e degli accessi (IAM) per la ges
 * Le _cartelle_ consentono di raggruppare insieme progetti correlati
 * La gestione delle risorse consente di associare una risorsa a una o più cartelle o progetti
 * La gestione degli accessi consente di assegnare un ruolo ai membri a diversi livelli della gerarchia dell'organizzazione
-* link:concept-identity-and-access-management.html["Scopri di più su IAM nella console NetApp"]
+* link:concept-identity-and-access-management.html["Scopri di più su IAM nella NetApp Console"]
 
 
 

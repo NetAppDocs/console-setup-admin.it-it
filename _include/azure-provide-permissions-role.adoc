@@ -7,7 +7,7 @@ Accedere al portale di Azure e assegnare il ruolo personalizzato di Azure alla m
 .Passi
 . Dal portale di Azure, apri il servizio *Sottoscrizioni* e seleziona la tua sottoscrizione.
 +
-È importante assegnare il ruolo dal servizio *Abbonamenti* perché questo specifica l'ambito dell'assegnazione del ruolo a livello di abbonamento.  L'_ambito_ definisce l'insieme di risorse a cui si applica l'accesso.  Se si specifica un ambito a un livello diverso (ad esempio, a livello di macchina virtuale), la possibilità di completare azioni dall'interno della console NetApp ne risentirà.
+È importante assegnare il ruolo dal servizio *Abbonamenti* perché questo specifica l'ambito dell'assegnazione del ruolo a livello di abbonamento.  L'_ambito_ definisce l'insieme di risorse a cui si applica l'accesso.  Se si specifica un ambito a un livello diverso (ad esempio, a livello di macchina virtuale), la possibilità di completare azioni dall'interno della NetApp Console ne risentirà.
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Documentazione di Microsoft Azure: comprendere l'ambito di Azure RBAC"^]
@@ -16,7 +16,7 @@ https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview
 . Nella scheda *Ruolo*, seleziona il ruolo *Operatore console* e seleziona *Avanti*.
 +
 
-NOTE: Console Operator è il nome predefinito fornito nella policy.  Se hai scelto un nome diverso per il ruolo, seleziona quel nome.
+NOTE: Console Operator è il nome predefinito fornito nel criterio.  Se hai scelto un nome diverso per il ruolo, seleziona quel nome.
 
 . Nella scheda *Membri*, completa i seguenti passaggi:
 +

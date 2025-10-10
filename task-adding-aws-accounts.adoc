@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-adding-aws-accounts.html 
 keywords: permissions, aws, policy, iam, iam role, role, granting, policy, iam policy, iam user, access keys, arn, cloud provider accounts, aws, cloud provider profile, json, iam, credentials, adding credentials, add credentials, bluexp 
-summary: Aggiungi e gestisci le credenziali AWS in modo che la console NetApp disponga delle autorizzazioni necessarie per distribuire e gestire le risorse cloud nei tuoi account AWS.  Se gestisci più abbonamenti AWS, puoi assegnare a ciascuno di essi credenziali AWS diverse dalla pagina Credenziali. 
+summary: Aggiungi e gestisci le credenziali AWS in modo che la NetApp Console disponga delle autorizzazioni necessarie per distribuire e gestire le risorse cloud nei tuoi account AWS.  Se gestisci più abbonamenti AWS, puoi assegnare a ciascuno di essi credenziali AWS diverse dalla pagina Credenziali. 
 ---
 = Gestisci le credenziali AWS e gli abbonamenti al marketplace per NetApp Console
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Aggiungi e gestisci le credenziali AWS in modo che la console NetApp di
 
 
 [role="lead"]
-Aggiungi e gestisci le credenziali AWS in modo da distribuire e gestire le risorse cloud nei tuoi account AWS dalla console NetApp .  Se gestisci più abbonamenti AWS Marketplace, puoi assegnare a ciascuno di essi credenziali AWS diverse dalla pagina Credenziali.
+Aggiungi e gestisci le credenziali AWS in modo da distribuire e gestire le risorse cloud nei tuoi account AWS dalla NetApp Console.  Se gestisci più abbonamenti AWS Marketplace, puoi assegnare a ciascuno di essi credenziali AWS diverse dalla pagina Credenziali.
 
 
 
@@ -28,7 +28,7 @@ Aggiungi le credenziali AWS a un agente della console per gestire le risorse clo
 
 * Aggiungere le credenziali AWS alla Console per creare un agente della Console
 +
-L'aggiunta di nuove credenziali AWS alla Console fornisce le autorizzazioni necessarie per creare un agente della Console. <<add-aws-credentials-agent-creation,Scopri come aggiungere le credenziali AWS alla console NetApp>> .
+L'aggiunta di nuove credenziali AWS alla Console fornisce le autorizzazioni necessarie per creare un agente della Console. <<add-aws-credentials-agent-creation,Scopri come aggiungere le credenziali AWS alla NetApp Console>> .
 
 * Aggiungere le credenziali AWS alla console per FSx per ONTAP
 +
@@ -40,7 +40,7 @@ Aggiungi nuove credenziali AWS alla Console per creare e gestire FSx per ONTAP. 
 
 == Come ruotare le credenziali
 
-La console NetApp consente di fornire le credenziali AWS in diversi modi: un ruolo IAM associato all'istanza dell'agente, assumendo un ruolo IAM in un account attendibile o fornendo le chiavi di accesso AWS. link:concept-accounts-aws.html["Scopri di più sulle credenziali e le autorizzazioni AWS"] .
+La NetApp Console consente di fornire le credenziali AWS in diversi modi: un ruolo IAM associato all'istanza dell'agente, assumendo un ruolo IAM in un account attendibile o fornendo le chiavi di accesso AWS. link:concept-accounts-aws.html["Scopri di più sulle credenziali e le autorizzazioni AWS"] .
 
 Con le prime due opzioni, la Console utilizza AWS Security Token Service per ottenere credenziali temporanee che ruotano costantemente.  Questo processo è la prassi migliore perché è automatico e sicuro.
 
@@ -52,7 +52,7 @@ Ruota manualmente le chiavi di accesso AWS aggiornandole nella Console.
 
 Aggiungi ulteriori credenziali AWS a un agente della console in modo che disponga delle autorizzazioni necessarie per gestire risorse e processi all'interno del tuo ambiente cloud pubblico.  È possibile fornire l'ARN di un ruolo IAM in un altro account oppure fornire le chiavi di accesso AWS.
 
-Se hai appena iniziato a usare la Console,link:concept-accounts-aws.html["Scopri come la console NetApp utilizza le credenziali e le autorizzazioni AWS"] .
+Se hai appena iniziato a usare la Console,link:concept-accounts-aws.html["Scopri come la NetApp Console utilizza le credenziali e le autorizzazioni AWS"] .
 
 
 
@@ -157,7 +157,7 @@ Aggiungere le credenziali AWS fornendo l'ARN di un ruolo IAM che fornisce le aut
 
 === Impostare il ruolo IAM
 
-Impostare un ruolo IAM che consenta al livello SaaS (Software as a Service) della console NetApp di assumere tale ruolo.
+Impostare un ruolo IAM che consenta al livello SaaS (Software as a Service) della NetApp Console di assumere tale ruolo.
 
 .Passi
 . Accedere alla console IAM nell'account di destinazione.
@@ -222,7 +222,7 @@ image:screenshot-settings-icon-organization.png["Uno screenshot che mostra l'ico
 
 . Nella pagina *Credenziali dell'organizzazione* o *Credenziali dell'account*, seleziona *Aggiungi credenziali* e segui i passaggi della procedura guidata.
 +
-.. *Posizione delle credenziali*: selezionare *Amazon Web Services > Console NetApp *.
+.. *Posizione delle credenziali*: selezionare *Amazon Web Services > NetApp Console*.
 .. *Definisci credenziali*: fornisci l'ARN (Amazon Resource Name) del ruolo IAM.
 .. *Revisione*: conferma i dettagli sulle nuove credenziali e seleziona *Aggiungi*.
 
@@ -259,10 +259,10 @@ Il seguente video mostra i passaggi per abbonarsi a NetApp Intelligent Services 
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
-. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
 +
-È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla console NetApp .
+È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla NetApp Console.
 
 +
 image:screenshot_aws_configure_subscription.png["Uno screenshot del menu azioni per un set di credenziali esistenti."]
@@ -274,7 +274,7 @@ image:screenshot_aws_configure_subscription.png["Uno screenshot del menu azioni 
 .. Seleziona *Iscriviti*.
 .. Seleziona *Configura il tuo account*.
 +
-Verrai reindirizzato alla console NetApp .
+Verrai reindirizzato alla NetApp Console.
 
 .. Dalla pagina *Assegnazione abbonamento*:
 +
@@ -308,7 +308,7 @@ Segui i passaggi indicati di seguito se hai sottoscritto un abbonamento ai servi
 .Passi
 . Verifica di non aver associato il tuo abbonamento all'organizzazione o all'account della tua Console.
 +
-.. Dal menu di navigazione, seleziona *Amministrazione > Licenze e abbonamenti*.
+.. Dal menu di navigazione, seleziona *Amministrazione > Licenses and subscriptions*.
 .. Seleziona *Abbonamenti*.
 .. Verifica che il tuo abbonamento non venga visualizzato.
 +

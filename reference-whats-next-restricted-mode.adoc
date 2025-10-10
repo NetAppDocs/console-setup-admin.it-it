@@ -28,4 +28,4 @@ Per assistenza, fare riferimento alla documentazione di questi servizi:
 
 
 .Informazioni correlate
-link:concept-modes.html["Modalità di distribuzione della console NetApp"]
+link:concept-modes.html["Modalità di distribuzione NetApp Console"]

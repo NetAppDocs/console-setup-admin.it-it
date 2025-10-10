@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-manage-folders-projects.html 
 keywords: folders, projects, resource hierarchy, create folders, create projects, iam, identity and access management, project id 
-summary: 'all"interno della console NetApp , l"utilizzo della gestione delle identità e degli accessi consente di rappresentare una gerarchia completa delle risorse utilizzando cartelle e progetti.' 
+summary: 'all"interno della NetApp Console, l"utilizzo della gestione delle identità e degli accessi consente di rappresentare una gerarchia completa delle risorse utilizzando cartelle e progetti.' 
 ---
-= Organizza le risorse della console NetApp con cartelle e progetti
+= Organizza le risorse NetApp Console con cartelle e progetti
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'all"interno della console NetApp , l"utilizzo della gestione delle ide
 
 
 [role="lead"]
-All'interno della console NetApp puoi organizzare le tue risorse NetApp utilizzando progetti e cartelle.  Un _progetto_ rappresenta un'area di lavoro nella Console a cui i membri dell'organizzazione accedono per gestire le _risorse_ (ad esempio, un sistema Cloud Volumes ONTAP ).  Una _cartella_ raggruppa insieme progetti correlati.  Dopo aver organizzato le risorse in cartelle e progetti, puoi concedere un accesso granulare alle risorse fornendo ai membri dell'organizzazione autorizzazioni per cartelle e progetti specifici.
+All'interno della NetApp Console puoi organizzare le tue risorse NetApp utilizzando progetti e cartelle.  Un _progetto_ rappresenta un'area di lavoro nella Console a cui i membri dell'organizzazione accedono per gestire le _risorse_ (ad esempio, un sistema Cloud Volumes ONTAP ).  Una _cartella_ raggruppa insieme progetti correlati.  Dopo aver organizzato le risorse in cartelle e progetti, puoi concedere un accesso granulare alle risorse fornendo ai membri dell'organizzazione autorizzazioni per cartelle e progetti specifici.
 
 
 
@@ -159,7 +159,7 @@ link:concept-identity-and-access-management.html#role-inheritance["Scopri di pi�
 
 == Informazioni correlate
 
-* link:concept-identity-and-access-management.html["Scopri di più su identità e accesso nella console NetApp"]
+* link:concept-identity-and-access-management.html["Scopri di più su identità e accesso nella NetApp Console"]
 * link:task-iam-get-started.html["Inizia con identità e accesso"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Scopri di più sull'API di identità e accesso"]
 

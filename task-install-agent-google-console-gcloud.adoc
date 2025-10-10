@@ -70,7 +70,7 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp .
+Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
 
 
 
@@ -104,7 +104,7 @@ Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di agg
 --
 
 
-Endpoint contattati dalla console NetApp:: Utilizzando la console NetApp basata sul Web fornita tramite il livello SaaS, questa contatta diversi endpoint per completare le attività di gestione dei dati.  Sono inclusi gli endpoint contattati per distribuire l'agente della Console dalla Console.
+Endpoint contattati dalla console NetApp:: Utilizzando la NetApp Console basata sul Web fornita tramite il livello SaaS, questa contatta diversi endpoint per completare le attività di gestione dei dati.  Sono inclusi gli endpoint contattati per distribuire l'agente della Console dalla Console.
 +
 --
 link:reference-networking-saas-console.html["Visualizza l'elenco degli endpoint contattati dalla console NetApp"] .
@@ -128,7 +128,7 @@ porti:: Non c'è traffico in entrata verso l'agente della console, a meno che no
 --
 * HTTP (80) e HTTPS (443) forniscono l'accesso all'interfaccia utente locale, che utilizzerai in rare circostanze.
 * SSH (22) è necessario solo se è necessario connettersi all'host per la risoluzione dei problemi.
-* Le connessioni in entrata sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
+* Le connessioni in ingresso sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
 +
 Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in uscita per inviare messaggi AutoSupport , la Console configura automaticamente tali sistemi per utilizzare un server proxy incluso nell'agente della Console.  L'unico requisito è assicurarsi che il gruppo di sicurezza dell'agente Console consenta connessioni in entrata sulla porta 3128.  Sarà necessario aprire questa porta dopo aver distribuito l'agente Console.
 
@@ -342,7 +342,7 @@ compute.networkUser
 |===
 Note:
 
-. deploymentmanager.editor è necessario nel progetto host solo se non si passano regole del firewall alla distribuzione e si sceglie di lasciare che la Console le crei per conto proprio.  Se non è specificata alcuna regola, la console NetApp crea una distribuzione nel progetto host che contiene la regola del firewall VPC0.
+. deploymentmanager.editor è necessario nel progetto host solo se non si passano regole del firewall alla distribuzione e si sceglie di lasciare che la Console le crei per conto proprio.  Se non è specificata alcuna regola, la NetApp Console crea una distribuzione nel progetto host che contiene la regola del firewall VPC0.
 . firewall.create e firewall.delete sono necessari solo se non si passano regole del firewall alla distribuzione e si sceglie di lasciare che la Console le crei per conto proprio.  Queste autorizzazioni si trovano nel file .yaml dell'account Console.  Se si distribuisce una coppia HA utilizzando una VPC condivisa, queste autorizzazioni verranno utilizzate per creare le regole del firewall per VPC1, 2 e 3.  Per tutte le altre distribuzioni, queste autorizzazioni verranno utilizzate anche per creare regole per VPC0.
 . Per Cloud Tiering, l'account del servizio di tiering deve avere il ruolo serviceAccount.user sull'account del servizio, non solo a livello di progetto.  Attualmente, se si assegna serviceAccount.user a livello di progetto, le autorizzazioni non vengono visualizzate quando si esegue una query sull'account di servizio con getIAMPolicy.
 
@@ -379,7 +379,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Documentazione
 Crea un agente Console direttamente dalla Console.
 
 .Informazioni su questo compito
-La creazione dell'agente Console distribuisce un'istanza di macchina virtuale in Google Cloud utilizzando una configurazione predefinita. Non passare a un'istanza VM più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-agent-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
+La creazione dell'agente Console distribuisce un'istanza di macchina virtuale in Google Cloud utilizzando una configurazione predefinita.  Non passare a un'istanza VM più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-agent-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
 
 .Prima di iniziare
 Dovresti avere quanto segue:

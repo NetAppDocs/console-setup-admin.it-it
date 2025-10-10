@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-adding-azure-accounts.html 
 keywords: permissions, microsoft, azure, permissions, custom role, role, json, active directory, ad, service principal, key, tenant id, application key, application id, operator role, managed identity, iam, operator, role, virtual machine, create custom role, create azure custom role, azure custom role 
-summary: Aggiungi e gestisci le credenziali di Azure in modo che la console NetApp disponga delle autorizzazioni necessarie per distribuire e gestire le risorse cloud nelle tue sottoscrizioni di Azure.  Se gestisci più abbonamenti ad Azure Marketplace, puoi assegnare a ciascuno di essi credenziali Azure diverse dalla pagina Credenziali. 
+summary: Aggiungi e gestisci le credenziali di Azure in modo che la NetApp Console disponga delle autorizzazioni necessarie per distribuire e gestire le risorse cloud nelle tue sottoscrizioni di Azure.  Se gestisci più abbonamenti ad Azure Marketplace, puoi assegnare a ciascuno di essi credenziali Azure diverse dalla pagina Credenziali. 
 ---
 = Gestisci le credenziali di Azure e gli abbonamenti al marketplace per NetApp Console
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Aggiungi e gestisci le credenziali di Azure in modo che la console NetA
 
 
 [role="lead"]
-Aggiungi e gestisci le credenziali di Azure in modo che la console NetApp disponga delle autorizzazioni necessarie per distribuire e gestire le risorse cloud nelle tue sottoscrizioni di Azure.  Se gestisci più abbonamenti ad Azure Marketplace, puoi assegnare a ciascuno di essi credenziali Azure diverse dalla pagina Credenziali.
+Aggiungi e gestisci le credenziali di Azure in modo che la NetApp Console disponga delle autorizzazioni necessarie per distribuire e gestire le risorse cloud nelle tue sottoscrizioni di Azure.  Se gestisci più abbonamenti ad Azure Marketplace, puoi assegnare a ciascuno di essi credenziali Azure diverse dalla pagina Credenziali.
 
 
 
@@ -65,7 +65,7 @@ image:screenshot_accounts_switch_azure_subscription.gif["Uno screenshot che most
 
 
 
-== Aggiungi ulteriori credenziali di Azure alla console NetApp
+== Aggiungi ulteriori credenziali di Azure alla NetApp Console
 
 Quando si distribuisce un agente Console dalla Console, la Console abilita un'identità gestita assegnata dal sistema sulla macchina virtuale che dispone delle autorizzazioni richieste.  La console seleziona queste credenziali di Azure per impostazione predefinita quando si crea un nuovo sistema per Cloud Volumes ONTAP.
 
@@ -83,7 +83,7 @@ La console necessita delle autorizzazioni per eseguire azioni in Azure.  È poss
 .Informazioni su questo compito
 L'immagine seguente illustra come la console ottiene le autorizzazioni per eseguire operazioni in Azure.  Un oggetto entità servizio, associato a una o più sottoscrizioni di Azure, rappresenta la console nell'ID Microsoft Entra e viene assegnato a un ruolo personalizzato che consente le autorizzazioni richieste.
 
-image:diagram_azure_authentication.png["Immagine concettuale che mostra la Console mentre ottiene l'autenticazione e l'autorizzazione dall'ID Microsoft Entra prima di poter effettuare una chiamata API.  In Active Directory, il ruolo Console definisce le autorizzazioni.  È collegato a una o più sottoscrizioni di Azure e a un oggetto entità servizio che rappresenta l'applicazione Cloud Manager."]
+image:diagram_azure_authentication.png["Immagine concettuale che mostra la Console mentre ottiene l'autenticazione e l'autorizzazione dall'ID Microsoft Entra prima di poter effettuare una chiamata API.  In Active Directory, il ruolo Console definisce le autorizzazioni.  È collegato a una o più sottoscrizioni di Azure e a un oggetto principale del servizio che rappresenta l'applicazione Cloud Manager."]
 
 .Passi
 . <<Creare un'applicazione Microsoft Entra>> .
@@ -113,7 +113,7 @@ image:screenshot_azure_ad.png["Mostra il servizio Active Directory in Microsoft 
 . Specificare i dettagli sull'applicazione:
 +
 ** *Nome*: inserisci un nome per l'applicazione.
-** *Tipo di account*: seleziona un tipo di account (qualsiasi funzionerà con la console NetApp ).
+** *Tipo di account*: seleziona un tipo di account (qualsiasi funzionerà con la NetApp Console).
 ** *URI di reindirizzamento*: puoi lasciare vuoto questo campo.
 
 
@@ -203,7 +203,7 @@ image:screenshot_azure_service_principal_role.png["Uno screenshot del portale di
 L'entità servizio ora dispone delle autorizzazioni di Azure necessarie per distribuire l'agente della console.
 
 +
-Se si desidera distribuire Cloud Volumes ONTAP da più sottoscrizioni di Azure, è necessario associare l'entità servizio a ciascuna di tali sottoscrizioni.  Nella console NetApp è possibile selezionare l'abbonamento che si desidera utilizzare durante la distribuzione Cloud Volumes ONTAP.
+Se si desidera distribuire Cloud Volumes ONTAP da più sottoscrizioni di Azure, è necessario associare l'entità servizio a ciascuna di tali sottoscrizioni.  Nella NetApp Console, puoi selezionare l'abbonamento che desideri utilizzare durante la distribuzione Cloud Volumes ONTAP.
 
 
 
@@ -324,10 +324,10 @@ La sostituzione dell'attuale abbonamento al marketplace lo aggiorna per i sistem
 
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
-. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
 +
-È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla console NetApp .
+È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla NetApp Console.
 
 . Per associare le credenziali a un abbonamento esistente, seleziona l'abbonamento dall'elenco a discesa e seleziona *Configura*.
 . Per associare le credenziali a un nuovo abbonamento, seleziona *Aggiungi abbonamento > Continua* e segui i passaggi in Azure Marketplace:
@@ -337,7 +337,7 @@ La sostituzione dell'attuale abbonamento al marketplace lo aggiorna per i sistem
 .. Compila il modulo e seleziona *Iscriviti*.
 .. Una volta completato il processo di sottoscrizione, seleziona *Configura account ora*.
 +
-Verrai reindirizzato alla console NetApp .
+Verrai reindirizzato alla NetApp Console.
 
 .. Dalla pagina *Assegnazione abbonamento*:
 +
@@ -370,7 +370,7 @@ Modifica le tue credenziali di Azure nella Console.  Ad esempio, è possibile ag
 
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
-. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare *Credenziali dell'organizzazione*.
 . Selezionare il menu azioni per un set di credenziali, quindi selezionare *Modifica credenziali*.
 . Apporta le modifiche desiderate e seleziona *Applica*.
 
@@ -383,7 +383,7 @@ Se non hai più bisogno di un set di credenziali, puoi eliminarlo.  È possibile
 
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
-. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare *Credenziali dell'organizzazione*.
 . Nella pagina *Credenziali dell'organizzazione*, seleziona il menu azioni per un set di credenziali, quindi seleziona *Elimina credenziali*.
 . Selezionare *Elimina* per confermare.
 

@@ -25,7 +25,7 @@ Se si dispone di più agenti Console, è possibile passare da uno all'altro per 
 Ad esempio, in un ambiente multi-cloud, potresti avere un agente in AWS e un altro in Google Cloud.  Passa da un agente all'altro per gestire i sistemi Cloud Volumes ONTAP nei rispettivi ambienti cloud.
 
 
-NOTE: Questa opzione non è disponibile quando si visualizza la console NetApp dall'interfaccia utente locale dell'agente
+NOTE: Questa opzione non è disponibile quando si visualizza la NetApp Console dall'interfaccia utente locale dell'agente
 
 .Fare un passo
 . Selezionare l'icona Agenti della console (image:icon-agent.png["icona dell'agente"] ) in alto a destra per visualizzare l'elenco degli agenti disponibili.

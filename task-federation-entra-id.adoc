@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-federation-entra-id.html 
 keywords: Microsoft Entra ID, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, domain verification, client secret, redirect URL, organization admin, 
-summary: 'Federati con il tuo provider IdP Microsoft Entra ID per abilitare l"accesso Single Sign-On (SSO) per la console NetApp .  Ciò consente agli utenti di accedere utilizzando le proprie credenziali aziendali.' 
+summary: 'Federati con il tuo provider IdP Microsoft Entra ID per abilitare l"accesso Single Sign-On (SSO) per NetApp Console.  Ciò consente agli utenti di accedere utilizzando le proprie credenziali aziendali.' 
 ---
-= Federare la console NetApp con l'ID Microsoft Entra
+= Federare la NetApp Console con l'ID Microsoft Entra
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Federati con il tuo provider IdP Microsoft Entra ID per abilitare l"ac
 
 
 [role="lead"]
-Federati con il tuo provider IdP Microsoft Entra ID per abilitare l'accesso Single Sign-On (SSO) per la console NetApp .  Ciò consente agli utenti di accedere utilizzando le proprie credenziali aziendali.
+Federati con il tuo provider IdP Microsoft Entra ID per abilitare l'accesso Single Sign-On (SSO) per NetApp Console.  Ciò consente agli utenti di accedere utilizzando le proprie credenziali aziendali.
 
 .Ruoli richiesti
 Il ruolo di amministratore della federazione è necessario per creare e gestire le federazioni.  Il visualizzatore della Federazione può visualizzare la pagina della Federazione.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
@@ -27,8 +27,8 @@ NetApp supporta solo SSO avviato dal provider di servizi (SP).  Per prima cosa �
 È possibile impostare una connessione federata con Microsoft Entra ID per abilitare l'accesso Single Sign-On (SSO) per la Console.  Il processo prevede la configurazione del tuo ID Microsoft Entra in modo che consideri attendibile la Console come fornitore di servizi e quindi la creazione della connessione nella Console.
 
 .Prima di iniziare
-* È richiesto un account IdP con privilegi amministrativi.  Coordinati con l'amministratore del tuo IdP per completare i passaggi.
-* Identifica il dominio che vuoi utilizzare per la federazione.  Puoi utilizzare il tuo dominio di posta elettronica o un dominio diverso di tua proprietà.  Se desideri utilizzare un dominio diverso dal tuo dominio di posta elettronica, devi prima verificare il dominio nella Console.  Puoi farlo seguendo i passaggi indicati inlink:task-federation-verify-domain.html["Verifica il tuo dominio nella console NetApp"] argomento.
+* È richiesto un account IdP con privilegi amministrativi.  Coordinati con l'amministratore dell'IdP per completare i passaggi.
+* Identifica il dominio che vuoi utilizzare per la federazione.  Puoi utilizzare il tuo dominio di posta elettronica o un dominio diverso di tua proprietà.  Se desideri utilizzare un dominio diverso dal tuo dominio di posta elettronica, devi prima verificare il dominio nella Console.  Puoi farlo seguendo i passaggi indicati inlink:task-federation-verify-domain.html["Verifica il tuo dominio nella NetApp Console"] argomento.
 
 
 .Passi

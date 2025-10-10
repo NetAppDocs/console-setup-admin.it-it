@@ -4,7 +4,7 @@ permalink: reference-iam-backup-rec-roles.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, roles, permissions, access control, role-based access control, rbac, role-based access 
 summary: 'È possibile assegnare i seguenti ruoli agli utenti per consentire loro di accedere a NetApp Backup and Recovery all"interno della Console.  I ruoli di backup e ripristino offrono la flessibilità di assegnare agli utenti un ruolo specifico per le attività che devono svolgere all"interno della tua organizzazione. Il modo in cui si assegnano i ruoli dipende dalle proprie pratiche aziendali e di gestione dell"archiviazione.' 
 ---
-= Ruoli di backup e ripristino NetApp nella console NetApp
+= Ruoli NetApp Backup and Recovery nella NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,24 +18,24 @@ summary: 'È possibile assegnare i seguenti ruoli agli utenti per consentire lor
 
 Il servizio utilizza i seguenti ruoli specifici di NetApp Backup and Recovery.
 
-* *Super amministratore di Backup e Recovery*: esegue qualsiasi azione in NetApp Backup e Recovery.
+* *Super amministratore di Backup e Recovery*: esegue qualsiasi azione in NetApp Backup and Recovery.
 * *Amministratore di backup e ripristino*: esegue backup su snapshot locali, replica su storage secondario ed esegue il backup su azioni di storage di oggetti in NetApp Backup and Recovery.
-* *Amministratore di Backup e ripristino*: ripristina i carichi di lavoro utilizzando NetApp Backup e ripristino.
-* *Amministratore di backup e ripristino dei cloni*: clona applicazioni e dati utilizzando NetApp Backup and Recovery.
+* *Amministratore di Backup e ripristino*: ripristina i carichi di lavoro utilizzando NetApp Backup and Recovery.
+* *Amministratore di backup e ripristino Clone*: clona applicazioni e dati utilizzando NetApp Backup and Recovery.
 * *Visualizzatore di backup e ripristino*: visualizza le informazioni in NetApp Backup and Recovery, ma non esegue alcuna azione.
 
 
-Per i dettagli su tutti i ruoli di accesso alla console NetApp , vedere https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["la documentazione di configurazione e amministrazione della console"^] .
+Per i dettagli su tutti i ruoli di accesso NetApp Console , vedere https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["la documentazione di configurazione e amministrazione della console"^] .
 
 
 
 == Ruoli utilizzati per azioni comuni
 
-La tabella seguente indica le azioni che ciascun ruolo di NetApp Backup and Recovery può eseguire per tutti i carichi di lavoro.
+La tabella seguente indica le azioni che ciascun ruolo NetApp Backup and Recovery può eseguire per tutti i carichi di lavoro.
 
 [cols="20,20,15,15a,15a,15a"]
 |===
-| Caratteristica e azione | Super amministratore di backup e ripristino | amministratore del backup di backup e ripristino | Backup e ripristino ripristino amministratore | Amministratore clone di backup e ripristino | Visualizzatore di backup e ripristino 
+| Caratteristica e azione | Super amministratore di backup e ripristino | Backup e ripristino amministratore del backup | Backup e ripristino ripristino amministratore | Amministratore clone di backup e ripristino | Visualizzatore di backup e ripristino 
 
 
 | Aggiungi, modifica o elimina host | SÌ | NO  a| 
@@ -293,17 +293,17 @@ NO
 
 == Ruoli utilizzati per azioni specifiche del carico di lavoro
 
-La tabella seguente indica le azioni che ciascun ruolo di NetApp Backup and Recovery può eseguire per carichi di lavoro specifici.
+La tabella seguente indica le azioni che ciascun ruolo NetApp Backup and Recovery può eseguire per carichi di lavoro specifici.
 
 
 
 === Carichi di lavoro Kubernetes
 
-Questa tabella indica le azioni che ciascun ruolo di NetApp Backup and Recovery può eseguire per azioni specifiche dei carichi di lavoro Kubernetes.
+Questa tabella indica le azioni che ciascun ruolo NetApp Backup and Recovery può eseguire per azioni specifiche dei carichi di lavoro Kubernetes.
 
 [cols="20,20,15,15a,15a"]
 |===
-| Caratteristica e azione | Super amministratore di backup e ripristino | amministratore del backup di backup e ripristino | Backup e ripristino ripristino amministratore | Visualizzatore di backup e ripristino 
+| Caratteristica e azione | Super amministratore di backup e ripristino | Backup e ripristino amministratore del backup | Backup e ripristino ripristino amministratore | Visualizzatore di backup e ripristino 
 
 
 | Visualizza cluster, namespace, classi di archiviazione e risorse API | SÌ | SÌ  a| 

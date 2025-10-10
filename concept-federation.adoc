@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-federation.html 
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
-summary: 'La federazione delle identità consente l"accesso Single Sign-On con la console NetApp , in modo che gli utenti possano accedere utilizzando le credenziali dell"identità aziendale.  Per iniziare, rivedi la procedura di configurazione.' 
+summary: 'La federazione delle identità consente l"accesso Single Sign-On con la NetApp Console, in modo che gli utenti possano accedere utilizzando le credenziali dell"identità aziendale.  Per iniziare, rivedi la procedura di configurazione.' 
 ---
 = Abilita l'accesso singolo utilizzando la federazione delle identità con NetApp Console
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'La federazione delle identità consente l"accesso Single Sign-On con l
 
 
 [role="lead"]
-L'accesso Single Sign-On (federazione) semplifica il processo di accesso e migliora la sicurezza consentendo agli utenti di accedere alla console NetApp utilizzando le proprie credenziali aziendali.  Puoi abilitare l'accesso Single Sign-On (SSO) con il tuo provider di identità (IdP) o con il sito di supporto NetApp .
+L'accesso Single Sign-On (federazione) semplifica il processo di accesso e migliora la sicurezza consentendo agli utenti di accedere alla NetApp Console utilizzando le proprie credenziali aziendali.  Puoi abilitare l'accesso Single Sign-On (SSO) con il tuo provider di identità (IdP) o con il sito di supporto NetApp .
 
 .Ruolo richiesto
 Amministratore dell'organizzazione, amministratore della federazione, visualizzatore della federazione.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
@@ -63,7 +63,7 @@ NetApp supporta i seguenti protocolli e provider di identità per la federazione
 
 
 
-=== Federazione con flusso di lavoro della console NetApp
+=== Federazione con flusso di lavoro NetApp Console
 
 NetApp supporta solo SSO avviato dal provider di servizi (SP).  Per prima cosa è necessario configurare il provider di identità in modo che consideri attendibile NetApp come fornitore di servizi.  Quindi, è possibile creare una connessione nella Console che utilizzi la configurazione del provider di identità.
 

@@ -28,5 +28,5 @@
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["Documentazione AWS: aggiunta e rimozione di policy IAM"^]
 
 
-. Assicurarsi che l'utente disponga di una chiave di accesso che è possibile aggiungere alla console NetApp dopo aver installato l'agente della console.
+. Assicurarsi che l'utente disponga di una chiave di accesso che è possibile aggiungere alla NetApp Console dopo aver installato l'agente della console.
 

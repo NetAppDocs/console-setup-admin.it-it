@@ -14,7 +14,7 @@ summary: 'L"agente della console necessita delle autorizzazioni per eseguire azi
 
 
 [role="lead"]
-La console NetApp richiede autorizzazioni per eseguire azioni in Google Cloud.  Queste autorizzazioni sono incluse in un ruolo personalizzato fornito da NetApp.  Dovresti capire cosa fa l'agente con queste autorizzazioni.
+La NetApp Console richiede autorizzazioni per eseguire azioni in Google Cloud.  Queste autorizzazioni sono incluse in un ruolo personalizzato fornito da NetApp.  Dovresti capire cosa fa l'agente con queste autorizzazioni.
 
 
 
@@ -230,7 +230,7 @@ includedPermissions:
 | - compute.networks.updatePolicy | Per applicare regole firewall alle VPC e alle subnet per una coppia HA. 
 
 
-| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | Per abilitare la classificazione dei dati NetApp . 
+| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | Per abilitare la NetApp Data Classification. 
 
 
 | - compute.instanceGroups.get - compute.addresses.get - compute.instances.updateNetworkInterface | Per creare e gestire VM di storage su coppie Cloud Volumes ONTAP HA. 
@@ -239,7 +239,7 @@ includedPermissions:
 | - monitoraggio.timeSeries.list - storage.buckets.getIamPolicy | Per scoprire informazioni sui bucket di Google Cloud Storage. 
 
 
-| - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.getIamPolicy - cloudkms.cryptoKeys.list - cloudkms.cryptoKeys.setIamPolicy - cloudkms.keyRings.get - cloudkms.keyRings.getIamPolicy - cloudkms.keyRings.list - cloudkms.keyRings.setIamPolicy | Per selezionare le chiavi gestite dal cliente nella procedura guidata di attivazione di NetApp Backup and Recovery anziché utilizzare le chiavi di crittografia predefinite gestite da Google. 
+| - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.getIamPolicy - cloudkms.cryptoKeys.list - cloudkms.cryptoKeys.setIamPolicy - cloudkms.keyRings.get - cloudkms.keyRings.getIamPolicy - cloudkms.keyRings.list - cloudkms.keyRings.setIamPolicy | Per selezionare le chiavi gestite dal cliente nella procedura guidata di attivazione NetApp Backup and Recovery anziché utilizzare le chiavi di crittografia predefinite gestite da Google. 
 |===
 
 

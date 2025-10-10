@@ -4,7 +4,7 @@ permalink: task-adding-nss-accounts.html
 keywords: adding, creating, netapp support site account, nss, update account, update nss account, update nss credentials, delete nss account, remove nss account, change working environment, working environment nss, digital wallet, license, change system, system nss, licenses and subscriptions 
 summary: 'Associa un account NetApp Support Site alla tua organizzazione NetApp Console per abilitare flussi di lavoro chiave per Cloud Volumes ONTAP.  Queste credenziali NSS sono associate all"intera organizzazione.' 
 ---
-= Gestisci le credenziali NSS associate alla console NetApp
+= Gestisci le credenziali NSS associate alla NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -26,7 +26,7 @@ Per abilitare le seguenti attività è necessario associare le credenziali del s
 
 * Distribuzione di Cloud Volumes ONTAP quando si utilizza la propria licenza (BYOL)
 +
-È necessario fornire il proprio account NSS affinché la Console possa caricare la chiave di licenza e abilitare l'abbonamento per il periodo acquistato. Ciò include aggiornamenti automatici per i rinnovi dei termini.
+È necessario fornire il proprio account NSS affinché la Console possa caricare la chiave di licenza e abilitare l'abbonamento per il periodo acquistato.  Ciò include aggiornamenti automatici per i rinnovi dei termini.
 
 * Registrazione dei sistemi Cloud Volumes ONTAP a consumo
 +
@@ -60,12 +60,12 @@ NOTE: NetApp utilizza Microsoft Entra ID come provider di identità per i serviz
 Dopo aver effettuato l'accesso, NetApp memorizzerà il nome utente NSS.
 
 +
-Si tratta di un ID generato dal sistema che corrisponde al tuo indirizzo email. Nella pagina *Gestione NSS*, puoi visualizzare la tua email daimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Un'icona di tre punti orizzontali"] menu.
+Si tratta di un ID generato dal sistema che corrisponde al tuo indirizzo email.  Nella pagina *Gestione NSS*, puoi visualizzare la tua email daimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Un'icona di tre punti orizzontali"] menu.
 
 +
-** Se hai bisogno di aggiornare i token delle tue credenziali di accesso, c'è anche un'opzione *Aggiorna credenziali* inimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Un'icona di tre punti orizzontali"] menu.
+** Se hai bisogno di aggiornare i token delle credenziali di accesso, è disponibile anche l'opzione *Aggiorna credenziali* inimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Un'icona di tre punti orizzontali"] menu.
 +
-Utilizzando questa opzione ti verrà richiesto di effettuare nuovamente l'accesso. Si noti che il token per questi account scade dopo 90 giorni. Verrà pubblicata una notifica per avvisarti di ciò.
+Utilizzando questa opzione ti verrà richiesto di effettuare nuovamente l'accesso.  Si noti che il token per questi account scade dopo 90 giorni.  Verrà pubblicata una notifica per avvisarti di ciò.
 
 
 

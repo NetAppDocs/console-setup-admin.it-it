@@ -14,7 +14,7 @@ Dopo l'installazione è possibile configurare un server proxy, ma per farlo è n
 
 
 
-NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console. Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console.html["Console di manutenzione dell'agente"] .
+NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console.  Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console.html["Console di manutenzione dell'agente"] .
 
 .Informazioni su questo compito
 Il programma di installazione disponibile sul sito di supporto NetApp potrebbe essere una versione precedente.  Dopo l'installazione, l'agente Console si aggiorna automaticamente se è disponibile una nuova versione.
@@ -136,7 +136,7 @@ https://_ipaddress_[]
 .. Inserisci un nome per il sistema.
 .. In *Stai utilizzando un ambiente protetto?* mantieni disattivata la modalità con restrizioni.
 +
-È consigliabile disattivare la modalità limitata perché questi passaggi descrivono come utilizzare la Console in modalità standard.  Dovresti abilitare la modalità limitata solo se disponi di un ambiente sicuro e desideri disconnettere questo account dai servizi backend.  Se è così,link:task-quick-start-restricted-mode.html["segui i passaggi per iniziare a utilizzare la console NetApp in modalità limitata"] .
+È consigliabile disattivare la modalità limitata perché questi passaggi descrivono come utilizzare la Console in modalità standard.  Dovresti abilitare la modalità limitata solo se disponi di un ambiente sicuro e desideri disconnettere questo account dai servizi backend.  Se è così,link:task-quick-start-restricted-mode.html["segui i passaggi per iniziare a utilizzare la NetApp Console in modalità limitata"] .
 
 .. Seleziona *Iniziamo*.
 

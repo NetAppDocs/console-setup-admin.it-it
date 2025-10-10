@@ -64,7 +64,7 @@ Ad esempio, se si dispone di due progetti e si desidera che lo stesso utente abb
 L'elenco *Membro* mostra i membri che l'organizzazione partner ha aggiunto alla partnership.
 
 . Seleziona il menu azioniimage:icon-action.png["un'icona con tre punti verticali"] accanto al membro a cui vuoi assegnare un ruolo e seleziona *Aggiungi un ruolo*.
-. Per aggiungere un ruolo, completare i passaggi indicati nella finestra di dialogo:
+. Per aggiungere un ruolo, completare i passaggi nella finestra di dialogo:
 +
 ** *Seleziona un'organizzazione, una cartella o un progetto*: scegli il livello della gerarchia delle risorse per il quale il membro deve avere le autorizzazioni.
 +

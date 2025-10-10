@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-install-restricted-mode.html 
 keywords: government region, gov, govcloud, connector, sovereign cloud 
-summary: 'Distribuisci l"agente Console in modalità limitata in modo da poter utilizzare la console NetApp con connettività in uscita limitata.  Per iniziare, installa l"agente Console, configura la Console accedendo all"interfaccia utente in esecuzione sull"agente Console, quindi fornisci le autorizzazioni cloud configurate in precedenza.' 
+summary: 'Distribuisci l"agente Console in modalità limitata in modo da poter utilizzare la NetApp Console con connettività in uscita limitata.  Per iniziare, installa l"agente Console, configura la Console accedendo all"interfaccia utente in esecuzione sull"agente Console, quindi fornisci le autorizzazioni cloud configurate in precedenza.' 
 ---
 = Distribuisci l'agente della console in modalità limitata
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Distribuisci l"agente Console in modalità limitata in modo da poter u
 
 
 [role="lead"]
-Distribuisci l'agente Console in modalità limitata in modo da poter utilizzare la console NetApp con connettività in uscita limitata.  Per iniziare, installa l'agente Console, configura la Console accedendo all'interfaccia utente in esecuzione sull'agente Console, quindi fornisci le autorizzazioni cloud configurate in precedenza.
+Distribuisci l'agente Console in modalità limitata in modo da poter utilizzare la NetApp Console con connettività in uscita limitata.  Per iniziare, installa l'agente Console, configura la Console accedendo all'interfaccia utente in esecuzione sull'agente Console, quindi fornisci le autorizzazioni cloud configurate in precedenza.
 
 
 
@@ -46,7 +46,7 @@ link:task-prepare-restricted-mode.html#step-3-review-host-requirements["Esaminar
 
 
 .Passi
-. Vai al https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Elenco degli agenti della console NetApp su AWS Marketplace"^]
+. Vai al https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Elenco degli agenti NetApp Console su AWS Marketplace"^]
 . Nella pagina Marketplace, seleziona *Continua ad abbonarti*.
 . Per abbonarsi al software, selezionare *Accetta i termini*.
 +
@@ -88,7 +88,7 @@ Se si desidera abilitare la crittografia Amazon EBS sul volume root, selezionare
 AWS avvia il software con le impostazioni specificate.  L'istanza dell'agente Console e il software vengono eseguiti in circa cinque minuti.
 
 .Cosa succederà ora?
-Configurare la console NetApp .
+Configurare la NetApp Console.
 
 --
 .AWS Gov Marketplace
@@ -131,7 +131,7 @@ link:task-prepare-restricted-mode.html["Esaminare i requisiti dell'istanza"] .
 image:screenshot_aws_iam_role.gif["Uno screenshot che mostra i campi nella pagina Configura istanza in AWS.  Viene selezionato il ruolo IAM che avresti dovuto creare nel passaggio 1."]
 
 ** *Aggiungi spazio di archiviazione*: mantieni le opzioni di archiviazione predefinite.
-** *Aggiungi tag*: inserisci i tag per l'istanza, se lo desideri.
+** *Aggiungi tag*: se lo desideri, inserisci i tag per l'istanza.
 ** *Configura gruppo di sicurezza*: specifica i metodi di connessione richiesti per l'istanza dell'agente Console: SSH, HTTP e HTTPS.
 ** *Revisione*: rivedi le tue selezioni e seleziona *Avvia*.
 
@@ -161,7 +161,7 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Scopri 
 
 
 .Passi
-. Vai alla pagina della macchina virtuale dell'agente della console NetApp in Azure Marketplace.
+. Vai alla pagina della macchina virtuale dell'agente NetApp Console in Azure Marketplace.
 +
 ** https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager["Pagina di Azure Marketplace per le regioni commerciali"^]
 ** https://portal.azure.us/#create/netapp.netapp-oncommand-cloud-manageroccm-byol["Pagina di Azure Marketplace per le regioni di Azure Government"^]
@@ -202,7 +202,7 @@ Questa impostazione è importante perché un'identità gestita consente alla mac
 Azure distribuisce la macchina virtuale con le impostazioni specificate.  La macchina virtuale e il software dell'agente della console dovrebbero essere in esecuzione entro circa cinque minuti.
 
 .Cosa succederà ora?
-Configurare la console NetApp .
+Configurare la NetApp Console.
 
 --
 .Installazione manuale
@@ -219,9 +219,9 @@ Dopo l'installazione è possibile configurare un server proxy, ma per farlo è n
 
 
 
-NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console. Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console.html["Console di manutenzione dell'agente"] .
+NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console.  Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console.html["Console di manutenzione dell'agente"] .
 
-* È necessario disattivare il controllo della configurazione che verifica la connettività in uscita durante l'installazione. L'installazione manuale fallisce se questo controllo non è disabilitato.link:task-troubleshoot-agent.html["Scopri come disattivare i controlli di configurazione per le installazioni manuali."]
+* È necessario disattivare il controllo della configurazione che verifica la connettività in uscita durante l'installazione.  L'installazione manuale fallisce se questo controllo non è disabilitato.link:task-troubleshoot-agent.html["Scopri come disattivare i controlli di configurazione per le installazioni manuali."]
 * A seconda del sistema operativo in uso, prima di installare l'agente Console è necessario utilizzare Podman o Docker Engine.
 
 
@@ -337,7 +337,7 @@ Esc:wq
 L'agente Console è ora installato.  Al termine dell'installazione, il servizio agente della console (occm) viene riavviato due volte se è stato specificato un server proxy.
 
 .Cosa succederà ora?
-Configurare la console NetApp .
+Configurare la NetApp Console.
 
 --
 ====
@@ -380,7 +380,7 @@ Fornisci alla Console le autorizzazioni precedentemente impostate.
 
 
 
-== Passaggio 3: fornire le autorizzazioni alla console NetApp
+== Passaggio 3: fornire le autorizzazioni alla NetApp Console
 
 Se hai distribuito l'agente Console da Azure Marketplace o se hai installato manualmente il software dell'agente Console, devi fornire le autorizzazioni configurate in precedenza.
 
@@ -407,11 +407,11 @@ Questi passaggi sono validi solo se hai installato manualmente l'agente Console 
 --
 .Chiave di accesso AWS
 --
-Fornire alla console NetApp la chiave di accesso AWS per un utente IAM che dispone delle autorizzazioni richieste.
+Fornire alla NetApp Console la chiave di accesso AWS per un utente IAM che dispone delle autorizzazioni richieste.
 
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
-. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare *Credenziali dell'organizzazione*.
 . Selezionare *Aggiungi credenziali* e seguire i passaggi della procedura guidata.
 +
 .. *Posizione delle credenziali*: seleziona *Amazon Web Services > Agente.
@@ -430,7 +430,7 @@ Accedere al portale di Azure e assegnare il ruolo personalizzato di Azure alla m
 .Passi
 . Dal portale di Azure, apri il servizio *Sottoscrizioni* e seleziona la tua sottoscrizione.
 +
-È importante assegnare il ruolo dal servizio *Abbonamenti* perché questo specifica l'ambito dell'assegnazione del ruolo a livello di abbonamento.  L'_ambito_ definisce l'insieme di risorse a cui si applica l'accesso.  Se si specifica un ambito a un livello diverso (ad esempio, a livello di macchina virtuale), la possibilità di completare azioni dall'interno della console NetApp ne risentirà.
+È importante assegnare il ruolo dal servizio *Abbonamenti* perché questo specifica l'ambito dell'assegnazione del ruolo a livello di abbonamento.  L'_ambito_ definisce l'insieme di risorse a cui si applica l'accesso.  Se si specifica un ambito a un livello diverso (ad esempio, a livello di macchina virtuale), la possibilità di completare azioni dall'interno della NetApp Console ne risentirà.
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Documentazione di Microsoft Azure: comprendere l'ambito di Azure RBAC"^]
@@ -439,7 +439,7 @@ https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview
 . Nella scheda *Ruolo*, seleziona il ruolo *Operatore console* e seleziona *Avanti*.
 +
 
-NOTE: Console Operator è il nome predefinito fornito nella policy.  Se hai scelto un nome diverso per il ruolo, seleziona quel nome.
+NOTE: Console Operator è il nome predefinito fornito nel criterio.  Se hai scelto un nome diverso per il ruolo, seleziona quel nome.
 
 . Nella scheda *Membri*, completa i seguenti passaggi:
 +
@@ -456,7 +456,7 @@ NOTE: Console Operator è il nome predefinito fornito nella policy.  Se hai scel
 --
 .Entità del servizio di Azure
 --
-Fornire alla console NetApp le credenziali per l'entità servizio di Azure configurata in precedenza.
+Fornire alla NetApp Console le credenziali per l'entità servizio di Azure configurata in precedenza.
 
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
@@ -477,7 +477,7 @@ Fornire alla console NetApp le credenziali per l'entità servizio di Azure confi
 
 
 .Risultato
-la console NetApp ora dispone delle autorizzazioni necessarie per eseguire azioni in Azure per tuo conto.
+la NetApp Console ora dispone delle autorizzazioni necessarie per eseguire azioni in Azure per tuo conto.
 
 --
 .Account di servizio Google Cloud
@@ -489,7 +489,7 @@ Associare l'account di servizio alla VM dell'agente Console.
 +
 https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Documentazione di Google Cloud: modifica dell'account di servizio e degli ambiti di accesso per un'istanza"^]
 
-. Se si desidera gestire le risorse in altri progetti, concedere l'accesso aggiungendo l'account di servizio con il ruolo di agente della console a quel progetto. Sarà necessario ripetere questo passaggio per ogni progetto.
+. Se si desidera gestire le risorse in altri progetti, concedere l'accesso aggiungendo l'account di servizio con il ruolo di agente della console a quel progetto.  Sarà necessario ripetere questo passaggio per ogni progetto.
 
 
 --

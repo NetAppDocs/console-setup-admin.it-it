@@ -4,7 +4,7 @@ permalink: task-monitor-cm-operations.html
 keywords: administer, monitor, timeline, notifications, alerts, events, notification center, email, audit page, audit action 
 summary: È possibile monitorare lo stato delle operazioni eseguite dalla Console per verificare se ci sono problemi da risolvere.  Puoi visualizzare lo stato dalla pagina Audit, dal Centro notifiche oppure ricevere notifiche via email. 
 ---
-= Monitorare le operazioni della console NetApp
+= Monitorare le operazioni NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -82,7 +82,7 @@ Le notifiche monitorano le operazioni della Console per confermarne il successo.
 
 Il Centro notifiche consente di visualizzare lo stato delle operazioni avviate e di impostare notifiche di avviso per determinati tipi di attività di sistema.  Nel frattempo, gli avvisi consentono di visualizzare problemi o potenziali rischi nel tuo ambiente di archiviazione ONTAP in relazione a capacità, disponibilità, prestazioni, protezione e sicurezza.
 
-https://docs.netapp.com/us-en/console-alerts/index.html["Scopri di più sugli avvisi della console NetApp"^]
+https://docs.netapp.com/us-en/console-alerts/index.html["Scopri di più sugli avvisi NetApp Console"^]
 
 
 
@@ -136,7 +136,7 @@ Per ignorare singole notifiche, passa il cursore sulla notifica e seleziona *Ign
 
 === Imposta le impostazioni di notifica via email
 
-Puoi inviare tipi specifici di notifiche tramite e-mail, così da essere informato sulle attività importanti del sistema anche quando non hai effettuato l'accesso. Le e-mail possono essere inviate a tutti gli utenti che fanno parte della tua organizzazione o del tuo account, oppure a qualsiasi altro destinatario che debba essere a conoscenza di determinati tipi di attività del sistema.
+Puoi inviare tipi specifici di notifiche tramite e-mail, in modo da essere informato sulle attività importanti del sistema anche quando non hai effettuato l'accesso. Le e-mail possono essere inviate a tutti gli utenti che fanno parte della tua organizzazione o del tuo account, oppure a qualsiasi altro destinatario che debba essere a conoscenza di determinati tipi di attività del sistema.
 
 [NOTE]
 ====

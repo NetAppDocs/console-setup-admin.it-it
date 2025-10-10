@@ -19,7 +19,7 @@ Se desideri federarti con un dominio diverso dal tuo dominio di posta elettronic
 .Ruoli richiesti
 Il ruolo di amministratore della federazione è necessario per creare e gestire le federazioni.  Il visualizzatore della Federazione può visualizzare la pagina della Federazione.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
 
-La verifica del tuo dominio comporta l'aggiunta di un record TXT alle impostazioni DNS del tuo dominio.  Questo record viene utilizzato per dimostrare che sei il proprietario del dominio e consente alla console NetApp di considerare attendibile il dominio per la federazione.  Potrebbe essere necessario coordinarsi con l'amministratore IT o di rete per completare questo passaggio.
+La verifica del tuo dominio comporta l'aggiunta di un record TXT alle impostazioni DNS del tuo dominio.  Questo record viene utilizzato per dimostrare che sei il proprietario del dominio e consente alla NetApp Console di considerare attendibile il dominio per la federazione.  Potrebbe essere necessario coordinarsi con l'amministratore IT o di rete per completare questo passaggio.
 
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.

@@ -3,7 +3,7 @@
 
 
 . Selezionare *Amministrazione > Credenziali*.
-. Seleziona *Credenziali dell'organizzazione*.
+. Selezionare *Credenziali dell'organizzazione*.
 . Selezionare *Aggiungi credenziali* e seguire i passaggi della procedura guidata.
 +
 .. *Posizione delle credenziali*: seleziona *Amazon Web Services > Agente.

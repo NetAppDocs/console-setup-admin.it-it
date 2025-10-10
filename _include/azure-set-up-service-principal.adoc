@@ -15,7 +15,7 @@ image:screenshot_azure_ad.png["Mostra il servizio Active Directory in Microsoft 
 . Specificare i dettagli sull'applicazione:
 +
 ** *Nome*: inserisci un nome per l'applicazione.
-** *Tipo di account*: seleziona un tipo di account (qualsiasi funzionerà con la console NetApp ).
+** *Tipo di account*: seleziona un tipo di account (qualsiasi funzionerà con la NetApp Console).
 ** *URI di reindirizzamento*: puoi lasciare vuoto questo campo.
 
 
@@ -98,7 +98,7 @@ image:screenshot_azure_service_principal_role.png["Uno screenshot del portale di
 L'entità servizio ora dispone delle autorizzazioni di Azure necessarie per distribuire l'agente della console.
 
 +
-Se si desidera distribuire Cloud Volumes ONTAP da più sottoscrizioni di Azure, è necessario associare l'entità servizio a ciascuna di tali sottoscrizioni.  Nella console NetApp è possibile selezionare l'abbonamento che si desidera utilizzare durante la distribuzione Cloud Volumes ONTAP.
+Se si desidera distribuire Cloud Volumes ONTAP da più sottoscrizioni di Azure, è necessario associare l'entità servizio a ciascuna di tali sottoscrizioni.  Nella NetApp Console, puoi selezionare l'abbonamento che desideri utilizzare durante la distribuzione Cloud Volumes ONTAP.
 
 
 

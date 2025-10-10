@@ -70,7 +70,7 @@ da 8,6 a 8,10
 * L'host deve essere registrato presso Red Hat Subscription Management.  Se non è registrato, l'host non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione dell'agente.
 
  a| 
-3.9.50 o versione successiva con la console in modalità standard o modalità limitata
+3.9.50 o versione successiva con la Console in modalità standard o modalità limitata
  a| 
 Podman versione 4.6.1 o 4.9.4
 
@@ -88,7 +88,7 @@ Ubuntu
  a| 
 24,04 LTS
  a| 
-3.9.45 o versione successiva con la console NetApp in modalità standard o modalità limitata
+3.9.45 o versione successiva con la NetApp Console in modalità standard o in modalità limitata
  a| 
 Docker Engine dalla versione 23.06 alla 28.0.0.
  a| 
@@ -230,7 +230,7 @@ sudo dnf install podman-compose-1.0.6
 ----
 +
 
-NOTE: Utilizzando il `dnf install` Il comando soddisfa il requisito per aggiungere podman-compose alla variabile d'ambiente PATH.  Il comando di installazione aggiunge podman-compose a /usr/bin, che è già incluso nel `secure_path` opzione sull'host.
+NOTE: Utilizzando il `dnf install` il comando soddisfa il requisito per aggiungere podman-compose alla variabile d'ambiente PATH.  Il comando di installazione aggiunge podman-compose a /usr/bin, che è già incluso nel `secure_path` opzione sull'host.
 
 . Se si utilizza Red Hat Enterprise Linux 8, verificare che la versione di Podman utilizzi NetAvark con Aardvark DNS anziché CNI.
 +
@@ -259,7 +259,7 @@ Se `/etc/containers/containers.conf` non esiste, apportare le modifiche alla con
 ----
 systemctl restart podman
 ----
-. Confermare che networkBackend sia ora cambiato in "netavark" utilizzando il seguente comando:
+. Verificare che networkBackend sia ora modificato in "netavark" utilizzando il seguente comando:
 +
 [source, cli]
 ----
@@ -307,7 +307,7 @@ Connessioni alle reti di destinazione:: L'agente Console richiede una connession
 Accesso a Internet in uscita:: La posizione di rete in cui si distribuisce l'agente Console deve disporre di una connessione Internet in uscita per contattare endpoint specifici.
 
 
-Endpoint contattati dai computer quando si utilizza la console NetApp basata sul Web::
+Endpoint contattati dai computer quando si utilizza la NetApp Console basata sul Web::
 +
 --
 I computer che accedono alla Console da un browser Web devono avere la possibilità di contattare più endpoint.  Sarà necessario utilizzare la Console per configurare l'agente della Console e per l'utilizzo quotidiano della Console.
@@ -358,7 +358,7 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla console NetApp .
+Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
 
 
 
@@ -408,7 +408,7 @@ porti:: Non c'è traffico in entrata verso l'agente della console, a meno che no
 --
 * HTTP (80) e HTTPS (443) forniscono l'accesso all'interfaccia utente locale, che utilizzerai in rare circostanze.
 * SSH (22) è necessario solo se è necessario connettersi all'host per la risoluzione dei problemi.
-* Le connessioni in entrata sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
+* Le connessioni in ingresso sulla porta 3128 sono necessarie se si distribuiscono sistemi Cloud Volumes ONTAP in una subnet in cui non è disponibile una connessione Internet in uscita.
 +
 Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in uscita per inviare messaggi AutoSupport , la Console configura automaticamente tali sistemi per utilizzare un server proxy incluso nell'agente della Console.  L'unico requisito è assicurarsi che il gruppo di sicurezza dell'agente Console consenta connessioni in entrata sulla porta 3128.  Sarà necessario aprire questa porta dopo aver distribuito l'agente Console.
 
@@ -446,7 +446,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azur
 . Copia il contenuto dellink:reference-permissions-azure.html["autorizzazioni di ruolo personalizzate per il connettore"] e salvarli in un file JSON.
 . Modificare il file JSON aggiungendo gli ID di sottoscrizione di Azure all'ambito assegnabile.
 +
-Dovresti aggiungere l'ID per ogni sottoscrizione Azure che desideri utilizzare con NetApp Console.
+Dovresti aggiungere l'ID per ogni sottoscrizione di Azure che desideri utilizzare con NetApp Console.
 
 +
 *Esempio*
@@ -498,7 +498,7 @@ image:screenshot_azure_ad.png["Mostra il servizio Active Directory in Microsoft 
 . Specificare i dettagli sull'applicazione:
 +
 ** *Nome*: inserisci un nome per l'applicazione.
-** *Tipo di account*: seleziona un tipo di account (qualsiasi funzionerà con la console NetApp ).
+** *Tipo di account*: seleziona un tipo di account (qualsiasi funzionerà con la NetApp Console).
 ** *URI di reindirizzamento*: puoi lasciare vuoto questo campo.
 
 
@@ -582,7 +582,7 @@ image:screenshot_azure_service_principal_role.png["Uno screenshot del portale di
 L'entità servizio ora dispone delle autorizzazioni di Azure necessarie per distribuire l'agente della console.
 
 +
-Se si desidera distribuire Cloud Volumes ONTAP da più sottoscrizioni di Azure, è necessario associare l'entità servizio a ciascuna di tali sottoscrizioni.  Nella console NetApp è possibile selezionare l'abbonamento che si desidera utilizzare durante la distribuzione Cloud Volumes ONTAP.
+Se si desidera distribuire Cloud Volumes ONTAP da più sottoscrizioni di Azure, è necessario associare l'entità servizio a ciascuna di tali sottoscrizioni.  Nella NetApp Console, puoi selezionare l'abbonamento che desideri utilizzare durante la distribuzione Cloud Volumes ONTAP.
 
 
 
@@ -647,7 +647,7 @@ Dopo l'installazione è possibile configurare un server proxy, ma per farlo è n
 
 
 
-NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console. Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console.html["Console di manutenzione dell'agente"] .
+NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console.  Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console.html["Console di manutenzione dell'agente"] .
 
 * Un'identità gestita abilitata sulla macchina virtuale in Azure, in modo da poter fornire le autorizzazioni di Azure richieste tramite un ruolo personalizzato.
 +
@@ -780,18 +780,18 @@ https://_ipaddress_[]
 .. Inserisci un nome per il sistema.
 .. In *Stai utilizzando un ambiente protetto?* mantieni disattivata la modalità con restrizioni.
 +
-È consigliabile disattivare la modalità limitata perché questi passaggi descrivono come utilizzare la Console in modalità standard.  Dovresti abilitare la modalità limitata solo se disponi di un ambiente sicuro e desideri disconnettere questo account dai servizi backend.  Se è così,link:task-quick-start-restricted-mode.html["segui i passaggi per iniziare a utilizzare la console NetApp in modalità limitata"] .
+È consigliabile disattivare la modalità limitata perché questi passaggi descrivono come utilizzare la Console in modalità standard.  Dovresti abilitare la modalità limitata solo se disponi di un ambiente sicuro e desideri disconnettere questo account dai servizi backend.  Se è così,link:task-quick-start-restricted-mode.html["segui i passaggi per iniziare a utilizzare la NetApp Console in modalità limitata"] .
 
 .. Seleziona *Iniziamo*.
 
 
 
 
-Se si dispone di un archivio BLOB di Azure nella stessa sottoscrizione di Azure in cui è stato creato l'agente della console, nella pagina *Sistemi* verrà visualizzato automaticamente un sistema di archiviazione BLOB di Azure. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Scopri come gestire l'archiviazione BLOB di Azure dalla console NetApp"^]
+Se si dispone di un archivio BLOB di Azure nella stessa sottoscrizione di Azure in cui è stato creato l'agente della console, nella pagina *Sistemi* verrà visualizzato automaticamente un sistema di archiviazione BLOB di Azure. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Scopri come gestire l'archiviazione BLOB di Azure dalla NetApp Console"^]
 
 
 
-== Passaggio 6: fornire le autorizzazioni alla console NetApp
+== Passaggio 6: fornire le autorizzazioni alla NetApp Console
 
 Ora che hai installato l'agente Console, devi fornirgli le autorizzazioni di Azure configurate in precedenza.  L'assegnazione delle autorizzazioni consente alla Console di gestire i dati e l'infrastruttura di archiviazione in Azure.
 
@@ -804,7 +804,7 @@ Accedere al portale di Azure e assegnare il ruolo personalizzato di Azure alla m
 .Passi
 . Dal portale di Azure, apri il servizio *Sottoscrizioni* e seleziona la tua sottoscrizione.
 +
-È importante assegnare il ruolo dal servizio *Abbonamenti* perché questo specifica l'ambito dell'assegnazione del ruolo a livello di abbonamento.  L'_ambito_ definisce l'insieme di risorse a cui si applica l'accesso.  Se si specifica un ambito a un livello diverso (ad esempio, a livello di macchina virtuale), la possibilità di completare azioni dall'interno della console NetApp ne risentirà.
+È importante assegnare il ruolo dal servizio *Abbonamenti* perché questo specifica l'ambito dell'assegnazione del ruolo a livello di abbonamento.  L'_ambito_ definisce l'insieme di risorse a cui si applica l'accesso.  Se si specifica un ambito a un livello diverso (ad esempio, a livello di macchina virtuale), la possibilità di completare azioni dall'interno della NetApp Console ne risentirà.
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Documentazione di Microsoft Azure: comprendere l'ambito di Azure RBAC"^]
@@ -813,7 +813,7 @@ https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview
 . Nella scheda *Ruolo*, seleziona il ruolo *Operatore console* e seleziona *Avanti*.
 +
 
-NOTE: Console Operator è il nome predefinito fornito nella policy.  Se hai scelto un nome diverso per il ruolo, seleziona quel nome.
+NOTE: Console Operator è il nome predefinito fornito nel criterio.  Se hai scelto un nome diverso per il ruolo, seleziona quel nome.
 
 . Nella scheda *Membri*, completa i seguenti passaggi:
 +
@@ -828,7 +828,7 @@ NOTE: Console Operator è il nome predefinito fornito nella policy.  Se hai scel
 
 
 .Cosa succederà ora?
-Vai al https://console.netapp.com["Console NetApp"^] per iniziare a utilizzare l'agente Console.
+Vai al https://console.netapp.com["NetApp Console"^] per iniziare a utilizzare l'agente Console.
 
 --
 .Principale del servizio

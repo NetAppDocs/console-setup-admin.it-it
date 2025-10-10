@@ -56,7 +56,7 @@ da 8,6 a 8,10
 * L'host deve essere registrato presso Red Hat Subscription Management.  Se non è registrato, l'host non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione dell'agente.
 
  a| 
-3.9.50 o versione successiva con la console in modalità standard o modalità limitata
+3.9.50 o versione successiva con la Console in modalità standard o modalità limitata
  a| 
 Podman versione 4.6.1 o 4.9.4
 
@@ -74,7 +74,7 @@ Ubuntu
  a| 
 24,04 LTS
  a| 
-3.9.45 o versione successiva con la console NetApp in modalità standard o modalità limitata
+3.9.45 o versione successiva con la NetApp Console in modalità standard o in modalità limitata
  a| 
 Docker Engine dalla versione 23.06 alla 28.0.0.
  a| 

@@ -14,7 +14,7 @@ summary: 'NetApp Console supporta IMDSv2 con l"agente Console e con Cloud Volume
 
 
 [role="lead"]
-La console NetApp supporta Amazon EC2 Instance Metadata Service versione 2 (IMDSv2) con l'agente della console e con Cloud Volumes ONTAP (incluso il mediatore per le distribuzioni HA).  Nella maggior parte dei casi, IMDSv2 viene configurato automaticamente sulle nuove istanze EC2.  IMDSv1 era abilitato prima di marzo 2024.  Se richiesto dalle policy di sicurezza, potrebbe essere necessario configurare manualmente IMDSv2 sulle istanze EC2.
+La NetApp Console supporta Amazon EC2 Instance Metadata Service versione 2 (IMDSv2) con l'agente della console e con Cloud Volumes ONTAP (incluso il mediatore per le distribuzioni HA).  Nella maggior parte dei casi, IMDSv2 viene configurato automaticamente sulle nuove istanze EC2.  IMDSv1 era abilitato prima di marzo 2024.  Se richiesto dalle policy di sicurezza, potrebbe essere necessario configurare manualmente IMDSv2 sulle istanze EC2.
 
 .Prima di iniziare
 * La versione dell'agente della console deve essere 3.9.38 o successiva.

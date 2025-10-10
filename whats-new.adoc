@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases' 
-summary: 'Scopri le novità sulle funzionalità di amministrazione della console NetApp : IAM, agenti della console, credenziali del provider cloud e altro ancora.' 
+summary: 'Scopri le novità sulle funzionalità di amministrazione NetApp Console : IAM, agenti della console, credenziali del provider cloud e altro ancora.' 
 ---
 = Cosa c'è di nuovo
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Scopri le novità sulle funzionalità di amministrazione della console
 
 
 [role="lead"]
-Scopri le novità sulle funzionalità di amministrazione della console NetApp : gestione delle identità e degli accessi (IAM), agenti della console, credenziali del provider cloud e molto altro.
+Scopri le novità sulle funzionalità di amministrazione NetApp Console : gestione delle identità e degli accessi (IAM), agenti della console, credenziali del provider cloud e molto altro.
 
 
 
@@ -24,13 +24,13 @@ Scopri le novità sulle funzionalità di amministrazione della console NetApp : 
 
 == BlueXP è ora NetApp Console
 
-NetApp Console, basata sulle fondamenta BlueXP migliorate e ristrutturate, offre una gestione centralizzata dello storage NetApp e dei NetApp Data Services in ambienti on-premise e cloud di livello aziendale, offrendo informazioni in tempo reale, flussi di lavoro più rapidi e un'amministrazione semplificata, altamente sicura e conforme.
+NetApp Console, basata sulle fondamenta BlueXP migliorate e ristrutturate, offre una gestione centralizzata dello storage NetApp e NetApp Data Services in ambienti on-premise e cloud di livello aziendale, offrendo informazioni in tempo reale, flussi di lavoro più rapidi e un'amministrazione semplificata, altamente sicura e conforme.
 
 
 
 === Menu e pagine di navigazione
 
-NetApp ha spostato la maggior parte delle opzioni del menu nel riquadro di navigazione a sinistra e ha riorganizzato i menu per una navigazione più semplice nella console NetApp .
+NetApp ha spostato la maggior parte delle opzioni del menu nel riquadro di navigazione a sinistra e ha riorganizzato i menu per una navigazione più semplice nella NetApp Console.
 
 
 
@@ -54,7 +54,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage
 
 ==== Menu di amministrazione
 
-Utilizzare il menu centralizzato *Amministrazione* per gestire la console NetApp , i casi di supporto, le licenze e gli abbonamenti (in precedenza denominati portafoglio digitale).
+Utilizzare il menu centralizzato *Amministrazione* per gestire la NetApp Console, i casi di supporto, le licenze e gli abbonamenti (in precedenza denominati portafoglio digitale).
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-admin-menu.png["Uno screenshot del menu Amministrazione."]
 
@@ -82,7 +82,7 @@ NetApp ha rinominato diversi elementi, servizi dati e funzionalità per chiarirn
 
 [cols="10,24"]
 |===
-| *Nome precedente* | * Nome della console NetApp * 
+| *Nome precedente* | * Nome NetApp Console * 
 
 
 | Connettori  a| 
@@ -107,7 +107,7 @@ Visualizza, aggiungi e gestisci i tuoi sistemi dal menu *Archiviazione > Gestion
 
 
 | Protezione da BlueXP Ransomware  a| 
-Resilienza al ransomware NetApp .
+NetApp Ransomware Resilience.
 
 Ransomware Resilience ti aiuta a proteggere i tuoi dati e a ripristinarli rapidamente in caso di attacco ransomware.
 
@@ -123,9 +123,9 @@ Accedi alla pianificazione del ciclo di vita dal menu *Archiviazione > Pianifica
 
 
 | BlueXP digital wallet  a| 
-Licenze e abbonamenti
+Licenses and subscriptions
 
-Accedi alle tue licenze e abbonamenti dal menu *Amministrazione > Licenze e abbonamenti*.
+Accedi alle tue licenze e abbonamenti dal menu *Amministrazione > Licenses and subscriptions*.
 
 |===
 
@@ -160,7 +160,7 @@ NetApp ha ridotto gli endpoint di rete richiesti per la Console e gli agenti del
 
 === Supporto per la distribuzione VCenter degli agenti della console
 
-È possibile distribuire gli agenti Console negli ambienti VMware utilizzando un file OVA.  Il file OVA include un'immagine VM preconfigurata con il software agente della console e le impostazioni per connettersi alla console NetApp .  È possibile scaricare un file o distribuire un URL direttamente dalla console NetApp .link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["Scopri come distribuire un agente Console negli ambienti VMware."]
+È possibile distribuire gli agenti Console negli ambienti VMware utilizzando un file OVA.  Il file OVA include un'immagine VM preconfigurata con il software dell'agente Console e le impostazioni per connettersi alla NetApp Console.  È possibile scaricare un file o distribuire un URL direttamente dalla NetApp Console.link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["Scopri come distribuire un agente Console negli ambienti VMware."]
 
 L'agente Console OVA per VMware offre un'immagine VM preconfigurata per una rapida distribuzione.
 
@@ -168,7 +168,7 @@ L'agente Console OVA per VMware offre un'immagine VM preconfigurata per una rapi
 
 === Report di convalida per distribuzioni di agenti non riuscite
 
-Quando si distribuisce un agente Console dalla console NetApp , ora è possibile convalidare la configurazione dell'agente.  Se la Console non riesce a distribuire l'agente, fornisce un report scaricabile per aiutarti a risolvere il problema.
+Quando si distribuisce un agente Console dalla NetApp Console, ora è possibile convalidare la configurazione dell'agente.  Se la Console non riesce a distribuire l'agente, fornisce un report scaricabile per aiutarti a risolvere il problema.
 
 
 
@@ -178,9 +178,9 @@ L'agente Console ha migliorato i messaggi di errore che aiutano a comprendere me
 
 
 
-== Console NetApp
+== NetApp Console
 
-L'amministrazione della console NetApp include le seguenti nuove funzionalità:
+L'amministrazione NetApp Console include le seguenti nuove funzionalità:
 
 
 
@@ -210,7 +210,7 @@ Il sistema disconnette gli utenti dopo 24 ore o quando chiudono il browser web.
 
 === Supporto alle partnership tra organizzazioni
 
-Nella console NetApp è possibile creare partnership che consentono ai partner di gestire in modo sicuro le risorse NetApp oltre i confini aziendali, semplificando la collaborazione e rafforzando la sicurezza. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["Impara a gestire le partnership"] .
+Nella NetApp Console è possibile creare partnership che consentono ai partner di gestire in modo sicuro le risorse NetApp oltre i confini aziendali, semplificando la collaborazione e rafforzando la sicurezza. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["Impara a gestire le partnership"] .
 
 
 
@@ -228,7 +228,7 @@ Aggiunti i ruoli *Ransomware Resilience user behavior admin* e *Ransomware Resil
 
 === Chat di supporto rimossa
 
-NetApp ha rimosso la funzionalità di chat di supporto dalla console NetApp .  Utilizzare la pagina *Amministrazione > Supporto* per creare e gestire i casi di supporto.
+NetApp ha rimosso la funzionalità di chat di supporto dalla NetApp Console.  Utilizzare la pagina *Amministrazione > Supporto* per creare e gestire i casi di supporto.
 
 
 
@@ -369,7 +369,7 @@ BlueXP offre ora un'interfaccia più intuitiva per la gestione della federazione
 
 Abilitando l'accesso Single Sign-On (SSO) tramite la federazione delle identità, gli utenti possono accedere a BlueXP con le proprie credenziali aziendali.  Ciò migliora la sicurezza, riduce l'uso delle password e semplifica l'onboarding.
 
-Ti verrà chiesto di importare tutte le connessioni federate esistenti nella nuova interfaccia per ottenere l'accesso alle nuove funzionalità di gestione.  Ciò consente di sfruttare i più recenti miglioramenti senza dover ricreare le connessioni federate.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-federation-import.html["Scopri di più sull'importazione della tua connessione federata esistente in BlueXP."]
+Ti verrà chiesto di importare tutte le connessioni federate esistenti nella nuova interfaccia per ottenere l'accesso alle nuove funzionalità di gestione.  Ciò consente di sfruttare i miglioramenti più recenti senza dover ricreare le connessioni federate.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-federation-import.html["Scopri di più sull'importazione della tua connessione federata esistente in BlueXP."]
 
 Una gestione migliorata della federazione consente di:
 
@@ -449,7 +449,7 @@ Ora puoi visualizzare ed eliminare le credenziali Amazon FSx for NetApp ONTAP da
 
 
 
-=== Versione in modalità privata (3.9.52)
+=== Rilascio della modalità privata (3.9.52)
 
 Una nuova versione in modalità privata è ora disponibile per il download da https://mysupport.netapp.com/site/downloads["Sito di supporto NetApp"^]
 
@@ -588,7 +588,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
-=== Versione in modalità privata (3.9.50)
+=== Rilascio della modalità privata (3.9.50)
 
 Una nuova versione in modalità privata è ora disponibile per il download da https://mysupport.netapp.com/site/downloads["Sito di supporto NetApp"^]
 
@@ -866,7 +866,7 @@ Notare quanto segue:
 
 
 +
-Per entrambi gli scenari, è possibile continuare a utilizzare gli endpoint esistenti.
+In entrambi gli scenari è possibile continuare a utilizzare gli endpoint esistenti.
 
 
 

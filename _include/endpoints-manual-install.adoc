@@ -101,7 +101,7 @@ Endpoint contattati durante l'installazione manuale:: Quando si installa manualm
 
 
 
-2+| *Regioni commerciali o sovrane* Se installi l'agente Console in una regione commerciale o sovrana, puoi scegliere tra due set di endpoint: 
+2+| *Regioni commerciali o sovrane* Se si installa l'agente Console in una regione commerciale o sovrana, è possibile scegliere tra due set di endpoint: 
 
 
  a| 
