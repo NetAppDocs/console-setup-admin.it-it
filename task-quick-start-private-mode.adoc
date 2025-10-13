@@ -85,7 +85,7 @@ Tieni presente che alcuni servizi potrebbero essere supportati con limitazioni.
 | Efficienza economica | NO 
 
 
-| Protezione dal ransomware | NO 
+| Resilienza al ransomware | NO 
 
 
 | Replicazione | SÌ 
