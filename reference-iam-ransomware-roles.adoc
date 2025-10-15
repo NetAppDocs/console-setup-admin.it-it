@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
-summary: 'all"interno di NetApp Console, puoi assegnare ruoli per fornire agli utenti l"accesso a NetApp Ransomware Resilience.' 
+summary: 'Ransomware Resilience offre diversi ruoli utente per gestire l"accesso ai privilegi, alle azioni e ai report.' 
 ---
 = Ruoli di accesso alla resilienza ransomware per NetApp Console
 :hardbreaks:
@@ -22,32 +22,26 @@ I ruoli di Ransomware Resilience forniscono agli utenti l'accesso a NetApp Ranso
 * Visualizzatore del comportamento dell'utente di Ransomware Resilience
 
 
-I ruoli conferiscono accessi diversi alle impostazioni e alle azioni.  Per configurare o visualizzare attività sospette relative al comportamento degli utenti, è necessario utilizzare uno dei ruoli relativi al comportamento degli utenti.
+I ruoli conferiscono diversi livelli di accesso alle impostazioni e alle azioni.
 
-La tabella seguente mostra le azioni che ciascun ruolo può eseguire.
+Le azioni disponibili per i ruoli di amministratore del comportamento utente e visualizzatore del comportamento utente di Ransomware Resilience sono limitate a link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["attività sospetta dell'utente"^]. Questi ruoli sono progettati per essere aggiunti ai ruoli di amministratore o visualizzatore di Ransomware Resilience. Per configurare le impostazioni relative al comportamento sospetto degli utenti e rispondere agli avvisi, un utente deve disporre del ruolo di amministratore del comportamento utente di Ransomware Resilience. Per visualizzare solo gli avvisi relativi a comportamenti sospetti degli utenti, l'utente deve disporre del ruolo di visualizzatore del comportamento utente Ransomware Resilience.
 
-[cols="40,20a,20a,20a,20a"]
+Nella tabella seguente vengono illustrate le azioni disponibili per i ruoli di amministratore e visualizzatore di Ransomware Resilience.
+
+[cols="40,20a,20a"]
 |===
-| Caratteristica e azione | Amministratore di Ransomware Resilience | Visualizzatore di resilienza ransomware | Comportamento utente di Ransomware Resilience amministratore | Visualizzatore del comportamento dell'utente di Ransomware Resilience 
+| Caratteristica e azione | Amministratore di Ransomware Resilience | Visualizzatore di resilienza ransomware 
 
 
 | Visualizza la dashboard e tutte le schede  a| 
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
 | Nella dashboard, aggiorna lo stato della raccomandazione  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -57,19 +51,11 @@ NO
 SÌ
  a| 
 NO
- a| 
-NO
- a| 
-NO
 
 
 
 | Avviare la scoperta dei carichi di lavoro  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -79,22 +65,14 @@ NO
 SÌ
  a| 
 NO
- a| 
-NO
- a| 
-NO
 
 
 
-5+| *Nella scheda Proteggi*: 
+3+| *Nella scheda Proteggi*: 
 
 
 | Aggiungere, modificare o eliminare piani di protezione  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -104,19 +82,11 @@ NO
 SÌ
  a| 
 NO
- a| 
-NO
- a| 
-NO
 
 
 
 | Identificare l'esposizione ai dati sensibili  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -126,10 +96,6 @@ NO
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
@@ -137,10 +103,6 @@ NO
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
@@ -148,19 +110,11 @@ NO
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
 | Crea, modifica o elimina un gruppo di protezione  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -170,33 +124,21 @@ NO
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
-5+| *Nella scheda Avvisi*: 
+3+| *Nella scheda Avvisi*: 
 
 
 | Visualizza avvisi e dettagli degli avvisi  a| 
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
 | Modifica lo stato dell'incidente  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -206,10 +148,6 @@ NO
 SÌ
  a| 
 NO
- a| 
-NO
- a| 
-NO
 
 
 
@@ -217,19 +155,11 @@ NO
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
 | Ignorare o risolvere gli incidenti  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -239,19 +169,11 @@ NO
 SÌ
  a| 
 NO
- a| 
-NO
- a| 
-NO
 
 
 
 | Ottieni l'elenco completo dei file interessati  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -261,10 +183,6 @@ NO
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
@@ -272,22 +190,14 @@ NO
 NO
  a| 
 NO
- a| 
-SÌ
- a| 
-SÌ
 
 
 
-5+| *Nella scheda Recupera*: 
+3+| *Nella scheda Recupera*: 
 
 
 | Scarica i file interessati  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -297,10 +207,6 @@ NO
 SÌ
  a| 
 NO
- a| 
-NO
- a| 
-NO
 
 
 
@@ -308,10 +214,6 @@ NO
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
@@ -319,22 +221,14 @@ NO
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
-5+| *Nella scheda Impostazioni*: 
+3+| *Nella scheda Impostazioni*: 
 
 
 | Aggiungere o modificare le destinazioni di backup  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -344,10 +238,6 @@ NO
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
@@ -355,19 +245,11 @@ NO
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
 | Aggiungere o modificare gli obiettivi SIEM  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -377,19 +259,11 @@ NO
 SÌ
  a| 
 NO
- a| 
-NO
- a| 
-NO
 
 
 
 | Inizia l'esercitazione di preparazione  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -399,19 +273,11 @@ NO
 SÌ
  a| 
 NO
- a| 
-NO
- a| 
-NO
 
 
 
 | Esercitazione di preparazione alla modifica  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -421,19 +287,11 @@ NO
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
 | Aggiorna la configurazione di rilevamento  a| 
 SÌ
- a| 
-NO
- a| 
-NO
  a| 
 NO
 
@@ -443,10 +301,6 @@ NO
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 
 
@@ -454,23 +308,15 @@ NO
 NO
  a| 
 NO
- a| 
-SÌ
- a| 
-NO
 
 
 
-5+| *Nella scheda Report*: 
+3+| *Nella scheda Report*: 
 
 
 | Scarica i report  a| 
 SÌ
  a| 
 SÌ
- a| 
-NO
- a| 
-NO
 
 |===
