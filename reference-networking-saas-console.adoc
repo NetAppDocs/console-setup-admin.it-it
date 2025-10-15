@@ -46,9 +46,6 @@ Il sistema contatta questi endpoint in due scenari:
 | \ https://mysupport.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp . 
 
 
-| \ https://support.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp . 
-
-
 | \ https://signin.b2c.netapp.com | Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console. 
 
 
@@ -63,7 +60,7 @@ Il sistema contatta questi endpoint in due scenari:
  a| 
 Per ottenere immagini per gli aggiornamenti dell'agente della console.
 
-* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti.  Se usilink:link:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce.  Per evitare questo errore, saltare il controllo di convalida.
+* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti. Se usilink:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce. Per evitare questo errore, saltare il controllo di convalida.
 +
 Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di aggiornare le regole del firewall agli endpoint correnti il ​​prima possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
 

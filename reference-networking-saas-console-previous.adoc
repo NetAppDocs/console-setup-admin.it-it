@@ -225,3 +225,38 @@ NetApp consiglia di consentire gli endpoint dell'Opzione 1 nel firewall in quant
 
 
 == Endpoint degli agenti locali
+
+[cols="2*"]
+|===
+| Punti finali | Scopo 
+
+
+| \ https://support.netapp.com \ https://mysupport.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp . 
+
+
+| \https://\*.api.blueexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com | Per fornire funzionalità e servizi all'interno della NetApp Console. 
+
+
+ a| 
+Scegli tra due serie di endpoint:
+
+* Opzione 1 (consigliata)
++
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+
+* Opzione 2
++
+\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
+
+
+ a| 
+Per ottenere immagini per gli aggiornamenti dell'agente della console.
+
+NetApp consiglia di consentire gli endpoint dell'Opzione 1 nel firewall in quanto più sicuri e di non consentire gli endpoint dell'Opzione 2, a meno che non si utilizzi Ransomware Resilience o Backup and Recovery.  Si tenga presente quanto segue in merito a questi endpoint:
+
+* Gli endpoint dell'opzione 1 sono supportati nella versione 3.9.47 e successive.  Le versioni precedenti alla 3.9.47 non supportano la compatibilità con le versioni precedenti.
+* L'agente della console avvia prima il contatto con gli endpoint nell'opzione 2.  Se tali endpoint non sono accessibili, vengono contattati automaticamente gli endpoint nell'opzione 1.
+* Se si utilizza l'agente Console con NetApp Backup and Recovery o Ransomware Resilience, il sistema non supporta gli endpoint Opzione 1.  Consentire gli endpoint dell'opzione 2 e non consentire l'opzione 1.
+
+
+|===

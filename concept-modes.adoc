@@ -164,7 +164,7 @@ Gestione dell'archiviazione e servizi dati supportati:: I seguenti servizi di ar
 | Azure NetApp Files | Supporto completo 
 
 
-| Backup e ripristino | Supportato nelle regioni governative e commerciali con modalità limitata. Non supportato nelle regioni sovrane con modalità limitata. In modalità limitata, NetApp Backup and Recovery supporta solo il backup e il ripristino dei dati del volume ONTAP . https://docs.netapp.com/us-en/data-services-disaster-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati ONTAP"^] Il backup e il ripristino dei dati delle applicazioni e dei dati delle macchine virtuali non sono supportati. 
+| Backup e ripristino | Supportato nelle regioni governative e commerciali con modalità limitata. Non supportato nelle regioni sovrane con modalità limitata. In modalità limitata, NetApp Backup and Recovery supporta solo il backup e il ripristino dei dati del volume ONTAP . https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati ONTAP"^] Il backup e il ripristino dei dati delle applicazioni e dei dati delle macchine virtuali non sono supportati. 
 
 
 | NetApp Data Classification  a| 

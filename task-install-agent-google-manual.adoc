@@ -154,7 +154,7 @@ Per installare e configurare Podman, segui questi passaggi:
 * Installa python3
 * Installa il pacchetto podman-compose versione 1.0.6
 * Aggiungere podman-compose alla variabile d'ambiente PATH
-* Se si utilizza Red Hat Enterprise Linux 8, verificare che la versione di Podman utilizzi Aardvark DNS anziché CNI
+* Se si utilizza Red Hat Enterprise Linux, verificare che la versione di Podman utilizzi Netavark Aardvark DNS anziché CNI
 
 
 
@@ -339,13 +339,6 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
 
 
  a| 
-\ https://support.netapp.com
- a| 
-Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp .
-
-
-
- a| 
 \ https://signin.b2c.netapp.com
  a| 
 Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
@@ -371,7 +364,7 @@ Per fornire funzionalità e servizi all'interno della NetApp Console.
  a| 
 Per ottenere immagini per gli aggiornamenti dell'agente della console.
 
-* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti.  Se usilink:link:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce.  Per evitare questo errore, saltare il controllo di convalida.
+* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti. Se usilink:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce. Per evitare questo errore, saltare il controllo di convalida.
 +
 Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di aggiornare le regole del firewall agli endpoint correnti il ​​prima possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
 
