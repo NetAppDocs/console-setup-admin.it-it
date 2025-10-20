@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
-summary: 'Ransomware Resilience offre diversi ruoli utente per gestire l"accesso ai privilegi, alle azioni e ai report.' 
+summary: 'Ransomware Resilience offre diversi ruoli utente per gestire l"accesso a impostazioni, azioni e report.' 
 ---
 = Ruoli di accesso alla resilienza ransomware per NetApp Console
 :hardbreaks:
@@ -16,17 +16,28 @@ summary: 'Ransomware Resilience offre diversi ruoli utente per gestire l"accesso
 [role="lead"]
 I ruoli di Ransomware Resilience forniscono agli utenti l'accesso a NetApp Ransomware Resilience. Ransomware Resilience supporta i seguenti ruoli:
 
-* Amministratore di Ransomware Resilience
-* Visualizzatore di resilienza ransomware
-* Comportamento utente di Ransomware Resilience amministratore
-* Visualizzatore del comportamento dell'utente di Ransomware Resilience
+**Ruoli di base**
+
+* Amministratore di Ransomware Resilience: configura le impostazioni di Ransomware Resilience; esamina e rispondi agli avvisi di crittografia
+* Visualizzatore di resilienza ransomware: visualizza incidenti di crittografia, report e impostazioni di rilevamento
 
 
-I ruoli conferiscono diversi livelli di accesso alle impostazioni e alle azioni.
+**Ruoli di attività comportamentali dell'utente**link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Rilevamento di attività sospette degli utenti"^] Gli avvisi forniscono visibilità sui dati, ad esempio sugli eventi di attività dei file; questi avvisi includono i nomi dei file e le azioni sui file (ad esempio Lettura, Scrittura, Eliminazione, Rinomina) eseguite dall'utente.  Per limitare la visibilità di questi dati, solo gli utenti con questi ruoli possono gestire o visualizzare questi avvisi.
 
-Le azioni disponibili per i ruoli di amministratore del comportamento utente e visualizzatore del comportamento utente di Ransomware Resilience sono limitate a link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["attività sospetta dell'utente"^]. Questi ruoli sono progettati per essere aggiunti ai ruoli di amministratore o visualizzatore di Ransomware Resilience. Per configurare le impostazioni relative al comportamento sospetto degli utenti e rispondere agli avvisi, un utente deve disporre del ruolo di amministratore del comportamento utente di Ransomware Resilience. Per visualizzare solo gli avvisi relativi a comportamenti sospetti degli utenti, l'utente deve disporre del ruolo di visualizzatore del comportamento utente Ransomware Resilience.
+* Comportamento utente Ransomware Resilience - Attiva il rilevamento delle attività sospette degli utenti, indaga e rispondi agli avvisi di attività sospette degli utenti
+* Visualizzatore del comportamento utente di Ransomware Resilience: visualizza gli avvisi sulle attività sospette degli utenti
 
-Nella tabella seguente vengono illustrate le azioni disponibili per i ruoli di amministratore e visualizzatore di Ransomware Resilience.
+
+
+NOTE: I ruoli di comportamento dell'utente non sono ruoli autonomi; sono progettati per essere aggiunti ai ruoli di amministratore o visualizzatore di Ransomware Resilience. Per maggiori informazioni, vedere <<Ruoli comportamentali dell'utente>>.
+
+Per descrizioni dettagliate di ciascun ruolo, consultare le tabelle seguenti.
+
+
+
+== Ruoli di base
+
+Nella tabella seguente vengono descritte le azioni disponibili per i ruoli di amministratore e visualizzatore di Ransomware Resilience.
 
 [cols="40,20a,20a"]
 |===
@@ -71,7 +82,7 @@ NO
 3+| *Nella scheda Proteggi*: 
 
 
-| Aggiungere, modificare o eliminare piani di protezione  a| 
+| Aggiungere, modificare o eliminare piani di protezione per le policy di _crittografia_  a| 
 SÌ
  a| 
 NO
@@ -85,7 +96,7 @@ NO
 
 
 
-| Identificare l'esposizione ai dati sensibili  a| 
+| Identificare l'esposizione ai dati sensibili con la classificazione dei dati  a| 
 SÌ
  a| 
 NO
@@ -113,7 +124,7 @@ SÌ
 
 
 
-| Crea, modifica o elimina un gruppo di protezione  a| 
+| Crea, modifica o elimina gruppi di protezione  a| 
 SÌ
  a| 
 NO
@@ -130,64 +141,57 @@ SÌ
 3+| *Nella scheda Avvisi*: 
 
 
-| Visualizza avvisi e dettagli degli avvisi  a| 
+| Visualizza gli avvisi di crittografia e i dettagli degli avvisi  a| 
 SÌ
  a| 
 SÌ
 
 
 
-| Modifica lo stato dell'incidente  a| 
-SÌ
- a| 
-NO
-
-
-
-| Segnala avviso per il recupero  a| 
+| Modifica lo stato dell'incidente di crittografia  a| 
 SÌ
  a| 
 NO
 
 
 
-| Visualizza i dettagli dell'incidente  a| 
-SÌ
- a| 
-SÌ
-
-
-
-| Ignorare o risolvere gli incidenti  a| 
+| Segnala l'avviso di crittografia per il ripristino  a| 
 SÌ
  a| 
 NO
 
 
 
-| Blocca utente  a| 
-SÌ
- a| 
-NO
-
-
-
-| Ottieni l'elenco completo dei file interessati  a| 
-SÌ
- a| 
-NO
-
-
-
-| Scarica i dati degli avvisi  a| 
+| Visualizza i dettagli dell'incidente di crittografia  a| 
 SÌ
  a| 
 SÌ
 
 
 
-| Visualizza attività utente sospette  a| 
+| Ignorare o risolvere gli incidenti di crittografia  a| 
+SÌ
+ a| 
 NO
+
+
+
+| Ottieni l'elenco completo dei file interessati dall'evento di crittografia  a| 
+SÌ
+ a| 
+NO
+
+
+
+| Scarica i dati degli avvisi degli eventi di crittografia  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Blocca utente (con configurazione agente Workload Security)  a| 
+SÌ
  a| 
 NO
 
@@ -196,28 +200,28 @@ NO
 3+| *Nella scheda Recupera*: 
 
 
-| Scarica i file interessati  a| 
+| Scarica i file interessati dall'evento di crittografia  a| 
 SÌ
  a| 
 NO
 
 
 
-| Ripristinare il carico di lavoro  a| 
+| Ripristina il carico di lavoro dall'evento di crittografia  a| 
 SÌ
  a| 
 NO
 
 
 
-| Scarica i dati di recupero  a| 
+| Scarica i dati di recupero dall'evento di crittografia  a| 
 SÌ
  a| 
 SÌ
 
 
 
-| Scarica i report  a| 
+| Scarica i report dall'evento di crittografia  a| 
 SÌ
  a| 
 SÌ
@@ -262,21 +266,7 @@ NO
 
 
 
-| Inizia l'esercitazione di preparazione  a| 
-SÌ
- a| 
-NO
-
-
-
-| Esercitazione di preparazione al reset  a| 
-SÌ
- a| 
-NO
-
-
-
-| Esercitazione di preparazione alla modifica  a| 
+| Avvia, reimposta o modifica l'esercitazione di preparazione  a| 
 SÌ
  a| 
 NO
@@ -304,17 +294,155 @@ SÌ
 
 
 
-| Configurare le impostazioni relative al comportamento sospetto degli utenti  a| 
-NO
+3+| *Nella scheda Report*: 
+
+
+| Scarica i report  a| 
+SÌ
+ a| 
+SÌ
+
+|===
+
+
+== Ruoli comportamentali dell'utente
+
+Per configurare le impostazioni relative al comportamento sospetto degli utenti e rispondere agli avvisi, un utente deve disporre del ruolo di amministratore del comportamento utente di Ransomware Resilience. Per visualizzare solo gli avvisi relativi a comportamenti sospetti degli utenti, l'utente deve disporre del ruolo di visualizzatore del comportamento utente Ransomware Resilience.
+
+I ruoli di comportamento dell'utente dovrebbero essere conferiti agli utenti con privilegi di amministratore o visualizzatore di Ransomware Resilience esistenti che necessitano di accesso alink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["impostazioni e avvisi di attività utente sospette"^] .  Ad esempio, un utente con il ruolo di amministratore Ransomware Resilience dovrebbe ricevere il ruolo di amministratore del comportamento utente Ransomware Resilience per configurare gli agenti di attività utente e bloccare o sbloccare gli utenti.  Il ruolo di amministratore del comportamento utente di Ransomware Resilience non deve essere conferito a un visualizzatore di Ransomware Resilience.
+
+Nella tabella seguente vengono descritte le azioni disponibili per i ruoli di amministratore e visualizzatore del comportamento utente di Ransomware Resilience.
+
+[cols="40,20a,20a"]
+|===
+| Caratteristica e azione | Comportamento utente di Ransomware Resilience amministratore | Visualizzatore del comportamento dell'utente di Ransomware Resilience 
+
+
+3+| *Nella scheda Impostazioni*: 
+
+
+| Crea, modifica o elimina l'agente di attività utente  a| 
+SÌ
  a| 
 NO
 
 
 
-3+| *Nella scheda Report*: 
+| Crea o elimina il connettore della directory utente  a| 
+SÌ
+ a| 
+NO
 
 
-| Scarica i report  a| 
+
+| Metti in pausa o riprendi il raccoglitore dati  a| 
+SÌ
+ a| 
+NO
+
+
+
+| Eseguire un'esercitazione di preparazione alla violazione dei dati  a| 
+SÌ
+ a| 
+NO
+
+
+
+3+| *Nella scheda Proteggi*: 
+
+
+| Aggiungere, modificare o eliminare piani di protezione per le policy relative al _comportamento sospetto degli utenti_  a| 
+SÌ
+ a| 
+NO
+
+
+
+3+| *Nella scheda Avvisi*: 
+
+
+| Visualizza gli avvisi sulle attività degli utenti e i dettagli degli avvisi  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Modifica lo stato dell'incidente dell'attività dell'utente  a| 
+SÌ
+ a| 
+NO
+
+
+
+| Contrassegna l'avviso di attività dell'utente per il ripristino  a| 
+SÌ
+ a| 
+NO
+
+
+
+| Visualizza i dettagli dell'incidente relativo all'attività dell'utente  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Ignora o risolvi gli incidenti relativi alle attività degli utenti  a| 
+SÌ
+ a| 
+NO
+
+
+
+| Ottieni l'elenco completo dei file interessati dall'utente sospetto  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Scarica i dati degli avvisi sugli eventi di attività dell'utente  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Blocca o sblocca l'utente  a| 
+SÌ
+ a| 
+NO
+
+
+
+3+| *Nella scheda Recupera*: 
+
+
+| Scarica i file interessati dall'evento di attività dell'utente  a| 
+SÌ
+ a| 
+NO
+
+
+
+| Ripristina il carico di lavoro dall'evento di attività dell'utente  a| 
+SÌ
+ a| 
+NO
+
+
+
+| Scarica i dati di recupero dall'evento di attività dell'utente  a| 
+SÌ
+ a| 
+SÌ
+
+
+
+| Scarica i report dagli eventi di attività dell'utente  a| 
 SÌ
  a| 
 SÌ
