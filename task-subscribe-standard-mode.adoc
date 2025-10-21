@@ -34,10 +34,6 @@ Per potersi iscrivere ai servizi dati, è necessario aver già distribuito un ag
 ====
 .AWS
 --
-Il seguente video mostra i passaggi per abbonarsi a NetApp Intelligent Services da AWS Marketplace:
-
-.Iscriviti a NetApp Intelligent Services da AWS Marketplace
-video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
 . Selezionare *Credenziali dell'organizzazione*.
@@ -105,12 +101,6 @@ La Console sostituisce l'abbonamento esistente per tutte le credenziali nell'org
 Per tutte le altre organizzazioni o account, sarà necessario associare manualmente l'abbonamento ripetendo questi passaggi.
 
 *** Seleziona *Salva*.
-+
-Il video seguente mostra i passaggi per abbonarsi da Azure Marketplace:
-
-+
-.Iscriviti a NetApp Intelligent Services da Azure Marketplace
-video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 
 
@@ -170,19 +160,15 @@ La Console sostituisce l'abbonamento esistente per tutte le credenziali nell'org
 Per tutte le altre organizzazioni o account, sarà necessario associare manualmente l'abbonamento ripetendo questi passaggi.
 
 *** Seleziona *Salva*.
-+
-Il seguente video mostra i passaggi per abbonarsi da Google Cloud Marketplace:
-
-+
-.Iscriviti da Google Cloud Marketplace
-video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
 
 
-.. Una volta completato questo processo, torna alla pagina Credenziali nella Console e seleziona questo nuovo abbonamento.
+
+
+
+
+. Una volta completato questo processo, torna alla pagina Credenziali nella Console e seleziona questo nuovo abbonamento.
 +
 image:screenshot_gcp_associate.gif["Uno screenshot della pagina di assegnazione dell'abbonamento."]
-
-
 
 
 

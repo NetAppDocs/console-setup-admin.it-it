@@ -350,12 +350,6 @@ La Console sostituisce l'abbonamento esistente per tutte le credenziali nell'org
 Per tutte le altre organizzazioni o account, sarà necessario associare manualmente l'abbonamento ripetendo questi passaggi.
 
 *** Seleziona *Salva*.
-+
-Il video seguente mostra i passaggi per abbonarsi da Azure Marketplace:
-
-+
-.Iscriviti a NetApp Intelligent Services da Azure Marketplace
-video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 
 

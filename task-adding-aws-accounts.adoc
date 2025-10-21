@@ -252,10 +252,6 @@ La sostituzione dell'attuale abbonamento al marketplace con un nuovo abbonamento
 .Prima di iniziare
 Prima di poter configurare un abbonamento, è necessario creare un agente Console. link:concept-agents.html#agent-installation["Scopri come creare un agente Console"] .
 
-Il seguente video mostra i passaggi per abbonarsi a NetApp Intelligent Services da AWS Marketplace:
-
-.Iscriviti a NetApp Intelligent Services da AWS Marketplace
-video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
 . Selezionare *Credenziali dell'organizzazione*.
