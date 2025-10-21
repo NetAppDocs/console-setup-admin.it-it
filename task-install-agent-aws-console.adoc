@@ -150,13 +150,13 @@ Sarà necessario implementare questo requisito di rete dopo aver creato l'agente
 
 == Passaggio 2: impostare le autorizzazioni AWS per l'agente della console
 
-La Console deve autenticarsi con AWS prima di poter distribuire l'istanza dell'agente della Console nella VPC.  Puoi scegliere uno di questi metodi di autenticazione:
+La console deve autenticarsi con AWS prima di poter distribuire l'agente della console nella VPC. Puoi scegliere uno di questi metodi di autenticazione:
 
 * Consentire alla Console di assumere un ruolo IAM che disponga delle autorizzazioni richieste
 * Fornire una chiave di accesso AWS e una chiave segreta per un utente IAM che dispone delle autorizzazioni richieste
 
 
-In entrambe le opzioni, il primo passo è creare un criterio IAM.  Questa policy contiene solo le autorizzazioni necessarie per avviare l'istanza dell'agente Console in AWS dalla Console.
+In entrambe le opzioni, il primo passo è creare un criterio IAM. Questa policy contiene solo le autorizzazioni necessarie per avviare l'agente della console in AWS dalla console.
 
 Se necessario, è possibile limitare la policy IAM utilizzando l'IAM `Condition` elemento. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html["Documentazione AWS: Elemento Condizione"^]
 
@@ -166,7 +166,7 @@ Se necessario, è possibile limitare la policy IAM utilizzando l'IAM `Condition`
 . Selezionare *JSON*.
 . Copia e incolla la seguente policy:
 +
-Questa policy contiene solo le autorizzazioni necessarie per avviare l'istanza dell'agente Console in AWS dalla Console.  Quando la Console crea l'agente della Console, applica un nuovo set di autorizzazioni all'istanza dell'agente della Console che consente all'agente della Console di gestire le risorse AWS. link:reference-permissions-aws.html["Visualizza le autorizzazioni richieste per l'istanza dell'agente Console stessa"] .
+Questa policy contiene solo le autorizzazioni necessarie per avviare l'agente della console in AWS dalla console.  Quando la Console crea l'agente della Console, applica un nuovo set di autorizzazioni all'agente della Console che consente all'agente della Console di gestire le risorse AWS. link:reference-permissions-aws.html["Visualizza le autorizzazioni richieste per l'agente della console stesso"].
 
 +
 [source, json]
@@ -283,7 +283,7 @@ Creare l'agente Console direttamente dalla console basata sul Web.
 
 .Informazioni su questo compito
 * La creazione dell'agente Console dalla Console distribuisce un'istanza EC2 in AWS utilizzando una configurazione predefinita.  Non passare a un'istanza EC2 più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-agent-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
-* Quando la Console crea l'agente Console, crea anche un ruolo IAM e un profilo istanza per l'istanza.  Questo ruolo include autorizzazioni che consentono all'agente della console di gestire le risorse AWS.  Assicurarsi che il ruolo venga aggiornato man mano che nelle versioni future verranno aggiunte nuove autorizzazioni. link:reference-permissions-aws.html["Scopri di più sulla policy IAM per l'agente della console"] .
+* Quando la Console crea l'agente Console, crea anche un ruolo IAM e un profilo per l'agente. Questo ruolo include autorizzazioni che consentono all'agente della console di gestire le risorse AWS. Assicurarsi che il ruolo venga aggiornato man mano che nelle versioni future verranno aggiunte nuove autorizzazioni. link:reference-permissions-aws.html["Scopri di più sulla policy IAM per l'agente della console"].
 
 
 .Prima di iniziare
@@ -309,13 +309,13 @@ TIP: Se si sceglie *Assumi ruolo*, è possibile creare il primo set di credenzia
 
 . Nella pagina *Dettagli*, fornire i dettagli sull'agente della console.
 +
-** Inserisci un nome per l'istanza.
-** Aggiungere tag personalizzati (metadati) all'istanza.
+** Inserisci un nome.
+** Aggiungi tag personalizzati (metadati).
 ** Scegli se desideri che la Console crei un nuovo ruolo con le autorizzazioni richieste oppure se desideri selezionare un ruolo esistente che hai impostato conlink:reference-permissions-aws.html["i permessi richiesti"] .
 ** Scegliere se si desidera crittografare i dischi EBS dell'agente Console.  È possibile utilizzare la chiave di crittografia predefinita oppure una chiave personalizzata.
 
 
-. Nella pagina *Rete*, specifica una VPC, una subnet e una coppia di chiavi per l'istanza, scegli se abilitare un indirizzo IP pubblico e, facoltativamente, specifica una configurazione proxy.
+. Nella pagina *Rete*, specificare una VPC, una subnet e una coppia di chiavi per l'agente, scegliere se abilitare un indirizzo IP pubblico e, facoltativamente, specificare una configurazione proxy.
 +
 Assicurati di disporre della coppia di chiavi corretta per accedere alla macchina virtuale dell'agente Console.  Senza una coppia di chiavi non è possibile accedervi.
 
@@ -336,7 +336,7 @@ Se stai ancora utilizzando illink:reference-networking-saas-console-previous.htm
 ====
 . Selezionare *Aggiungi*.
 +
-La console prepara l'istanza in circa 10 minuti.  Rimani sulla pagina fino al completamento del processo.
+La console distribuisce l'agente in circa 10 minuti. Rimani sulla pagina fino al completamento del processo.
 
 
 

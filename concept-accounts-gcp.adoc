@@ -24,8 +24,8 @@ Prima di poter utilizzare la Console per gestire le risorse nel tuo progetto Goo
 
 Prima di distribuire un agente Console direttamente dalla Console, è necessario disporre di due set di autorizzazioni:
 
-. È necessario distribuire un agente Console utilizzando un account Google che disponga delle autorizzazioni per avviare l'istanza VM dell'agente Console dalla Console.
-. Quando si distribuisce l'agente Console, viene richiesto di selezionare un https://cloud.google.com/iam/docs/service-accounts["account di servizio"^] per l'istanza della VM.  La console ottiene le autorizzazioni dall'account di servizio per creare e gestire i sistemi Cloud Volumes ONTAP , per gestire i backup utilizzando NetApp Backup and Recovery e altro ancora.  Le autorizzazioni vengono fornite associando un ruolo personalizzato all'account di servizio.
+. È necessario distribuire un agente Console utilizzando un account Google che disponga delle autorizzazioni per avviare l'agente Console dalla Console.
+. Quando si distribuisce l'agente Console, viene richiesto di selezionare un https://cloud.google.com/iam/docs/service-accounts["account di servizio"^] per l'agente La console ottiene le autorizzazioni dall'account di servizio per creare e gestire i sistemi Cloud Volumes ONTAP , per gestire i backup utilizzando il backup e il ripristino NetApp e altro ancora. Le autorizzazioni vengono fornite associando un ruolo personalizzato all'account di servizio.
 
 
 L'immagine seguente illustra i requisiti di autorizzazione descritti nei numeri 1 e 2 sopra:

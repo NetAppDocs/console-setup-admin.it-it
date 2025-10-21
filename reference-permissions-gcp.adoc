@@ -14,7 +14,7 @@ summary: 'L"agente della console necessita delle autorizzazioni per eseguire azi
 
 
 [role="lead"]
-La NetApp Console richiede autorizzazioni per eseguire azioni in Google Cloud.  Queste autorizzazioni sono incluse in un ruolo personalizzato fornito da NetApp.  Dovresti capire cosa fa l'agente con queste autorizzazioni.
+L'agente della console necessita delle autorizzazioni per eseguire azioni in Google Cloud. Queste autorizzazioni sono incluse in un ruolo personalizzato fornito da NetApp. Dovresti capire cosa fa l'agente con queste autorizzazioni.
 
 
 
@@ -33,7 +33,7 @@ Sarà necessario applicare questo ruolo personalizzato a un account di servizio 
 [source, yaml]
 ----
 title: NetApp Console agent
-description: Permissions for the service account associated with the Console agent instance.
+description: Permissions for the service account associated with the Console agent.
 stage: GA
 includedPermissions:
 - iam.serviceAccounts.actAs

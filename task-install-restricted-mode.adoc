@@ -38,9 +38,9 @@ link:task-prepare-restricted-mode.html["Scopri i requisiti di rete"]
 link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Scopri come impostare le autorizzazioni AWS"]
 
 * Autorizzazioni per iscriversi e annullare l'iscrizione ad AWS Marketplace per il tuo utente IAM.
-* Una conoscenza dei requisiti di CPU e RAM per l'istanza.
+* Conoscenza dei requisiti di CPU e RAM per l'agente.
 +
-link:task-prepare-restricted-mode.html#step-3-review-host-requirements["Esaminare i requisiti dell'istanza"] .
+link:task-prepare-restricted-mode.html#step-3-review-host-requirements["Requisiti dell'agente di revisione"].
 
 * Una coppia di chiavi per l'istanza EC2.
 
@@ -85,7 +85,7 @@ Se si desidera abilitare la crittografia Amazon EBS sul volume root, selezionare
 
 
 .Risultato
-AWS avvia il software con le impostazioni specificate.  L'istanza dell'agente Console e il software vengono eseguiti in circa cinque minuti.
+AWS avvia il software con le impostazioni specificate. L'agente Console viene distribuito in circa cinque minuti.
 
 .Cosa succederà ora?
 Configurare la NetApp Console.
@@ -139,7 +139,7 @@ image:screenshot_aws_iam_role.gif["Uno screenshot che mostra i campi nella pagin
 
 
 .Risultato
-AWS avvia il software con le impostazioni specificate.  L'istanza dell'agente Console e il software vengono eseguiti in circa cinque minuti.
+AWS avvia il software con le impostazioni specificate. L'agente Console viene distribuito in circa cinque minuti.
 
 .Cosa succederà ora?
 Configurare la console.
@@ -180,7 +180,7 @@ Durante la configurazione della VM, tenere presente quanto segue:
 image:screenshot-azure-sku.png["Uno screenshot della creazione di un nuovo indirizzo IP in Azure che consente di scegliere Base nel campo SKU."]
 
 +
-Se invece si utilizza un indirizzo IP SKU standard, la Console utilizza l'indirizzo IP _privato_ dell'agente della Console, anziché l'IP pubblico.  Se il computer che stai utilizzando per accedere alla Console non ha accesso a quell'indirizzo IP privato, le azioni dalla Console non riusciranno.
+Se invece si utilizza un indirizzo IP SKU standard, la Console utilizza l'indirizzo IP _privato_ dell'agente della Console, anziché l'IP pubblico. Se il computer che stai utilizzando per accedere alla Console non ha accesso a quell'indirizzo IP privato, le azioni dalla Console falliranno.
 
 +
 https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Documentazione di Azure: SKU IP pubblico"^]

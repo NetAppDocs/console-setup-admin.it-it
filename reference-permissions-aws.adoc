@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-aws.html 
 keywords: permissions, actions, aws, aws permissions, top secret, secret, aws top secret, aws secret, aws govcloud, govcloud, govcloud permissions, secret permissions, top secret permissions 
-summary: 'Quando la NetApp Console avvia l"istanza dell"agente in AWS, associa all"istanza una policy che fornisce all"agente le autorizzazioni per gestire risorse e processi all"interno di quell"account AWS.  L"agente utilizza le autorizzazioni per effettuare chiamate API a diversi servizi AWS, tra cui EC2, S3, CloudFormation, IAM, Key Management Service e altri ancora.' 
+summary: 'Quando la NetApp Console avvia l"agente in AWS, associa all"agente una policy che gli fornisce le autorizzazioni per gestire risorse e processi all"interno di quell"account AWS. L"agente utilizza le autorizzazioni per effettuare chiamate API a diversi servizi AWS, tra cui EC2, S3, CloudFormation, IAM, Key Management Service e altri ancora.' 
 ---
 = Autorizzazioni AWS per l'agente della console
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Quando la NetApp Console avvia l"istanza dell"agente in AWS, associa a
 
 
 [role="lead"]
-Quando la NetApp Console avvia un'istanza dell'agente della console in AWS, associa all'istanza una policy che fornisce all'agente le autorizzazioni per gestire risorse e processi all'interno di quell'account AWS.  L'agente utilizza le autorizzazioni per effettuare chiamate API a diversi servizi AWS, tra cui EC2, S3, CloudFormation, IAM, Key Management Service (KMS) e altri ancora.
+Quando la NetApp Console avvia un agente della console in AWS, associa all'agente una policy che gli fornisce le autorizzazioni per gestire risorse e processi all'interno di quell'account AWS. L'agente utilizza le autorizzazioni per effettuare chiamate API a diversi servizi AWS, tra cui EC2, S3, CloudFormation, IAM, Key Management Service (KMS) e altri ancora.
 
 
 

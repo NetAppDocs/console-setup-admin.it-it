@@ -4,7 +4,7 @@ permalink: task-adding-gcp-accounts.html
 keywords: permissions, gcp, marketplace, gcp subscription, subscription, gcp marketplace, subscribe, data tiering, tiering, setup, requirements, account for data tiering, account for tiering, interoperable, interoperability, interoperable storage access keys, access keys, bluexp 
 summary: 'È possibile gestire le credenziali di Google Cloud associate all"istanza VM dell"agente Console associando un abbonamento al marketplace e risolvendo i problemi del processo di abbonamento.  Entrambe queste attività garantiscono che tu possa utilizzare il tuo abbonamento al marketplace per pagare i servizi dati.' 
 ---
-= Gestisci le credenziali e gli abbonamenti di Google Cloud per NetApp Console
+= Associa le credenziali dell'agente della console al tuo abbonamento a Google Cloud
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,6 +14,8 @@ summary: 'È possibile gestire le credenziali di Google Cloud associate all"ista
 
 
 [role="lead"]
+Quando crei un agente Console in Google Cloud, puoi utilizzare le credenziali associate per abbonarti a NetApp Intelligent Services, che includono Cloud Volumes ONTAP e i servizi dati NetApp .  È necessario associare l'abbonamento all'agente le cui credenziali si desidera utilizzare per pagare i servizi.
+
 È possibile gestire le credenziali di Google Cloud associate a un'istanza VM dell'agente Console associando un abbonamento al marketplace e risolvendo i problemi del processo di abbonamento.  Entrambe queste attività garantiscono che tu possa utilizzare il tuo abbonamento al marketplace per pagare i servizi dati.
 
 
@@ -22,12 +24,16 @@ summary: 'È possibile gestire le credenziali di Google Cloud associate all"ista
 
 Quando distribuisci un agente Console in Google Cloud, la Console crea un set predefinito di credenziali associate a un'istanza VM dell'agente Console.  Puoi modificare in qualsiasi momento l'abbonamento a Google Cloud Marketplace associato a queste credenziali.  L'abbonamento consente di creare un sistema Cloud Volumes ONTAP a consumo e di utilizzare altri servizi dati.
 
-La sostituzione dell'attuale abbonamento al marketplace con un nuovo abbonamento modifica l'abbonamento al marketplace per tutti i sistemi Cloud Volumes ONTAP esistenti e per tutti i nuovi sistemi.
+La sostituzione dell'attuale abbonamento al marketplace con uno nuovo aggiorna l'abbonamento per i sistemi Cloud Volumes ONTAP esistenti e nuovi.
 
 .Passi
-. Selezionare *Amministrazione > *Credenziali*.
+. Selezionare *Amministrazione > Credenziali*.
 . Selezionare *Credenziali dell'organizzazione*.
-. Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.  +necessario nuovo screenshot (TS)image:screenshot_gcp_add_subscription.png["Uno screenshot del menu azioni per un set di credenziali esistenti."]
+. Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.
+
+
+image:screenshot_gcp_add_subscription.png["Uno screenshot del menu azioni per un set di credenziali esistenti."]
+
 . Per configurare un abbonamento esistente con le credenziali selezionate, seleziona un progetto Google Cloud e un abbonamento dall'elenco a discesa, quindi seleziona *Configura*.
 +
 image:screenshot_gcp_associate.gif["Uno screenshot di un progetto Google Cloud e dell'abbonamento selezionato per le credenziali Google Cloud."]
@@ -61,10 +67,10 @@ image:screenshot_gcp_marketplace_register.png["Uno screenshot di un pop-up di re
 NOTE: Se qualcuno della tua organizzazione ha già un abbonamento al marketplace dal tuo account di fatturazione, verrai reindirizzato a https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["la pagina Cloud Volumes ONTAP nella NetApp Console"^] Invece.  Se ciò non è previsto, contatta il team di vendita NetApp .  Google consente un solo abbonamento per account di fatturazione Google.
 
 +
-*** Seleziona le organizzazioni o gli account della Console a cui desideri associare questo abbonamento.
-*** Nel campo *Sostituisci abbonamento esistente*, scegli se desideri sostituire automaticamente l'abbonamento esistente per un'organizzazione o un account con questo nuovo abbonamento.
+*** Seleziona l'organizzazione della Console a cui desideri associare questo abbonamento.
+*** Nel campo *Sostituisci abbonamento esistente*, scegli se desideri sostituire automaticamente l'abbonamento esistente per un'organizzazione con questo nuovo abbonamento.
 +
-La Console sostituisce l'abbonamento esistente per tutte le credenziali nell'organizzazione o nell'account con questo nuovo abbonamento.  Se un set di credenziali non è mai stato associato a un abbonamento, questo nuovo abbonamento non sarà associato a tali credenziali.
+La Console sostituisce l'abbonamento esistente per tutte le credenziali nell'organizzazione con questo nuovo abbonamento. Se un set di credenziali non è mai stato associato a un abbonamento, questo nuovo abbonamento non sarà associato a tali credenziali.
 
 +
 Per tutte le altre organizzazioni o account, sarà necessario associare manualmente l'abbonamento ripetendo questi passaggi.
@@ -90,7 +96,7 @@ image:screenshot_gcp_associate.gif["Uno screenshot della pagina di assegnazione 
 
 == Risolvere i problemi del processo di abbonamento al Marketplace
 
-Talvolta l'abbonamento ai servizi dati NetApp tramite Google Cloud Marketplace può risultare frammentato a causa di autorizzazioni errate o perché non si segue accidentalmente il reindirizzamento alla Console.  In tal caso, attenersi alla seguente procedura per completare la procedura di abbonamento.
+L'abbonamento ai servizi dati NetApp tramite Google Cloud Marketplace potrebbe non riuscire a causa di autorizzazioni errate o di un mancato reindirizzamento alla Console. In tal caso, attenersi alla seguente procedura per completare la procedura di abbonamento.
 
 .Passi
 . Vai al https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Pagina NetApp su Google Cloud Marketplace"^] per verificare lo stato dell'ordine.  Se nella pagina è indicato *Gestisci sul fornitore*, scorri verso il basso e seleziona *Gestisci ordini*.

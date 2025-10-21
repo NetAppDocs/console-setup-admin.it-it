@@ -159,7 +159,7 @@ Dopo aver creato l'agente Console, è necessario implementare questo requisito d
 
 È necessario creare un ruolo personalizzato che disponga delle autorizzazioni per distribuire l'agente Console in Azure.
 
-Crea un ruolo personalizzato di Azure che puoi assegnare al tuo account Azure o a un'entità servizio Microsoft Entra.  La console esegue l'autenticazione con Azure e utilizza queste autorizzazioni per creare l'istanza dell'agente della console per tuo conto.
+Crea un ruolo personalizzato di Azure che puoi assegnare al tuo account Azure o a un'entità servizio Microsoft Entra. La console esegue l'autenticazione con Azure e utilizza queste autorizzazioni per creare l'agente della console per tuo conto.
 
 La console distribuisce la macchina virtuale dell'agente console in Azure, abilita un https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identità gestita assegnata dal sistema"^] , crea il ruolo richiesto e lo assegna alla VM. link:reference-permissions-azure.html["Esaminare come la Console utilizza le autorizzazioni"] .
 
@@ -444,7 +444,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=L
 
 * Se non si desidera che la Console crei automaticamente un ruolo di Azure per l'agente della Console, sarà necessario crearne uno propriolink:reference-permissions-azure.html["utilizzando la politica in questa pagina"] .
 +
-Queste autorizzazioni sono per l'istanza dell'agente Console stessa.  Si tratta di un set di autorizzazioni diverso da quello configurato in precedenza per distribuire la VM dell'agente Console.
+Queste autorizzazioni sono riservate all'agente Console stesso. Si tratta di un set di autorizzazioni diverso da quello configurato in precedenza per distribuire la VM dell'agente Console.
 
 
 
@@ -481,7 +481,7 @@ Il metodo di autenticazione per la macchina virtuale può essere una password o 
 +
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Scopri come connetterti a una VM Linux in Azure"^]
 
-. Nella pagina *Dettagli*, inserisci un nome per l'istanza, specifica i tag e scegli se desideri che la Console crei un nuovo ruolo con le autorizzazioni richieste o se desideri selezionare un ruolo esistente che hai impostato conlink:reference-permissions-azure.html["i permessi richiesti"] .
+. Nella pagina *Dettagli*, inserisci un nome per l'agente, specifica i tag e scegli se desideri che la Console crei un nuovo ruolo con le autorizzazioni richieste o se desideri selezionare un ruolo esistente che hai impostato conlink:reference-permissions-azure.html["i permessi richiesti"] .
 +
 Tieni presente che puoi scegliere gli abbonamenti Azure associati a questo ruolo.  Ogni sottoscrizione scelta fornisce all'agente della console le autorizzazioni per gestire le risorse in tale sottoscrizione (ad esempio, Cloud Volumes ONTAP).
 
@@ -506,7 +506,7 @@ Se stai ancora utilizzando illink:reference-networking-saas-console-previous.htm
 ====
 . Selezionare *Aggiungi*.
 +
-La console prepara l'istanza in circa 10 minuti.  Rimani sulla pagina fino al completamento del processo.
+La Console prepara l'agente in circa 10 minuti. Rimani sulla pagina fino al completamento del processo.
 
 
 
@@ -516,4 +516,4 @@ Una volta completato il processo, l'agente della Console sarà disponibile per l
 
 NOTE: Se la distribuzione non riesce, puoi scaricare un report e i registri dalla Console per aiutarti a risolvere i problemi.link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
 
-Se si dispone di un archivio BLOB di Azure nella stessa sottoscrizione di Azure in cui è stato creato l'agente della console, nella pagina *Sistemi* verrà visualizzato automaticamente un sistema di archiviazione BLOB di Azure. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Scopri come gestire l'archiviazione BLOB di Azure dalla NetApp Console"^]
+Se si dispone di Azure Blob Storage nello stesso account Azure in cui è stato creato l'agente Console, Azure Blob Storage verrà visualizzato automaticamente nella pagina *Sistemi*. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Scopri come gestire l'archiviazione BLOB di Azure dalla NetApp Console"^]

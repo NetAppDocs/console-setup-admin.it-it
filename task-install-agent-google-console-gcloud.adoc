@@ -420,7 +420,7 @@ Se stai ancora utilizzando illink:reference-networking-saas-console-previous.htm
 ====
 . Selezionare *Aggiungi*.
 +
-L'istanza sarà pronta in circa 10 minuti; resta sulla pagina fino al completamento del processo.
+L'agente sarà pronto in circa 10 minuti; resta sulla pagina fino al completamento del processo.
 
 
 
