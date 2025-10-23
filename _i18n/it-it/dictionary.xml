@@ -572,8 +572,6 @@
   <block id="b4b78d037549f1e53319a933fd923727" category="list-text">Dopo aver effettuato l'accesso, configura la Console:</block>
   <block id="fa4a4ed3171c9645519ee525ed212db9" category="list-text">Specificare l'organizzazione della console da associare all'agente della console.</block>
   <block id="d1caa1543690181f63b8c0e0933c0c49" category="paragraph">La modalità limitata non è supportata quando l'agente Console è installato in locale.</block>
-  <block id="af60e7ca775342cbe207d574ae3a82ef" category="paragraph">Il seguente video mostra i passaggi per abbonarsi a NetApp Intelligent Services da AWS Marketplace:</block>
-  <block id="1cfe9a2e660a541826be5b5cc3018fdd" category="video-title">Iscriviti a NetApp Intelligent Services da AWS Marketplace</block>
   <block id="aaf23e1cf00fee0789e1c392da395cc9" category="list-text">Selezionare il menu azioni per un set di credenziali associate a un agente della console, quindi selezionare *Configura abbonamento*.</block>
   <block id="601c60f4bc1d60fb12bbba2d26b90b33" category="paragraph">È necessario selezionare le credenziali associate a un agente Console.  Non è possibile associare un abbonamento al marketplace alle credenziali associate alla NetApp Console.</block>
   <block id="0d28acbceed906f52a206d0f3fb0add2" category="inline-image-macro">Uno screenshot del menu azioni per un set di credenziali esistenti.</block>
@@ -593,8 +591,6 @@
   <block id="7dffa6296286b12f66d638f53340316c" category="list-text">Se richiesto, accedi al tuo account Azure.</block>
   <block id="9dc9a5b2f23fe90a0fd71125f3034dfd" category="list-text">Compila il modulo e seleziona *Iscriviti*.</block>
   <block id="3221538307211e131f96e1a83b1a5235" category="list-text">Una volta completato il processo di sottoscrizione, seleziona *Configura account ora*.</block>
-  <block id="89d8b3b4c08395fc5dbef0d35cb50529" category="paragraph">Il video seguente mostra i passaggi per abbonarsi da Azure Marketplace:</block>
-  <block id="930540e35d6a8bd81f5882c46e1f93c2" category="video-title">Iscriviti a NetApp Intelligent Services da Azure Marketplace</block>
   <block id="ef5d79e3ae5671ca28e5f6e3b02eed27" category="list-text">Per configurare un abbonamento esistente con le credenziali selezionate, seleziona un progetto Google Cloud e un abbonamento dall'elenco a discesa, quindi seleziona *Configura*.</block>
   <block id="fff6f5125be05a94543d2e88dbd30b27" category="inline-image-macro">Uno screenshot di un progetto Google Cloud e dell'abbonamento selezionato per le credenziali Google Cloud.</block>
   <block id="cab980518d03aa36afc924b709828a6e" category="paragraph"><block ref="cab980518d03aa36afc924b709828a6e" category="inline-image-macro-rx" type="image"></block></block>
@@ -613,8 +609,6 @@
   <block id="825c72d4114a9a71a355213f6b79c642" category="list-text">Completa i passaggi nella pagina *Assegnazione abbonamento*:</block>
   <block id="58575503869d282abe104097770af48c" category="inline-link">la pagina Cloud Volumes ONTAP nella NetApp Console</block>
   <block id="f363e3b5ffcff31a7405fb7c63982e48" category="admonition">Se qualcuno della tua organizzazione ha già un abbonamento al marketplace dal tuo account di fatturazione, verrai reindirizzato a<block ref="eeda9d490d323c6921491a4ef94ce954" category="inline-link-rx"></block> Invece.  Se ciò non è previsto, contatta il team di vendita NetApp .  Google consente un solo abbonamento per account di fatturazione Google.</block>
-  <block id="a6b7d96f53186edb463f8f8611f97cd9" category="paragraph">Il seguente video mostra i passaggi per abbonarsi da Google Cloud Marketplace:</block>
-  <block id="c9b7d3dfb0a91a99ab5deba597b6741a" category="video-title">Iscriviti da Google Cloud Marketplace</block>
   <block id="a5a1d94d16067bff86c06d08991b799b" category="list-text">Una volta completato questo processo, torna alla pagina Credenziali nella Console e seleziona questo nuovo abbonamento.</block>
   <block id="467e5d6bbcd0ea531c8f7285b69e29ee" category="inline-image-macro">Uno screenshot della pagina di assegnazione dell'abbonamento.</block>
   <block id="60d2ed6f6e1774535b6e69274800381d" category="paragraph"><block ref="60d2ed6f6e1774535b6e69274800381d" category="inline-image-macro-rx" type="image"></block></block>
@@ -5602,4 +5596,5 @@
   <block id="8a62551759227881974703cf10bfc946" category="paragraph"><block ref="e2790838ef7051b1907224142bc33625" category="inline-link-macro-rx"></block>.</block>
   <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">AWS avvia il software con le impostazioni specificate. L'agente Console viene distribuito in circa cinque minuti.</block>
   <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">Se invece si utilizza un indirizzo IP SKU standard, la Console utilizza l'indirizzo IP _privato_ dell'agente della Console, anziché l'IP pubblico. Se il computer che stai utilizzando per accedere alla Console non ha accesso a quell'indirizzo IP privato, le azioni dalla Console falliranno.</block>
+  <block id="d1cb423c9810b1ddd65eea821845fff2" category="admonition">Per attivare il rilevamento delle attività sospette degli utenti, è necessario disporre del ruolo di amministratore dell'organizzazione della console.</block>
 </blocks>
