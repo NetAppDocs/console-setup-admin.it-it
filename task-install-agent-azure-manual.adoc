@@ -50,6 +50,7 @@ L'agente della console richiede questo spazio in `/var` perché Docker o Podman 
 
 
 --
+Dimensioni della VM di Azure:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia Standard_D8s_v3.
 Ipervisore:: È richiesto un hypervisor bare metal o hosted certificato per eseguire un sistema operativo supportato.
 [[podman-versions]]Requisiti del sistema operativo e del contenitore:: L'agente Console è supportato con i seguenti sistemi operativi quando si utilizza la Console in modalità standard o in modalità limitata.  Prima di installare l'agente è necessario uno strumento di orchestrazione dei container.
 +
@@ -106,19 +107,6 @@ Docker Engine dalla versione 23.0.6 alla 28.0.0.
 Non supportato
 
 |===
---
-Dimensioni della VM di Azure:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM sopra indicati.  Consigliamo Standard_D8s_v3.
-Spazio su disco in /opt:: Devono essere disponibili 100 GiB di spazio
-+
---
-L'agente utilizza `/opt` per installare il `/opt/application/netapp` directory e il suo contenuto.
-
---
-Spazio su disco in /var:: Devono essere disponibili 20 GiB di spazio
-+
---
-L'agente della console richiede questo spazio in `/var` perché Docker o Podman sono progettati per creare i contenitori all'interno di questa directory.  Nello specifico, creeranno contenitori nel `/var/lib/containers/storage` elenco.  I montaggi esterni o i collegamenti simbolici non funzionano per questo spazio.
-
 --
 
 
@@ -466,7 +454,7 @@ image:screenshot_azure_shell_upload.png["Uno screenshot di Azure Cloud Shell in 
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 
 
@@ -537,7 +525,7 @@ image:screenshot_azure_shell_upload.png["Uno screenshot di Azure Cloud Shell in 
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 +
 Ora dovresti avere un ruolo personalizzato denominato Operatore Console che puoi assegnare alla macchina virtuale dell'agente Console.

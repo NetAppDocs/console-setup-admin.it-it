@@ -50,6 +50,12 @@ L'agente della console richiede questo spazio in `/var` perché Docker o Podman 
 
 
 --
+Tipo di macchina Google Cloud:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia n2-standard-8.
++
+--
+L'agente Console è supportato in Google Cloud su un'istanza VM con un sistema operativo che supporta https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Funzionalità della VM schermata"^]
+
+--
 Ipervisore:: È richiesto un hypervisor bare metal o hosted certificato per eseguire un sistema operativo supportato.
 [[podman-versions]]Requisiti del sistema operativo e del contenitore:: L'agente Console è supportato con i seguenti sistemi operativi quando si utilizza la Console in modalità standard o in modalità limitata.  Prima di installare l'agente è necessario uno strumento di orchestrazione dei container.
 +
@@ -107,22 +113,10 @@ Non supportato
 
 |===
 --
-Tipo di macchina Google Cloud:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM sopra indicati.  Consigliamo n2-standard-8.
+Tipo di macchina Google Cloud:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia n2-standard-8.
 +
 --
 L'agente Console è supportato in Google Cloud su un'istanza VM con un sistema operativo che supporta https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Funzionalità della VM schermata"^]
-
---
-Spazio su disco in /opt:: Devono essere disponibili 100 GiB di spazio
-+
---
-L'agente utilizza `/opt` per installare il `/opt/application/netapp` directory e il suo contenuto.
-
---
-Spazio su disco in /var:: Devono essere disponibili 20 GiB di spazio
-+
---
-L'agente della console richiede questo spazio in `/var` perché Docker o Podman sono progettati per creare i contenitori all'interno di questa directory.  Nello specifico, creeranno contenitori nel `/var/lib/containers/storage` elenco.  I montaggi esterni o i collegamenti simbolici non funzionano per questo spazio.
 
 --
 

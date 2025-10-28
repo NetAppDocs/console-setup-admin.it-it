@@ -19,24 +19,19 @@ NetApp Console, l'agente NetApp Console e i servizi dati NetApp richiedono l'acc
 Sarà necessario configurare l'accesso alla rete per quanto segue:
 
 * Computer che accedono alla NetApp Console come software come servizio (SaaS)
-* Posizioni di rete in cui distribuire gli agenti della console installati in locale o nel cloud.
-* Endpoint aggiuntivi per determinati servizi dati NetApp , tra cui Cloud Volumes ONTAP.
+* Agenti console installabili in locale o nel cloud. Agenti della console.
 
 
 
-NOTE: NetApp ha ridotto gli endpoint di rete richiesti per la Console e gli agenti della Console, migliorando la sicurezza e semplificando la distribuzione.  È importante sottolineare che tutte le distribuzioni precedenti alla versione 4.0.0 continuano a essere pienamente supportate.  Sebbene gli endpoint precedenti rimangano disponibili per gli agenti esistenti, NetApp consiglia vivamente di aggiornare le regole del firewall agli endpoint correnti dopo aver confermato il corretto aggiornamento degli agenti.link:reference-networking-saas-console-previous.html["Scopri come aggiornare l'elenco degli endpoint."]
+NOTE: Con la versione 4.0.0, NetApp ha ridotto gli endpoint di rete richiesti per la Console e gli agenti della Console, migliorando la sicurezza e semplificando la distribuzione. È importante sottolineare che tutte le distribuzioni precedenti alla versione 4.0.0 continuano a essere pienamente supportate.  Sebbene gli endpoint precedenti rimangano disponibili per gli agenti esistenti, NetApp consiglia vivamente di aggiornare le regole del firewall agli endpoint correnti dopo aver confermato il corretto aggiornamento degli agenti.link:reference-networking-saas-console-previous.html["Scopri come aggiornare l'elenco degli endpoint."]
 
 
 
-== Endpoint contattati dalla NetApp Console
+== Endpoint contattati da NetApp Console e dagli agenti della console
 
-Ogni computer che accede alla NetApp Console deve disporre di connessioni agli endpoint elencati di seguito.
+Ogni agente distribuito e ogni computer che accede alla NetApp Console devono disporre di connessioni agli endpoint elencati di seguito.
 
-Il sistema contatta questi endpoint in due scenari:
-
-* Da un computer che accede al https://console.netapp.com["NetApp Console"^] come software come servizio (SaaS).
-* Da un computer che accede direttamente a un host agente della Console, per effettuare l'accesso e configurarlo oppure per accedere alla Console dall'host agente.
-
+Gli agenti della console distribuiti nel tuo provider cloud necessitano di accedere agli endpoint rispettivi di quel provider cloud.
 
 [cols="2*"]
 |===
@@ -70,23 +65,20 @@ Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di agg
 |===
 
 
-== Preparare la rete per l'agente della console
+== Gli endpoint del provider cloud hanno contattato l'agente della console
 
-L'agente Console può essere installato in locale o nel cloud e contatta gli endpoint per completare le azioni avviate dalla console.
+Gli agenti della console devono avere accesso ad endpoint aggiuntivi se sono distribuiti nel tuo provider cloud.
 
-Gli agenti della console devono avere accesso agli stessi endpoint della NetApp Console, oltre ad endpoint aggiuntivi a seconda di dove si installa l'agente.
-
-Configurare l'accesso all'endpoint di rete prima di installare l'agente Console.
+Configurare l'accesso all'endpoint di rete del provider cloud prima di installare l'agente Console.
 
 * link:task-install-agent-aws-console.html#networking-aws-agent["Configurare l'accesso alla rete AWS per un agente della console"]
 * link:task-install-agent-azure-console.html#networking-azure-agent["Configurare l'accesso alla rete di Azure per un agente della console"]
 * link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["Configurare l'accesso alla rete Google Cloud per un agente della console"]
-* link:task-install-agent-on-prem.html#network-access-agent["Configurare l'accesso alla rete locale per un agente della console"]
 
 
 
 
-== Preparare la rete per Cloud Volumes ONTAP
+== Endpoint dei servizi dati contattati dall'agente della console
 
 Alcuni servizi dati NetApp e Cloud Volumes ONTAP richiedono che l'agente disponga di un accesso Internet in uscita aggiuntivo.
 
@@ -98,5 +90,3 @@ Alcuni servizi dati NetApp e Cloud Volumes ONTAP richiedono che l'agente dispong
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Endpoint per Cloud Volumes ONTAP in Azure"]
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Endpoint per Cloud Volumes ONTAP in Google Cloud"]
 
-
-https://docs.netapp.com/us-en/data-services-family/["Fare riferimento alla documentazione dei rispettivi servizi dati NetApp ."^]

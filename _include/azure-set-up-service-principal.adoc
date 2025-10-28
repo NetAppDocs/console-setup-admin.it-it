@@ -60,7 +60,7 @@ image:screenshot_azure_shell_upload.png["Uno screenshot di Azure Cloud Shell in 
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 +
 Ora dovresti avere un ruolo personalizzato denominato Operatore Console che puoi assegnare alla macchina virtuale dell'agente Console.

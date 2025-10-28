@@ -148,7 +148,7 @@ processore:: 8 core o 8 vCPU
 Memoria RAM:: 32 GB
 
 
-Tipo di istanza AWS EC2:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM sopra indicati.  Consigliamo t3.2xlarge.
+Tipo di istanza AWS EC2:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia t3.2xlarge.
 
 
 coppia di chiavi:: Quando si crea l'agente Console, è necessario selezionare una coppia di chiavi EC2 da utilizzare con l'istanza.
@@ -164,10 +164,10 @@ Limite di hop di risposta PUT quando si utilizza IMDSv2:: Se IMDSv2 è abilitato
 --
 
 
-Dimensioni della VM di Azure:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM sopra indicati.  Consigliamo Standard_D8s_v3.
+Dimensioni della VM di Azure:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia Standard_D8s_v3.
 
 
-Tipo di macchina Google Cloud:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM sopra indicati.  Consigliamo n2-standard-8.
+Tipo di macchina Google Cloud:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia n2-standard-8.
 +
 --
 L'agente Console è supportato in Google Cloud su un'istanza VM con un sistema operativo che supporta https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Funzionalità della VM schermata"^]

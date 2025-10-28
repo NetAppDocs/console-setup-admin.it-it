@@ -153,7 +153,7 @@ Quando si crea l'agente Console, scegliere un tipo di macchina virtuale che sodd
 
 processore:: 8 core o 8 vCPU
 Memoria RAM:: 32 GB
-Dimensioni della VM di Azure:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM sopra indicati.  Consigliamo Standard_D8s_v3.
+Dimensioni della VM di Azure:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia Standard_D8s_v3.
 
 
 
@@ -209,7 +209,7 @@ image:screenshot_azure_shell_upload.png["Uno screenshot di Azure Cloud Shell in 
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 
 
@@ -280,7 +280,7 @@ image:screenshot_azure_shell_upload.png["Uno screenshot di Azure Cloud Shell in 
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 +
 Ora dovresti avere un ruolo personalizzato denominato Operatore Console che puoi assegnare alla macchina virtuale dell'agente Console.

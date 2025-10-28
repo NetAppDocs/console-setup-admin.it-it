@@ -380,7 +380,7 @@ Fornisci alla Console le autorizzazioni precedentemente impostate.
 
 
 
-== Passaggio 3: fornire le autorizzazioni alla NetApp Console
+== Passaggio 3: fornire le autorizzazioni all'agente della console
 
 Se hai distribuito l'agente Console da Azure Marketplace o se hai installato manualmente il software dell'agente Console, devi fornire le autorizzazioni configurate in precedenza.
 

@@ -50,6 +50,7 @@ L'agente della console richiede questo spazio in `/var` perché Docker o Podman 
 
 
 --
+Tipo di istanza AWS EC2:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia t3.2xlarge.
 Ipervisore:: È richiesto un hypervisor bare metal o hosted certificato per eseguire un sistema operativo supportato.
 [[podman-versions]]Requisiti del sistema operativo e del contenitore:: L'agente Console è supportato con i seguenti sistemi operativi quando si utilizza la Console in modalità standard o in modalità limitata.  Prima di installare l'agente è necessario uno strumento di orchestrazione dei container.
 +
@@ -107,7 +108,6 @@ Non supportato
 
 |===
 --
-Tipo di istanza AWS EC2:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM sopra indicati.  Consigliamo t3.2xlarge.
 coppia di chiavi:: Quando si crea l'agente Console, è necessario selezionare una coppia di chiavi EC2 da utilizzare con l'istanza.
 Limite di hop di risposta PUT quando si utilizza IMDSv2:: Se IMDSv2 è abilitato sull'istanza EC2 (questa è l'impostazione predefinita per le nuove istanze EC2), è necessario modificare il limite di hop della risposta PUT sull'istanza su 3.  Se non modifichi il limite sull'istanza EC2, riceverai un errore di inizializzazione dell'interfaccia utente quando tenti di configurare l'agente.
 +
@@ -115,18 +115,6 @@ Limite di hop di risposta PUT quando si utilizza IMDSv2:: Se IMDSv2 è abilitato
 * link:task-require-imdsv2.html["Richiedere l'uso di IMDSv2 sulle istanze Amazon EC2"]
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["Documentazione AWS: modifica del limite di hop della risposta PUT"^]
 
-
---
-Spazio su disco in /opt:: Devono essere disponibili 100 GiB di spazio
-+
---
-L'agente utilizza `/opt` per installare il `/opt/application/netapp` directory e il suo contenuto.
-
---
-Spazio su disco in /var:: Devono essere disponibili 20 GiB di spazio
-+
---
-L'agente della console richiede questo spazio in `/var` perché Docker o Podman sono progettati per creare i contenitori all'interno di questa directory.  Nello specifico, creeranno contenitori nel `/var/lib/containers/storage` elenco.  I montaggi esterni o i collegamenti simbolici non funzionano per questo spazio.
 
 --
 

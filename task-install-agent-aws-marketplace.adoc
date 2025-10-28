@@ -177,7 +177,7 @@ Quando si crea l'agente Console, è necessario scegliere un tipo di istanza EC2 
 
 processore:: 8 core o 8 vCPU
 Memoria RAM:: 32 GB
-Tipo di istanza AWS EC2:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM sopra indicati.  Consigliamo t3.2xlarge.
+Tipo di istanza AWS EC2:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia t3.2xlarge.
 
 
 
