@@ -35,7 +35,7 @@ NetApp consiglia di aggiornare le regole del firewall per utilizzare l'elenco de
 
 [cols="3*"]
 |===
-| *Endpoint precedenti* | *Endpoint per 4.0.0 e versioni successive* | *Scopo* 
+| *Punti finali per 3.9.55 e precedenti* | *Endpoint per 4.0.0 e versioni successive* | *Scopo* 
 
 
  a| 

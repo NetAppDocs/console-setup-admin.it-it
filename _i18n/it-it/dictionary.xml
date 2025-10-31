@@ -1012,7 +1012,6 @@
   <block id="e95d0df05962f4456b8b569c54b396c6" category="paragraph">La versione 4.0.0 è disponibile per la modalità standard e la modalità limitata.</block>
   <block id="5412276bd0dd11677309c5862e9a5a84" category="section-title">Consolidamento e riduzione degli endpoint di rete richiesti</block>
   <block id="d0994d4e248da3f28077f3de0aa07b31" category="paragraph">NetApp ha ridotto gli endpoint di rete richiesti per la Console e gli agenti della Console, migliorando la sicurezza e semplificando la distribuzione.  È importante sottolineare che tutte le distribuzioni precedenti alla versione 4.0.0 continuano a essere pienamente supportate.  Sebbene gli endpoint precedenti rimangano disponibili per gli agenti esistenti, NetApp consiglia vivamente di aggiornare le regole del firewall agli endpoint correnti dopo aver confermato il corretto aggiornamento degli agenti.</block>
-  <block id="cca12c7916c4a96b099460567ed56f7b" category="list-text"><block ref="8aad0fd6d4c3bc8fa0ee8715b00de090" category="inline-link-macro-rx"></block> .</block>
   <block id="8880ac717c8ca7c5aacda1dbf0aa76b4" category="inline-link-macro">Scopri di più sugli endpoint richiesti.</block>
   <block id="a65e1c365f170de138a296cb93571b83" category="list-text"><block ref="a65e1c365f170de138a296cb93571b83" category="inline-link-macro-rx"></block></block>
   <block id="dcd681e02807cfe12b61283485a64b57" category="section-title">Supporto per la distribuzione VCenter degli agenti della console</block>
@@ -5547,7 +5546,6 @@
   <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">AWS avvia il software con le impostazioni specificate. L'agente Console viene distribuito in circa cinque minuti.</block>
   <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">Se invece si utilizza un indirizzo IP SKU standard, la Console utilizza l'indirizzo IP _privato_ dell'agente della Console, anziché l'IP pubblico. Se il computer che stai utilizzando per accedere alla Console non ha accesso a quell'indirizzo IP privato, le azioni dalla Console falliranno.</block>
   <block id="d1cb423c9810b1ddd65eea821845fff2" category="admonition">Per attivare il rilevamento delle attività sospette degli utenti, è necessario disporre del ruolo di amministratore dell'organizzazione della console.</block>
-  <block id="148a5defddc98b9d994f39780f74e348" category="cell">*Endpoint precedenti*</block>
   <block id="c563d78603e1e09616c6c043a19061ba" category="cell">*Endpoint per 4.0.0 e versioni successive*</block>
   <block id="1463a95efc33a52765f03569e1e39a10" category="cell">*Scopo*</block>
   <block id="3b02fb538695ecfedde92943f6fd865e" category="paragraph">Per ottenere le licenze e contattare l'assistenza NetApp .</block>
@@ -5599,4 +5597,7 @@
   <block id="a64b4879b658ef7dd1a5bf863f66e510" category="section-title">Gli endpoint del provider cloud hanno contattato l'agente della console</block>
   <block id="334af2b72c201a4f9aea3650a21ea8ec" category="paragraph">Configurare l'accesso all'endpoint di rete del provider cloud prima di installare l'agente Console.</block>
   <block id="9ccb545b97d1ad0ce41d2577f6ae2e82" category="section-title">Passaggio 3: fornire le autorizzazioni all'agente della console</block>
+  <block id="9c4179cb78e78f8bd52b0a9525df84e3" category="cell">*Punti finali per 3.9.55 e precedenti*</block>
+  <block id="af1ce09274091f662d34169f09b1482e" category="inline-link-macro">Scopri come aggiornare l'elenco degli endpoint e visualizzare un confronto</block>
+  <block id="87bf0287482e9096c75805420a81b7ea" category="list-text"><block ref="eaf36d8f2aa9f00c9dd600ce08237a22" category="inline-link-macro-rx"></block>.</block>
 </blocks>

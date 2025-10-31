@@ -123,7 +123,7 @@ a| Se l'agente della console si trova in una regione commerciale o sovrana, è p
 
 [cols="3*"]
 |===
-| *Endpoint precedenti* | *Endpoint per 4.0.0 e versioni successive* | *Scopo* 
+| *Punti finali per 3.9.55 e precedenti* | *Endpoint per 4.0.0 e versioni successive* | *Scopo* 
 
 
  a| 
