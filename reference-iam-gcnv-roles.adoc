@@ -19,4 +19,5 @@ summary: 'La gestione dell"identità e dell"accesso NetApp Console fornisce ruol
 Google Cloud NetApp Volumes utilizza il seguente ruolo:
 
 * * Amministratore Google Cloud NetApp Volumes *: scopri e gestisci Google Cloud NetApp Volumes nella Console.
+* * Utente Google Cloud NetApp Volumes *: visualizza Google Cloud NetApp Volumes nella Console.
 
