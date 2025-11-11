@@ -39,7 +39,7 @@ _silent_ esegue lo script senza chiedere conferma.
 
 == Rimuovere gli agenti della console dalla console
 
-Se un agente della Console è inattivo, è possibile rimuoverlo dall'elenco degli agenti.  Potresti farlo se elimini la macchina virtuale dell'agente o se disinstalli il software dell'agente.
+Se hai eliminato una VM dell'agente o hai disinstallato l'agente, dovresti rimuoverlo dall'elenco degli agenti nella Console. Dopo aver eliminato una VM dell'agente o aver disinstallato il software dell'agente, l'agente mostra lo stato *Disconnesso* nella Console.
 
 Tenere presente quanto segue sulla rimozione di un agente Console:
 
@@ -49,6 +49,6 @@ Tenere presente quanto segue sulla rimozione di un agente Console:
 
 .Passi
 . Selezionare *Amministrazione > Agenti*.
-. Nella pagina *Panoramica*, seleziona il menu azioni per un agente inattivo e seleziona *Rimuovi agente*.
+. Nella pagina *Panoramica*, seleziona il menu azioni per un agente disconnesso e seleziona *Rimuovi agente*.
 . Inserisci il nome dell'agente per confermare e poi seleziona *Rimuovi*.
 

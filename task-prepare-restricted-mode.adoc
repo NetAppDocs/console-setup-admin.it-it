@@ -216,27 +216,33 @@ sudo systemctl enable --now podman.socket
 sudo dnf install python3
 ----
 . Installa il pacchetto repository EPEL se non è già disponibile sul tuo sistema.
-. Se si utilizza Red Hat Enterprise:
-+
+
+
 Questo passaggio è necessario perché podman-compose è disponibile nel repository Extra Packages for Enterprise Linux (EPEL).
 
-+
-Per Red Hat Enterprise Linux 9:
-
+. Se si utilizza Red Hat Enterprise 9:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
 +
-Per Red Hat Enterprise Linux 8:
+.. Installa il pacchetto podman-compose 1.5.0.
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.5.0
+----
 
+
+. Se si utilizza Red Hat Enterprise Linux 8:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-. Installa il pacchetto podman-compose 1.0.6.
++
+.. Installa il pacchetto podman-compose 1.0.6.
 +
 [source, cli]
 ----
@@ -246,39 +252,41 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: Utilizzando il `dnf install` il comando soddisfa il requisito per aggiungere podman-compose alla variabile d'ambiente PATH.  Il comando di installazione aggiunge podman-compose a /usr/bin, che è già incluso nel `secure_path` opzione sull'host.
 
-. Se si utilizza Red Hat Enterprise Linux 8, verificare che la versione di Podman utilizzi NetAvark con Aardvark DNS anziché CNI.
-+
-.. Controlla se il tuo networkBackend è impostato su CNI eseguendo il seguente comando:
+.. Se si utilizza Red Hat Enterprise Linux 8, verificare che la versione di Podman utilizzi NetAvark con Aardvark DNS anziché CNI.
+
+
+. Controlla se il tuo networkBackend è impostato su CNI eseguendo il seguente comando:
 +
 [source, cli]
 ----
 podman info | grep networkBackend
 ----
-.. Se networkBackend è impostato su `CNI` , dovrai cambiarlo in `netavark` .
-.. Installare `netavark` E `aardvark-dns` utilizzando il seguente comando:
+. Se networkBackend è impostato su `CNI` , dovrai cambiarlo in `netavark` .
+. Installare `netavark` E `aardvark-dns` utilizzando il seguente comando:
 +
 [source, cli]
 ----
 dnf install aardvark-dns netavark
 ----
-.. Apri il `/etc/containers/containers.conf` file e modificare l'opzione network_backend per utilizzare "netavark" invece di "cni".
-
-
+. Apri il `/etc/containers/containers.conf` file e modificare l'opzione network_backend per utilizzare "netavark" invece di "cni".
 +
 Se `/etc/containers/containers.conf` non esiste, apportare le modifiche alla configurazione `/usr/share/containers/containers.conf` .
 
-. Riavvia Podman.
++
+.. Riavvia Podman.
 +
 [source, cli]
 ----
 systemctl restart podman
 ----
-. Verificare che networkBackend sia ora modificato in "netavark" utilizzando il seguente comando:
+.. Verificare che networkBackend sia ora modificato in "netavark" utilizzando il seguente comando:
 +
 [source, cli]
 ----
 podman info | grep networkBackend
 ----
+
+
 
 
 --

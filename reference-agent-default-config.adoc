@@ -24,7 +24,7 @@ I seguenti dettagli di configurazione si applicano se hai distribuito un agente 
 
 
 
-=== Dettagli AWS
+=== Dettagli della VM dell'agente console per AWS
 
 Se hai distribuito un agente Console dalla Console o dal marketplace del provider cloud, tieni presente quanto segue:
 
@@ -40,7 +40,7 @@ Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per acced
 
 
 
-=== Dettagli azzurri
+=== Dettagli della macchina virtuale dell'agente console per Azure
 
 Se hai distribuito un agente Console dalla Console o dal marketplace del provider cloud, tieni presente quanto segue:
 
@@ -55,7 +55,7 @@ Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per acced
 
 
 
-=== Dettagli di Google Cloud
+=== Dettagli della VM dell'agente della console per Google Cloud
 
 Se hai distribuito un agente Console dalla Console, tieni presente quanto segue:
 
@@ -74,7 +74,7 @@ Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per acced
 
 La cartella di installazione dell'agente si trova nel seguente percorso:
 
-/opt/application/netapp/cloudmanager
+`/opt/application/netapp/cloudmanager`
 
 
 
@@ -82,12 +82,12 @@ La cartella di installazione dell'agente si trova nel seguente percorso:
 
 I file di registro sono contenuti nelle seguenti cartelle:
 
-* /opt/application/netapp/cloudmanager/log o
-* /opt/application/netapp/service-manager-2/logs (a partire dalle nuove installazioni 3.9.23)
+* `/opt/application/netapp/cloudmanager/log` O
+* `/opt/application/netapp/service-manager-2/logs` (a partire dalle nuove installazioni 3.9.23)
 +
 I registri in queste cartelle forniscono dettagli sull'agente della console.
 
-* /opt/application/netapp/cloudmanager/docker_occm/data/log
+* `/opt/application/netapp/cloudmanager/docker_occm/data/log`
 +
 I registri in questa cartella forniscono dettagli sui servizi cloud e sul servizio Console in esecuzione sull'agente Console.
 
@@ -122,11 +122,11 @@ La seguente configurazione si applica se hai installato manualmente l'agente Con
 
 * La cartella di installazione dell'agente si trova nel seguente percorso:
 +
-/opt/applicazione/netapp/ds
+`/opt/application/netapp/ds`
 
 * I file di registro sono contenuti nelle seguenti cartelle:
 +
-/var/lib/docker/volumes/ds_occmdata/_data/log
+`/var/lib/docker/volumes/ds_occmdata/_data/log`
 
 +
 I registri in questa cartella forniscono dettagli sull'agente Console e sulle immagini Docker.

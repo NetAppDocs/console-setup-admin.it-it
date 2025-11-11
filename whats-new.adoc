@@ -18,7 +18,34 @@ Scopri le novità sulle funzionalità di amministrazione NetApp Console : gestio
 
 
 
-== 6 ottobre 2025
+== 10 novembre 2025
+
+
+
+== Agente console 4.1.0
+
+Questa versione dell'agente Console include miglioramenti della sicurezza, correzioni di bug e le seguenti funzionalità:
+
+La versione 4.1.0 è disponibile per la modalità standard e la modalità limitata.
+
+.Indicatori di stato dell'agente rinominati
+Gli indicatori di stato per l'agente della console sono stati rinominati da *Attivo* e *Inattivo* a *Connesso* e *Disconnesso* per renderne più chiaro lo scopo.
+
+.Supporto per Redhat Enterprise Linux (RHEL) 9.6 e Podman 5.4.0
+L'agente Console ora supporta RHEL 9.6 e Podman 5.4.0. Inoltre, quando si utilizza RHEL 9 e versioni successive, NetApp supporta podman-compose 1.5.0.
+
+
+
+== Amministrazione NetApp Console
+
+Questa versione include quanto segue:
+
+.Nuovo indirizzo email per le notifiche NetApp Console
+L'indirizzo email che invia le notifiche NetApp Console è cambiato da *service@console.bluexp.netapp.com* a *service@console.netapp.com*. NetApp consiglia di aggiornare tutte le regole e-mail in modo da consentire *service@console.netapp.com* per essere certi di continuare a ricevere le notifiche e-mail NetApp Console .
+
+
+
+== 06 ottobre 2025
 
 
 
@@ -395,7 +422,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
-== 9 giugno 2025
+== 09 giugno 2025
 
 
 
@@ -640,7 +667,7 @@ NetApp Keystone sarà presto disponibile da BlueXP ed è ora in versione beta.  
 
 
 
-== 6 marzo 2025
+== 06 marzo 2025
 
 
 
@@ -872,7 +899,7 @@ In entrambi gli scenari è possibile continuare a utilizzare gli endpoint esiste
 
 
 
-== 9 dicembre 2024
+== 09 dicembre 2024
 
 
 
@@ -965,7 +992,7 @@ Questa patch include correzioni di bug.
 
 
 
-== 7 ottobre 2024
+== 07 ottobre 2024
 
 
 
@@ -1106,7 +1133,7 @@ Per maggiori dettagli sulla modalità privata, incluso come effettuare l'aggiorn
 
 
 
-== 9 settembre 2024
+== 09 settembre 2024
 
 
 
