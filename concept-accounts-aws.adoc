@@ -131,7 +131,7 @@ No, non è possibile spostare le risorse AWS associate al sistema Cloud Volumes 
 
 === Come funzionano le credenziali per le distribuzioni sul marketplace e le distribuzioni on-premise?
 
-Le sezioni precedenti descrivono il metodo di distribuzione consigliato per l'agente Console, ovvero dalla Console.  È anche possibile distribuire un agente in AWS da AWS Marketplace e installare manualmente il software dell'agente della console sul proprio host Linux.
+Le sezioni precedenti descrivono il metodo di distribuzione consigliato per l'agente Console, ovvero dalla Console. È anche possibile distribuire un agente in AWS da AWS Marketplace e installare manualmente il software dell'agente della console sul proprio host Linux o nel proprio VCenter.
 
 Se si utilizza il Marketplace, le autorizzazioni vengono fornite nello stesso modo.  È sufficiente creare e configurare manualmente il ruolo IAM e quindi fornire le autorizzazioni per eventuali account aggiuntivi.
 
