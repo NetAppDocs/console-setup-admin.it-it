@@ -460,7 +460,6 @@
   <block id="7b948bab9b4003048f0e729d2dd1b238" category="cell">Versioni del sistema operativo supportate</block>
   <block id="b16ae794e2eeb2136b3c004c421fa714" category="cell">Versioni dell'agente supportate</block>
   <block id="301e9d698830f505ef2566dfc5a26274" category="cell">Strumento contenitore richiesto</block>
-  <block id="f2ee533052f51406bfa3283372f0af96" category="cell">SELinux a</block>
   <block id="c73bbd3786350b0a8d3577d82afdf489" category="paragraph">Red Hat Enterprise Linux</block>
   <block id="94d03d842e38bfc8ebeb1cd5999b1321" category="paragraph">da 9,1 a 9,4</block>
   <block id="597f1630cd21d22c527f63002e42f059" category="paragraph">da 8,6 a 8,10</block>
@@ -5609,4 +5608,5 @@
   <block id="827939177a8e56e6d981ae1fc3dcb065" category="section-title">09 settembre 2024</block>
   <block id="be8fd45f96dc537f9f4473811d5a2cb7" category="paragraph">Quando la Console avvia l'agente della Console in AWS, crea un ruolo IAM e un profilo per l'agente. Associa inoltre una policy che fornisce all'agente della console le autorizzazioni per gestire risorse e processi all'interno di quell'account AWS. <block ref="c8fcf01cd703cc98adb501c59ec6e8ce" category="inline-link-macro-rx"></block>.</block>
   <block id="fe4b6329accdde90ed8d83073374f9cc" category="paragraph">Le sezioni precedenti descrivono il metodo di distribuzione consigliato per l'agente Console, ovvero dalla Console. È anche possibile distribuire un agente in AWS da AWS Marketplace e installare manualmente il software dell'agente della console sul proprio host Linux o nel proprio VCenter.</block>
+  <block id="7294c37d50c105bffdf0e10ac05a9beb" category="paragraph">Podman versione 5.4.0 con podman-compose 1.5.0.</block>
 </blocks>

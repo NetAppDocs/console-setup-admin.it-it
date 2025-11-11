@@ -53,18 +53,41 @@ L'agente della console richiede questo spazio in `/var` perché Docker o Podman 
 Tipo di istanza AWS EC2:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia t3.2xlarge.
 Ipervisore:: È richiesto un hypervisor bare metal o hosted certificato per eseguire un sistema operativo supportato.
 [[podman-versions]]Requisiti del sistema operativo e del contenitore:: L'agente Console è supportato con i seguenti sistemi operativi quando si utilizza la Console in modalità standard o in modalità limitata.  Prima di installare l'agente è necessario uno strumento di orchestrazione dei container.
-+
---
+
+
 [cols="2a,2a,2a,2a,2a"]
 |===
-| Sistema operativo | Versioni del sistema operativo supportate | Versioni dell'agente supportate | Strumento contenitore richiesto | SELinux a 
+| Sistema operativo | Versioni del sistema operativo supportate | Versioni dell'agente supportate | Strumento contenitore richiesto | SELinux 
 
 
  a| 
 Red Hat Enterprise Linux
+
+
+
+ a| 
  a| 
 da 9,1 a 9,4
 
+* Solo versioni in lingua inglese.
+* L'host deve essere registrato presso Red Hat Subscription Management.  Se non è registrato, l'host non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione dell'agente.
+
+ a| 
+3.9.50 o versione successiva con la Console in modalità standard o modalità limitata
+ a| 
+Podman versione 5.4.0 con podman-compose 1.5.0.
+
+<<podman-configuration,Visualizza i requisiti di configurazione di Podman>> .
+ a| 
+Supportato in modalità di applicazione o modalità permissiva
+
+* La gestione dei sistemi Cloud Volumes ONTAP NON è supportata dagli agenti che hanno SELinux abilitato sul sistema operativo.
+
+
+
+
+ a| 
+ a| 
 da 8,6 a 8,10
 
 * Solo versioni in lingua inglese.
@@ -86,6 +109,10 @@ Supportato in modalità di applicazione o modalità permissiva
 
  a| 
 Ubuntu
+
+
+
+ a| 
  a| 
 24,04 LTS
  a| 
@@ -98,6 +125,7 @@ Non supportato
 
 
  a| 
+ a| 
 22,04 LTS
  a| 
 3.9.50 o successivo
@@ -107,7 +135,6 @@ Docker Engine dalla versione 23.0.6 alla 28.0.0.
 Non supportato
 
 |===
---
 coppia di chiavi:: Quando si crea l'agente Console, è necessario selezionare una coppia di chiavi EC2 da utilizzare con l'istanza.
 Limite di hop di risposta PUT quando si utilizza IMDSv2:: Se IMDSv2 è abilitato sull'istanza EC2 (questa è l'impostazione predefinita per le nuove istanze EC2), è necessario modificare il limite di hop della risposta PUT sull'istanza su 3.  Se non modifichi il limite sull'istanza EC2, riceverai un errore di inizializzazione dell'interfaccia utente quando tenti di configurare l'agente.
 +
