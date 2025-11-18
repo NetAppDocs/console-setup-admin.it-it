@@ -1809,50 +1809,21 @@
   <block id="0bddca9be37ec136c74bc13d67a2327c" category="paragraph">Per rimuovere il server proxy trasparente, utilizzare il seguente comando:</block>
   <block id="e73e4a152d192531e90aca4120b4f30b" category="section-title">Visualizza la guida per qualsiasi comando</block>
   <block id="6e59373a630740150c04aaac47bb0503" category="paragraph">Per visualizzare la guida per qualsiasi comando, aggiungi<block ref="0c113ca6d57519b559ba5a426be3c6b6" prefix=" " category="inline-code"></block> al comando.  Ad esempio, per visualizzare la guida per<block ref="08bc9d3537a56e203564c5b4357049f4" prefix=" " category="inline-code"></block> comando, utilizzare il seguente comando:</block>
-  <block id="5bf95fa727a4b2ba4ca86f34b19b20fd" category="summary">Talvolta NetApp aggiunge e rimuove il supporto per l'agente Console su specifici sistemi operativi Linux. Scopri come questo supporto influisce sugli agenti Console esistenti.</block>
-  <block id="06e657c37e762cbeb9edc676ff32181d" category="doc">Modifiche ai sistemi operativi Linux supportati</block>
-  <block id="bbf3330385f894cd7bd34b34e4c36d6c" category="section-title">Sistemi operativi supportati</block>
-  <block id="e1a383f58a0e33ae02b287edc69df212" category="paragraph">NetApp supporta l'agente con i seguenti sistemi operativi Linux.</block>
-  <block id="d20756c02f9913587a3e83e30f0e10d3" category="list-text">Installazione manuale</block>
-  <block id="cdf60a7d13d1d74e115661d87ae97a3f" category="list-text">Ubuntu 24.04 LTS</block>
-  <block id="183f3a1e578d0dce86eeb393edf40a5d" category="list-text">Ubuntu 22.04 LTS</block>
-  <block id="4770f3dd962dad9ee48887e8dcd5eca0" category="list-text">Distribuzione dalla NetApp Console</block>
-  <block id="12a87db5b86462e9bd05a612793965de" category="list-text">Distribuzione da AWS Marketplace</block>
-  <block id="21b3bbb098ff9926f5de185468b47efd" category="list-text">Distribuzione da Azure Marketplace</block>
   <block id="44f51c4ac8fa1a6f53f07c0c2f751b69" category="open-title">Modalità privata</block>
   <block id="a5dacfcdb1adb3167b081f091b368732" category="section-title">Supporto per RHEL 8 e 9</block>
-  <block id="3cf44b158a4bb7a8c4ca007889bedc1a" category="paragraph">Si noti quanto segue in merito al supporto per RHEL 8 e 9:</block>
   <block id="e646e16bee8b32e6ea29e30d01970a6c" category="list-text">Limitazioni</block>
-  <block id="2130a22ec73651eb4d05bfbf2efdf5bd" category="list-text">NetApp Data Classification è supportato se si installa l'agente su un host RHEL 8 o 9 residente in locale.  Non è supportato se l'host RHEL 8 o 9 risiede in AWS, Azure o Google Cloud.</block>
-  <block id="bd3df16097ce93a7398107a82c38c714" category="list-text">Strumento di orchestrazione dei contenitori</block>
-  <block id="1e6669acd60eed2d5a58dc20cd09d144" category="list-text">Quando si installa l'agente Console su un host RHEL 8 o 9, è necessario utilizzare lo strumento Podman come strumento di orchestrazione dei container.  Docker Engine non è supportato con RHEL 8 e 9.</block>
-  <block id="6949300ff5b5cf6bb192114a06c923bb" category="list-text">Modalità di distribuzione</block>
-  <block id="85709218a94b28831b069c18839156ae" category="list-text">RHEL 8 e 9 sono supportati quando si utilizza la Console in modalità standard e in modalità limitata.</block>
-  <block id="8ba551d12c564fe21c343077a6b1759d" category="list-text">Versioni dell'agente della console supportate</block>
-  <block id="87b62ca6ad9db4c0502c8308b0897df3" category="list-text">NetApp supporta RHEL 8 e 9 a partire dalle seguenti versioni dell'agente Console:</block>
-  <block id="2d8b97e48a32d955ebfe4543e93ad22d" category="list-text">3.9.40 quando si utilizza la Console in modalità standard o in modalità limitata</block>
-  <block id="62ee52388b4c1539a4b357c9c16e57c6" category="list-text">Solo nuove installazioni manuali</block>
-  <block id="685280681dfa5fa46ed96521e0e1e1f2" category="list-text">RHEL 8 e 9 sono supportati con _nuove_ installazioni di agenti quando si installano manualmente agenti su host in esecuzione in sede o nel cloud.</block>
-  <block id="ba657bf59cdaa129ee6a10872f7d63cf" category="list-text">Aggiornamenti RHEL</block>
-  <block id="048c4554bb6e3cb2ca72b04667e98d47" category="inline-xref">Scopri di più sugli agenti Console esistenti su RHEL 7 o CentOS 7</block>
-  <block id="48c4098e9685dca0a421d5f2599da04c" category="list-text">Se si dispone di un agente esistente in esecuzione su un host RHEL 7, NetApp non supporta l'aggiornamento del sistema operativo RHEL 7 a RHEL 8 o 9. <block ref="dcb263bcab265e11e4987186c565dc42" category="inline-xref-macro-rx"></block> .</block>
   <block id="d9fb1337dfb6a869dd0a2630e14b4543" category="section-title">Fine del supporto per RHEL 7 e CentOS 7</block>
   <block id="c3a964b5dfacd9501abc103bfcc4c98f" category="paragraph">Il 30 giugno 2024, RHEL 7 ha raggiunto la fine della manutenzione (EOM), mentre CentOS 7 ha raggiunto la fine del ciclo di vita (EOL).  NetApp ha interrotto il supporto per gli agenti su queste distribuzioni Linux il 30 giugno 2024.</block>
   <block id="7eba69a7025f97bec42a74bd138b395e" category="inline-link">Red Hat: cosa sapere sulla fine della manutenzione di Red Hat Enterprise Linux 7</block>
   <block id="ebc4aba90c33f7558582b9bbf738fdd9" category="paragraph"><block ref="ebc4aba90c33f7558582b9bbf738fdd9" category="inline-link-rx"></block></block>
-  <block id="68570605b73a3a92c5bad34ef219b854" category="section-title">Agenti console esistenti su RHEL 7 o CentOS 7</block>
   <block id="f9c4366c4eb9ae998e18094001111005" category="paragraph">Se si dispone di un agente esistente in esecuzione su RHEL 7 o CentOS 7, NetApp non supporta l'aggiornamento o la conversione del sistema operativo a RHEL 8 o 9.  È necessario creare un nuovo agente su un sistema operativo supportato.</block>
   <block id="0f50cd1079cb24de2b4571c09546a2e1" category="list-text">Configurare un host RHEL 8 o 9.</block>
   <block id="8c9215e1b963f63a463d468347c9cc12" category="list-text">Installa un _nuovo_ agente.</block>
   <block id="b8bb8aa40b62692dd726a6effbbb7c2a" category="list-text">Configurare l'agente per scoprire i sistemi gestiti dall'agente precedente.</block>
-  <block id="fd976d7410ccbb05f33da778aade918e" category="section-title">Come iniziare con RHEL 8 e 9</block>
-  <block id="ff1e80df6a2782ea650e40a872d2e409" category="paragraph">Per informazioni dettagliate sui requisiti dell'host, sui requisiti di Podman e sui passaggi per installare Podman e Cagent, fare riferimento alle pagine seguenti:</block>
-  <block id="b604a3e5099a3ec9c55ef70ee5afe1d3" category="inline-link">Installa e configura un agente Console in locale</block>
   <block id="a64fe2903c7070d5b81ce6dce3b03548" category="inline-link">Installa manualmente l'agente Console in AWS</block>
   <block id="49b6ed50435718c0a1e9c1c394702ab8" category="inline-link">Installare manualmente l'agente Console in Azure</block>
   <block id="eccadaf4d74bf176f32c91d78a6673c8" category="inline-link">Installa manualmente l'agente Console in Google Cloud</block>
   <block id="6df5369b59a40f64ce1869a0d4d405ea" category="inline-link">Prepararsi per la distribuzione in modalità limitata</block>
-  <block id="fcd7347bb021d8231184894bed7bd347" category="section-title">Come riscoprire i tuoi sistemi</block>
   <block id="cdb83aacf48e960662fcf2d6745e5b60" category="paragraph">Fare riferimento alle pagine seguenti per riscoprire i sistemi dopo aver distribuito un nuovo agente Console.</block>
   <block id="6c0fb6078ec778ca2319e375a19e994b" category="inline-link">Aggiungere sistemi Cloud Volumes ONTAP esistenti</block>
   <block id="2015c83409a6e7dfc23533375c5ae10e" category="list-text"><block ref="2015c83409a6e7dfc23533375c5ae10e" category="inline-link-rx"></block></block>
@@ -5522,11 +5493,6 @@
   <block id="533560d1d92ef216fc2f7047b132da5b" category="list-text">Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia t3.2xlarge.</block>
   <block id="5218e689f8059e737f702b1608b1d2aa" category="list-text">Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia Standard_D8s_v3.</block>
   <block id="8cf6ae40c51e78159e689e6172cff9c8" category="list-text">Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia n2-standard-8.</block>
-  <block id="8506e9451ada0f6713ff22e19ea5ea81" category="list-text"><block ref="8506e9451ada0f6713ff22e19ea5ea81" category="inline-link-rx"></block></block>
-  <block id="4339f3c8171824c42987385b4c398ef1" category="list-text"><block ref="4339f3c8171824c42987385b4c398ef1" category="inline-link-rx"></block></block>
-  <block id="1c9245a65b8c79506ab48fc890a4c565" category="list-text"><block ref="1c9245a65b8c79506ab48fc890a4c565" category="inline-link-rx"></block></block>
-  <block id="a84a1e7810d5b8e81646124511b75732" category="list-text"><block ref="a84a1e7810d5b8e81646124511b75732" category="inline-link-rx"></block></block>
-  <block id="7dfa5cc30dbbbfee91158767b86487c0" category="paragraph"><block ref="7dfa5cc30dbbbfee91158767b86487c0" category="inline-link-rx"></block></block>
   <block id="9588595fbe3fa7f47431af3c53dbfa23" category="list-text"><block ref="9588595fbe3fa7f47431af3c53dbfa23" category="inline-link-rx"></block></block>
   <block id="cb4f6677094ab1c46678dcab5e428e83" category="summary">È necessario assicurarsi che la Console e tutti gli agenti installati dispongano del giusto accesso alla rete per funzionare correttamente.</block>
   <block id="08c556d51e4f6c65d7b6fa418e7669be" category="doc">Accesso di rete richiesto per 3.9.55 e versioni precedenti</block>
@@ -5574,7 +5540,6 @@
   <block id="650940dddaeb353d547fc2674ba4d35b" category="paragraph-title">Indicatori di stato dell'agente rinominati</block>
   <block id="9722491a4236a9be86f414fa5b3eebb8" category="paragraph">Gli indicatori di stato per l'agente della console sono stati rinominati da *Attivo* e *Inattivo* a *Connesso* e *Disconnesso* per renderne più chiaro lo scopo.</block>
   <block id="d9e7da7d4b9cc9086a7ab3a5a270f7da" category="paragraph-title">Supporto per Redhat Enterprise Linux (RHEL) 9.6 e Podman 5.4.0</block>
-  <block id="d90d113f70d4f4d024f99f4015bbbb96" category="paragraph">L'agente Console ora supporta RHEL 9.6 e Podman 5.4.0. Inoltre, quando si utilizza RHEL 9 e versioni successive, NetApp supporta podman-compose 1.5.0.</block>
   <block id="2749b80160d80f9500fa8b5d5b4da1ba" category="section-title">Amministrazione NetApp Console</block>
   <block id="a0d96dec6c85f67c2563063cec22ac66" category="paragraph">Questa versione include quanto segue:</block>
   <block id="ac740509743c941164fb7e88fc8b768e" category="paragraph-title">Nuovo indirizzo email per le notifiche NetApp Console</block>
@@ -5609,4 +5574,11 @@
   <block id="be8fd45f96dc537f9f4473811d5a2cb7" category="paragraph">Quando la Console avvia l'agente della Console in AWS, crea un ruolo IAM e un profilo per l'agente. Associa inoltre una policy che fornisce all'agente della console le autorizzazioni per gestire risorse e processi all'interno di quell'account AWS. <block ref="c8fcf01cd703cc98adb501c59ec6e8ce" category="inline-link-macro-rx"></block>.</block>
   <block id="fe4b6329accdde90ed8d83073374f9cc" category="paragraph">Le sezioni precedenti descrivono il metodo di distribuzione consigliato per l'agente Console, ovvero dalla Console. È anche possibile distribuire un agente in AWS da AWS Marketplace e installare manualmente il software dell'agente della console sul proprio host Linux o nel proprio VCenter.</block>
   <block id="7294c37d50c105bffdf0e10ac05a9beb" category="paragraph">Podman versione 5.4.0 con podman-compose 1.5.0.</block>
+  <block id="eaf2f97729e8d5e4d205672da8afc9a5" category="paragraph">9,6</block>
+  <block id="057722eccb00723c8217ea4d2f4aa96f" category="paragraph">4.0.0 o versione successiva con la console in modalità standard o modalità limitata</block>
+  <block id="3c9c65e38751e99a6b90b6bfa4ed151f" category="paragraph">Podman versione 4.9.4 con podman-compose 1.5.0.</block>
+  <block id="6bdcb1f64111cb0da052d18583a8f960" category="paragraph">Podman versione 4.6.1 o 4.9.4 con podman-compose 1.0.6.</block>
+  <block id="b3df2aaed88f61f572a7284cb28844ec" category="inline-link-macro">Visualizza i requisiti del sistema operativo</block>
+  <block id="43a9602052a44f890e2bbc95a0205a46" category="paragraph">Quando si installa manualmente un agente Console, l'agente ora supporta RHEL 9.6 con Podman 5.4.0. Inoltre, quando si utilizza RHEL 9 e versioni successive, NetApp supporta podman-compose 1.5.0. <block ref="dd394ea917033ddbf269729b5d828637" category="inline-link-macro-rx"></block>.</block>
+  <block id="823f8bc81b61298de6fde6292c77465f" category="list-text">Riscoprire i sistemi.</block>
 </blocks>
