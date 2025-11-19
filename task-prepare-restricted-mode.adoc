@@ -302,15 +302,17 @@ NOTE: Utilizzando il `dnf install` il comando soddisfa il requisito per aggiunge
 
 
 . Controlla se il tuo networkBackend è impostato su CNI eseguendo il seguente comando:
-+
-[source, cli]
+
+
+[listing]
 ----
 podman info | grep networkBackend
 ----
 . Se networkBackend è impostato su `CNI` , dovrai cambiarlo in `netavark` .
 . Installare `netavark` E `aardvark-dns` utilizzando il seguente comando:
-+
-[source, cli]
+
+
+[listing]
 ----
 dnf install aardvark-dns netavark
 ----
@@ -320,21 +322,21 @@ Se `/etc/containers/containers.conf` non esiste, apportare le modifiche alla con
 
 +
 .. Riavvia Podman.
-+
-[source, cli]
+
+
+
+
+[listing]
 ----
 systemctl restart podman
 ----
-.. Verificare che networkBackend sia ora modificato in "netavark" utilizzando il seguente comando:
-+
-[source, cli]
+. Verificare che networkBackend sia ora modificato in "netavark" utilizzando il seguente comando:
+
+
+[listing]
 ----
 podman info | grep networkBackend
 ----
-
-
-
-
 --
 .Motore Docker
 --
@@ -636,6 +638,7 @@ Dovresti aggiungere l'ID per ogni sottoscrizione di Azure che desideri utilizzar
 "/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
 "/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
 "/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+]
 ----
 . Utilizzare il file JSON per creare un ruolo personalizzato in Azure.
 +
@@ -707,6 +710,7 @@ Tieni presente che puoi creare un ruolo personalizzato di Azure tramite il porta
 "/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
 "/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
 "/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+]
 ----
 .. Utilizzare il file JSON per creare un ruolo personalizzato in Azure.
 +

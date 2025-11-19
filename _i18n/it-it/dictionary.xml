@@ -345,7 +345,6 @@
   <block id="68ff18cb109d61d9e97d66c63cadf9e7" category="inline-link-macro">Scopri come disattivare i controlli di configurazione per le installazioni manuali.</block>
   <block id="067f3ef114756cdabe76467602ca9b2e" category="list-text">Se si esegue l'installazione in un ambiente Government Cloud, disattivare i controlli di configurazione.<block ref="9b8bf974e42c4282e3da7fa6c59f1dce" category="inline-link-macro-rx"></block></block>
   <block id="325740f998865be7879e32048d406868" category="list-text">Eseguire lo script di installazione.</block>
-  <block id="95df10d2ac630ff125b089e1f8e0e67f" category="paragraph">Se la tua rete richiede un proxy per l'accesso a Internet, dovrai aggiungere le informazioni sul proxy.  È possibile aggiungere un proxy trasparente o esplicito.  I parametri --proxy e --cacert sono facoltativi e non ti verrà chiesto di aggiungerli.  Se si dispone di un server proxy, sarà necessario immettere i parametri come mostrato.</block>
   <block id="5f4022bf0d27f22f4c44ac2e617ae12d" category="paragraph">Ecco un esempio di configurazione di un server proxy esplicito con un certificato firmato da una CA:</block>
   <block id="0e4e2076c75603c2622d2ec78b60debe" category="paragraph"><block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix="" category="inline-code"></block>configura l'agente Console per utilizzare un server proxy HTTP o HTTPS utilizzando uno dei seguenti formati:</block>
   <block id="2ceb0e196c300f23618f8a9e66bf0553" category="list-text">\http://indirizzo:porta</block>
@@ -437,9 +436,6 @@
   <block id="9c0e62a86b9fe558cad9c4d280ea439d" category="list-text">Abilita NTP</block>
   <block id="62286fee1b0c285ac291bc232fe7f74f" category="inline-link">Scopri di più sulla classificazione dei dati NetApp</block>
   <block id="c2fc633e22b03955b13beee2049ac471" category="list-text">Se si prevede di utilizzare NetApp Data Classification per analizzare le origini dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della console sia sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi.<block ref="95ad16386ae4ac759ff3f180dcafce84" category="inline-link-rx"></block></block>
-  <block id="64de7c6251637d266e8df72d8ab7c1d3" category="paragraph">--proxy configura l'agente Console per utilizzare un server proxy HTTP o HTTPS utilizzando uno dei seguenti formati:</block>
-  <block id="9d9d85de516d17d89215c336041bd69c" category="paragraph">--cacert specifica un certificato firmato da una CA da utilizzare per l'accesso HTTPS tra l'agente della console e il server proxy.  Questo parametro è obbligatorio per i server proxy HTTPS, i server proxy di intercettazione e i server proxy trasparenti.</block>
-  <block id="fa5c0c80d3dab7b433f9ebd1f6d0e8db" category="paragraph">Ecco un esempio di configurazione di un server proxy trasparente.  Quando si configura un proxy trasparente, non è necessario definire il server proxy.  Aggiungi solo un certificato firmato da una CA all'host dell'agente della console:</block>
   <block id="da9c5bf0a2786648e8cd1c7f9b39bd31" category="list-text">L'agente Console non è supportato su un host condiviso con altre applicazioni. L'host deve essere un host dedicato.  L'host può avere qualsiasi architettura che soddisfi i seguenti requisiti di dimensione:</block>
   <block id="df4af5ebfed55f726690fe09695fb1fa" category="list-text">CPU: 8 core o 8 vCPU</block>
   <block id="357a496c919d7b340d6f4582397b89b5" category="list-text">RAM: 32 GB</block>
@@ -2262,7 +2258,6 @@
   <block id="87536203946c0c72fcd130937e3cc7ef" category="doc">Autorizzazioni AWS per l'agente della console</block>
   <block id="c1141a37b962270fc1e8960233830c99" category="section-title">Politiche IAM</block>
   <block id="573b0df2f89364b268637488ea138d56" category="paragraph">Le policy IAM disponibili di seguito forniscono le autorizzazioni di cui un agente della console ha bisogno per gestire risorse e processi all'interno del tuo ambiente cloud pubblico in base alla tua regione AWS.</block>
-  <block id="61fec915f59809a2c499bb7406d1bae7" category="list-text">Se si crea un agente della Console in una regione AWS standard direttamente dalla Console, la Console applica automaticamente le policy all'agente.</block>
   <block id="fd09f851de413bc1029af2eb92f37484" category="list-text">È necessario impostare autonomamente le policy se si distribuisce l'agente da AWS Marketplace, se si installa manualmente l'agente su un host Linux o se si desidera aggiungere ulteriori credenziali AWS alla Console.</block>
   <block id="27bfd6a18f38f12efb7983c46e54e86c" category="list-text">In entrambi i casi, è necessario assicurarsi che i criteri siano aggiornati poiché nelle versioni successive verranno aggiunte nuove autorizzazioni.  Se saranno necessarie nuove autorizzazioni, queste saranno elencate nelle note di rilascio.</block>
   <block id="5409221a62615b6b2cf0061a5376c983" category="inline-link">Documentazione AWS: Elemento Condizione</block>
@@ -2445,7 +2440,6 @@
   <block id="6545a52408abec0206b47af0244f3ccf" category="paragraph">Le autorizzazioni sono state rimosse dalla policy n. 2 per le regioni standard perché la NetApp Console non supporta più la memorizzazione nella cache edge NetApp e la scoperta e la gestione dei cluster Kubernetes.</block>
   <block id="233590199dce2cbcf120d8b311c92db1" category="example-title">Visualizza le autorizzazioni che sono state rimosse dalla policy</block>
   <block id="0683995d371439e19d907680da921ba9" category="section-title">9 maggio 2024</block>
-  <block id="376a26b461e6c64a1c38b284dbc9703f" category="paragraph">Per Cloud Volumes ONTAP sono ora necessarie le seguenti autorizzazioni:</block>
   <block id="6a7140fd5370f297d9a834d30e26ffde" category="section-title">6 giugno 2023</block>
   <block id="14cbfe27bd7092d1b2ab4502adbdd584" category="paragraph">Per Cloud Volumes ONTAP è ora richiesta la seguente autorizzazione:</block>
   <block id="5fc531b28735a6e141b39c2b5e2f1dcc" category="section-title">14 febbraio 2023</block>
@@ -2466,7 +2460,6 @@
   <block id="d532d42cdca6427a0c94a0fe2b7724bf" category="list-text">Microsoft. NetApp/netAppAccounts/capacityPools/volumes/write</block>
   <block id="8a2ef2886600a50e48c7ea77de74ad9a" category="list-text">Microsoft. NetApp/netAppAccounts/capacityPools/volumes/read</block>
   <block id="c937da506293f901431e22784134365b" category="list-text">Microsoft. NetApp/netAppAccounts/capacityPools/volumes/delete</block>
-  <block id="76219afbe04a082bd3390701b179af3f" category="paragraph">L'agente Console effettua le seguenti richieste API per NetApp Backup and Recovery:</block>
   <block id="0e7d546ff80798b31300a1327e64204c" category="list-text">Microsoft.Storage/storageAccounts/listkeys/action</block>
   <block id="b5de09220c1fb4fce37725ad40aa9087" category="list-text">Microsoft.Storage/storageAccounts/lettura</block>
   <block id="ab2f957dea03d2c901135f72a5272e10" category="list-text">Microsoft.Storage/storageAccounts/write</block>
@@ -2493,7 +2486,6 @@
   <block id="63995d3955eeab39b2079345713c2d18" category="list-text">Microsoft.Network/networkSecurityGroups/delete</block>
   <block id="b80b64cd9bf543f64855143ed4b5fcd0" category="list-text">Microsoft.Resources/deployments/delete</block>
   <block id="9d86ed535c7b2cd7f809bf10164a64e2" category="list-text">Microsoft.ManagedIdentity/userAssignedIdentities/assign/action</block>
-  <block id="875ef5d584e3eb0968edca9a86c0490e" category="paragraph">L'agente effettua le seguenti richieste API quando si utilizza la funzionalità Cerca e ripristina:</block>
   <block id="cfefa5c4ff629c9bf9659dbc829c253a" category="list-text">Microsoft.Synapse/workspaces/write</block>
   <block id="3ba03ce8c40b9ebf7c3ac1f662b6b3a0" category="list-text">Microsoft.Synapse/workspaces/read</block>
   <block id="2191541210eaa82f809d85b6c0aa6998" category="list-text">Microsoft.Synapse/workspaces/delete</block>
@@ -5581,4 +5573,31 @@
   <block id="b3df2aaed88f61f572a7284cb28844ec" category="inline-link-macro">Visualizza i requisiti del sistema operativo</block>
   <block id="43a9602052a44f890e2bbc95a0205a46" category="paragraph">Quando si installa manualmente un agente Console, l'agente ora supporta RHEL 9.6 con Podman 5.4.0. Inoltre, quando si utilizza RHEL 9 e versioni successive, NetApp supporta podman-compose 1.5.0. <block ref="dd394ea917033ddbf269729b5d828637" category="inline-link-macro-rx"></block>.</block>
   <block id="823f8bc81b61298de6fde6292c77465f" category="list-text">Riscoprire i sistemi.</block>
+  <block id="0d23055c9cd9e24b47c678ce2ce12890" category="doc">Porta da utilizzare per il demone di inoltro DNS con Netavark nel bridge rootful</block>
+  <block id="a4a1852476f94952d74e4b8343a1caa2" category="paragraph">vi /usr/share/containers/containers.conf</block>
+  <block id="d5b159520f19881fc40a4bd748f62fc6" category="section-title">modalità e DNS abilitati.</block>
+  <block id="b1a96ed8e5a02719308e8b11ad1f055b" category="section-title">L'utilizzo di una porta alternativa potrebbe essere utile se altri servizi DNS dovessero</block>
+  <block id="090648da33ae39ea5780d1a31fb1c849" category="section-title">eseguito sulla macchina.</block>
+  <block id="876565374bfaef3930e6f9d90f47177b" category="paragraph"># dns_bind_port = 54</block>
+  <block id="f20af7c9fe0c9b9091735f55df3a51e1" category="list-text">Se si crea un agente della Console in una regione AWS standard direttamente dalla Console, la Console applica automaticamente le policy all'agente.</block>
+  <block id="8a2272b9faf18eb35a631e80900ec216" category="section-title">Autorizzazioni legacy per backup e ripristino</block>
+  <block id="cf1f3a91d24e23f8dd4687e01a5c8192" category="paragraph">Sono necessarie solo le seguenti autorizzazioni se sono state abilitate le funzionalità di indicizzazione legacy prima del rilascio dell'indicizzazione v2:</block>
+  <block id="1760c97f466ea374318a8c0bedcb2aff" category="section-title">11 novembre 2025</block>
+  <block id="ea135b9ba1abf88c0fc0f304bed7b8b2" category="paragraph">Le seguenti autorizzazioni non sono più necessarie per NetApp Backup and Recovery, a meno che non si utilizzi l'indicizzazione legacy. Queste autorizzazioni sono state rimosse dalle policy presenti in questa pagina:</block>
+  <block id="6e6af573aec8151ae299651fd317472d" category="paragraph">Di seguito è riportato un criterio personalizzato per Backup e Ripristino che utilizza il minor numero possibile di autorizzazioni e l'ambito più ristretto possibile:</block>
+  <block id="085d2cc48c6bbf7296c097a07804a4d1" category="section-title">Autorizzazioni minime NetApp Backup and Recovery</block>
+  <block id="46602301e1e9b92a123cc69be96445a2" category="paragraph">L'agente Console effettua le seguenti richieste API per le funzionalità di base NetApp Backup and Recovery :</block>
+  <block id="ff9be13f0dd01fa19eeb632c57e75912" category="list-text">Microsoft.Autorizzazione/blocchi/scrittura</block>
+  <block id="9c54728f345d88de2c032cfb76dbdb17" category="list-text">Microsoft.Authorization/locks/read</block>
+  <block id="761a802cfbda43d4d27ac578e6d1127e" category="section-title">Autorizzazioni aggiuntive di backup e ripristino</block>
+  <block id="02eee31e5109fac37be42cd2ad631e0f" category="paragraph">L'agente della console effettua le seguenti richieste API per operazioni avanzate di backup e ripristino e funzionalità di ricerca e ripristino. Queste autorizzazioni consentono la gestione della rete, degli archivi di chiavi e delle identità gestite:</block>
+  <block id="9db96a7be686af799d5b0df68ebdf3a8" category="paragraph">L'agente effettua le seguenti richieste API quando si utilizza la funzionalità Cerca e ripristina. Queste autorizzazioni sono necessarie solo se hai abilitato le funzionalità di indicizzazione legacy prima del rilascio dell'indicizzazione v2:</block>
+  <block id="d3a274c843d8b8ce75d55d7c7829a6af" category="paragraph">Le seguenti autorizzazioni sono state rimosse dall'esempio del ruolo JSON in modo che l'esempio possa riflettere le autorizzazioni minime richieste per Backup e Ripristino:</block>
+  <block id="f4b5566a2cd5de876b361e9f7aaa2d92" category="list-text">Microsoft.Insights/Metrics/Read</block>
+  <block id="542e0e990e0a90f3111cc38f8fc96301" category="list-text">Microsoft.Compute/virtualMachines/extensions/write</block>
+  <block id="027acd9694c335956d7cb35872c2d7f5" category="list-text">Microsoft.Compute/virtualMachines/extensions/read</block>
+  <block id="ebd9939fa785bda0707a6efaf5d7b8da" category="paragraph">Sono state aggiunte le seguenti autorizzazioni all'esempio di ruolo JSON:</block>
+  <block id="73361bbe50a41bd2e76e59f453c19c62" category="paragraph">Le seguenti autorizzazioni non sono più necessarie per Backup e Ripristino, a meno che non si utilizzi l'indicizzazione legacy:</block>
+  <block id="c47b4df454cbc8c7bf8207225c8c507d" category="paragraph">Le seguenti autorizzazioni sono state spostate nella sezione "Autorizzazioni aggiuntive per backup e ripristino" perché non sono necessarie per una configurazione minima:</block>
+  <block id="862b252e960e9fce5bfb6811edec4eb5" category="list-text">Eseguire il seguente comando e verificare che lo stato dell'agente sia _attivo(in esecuzione)_:</block>
 </blocks>

@@ -68,7 +68,7 @@ Per riattivare l'aggiornamento automatico, seguire questi passaggi e impostare i
 +
 [source, json]
 ----
-  "isUpgradeDisabled": true,
+  "isUpgradeDisabled": true
 ----
 . Salva il tuo file.
 . Riavviare il servizio Service Manager 2 eseguendo il seguente comando:
@@ -77,12 +77,11 @@ Per riattivare l'aggiornamento automatico, seguire questi passaggi e impostare i
 ----
 systemctl restart netapp-service-manager.service
 ----
-. Eseguire il seguente comando e verificare che lo stato dell'agente sia _attivo(in esecuzione)_: _
+. Eseguire il seguente comando e verificare che lo stato dell'agente sia _attivo(in esecuzione)_:
 +
 [source, cli]
 ----
 systemctl status netapp-service-manager.service
-_
 ----
 
 
