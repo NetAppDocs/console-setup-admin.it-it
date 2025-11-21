@@ -881,7 +881,7 @@ Sono necessarie solo le seguenti autorizzazioni se sono state abilitate le funzi
 
 
 
-=== Classificazione
+=== Classificazione dei dati
 
 L'agente effettua le seguenti richieste API per distribuire NetApp Data Classification:
 

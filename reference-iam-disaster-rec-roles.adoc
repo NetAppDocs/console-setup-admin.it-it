@@ -18,15 +18,15 @@ Il ripristino di emergenza utilizza i seguenti ruoli:
 
 * *Amministratore del ripristino di emergenza*: Esegui qualsiasi azione.
 * *Amministratore failover di disaster recovery*: esegue failover e migrazioni.
-* *Amministratore dell'applicazione di ripristino di emergenza*: crea piani di replica.  Modificare i piani di replicazione.  Avviare i failover di prova.
-* *Visualizzatore di ripristino di emergenza*: visualizza solo le informazioni.
+* *Amministratore dell'applicazione Disaster Recovery*: crea piani di replica. Modificare i piani di replicazione. Avviare i failover di prova.
+* *Visualizzatore Disaster Recovery*: visualizza solo le informazioni.
 
 
 La tabella seguente indica le azioni che ciascun ruolo può eseguire.
 
 [cols="30,20a,20a,20a,20a"]
 |===
-| Caratteristica e azione | Amministratore del ripristino di emergenza | Amministratore del failover del ripristino di emergenza | Amministratore dell'applicazione di ripristino di emergenza | Visualizzatore di ripristino di emergenza 
+| Caratteristica e azione | Amministratore del ripristino di emergenza | Amministratore del failover del ripristino di emergenza | Amministratore dell'applicazione Disaster Recovery | Visualizzatore di Disaster Recovery 
 
 
 | Visualizza la dashboard e tutte le schede  a| 
