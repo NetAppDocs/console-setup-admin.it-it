@@ -514,22 +514,17 @@
   <block id="2ba663c096287d98a36bde6322e04cc7" category="inline-xref">Visualizza le versioni supportate di Docker Engine</block>
   <block id="bfd1773eb918278ec2382170b1e3e803" category="paragraph"><block ref="34142695033c90791f6ac8ad740edd90" category="inline-xref-macro-rx"></block> .</block>
   <block id="455cbd59356abfa16dcf7666d4ae6c2b" category="open-title">Podman</block>
-  <block id="36321f8de6704271c20efb18c2788361" category="paragraph">Per installare e configurare Podman, segui questi passaggi:</block>
   <block id="98ddd266a82e7cfd3a24eb45842bec48" category="list-text">Abilita e avvia il servizio podman.socket</block>
   <block id="402a934d05f32752831bc2ed8043fb03" category="list-text">Installa python3</block>
-  <block id="e7655ce2e211e4106a4d229011bca18b" category="list-text">Installa il pacchetto podman-compose versione 1.0.6</block>
   <block id="a50a451f2ba0bc5a53f19d6887c717e4" category="list-text">Aggiungere podman-compose alla variabile d'ambiente PATH</block>
   <block id="72647f42887226fbe161a7784cde9900" category="admonition">Dopo aver installato l'agente, regolare la porta aardvark-dns (predefinita: 53) per evitare conflitti di porta DNS.  Seguire le istruzioni per configurare la porta.</block>
   <block id="b7f382be5c79895b47058d13f21b554a" category="list-text">Rimuovere il pacchetto podman-docker se è installato sull'host.</block>
   <block id="3c7e0e0689042d7582c0880e1b998f2c" category="list-text">Installa Podman.</block>
-  <block id="e822146085e921b554750abcae74cd4a" category="paragraph">È possibile ottenere Podman dai repository ufficiali di Red Hat Enterprise Linux.</block>
   <block id="29c15383bb54e5c0c3bfba429503d481" category="paragraph">Per Red Hat Enterprise Linux 9:</block>
   <block id="6d76d2ad5a4defbd1ab7de4805041d08" category="paragraph">Dove &lt;versione&gt; è la versione supportata di Podman che stai installando. <block ref="f431862ab66067d97cd0bf60cb34059c" category="inline-xref-macro-rx"></block> .</block>
   <block id="084cfc903eb108eb15642e42f36348f9" category="paragraph">Per Red Hat Enterprise Linux 8:</block>
   <block id="d85624226a34d354eb24bd9f58803ee7" category="list-text">Abilitare e avviare il servizio podman.socket.</block>
   <block id="c258dc586685c07a851bfdce98251de9" category="list-text">Installa python3.</block>
-  <block id="97c0d440ee76e86ece38ee9da4a462cb" category="list-text">Installa il pacchetto repository EPEL se non è già disponibile sul tuo sistema.</block>
-  <block id="93052470e7c6a20358c8d89c161e4880" category="paragraph">Questo passaggio è necessario perché podman-compose è disponibile nel repository Extra Packages for Enterprise Linux (EPEL).</block>
   <block id="6f3a42415c589950b9ae4d3fe1f87dc7" category="list-text">Installa il pacchetto podman-compose 1.0.6.</block>
   <block id="ec7c87651a5ede2a98ad4091fe48b517" category="admonition">Utilizzando il<block ref="02c7499137a5d8d10292d68634eb22a0" prefix=" " category="inline-code"></block> il comando soddisfa il requisito per aggiungere podman-compose alla variabile d'ambiente PATH.  Il comando di installazione aggiunge podman-compose a /usr/bin, che è già incluso nel<block ref="c9bac30d1d0554c0790285219e5ad518" prefix=" " category="inline-code"></block> opzione sull'host.</block>
   <block id="1a91f495a43bfe57e3dea20b4f9cbbe3" category="list-text">Se si utilizza Red Hat Enterprise Linux 8, verificare che la versione di Podman utilizzi NetAvark con Aardvark DNS anziché CNI.</block>
@@ -544,7 +539,6 @@
   <block id="fd3ac4b8bdad6f16e9e6e20e98f8fd3b" category="paragraph">Per installare Docker Engine, seguire la documentazione di Docker.</block>
   <block id="08a382dc3dd0f48c28f89b74f8bac2a4" category="inline-link">Visualizza le istruzioni di installazione da Docker</block>
   <block id="3907e04a67ccb717783cc69d280aaa41" category="list-text"><block ref="3907e04a67ccb717783cc69d280aaa41" category="inline-link-rx"></block></block>
-  <block id="657da9022df45645ff2569b61278d3c3" category="paragraph">Segui i passaggi per installare una versione supportata di Docker Engine.  Non installare la versione più recente, poiché non è supportata dalla Console.</block>
   <block id="2e022b32dcdcb9f0b048e90340feb44b" category="list-text">Verificare che Docker sia abilitato e in esecuzione.</block>
   <block id="7f8c174d588ebe0dadcdeb4a63202e4b" category="list-text">Vai alla console Amazon EC2.</block>
   <block id="18387052a5adf3d55c9d07f70f3141e7" category="list-text">Selezionare *Istanze*.</block>
@@ -5293,7 +5287,6 @@
   <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">Ruoli di resilienza al ransomware</block>
   <block id="e40a74210464aa0305c3d66c083f2e23" category="paragraph">| \ https://mysupport.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp . | \ https://signin.b2c.netapp.com | Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console. | \ https://support.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp , nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.</block>
   <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti. Se usi<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block> , il controllo di convalida fallisce. Per evitare questo errore, saltare il controllo di convalida.</block>
-  <block id="cfc9caf6832f568fe347d970af78e108" category="list-text">Se si utilizza Red Hat Enterprise Linux, verificare che la versione di Podman utilizzi Netavark Aardvark DNS anziché CNI</block>
   <block id="a0a50b50b6bb8edb1f818d3ca9526b4b" category="cell">Supportato nelle regioni governative e commerciali con modalità limitata. Non supportato nelle regioni sovrane con modalità limitata. In modalità limitata, NetApp Backup and Recovery supporta solo il backup e il ripristino dei dati del volume ONTAP .<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block> Il backup e il ripristino dei dati delle applicazioni e dei dati delle macchine virtuali non sono supportati.</block>
   <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">Ruoli di backup e ripristino</block>
   <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">Ruoli di Disaster Recovery</block>
@@ -5660,4 +5653,10 @@
   <block id="c7e28713a896e9488b74e428eb025ad0" category="list-text"><block ref="c7e28713a896e9488b74e428eb025ad0" category="inline-link-macro-rx"></block></block>
   <block id="08324e7c6f4c191ebd76163dd3616c9a" category="list-text"><block ref="08324e7c6f4c191ebd76163dd3616c9a" category="inline-link-macro-rx"></block></block>
   <block id="4feead535ae6dd1e4ba78516194fe4b1" category="list-text"><block ref="4feead535ae6dd1e4ba78516194fe4b1" category="inline-link-macro-rx"></block></block>
+  <block id="6131a90681ddf9c2c7134fa754e90d4e" category="paragraph">Installa e configura Podman:</block>
+  <block id="68d20f859d04971de5875c315c929e92" category="list-text">Installa il rispettivo pacchetto podman-compose</block>
+  <block id="5448bfba9b19b99ebf560293cc6b89ab" category="list-text">Verifica che la tua versione di Podman utilizzi Netavark Aardvark DNS anziché CNI</block>
+  <block id="bf58c65de2201356b331dfea5e7eb976" category="paragraph">Scarica Podman dai repository di Red Hat Enterprise Linux.</block>
+  <block id="2632bb82f2d43ffb72d31ea06ed68352" category="list-text">Installa EPEL per ottenere podman-compose.</block>
+  <block id="3c7d277b4a6a1367e3f2567411648df9" category="paragraph">Installa una versione supportata di Docker Engine seguendo i passaggi. Non installare la versione più recente, poiché la Console non la supporta.</block>
 </blocks>
