@@ -2612,7 +2612,6 @@
   <block id="48f3320f6327aedea52854dfcbcf31d9" category="paragraph">Il ruolo personalizzato mostrato di seguito fornisce le autorizzazioni di cui un agente della console ha bisogno per gestire risorse e processi all'interno della rete Google Cloud.</block>
   <block id="82a6f573069dcbf74094644066f00ff8" category="paragraph">Sarà necessario applicare questo ruolo personalizzato a un account di servizio che verrà collegato alla VM dell'agente della console.</block>
   <block id="4560d9b851db1f575c8bd1ba53369c0a" category="paragraph">È inoltre necessario assicurarsi che il ruolo sia aggiornato poiché nelle versioni successive verranno aggiunte nuove autorizzazioni.  Se saranno necessarie nuove autorizzazioni, queste saranno elencate nelle note di rilascio.</block>
-  <block id="823b2e7894c2b52c1e9adc9ea10b9be5" category="section-title">Come vengono utilizzate le autorizzazioni di Google Cloud</block>
   <block id="06df33001c1d7187fdd81ea1f5b277aa" category="cell">Azioni</block>
   <block id="f66d598893a55fa43b7676b10c66160f" category="cell">Per creare e gestire dischi per Cloud Volumes ONTAP.</block>
   <block id="e9047288d907d41dac5645fd341a761c" category="cell">Per creare regole firewall per Cloud Volumes ONTAP.</block>
@@ -5659,4 +5658,5 @@
   <block id="2632bb82f2d43ffb72d31ea06ed68352" category="list-text">Installa EPEL per ottenere podman-compose.</block>
   <block id="3c7d277b4a6a1367e3f2567411648df9" category="paragraph">Installa una versione supportata di Docker Engine seguendo i passaggi. Non installare la versione più recente, poiché la Console non la supporta.</block>
   <block id="18ecbdaa6bb0f123dda150b973bd53b7" category="list-text">Se si utilizza Red Hat Enterprise dalla versione 9.1 alla 9.6:</block>
+  <block id="c54ef5e116598334892682d82cbec3e0" category="section-title">Come vengono utilizzate le autorizzazioni di Google Cloud per Cloud Volumes ONTAP</block>
 </blocks>
