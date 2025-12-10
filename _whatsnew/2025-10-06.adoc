@@ -18,7 +18,7 @@ NetApp ha spostato la maggior parte delle opzioni del menu nel riquadro di navig
 
 ==== Canvas è sostituito dalla pagina Sistemi
 
-NetApp ha rinominato Canvas nella pagina *Sistemi*.  Accedere alla pagina *Sistema* dal menu *Archiviazione > Gestione*.
+NetApp ha rinominato Canvas nella pagina *Sistemi*. Accedere alla pagina *Sistemi* dal menu *Archiviazione > Gestione*.
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-mgmt.png["Uno screenshot della pagina dei sistemi."]
 

@@ -101,7 +101,7 @@ Le seguenti domande riguardano credenziali e abbonamenti.
 
 Come descritto nelle sezioni precedenti, la Console consente di fornire credenziali AWS in diversi modi: un ruolo IAM associato all'agente della Console, assumendo un ruolo IAM in un account attendibile o fornendo chiavi di accesso AWS.
 
-Con le prime due opzioni, la Console utilizza AWS Security Token Service per ottenere credenziali temporanee che ruotano costantemente.  Questo processo è la prassi migliore: è automatico e sicuro.
+Con le prime due opzioni, la Console utilizza AWS Security Token Service per ottenere credenziali temporanee che ruotano costantemente. Questo processo è la prassi migliore: è automatico e sicuro.
 
 Se fornisci alla Console le chiavi di accesso AWS, dovresti ruotare le chiavi aggiornandole nella Console a intervalli regolari.  Si tratta di un processo completamente manuale.
 

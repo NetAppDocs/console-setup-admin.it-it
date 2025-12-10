@@ -25,12 +25,12 @@ summary: 'È possibile installare manualmente un agente Console su un host Linux
 
 == Passaggio 1: rivedere i requisiti dell'host
 
-Il software dell'agente Console deve essere eseguito su un host che soddisfi specifici requisiti del sistema operativo, requisiti di RAM, requisiti di porta e così via.
+Assicurarsi che l'host che esegue il software dell'agente Console soddisfi i requisiti relativi al sistema operativo, alla RAM e alle porte.
 
 
 NOTE: L'agente della console riserva l'intervallo UID e GID da 19000 a 19200.  Questo intervallo è fisso e non può essere modificato.  Se un software di terze parti sul tuo host utilizza UID o GID compresi in questo intervallo, l'installazione dell'agente non andrà a buon fine.  NetApp consiglia di utilizzare un host privo di software di terze parti per evitare conflitti.
 
-Host dedicato:: L'agente Console non è supportato su un host condiviso con altre applicazioni. L'host deve essere un host dedicato.  L'host può avere qualsiasi architettura che soddisfi i seguenti requisiti di dimensione:
+Host dedicato:: L'agente Console richiede un host dedicato.  È supportata qualsiasi architettura che soddisfi i seguenti requisiti dimensionali:
 +
 --
 * CPU: 8 core o 8 vCPU
@@ -43,7 +43,7 @@ L'agente utilizza `/opt` per installare il `/opt/application/netapp` directory e
 
 ** `/var`: Devono essere disponibili 40 GiB di spazio
 +
-L'agente della console richiede questo spazio in `/var` perché Docker o Podman sono progettati per creare i contenitori all'interno di questa directory.  Nello specifico, creeranno contenitori nel `/var/lib/containers/storage` elenco.  I montaggi esterni o i collegamenti simbolici non funzionano per questo spazio.
+L'agente della console richiede questo spazio in `/var` perché Podman o Docker sono progettati per creare i contenitori all'interno di questa directory.  Nello specifico, creeranno contenitori nel `/var/lib/containers/storage` elenco e `/var/lib/docker` per Docker. I montaggi esterni o i collegamenti simbolici non funzionano per questo spazio.
 
 
 
@@ -157,7 +157,7 @@ Non supportato
 
 |===
 coppia di chiavi:: Quando si crea l'agente Console, è necessario selezionare una coppia di chiavi EC2 da utilizzare con l'istanza.
-Limite di hop di risposta PUT quando si utilizza IMDSv2:: Se IMDSv2 è abilitato sull'istanza EC2 (questa è l'impostazione predefinita per le nuove istanze EC2), è necessario modificare il limite di hop della risposta PUT sull'istanza su 3.  Se non modifichi il limite sull'istanza EC2, riceverai un errore di inizializzazione dell'interfaccia utente quando tenti di configurare l'agente.
+Limite di hop di risposta PUT quando si utilizza IMDSv2:: Se IMDSv2 è abilitato (impostazione predefinita per le nuove istanze EC2), impostare il limite di hop della risposta PUT su 3.  In caso contrario, il sistema visualizza un errore di inizializzazione dell'interfaccia utente durante la configurazione dell'agente.
 +
 --
 * link:task-require-imdsv2.html["Richiedere l'uso di IMDSv2 sulle istanze Amazon EC2"]
@@ -188,13 +188,13 @@ A seconda del sistema operativo in uso, prima di installare l'agente è necessar
 ====
 .Podman
 --
-Installa e configura Podman:
+Per installare e configurare Podman, segui questi passaggi:
 
 * Abilita e avvia il servizio podman.socket
 * Installa python3
-* Installa il rispettivo pacchetto podman-compose
+* Installa il pacchetto podman-compose versione 1.0.6
 * Aggiungere podman-compose alla variabile d'ambiente PATH
-* Verifica che la tua versione di Podman utilizzi Netavark Aardvark DNS anziché CNI
+* Se si utilizza Red Hat Enterprise Linux, verificare che la versione di Podman utilizzi Netavark Aardvark DNS anziché CNI
 
 
 
@@ -210,7 +210,7 @@ rm /var/run/docker.sock
 ----
 . Installa Podman.
 +
-Scarica Podman dai repository di Red Hat Enterprise Linux.
+È possibile ottenere Podman dai repository ufficiali di Red Hat Enterprise Linux.
 
 +
 Per Red Hat Enterprise Linux 9:
@@ -246,32 +246,34 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. Installa EPEL per ottenere podman-compose.
-+
-.. Se si utilizza Red Hat Enterprise dalla versione 9.1 alla 9.6:
+. Installa il pacchetto repository EPEL se non è già disponibile sul tuo sistema.
+
+
+Questo passaggio è necessario perché podman-compose è disponibile nel repository Extra Packages for Enterprise Linux (EPEL).
+
+. Se si utilizza Red Hat Enterprise dalla versione 9.1 alla 9.6:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
-
-
-. Installa il pacchetto podman-compose 1.5.0.
++
+.. Installa il pacchetto podman-compose 1.5.0.
 +
 [source, cli]
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-+
-.. Se si utilizza Red Hat Enterprise Linux 8:
+
+
+. Se si utilizza Red Hat Enterprise Linux 8:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-
-
-. Installa il pacchetto podman-compose 1.0.6.
++
+.. Installa il pacchetto podman-compose 1.0.6.
 +
 [source, cli]
 ----
@@ -281,11 +283,10 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: Utilizzando il `dnf install` il comando soddisfa il requisito per aggiungere podman-compose alla variabile d'ambiente PATH.  Il comando di installazione aggiunge podman-compose a /usr/bin, che è già incluso nel `secure_path` opzione sull'host.
 
-. Se si utilizza Red Hat Enterprise Linux 8, verificare che la versione di Podman utilizzi NetAvark con Aardvark DNS anziché CNI.
-+
-.. Controlla se il tuo networkBackend è impostato su CNI eseguendo il seguente comando:
+.. Se si utilizza Red Hat Enterprise Linux 8, verificare che la versione di Podman utilizzi NetAvark con Aardvark DNS anziché CNI.
 
 
+. Controlla se il tuo networkBackend è impostato su CNI eseguendo il seguente comando:
 
 
 [listing]
@@ -329,7 +330,7 @@ Per installare Docker Engine, seguire la documentazione di Docker.
 .Passi
 . https://docs.docker.com/engine/install/["Visualizza le istruzioni di installazione da Docker"^]
 +
-Installa una versione supportata di Docker Engine seguendo i passaggi. Non installare la versione più recente, poiché la Console non la supporta.
+Segui i passaggi per installare una versione supportata di Docker Engine. Non installare la versione più recente, poiché non è supportata dalla Console.
 
 . Verificare che Docker sia abilitato e in esecuzione.
 +
@@ -345,7 +346,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 
 == Passaggio 3: configurazione della rete
 
-Assicurarsi che il percorso di rete in cui si prevede di installare l'agente Console supporti i seguenti requisiti.  Soddisfacendo questi requisiti, l'agente della console può gestire risorse e processi all'interno del tuo ambiente cloud ibrido.
+Assicurati che il percorso di rete supporti i seguenti requisiti affinché l'agente della console possa gestire le risorse nel tuo cloud ibrido.
 
 Connessioni alle reti di destinazione:: L'agente Console richiede una connessione di rete alla posizione in cui si prevede di creare e gestire i sistemi.  Ad esempio, la rete in cui intendi creare sistemi Cloud Volumes ONTAP o un sistema di archiviazione nel tuo ambiente locale.
 
@@ -385,6 +386,16 @@ Servizi AWS (amazonaws.com):
 
  a| 
 Per gestire le risorse AWS.  L'endpoint dipende dalla tua regione AWS. https://docs.aws.amazon.com/general/latest/gr/rande.html["Per i dettagli, fare riferimento alla documentazione AWS"^]
+
+
+
+ a| 
+Amazon FsX per NetApp ONTAP:
+
+* api.workloads.netapp.com
+
+ a| 
+La console basata sul Web contatta questo endpoint per interagire con le API di Workload Factory per gestire e utilizzare i carichi di lavoro basati su FSx per ONTAP .
 
 
 
@@ -464,7 +475,7 @@ Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizz
 
 == Passaggio 4: impostare le autorizzazioni AWS per la console
 
-È necessario fornire le autorizzazioni AWS alla NetApp Console utilizzando una delle seguenti opzioni:
+Fornire le autorizzazioni AWS alla NetApp Console utilizzando una di queste opzioni:
 
 * Opzione 1: creare policy IAM e associarle a un ruolo IAM che è possibile associare all'istanza EC2.
 * Opzione 2: fornire alla Console la chiave di accesso AWS per un utente IAM che dispone delle autorizzazioni richieste.
@@ -537,7 +548,7 @@ Ora hai un utente IAM che ha le autorizzazioni richieste e una chiave di accesso
 
 == Passaggio 5: installare l'agente della console
 
-Una volta completati i prerequisiti, puoi installare manualmente il software sul tuo host Linux.
+Dopo aver completato i prerequisiti, installa manualmente il software sul tuo host Linux.
 
 .Prima di iniziare
 Dovresti avere quanto segue:
@@ -551,10 +562,10 @@ Dopo l'installazione è possibile configurare un server proxy, ma per farlo è n
 
 
 
-NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console.  Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console.html["Console di manutenzione dell'agente"] .
+NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console. Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console-proxy.html["Console di manutenzione dell'agente"] .
 
 .Informazioni su questo compito
-Il programma di installazione disponibile sul sito di supporto NetApp potrebbe essere una versione precedente.  Dopo l'installazione, l'agente Console si aggiorna automaticamente se è disponibile una nuova versione.
+Dopo l'installazione, l'agente Console si aggiorna automaticamente se è disponibile una nuova versione.
 
 .Passi
 . Se le variabili di sistema _http_proxy_ o _https_proxy_ sono impostate sull'host, rimuoverle:
@@ -567,9 +578,14 @@ unset https_proxy
 +
 Se non si rimuovono queste variabili di sistema, l'installazione fallirà.
 
-. Scarica il software dell'agente Console da https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["Sito di supporto NetApp"^] e quindi copiarlo sull'host Linux.
+. Scaricare il software dell'agente Console e copiarlo sull'host Linux.  È possibile scaricarlo dalla NetApp Console o dal sito di supporto NetApp .
 +
-Dovresti scaricare il programma di installazione dell'agente "online" pensato per l'uso nella tua rete o nel cloud.
+** NetApp Console: vai su *Agenti > Gestione > Distribuisci agente > On-prem > Installazione manuale*.
++
+Scegli di scaricare i file di installazione dell'agente o un URL ai file.
+
+** Sito di supporto NetApp (necessario se non si ha già accesso alla console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Sito di supporto NetApp"^] ,
+
 
 . Assegnare le autorizzazioni per eseguire lo script.
 +
@@ -629,7 +645,7 @@ Per esempio:
 
 
 
-NOTE: Se vuoi configurare un proxy trasparente, puoi farlo dopo l'installazione. link:reference-agent-maint-console.html["Scopri di più sulla console di manutenzione dell'agente"]
+NOTE: Se vuoi configurare un proxy trasparente, puoi farlo dopo l'installazione. link:reference-agent-maint-console-proxy.html["Scopri di più sulla console di manutenzione dell'agente"]
 
 . Se hai utilizzato Podman, dovrai modificare la porta aardvark-dns.
 +
@@ -688,13 +704,13 @@ Se disponi di bucket Amazon S3 nello stesso account AWS in cui hai creato l'agen
 
 == Passaggio 6: fornire le autorizzazioni alla NetApp Console
 
-Ora che hai installato l'agente Console, devi fornire alla Console le autorizzazioni AWS che hai precedentemente configurato.  Fornendo le autorizzazioni, l'agente della console può gestire i dati e l'infrastruttura di archiviazione in AWS.
+Dopo aver installato l'agente Console, fornisci le autorizzazioni AWS configurate in modo che l'agente Console possa gestire i tuoi dati e l'infrastruttura di storage in AWS.
 
 [role="tabbed-block"]
 ====
 .Ruolo IAM
 --
-Collegare il ruolo IAM creato in precedenza all'istanza EC2 dell'agente Console.
+Collega il ruolo IAM creato all'istanza EC2 dell'agente Console.
 
 .Passi
 . Vai alla console Amazon EC2.

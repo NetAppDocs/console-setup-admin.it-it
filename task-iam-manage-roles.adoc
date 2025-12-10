@@ -16,11 +16,11 @@ summary: 'All"interno della NetApp Console è possibile assegnare ruoli agli ute
 [role="lead"]
 All'interno della Console è possibile assegnare ruoli agli utenti in base a cosa devono fare e dove.
 
-Gli utenti con il ruolo di *Amministratore dell'organizzazione* o di *Amministratore della cartella o del progetto* hanno la responsabilità di assegnare ruoli ad altri utenti. È possibile assegnare ruoli di accesso in base al progetto o alla cartella. Ad esempio, è possibile assegnare a un utente il ruolo di amministratore Ransomware Resilience per un progetto e il ruolo di amministratore SnapCenter per un progetto diverso. In alternativa, se un utente necessita del ruolo di amministratore di Ransomware Resilience per tutti i progetti all'interno di una cartella specifica, è possibile assegnargli questo ruolo a livello di cartella.
+Gli utenti con il ruolo di *Amministratore dell'organizzazione* o di *Amministratore della cartella o del progetto* hanno la responsabilità di assegnare ruoli ad altri utenti. È possibile assegnare ruoli di accesso in base al progetto o alla cartella. Assegna ruoli di accesso per progetto o cartella.  Ad esempio, assegnare il ruolo di amministratore Ransomware Resilience a un utente per un progetto e il ruolo di amministratore SnapCenter a un altro.  Per assegnare a un utente il ruolo di amministratore di Ransomware Resilience per tutti i progetti in una cartella, assegna il ruolo a livello di cartella.
 
 Utilizzare i ruoli di accesso per assegnare l'accesso alle risorse di archiviazione in base alle attività specifiche che gli utenti devono eseguire. Ad esempio, se un utente deve interagire con Ransomware Resilience, gli deve essere assegnato un ruolo di accesso che includa autorizzazioni di visualizzazione o amministrative per Ransomware Resilience per il progetto per cui è concesso il ruolo di accesso.
 
-Assegna ruoli agli utenti in base alla tua strategia IAM per una maggiore sicurezza.  I ruoli IAM garantiscono che gli utenti abbiano solo l'accesso di cui hanno bisogno.
+Assegna i ruoli in base alla tua strategia IAM per migliorare la sicurezza.  I ruoli IAM limitano l'accesso degli utenti solo a ciò che è necessario.
 
 
 NOTE: Ricorda che non puoi concedere direttamente l'accesso alle risorse.  Assegnare prima le risorse ai progetti.  Prima di assegnare l'accesso agli utenti, è opportuno impostare la gerarchia delle risorse.link:task-iam-manage-folders-projects.html["Scopri come organizzare le tue risorse con cartelle e progetti."]
@@ -29,7 +29,7 @@ NOTE: Ricorda che non puoi concedere direttamente l'accesso alle risorse.  Asseg
 
 == Visualizza i ruoli assegnati a un membro
 
-Quando aggiungi un membro alla tua organizzazione, ti verrà chiesto di assegnargli un ruolo.  Puoi consentire ai membri di verificare quali ruoli sono attualmente assegnati loro.
+Quando aggiungi un membro alla tua organizzazione, ti verrà chiesto di assegnargli un ruolo. Puoi verificare quali ruoli sono attualmente assegnati loro.
 
 Se si dispone del ruolo di _Amministratore cartella o progetto_, la pagina visualizza tutti i membri dell'organizzazione.  Tuttavia, puoi visualizzare e gestire le autorizzazioni dei membri solo per le cartelle e i progetti per i quali disponi delle autorizzazioni. link:reference-iam-predefined-roles.html["Scopri di più sulle azioni che un _amministratore di cartella o di progetto_ può completare"] .
 
@@ -73,7 +73,7 @@ Se selezioni l'organizzazione o una cartella, il membro avrà autorizzazioni per
 
 == Modificare il ruolo assegnato a un membro
 
-È possibile modificare i ruoli assegnati a un membro qualora fosse necessario modificare l'accesso di un utente.
+Modifica i ruoli di un membro per aggiornarne l'accesso.
 
 
 NOTE: Agli utenti deve essere assegnato almeno un ruolo.  Non è possibile rimuovere tutti i ruoli da un utente.  Se devi rimuovere tutti i ruoli, devi eliminare l'utente dalla tua organizzazione.

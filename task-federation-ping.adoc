@@ -67,10 +67,14 @@ NetApp supporta solo SSO avviato dal provider di servizi (SP).  Per prima cosa Ã
 
 . Seleziona *Crea connessione*.  Il sistema crea la connessione in pochi secondi.
 . Selezionare *Avanti*.
-. Seleziona *Test connessione* per testare la tua connessione.  Verrai indirizzato a una pagina di accesso per il tuo server IdP.  Accedi con le tue credenziali IdP per completare il test e torna alla Console per abilitare la connessione.
-. Selezionare *Avanti*.
-. Nella pagina *Abilita federazione*, rivedere i dettagli della federazione e quindi selezionare *Abilita federazione*.
+. . Seleziona *Test connessione* per testare la tua connessione. Verrai indirizzato a una pagina di accesso per il tuo server IdP. Accedi con le tue credenziali IdP.  Dopo aver effettuato l'accesso, torna alla Console per abilitare la connessione.
+. Nella Console, seleziona *Avanti* per rivedere la pagina di riepilogo.
+. Imposta le notifiche.
++
+Scegli tra sette giorni o 30 giorni.  Il sistema invia notifiche di scadenza tramite e-mail e le mostra nella Console a tutti gli utenti con i seguenti ruoli: Super amministratore, Amministratore organizzazione, Amministratore federazione e Visualizzatore federazione.
+
+. Rivedi i dettagli della federazione e seleziona *Abilita federazione*.
 . Selezionare *Fine* per completare il processo.
 
 
-Dopo aver abilitato la federazione, gli utenti possono accedere alla NetApp Console utilizzando le proprie credenziali aziendali.
+Dopo aver abilitato la federazione, gli utenti accedono alla NetApp Console utilizzando le proprie credenziali aziendali.

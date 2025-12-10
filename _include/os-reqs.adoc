@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-Host dedicato:: L'agente Console non è supportato su un host condiviso con altre applicazioni. L'host deve essere un host dedicato.  L'host può avere qualsiasi architettura che soddisfi i seguenti requisiti di dimensione:
+Host dedicato:: L'agente Console richiede un host dedicato.  È supportata qualsiasi architettura che soddisfi i seguenti requisiti dimensionali:
 +
 --
 * CPU: 8 core o 8 vCPU
@@ -15,7 +15,7 @@ L'agente utilizza `/opt` per installare il `/opt/application/netapp` directory e
 
 ** `/var`: Devono essere disponibili 40 GiB di spazio
 +
-L'agente della console richiede questo spazio in `/var` perché Docker o Podman sono progettati per creare i contenitori all'interno di questa directory.  Nello specifico, creeranno contenitori nel `/var/lib/containers/storage` elenco.  I montaggi esterni o i collegamenti simbolici non funzionano per questo spazio.
+L'agente della console richiede questo spazio in `/var` perché Podman o Docker sono progettati per creare i contenitori all'interno di questa directory.  Nello specifico, creeranno contenitori nel `/var/lib/containers/storage` elenco e `/var/lib/docker` per Docker. I montaggi esterni o i collegamenti simbolici non funzionano per questo spazio.
 
 
 
@@ -182,7 +182,6 @@ Non supportato
 |===
 Note:
 
-. La gestione dei sistemi Cloud Volumes ONTAP non è supportata dagli agenti che hanno SELinux abilitato sul sistema operativo.
 . L'agente Console è supportato sulle versioni in lingua inglese di questi sistemi operativi.
 . Per RHEL, l'host deve essere registrato presso Red Hat Subscription Management.  Se non è registrato, l'host non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione dell'agente.
 
@@ -200,7 +199,7 @@ Tipo di istanza AWS EC2:: Un tipo di istanza che soddisfa i requisiti di CPU e R
 coppia di chiavi:: Quando si crea l'agente Console, è necessario selezionare una coppia di chiavi EC2 da utilizzare con l'istanza.
 
 
-Limite di hop di risposta PUT quando si utilizza IMDSv2:: Se IMDSv2 è abilitato sull'istanza EC2 (questa è l'impostazione predefinita per le nuove istanze EC2), è necessario modificare il limite di hop della risposta PUT sull'istanza su 3.  Se non modifichi il limite sull'istanza EC2, riceverai un errore di inizializzazione dell'interfaccia utente quando tenti di configurare l'agente.
+Limite di hop di risposta PUT quando si utilizza IMDSv2:: Se IMDSv2 è abilitato (impostazione predefinita per le nuove istanze EC2), impostare il limite di hop della risposta PUT su 3.  In caso contrario, il sistema visualizza un errore di inizializzazione dell'interfaccia utente durante la configurazione dell'agente.
 +
 --
 * link:task-require-imdsv2.html["Richiedere l'uso di IMDSv2 sulle istanze Amazon EC2"]
@@ -213,7 +212,7 @@ Limite di hop di risposta PUT quando si utilizza IMDSv2:: Se IMDSv2 è abilitato
 Dimensioni della VM di Azure:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia Standard_D8s_v3.
 
 
-Tipo di macchina Google Cloud:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM.  NetApp consiglia n2-standard-8.
+Tipo di macchina Google Cloud:: Un tipo di istanza che soddisfa i requisiti di CPU e RAM. NetApp consiglia n2-standard-8.
 +
 --
 L'agente Console è supportato in Google Cloud su un'istanza VM con un sistema operativo che supporta https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Funzionalità della VM schermata"^]

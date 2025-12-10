@@ -20,18 +20,18 @@ All'interno della NetApp Console puoi organizzare le tue risorse NetApp utilizza
 
 == Aggiungi una cartella o un progetto
 
-Quando crei la tua organizzazione, questa include un singolo progetto.  Aggiungi progetti per gestire risorse e cartelle per raggruppare progetti correlati.
+Quando crei la tua organizzazione, questa include un singolo progetto. Aggiungi progetti per gestire risorse e cartelle per raggruppare progetti correlati.
 
-La gerarchia delle risorse della tua organizzazione può avere fino a sette livelli, con le cartelle annidate a sei livelli di profondità e i progetti al settimo.
+Puoi creare fino a sette livelli di cartelle e progetti nella struttura delle risorse della tua organizzazione.  Crea cartelle all'interno di altre cartelle per creare una struttura nidificata per la tua organizzazione.
 
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.
 . Seleziona *Organizzazione*.
 . Dalla pagina *Organizzazione*, seleziona *Aggiungi cartella o progetto*.
 . Selezionare *Cartella* o *Progetto*.
-. Fornisci dettagli sulla cartella o sul progetto:
+. Inserisci i dettagli della cartella o del progetto:
 +
-** *Nome e posizione*: inserisci un nome e scegli una posizione nella gerarchia per la cartella o il progetto.  Una cartella o un progetto possono trovarsi direttamente sotto l'organizzazione o all'interno di una cartella.
+** *Nome e posizione*: inserisci un nome e scegli una posizione nella gerarchia per la cartella o il progetto. Posiziona una cartella o un progetto sotto l'organizzazione o all'interno di un'altra cartella.
 ** *Risorse*: seleziona le risorse che desideri associare a questa cartella o progetto.
 +
 È possibile selezionare le risorse associate alla cartella padre o al progetto.
@@ -41,7 +41,7 @@ link:concept-identity-and-access-management.html#associate-resource-folder["Scop
 
 ** *Accesso*: visualizza i membri che avranno accesso alla cartella o al progetto in base alle autorizzazioni esistenti già definite nella gerarchia delle risorse.
 +
-Seleziona *Aggiungi un membro* per assegnare l'accesso e un ruolo ad altri membri. Un ruolo definisce le autorizzazioni che i membri hanno per la cartella o il progetto.
+Seleziona *Aggiungi un membro* per assegnare l'accesso e un ruolo.
 
 +
 link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] .
@@ -68,10 +68,7 @@ Se necessario, puoi modificare il nome delle tue cartelle e dei tuoi progetti.
 
 Elimina le cartelle e i progetti di cui non hai più bisogno.
 
-.Prima di iniziare
-* Assicurarsi che la cartella o il progetto non abbiano risorse associate. <<modify-resources,Scopri come dissociare le risorse>> .
-* Assicurati che la cartella o il progetto non abbiano risorse associate.
-
+Prima di eliminare una cartella o un progetto, assicurati che non contenga risorse. <<modify-resources,Scopri come rimuovere le risorse>>.
 
 .Passi
 . Dalla pagina *Organizzazione*, vai a un progetto o a una cartella nella tabella, selezionaimage:icon-action.png["Un'icona con tre punti"] e quindi seleziona *Elimina*.
@@ -119,7 +116,7 @@ Nella tabella, la colonna *Stato* identifica le risorse associate alla cartella 
 +
 image:screenshot-iam-associate-resources.png["Uno screenshot della pagina Modifica progetto che mostra l'opzione Associa risorse, disponibile dopo aver selezionato risorse che non sono attualmente associate."]
 
-. Seleziona *Applica*
+. Selezionare *Applica*.
 
 
 
@@ -136,9 +133,9 @@ image:screenshot-iam-member-access.png["Uno screenshot della pagina Modifica pro
 
 == Modificare l'accesso dei membri a una cartella o a un progetto
 
-Modificare l'accesso dei membri per garantire che solo i membri autorizzati possano accedere alle risorse associate.
+Modificare l'accesso dei membri per controllare l'accesso alle risorse.
 
-L'accesso dei membri concesso a un livello gerarchico superiore non può essere modificato a livelli inferiori.  Aggiornare le autorizzazioni dei membri al livello gerarchico superiore per modificare l'accesso.  In alternativa, puoilink:task-iam-manage-roles.html#manage-permissions["gestire i permessi dalla pagina Membri"] .
+Non è possibile modificare l'accesso dei membri ai livelli inferiori se è ereditato da un livello gerarchico superiore.  Aggiornare le autorizzazioni dei membri al livello gerarchico superiore per modificare l'accesso.  In alternativa, puoi link:task-iam-manage-roles.html#manage-permissions["gestire i permessi dalla pagina Membri"].
 
 link:concept-identity-and-access-management.html#role-inheritance["Scopri di più sull'ereditarietà dei ruoli"] .
 

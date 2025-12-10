@@ -14,10 +14,10 @@
 .. Carica il file YAML che include le autorizzazioni richieste.
 .. Crea un ruolo personalizzato utilizzando `gcloud iam roles create` comando.
 +
-L'esempio seguente crea un ruolo denominato "connettore" a livello di progetto:
+L'esempio seguente crea un ruolo denominato "agente" a livello di progetto:
 
 +
-`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+`gcloud iam roles create connector --project=myproject --file=agent.yaml`
 
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Documentazione di Google Cloud: creazione e gestione di ruoli personalizzati"^]

@@ -27,7 +27,7 @@ Installa l'agente Console dal marketplace del tuo provider cloud oppure manualme
 .AWS Commercial Marketplace
 --
 .Prima di iniziare
-Dovresti avere quanto segue:
+Avere quanto segue:
 
 * Una VPC e una subnet che soddisfano i requisiti di rete.
 +
@@ -94,7 +94,7 @@ Configurare la NetApp Console.
 .AWS Gov Marketplace
 --
 .Prima di iniziare
-Dovresti avere quanto segue:
+Avere quanto segue:
 
 * Una VPC e una subnet che soddisfano i requisiti di rete.
 +
@@ -120,7 +120,7 @@ image:screenshot-gov-cloud-mktp.png["Uno screenshot che mostra l'offerta NetApp 
 .. Selezionare *Continua*.
 
 
-. Seguire le istruzioni per configurare e distribuire l'istanza:
+. Segui le istruzioni per configurare e avviare l'istanza:
 +
 ** *Scegli un tipo di istanza*: a seconda della disponibilità nella regione, scegli uno dei tipi di istanza supportati (si consiglia t3.2xlarge).
 +
@@ -175,12 +175,12 @@ Durante la configurazione della VM, tenere presente quanto segue:
 +
 ** *Dimensioni VM*: scegli una dimensione VM che soddisfi i requisiti di CPU e RAM.  Consigliamo Standard_D8s_v3.
 ** *Dischi*: l'agente Console può funzionare in modo ottimale sia con dischi HDD che SSD.
-** *IP pubblico*: se si desidera utilizzare un indirizzo IP pubblico con la VM dell'agente della console, l'indirizzo IP deve utilizzare uno SKU di base per garantire che la console utilizzi questo indirizzo IP pubblico.
+** *IP pubblico*: per utilizzare un indirizzo IP pubblico con la VM dell'agente Console, selezionare uno SKU di base.
 +
 image:screenshot-azure-sku.png["Uno screenshot della creazione di un nuovo indirizzo IP in Azure che consente di scegliere Base nel campo SKU."]
 
 +
-Se invece si utilizza un indirizzo IP SKU standard, la Console utilizza l'indirizzo IP _privato_ dell'agente della Console, anziché l'IP pubblico. Se il computer che stai utilizzando per accedere alla Console non ha accesso a quell'indirizzo IP privato, le azioni dalla Console falliranno.
+Se invece si utilizza un indirizzo IP SKU standard, la Console utilizza l'indirizzo IP _privato_ dell'agente della Console, anziché l'IP pubblico. Se il computer utilizzato per accedere alla Console non riesce a raggiungere l'indirizzo IP privato, la Console non funziona.
 
 +
 https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Documentazione di Azure: SKU IP pubblico"^]
@@ -191,7 +191,7 @@ link:reference-ports-azure.html["Visualizza le regole del gruppo di sicurezza pe
 
 ** *Identità*: in *Gestione*, seleziona *Abilita identità gestita assegnata dal sistema*.
 +
-Questa impostazione è importante perché un'identità gestita consente alla macchina virtuale dell'agente della console di identificarsi con l'ID Microsoft Entra senza fornire alcuna credenziale. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Scopri di più sulle identità gestite per le risorse di Azure"^] .
+Un'identità gestita consente alla macchina virtuale dell'agente della console di identificarsi con l'ID Microsoft Entra senza credenziali. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Scopri di più sulle identità gestite per le risorse di Azure"^] .
 
 
 
@@ -219,14 +219,14 @@ Dopo l'installazione è possibile configurare un server proxy, ma per farlo è n
 
 
 
-NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console.  Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console.html["Console di manutenzione dell'agente"] .
+NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console. Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console-proxy.html["Console di manutenzione dell'agente"] .
 
 * È necessario disattivare il controllo della configurazione che verifica la connettività in uscita durante l'installazione.  L'installazione manuale fallisce se questo controllo non è disabilitato.link:task-troubleshoot-agent.html["Scopri come disattivare i controlli di configurazione per le installazioni manuali."]
 * A seconda del sistema operativo in uso, prima di installare l'agente Console è necessario utilizzare Podman o Docker Engine.
 
 
 .Informazioni su questo compito
-Il programma di installazione disponibile sul sito di supporto NetApp potrebbe essere una versione precedente.  Dopo l'installazione, l'agente Console si aggiorna automaticamente se è disponibile una nuova versione.
+Dopo l'installazione, l'agente Console si aggiorna automaticamente se è disponibile una nuova versione.
 
 .Passi
 . Se le variabili di sistema _http_proxy_ o _https_proxy_ sono impostate sull'host, rimuoverle:
@@ -239,9 +239,14 @@ unset https_proxy
 +
 Se non si rimuovono queste variabili di sistema, l'installazione fallirà.
 
-. Scarica il software dell'agente Console da https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["Sito di supporto NetApp"^] e quindi copiarlo sull'host Linux.
+. Scaricare il software dell'agente Console e copiarlo sull'host Linux.  È possibile scaricarlo dalla NetApp Console o dal sito di supporto NetApp .
 +
-Dovresti scaricare il programma di installazione dell'agente "online" pensato per l'uso nella tua rete o nel cloud.
+** NetApp Console: vai su *Agenti > Gestione > Distribuisci agente > On-prem > Installazione manuale*.
++
+Scegli di scaricare i file di installazione dell'agente o un URL ai file.
+
+** Sito di supporto NetApp (necessario se non si ha già accesso alla console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Sito di supporto NetApp"^] ,
+
 
 . Assegnare le autorizzazioni per eseguire lo script.
 +
@@ -301,7 +306,7 @@ Per esempio:
 
 
 
-NOTE: Se vuoi configurare un proxy trasparente, puoi farlo dopo l'installazione. link:reference-agent-maint-console.html["Scopri di più sulla console di manutenzione dell'agente"]
+NOTE: Se vuoi configurare un proxy trasparente, puoi farlo dopo l'installazione. link:reference-agent-maint-console-proxy.html["Scopri di più sulla console di manutenzione dell'agente"]
 
 . Se hai utilizzato Podman, dovrai modificare la porta aardvark-dns.
 +
@@ -347,7 +352,7 @@ Quando si accede alla console per la prima volta, viene richiesto di scegliere u
 .Prima di iniziare
 La persona che configura l'agente della Console deve accedere alla Console utilizzando un account di accesso che non appartenga già a un'organizzazione della Console.
 
-Se il tuo login è associato a un'altra organizzazione, dovrai registrarti con un nuovo login.  Altrimenti non vedrai l'opzione per abilitare la modalità limitata nella schermata di configurazione.
+Se il tuo login è associato a un'altra organizzazione, dovrai registrarti con un nuovo login.  Altrimenti, non vedrai l'opzione per abilitare la modalità limitata nella schermata di configurazione.
 
 .Passi
 . Aprire un browser Web da un host che dispone di una connessione all'istanza dell'agente Console e immettere il seguente URL dell'agente Console installato.
@@ -379,7 +384,7 @@ Fornisci alla Console le autorizzazioni precedentemente impostate.
 
 == Passaggio 3: fornire le autorizzazioni all'agente della console
 
-Se hai distribuito l'agente Console da Azure Marketplace o se hai installato manualmente il software dell'agente Console, devi fornire le autorizzazioni configurate in precedenza.
+Se hai installato l'agente Console da Azure Marketplace o manualmente, devi concedere le autorizzazioni impostate in precedenza.
 
 Questi passaggi non si applicano se hai distribuito l'agente della console da AWS Marketplace perché hai scelto il ruolo IAM richiesto durante la distribuzione.
 

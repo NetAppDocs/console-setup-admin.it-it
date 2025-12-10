@@ -20,16 +20,16 @@ Quando si utilizza l'opzione Associa un membro alla propria organizzazione, si f
 
 == Visualizza le risorse nella tua organizzazione
 
-Puoi visualizzare sia le risorse scoperte che quelle non scoperte associate alla tua organizzazione. Le risorse non scoperte sono risorse di archiviazione identificate ma non ancora aggiunte alla Console.
+Puoi visualizzare sia le risorse scoperte che quelle non scoperte associate alla tua organizzazione. Il sistema trova le risorse di archiviazione e le contrassegna come non rilevate finché non le aggiungi alla Console.
 
 
-NOTE: NOTA: la pagina Risorse esclude le risorse Amazon FSx for NetApp ONTAP perché gli utenti non possono associarle a un ruolo.  Visualizzali nella pagina Sistemi o da Carichi di lavoro.
+NOTE: La pagina Risorse esclude le risorse Amazon FSx for NetApp ONTAP perché gli utenti non possono associarle a un ruolo.  Visualizzali nella pagina *Sistemi* o da Carichi di lavoro.
 
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.
 . Selezionare *Risorse*.
 . Seleziona *Ricerca avanzata e filtri*.
-. Utilizza una qualsiasi delle opzioni disponibili per trovare la risorsa che stai cercando:
+. Utilizza le opzioni disponibili per trovare una risorsa:
 +
 ** *Cerca per nome della risorsa*: inserisci una stringa di testo e seleziona *Aggiungi*.
 ** *Piattaforma*: seleziona una o più piattaforme, ad esempio Amazon Web Services.
@@ -87,7 +87,7 @@ L'esempio seguente mostra una risorsa associata a un progetto.
 image:screenshot-iam-resource-details.png["Uno screenshot della pagina dei dettagli della risorsa che mostra una risorsa associata a un progetto che si trova direttamente sotto l'organizzazione."]
 
 
-NOTE: Se è necessario determinare quali membri dell'organizzazione hanno accesso alla risorsa, è possibilelink:task-iam-manage-folders-projects.html#view-associated-resources-members["visualizzare i membri che hanno accesso alle cartelle e ai progetti associati alla risorsa"] .
+NOTE: Per vedere quali membri dell'organizzazione hanno accesso alla risorsa,link:task-iam-manage-folders-projects.html#view-associated-resources-members["visualizza i membri con accesso alle cartelle e ai progetti associati"] .
 
 
 
@@ -96,7 +96,7 @@ NOTE: Se è necessario determinare quali membri dell'organizzazione hanno access
 Per rimuovere una risorsa da una cartella o da un progetto, è necessario rimuovere l'associazione tra la cartella o il progetto e la risorsa. Quando si rimuove l'associazione, si impedisce ai membri di gestire la risorsa nella cartella o nel progetto.
 
 
-NOTE: Per rimuovere una risorsa rilevata dall'intera organizzazione, rimuovere il sistema dalla pagina *Sistemi*.
+NOTE: Per rimuovere una risorsa rilevata dall'intera organizzazione, vai alla pagina *Sistemi* e rimuovi il sistema.
 
 .Passi
 . Dalla pagina *Risorse*, vai a una risorsa nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Visualizza dettagli*.

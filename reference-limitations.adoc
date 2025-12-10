@@ -16,7 +16,7 @@ summary: Le limitazioni note identificano piattaforme, dispositivi o funzioni ch
 [role="lead"]
 Le limitazioni note identificano piattaforme, dispositivi o funzioni che non sono supportati da questa versione del prodotto o che non interagiscono correttamente con esso. Esamina attentamente queste limitazioni.
 
-Queste limitazioni sono specifiche della configurazione della console e dell'amministrazione di NEtApp: l'agente, la piattaforma SaaS (Software as a Service) e altro ancora.
+Queste limitazioni sono specifiche della configurazione della NetApp Console e dell'amministrazione: l'agente, la piattaforma SaaS (Software as a Service) e altro ancora.
 
 
 

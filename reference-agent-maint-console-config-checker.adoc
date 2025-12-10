@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: reference-agent-maint-console-config-checker.html 
+keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
+summary: 'È possibile utilizzare la console di manutenzione dell"agente Console per configurare un agente Console in modo che utilizzi un server proxy trasparente.' 
+---
+= Convalida dell'agente con la console di manutenzione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile utilizzare la console di manutenzione dell'agente Console per convalidare l'installazione e la configurazione di un agente Console.
+
+
+
+== Accedi alla console di manutenzione dell'agente
+
+È possibile accedere alla Console di manutenzione dall'host dell'agente della Console.  Passare alla seguente directory:
+
+[source, cli]
+----
+/opt/application/netapp/service-manager-2/agent-maint-console
+----
+
+
+== verifica della configurazione convalida
+
+IL `config-checker validate` Il comando consente di convalidare la configurazione di un agente Console.
+
+
+
+=== Parametri
+
+`--services <comma-separated list of services to validate>`--*NECESSARIO*--
+
+[role="quick-margin-para"]
+Scegli uno o più servizi da convalidare.  I nomi di servizio validi sono:*`PLATFORM` che convalida la connettività di rete agli endpoint della console richiesti.
+
+`--validationTypes <comma-separated list validation types to run>`--*OBBLIGATORIO*-- Scegliere uno o più tipi di convalida da eseguire.  I tipi di convalida validi sono: * `NETWORK` che convalida la connettività di rete agli endpoint della console richiesti.
+
+`--proxy <url>`--*OPZIONALE*--
+
+[role="quick-margin-para"]
+Specifica l'URL del server proxy da utilizzare per la convalida.  Obbligatorio se l'agente è configurato per utilizzare un server proxy.
+
+`--certs <paths>`--*OPZIONALE*--
+
+[role="quick-margin-para"]
+Specifica il percorso di uno o più file di certificato da utilizzare per la convalida.  I file del certificato devono essere in formato PEM.  Separare i percorsi multipli con virgole.  Questo parametro è obbligatorio se l'agente utilizza un certificato personalizzato.
+
+
+
+=== Esempi di convalida del controllo di configurazione
+
+.Validazione di base:
+[source, cli]
+----
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK
+----
+.Convalida in cui viene utilizzato un server proxy per l'agente:
+[source, cli]
+----
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --proxy http://proxy.company.com:8080
+----
+.Convalida in cui viene utilizzato un certificato per l'agente:
+[source, cli]
+----
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --certs /path/to/cert1.pem,/path/to/cert2.pem
+----
+
+
+=== Visualizza la guida per qualsiasi comando
+
+Per visualizzare la guida per qualsiasi comando, aggiungi `--help` al comando.  Ad esempio, per visualizzare la guida per `proxy add` comando, utilizzare il seguente comando:
+
+[source, cli]
+----
+./agent-maint-console proxy add --help
+----

@@ -41,7 +41,7 @@ Con questa opzione, la CSR non viene generata tramite la Console.  Il CSR viene 
 . Selezionare *Amministrazione > Agenti*.
 . Nella pagina *Panoramica*, seleziona il menu azioni per un agente Console e seleziona *Configurazione HTTPS*.
 +
-Per modificarlo, l'agente della console deve essere attivo.
+Per modificarlo, è necessario che l'agente della console sia connesso.
 
 . Nella pagina Configurazione HTTPS, installa un certificato generando una richiesta di firma del certificato (CSR) o installando il tuo certificato firmato da una CA:
 +

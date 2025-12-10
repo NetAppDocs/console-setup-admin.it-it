@@ -35,7 +35,7 @@ L'amministratore di cartelle o progetti può visualizzare tutti i membri nella p
 
 == Aggiungi membri alla tua organizzazione
 
-Puoi aggiungere due tipi di membri alla tua organizzazione: un account utente e un account di servizio. Le applicazioni utilizzano account di servizio per eseguire attività API senza intervento umano.  In genere, una persona utilizza un account utente per accedere e gestire le risorse.
+Puoi aggiungere due tipi di membri alla tua organizzazione: un account utente e un account di servizio. Le applicazioni utilizzano account di servizio per eseguire automaticamente le attività API.  Le persone utilizzano gli account utente per accedere e gestire le risorse.
 
 Gli utenti devono registrarsi alla NetApp Console prima di poterli aggiungere a un'organizzazione o assegnare loro un ruolo.  È possibile creare account di servizio direttamente dalla Console.
 
@@ -97,7 +97,11 @@ Se si desidera utilizzare l'autenticazione JWT, è necessario avere a disposizio
 . Inserisci un nome per l'account di servizio.
 . Se desideri utilizzare l'autenticazione JWT, seleziona *Usa autenticazione JWT con chiave privata* e carica la tua chiave RSA pubblica o il certificato.  Salta questo passaggio se vuoi utilizzare un ID client e un segreto.
 +
-Il tuo certificato X.509.  Deve essere in formato PEM, CRT o CER.
+Il tuo certificato X.509. Deve essere in formato PEM, CRT o CER.
+
++
+.. Imposta le notifiche di scadenza per il tuo certificato.  Scegli tra sette giorni o 30 giorni.  Le notifiche di scadenza vengono inviate tramite e-mail e visualizzate nella Console agli utenti con il ruolo di Super amministratore o Amministratore dell'organizzazione.
+
 
 . Utilizzare la sezione *Seleziona un'organizzazione, una cartella o un progetto* per scegliere il livello della gerarchia delle risorse per il quale il membro deve disporre delle autorizzazioni.
 +
@@ -145,7 +149,7 @@ Nella tabella *Membri* sono elencati i membri della tua organizzazione.
 
 Potrebbe essere necessario rimuovere un membro dalla tua organizzazione, ad esempio se lascia l'azienda.
 
-Il sistema rimuove le autorizzazioni del membro, ma conserva i suoi account Console e NetApp Support Site.
+Quando si rimuove un membro, il sistema revoca le sue autorizzazioni ma conserva i suoi account Console e NetApp Support Site.
 
 .Passi
 . Dalla pagina *Membri*, vai a un membro nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] quindi seleziona *Elimina utente*.
@@ -165,7 +169,7 @@ Quando si ricreano le credenziali, si eliminano le credenziali esistenti per l'a
 . Seleziona *Membri*.
 . Nella tabella *Membri*, vai a un account di servizio, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Ricrea segreti*.
 . Seleziona *Ricrea*.
-. Scarica o copia l'ID client e il segreto client.  + Il segreto del client viene visualizzato solo una volta. Copialo o scaricalo e conservalo in modo sicuro.
+. Scarica o copia l'ID client e il segreto client. + La console visualizza il segreto del client solo una volta. Copialo o scaricalo e conservalo in modo sicuro.
 
 
 
@@ -174,7 +178,7 @@ Quando si ricreano le credenziali, si eliminano le credenziali esistenti per l'a
 
 Se un utente perde l'accesso al proprio dispositivo MFA, è possibile rimuovere o disabilitare la configurazione MFA.
 
-Dopo la rimozione, gli utenti devono riconfigurare MFA al momento dell'accesso.  Se l'utente ha perso l'accesso al proprio dispositivo MFA solo temporaneamente, può utilizzare il codice di ripristino salvato durante la configurazione di MFA per effettuare l'accesso.
+Gli utenti devono configurare nuovamente l'MFA quando effettuano l'accesso dopo la rimozione. Se l'utente ha perso l'accesso al proprio dispositivo MFA solo temporaneamente, può utilizzare il codice di ripristino salvato durante la configurazione di MFA per effettuare l'accesso.
 
 Se non hanno il codice di ripristino, disattivare temporaneamente l'MFA per consentire l'accesso. Quando si disattiva l'MFA per un utente, questa viene disattivata solo per otto ore e poi riattivata automaticamente. All'utente è consentito un solo accesso durante tale periodo senza MFA. Dopo otto ore, l'utente deve utilizzare MFA per effettuare l'accesso.
 

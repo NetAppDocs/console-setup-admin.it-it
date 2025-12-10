@@ -14,7 +14,7 @@ summary: La creazione di partnership tra organizzazioni nella NetApp Console con
 
 
 [role="lead"]
-Creando partnership tra organizzazioni, la NetApp Console consente ai partner di gestire in modo sicuro le risorse NetApp oltre i confini aziendali, semplificando la collaborazione e migliorando la sicurezza.
+La creazione di partnership tra organizzazioni nella NetApp Console consente ai partner di gestire in modo sicuro le risorse NetApp oltre i confini aziendali, semplificando la collaborazione e migliorando la sicurezza.
 
 .Ruoli richiesti
 Amministratore della partnershiplink:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]

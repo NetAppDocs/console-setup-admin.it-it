@@ -22,7 +22,7 @@ Se si dispone di un account del sito di supporto NetApp , è anche possibile vis
 
 == Messaggi di errore comuni e risoluzioni
 
-Nella tabella sono elencati i messaggi di errore più comuni e i suggerimenti per risolverli:
+Questa tabella elenca i messaggi di errore più comuni e mostra come risolverli:
 
 [cols="19,27,27"]
 |===
@@ -37,7 +37,7 @@ L'installazione dell'agente non è riuscita
 * Verificare che il servizio Service Manager sia attivo.
 * Verificare che tutti i contenitori siano in esecuzione.
 * Assicurati che il tuo firewall consenta l'accesso al servizio sulla porta 8888.
-* Se il problema persiste, contattare l'assistenza.
+* Se i problemi persistono, contatta l'assistenza.
 
 
 
@@ -70,7 +70,8 @@ Impossibile caricare le informazioni di supporto per l'agente.
  a| 
 Questo messaggio viene visualizzato se l'agente non riesce ad accedere al tuo account di supporto.
  a| 
-* *.
+* Verificare che l'agente abbia accesso in uscita agli endpoint richiesti.link:reference-networking-saas-console.html["Scopri di più sugli endpoint di accesso alla rete richiesti."]
+
 
 |===
 
@@ -127,6 +128,28 @@ Assicurarsi che l'agente della console disponga dell'accesso alla rete necessari
 
 
 
+=== Eseguire controlli di configurazione sull'agente Console
+
+Eseguire controlli di configurazione sugli agenti della Console dalla Console o dalla console di manutenzione dell'agente per assicurarsi che siano connessi.
+
+È anche possibile eseguire controlli di configurazione utilizzando la console di manutenzione dell'agente.link:reference-agent-maint-console-config-checker.html["Scopri di più sull'utilizzo del comando config-checker validate."]
+
+
+NOTE: È possibile convalidare solo gli agenti che hanno lo stato *Connesso*.
+
+.Passi dalla console
+. Selezionare *Amministrazione > Agenti*.
+. Selezionare il menu azioni per un agente della console che si desidera controllare e scegliere *Convalida*.
++
+image:screenshot-agent-validate.png["Uno screenshot che mostra l'opzione Convalida nel menu Azioni per un agente."]
+
++
+La convalida può richiedere fino a 15 minuti.  I risultati si vedono quando il lavoro è finito.
+
+
+
+
+
 == Problemi di installazione dell'agente della console
 
 Se l'installazione non riesce, visualizza il report e i registri per risolvere i problemi.
@@ -151,14 +174,10 @@ Se l'installazione non riesce, visualizza il report e i registri per risolvere i
 
 === Disabilitare i controlli di configurazione per le installazioni manuali
 
-Potrebbero esserci momenti in cui è necessario disattivare i controlli di configurazione che verificano la connettività in uscita durante l'installazione. Per esempio:
-
-* Quando si installa manualmente un agente nel proprio ambiente Government Cloud, è necessario disabilitare i controlli di configurazione, altrimenti l'installazione non andrà a buon fine.
-* Potrebbe essere opportuno disabilitare questi controlli anche se si continua a utilizzare l'elenco degli endpoint precedente per gli aggiornamenti degli agenti.
-
+Potrebbero esserci momenti in cui è necessario disattivare i controlli di configurazione che verificano la connettività in uscita durante l'installazione. Ad esempio, quando si installa manualmente un agente nel proprio ambiente Government Cloud, è necessario disabilitare i controlli di configurazione, altrimenti l'installazione non andrà a buon fine.
 
 .Passi
-È possibile disattivare il controllo della configurazione impostando il flag _skipConfigCheck_ nel file _com/opt/application/netapp/service-manager-2/config.json_.  Per impostazione predefinita, questo flag è impostato su false e il controllo della configurazione verifica l'accesso in uscita per l'agente.  Impostare questo flag su true per disabilitare il controllo.  Prima di completare questo passaggio, è necessario avere familiarità con la sintassi JSON.
+È possibile disattivare il controllo della configurazione impostando il flag _skipConfigCheck_ nel file _com/opt/application/netapp/service-manager-2/config.json_. Per impostazione predefinita, questo flag è impostato su false e il controllo della configurazione verifica l'accesso in uscita per l'agente. Impostare questo flag su true per disabilitare il controllo. Prima di completare questo passaggio, è necessario acquisire familiarità con la sintassi JSON.
 
 Per riattivare il controllo della configurazione, seguire questi passaggi e impostare il flag _skipConfigCheck_ su false.
 
@@ -186,22 +205,6 @@ systemctl stop netapp-service-manager.service
 systemctl restart netapp-service-manager.service
 ----
 
-
-
-
-=== Installazione non riuscita sugli endpoint utilizzati per gli aggiornamenti
-
-Se stai ancora utilizzando illink:reference-networking-saas-console-previous.html["punti finali precedenti"] utilizzato per gli aggiornamenti degli agenti, la convalida fallisce con un errore.  Per evitare questo problema, deselezionare la casella di controllo *Configurazione agente di convalida* oppure ignorare il controllo della configurazione durante l'installazione in un VCenter.
-
-NetApp consiglia di aggiornare le regole del firewall per consentire l'accesso alink:reference-networking-saas-console.html["punti finali correnti"] al più presto possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare i tuoi endpoint"] .
-
-Assicurati di verificare che l'unico errore sia correlato agli endpoint precedenti:
-
-* \ https://bluexpinfraprod.eastus2.data.azurecr.io
-* \ https://bluexpinfraprod.azurecr.io
-
-
-Se sono presenti altri errori, sarà necessario risolverli prima di procedere.
 
 
 

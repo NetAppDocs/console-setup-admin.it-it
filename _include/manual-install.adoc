@@ -14,10 +14,10 @@ Dopo l'installazione è possibile configurare un server proxy, ma per farlo è n
 
 
 
-NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console.  Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console.html["Console di manutenzione dell'agente"] .
+NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console. Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console-proxy.html["Console di manutenzione dell'agente"] .
 
 .Informazioni su questo compito
-Il programma di installazione disponibile sul sito di supporto NetApp potrebbe essere una versione precedente.  Dopo l'installazione, l'agente Console si aggiorna automaticamente se è disponibile una nuova versione.
+Dopo l'installazione, l'agente Console si aggiorna automaticamente se è disponibile una nuova versione.
 
 .Passi
 . Se le variabili di sistema _http_proxy_ o _https_proxy_ sono impostate sull'host, rimuoverle:
@@ -30,9 +30,14 @@ unset https_proxy
 +
 Se non si rimuovono queste variabili di sistema, l'installazione fallirà.
 
-. Scarica il software dell'agente Console da https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["Sito di supporto NetApp"^] e quindi copiarlo sull'host Linux.
+. Scaricare il software dell'agente Console e copiarlo sull'host Linux.  È possibile scaricarlo dalla NetApp Console o dal sito di supporto NetApp .
 +
-Dovresti scaricare il programma di installazione dell'agente "online" pensato per l'uso nella tua rete o nel cloud.
+** NetApp Console: vai su *Agenti > Gestione > Distribuisci agente > On-prem > Installazione manuale*.
++
+Scegli di scaricare i file di installazione dell'agente o un URL ai file.
+
+** Sito di supporto NetApp (necessario se non si ha già accesso alla console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Sito di supporto NetApp"^] ,
+
 
 . Assegnare le autorizzazioni per eseguire lo script.
 +
@@ -92,7 +97,7 @@ Per esempio:
 
 
 
-NOTE: Se vuoi configurare un proxy trasparente, puoi farlo dopo l'installazione. link:reference-agent-maint-console.html["Scopri di più sulla console di manutenzione dell'agente"]
+NOTE: Se vuoi configurare un proxy trasparente, puoi farlo dopo l'installazione. link:reference-agent-maint-console-proxy.html["Scopri di più sulla console di manutenzione dell'agente"]
 
 . Se hai utilizzato Podman, dovrai modificare la porta aardvark-dns.
 +
