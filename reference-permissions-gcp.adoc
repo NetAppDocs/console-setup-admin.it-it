@@ -70,19 +70,19 @@ includedPermissions:
 - compute.zoneOperations.get
 - compute.zones.get
 - compute.zones.list
-- *config.deployments.create*
-- *config.operations.get*
-- *config.deployments.delete*
-- *config.deployments.deleteState*
-- *config.deployments.get*
-- *config.deployments.getState*
-- *config.deployments.list*
-- *config.deployments.update*
-- *config.deployments.updateState*
-- *config.previews.get*
-- *config.previews.list*
-- *config.revisions.get*
-- *config.resources.list*
+- config.deployments.create
+- config.operations.get
+- config.deployments.delete
+- config.deployments.deleteState
+- config.deployments.get
+- config.deployments.getState
+- config.deployments.list
+- config.deployments.update
+- config.deployments.updateState
+- config.previews.get
+- config.previews.list
+- config.revisions.get
+- config.resources.list
 - deploymentmanager.compositeTypes.get
 - deploymentmanager.compositeTypes.list
 - deploymentmanager.deployments.create
@@ -101,15 +101,15 @@ includedPermissions:
 - deploymentmanager.types.list
 - resourcemanager.projects.get
 - compute.instances.setServiceAccount
-- *iam.serviceAccounts.actAs*
-- *iam.serviceAccounts.create*
+- iam.serviceAccounts.actAs
+- iam.serviceAccounts.create
 - iam.serviceAccounts.list
-- *iam.serviceAccountKeys.create*
-- *storage.buckets.create*
-- *storage.buckets.get*
-- *storage.objects.create*
-- *storage.folders.create*
-- *storage.objects.list*
+- iam.serviceAccountKeys.create
+- storage.buckets.create
+- storage.buckets.get
+- storage.objects.create
+- storage.folders.create
+- storage.objects.list
 
 ----
 ====
@@ -136,45 +136,45 @@ title: NetApp Console agent
 description: Permissions for the service account associated with the Console agent.
 stage: GA
 includedPermissions:
-- *cloudbuild.builds.get*
-- *cloudbuild.connections.list*
-- *cloudbuild.repositories.accessReadToken*
-- *cloudbuild.repositories.list*
-- *cloudquotas.quotas.get*
+- cloudbuild.builds.get
+- cloudbuild.connections.list
+- cloudbuild.repositories.accessReadToken
+- cloudbuild.repositories.list
+- cloudquotas.quotas.get
 - cloudkms.cryptoKeys.getIamPolicy
 - cloudkms.cryptoKeys.setIamPolicy
 - cloudkms.keyRings.get
 - cloudkms.keyRings.getIamPolicy
 - cloudkms.keyRings.setIamPolicy
-- *config.artifacts.import*
-- *config.deployments.create*
-- *config.deployments.delete*
-- *config.deployments.deleteState*
-- *config.deployments.get*
-- *config.deployments.getLock*
-- *config.deployments.getState*
-- *config.deployments.update*
-- *config.deployments.updateState*
-- *config.previews.upload*
-- *config.revisions.get*
-- *config.revisions.getState*
-- *config.deployments.getLock*
-- *config.deployments.list*
-- *config.deployments.lock*
-- *config.operations.get*
-- *config.previews.get*
-- *config.previews.list*
-- *config.resources.list*
+- config.artifacts.import
+- config.deployments.create
+- config.deployments.delete
+- config.deployments.deleteState
+- config.deployments.get
+- config.deployments.getLock
+- config.deployments.getState
+- config.deployments.update
+- config.deployments.updateState
+- config.previews.upload
+- config.revisions.get
+- config.revisions.getState
+- config.deployments.getLock
+- config.deployments.list
+- config.deployments.lock
+- config.operations.get
+- config.previews.get
+- config.previews.list
+- config.resources.list
 - compute.regionBackendServices.create
 - compute.regionBackendServices.get
 - compute.regionBackendServices.list
-- *compute.regionBackendServices.update*
+- compute.regionBackendServices.update
 - compute.networks.updatePolicy
-- *compute.addresses.createInternal*
-- *compute.addresses.deleteInternal*
-- *compute.addresses.list*
-- *compute.addresses.setLabels*
-- *compute.addresses.useInternal*
+- compute.addresses.createInternal
+- compute.addresses.deleteInternal
+- compute.addresses.list
+- compute.addresses.setLabels
+- compute.addresses.useInternal
 - compute.backendServices.create
 - compute.disks.create
 - compute.disks.createSnapshot
@@ -187,15 +187,15 @@ includedPermissions:
 - compute.firewalls.delete
 - compute.firewalls.get
 - compute.firewalls.list
-- *compute.forwardingRules.create*
-- *compute.forwardingRules.delete*
-- *compute.forwardingRules.get*
-- *compute.forwardingRules.setLabels*
+- compute.forwardingRules.create
+- compute.forwardingRules.delete
+- compute.forwardingRules.get
+- compute.forwardingRules.setLabels
 - compute.globalOperations.get
-- *compute.healthChecks.create*
-- *compute.healthChecks.delete*
-- *compute.healthChecks.get*
-- *compute.healthChecks.useReadOnly*
+- compute.healthChecks.create
+- compute.healthChecks.delete
+- compute.healthChecks.get
+- compute.healthChecks.useReadOnly
 - compute.images.get
 - compute.images.getFromFamily
 - compute.images.list
@@ -216,12 +216,12 @@ includedPermissions:
 - compute.instances.start
 - compute.instances.stop
 - compute.instances.updateDisplayDevice
-- *compute.instances.use*
-- *compute.instanceGroups.create*
-- *compute.instanceGroups.delete*
+- compute.instances.use
+- compute.instanceGroups.create
+- compute.instanceGroups.delete
 - compute.instanceGroups.get
-- *compute.instanceGroups.update*
-- *compute.instanceGroups.use*
+- compute.instanceGroups.update
+- compute.instanceGroups.use
 - compute.addresses.get
 - compute.instances.updateNetworkInterface
 - compute.instances.setMinCpuPlatform
@@ -231,11 +231,11 @@ includedPermissions:
 - compute.projects.get
 - compute.regions.get
 - compute.regions.list
-- *compute.regionBackendServices.delete*
-- *compute.regionBackendServices.use*
-- *compute.resourcePolicies.create*
-- *compute.resourcePolicies.delete*
-- *compute.resourcePolicies.get*
+- compute.regionBackendServices.delete
+- compute.regionBackendServices.use
+- compute.resourcePolicies.create
+- compute.resourcePolicies.delete
+- compute.resourcePolicies.get
 - compute.snapshots.create
 - compute.snapshots.delete
 - compute.snapshots.get
@@ -267,28 +267,28 @@ includedPermissions:
 - deploymentmanager.types.list
 - logging.logEntries.list
 - logging.privateLogEntries.list
-- *logging.logEntries.create*
-- *logging.logEntries.route*
+- logging.logEntries.create
+- logging.logEntries.route
 - monitoring.timeSeries.list
 - resourcemanager.projects.get
 - storage.buckets.create
 - storage.buckets.delete
 - storage.buckets.get
 - storage.buckets.list
-- *storage.objects.create*
-- *storage.objects.delete*
-- *storage.objects.update*
+- storage.objects.create
+- storage.objects.delete
+- storage.objects.update
 - cloudkms.cryptoKeyVersions.useToEncrypt
 - cloudkms.cryptoKeys.get
 - cloudkms.cryptoKeys.list
 - cloudkms.keyRings.list
 - storage.buckets.update
 - iam.serviceAccounts.actAs
-- *iam.serviceAccounts.create*
-- *iam.serviceAccounts.get*
+- iam.serviceAccounts.create
+- iam.serviceAccounts.get
 - iam.serviceAccounts.getIamPolicy
 - iam.serviceAccounts.list
-- *iam.serviceAccountKeys.create*
+- iam.serviceAccountKeys.create
 - storage.objects.get
 - storage.buckets.getIamPolicy
 
@@ -316,49 +316,49 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | Azioni | Scopo | Utilizzato per la distribuzione? | Utilizzato per le operazioni quotidiane? | Utilizzato per l'eliminazione? 
 
 
-| *config.deployments.create* .15+| Per distribuire l'istanza della macchina virtuale Cloud Volumes ONTAP utilizzando Google Cloud Infrastructure Manager. | SÌ | NO | NO 
+| config.deployments.create .15+| Per distribuire l'istanza della macchina virtuale Cloud Volumes ONTAP utilizzando Google Cloud Infrastructure Manager. | SÌ | NO | NO 
 
 
-| *config.deployments.delete* | NO | NO | SÌ 
+| config.deployments.delete | NO | NO | SÌ 
 
 
-| *config.deployments.deleteState* | NO | NO | SÌ 
+| config.deployments.deleteState | NO | NO | SÌ 
 
 
-| *config.deployments.get* | NO | SÌ | NO 
+| config.deployments.get | NO | SÌ | NO 
 
 
-| *config.deployments.getLock* | NO | SÌ | NO 
+| config.deployments.getLock | NO | SÌ | NO 
 
 
-| *config.deployments.getState* | NO | SÌ | NO 
+| config.deployments.getState | NO | SÌ | NO 
 
 
-| *config.deployments.list* | NO | SÌ | NO 
+| config.deployments.list | NO | SÌ | NO 
 
 
-| *config.deployments.lock* | NO | SÌ | NO 
+| configurazione.distribuzioni.blocco | NO | SÌ | NO 
 
 
-| *config.deployments.update* | NO | SÌ | NO 
+| config.deployments.update | NO | SÌ | NO 
 
 
-| *config.deployments.updateState* | NO | SÌ | NO 
+| config.deployments.updateState | NO | SÌ | NO 
 
 
-| *config.operations.get* | NO | SÌ | NO 
+| config.operations.get | NO | SÌ | NO 
 
 
-| *config.previews.get* | NO | SÌ | NO 
+| config.previews.get | NO | SÌ | NO 
 
 
-| *config.preview.list* | NO | SÌ | NO 
+| config.anteprime.elenco | NO | SÌ | NO 
 
 
-| *config.resources.list* | NO | SÌ | NO 
+| elenco risorse di configurazione | NO | SÌ | NO 
 
 
-| *config.revisions.get* | NO | SÌ | NO 
+| config.revisions.get | NO | SÌ | NO 
 
 
 | calcola.dischi.crea .7+| Per creare e gestire dischi per Cloud Volumes ONTAP. | SÌ | SÌ | NO 
@@ -394,31 +394,31 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | elenco.firewall.di.calcolo | SÌ | SÌ | NO 
 
 
-| *compute.forwardingRules.create* | Creare regole di inoltro per l'instradamento del traffico verso i servizi backend. | NO | SÌ | NO 
+| calcola.regolediinoltro.crea | Creare regole di inoltro per l'instradamento del traffico verso i servizi backend. | NO | SÌ | NO 
 
 
-| *compute.forwardingRules.delete* | Elimina le regole di inoltro esistenti. | NO | SÌ | NO 
+| calcola.regolediinoltro.elimina | Elimina le regole di inoltro esistenti. | NO | SÌ | NO 
 
 
-| *compute.forwardingRules.get* | Recupera i dettagli sulle regole di inoltro esistenti. | NO | SÌ | NO 
+| calcola.regolediinoltro.ottieni | Recupera i dettagli sulle regole di inoltro esistenti. | NO | SÌ | NO 
 
 
-| *compute.forwardingRules.setLabels* | Imposta o aggiorna le etichette sulle regole di inoltro per l'organizzazione. | NO | SÌ | NO 
+| calcola.regolediinoltro.impostaetichette | Imposta o aggiorna le etichette sulle regole di inoltro per l'organizzazione. | NO | SÌ | NO 
 
 
 | compute.globalOperations.get | Per conoscere lo stato delle operazioni. | SÌ | SÌ | NO 
 
 
-| *calcola.controlli.crea* .4+| Crea e gestisci controlli di integrità per monitorare lo stato di salute del servizio backend. | NO | SÌ | NO 
+| calcola.controlli.salute.crea .4+| Crea e gestisci controlli di integrità per monitorare lo stato di salute del servizio backend. | NO | SÌ | NO 
 
 
-| *compute.healthChecks.delete* | NO | SÌ | NO 
+| compute.healthChecks.delete | NO | SÌ | NO 
 
 
-| *compute.healthChecks.get* | NO | SÌ | NO 
+| compute.healthChecks.get | NO | SÌ | NO 
 
 
-| *compute.healthChecks.useReadOnly* | NO | SÌ | NO 
+| compute.healthChecks.useReadOnly | NO | SÌ | NO 
 
 
 | calcola.immagini.ottieni .4+| Per ottenere immagini per istanze VM. | SÌ | NO | NO 
@@ -481,7 +481,7 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | calcola.istanze.aggiorna.dispositivo di visualizzazione | SÌ | SÌ | NO 
 
 
-| *calcola.istanze.uso* | Utilizzare istanze di macchine virtuali (operazioni di avvio, arresto e connessione). | NO | SÌ | NO 
+| calcola.istanze.uso | Utilizzare istanze di macchine virtuali (operazioni di avvio, arresto e connessione). | NO | SÌ | NO 
 
 
 | calcola.tipimacchina.ottieni | Per ottenere il numero di core per controllare le quote. | SÌ | NO | NO 
@@ -490,13 +490,13 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | calcola.progetti.ottieni | Per supportare progetti multipli. | SÌ | NO | NO 
 
 
-| *compute.resourcePolicies.create* .3+| Crea e gestisci policy sulle risorse per la gestione automatizzata delle risorse. | NO | SÌ | NO 
+| calcola.risorsePolitiche.crea .3+| Crea e gestisci policy sulle risorse per la gestione automatizzata delle risorse. | NO | SÌ | NO 
 
 
-| *compute.resourcePolicies.delete* | NO | SÌ | NO 
+| compute.resourcePolicies.delete | NO | SÌ | NO 
 
 
-| *compute.resourcePolicies.get* | NO | SÌ | NO 
+| compute.resourcePolicies.get | NO | SÌ | NO 
 
 
 | calcola.istantanee.crea .5+| Per creare e gestire snapshot persistenti del disco. | SÌ | SÌ | NO 
@@ -595,10 +595,10 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | logging.privateLogEntries.list | SÌ | SÌ | NO 
 
 
-| *registrazione.vocidiregistrazione.create* .2+| Crea e instrada voci di registro per il monitoraggio, il debug e l'audit. | SÌ | SÌ | NO 
+| registrazione.logEntries.create .2+| Crea e instrada voci di registro per il monitoraggio, il debug e l'audit. | SÌ | SÌ | NO 
 
 
-| *logging.logEntries.route* | SÌ | SÌ | NO 
+| registrazione.logEntries.route | SÌ | SÌ | NO 
 
 
 | resourcemanager.projects.get | Per supportare progetti multipli. | SÌ | SÌ | NO 
@@ -631,7 +631,7 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | cloudkms.keyRings.list | SÌ | SÌ | NO 
 
 
-| *cloudbuild.builds.get* | SÌ | NO | NO 
+| cloudbuild.builds.get | SÌ | NO | NO 
 
 
 | calcola.istanze.impostaAccountServizio .6+| Per impostare un account di servizio sull'istanza Cloud Volumes ONTAP .  Questo account di servizio fornisce le autorizzazioni per il tiering dei dati in un bucket di Google Cloud Storage. | SÌ | SÌ | NO 
@@ -640,7 +640,7 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | iam.serviceAccounts.actAs | SÌ | NO | NO 
 
 
-| *iam.serviceAccounts.create* | SÌ | NO | NO 
+| iam.serviceAccounts.create | SÌ | NO | NO 
 
 
 | iam.serviceAccounts.getIamPolicy | SÌ | SÌ | NO 
@@ -649,7 +649,7 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | iam.serviceAccounts.list | SÌ | SÌ | NO 
 
 
-| *iam.serviceAccountKeys.create* | SÌ | NO | NO 
+| iam.serviceAccountKeys.create | SÌ | NO | NO 
 
 
 | archiviazione.oggetti.crea .4+| Crea e gestisci oggetti (file) nel bucket di Google Cloud Storage. | SÌ | SÌ | NO 
@@ -667,16 +667,16 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | calcola.elenco.indirizzi | Per recuperare gli indirizzi in una regione durante la distribuzione di una coppia HA. | SÌ | NO | NO 
 
 
-| *calcola.indirizzi.creaInterno* | Creare indirizzi IP interni all'interno della rete VPC per l'allocazione delle risorse. | NO | SÌ | NO 
+| calcola.indirizzi.crea.interno | Creare indirizzi IP interni all'interno della rete VPC per l'allocazione delle risorse. | NO | SÌ | NO 
 
 
-| *compute.addresses.deleteInternal* | Elimina gli indirizzi IP interni per la pulizia delle risorse. | NO | SÌ | NO 
+| calcola.indirizzi.eliminaInterno | Elimina gli indirizzi IP interni per la pulizia delle risorse. | NO | SÌ | NO 
 
 
-| *calcola.indirizzi.impostaetichette* | Aggiorna le etichette sulla risorsa Indirizzo. | NO | SÌ | NO 
+| calcola.indirizzi.imposta.etichette | Aggiorna le etichette sulla risorsa Indirizzo. | NO | SÌ | NO 
 
 
-| *compute.addresses.useInternal* | Utilizzare indirizzi IP interni per la comunicazione di rete. | NO | SÌ | NO 
+| calcola.indirizzi.usaInterno | Utilizzare indirizzi IP interni per la comunicazione di rete. | NO | SÌ | NO 
 
 
 | compute.backendServices.create | Per configurare un servizio backend per la distribuzione del traffico in una coppia HA. | SÌ | NO | NO 
@@ -685,19 +685,19 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | compute.regionBackendServices.create .6+| Crea e gestisci servizi backend per l'instradamento del traffico. | SÌ | NO | NO 
 
 
-| *compute.regionBackendServices.delete* | NO | SÌ | NO 
+| compute.regionBackendServices.delete | NO | SÌ | NO 
 
 
 | compute.regionBackendServices.get | SÌ | NO | NO 
 
 
-| *compute.regionBackendServices.update* | SÌ | SÌ | NO 
+| compute.regionBackendServices.update | SÌ | SÌ | NO 
 
 
 | compute.regionBackendServices.list | SÌ | NO | NO 
 
 
-| *compute.regionBackendServices.use* | NO | SÌ | NO 
+| compute.regionBackendServices.use | NO | SÌ | NO 
 
 
 | compute.networks.updatePolicy | Per applicare regole firewall alle VPC e alle subnet per una coppia HA. | SÌ | NO | NO 
@@ -712,16 +712,16 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | calcola.istanze.aggiornaInterfaccia di rete | SÌ | SÌ | NO 
 
 
-| *compute.instanceGroups.create* | NO | SÌ | NO 
+| compute.instanceGroups.create | NO | SÌ | NO 
 
 
-| *compute.instanceGroups.delete* | NO | SÌ | NO 
+| compute.instanceGroups.delete | NO | SÌ | NO 
 
 
-| *compute.instanceGroups.update* | NO | SÌ | NO 
+| compute.instanceGroups.update | NO | SÌ | NO 
 
 
-| *compute.instanceGroups.use* | NO | SÌ | NO 
+| compute.instanceGroups.use | NO | SÌ | NO 
 
 
 | monitoraggio.timeSeries.list .2+| Per scoprire informazioni sui bucket di Google Cloud Storage. | SÌ | SÌ | NO 
