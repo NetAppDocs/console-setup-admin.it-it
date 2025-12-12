@@ -728,25 +728,6 @@ Questa funzionalità è disponibile nella versione 3.9.49 e successive di Connec
 
 
 
-=== Aggiornamento del connettore 3.9.48
-
-
-
-==== Possibilità di disattivare l'impostazione di aggiornamento automatico per il connettore
-
-È possibile disattivare la funzionalità di aggiornamento automatico del Connettore.
-
-Quando utilizzi BlueXP in modalità standard o in modalità limitata, BlueXP aggiorna automaticamente il tuo Connector all'ultima versione, a condizione che il Connector abbia accesso a Internet in uscita per ottenere l'aggiornamento software.  Se è necessario gestire manualmente l'aggiornamento del connettore, ora è possibile disattivare gli aggiornamenti automatici per la modalità standard o per la modalità limitata.
-
-
-NOTE: Questa modifica non ha alcun impatto sulla modalità privata BlueXP , in cui è sempre necessario aggiornare autonomamente il connettore.
-
-Questa funzionalità è disponibile nella versione 3.9.48 e successive di Connector.
-
-link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Scopri come disattivare l'aggiornamento automatico per il connettore."^]
-
-
-
 == 18 febbraio 2025
 
 
