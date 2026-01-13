@@ -44,9 +44,11 @@ La tabella mette a confronto le funzionalità della pagina Audit e del Centro no
 
 == Controlla l'attività dell'utente dalla pagina Audit
 
+Utilizzare la pagina Audit per identificare chi ha eseguito un'azione o il suo stato.
+
 La pagina Audit mostra le azioni completate dagli utenti per gestire la tua organizzazione o il tuo account.  Ciò include azioni di gestione quali l'associazione di utenti, la creazione di sistemi, la creazione di agenti e altro ancora.
 
-Utilizzare la pagina Audit per identificare chi ha eseguito un'azione o il suo stato.
+Puoi anche verificare chi ha aggiunto un membro a un'organizzazione o se un progetto è stato eliminato correttamente.
 
 .Passi
 . Selezionare *Amministrazione > Audit*.

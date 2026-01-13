@@ -14,13 +14,9 @@ summary: 'Se i membri della tua organizzazione hanno bisogno di utilizzare un ag
 
 
 [role="lead"]
-Quando un _amministratore dell'organizzazione_ crea un agente della console, l'agente della console viene automaticamente associato al progetto attualmente selezionato all'interno dell'organizzazione.  Sebbene qualcuno con il ruolo di _Amministratore organizzazione_ possa accedere a quell'agente della Console da qualsiasi punto dell'organizzazione.  Gli altri membri della tua organizzazione possono accedere a quell'agente Console solo dal progetto in cui è stato creato, a meno che tu non associ quell'agente Console ad altri progetti.
+Associare gli agenti della console a progetti specifici per abilitare la gestione delle risorse e l'accesso al servizio dati. Per accedere al team, le risorse scoperte tramite un agente della console devono essere associate sia alla risorsa che all'agente agli stessi rispettivi progetti.
 
-.Prima di iniziare
-Esaminare il funzionamento dell'associazione degli agenti della console. link:concept-identity-and-access-management.html#associate-agents["Scopri come utilizzare l'agente Console con Identity and Access"] .
-
-.Informazioni su questo compito
-Un _amministratore di cartella o di progetto_ può visualizzare tutti gli agenti della console nella pagina *Agente*, ma può associare gli agenti della console solo alle cartelle e ai progetti per i quali dispone delle autorizzazioni. link:reference-iam-predefined-roles.html["Scopri di più sulle azioni che un _amministratore di cartella o di progetto_ può completare"] .
+I super amministratori e gli amministratori dell'organizzazione possono creare agenti e associare qualsiasi agente a qualsiasi progetto o cartella. Gli amministratori di cartelle o progetti possono associare gli agenti esistenti solo alle cartelle e ai progetti per i quali dispongono delle autorizzazioni. link:reference-iam-predefined-roles.html["Scopri di più sulle azioni che un _amministratore di cartella o di progetto_ può completare"].
 
 .Passi
 . Selezionare *Amministrazione > Identità e accesso* > *Agenti*.

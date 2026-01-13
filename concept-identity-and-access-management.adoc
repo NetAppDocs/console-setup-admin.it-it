@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-identity-and-access-management.html 
 keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, bluexp IAM 
-summary: 'La gestione delle identità e degli accessi (IAM) nella NetApp Console consente di controllare l"accesso alle risorse della tua organizzazione.' 
+summary: 'Utilizza la gestione delle identità e degli accessi (IAM) di NetApp Console per strutturare e controllare l"accesso alle risorse in base alla gerarchia aziendale, ad esempio in base a sede, reparto o progetto.' 
 ---
 = Scopri di più sulla gestione dell'identità e degli accessi NetApp Console
 :hardbreaks:
@@ -14,230 +14,190 @@ summary: 'La gestione delle identità e degli accessi (IAM) nella NetApp Console
 
 
 [role="lead"]
-La gestione delle identità e degli accessi (IAM) all'interno della NetApp Console consente di organizzare e controllare l'accesso alle risorse NetApp .  Puoi organizzare le tue risorse in base alla gerarchia della tua organizzazione.  Ad esempio, è possibile organizzare le risorse in base alla posizione geografica, al sito o all'unità aziendale.  È quindi possibile assegnare ruoli IAM ai membri in parti specifiche della gerarchia, impedendo così l'accesso alle risorse in altre parti della gerarchia.
+Utilizza la gestione delle identità e degli accessi (IAM) di NetApp Console per organizzare le tue risorse NetApp e controllare l'accesso in base alla struttura aziendale, in base a sede, reparto o progetto.
 
-* link:concept-modes.html["Scopri di più sulle modalità di distribuzione della console"]
+Le risorse sono organizzate gerarchicamente: l'organizzazione è in alto, seguita dalle cartelle (che possono contenere altre cartelle o progetti) e infine dai progetti, che contengono sistemi di archiviazione, carichi di lavoro e agenti.
 
-
-
-
-== Come funziona IAM
-
-IAM consente di concedere l'accesso alle risorse assegnando agli utenti ruoli di accesso a parti specifiche della gerarchia.  Ad esempio, a un membro può essere assegnato il ruolo di amministratore di cartella o di progetto per un progetto con cinque risorse.
-
-Quando si utilizza IAM, si gestiscono i seguenti componenti:
-
-* L'organizzazione
-* Cartelle
-* Progetti
-* Risorse
-* Membri
-* Ruoli e permessi
-* Agenti della console
+Assegnare autorizzazioni di controllo degli accessi basate sui ruoli (RBAC) ai membri a livello di organizzazione, cartella o progetto per garantire che gli utenti abbiano l'accesso appropriato alle risorse.
 
 
-Le risorse sono organizzate gerarchicamente:
-
-* L'organizzazione è il vertice della gerarchia.
-* Le cartelle sono elementi figlio dell'organizzazione o di un'altra cartella.
-* I progetti sono figli dell'organizzazione o di una cartella.
-* Le risorse sono associate a una o più cartelle o progetti.
-
+NOTE: Per gestire IAM nella NetApp Console, è necessario disporre dei ruoli di _Super admin_, _Organization admin_ o _Folder or project admin_.
 
 L'immagine seguente illustra questa gerarchia a livello di base.
 
-image:diagram-iam-resource-hierarchy.png["Un diagramma concettuale che mostra la gerarchia delle risorse per la gestione degli accessi: un'organizzazione, cartelle, progetti e risorse."]
+image:diagram-iam-resource-hierarchy.png["Un diagramma concettuale che mostra i componenti della gestione delle risorse"]]
 
 
 
-=== Organizzazione
+== Componenti di gestione dell'identità e dell'accesso
 
-Un'_organizzazione_ è il livello più alto del sistema Console IAM e in genere rappresenta la tua azienda.  La tua organizzazione è composta da cartelle, progetti, membri, ruoli e risorse.  Gli agenti sono associati a progetti specifici nell'organizzazione.
-
-
-
-=== Cartelle
-
-Una _cartella_ consente di raggruppare progetti correlati e di separarli dagli altri progetti nella tua organizzazione.  Ad esempio, una cartella potrebbe rappresentare una posizione geografica (UE o Stati Uniti orientali), una sede (Londra o Toronto) o un'unità aziendale (ingegneria o marketing).
-
-È possibile organizzare le cartelle in modo che contengano progetti, altre cartelle o entrambi.  Sono facoltativi.
+All'interno di NetApp Console, puoi organizzare le tue risorse di storage utilizzando tre componenti principali: componenti organizzativi, componenti delle risorse e componenti di accesso utente.
 
 
 
-=== Progetti
+=== Progetti e cartelle all'interno della tua organizzazione
 
-Un _progetto_ rappresenta un'area di lavoro nella Console a cui i membri dell'organizzazione accedono dalla pagina *Sistemi* per gestire le risorse.  Ad esempio, un progetto può includere un sistema Cloud Volumes ONTAP , un cluster ONTAP locale o un file system FSx for ONTAP .
+All'interno della struttura IAM, si lavora con tre componenti organizzative: organizzazioni, progetti e cartelle. È possibile concedere l'accesso agli utenti assegnando loro ruoli a uno qualsiasi di questi livelli.
 
-Un'organizzazione può avere uno o più progetti.  Un progetto può risiedere direttamente sotto l'organizzazione o all'interno di una cartella.
+Organizzazione:: Un'_organizzazione_ è il livello più alto del sistema Console IAM e in genere rappresenta la tua azienda.  La tua organizzazione è composta da cartelle, progetti, membri, ruoli e risorse.  Gli agenti sono associati a progetti specifici nell'organizzazione.
+Progetti:: Un _progetto_ viene utilizzato per fornire l'accesso a una risorsa di archiviazione. È necessario assegnare le risorse al progetto prima che chiunque possa accedervi. È possibile assegnare più risorse a un singolo progetto e avere anche più progetti. Si assegnano quindi agli utenti le autorizzazioni per il progetto, in modo da consentire loro di accedere alle risorse in esso contenute.
++
+--
+Ad esempio, è possibile associare un sistema ONTAP locale a un singolo progetto o a tutti i progetti della propria organizzazione, a seconda delle esigenze.
+
+link:task-iam-manage-folders-projects.html["Scopri come aggiungere progetti alla tua organizzazione."^]
+
+--
+Cartelle:: Raggruppa i progetti correlati in _cartelle_ per organizzarli in base a posizione, sede o unità aziendale. Non è possibile associare le risorse direttamente alle cartelle, ma assegnando a un utente un ruolo a livello di cartella gli si dà accesso a tutti i progetti in quella cartella.
+
+
+link:task-iam-manage-folders-projects.html["Scopri come aggiungere cartelle alla tua organizzazione."]
 
 
 
 === Risorse
 
-Una _risorsa_ è un sistema che hai creato o scoperto nella Console.
+Le _Risorse_ includono sistemi di archiviazione, abbonamenti Keystone e agenti Console.
 
-Quando si crea o si scopre una risorsa, la risorsa viene associata al progetto attualmente selezionato.  Potrebbe essere l'unico progetto a cui vuoi associare questa risorsa.  Ma puoi scegliere di associare la risorsa ad altri progetti nella tua organizzazione.
++ È necessario associare una risorsa a un progetto prima che chiunque possa accedervi.
 
-Ad esempio, potresti associare un sistema Cloud Volumes ONTAP a un progetto aggiuntivo o a tutti i progetti della tua organizzazione.  Il modo in cui associare una risorsa dipende dalle esigenze della tua organizzazione.
++
 
+Ad esempio, potresti associare un sistema Cloud Volumes ONTAP a un progetto o a tutti i progetti della tua organizzazione. Il modo in cui associare una risorsa dipende dalle esigenze della tua organizzazione.
 
-TIP: Gli agenti possono anche essere associati a più di un progetto. <<associate-agents,Scopri di più sull'utilizzo degli agenti con IAM>> .
++
 
+link:task-iam-manage-resources.html["Scopri come associare le risorse ai progetti."]
 
-
-==== Quando associare una risorsa a una cartella
-
-È anche possibile associare una risorsa a una cartella, ma questa opzione è facoltativa e soddisfa le esigenze di un caso d'uso specifico.
-
-Un _amministratore dell'organizzazione_ può associare una risorsa a una cartella in modo che un _amministratore della cartella o del progetto_ possa collegarla ai progetti appropriati nella cartella.
-
-Ad esempio, supponiamo di avere una cartella che contiene due progetti:
-
-image:diagram-iam-resource-association-folder-1.png["Un diagramma che mostra una cartella e due progetti che risiedono nella cartella: progetto A e progetto B."]
-
-L'_amministratore dell'organizzazione_ può associare una risorsa alla cartella:
-
-image:diagram-iam-resource-association-folder-2.png["Un diagramma che mostra una cartella, una risorsa associata alla cartella e due progetti che risiedono nella cartella: progetto A e progetto B."]
-
-L'associazione di una risorsa a una cartella non la rende accessibile a tutti i progetti; solo l'amministratore della cartella o del progetto può vederla.  L'amministratore della cartella o del progetto decide quali progetti possono accedervi e associa la risorsa ai progetti appropriati.
-
-In questo esempio, l'amministratore associa la risorsa al Progetto A:
-
-image:diagram-iam-resource-association-folder-3.png["Un diagramma che mostra una cartella, due progetti che risiedono nella cartella: progetto A e progetto B, e una risorsa associata al progetto A."]
-
-I membri che dispongono delle autorizzazioni per il progetto A possono ora accedere alla risorsa.
-
-
-
-=== Membri
-
-I membri della tua organizzazione sono account utente o account di servizio.  Un account di servizio viene solitamente utilizzato da un'applicazione per completare attività specifiche senza l'intervento umano.
-
-Ogni organizzazione include almeno un utente con il ruolo di _Amministratore organizzazione_ (la Console assegna automaticamente questo ruolo all'utente che crea l'organizzazione).  È possibile aggiungere altri membri all'organizzazione e assegnare autorizzazioni diverse ai diversi livelli della gerarchia delle risorse.
-
-
-
-=== Ruoli e permessi
-
-Non è possibile concedere autorizzazioni direttamente ai membri dell'organizzazione.  Invece, si assegna un ruolo a ciascun membro.  Un ruolo contiene un insieme di autorizzazioni che consentono a un membro di eseguire azioni specifiche a un livello specifico della gerarchia delle risorse.
-
-L'assegnazione di ruoli a livello gerarchico limita l'accesso alle risorse e ai servizi di cui un membro ha bisogno.
-
-
-
-==== Dove puoi assegnare ruoli nella gerarchia
-
-Quando si associa un membro a un ruolo, è necessario selezionare l'intera organizzazione, una cartella specifica o un progetto specifico.  Il ruolo selezionato conferisce a un membro le autorizzazioni per le risorse nella parte selezionata della gerarchia.
-
-
-
-==== Ereditarietà dei ruoli
-
-Quando si assegna un ruolo, il ruolo viene ereditato lungo la gerarchia dell'organizzazione:
-
-Organizzazione:: Concedere a un membro un ruolo di accesso a livello di organizzazione gli conferisce le autorizzazioni per tutte le cartelle, i progetti e le risorse.
-Cartelle:: Quando si concede un ruolo di accesso a livello di cartella, tutte le cartelle, i progetti e le risorse nella cartella ereditano quel ruolo.
+Sistemi di archiviazione e abbonamenti Keystone:: I sistemi di storage sono le risorse principali gestite in NetApp Console. NetApp Console supporta la gestione di sistemi di archiviazione sia on-premise che cloud. È necessario aggiungere un sistema di archiviazione a un progetto prima che chiunque possa accedervi.
 +
 --
-Ad esempio, se assegni un ruolo a livello di cartella e quella cartella contiene tre progetti, il membro avrà le autorizzazioni per quei tre progetti e per tutte le risorse associate.
+I sistemi di archiviazione vengono associati automaticamente al progetto in cui vengono aggiunti, ma è possibile associarli anche ad altri progetti o cartelle dalla pagina *Risorse*.
+
+Gli abbonamenti Keystone sono anche risorse che è possibile associare ai progetti per concedere agli utenti l'accesso all'abbonamento in NetApp Console.
 
 --
-Progetti:: Quando si concede un ruolo di accesso a livello di progetto, tutte le risorse associate a quel progetto ereditano quel ruolo.
+
+
+[[associate-agents]]
+Agenti della console:: Gli amministratori dell'organizzazione creano agenti Console per gestire i sistemi di storage e abilitare i servizi dati NetApp . Inizialmente gli agenti sono vincolati al progetto in cui vengono creati, ma gli amministratori possono aggiungerli ad altri progetti o cartelle dalla pagina Agenti.
++
+--
+L'associazione di un agente a un progetto consente la gestione delle risorse in quel progetto, mentre l'associazione di un agente a una cartella consente agli amministratori della cartella o del progetto di decidere quali progetti devono utilizzare l'agente. Per fornire capacità di gestione, gli agenti devono essere collegati a progetti specifici.
+
+link:task-iam-associate-agents.html["Scopri come associare gli agenti ai progetti."]
+
+--
 
 
 
 
-==== Ruoli multipli
+=== Membri e ruoli
 
-È possibile assegnare a ciascun membro dell'organizzazione un ruolo a diversi livelli della gerarchia organizzativa.  Può trattarsi dello stesso ruolo o di un ruolo diverso.  Ad esempio, è possibile assegnare il ruolo di membro A al progetto 1 e al progetto 2.  Oppure puoi assegnare a un membro il ruolo A per il progetto 1 e il ruolo B per il progetto 2.
+Membri:: I membri della tua organizzazione sono account utente o account di servizio.  Un account di servizio viene solitamente utilizzato da un'applicazione per completare attività specifiche senza l'intervento umano.
++
+--
+Dopo che i membri si sono registrati a NetApp Console, è necessario aggiungerli alla propria organizzazione. Una volta aggiunti, è possibile assegnare loro dei ruoli per fornire l'accesso alle risorse. È possibile aggiungere manualmente gli account di servizio dalla Console oppure automatizzarne la creazione e la gestione tramite l'API IAM NetApp Console .
 
+link:task-iam-manage-members-permissions.html#add-members["Scopri come aggiungere membri alla tua organizzazione."^]
 
+--
+Ruoli di accesso:: La Console fornisce ruoli di accesso che puoi assegnare ai membri della tua organizzazione.
++
+--
+Quando associ un membro a un ruolo, puoi concedere quel ruolo per l'intera organizzazione, per una cartella specifica o per un progetto specifico. Il ruolo selezionato conferisce a un membro le autorizzazioni per le risorse nella parte selezionata della gerarchia.
 
-==== Ruoli di accesso
+NetApp Console fornisce ruoli granulari che aderiscono ai principi del "privilegio minimo", il che significa che i ruoli di accesso sono progettati per dare agli utenti accesso solo a ciò di cui hanno bisogno
 
-La Console fornisce ruoli di accesso che puoi assegnare ai membri della tua organizzazione.
+Ciò significa che agli utenti potrebbero essere assegnati più ruoli man mano che i loro compiti aumentano.
 
 link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] .
 
+--
 
 
-=== Agenti della console
 
-Quando un _amministratore dell'organizzazione_ crea un agente della Console, la Console associa automaticamente tale agente all'organizzazione e al progetto attualmente selezionato.  L'_amministratore dell'organizzazione_ ha automaticamente accesso a quell'agente da qualsiasi punto dell'organizzazione.  Tuttavia, se nella tua organizzazione ci sono altri membri con ruoli diversi, questi membri potranno accedere a quell'agente solo dal progetto in cui è stato creato, a meno che tu non associ quell'agente ad altri progetti.
 
-È possibile rendere disponibile un agente Console per un altro progetto nei seguenti casi:
+== Esempi di strategia IAM
 
-* Desideri consentire ai membri della tua organizzazione di utilizzare un agente esistente per creare o scoprire sistemi aggiuntivi in un altro progetto
-* Hai associato una risorsa esistente a un altro progetto e tale risorsa è gestita da un agente della console
+
+
+=== Strategia per piccole organizzazioni
+
+Per le organizzazioni con meno di 50 utenti e una gestione centralizzata dell'archiviazione, si può prendere in considerazione un approccio semplificato che utilizzi i ruoli di Super amministratore e Super visualizzatore.
+
+**Esempio: ABC Corporation (team di 5 persone)**
+
+* **Struttura:** Unica organizzazione con 3 progetti (Produzione, Sviluppo, Backup)
+* **Ruoli:**
 +
-Se una risorsa associata a un progetto aggiuntivo viene rilevata tramite un agente Console, è necessario associare l'agente anche al progetto a cui la risorsa è ora associata. In caso contrario, l'agente e la risorsa associata non saranno accessibili dalla pagina *Sistemi* dai membri che non dispongono del ruolo di _Amministratore organizzazione_.
+** 2 membri senior: ruolo di *Super amministratore* per accesso amministrativo completo
+** 3 membri del team: ruolo di *Super viewer* per il monitoraggio senza diritti di modifica
+
+
+* **Strategia dell'agente:** Singolo agente associato a tutti i progetti per l'accesso alle risorse condivise
+* **Vantaggi:** Amministrazione semplificata, ridotta complessità dei ruoli, adatto a team che necessitano di un ampio accesso
 
 
 
-È possibile creare un'associazione dalla pagina *Agenti* all'interno della Console IAM:
 
-* Associa un agente Console a un progetto
+=== Strategia aziendale multiregionale
+
+Per le grandi organizzazioni con attività regionali e team specializzati, è opportuno implementare un approccio gerarchico con cartelle che rappresentano i confini geografici o delle unità aziendali.
+
+**Esempio: XYZ Corporation (multinazionale)**
+
+* **Struttura:** Organizzazione > Cartelle regionali (Nord America, Europa, Asia-Pacifico) > Cartelle di progetto per regione
+* **Ruoli della piattaforma:**
 +
-Quando si associa un agente Console a un progetto, tale agente è accessibile dalla pagina *Sistemi* quando si visualizza il progetto.
+** 1 *Amministratore dell'organizzazione*: supervisione globale e gestione delle policy
+** 3 *Amministratori di cartelle o progetti*: Controllo regionale (uno per regione)
+** 1 *Amministratore della federazione*: Integrazione del provider di identità aziendale
 
-* Associa un agente Console a una cartella
+
+* **Ruoli di archiviazione per regione:**
 +
-L'associazione di un agente Console a una cartella non rende automaticamente quell'agente accessibile da tutti i progetti nella cartella.  I membri dell'organizzazione non possono accedere a un agente della console da un progetto finché non si associa l'agente a quel progetto specifico.
+** 9 *Amministratore di storage*: Scopri e gestisci i sistemi di storage nelle regioni assegnate
+** 2 *Visualizzatore di archiviazione*: monitora le risorse di archiviazione nelle diverse regioni
+** 1 *Specialista in integrità del sistema*: Gestisci l'integrità dell'archiviazione senza modifiche al sistema
 
+
+* **Ruoli del servizio dati:**
 +
-Un _amministratore dell'organizzazione_ potrebbe associare un agente della console a una cartella in modo che l'_amministratore della cartella o del progetto_ possa decidere di associare tale agente ai progetti appropriati che risiedono nella cartella.
+** *Amministratore di backup e ripristino*: per progetto in base alle responsabilità di backup
+** *Amministratore di Ransomware Resilience*: monitoraggio del team di sicurezza nei vari progetti
+
+
+* **Strategia dell'agente:** Agenti regionali associati a progetti geografici appropriati
+* **Vantaggi:** Maggiore sicurezza attraverso la separazione dei ruoli, l'autonomia regionale e la conformità alle normative locali
 
 
 
 
+=== Strategia di specializzazione dipartimentale
 
-== Esempi IAM
+Per le organizzazioni con team specializzati che necessitano di un accesso specifico al servizio dati, utilizzare assegnazioni di ruoli mirate in base alle responsabilità funzionali.
 
-Questi esempi mostrano come potresti impostare la tua organizzazione.
+**Esempio: TechCorp (azienda tecnologica di medie dimensioni)**
 
-
-
-=== Organizzazione semplice
-
-Il diagramma seguente mostra un semplice esempio di un'organizzazione che utilizza il progetto predefinito e nessuna cartella.  Un singolo membro gestisce l'intera organizzazione.
-
-image:diagram-iam-example-hierarchy-simple.png["Un diagramma concettuale che mostra un'organizzazione con un progetto, risorse associate e un amministratore dell'organizzazione."]
-
-
-
-=== Organizzazione avanzata
-
-Il diagramma seguente mostra un'organizzazione che utilizza cartelle per organizzare i progetti per ogni sede geografica dell'azienda.  Ogni progetto ha il suo set di risorse associate.  I membri includono un amministratore dell'organizzazione e un amministratore per ogni cartella dell'organizzazione.
-
-image:diagram-iam-example-hierarchy-advanced.png["Un diagramma concettuale che mostra un'organizzazione con tre cartelle, ciascuna con tre progetti, e le relative risorse.  Ci sono quattro membri: un amministratore dell'organizzazione e tre amministratori delle cartelle."]
+* **Struttura:** Organizzazione > Cartelle dipartimentali (IT, Sicurezza, Sviluppo) > Risorse specifiche del progetto
+* **Ruoli specializzati:**
++
+** Team di sicurezza: ruoli di *amministratore di Ransomware Resilience* e *visualizzatore di classificazione*
+** Team di backup: *Super amministratore di backup e ripristino* per operazioni di backup complete
+** Team di sviluppo: *Amministratore di archiviazione* per la gestione dell'ambiente di test
+** Team di conformità: *Analista di supporto operativo* per il monitoraggio e la gestione dei casi di supporto
 
 
-
-== Cosa puoi fare con IAM
-
-Gli esempi seguenti descrivono come è possibile utilizzare IAM per gestire l'organizzazione della Console:
-
-* Assegna ruoli specifici a membri specifici in modo che possano completare solo le attività richieste.
-* Modificare i permessi dei membri perché hanno cambiato reparto o perché hanno responsabilità aggiuntive.
-* Rimuovere un utente che ha lasciato l'azienda.
-* Aggiungi cartelle o progetti alla tua gerarchia perché una nuova unità aziendale ha aggiunto storage NetApp .
-* Associa una risorsa a un altro progetto perché quella risorsa ha una capacità che un altro team può utilizzare.
-* Visualizza le risorse a cui un membro può accedere.
-* Visualizza i membri e le risorse associati a un progetto specifico.
+* **Strategia dell'agente:** Agenti collegati a progetti dipartimentali in base alla proprietà delle risorse
+* **Vantaggi:** Controllo degli accessi personalizzato, maggiore efficienza operativa e chiara responsabilità per attività specializzate
 
 
 
 
-== Dove andare dopo
+== Passaggi successivi con IAM nella NetApp Console
 
 * link:task-iam-get-started.html["Introduzione a IAM nella NetApp Console"]
-* link:task-iam-manage-folders-projects.html["Organizza le tue risorse in NetApp Console con cartelle e progetti"]
-* link:task-iam-manage-members-permissions.html["Gestisci i membri NetApp Console e le relative autorizzazioni"]
-* link:task-iam-manage-resources.html["Gestisci la gerarchia delle risorse nella tua organizzazione NetApp Console"]
-* link:task-iam-associate-agents.html["Associare agenti a cartelle e progetti"]
-* link:task-iam-switch-organizations-projects.html["Passare tra progetti e organizzazioni NetApp Console"]
-* link:task-iam-rename-organization.html["Rinomina l'organizzazione NetApp Console"]
 * link:task-iam-audit-actions-timeline.html["Monitorare o verificare l'attività IAM"]
-* link:reference-iam-predefined-roles.html["Ruoli di accesso NetApp Console"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Scopri di più sull'API per NetApp Console IAM"^]
 

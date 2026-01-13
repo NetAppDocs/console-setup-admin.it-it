@@ -17,9 +17,6 @@ summary: 'La manutenzione del sistema operativo sull"host dell"agente è respons
 La manutenzione del sistema operativo sull'host dell'agente della console è responsabilità del cliente.  Ad esempio, tu (il cliente) dovresti applicare gli aggiornamenti di sicurezza al sistema operativo sull'host dell'agente seguendo le procedure standard della tua azienda per la distribuzione del sistema operativo.
 
 
-TIP: Se hai già un agente, dovresti esserne a conoscenzalink:reference-agent-operating-system-changes.html["modifiche ai sistemi operativi Linux supportati"] .
-
-
 
 == Patch del sistema operativo e agente
 

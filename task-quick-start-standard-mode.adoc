@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-quick-start-standard-mode.html 
 keywords: quick start, standard mode quick start 
-summary: Per iniziare a utilizzare la NetApp Console in modalità standard, prepara la rete per la console, registrandoti e creando un account e, facoltativamente, creando un agente della console. 
+summary: 'Per iniziare a utilizzare NetApp Console (SaaS), prepara la rete per la Console, registrati e crea un account e utilizza l"assistente NetApp per impostare le funzionalità iniziali.' 
 ---
-= Flusso di lavoro introduttivo (modalità standard)
+= Flusso di lavoro introduttivo (SaaS)
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,22 +14,29 @@ summary: Per iniziare a utilizzare la NetApp Console in modalità standard, prep
 
 
 [role="lead"]
-Per iniziare a utilizzare la NetApp Console in modalità standard, prepara la rete per la console, registrandoti e creando un account e, facoltativamente, creando un agente della console.
+Per iniziare a utilizzare NetApp Console (SaaS), prepara la rete per la Console, registrati e crea un account e utilizza l'assistente della Console per impostare le funzionalità iniziali.
 
-In modalità standard, si accede a una console basata sul Web ospitata come prodotto Software-as-a-service (SaaS) di NetApp.  Prima di iniziare, assicurati di aver capitolink:concept-modes.html["modalità di distribuzione"] Elink:concept-agents.html["Agenti della console"] .
+Si accede a una console basata sul Web ospitata come prodotto Software-as-a-service (SaaS) di NetApp. Puoi utilizzare la Console per gestire il tuo ambiente di archiviazione cloud ibrido e utilizzare i servizi dati NetApp .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] link:reference-networking-saas-console.html["Preparare la rete per l'utilizzo della console NetApp"]
 [role="quick-margin-para"]
-I computer che accedono alla console NetApp devono disporre di connessioni a endpoint specifici.  Se la rete limita l'accesso in uscita, è necessario assicurarsi che questi endpoint siano consentiti.
+Assicurarsi che i computer che accedono alla console NetApp abbiano accesso di rete agli endpoint richiesti.
+
+link:reference-networking-saas-console.html["Scopri come preparare la rete per la console NetApp ."]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] link:task-sign-up-saas.html["Registrati e crea un'organizzazione"]
 [role="quick-margin-para"]
-Vai al https://console.netapp.com["Console NetApp"^] e iscriviti.  Ti verrà data la possibilità di creare un'organizzazione, ma dovresti saltare questo passaggio se la tua azienda ne ha già una.
+Vai al https://console.netapp.com["Console NetApp"^] e iscriviti. Se ti viene chiesto di creare un'organizzazione e ritieni che ne esista già una per la tua azienda, chiudi la finestra di dialogo e informa l'amministratore dell'organizzazione. Se al momento non esiste un amministratore dell'organizzazione per la tua azienda, puoi rivendicare questo ruolo. link:task-user-settings.html#contact-admin["Scopri come contattare un amministratore dell'organizzazione."^]
 
 [role="quick-margin-para"]
-A questo punto, hai effettuato l'accesso e puoi iniziare a gestire l'archiviazione e a utilizzare servizi come Digital Advisor, Amazon FSx for ONTAP, Azure NetApp Files e altri ancora. link:concept-agents.html["Scopri cosa puoi fare senza un agente Console"] .
+A questo punto hai effettuato l'accesso e puoi utilizzare l'assistente NetApp per iniziare a configurare la Console. Per iniziare, associa il tuo account di supporto NetApp e un agente della console per abilitare la funzionalità completa.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]Creare un agente Console
+Se si sceglie di non utilizzare l'assistente NetApp o di installare un agente Console, è possibile iniziare a gestire l'archiviazione e utilizzare servizi come Digital Advisor, Amazon FSx for ONTAP, Azure NetApp Files e altri ancora. link:concept-agents.html["Scopri cosa puoi fare senza un agente Console"].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Associa il tuo account NetApp Support Site (NSS)
+Associando il tuo account NetApp Support Site (NSS) alla Console potrai gestire le tue licenze e i tuoi abbonamenti più facilmente, nonché accedere alle risorse di supporto direttamente dalla Console.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Creare un agente Console
 [role="quick-margin-para"]
 Le funzionalità avanzate di gestione dello storage e alcuni servizi dati NetApp richiedono l'installazione di un agente Console.  L'agente Console consente alla Console di gestire risorse e processi all'interno del tuo ambiente cloud ibrido.
 
@@ -44,9 +51,18 @@ Puoi creare un agente Console nel tuo cloud o nella tua rete locale.
 * link:task-install-agent-on-prem.html["Scopri come creare un agente Console in locale"]
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"] Aggiungere un sistema di archiviazione alla Console
 [role="quick-margin-para"]
-Per utilizzare NetApp Intelligent Data Services per la gestione dell'archiviazione e dei dati in Google Cloud, assicurarsi che l'agente della console sia in esecuzione in Google Cloud.
+All'interno della NetApp Console puoi aggiungere o scoprire sistemi di storage per gestire il tuo ambiente di storage cloud ibrido. Utilizza l'assistente NetApp per aggiungere il tuo primo sistema di storage.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] link:task-subscribe-standard-mode.html["Iscriviti a NetApp Intelligent Services (facoltativo)"]
+
+TIP: Se installi un agente Console in AWS, Microsoft Azure o Google Cloud, la Console rileva automaticamente informazioni sui bucket Amazon S3, Azure Blob Storage o Google Cloud Storage nella posizione in cui è installato l'agente. Questi sistemi vengono aggiunti automaticamente alla pagina *Sistemi*.
+
+* link:https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["Scopri come scoprire un sistema ONTAP"]
+* link:https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["Scopri come scoprire un sistema StorageGRID"]
+* link:https://docs.netapp.com/us-en/storage-management-e-series/task-discover-e-series.html["Scopri come scoprire un sistema E-Series"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"] link:task-subscribe-standard-mode.html["Iscriviti a NetApp Intelligent Services (facoltativo)"]
 [role="quick-margin-para"]
-Iscriviti a NetApp Intelligent Services tramite il tuo provider cloud per pagare a ore (PAYGO) o tramite un contratto annuale.  I NetApp Intelligent Services includono NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience e NetApp Disaster Recovery.  NetApp Data Classification è incluso nel tuo abbonamento senza costi aggiuntivi.
+Iscriviti a NetApp Intelligent Services tramite il tuo provider cloud per una fatturazione oraria (PAYGO) o annuale. Un abbonamento include NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience, NetApp Disaster Recovery e NetApp Data Classification.

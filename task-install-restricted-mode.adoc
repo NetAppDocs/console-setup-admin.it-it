@@ -22,6 +22,8 @@ Distribuisci l'agente Console in modalità limitata in modo da poter utilizzare 
 
 Installa l'agente Console dal marketplace del tuo provider cloud oppure manualmente su un host Linux.
 
+Prima di installare l'agente Console, è necessario preparare l'ambiente. Puoi eseguire l'installazione da AWS Marketplace, da Azure Marketplace o manualmente sul tuo host Linux in esecuzione su AWS, Azure o Google Cloud.
+
 [role="tabbed-block"]
 ====
 .AWS Commercial Marketplace
@@ -205,8 +207,10 @@ Azure distribuisce la macchina virtuale con le impostazioni specificate.  La mac
 Configurare la NetApp Console.
 
 --
-.Installazione manuale
+.Installazione manuale (obbligatoria per Google Cloud)
 --
+Puoi installare manualmente l'agente Console sul tuo host Linux in esecuzione su AWS, Azure o Google Cloud.
+
 .Prima di iniziare
 Dovresti avere quanto segue:
 

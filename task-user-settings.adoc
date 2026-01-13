@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-user-settings.html 
-keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode 
-summary: 'All"interno della Console, ogni utente ha un profilo che contiene informazioni sull"utente e sulle sue impostazioni. Puoi visualizzare e modificare le impostazioni del tuo profilo.' 
+keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode, read-only mode, contact admin 
+summary: 'Puoi modificare il tuo profilo della Console, ad esempio cambiando la password, abilitando l"autenticazione a più fattori (MFA) e verificando chi è l"amministratore della Console.' 
 ---
 = Gestisci le impostazioni utente NetApp Console
 :hardbreaks:
@@ -22,7 +22,7 @@ All'interno della Console, ogni utente ha un profilo che contiene informazioni s
 
 == Cambia il tuo nome visualizzato
 
-Puoi modificare il nome visualizzato nella Console, che viene utilizzato per identificarti ed è visibile agli altri utenti. Il nome visualizzato non è lo stesso del nome utente o dell'indirizzo email, che non possono essere modificati.
+Puoi modificare il nome visualizzato nella Console, che ti identifica agli altri utenti. Non puoi modificare il tuo nome utente o indirizzo email.
 
 .Passi
 . Selezionare l'icona del profilo nell'angolo in alto a destra della Console per visualizzare il pannello Impostazioni utente.
@@ -32,11 +32,29 @@ Puoi modificare il nome visualizzato nella Console, che viene utilizzato per ide
 
 
 
+== Eleva il tuo ruolo in modalità di sola lettura
+
+In alcuni casi, l'amministratore della tua organizzazione potrebbe impostare la tua organizzazione in modalità di sola lettura. Se hai un ruolo di amministratore, devi elevare le autorizzazioni per apportare modifiche. Ciò garantisce che le modifiche siano intenzionali e autorizzate.
+
+Dopo aver elevato il tuo ruolo, puoi apportare modifiche nella Console fino alla scadenza della sessione corrente.
+
+Al termine, esci dalla Console oppure sposta indietro il cursore per tornare alla modalità di sola lettura. Il sistema rimuove i tuoi permessi elevati quando la sessione scade.
+
+.Passi
+. Selezionare l'icona del profilo nell'angolo in alto a destra della Console per visualizzare il pannello Impostazioni utente.
+. Per impostare lo stato *Modalità di sola lettura*, spostare il cursore sulla posizione *Sollevata* e confermare le modifiche.
++
+image:screenshot-user-elevated.png["Uno screenshot che mostra il cursore della modalità di sola lettura in posizione elevata."]
+
+
+
+
+
 == Configurare l'autenticazione a più fattori
 
 Configurare l'autenticazione a più fattori (MFA) per migliorare la sicurezza richiedendo un secondo metodo di verifica.
 
-Gli utenti che utilizzano l'accesso Single Sign-On con un provider di identità esterno o il sito di supporto NetApp non possono abilitare MFA.  Se una di queste due condizioni è vera per te, non vedrai l'opzione per abilitare MFA nelle impostazioni del tuo profilo.
+Gli utenti che utilizzano l'accesso Single Sign-On con un provider di identità esterno o il sito di supporto NetApp non possono abilitare MFA. Se una di queste due condizioni è vera per te, non vedrai l'opzione per abilitare MFA nelle impostazioni del tuo profilo.
 
 Non abilitare MFA se il tuo account utente viene utilizzato per l'accesso API.  L'autenticazione a più fattori interrompe l'accesso all'API quando è abilitata per un account utente.  Utilizzare account di servizio per tutti gli accessi API.
 
@@ -75,7 +93,7 @@ Puoi utilizzare i codici di recupero una sola volta.  Se ne usi uno o lo perdi, 
 
 == Elimina la tua configurazione MFA
 
-Per interrompere l'utilizzo dell'autenticazione a più fattori (MFA) per l'accesso, elimina la configurazione MFA.  In questo modo non sarà più necessario immettere un codice monouso dall'app di autenticazione quando si effettua l'accesso.
+Al termine, esci dalla Console oppure sposta indietro il cursore per tornare alla modalità di sola lettura. Il sistema rimuove i tuoi permessi elevati quando la sessione scade.
 
 
 NOTE: Se non riesci ad accedere all'app di autenticazione o al codice di ripristino, dovrai contattare l'amministratore della tua organizzazione per reimpostare la configurazione MFA.

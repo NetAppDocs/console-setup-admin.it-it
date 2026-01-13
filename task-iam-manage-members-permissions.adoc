@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-iam-manage-members-permissions.html 
-keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management 
+keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management, federated groups, SSO, access roles, add members, grant permissions 
 summary: Gestisci i membri della tua organizzazione per fornire autorizzazioni ai diversi livelli della gerarchia delle risorse della tua organizzazione. 
 ---
-= Aggiungi membri e account di servizio alla NetApp Console
+= Aggiungere utenti a un'organizzazione NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,47 +14,49 @@ summary: Gestisci i membri della tua organizzazione per fornire autorizzazioni a
 
 
 [role="lead"]
-All'interno della Console puoi aggiungere utenti e account di servizio alla tua organizzazione e assegnare loro uno o più ruoli nella gerarchia delle risorse.  Un _ruolo_ contiene un insieme di autorizzazioni che consentono a un membro (account utente o di servizio) di eseguire azioni specifiche a un livello specifico della gerarchia delle risorse.
+All'interno della Console, puoi concedere agli utenti l'accesso a progetti o cartelle in base a un ruolo di accesso. Un _ruolo di accesso_ contiene un set di autorizzazioni che consente a un membro (account utente o di servizio) di eseguire azioni specifiche al livello assegnato della gerarchia delle risorse.
 
-Per gestire utenti e autorizzazioni è necessario uno dei seguenti ruoli:
+.Ruoli di accesso richiesti
+Super amministratore, amministratore dell'organizzazione o amministratore di cartelle o progetti (per le cartelle e i progetti che amministrano). link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"].
 
-* Amministratore dell'organizzazione
-+
-Gli utenti con questo ruolo possono gestire tutti i membri
 
-* Amministratore di cartelle o progetti
-+
-Gli utenti con questo ruolo possono gestire solo i membri di una cartella o di un progetto designato
 
-+
-L'amministratore di cartelle o progetti può visualizzare tutti i membri nella pagina *Membri*, ma può gestire le autorizzazioni solo per le cartelle e i progetti a cui ha accesso. link:reference-iam-predefined-roles.html["Scopri di più sulle azioni che un _amministratore di cartella o di progetto_ può completare"] .
+== Scopri come viene concesso l'accesso nella NetApp Console
 
+NetApp Console utilizza il controllo degli accessi basato sui ruoli (RBAC) per gestire le autorizzazioni. Assegnare ruoli agli utenti individualmente o tramite gruppi federati. Ogni ruolo definisce le azioni consentite per risorse specifiche.
+
+Tenere presente quanto segue in merito alla concessione dell'accesso nella NetApp Console:
+
+* Tutti gli utenti devono prima registrarsi alla NetApp Console prima di poter ottenere l'accesso alle risorse
+* È necessario assegnare esplicitamente un ruolo a ciascun utente nella Console prima che possa accedere alle risorse, anche se è membro di un gruppo federato a cui è stato assegnato un ruolo.
+* È possibile aggiungere account di servizio direttamente dalla Console e assegnare loro ruoli.
 
 
 
 
 == Aggiungi membri alla tua organizzazione
 
-Puoi aggiungere due tipi di membri alla tua organizzazione: un account utente e un account di servizio. Le applicazioni utilizzano account di servizio per eseguire automaticamente le attività API.  Le persone utilizzano gli account utente per accedere e gestire le risorse.
+NetApp Console supporta tre tipi di membri: account utente, account di servizio e gruppi federati.
 
-Gli utenti devono registrarsi alla NetApp Console prima di poterli aggiungere a un'organizzazione o assegnare loro un ruolo.  È possibile creare account di servizio direttamente dalla Console.
+Gli utenti devono registrarsi a NetApp Console prima di poterli aggiungere e assegnare un ruolo, anche se fanno parte di un gruppo federato. Crea account di servizio direttamente nella Console.
 
-Per gestire gli utenti e le relative autorizzazioni, è necessario disporre del ruolo di *Amministratore organizzazione* o del ruolo di *Amministratore cartella o progetto*.  Ricorda che gli utenti con il ruolo di *Amministratore cartella o progetto* possono gestire solo i membri della cartella o dei progetti per i quali dispongono dei permessi di amministratore.
+Per poter accedere alle risorse, a tutti i membri deve essere assegnato esplicitamente almeno un ruolo.
+
+Quando aggiungi un membro, scegli il livello della risorsa (organizzazione, cartella o progetto) e assegna un ruolo o più ruoli con le autorizzazioni necessarie.
 
 
 
-=== Aggiungi un account utente
+=== Aggiungi un utente
 
-Sebbene gli utenti si iscrivano autonomamente alla NetApp Console , per accedere alle risorse nella Console devono essere aggiunti esplicitamente a un'organizzazione o a cartelle o progetti specifici.
+Gli utenti si iscrivono alla NetApp Console, ma un amministratore dell'organizzazione o un amministratore di cartella o di progetto deve aggiungerli a un'organizzazione, una cartella o un progetto affinché possano accedere alle risorse.
+
+.Prima di iniziare:
+L'utente deve essersi già registrato alla NetApp Console. Se non si sono ancora registrati, indirizzali a link:task-sign-up-saas.html["iscriviti alla NetApp Console."]
+
+
+NOTE: Se si aggiunge un utente che fa parte di un gruppo federato, assicurarsi che l'utente si sia già registrato alla NetApp Console e che gli sia stato assegnato esplicitamente un ruolo nella Console. NetApp consiglia di assegnare un ruolo di accesso minimo, ad esempio Visualizzatore dell'organizzazione.
 
 .Passi
-. Indirizzare l'utente a visitare https://console.netapp.com/["NetApp Console"^] per iscriversi.
-+
-Una volta registrati, gli utenti completano la pagina *Registrati*, controllano la posta elettronica e accedono. Se la Console chiede agli utenti di creare un'organizzazione, la chiudono e ti avvisano della creazione del loro account.  Puoi quindi aggiungere l'utente alla tua organizzazione esistente.
-
-+
-link:task-sign-up-saas.html["Scopri come registrarti alla NetApp Console"] .
-
 . Selezionare *Amministrazione > Identità e accesso*.
 . Seleziona *Membri*.
 . Seleziona *Aggiungi un membro*.
@@ -66,7 +68,7 @@ Notare quanto segue:
 
 +
 ** Puoi selezionare solo le cartelle e i progetti per i quali disponi delle autorizzazioni.
-** Selezionando un'organizzazione o una cartella, al membro vengono concesse autorizzazioni su tutti i suoi contenuti.
+** Quando selezioni un'organizzazione o una cartella, concedi al membro le autorizzazioni per tutti i suoi contenuti.
 ** È possibile assegnare il ruolo di *Amministratore organizzazione* solo a livello di organizzazione.
 
 
@@ -74,10 +76,10 @@ Notare quanto segue:
 +
 link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] .
 
-. Facoltativo: seleziona un ruolo o un progetto aggiuntivo.  Se desideri fornire l'accesso a cartelle o progetti aggiuntivi all'interno della tua organizzazione o concedere all'utente ruoli aggiuntivi nell'area selezionata, seleziona *Aggiungi ruolo*, specifica un'altra cartella o progetto oppure una categoria di ruolo diversa, quindi scegli un ruolo.
+. Per consentire l'accesso a più cartelle, progetti o ruoli, seleziona *Aggiungi ruolo*, scegli la cartella, il progetto o la categoria di ruolo e seleziona un ruolo.
 . Selezionare *Aggiungi*.
 +
-La Console invia all'utente un'e-mail con le istruzioni.
+La Console invia le istruzioni all'utente tramite e-mail.
 
 
 
@@ -85,9 +87,10 @@ La Console invia all'utente un'e-mail con le istruzioni.
 
 === Aggiungi un account di servizio
 
-È possibile automatizzare le attività e integrarle con le API della console in modo sicuro con gli account di servizio.  Quando crei un account di servizio, puoi scegliere tra due metodi di autenticazione: tramite ID client e segreto oppure tramite autenticazione JWT (JSON Web Token).  Il metodo basato su ID client e segreto è adatto a configurazioni semplici, mentre l'autenticazione JWT offre una maggiore sicurezza per ambienti automatizzati o cloud-native.  Scegli l'opzione più adatta alle tue esigenze di sicurezza e al modo in cui intendi utilizzare la Console.
+Gli account di servizio consentono di automatizzare le attività e di connettersi in modo sicuro alle API della console. Scegli un ID client e un segreto per configurazioni semplici oppure JWT (JSON Web Token) per una maggiore sicurezza in ambienti automatizzati o cloud-native. Seleziona il metodo che soddisfa i tuoi requisiti di sicurezza.
 
-Se si desidera utilizzare l'autenticazione JWT, è necessario avere a disposizione la chiave pubblica o il certificato.
+.Prima di iniziare:
+Per l'autenticazione JWT, prepara la tua chiave pubblica o il tuo certificato.
 
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.
@@ -95,7 +98,7 @@ Se si desidera utilizzare l'autenticazione JWT, è necessario avere a disposizio
 . Seleziona *Aggiungi un membro*.
 . Per *Tipo di membro*, seleziona *Account di servizio*.
 . Inserisci un nome per l'account di servizio.
-. Se desideri utilizzare l'autenticazione JWT, seleziona *Usa autenticazione JWT con chiave privata* e carica la tua chiave RSA pubblica o il certificato.  Salta questo passaggio se vuoi utilizzare un ID client e un segreto.
+. Per utilizzare l'autenticazione JWT, seleziona *Usa autenticazione JWT con chiave privata* e carica la tua chiave RSA pubblica o il certificato. Ignora se utilizzi ID client e segreto.
 +
 Il tuo certificato X.509. Deve essere in formato PEM, CRT o CER.
 
@@ -113,84 +116,58 @@ Notare quanto segue:
 ** È possibile assegnare il ruolo di *Amministratore organizzazione* solo a livello di organizzazione.
 
 
-. Seleziona una *Categoria*, quindi seleziona un *Ruolo* che fornisca al membro le autorizzazioni per le risorse associate all'organizzazione, alla cartella o al progetto selezionato.
+. Seleziona una *Categoria*, quindi seleziona un *Ruolo* che conceda al membro le autorizzazioni per le risorse nell'organizzazione, nella cartella o nel progetto selezionato.
 +
 link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] .
 
-. Facoltativo: seleziona un ruolo o un progetto aggiuntivo.  Se desideri fornire l'accesso a cartelle o progetti aggiuntivi all'interno della tua organizzazione o concedere all'utente ruoli aggiuntivi nell'area selezionata, seleziona *Aggiungi ruolo*, specifica un'altra cartella o progetto oppure una categoria di ruolo diversa, quindi scegli un ruolo.
-. Se non hai scelto di utilizzare l'autenticazione JWT, scarica o copia l'ID client e il segreto client.  + La console mostra il segreto del client solo una volta.  Copialo in modo sicuro: potrai ricrearlo in seguito, se necessario.
-. Se hai scelto l'autenticazione JWT, scarica o copia l'ID client e il pubblico JWT.  Queste informazioni vengono mostrate una sola volta e non possono essere recuperate in seguito.
+. Per consentire l'accesso a più cartelle, progetti o ruoli, seleziona *Aggiungi ruolo*, scegli la cartella, il progetto o la categoria di ruolo e seleziona un ruolo.
+. Se non hai scelto di utilizzare l'autenticazione JWT, scarica o copia l'ID client e il segreto client.
++
+La console mostra il segreto del client solo una volta. Copialo in modo sicuro: potrai ricrearlo in seguito se lo perdi.
+
+. Se hai scelto l'autenticazione JWT, scarica o copia l'ID client e il pubblico JWT. La Console visualizza queste informazioni una sola volta e non consente di recuperarle in seguito.
 . Selezionare *Chiudi*.
 
 
 
 
-== Visualizza i membri dell'organizzazione
+== Aggiungi un gruppo federato alla tua organizzazione
 
-Per capire quali risorse e autorizzazioni sono disponibili per un membro, puoi visualizzare i ruoli assegnati al membro ai diversi livelli della gerarchia delle risorse della tua organizzazione.link:task-iam-manage-roles.html["Scopri come utilizzare i ruoli per controllare l'accesso alle risorse della Console."^]
+Puoi aggiungere un gruppo federato dal tuo provider di identità (IdP) alla tua organizzazione. I membri del gruppo federato ereditano i ruoli assegnati al gruppo nella Console.
 
-È possibile visualizzare sia gli account utente che gli account di servizio dalla pagina *Membri*.
-
-
-NOTE: È anche possibile visualizzare tutti i membri associati a una cartella o a un progetto specifico. link:task-iam-manage-folders-projects.html#view-associated-resources-members["Saperne di più"] .
+.Prima di iniziare:
+Prima di aggiungere un gruppo federato, assicurati di aver impostato quanto segue: * Devi aver già configurato la federazione tra il tuo IdP e la Console. link:concept-federation.html["Scopri come impostare una federazione."] * Il gruppo deve già esistere nel tuo IdP. * Devi conoscere il nome esatto del gruppo nel tuo IdP. * Gli utenti appartenenti al gruppo devono essersi già registrati alla NetApp Console e aver ricevuto un ruolo esplicito nella Console.
 
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.
 . Seleziona *Membri*.
+. Seleziona *Aggiungi un membro*.
+. Per *Tipo di membro*, seleziona *Gruppo federato*.
+. Seleziona la federazione di cui il gruppo è membro
+. Per *Nome gruppo*, inserisci il nome esatto del gruppo nel tuo IdP.
+. Utilizzare la sezione *Seleziona un'organizzazione, una cartella o un progetto* per scegliere il livello della gerarchia delle risorse per il quale il membro deve disporre delle autorizzazioni.
 +
-Nella tabella *Membri* sono elencati i membri della tua organizzazione.
+Notare quanto segue:
 
-. Dalla pagina *Membri*, vai a un membro nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Visualizza dettagli*.
-
-
-
-
-== Rimuovi un membro dalla tua organizzazione
-
-Potrebbe essere necessario rimuovere un membro dalla tua organizzazione, ad esempio se lascia l'azienda.
-
-Quando si rimuove un membro, il sistema revoca le sue autorizzazioni ma conserva i suoi account Console e NetApp Support Site.
-
-.Passi
-. Dalla pagina *Membri*, vai a un membro nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] quindi seleziona *Elimina utente*.
-. Conferma che desideri rimuovere il membro dalla tua organizzazione.
-
-
-
-
-== Ricreare le credenziali per un account di servizio
-
-Crea nuove credenziali se le perdi o devi aggiornarle.
-
-Quando si ricreano le credenziali, si eliminano le credenziali esistenti per l'account di servizio e ne vengono create di nuove. Non è possibile utilizzare le credenziali precedenti.
-
-.Passi
-. Selezionare *Amministrazione > Identità e accesso*.
-. Seleziona *Membri*.
-. Nella tabella *Membri*, vai a un account di servizio, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Ricrea segreti*.
-. Seleziona *Ricrea*.
-. Scarica o copia l'ID client e il segreto client. + La console visualizza il segreto del client solo una volta. Copialo o scaricalo e conservalo in modo sicuro.
-
-
-
-
-== Gestire l'autenticazione a più fattori (MFA) di un utente
-
-Se un utente perde l'accesso al proprio dispositivo MFA, è possibile rimuovere o disabilitare la configurazione MFA.
-
-Gli utenti devono configurare nuovamente l'MFA quando effettuano l'accesso dopo la rimozione. Se l'utente ha perso l'accesso al proprio dispositivo MFA solo temporaneamente, può utilizzare il codice di ripristino salvato durante la configurazione di MFA per effettuare l'accesso.
-
-Se non hanno il codice di ripristino, disattivare temporaneamente l'MFA per consentire l'accesso. Quando si disattiva l'MFA per un utente, questa viene disattivata solo per otto ore e poi riattivata automaticamente. All'utente è consentito un solo accesso durante tale periodo senza MFA. Dopo otto ore, l'utente deve utilizzare MFA per effettuare l'accesso.
-
-
-NOTE: Per gestire l'autenticazione a più fattori di un utente, è necessario disporre di un indirizzo email nello stesso dominio dell'utente interessato.
-
-.Passi
-. Selezionare *Amministrazione > Identità e accesso*.
-. Seleziona *Membri*.
 +
-Nella tabella *Membri* sono elencati i membri della tua organizzazione.
+** Puoi selezionare solo le cartelle e i progetti per i quali disponi delle autorizzazioni.
+** Selezionando un'organizzazione o una cartella, al membro vengono concesse autorizzazioni su tutti i suoi contenuti.
+** È possibile assegnare il ruolo di *Amministratore organizzazione* solo a livello di organizzazione.
 
-. Dalla pagina *Membri*, vai a un membro nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e quindi seleziona *Gestisci autenticazione a più fattori*.
-. Scegliere se rimuovere o disabilitare la configurazione MFA dell'utente.
+
+. Seleziona una *Categoria*, quindi seleziona un *Ruolo* che conceda al membro le autorizzazioni per le risorse nell'organizzazione, nella cartella o nel progetto selezionato.
++
+link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] .
+
+. Per consentire l'accesso a più cartelle, progetti o ruoli, seleziona *Aggiungi ruolo*, scegli la cartella, il progetto o la categoria di ruolo e seleziona un ruolo.
+
+
+
+
+== Informazioni correlate
+
+* link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e degli accessi nella NetApp Console"]
+* link:task-iam-get-started.html["Inizia con identità e accesso"]
+* link:reference-iam-predefined-roles.html["Ruoli di accesso NetApp Console"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Scopri di più sull'API per l'identità e l'accesso"^]
 

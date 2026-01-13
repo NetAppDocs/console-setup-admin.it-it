@@ -34,8 +34,8 @@ summary: È possibile assegnare agli utenti il ruolo di analista del supporto op
 | Registrati per ricevere supporto e invia casi tramite la Console | SÌ 
 
 
-| SÌ | Visualizza la pagina Audit e le notifiche 
+| Visualizza la pagina Audit e le notifiche | SÌ 
 
 
-| SÌ | Visualizza, scarica e configura gli avvisi 
+| Visualizza, scarica e configura gli avvisi | SÌ 
 |===

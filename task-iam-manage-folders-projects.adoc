@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-manage-folders-projects.html 
 keywords: folders, projects, resource hierarchy, create folders, create projects, iam, identity and access management, project id 
-summary: 'all"interno della NetApp Console, l"utilizzo della gestione delle identità e degli accessi consente di rappresentare una gerarchia completa delle risorse utilizzando cartelle e progetti.' 
+summary: 'Aggiungi cartelle e progetti adatti alla struttura della tua attività. Dopo aver creato cartelle e progetti, puoi associarvi risorse e gestire l"accesso dei membri a tali progetti.' 
 ---
-= Organizza le risorse NetApp Console con cartelle e progetti
+= Aggiungi cartelle e progetti alla tua organizzazione NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,15 +14,71 @@ summary: 'all"interno della NetApp Console, l"utilizzo della gestione delle iden
 
 
 [role="lead"]
-All'interno della NetApp Console puoi organizzare le tue risorse NetApp utilizzando progetti e cartelle.  Un _progetto_ rappresenta un'area di lavoro nella Console a cui i membri dell'organizzazione accedono per gestire le _risorse_ (ad esempio, un sistema Cloud Volumes ONTAP ).  Una _cartella_ raggruppa insieme progetti correlati.  Dopo aver organizzato le risorse in cartelle e progetti, puoi concedere un accesso granulare alle risorse fornendo ai membri dell'organizzazione autorizzazioni per cartelle e progetti specifici.
+Aggiungi cartelle e progetti adatti alla struttura della tua attività. Dopo aver creato cartelle e progetti, puoi associarvi risorse e gestire l'accesso dei membri a tali progetti.
+
+La Console crea automaticamente un progetto per te quando crei una nuova organizzazione. La maggior parte delle organizzazioni ha bisogno di più di un progetto e di cartelle per tenere tutto organizzato. link:concept-identity-and-access-management.html["Scopri di più sulla gerarchia delle risorse nella NetApp Console"].
+
+
+
+== Utilizzo di cartelle e progetti per organizzare le risorse
+
+Nella NetApp Console, un'organizzazione contiene cartelle e progetti che ti aiutano a organizzare le tue risorse. Le cartelle ti aiutano a raggruppare progetti correlati e i progetti ti aiutano a gestire le risorse e l'accesso dei membri.
+
+
+
+=== Cartelle
+
+Le cartelle ti aiutano a organizzare i progetti correlati. È possibile creare cartelle nidificate per rappresentare diversi livelli della struttura della propria organizzazione. Ad esempio, potresti creare una cartella di primo livello per ogni unità aziendale e quindi creare sottocartelle per i diversi team all'interno di tale unità aziendale. Quindi si creano progetti all'interno delle cartelle.
+
+Le cartelle consentono inoltre di gestire l'accesso dei membri in modo più efficiente utilizzando l'ereditarietà dei ruoli. Quando si assegnano ruoli ai membri a livello di cartella, questi ereditano le autorizzazioni per tutti i progetti e le cartelle figlio.
+
+
+NOTE: Le cartelle sono uno strumento organizzativo e non sono visibili ai membri che non dispongono di autorizzazioni IAM, come i ruoli di amministratore dell'organizzazione, amministratore di cartelle o progetti o super amministratore. I membri accedono ai progetti, non alle cartelle.
+
+Gli amministratori dell'organizzazione possono delegare le responsabilità amministrative creando cartelle. Dopo aver creato una cartella, un amministratore dell'organizzazione può assegnare a un membro i ruoli di amministratore della cartella o del progetto per cartelle specifiche. Questi membri possono quindi gestire tutti i progetti all'interno di quella cartella senza avere accesso all'intera organizzazione.
+
+Le cartelle possono avere altre cartelle o progetti come elementi secondari, ma non possono avere risorse direttamente associate. Le risorse devono essere associate a un progetto.
+
+[[associate-resource-folder]]
+[NOTE]
+====
+.Quando associare una risorsa a una cartella
+Un _amministratore dell'organizzazione_ può associare una risorsa a una cartella in modo che un _amministratore della cartella o del progetto_ possa collegarla ai progetti appropriati nella cartella.
+
+Ad esempio, supponiamo di avere una cartella che contiene due progetti:
+
+image:diagram-iam-resource-association-folder-1.png["Un diagramma che mostra una cartella e due progetti che risiedono nella cartella: progetto A e progetto B."]
+
+L'_amministratore dell'organizzazione_ può associare una risorsa alla cartella:
+
+image:diagram-iam-resource-association-folder-2.png["Un diagramma che mostra una cartella con una risorsa associata alla cartella. Due progetti che risiedono nella cartella: progetto A e progetto B."]
+
+L'associazione di una risorsa a una cartella non la rende accessibile a tutti i progetti; solo l'amministratore della cartella o del progetto può vederla.  L'amministratore della cartella o del progetto decide quali progetti possono accedervi e associa la risorsa ai progetti appropriati.
+
+In questo esempio, l'amministratore associa la risorsa al Progetto A:
+
+image:diagram-iam-resource-association-folder-3.png["Un diagramma che mostra una cartella con due progetti che risiedono al suo interno: il progetto A e il progetto B. Una risorsa associata al progetto A."]
+
+I membri che dispongono delle autorizzazioni per il progetto A possono ora accedere alla risorsa.
+
+====
+
+
+=== Progetti
+
+Associare le risorse ai progetti per consentire ai membri di gestirli. Per la gestione e l'accesso degli utenti, le risorse devono essere associate a un progetto.
+
+Un'organizzazione può avere uno o più progetti. Un progetto può trovarsi direttamente sotto l'organizzazione o all'interno di una cartella. Se un agente viene utilizzato per scoprire risorse all'interno di un progetto, è necessario associare l'agente anche a quel progetto.
+
+Gli utenti possono navigare tra i progetti assegnati nella pagina *Sistemi* per gestire le risorse associate a ciascun progetto.
 
 
 
 == Aggiungi una cartella o un progetto
 
-Quando crei la tua organizzazione, questa include un singolo progetto. Aggiungi progetti per gestire risorse e cartelle per raggruppare progetti correlati.
+Aggiungi progetti per gestire risorse e cartelle per raggruppare progetti correlati. Quando si crea una nuova organizzazione, la Console include un progetto.
 
-Puoi creare fino a sette livelli di cartelle e progetti nella struttura delle risorse della tua organizzazione.  Crea cartelle all'interno di altre cartelle per creare una struttura nidificata per la tua organizzazione.
+Puoi creare fino a sette livelli di cartelle e progetti nella struttura delle risorse della tua organizzazione. Crea cartelle nidificate per organizzare le tue risorse in base alle tue esigenze.
 
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.
@@ -31,18 +87,16 @@ Puoi creare fino a sette livelli di cartelle e progetti nella struttura delle ri
 . Selezionare *Cartella* o *Progetto*.
 . Inserisci i dettagli della cartella o del progetto:
 +
-** *Nome e posizione*: inserisci un nome e scegli una posizione nella gerarchia per la cartella o il progetto. Posiziona una cartella o un progetto sotto l'organizzazione o all'interno di un'altra cartella.
-** *Risorse*: seleziona le risorse che desideri associare a questa cartella o progetto.
-+
-È possibile selezionare le risorse associate alla cartella padre o al progetto.
+** *Nome e posizione*: inserisci un nome e scegli una posizione per la cartella o il progetto. È possibile posizionare cartelle o progetti sotto l'organizzazione o all'interno di un'altra cartella.
+** *Risorse*: seleziona le risorse che desideri associare a questa cartella o progetto. Se non hai ancora aggiunto sistemi di archiviazione alla Console, puoi eseguire questo passaggio in un secondo momento.
+
 
 +
-link:concept-identity-and-access-management.html#associate-resource-folder["Scopri quando associare una risorsa a una cartella"] .
 
-** *Accesso*: visualizza i membri che avranno accesso alla cartella o al progetto in base alle autorizzazioni esistenti già definite nella gerarchia delle risorse.
+NOTE: I membri non possono accedere alle risorse in una cartella finché tali risorse non vengono assegnate a un progetto. Utilizzare le cartelle per conservare temporaneamente le risorse finché non si creano i progetti necessari. Ciò può aiutare l'amministratore dell'organizzazione a delegare l'assegnazione delle risorse a un amministratore di cartelle o di progetti, che poi assegna le risorse ai progetti all'interno della cartella.
+
 +
-Seleziona *Aggiungi un membro* per assegnare l'accesso e un ruolo.
-
+** *Accesso*: seleziona *Aggiungi un membro* per assegnare l'accesso e un ruolo. Puoi aggiungere o rimuovere membri dal progetto o dalla cartella in qualsiasi momento.
 +
 link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] .
 
@@ -55,7 +109,7 @@ link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] 
 
 == Rinomina una cartella o un progetto
 
-Se necessario, puoi modificare il nome delle tue cartelle e dei tuoi progetti.
+Rinominare una cartella o un progetto in base alle proprie esigenze. La ridenominazione non influisce sulle risorse associate o sull'accesso dei membri.
 
 .Passi
 . Dalla pagina *Organizzazione*, vai a un progetto o a una cartella nella tabella, selezionaimage:icon-action.png["Un'icona con tre punti"] e poi seleziona *Modifica cartella* o *Modifica progetto*.
@@ -66,7 +120,7 @@ Se necessario, puoi modificare il nome delle tue cartelle e dei tuoi progetti.
 
 == Elimina una cartella o un progetto
 
-Elimina le cartelle e i progetti di cui non hai più bisogno.
+Elimina le cartelle e i progetti di cui non hai più bisogno, ad esempio dopo la ristrutturazione del team o il completamento del progetto.
 
 Prima di eliminare una cartella o un progetto, assicurati che non contenga risorse. <<modify-resources,Scopri come rimuovere le risorse>>.
 
@@ -100,10 +154,7 @@ image:screenshot-iam-allocated-resources.png["Uno screenshot della pagina Modifi
 
 == Modificare le risorse associate a una cartella o a un progetto
 
-I membri con autorizzazioni per una cartella o un progetto possono accedere alle risorse associate.
-
-.Prima di iniziare
-link:concept-identity-and-access-management.html#associate-resource-folder["Scopri quando associare una risorsa a una cartella"] .
+È possibile modificare le risorse associate a una cartella o a un progetto in base alle esigenze della propria organizzazione.
 
 .Passi
 . Dalla pagina *Organizzazione*, vai a un progetto o a una cartella nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Modifica cartella* o *Modifica progetto*.
@@ -112,7 +163,7 @@ link:concept-identity-and-access-management.html#associate-resource-folder["Scop
 Nella tabella, la colonna *Stato* identifica le risorse associate alla cartella o al progetto.
 
 . Seleziona le risorse che desideri associare o dissociare.
-. A seconda delle risorse selezionate, seleziona *Associa al progetto* o *Disassocia dal progetto*.
+. In base alle risorse selezionate, seleziona *Associa al progetto* o *Disassocia dal progetto*.
 +
 image:screenshot-iam-associate-resources.png["Uno screenshot della pagina Modifica progetto che mostra l'opzione Associa risorse, disponibile dopo aver selezionato risorse che non sono attualmente associate."]
 
@@ -123,7 +174,13 @@ image:screenshot-iam-associate-resources.png["Uno screenshot della pagina Modifi
 
 == Visualizza i membri associati a una cartella o a un progetto
 
-* Selezionare *Accesso* per visualizzare i membri che hanno accesso alla cartella o al progetto.
+È possibile visualizzare i membri associati a una cartella o a un progetto dalla pagina *Organizzazione*.
+
+.Passi
+. Dalla pagina *Organizzazione*, vai a un progetto o a una cartella nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Modifica cartella* o *Modifica progetto*.
+. Nella pagina *Modifica*, seleziona *Accesso* per visualizzare l'elenco dei membri che hanno accesso alla cartella o al progetto selezionato.
++
+** Selezionare *Accesso* per visualizzare i membri che hanno accesso alla cartella o al progetto.
 +
 image:screenshot-iam-member-access.png["Uno screenshot della pagina Modifica progetto che mostra i membri che hanno accesso al progetto."]
 
@@ -131,13 +188,13 @@ image:screenshot-iam-member-access.png["Uno screenshot della pagina Modifica pro
 
 
 
+
+
 == Modificare l'accesso dei membri a una cartella o a un progetto
 
-Modificare l'accesso dei membri per controllare l'accesso alle risorse.
+Modificare l'accesso dei membri per controllare l'accesso alle risorse. Ricorda che i ruoli assegnati a livello di cartella vengono ereditati da tutti i progetti e le cartelle figlio.
 
-Non è possibile modificare l'accesso dei membri ai livelli inferiori se è ereditato da un livello gerarchico superiore.  Aggiornare le autorizzazioni dei membri al livello gerarchico superiore per modificare l'accesso.  In alternativa, puoi link:task-iam-manage-roles.html#manage-permissions["gestire i permessi dalla pagina Membri"].
-
-link:concept-identity-and-access-management.html#role-inheritance["Scopri di più sull'ereditarietà dei ruoli"] .
+Non è possibile modificare l'accesso dei membri ai livelli inferiori se è ereditato dal livello di cartella o di organizzazione. Modificare l'autorizzazione del membro al livello gerarchico superiore per modificare l'accesso In alternativa, è possibile link:task-iam-manage-roles.html#manage-permissions["gestire i permessi dalla pagina Membri"].
 
 .Passi
 . Dalla pagina *Organizzazione*, vai a un progetto o a una cartella nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Modifica cartella* o *Modifica progetto*.

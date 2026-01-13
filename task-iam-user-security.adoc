@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: task-iam-user-security.html 
+keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management 
+summary: Gestisci i membri della tua organizzazione per fornire autorizzazioni ai diversi livelli della gerarchia delle risorse della tua organizzazione. 
+---
+= Sicurezza dell'utente
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Proteggi l'accesso degli utenti alla tua organizzazione NetApp Console gestendo le impostazioni di sicurezza dei membri. È possibile reimpostare le password utente, gestire l'autenticazione a più fattori (MFA) e ricreare le credenziali dell'account di servizio.
+
+.Ruoli di accesso richiesti
+Super amministratore, amministratore dell'organizzazione o amministratore di cartelle o progetti (per le cartelle e i progetti che amministrano). Link:reference-iam-predefined-roles.html[Scopri di più sui ruoli di accesso].
+
+
+
+== Reimposta le password utente (solo utenti locali)
+
+Gli amministratori dell'organizzazione non possono reimpostare le password degli utenti locali. Possono tuttavia chiedere agli utenti di reimpostare autonomamente le proprie password.
+
+Chiedere all'utente di reimpostare la propria password dalla pagina di accesso della Console selezionando *Password dimenticata?*.
+
+
+NOTE: Questa opzione non è disponibile per gli utenti di un'organizzazione federata.
+
+
+
+== Gestire l'autenticazione a più fattori (MFA) di un utente
+
+Se un utente perde l'accesso al proprio dispositivo MFA, è possibile rimuovere o disabilitare la configurazione MFA.
+
+
+NOTE: L'autenticazione a più fattori è disponibile solo per gli utenti locali. Gli utenti federati non possono abilitare MFA.
+
+Gli utenti devono configurare nuovamente l'MFA quando effettuano l'accesso dopo la rimozione. Se l'utente perde temporaneamente l'accesso al proprio dispositivo MFA, può utilizzare il codice di ripristino salvato per effettuare l'accesso.
+
+Se non hanno il codice di ripristino, disattivare temporaneamente l'MFA per consentire l'accesso. Quando si disattiva l'MFA per un utente, questa viene disattivata solo per otto ore e poi riattivata automaticamente. All'utente è consentito un solo accesso durante tale periodo senza MFA. Dopo otto ore, l'utente deve utilizzare MFA per effettuare l'accesso.
+
+
+NOTE: Per gestire l'autenticazione a più fattori di un utente, è necessario disporre di un indirizzo email nello stesso dominio dell'utente interessato.
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Seleziona *Membri*.
++
+Nella tabella *Membri* sono elencati i membri della tua organizzazione.
+
+. Dalla pagina *Membri*, vai a un membro nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e quindi seleziona *Gestisci autenticazione a più fattori*.
+. Scegliere se rimuovere o disabilitare la configurazione MFA dell'utente.
+
+
+
+
+== Ricreare le credenziali per un account di servizio
+
+Puoi creare nuove credenziali per un servizio se le perdi o devi aggiornarle.
+
+La creazione di nuove credenziali elimina quelle vecchie. Non è possibile utilizzare le vecchie credenziali.
+
+.Passi
+. Selezionare *Amministrazione > Identità e accesso*.
+. Seleziona *Membri*.
+. Nella tabella *Membri*, vai a un account di servizio, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Ricrea segreti*.
+. Seleziona *Ricrea*.
+. Scarica o copia l'ID client e il segreto client.
++
+La console mostra il segreto del client solo una volta. Assicuratevi di copiarlo o scaricarlo e conservarlo in modo sicuro.
+
+

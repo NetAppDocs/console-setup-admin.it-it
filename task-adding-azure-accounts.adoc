@@ -83,7 +83,7 @@ La console necessita delle autorizzazioni per eseguire azioni in Azure.  È poss
 .Informazioni su questo compito
 L'immagine seguente illustra come la console ottiene le autorizzazioni per eseguire operazioni in Azure.  Un oggetto entità servizio, associato a una o più sottoscrizioni di Azure, rappresenta la console nell'ID Microsoft Entra e viene assegnato a un ruolo personalizzato che consente le autorizzazioni richieste.
 
-image:diagram_azure_authentication.png["Immagine concettuale che mostra la Console mentre ottiene l'autenticazione e l'autorizzazione dall'ID Microsoft Entra prima di poter effettuare una chiamata API.  In Active Directory, il ruolo Console definisce le autorizzazioni.  È collegato a una o più sottoscrizioni di Azure e a un oggetto principale del servizio che rappresenta l'applicazione Cloud Manager."]
+image:diagram_azure_authentication.png["Immagine concettuale che mostra la Console mentre ottiene l'autenticazione e l'autorizzazione dall'ID Microsoft Entra prima di poter effettuare una chiamata API. Il ruolo Console definisce le autorizzazioni in Active Directory. È collegato a una o più sottoscrizioni di Azure e a un oggetto entità servizio che rappresenta l'applicazione Console."]
 
 .Passi
 . <<Creare un'applicazione Microsoft Entra>> .

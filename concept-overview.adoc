@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-overview.html 
 keywords: overview, concepts, features, use case, cloud manager, bluexp, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works 
-summary: NetApp Console offre una gestione centralizzata dei servizi di archiviazione e dati NetApp in ambienti on-premise e cloud su scala aziendale. 
+summary: La console unifica la gestione e la protezione dello storage su cloud multi-ibridi con servizi dati integrati per proteggere e ottimizzare i dati. 
 ---
 = Scopri di più su NetApp Console
 :hardbreaks:
@@ -14,25 +14,19 @@ summary: NetApp Console offre una gestione centralizzata dei servizi di archivia
 
 
 [role="lead"]
-NetApp Console offre una gestione centralizzata dello storage NetApp e NetApp Data Services in ambienti on-premise e cloud di livello aziendale, offrendo informazioni in tempo reale, flussi di lavoro più rapidi e un'amministrazione semplificata, il tutto in modo altamente sicuro e conforme.
-
-È una piattaforma disponibile come servizio (SaaS) che fornisce gestione dell'archiviazione, mobilità dei dati, protezione dei dati, analisi e controllo dei dati.  Le funzionalità di gestione sono fornite tramite una console basata sul Web e API.
-
-
-
-== Caratteristiche
-
 La console unifica la gestione e la protezione dello storage su cloud multi-ibridi con servizi dati integrati per proteggere e ottimizzare i dati.
 
+È disponibile come piattaforma di servizi (SaaS) o come opzione self-hosted che puoi installare nel tuo cloud sovrano. Fornisce gestione dell'archiviazione, mobilità dei dati, protezione dei dati, analisi e controllo dei dati. Le funzionalità di gestione sono fornite tramite una console basata sul Web e API.
 
 
-=== Gestione centralizzata dell'archiviazione
+
+== Gestione centralizzata dell'archiviazione
 
 Scopri, distribuisci e gestisci l'archiviazione cloud e on-premise con la Console.
 
 
 
-==== Archiviazione cloud e on-premise supportata
+=== Archiviazione cloud e on-premise supportata
 
 Dalla Console è possibile gestire i seguenti tipi di archiviazione:
 
@@ -68,15 +62,15 @@ Archiviazione di oggetti nel cloud::
 
 
 
-==== Gestione dello storage
+=== Gestione dello storage
 
 All'interno della Console, i _sistemi_ rappresentano lo storage scoperto o distribuito.  È possibile selezionare un _sistema_ per integrarlo con i servizi dati NetApp o per gestire l'archiviazione, ad esempio aggiungendo volumi.
 
-image:screenshot-canvas.png["Uno screenshot della Console che mostra diversi sistemi, uno dei quali è selezionato e mostra la possibilità di abilitare i servizi dati NetApp o di selezionare *Inserisci sistema* per gestire l'archiviazione."]
+image:screenshot-canvas.png["Uno screenshot della Console che mostra diversi sistemi. Uno è selezionato e mostra la possibilità di abilitare i servizi dati NetApp o di selezionare *Entra nel sistema* per gestire l'archiviazione."]
 
 
 
-=== Servizi dati integrati e gestione dell'archiviazione per proteggere, proteggere e ottimizzare i dati
+== Servizi dati integrati e gestione dell'archiviazione per proteggere, proteggere e ottimizzare i dati
 
 La Console fornisce servizi dati per proteggere e mantenere la disponibilità dell'archiviazione.
 
@@ -147,11 +141,11 @@ link:concept-agents.html["Scopri di più sugli agenti della console"] .
 
 
 
-=== Modalità di distribuzione
+=== Distribuzione SaaS rispetto a cloud sovrano
 
-NetApp offre due modalità di distribuzione per NetApp Console: la _modalità standard_ utilizza un livello di software come servizio (SaaS) per la piena funzionalità, mentre la _modalità limitata_ limita la connettività in uscita.
+Puoi iniziare a utilizzare NetApp Console sottoscrivendo l'offerta SaaS o distribuendola nel tuo cloud sovrano. Quando distribuisci NetApp Console in un cloud sovrano, NetApp limita la connettività in uscita per soddisfare i requisiti di sicurezza e conformità della tua organizzazione. Non tutte le funzionalità e i servizi sono disponibili quando la Console viene distribuita in un cloud sovrano.
 
-NetApp continua a offrire BlueXP per i siti che non necessitano di connettività in uscita.  BlueXP è disponibile solo in modalità privata.link:task-quick-start-private-mode.html["Scopri di più su BlueXP (modalità privata) per i siti senza connettività Internet."]
+NetApp continua a offrire BlueXP per i siti che non desiderano connettività in uscita. BlueXP può essere installato sulla tua rete senza connettività in uscita. link:task-quick-start-private-mode.html["Scopri di più su BlueXP (modalità privata) per i siti senza connettività Internet."]
 
 link:concept-modes.html["Scopri di più sulle modalità di distribuzione"] .
 

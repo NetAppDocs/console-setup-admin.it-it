@@ -97,7 +97,7 @@ L'elenco *Membro* mostra i membri che l'organizzazione partner ha aggiunto alla 
 . È possibile modificare un ruolo esistente per un membro o rimuovere un ruolo.
 +
 .. Per modificare il ruolo di un membro, seleziona *Modifica* accanto al ruolo che desideri modificare.  È possibile modificare un ruolo solo in un ruolo all'interno della stessa categoria di ruoli.  Ad esempio, è possibile passare da un ruolo di servizio dati a un altro.  Conferma la modifica.
-.. Per annullare l'assegnazione del ruolo a un membro, selezionareimage:icon-delete.png["Un'icona che assomiglia a un cestino della spazzatura"] accanto al ruolo per annullare l'assegnazione del ruolo corrispondente al membro.  Ti verrà chiesto di confermare la rimozione.
+.. Per annullare l'assegnazione del ruolo a un membro, selezionare image:icon-delete.png["Un'icona che assomiglia a un cestino della spazzatura"] accanto al ruolo per rimuovere il rispettivo ruolo dal membro. Ti verrà chiesto di confermare la rimozione.
 
 
 

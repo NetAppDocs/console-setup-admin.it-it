@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: concept-modes.html 
+permalink: concept-console.html 
 keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
-summary: 'NetApp Console offre diverse _modalità di distribuzione_ che ti consentono di soddisfare i requisiti aziendali e di sicurezza. La _modalità standard_ sfrutta un livello di software come servizio (SaaS) per fornire funzionalità complete, mentre la _modalità limitata_ e la _modalità privata_ sono disponibili per le organizzazioni che hanno restrizioni di connettività.' 
+summary: 'NetApp Console offre un"esperienza SaaS per l"accesso completo alle funzionalità o un"opzione self-hosted per le organizzazioni con limitazioni di connettività.' 
 ---
-= Scopri di più sulle modalità di distribuzione NetApp Console
+= Scopri di più su NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,13 @@ summary: 'NetApp Console offre diverse _modalità di distribuzione_ che ti conse
 
 
 [role="lead"]
-NetApp Console offre diverse _modalità di distribuzione_ che ti consentono di soddisfare i requisiti aziendali e di sicurezza.
+NetApp Console offre un'esperienza SaaS per l'accesso completo alle funzionalità o un'opzione self-hosted per le organizzazioni con limitazioni di connettività.
 
-* La _modalità standard_ sfrutta un livello di software come servizio (SaaS) per fornire funzionalità complete.  Gli utenti accedono alla Console tramite un'interfaccia ospitata basata sul Web
-* La _Modalità limitata_ è disponibile per le organizzazioni con restrizioni di connettività che desiderano installare NetApp Console nel proprio cloud pubblico.  Gli utenti accedono alla Console tramite un'interfaccia basata sul Web ospitata su un agente Console nel loro ambiente cloud.
-+
-NetApp Console limita il traffico, le comunicazioni e i dati in modalità limitata, ed è necessario assicurarsi che l'ambiente (in sede e nel cloud) sia conforme alle normative richieste.
+Puoi utilizzare NetApp Console in due modi: come esperienza SaaS completamente gestita o come soluzione self-hosted nel tuo ambiente cloud. Con l'opzione SaaS, accedi alla Console tramite console.netapp.com, mentre NetApp gestisce tutta l'infrastruttura, l'autenticazione e gli aggiornamenti. Puoi accedere a tutte le funzionalità direttamente dal tuo browser web. Se scegli l'opzione self-hosted, installi un agente Console nel tuo ambiente AWS, Azure o Google Cloud. L'interfaccia viene eseguita localmente e l'agente mantiene una connettività in uscita limitata a NetApp per attività essenziali come l'autenticazione e gli aggiornamenti.
 
+Scegli l'esperienza SaaS se la tua organizzazione dispone di connettività Internet standard. Potrai beneficiare della configurazione più semplice, degli aggiornamenti automatici e dell'accesso completo a tutti i sistemi di storage NetApp , ai servizi dati e alle funzionalità avanzate. È possibile aggiungere agenti direttamente dalla Console e NetApp si occuperà di tutta la manutenzione.
 
+Seleziona l'opzione self-hosted se la tua organizzazione richiede controlli rigorosi di connettività, sicurezza o conformità, come nel caso della pubblica amministrazione o di settori regolamentati. Ottieni maggiore controllo e isolamento della rete, ma puoi gestire solo determinati sistemi di storage NetApp e utilizzare servizi dati limitati, con alcune funzionalità non disponibili. È possibile installare manualmente un agente Console e accedere alla Console direttamente dall'interfaccia dell'agente locale. Installa il tuo agente tramite il tuo marketplace cloud o tramite installazione manuale: l'agente comunicherà solo in uscita con NetApp, garantendo l'assenza di connessioni Internet in entrata.
 
 
 

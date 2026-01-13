@@ -22,11 +22,11 @@ Se selezioni l'organizzazione o una cartella, il membro avrà autorizzazioni per
 . È possibile modificare un ruolo esistente per un membro o rimuovere un ruolo.
 +
 .. Per modificare il ruolo di un membro, seleziona *Modifica* accanto al ruolo che desideri modificare.  È possibile modificare un ruolo solo in un ruolo all'interno della stessa categoria di ruoli.  Ad esempio, è possibile passare da un ruolo di servizio dati a un altro.  Conferma la modifica.
-.. Per annullare l'assegnazione del ruolo a un membro, selezionareimage:icon-delete.png["Un'icona che assomiglia a un cestino della spazzatura"] accanto al ruolo per annullare l'assegnazione del ruolo corrispondente al membro.  Ti verrà chiesto di confermare la rimozione.
+.. Per annullare l'assegnazione del ruolo a un membro, selezionare image:icon-delete.png["Un'icona che assomiglia a un cestino della spazzatura"] accanto al ruolo per rimuovere il rispettivo ruolo dal membro. Ti verrà chiesto di confermare la rimozione.
 
 
 
 
-. Dalla pagina *Membri*, vai a un membro nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Visualizza dettagli*.
+. Dalla pagina *Membri*, vai a un membro nella tabella, seleziona image:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Visualizza dettagli*.
 . Nella tabella, espandi la riga corrispondente all'organizzazione, alla cartella o al progetto in cui desideri visualizzare il ruolo assegnato al membro e seleziona *Visualizza* nella colonna *Ruolo*.
 

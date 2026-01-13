@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-manage-resources.html 
 keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management 
-summary: Gestisci la gerarchia delle risorse della tua organizzazione associando le risorse a progetti e cartelle specifici. 
+summary: 'Controlla l"accesso degli utenti alle risorse aggiungendoli a progetti e cartelle nell"organizzazione NetApp Console . Concedere l"accesso agli utenti a livello di progetto.' 
 ---
-= Gestisci la gerarchia delle risorse nella tua organizzazione NetApp Console
+= Aggiungere risorse a cartelle e progetti nella NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,22 @@ summary: Gestisci la gerarchia delle risorse della tua organizzazione associando
 
 
 [role="lead"]
-Quando si utilizza l'opzione Associa un membro alla propria organizzazione, si forniscono autorizzazioni a livello di organizzazione, cartella o progetto.  Per garantire che tali membri abbiano le autorizzazioni necessarie per accedere alle risorse corrette, è necessario gestire la gerarchia delle risorse della propria organizzazione associando le risorse a progetti e cartelle specifici.  Una _risorsa_ è un sistema di archiviazione o un agente della Console che la Console già gestisce o di cui è a conoscenza.
+Controlla l'accesso degli utenti alle risorse aggiungendoli a progetti e cartelle nell'organizzazione NetApp Console . Concedere l'accesso agli utenti a livello di progetto.
+
+Una _risorsa_ è un'entità di cui la Console è a conoscenza, ad esempio una risorsa di archiviazione, un agente della Console o un carico di lavoro di backup e ripristino.
+
+È possibile visualizzare e gestire le risorse dalla pagina *Risorse* nella Console.
+
+
+
+== Tipi di risorse della console
+
+È possibile associare diversi tipi di risorse ai progetti nell'organizzazione NetApp Console :
+
+Risorse di archiviazione:: Le risorse di archiviazione sono il tipo di risorsa più comune nella tua organizzazione e rappresentano sia sistemi di archiviazione locali che cloud. Quando aggiungi un sistema di archiviazione alla Console, puoi aggiungerlo a una cartella o a un progetto. Fino a quel momento, la Console lo contrassegna come non scoperto e non lo visualizza nella pagina *Risorse*.
+Agenti della console:: Se hai utilizzato un agente Console per individuare i sistemi di archiviazione, aggiungi l'agente alla stessa cartella o progetto. Ciò consente agli utenti di eseguire funzioni abilitate dall'agente, come servizi dati o gestione dell'archiviazione nativa della console. È possibile aggiungere agenti a cartelle o progetti dalla pagina *Agenti* nella Console. link:task-iam-associate-agents.html["Scopri come associare un agente Console a una cartella o a un progetto"].
+Abbonamenti Keystone:: Se nella tua organizzazione sono presenti abbonamenti Keystone , puoi visualizzarli nella pagina *Risorse*. È possibile associare gli abbonamenti Keystone a cartelle o progetti per consentire l'accesso ai membri che dispongono delle autorizzazioni per tali cartelle o progetti.
+
 
 
 
@@ -23,7 +38,7 @@ Quando si utilizza l'opzione Associa un membro alla propria organizzazione, si f
 Puoi visualizzare sia le risorse scoperte che quelle non scoperte associate alla tua organizzazione. Il sistema trova le risorse di archiviazione e le contrassegna come non rilevate finché non le aggiungi alla Console.
 
 
-NOTE: La pagina Risorse esclude le risorse Amazon FSx for NetApp ONTAP perché gli utenti non possono associarle a un ruolo.  Visualizzali nella pagina *Sistemi* o da Carichi di lavoro.
+NOTE: La console esclude le risorse Amazon FSx for NetApp ONTAP dalla pagina Risorse perché gli utenti non possono associarle a un ruolo. È possibile visualizzare queste risorse nella pagina *Sistemi* o da Carichi di lavoro.
 
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.
@@ -44,10 +59,7 @@ NOTE: La pagina Risorse esclude le risorse Amazon FSx for NetApp ONTAP perché g
 
 == Associare una risorsa a cartelle e progetti
 
-Associa una risorsa a una cartella o a un progetto per renderla disponibile.
-
-.Prima di iniziare
-Dovresti capire come funziona l'associazione delle risorse. link:concept-identity-and-access-management.html#resources["Scopri di più sulle risorse, incluso quando associare una risorsa a una cartella"] .
+Associa una risorsa a una cartella o a un progetto per renderla disponibile ai membri che dispongono delle autorizzazioni per quella cartella o quel progetto.
 
 .Passi
 . Dalla pagina *Risorse*, vai a una risorsa nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e quindi seleziona *Associa a cartelle o progetti*.
@@ -59,7 +71,7 @@ Tieni presente che puoi selezionare solo le cartelle e i progetti per i quali di
 . Seleziona *Risorse associate*.
 +
 ** Se hai associato la risorsa a dei progetti, i membri che dispongono delle autorizzazioni per tali progetti ora possono accedere alla risorsa dalla Console.
-** Se hai associato la risorsa a una cartella, un _amministratore di cartella o di progetto_ può ora accedere alla risorsa e associarla a un progetto all'interno della cartella. link:concept-identity-and-access-management.html#resources["Scopri come associare una risorsa a una cartella"] .
+** Se hai associato la risorsa a una cartella, un _amministratore di cartella o di progetto_ può ora accedere alla risorsa e associarla a un progetto all'interno della cartella. link:task-iam-manage-folders-projects.html#associate-resource-folder["Scopri come associare una risorsa a una cartella"].
 
 
 
@@ -93,15 +105,15 @@ NOTE: Per vedere quali membri dell'organizzazione hanno accesso alla risorsa,lin
 
 == Rimuovere una risorsa da una cartella o da un progetto
 
-Per rimuovere una risorsa da una cartella o da un progetto, è necessario rimuovere l'associazione tra la cartella o il progetto e la risorsa. Quando si rimuove l'associazione, si impedisce ai membri di gestire la risorsa nella cartella o nel progetto.
+Per rimuovere una risorsa da una cartella o da un progetto, rimuovere la sua associazione. Ciò impedisce ai membri di gestire la risorsa in quella cartella o progetto.
 
 
 NOTE: Per rimuovere una risorsa rilevata dall'intera organizzazione, vai alla pagina *Sistemi* e rimuovi il sistema.
 
 .Passi
 . Dalla pagina *Risorse*, vai a una risorsa nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Visualizza dettagli*.
-. Per la cartella o il progetto per cui si desidera rimuovere la risorsa, selezionareimage:icon-delete.png["Un'icona di un bidone della spazzatura"]
-. Conferma di voler rimuovere l'associazione selezionando *Elimina*.
+. Per rimuovere una risorsa da una cartella o da un progetto, seleziona image:icon-delete.png["Un'icona di un bidone della spazzatura"] accanto alla cartella o al progetto.
+. Selezionare *Elimina* per rimuovere l'associazione.
 
 
 

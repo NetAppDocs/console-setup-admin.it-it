@@ -16,7 +16,7 @@ summary: 'Per iniziare a gestire identità e accessi in NetApp Console, personal
 [role="lead"]
 Quando ti registri alla NetApp Console, ti verrà chiesto di creare una nuova organizzazione.  L'organizzazione comprende un membro (un amministratore dell'organizzazione) e un progetto predefinito.  Per configurare la gestione delle identità e degli accessi (IAM) in base alle esigenze aziendali, è necessario personalizzare la gerarchia dell'organizzazione, aggiungere altri membri, aggiungere o scoprire risorse e associare tali risorse all'interno della gerarchia.
 
-Per amministrare l'identità e l'accesso per l'intera organizzazione, è necessario disporre delle autorizzazioni di *Amministratore dell'organizzazione*.  Se disponi delle autorizzazioni di *Amministratore cartella o progetto*, puoi amministrare solo le cartelle e i progetti per i quali disponi delle autorizzazioni.
+Per gestire l'identità e l'accesso della tua organizzazione, hai bisogno delle autorizzazioni *Org admin* o *Super admin*. Con le autorizzazioni di *Amministratore cartella o progetto*, puoi gestire solo le cartelle e i progetti a cui hai accesso.
 
 Per creare una nuova organizzazione, segui questi passaggi.  L'ordine può variare in base alle esigenze della tua organizzazione.
 
@@ -29,7 +29,7 @@ link:task-iam-manage-folders-projects.html["Scopri come organizzare le tue risor
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]Associare i membri alla tua organizzazione
 [role="quick-margin-para"]
-Collega gli account utente alla tua organizzazione e assegna le autorizzazioni.  Hai anche la possibilità di aggiungere account di servizio alla tua organizzazione.
+Dopo che gli utenti si sono registrati a NetApp Console, devi aggiungerli esplicitamente alla tua organizzazione Console. Hai anche la possibilità di aggiungere account di servizio alla tua organizzazione.
 
 [role="quick-margin-para"]
 link:task-iam-manage-members-permissions.html["Scopri come gestire i membri e i loro permessi"] .

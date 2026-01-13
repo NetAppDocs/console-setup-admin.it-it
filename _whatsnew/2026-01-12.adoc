@@ -1,0 +1,32 @@
+= Agente console 4.3.0
+:allow-uri-read: 
+
+
+
+
+=== Agente console 4.3.0
+
+La versione 4.3.0 supporta sia la modalità standard che quella limitata.
+
+Questa versione dell'agente Console include miglioramenti della sicurezza, correzioni di bug e le seguenti funzionalità:
+
+.Capacità di convalidare le connessioni di rete degli agenti della console
+Ora è possibile convalidare le connessioni di rete degli agenti Console connessi direttamente dalla NetApp Console. Questa funzionalità consente di verificare la connettività e di risolvere i problemi relativi agli agenti della console.
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["Scopri come eseguire controlli di configurazione sugli agenti della console."]
+
+
+
+=== Amministrazione NetApp Console
+
+Questa versione include quanto segue:
+
+.Supporto per la federazione quando NetApp Console è in modalità limitata
+Ora puoi abilitare la federazione per un'organizzazione NetApp Console in modalità limitata. Ciò consente agli utenti di accedere alla Console utilizzando le proprie credenziali aziendali, mantenendo al contempo i vantaggi di sicurezza della modalità con restrizioni.
+
+.Modalità di sola lettura
+È possibile impostare un'organizzazione NetApp Console in modalità di sola lettura. In modalità di sola lettura, gli utenti possono visualizzare risorse e impostazioni, ma non possono apportare modifiche. Un amministratore dell'organizzazione o un super amministratore può abilitare la modalità di sola lettura per un'organizzazione. Quando la modalità di sola lettura è abilitata, gli utenti con ruoli amministrativi devono elevare manualmente le proprie autorizzazioni per apportare le modifiche necessarie.
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-enable-read-only-mode.html["Scopri come abilitare la modalità di sola lettura per un'organizzazione Console."]
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings["Scopri come valorizzare il tuo ruolo quando la tua organizzazione è in modalità di sola lettura."]
