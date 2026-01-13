@@ -14,7 +14,7 @@ summary: Esistono diversi modi per creare un agente Console in Google Cloud.  Il
 
 
 [role="lead"]
-Esistono diversi modi per creare un agente Console in Google Cloud.  Il metodo più comune è quello diretto dalla NetApp Console .  ---
+Esistono diversi modi per creare un agente Console in Google Cloud.  Il metodo più comune è quello diretto dalla NetApp Console .
 
 Sono disponibili le seguenti opzioni di installazione:
 
