@@ -21,6 +21,11 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.h
 
 Questa versione include quanto segue:
 
+.Accesso basato sui ruoli per gruppi federati nella NetApp Console
+NetApp Console supporta l'assegnazione di ruoli a gruppi federati (ad esempio, gruppi di Active Directory), consentendo agli amministratori di automatizzare l'onboarding e l'offboarding degli utenti in base all'appartenenza al gruppo nel provider di identità (IdP) dell'organizzazione. Questa funzionalità riduce il sovraccarico amministrativo e garantisce un accesso sicuro e coerente aggiornando istantaneamente l'accesso alla Console man mano che cambiano le appartenenze al gruppo.
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#add-a-federated-group-to-your-organization["Scopri come fornire l'accesso a un gruppo federato alla tua organizzazione."]
+
 .Supporto per la federazione quando NetApp Console è in modalità limitata
 Ora puoi abilitare la federazione per un'organizzazione NetApp Console in modalità limitata. Ciò consente agli utenti di accedere alla Console utilizzando le proprie credenziali aziendali, mantenendo al contempo i vantaggi di sicurezza della modalità con restrizioni.
 
