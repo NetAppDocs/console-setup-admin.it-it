@@ -34,4 +34,4 @@ Ora puoi abilitare la federazione per un'organizzazione NetApp Console in modali
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-enable-read-only-mode.html["Scopri come abilitare la modalità di sola lettura per un'organizzazione Console."]
 
-link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings["Scopri come valorizzare il tuo ruolo quando la tua organizzazione è in modalità di sola lettura."]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings.html["Scopri come valorizzare il tuo ruolo quando la tua organizzazione è in modalità di sola lettura."]
