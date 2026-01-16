@@ -90,3 +90,21 @@ Alcuni servizi dati NetApp e Cloud Volumes ONTAP richiedono che l'agente dispong
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Endpoint per Cloud Volumes ONTAP in Azure"]
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Endpoint per Cloud Volumes ONTAP in Google Cloud"]
 
+
+
+
+=== Endpoint per carichi di lavoro
+
+L'agente della console deve essere in grado di accedere al seguente endpoint per NetApp Workloads.
+
+[cols="2*"]
+|===
+| Punti finali | Scopo 
+
+
+ a| 
+\ https://api.workloads.netapp.com
+ a| 
+La console basata sul Web contatta questo endpoint per interagire con le API di Workload Factory per gestire e utilizzare i carichi di lavoro basati su FSx for ONTAP.
+
+|===
