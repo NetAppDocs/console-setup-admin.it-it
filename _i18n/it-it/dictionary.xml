@@ -4837,7 +4837,6 @@
   <block id="70328d3965555bdfe7c71386e9e25887" category="sidebar">Installa un certificato firmato da una CA per l'accesso alla console Web</block>
   <block id="417a7f2f69f19fbcd309a4694944397e" category="sidebar">Richiedere l'uso di IMDSv2 sulle istanze EC2</block>
   <block id="e5c32965ed32649bcfd48bc8b138f3d2" category="sidebar">Disinstallare e rimuovere l'agente Console</block>
-  <block id="7c584a16cbf4210dc0a344179e274e09" category="sidebar">Configurazione predefinita</block>
   <block id="8f235a758f8b25f9b4ff4eddf53e6c5e" category="sidebar">Applica le autorizzazioni ONTAP nella NetApp Console</block>
   <block id="cbaee96b9499da2c5c6d3b23090382c6" category="sidebar">Scopri di più sulle credenziali e sulle autorizzazioni</block>
   <block id="9d812302dfdd0fdbf4faa0fe53b9ed24" category="sidebar">Scopri di più su progetti e permessi</block>
@@ -5461,8 +5460,6 @@
   <block id="79af92d05f2b214eab2c765e215beb6b" category="doc">Agente console 4.3.0</block>
   <block id="6f1b51eea64496510e6cf5a5a2d57d29" category="paragraph">La versione 4.3.0 supporta sia la modalità standard che quella limitata.</block>
   <block id="664a9e1da962d9131b0a035da50bbcc7" category="paragraph-title">Capacità di convalidare le connessioni di rete degli agenti della console</block>
-  <block id="81cc16a2354d8ec80802e2e4ac22f15a" category="paragraph">Ora è possibile convalidare le connessioni di rete degli agenti Console connessi direttamente dalla NetApp Console. Questa funzionalità consente di verificare la connettività e di risolvere i problemi relativi agli agenti della console.</block>
-  <block id="65ce32eae3a28c0b24f8cc33c345ab84" category="paragraph"><block ref="65ce32eae3a28c0b24f8cc33c345ab84" category="inline-link-macro-rx"></block></block>
   <block id="8b71edf4fd7d99d72da1d37de5e154b7" category="paragraph-title">Supporto per la federazione quando NetApp Console è in modalità limitata</block>
   <block id="58bbe2cc0931c12594be1bafb70597fb" category="paragraph">Ora puoi abilitare la federazione per un'organizzazione NetApp Console in modalità limitata. Ciò consente agli utenti di accedere alla Console utilizzando le proprie credenziali aziendali, mantenendo al contempo i vantaggi di sicurezza della modalità con restrizioni.</block>
   <block id="ac811c471ef716f9c8a3865d7f14caa3" category="paragraph-title">Modalità di sola lettura</block>
@@ -5780,7 +5777,6 @@
   <block id="cc58a3864ec91bd4d491cafcb895e671" category="paragraph">Dopo che un utente si è registrato a NetApp Console, puoi aggiungerlo alla tua organizzazione e assegnargli un ruolo per fornire l'accesso alle risorse. <block ref="43b297cbb0e75204baf387be01022755" category="inline-link-macro-rx"></block></block>
   <block id="729d1ca3c10203fc503fd9f53e1e1025" category="paragraph">È possibile modificare l'accesso di un membro aggiungendo o rimuovendo ruoli in base alle esigenze.</block>
   <block id="385f92ada47188b8c301664b007e6ca3" category="paragraph">I membri possono avere più ruoli all'interno dello stesso progetto e in progetti diversi. Ad esempio, le organizzazioni più piccole potrebbero assegnare tutti i ruoli di accesso disponibili allo stesso utente, mentre le organizzazioni più grandi potrebbero far svolgere agli utenti attività più specializzate. In alternativa, è possibile assegnare a un utente il ruolo di amministratore di Ransomware Resilience a livello di organizzazione. In questo esempio, l'utente sarebbe in grado di eseguire attività di Ransomware Resilience su tutti i progetti all'interno della tua organizzazione.</block>
-  <block id="185fff519c8fc661f991bd10bba243ab" category="admonition">A un membro a cui è assegnato il ruolo di amministratore dell'organizzazione non possono essere assegnati altri ruoli. Hanno già le autorizzazioni per l'intera organizzazione. A un membro con il ruolo di amministratore di cartella o di progetto non possono essere assegnati altri ruoli all'interno della cartella o del progetto in cui ha già tale ruolo. Entrambi i ruoli garantiscono l'accesso a tutti i servizi nell'ambito a loro assegnato.</block>
   <block id="ebeb67c2ab58cfe7b88d1a1bc054c1a8" category="list-text">Selezionare una delle schede dei membri: *Utenti*, *Account di servizio* o *Gruppi federati*.</block>
   <block id="a62c20a6e8e006e17ebdbe37484ef3e8" category="paragraph">Rimuovi un membro se abbandona la tua organizzazione.</block>
   <block id="b28aef4c16ab3aa23caf8777e9998b0c" category="paragraph">Quando si rimuove un membro, il sistema revoca le autorizzazioni della Console, ma conserva i relativi account Console e NetApp Support Site.</block>
@@ -5914,4 +5910,10 @@
   <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">\ https://api.workloads.netapp.com</block>
   <block id="a2d795d1d62d99052325545b09f9236f" category="paragraph">La console basata sul Web contatta questo endpoint per interagire con le API di Workload Factory per gestire e utilizzare i carichi di lavoro basati su FSx for ONTAP.</block>
   <block id="1f48aa3b8a17cda9bff69e07d29acd50" category="paragraph"><block ref="1f48aa3b8a17cda9bff69e07d29acd50" category="inline-link-macro-rx"></block></block>
+  <block id="3a78a8ea0b02debae5e6b16cc1929cb5" category="paragraph">Ora è possibile convalidare le connessioni di rete degli agenti Console connessi direttamente dalla NetApp Console. Questa funzionalità aiuta a verificare la connettività e a risolvere i problemi con gli agenti Console. Questa funzionalità si aggiunge alla possibilità già esistente di eseguire la diagnostica di rete dalla riga di comando (CLI) della console di manutenzione degli agenti Console.</block>
+  <block id="16e0d5a8229f3c0136c12aa9def60bb1" category="inline-link-macro">Scopri come eseguire la configurazione dalla NetApp Console.</block>
+  <block id="3cb937c3382e580784aa7486c365ec19" category="paragraph"><block ref="3cb937c3382e580784aa7486c365ec19" category="inline-link-macro-rx"></block></block>
+  <block id="ee856bddd35f8f0d8d6a5e0b5017b7dd" category="sidebar">Comprendere gli agenti Console</block>
+  <block id="10895cced39195f7b9456b154a2c8530" category="sidebar">Inizia con la modalità privata</block>
+  <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">Configurazione agente predefinita</block>
 </blocks>

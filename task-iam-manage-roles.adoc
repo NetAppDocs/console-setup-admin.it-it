@@ -109,9 +109,6 @@ I membri possono avere più ruoli all'interno dello stesso progetto e in progett
 
 La strategia del ruolo di accesso deve essere in linea con il modo in cui hai organizzato le tue risorse NetApp .
 
-
-TIP: A un membro a cui è assegnato il ruolo di amministratore dell'organizzazione non possono essere assegnati altri ruoli. Hanno già le autorizzazioni per l'intera organizzazione. A un membro con il ruolo di amministratore di cartella o di progetto non possono essere assegnati altri ruoli all'interno della cartella o del progetto in cui ha già tale ruolo. Entrambi i ruoli garantiscono l'accesso a tutti i servizi nell'ambito a loro assegnato.
-
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.
 . Seleziona *Membri*.
