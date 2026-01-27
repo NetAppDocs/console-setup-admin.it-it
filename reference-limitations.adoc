@@ -34,9 +34,9 @@ Vedi l'articolo della Knowledge Baselink:https://kb.netapp.com/Advice_and_Troubl
 
 
 
-=== La decrittazione SSL non è supportata
+=== Decrittografia SSL supportata solo per Cloud Volumes ONTAP
 
-La Console non supporta configurazioni firewall in cui è abilitata la decrittografia SSL. Se la decrittografia SSL è abilitata, nella Console vengono visualizzati messaggi di errore e l'istanza dell'agente viene visualizzata come *Disconnesso*.
+I server proxy trasparenti sono supportati solo per gli agenti associati a Cloud Volumes ONTAP. Non è possibile utilizzare un proxy trasparente per un agente se viene utilizzato con altri NetApp data services. Se si utilizzano NetApp data services con Cloud Volumes ONTAP, creare un agente dedicato per Cloud Volumes ONTAP in cui è possibile utilizzare un proxy server trasparente.
 
 Per una maggiore sicurezza, hai la possibilità dilink:task-installing-https-cert.html["installare un certificato HTTPS firmato da un'autorità di certificazione (CA)"] .
 
