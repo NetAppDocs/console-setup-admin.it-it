@@ -4,7 +4,7 @@ permalink: concept-org-partnerships.html
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
 summary: La creazione di partnership tra organizzazioni nella NetApp Console consente ai partner aziendali di gestire in modo sicuro le risorse NetApp oltre i confini aziendali, semplificando la collaborazione e migliorando la sicurezza. 
 ---
-= Partnership nella NetApp Console
+= Partnership organizzative in NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -26,7 +26,7 @@ I clienti possono autorizzare MSP o rivenditori a gestire gli ambienti NetApp se
 In qualità di partner, ottieni visibilità e controllo centralizzati su tutti gli ambienti dei clienti.  È possibile passare facilmente all'organizzazione di un cliente per gestire le risorse, eseguire servizi dati e monitorare lo stato entro limiti definiti, riducendo gli strumenti personalizzati e garantendo l'allineamento con le policy di ciascun cliente.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]Assegnare a uno o più utenti il ruolo di amministratore della partnership
-Assegnare a uno o più utenti, sia nell'organizzazione di avvio che in quella di ricezione, il ruolo di amministratore della partnership per creare e gestire le partnership. È possibile assegnare il ruolo di visualizzatore della partnership agli utenti che devono solo visualizzare le partnership e non gestirle.
+Assegna a uno o più utenti, sia nell'organizzazione di avvio che in quella di ricezione, il ruolo Partnership admin per creare e gestire le partnership. Puoi assegnare il ruolo Partnership viewer agli utenti che devono solo visualizzare le partnership e non gestirle.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]Condividi l'ID della tua organizzazione con l'organizzazione che ha avviato l'operazione
 [role="quick-margin-para"]

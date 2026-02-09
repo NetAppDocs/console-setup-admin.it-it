@@ -191,6 +191,7 @@ includedPermissions:
 - compute.forwardingRules.delete
 - compute.forwardingRules.get
 - compute.forwardingRules.setLabels
+- compute.forwardingRules.update
 - compute.globalOperations.get
 - compute.healthChecks.create
 - compute.healthChecks.delete
@@ -406,6 +407,9 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 
 
 | calcola.regolediinoltro.impostaetichette | Imposta o aggiorna le etichette sulle regole di inoltro per l'organizzazione. | NO | SÌ | NO 
+
+
+| compute.forwardingRules.update | Aggiorna le regole di inoltro esistenti per la gestione del traffico. | NO | SÌ | NO 
 
 
 | compute.globalOperations.get | Per conoscere lo stato delle operazioni. | SÌ | SÌ | NO 
@@ -790,6 +794,12 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 == Registro delle modifiche
 
 Di seguito sono riportati i permessi aggiunti e rimossi.
+
+
+
+=== 09 febbraio 2026
+
+L' `compute.forwardingRules.update`autorizzazione è stata aggiunta per supportare Infrastructure Manager nelle distribuzioni Cloud Volumes ONTAP in Google Cloud.
 
 
 

@@ -1,0 +1,22 @@
+= Console agent 4.4.0
+:allow-uri-read: 
+
+
+
+
+=== Console agent 4.4.0
+
+La versione 4.4.0 supporta sia la modalità standard che la modalità limitata.
+
+Questa versione dell'agente Console include miglioramenti della sicurezza e correzioni di bug.
+
+
+
+=== Amministrazione NetApp Console
+
+Questa versione include quanto segue:
+
+.Supporto per l'accesso in base al ruolo per i carichi di lavoro di NetApp Backup and Recovery (Oracle e Microsoft SQL Server)
+È possibile associare carichi di lavoro di Backup and Recovery (Oracle e Microsoft SQL Server) ai progetti. Dopo l'assegnazione a un progetto, gli utenti a cui è assegnato un ruolo di Backup and Recovery per il progetto possono lavorare con i carichi di lavoro. Al momento, altri carichi di lavoro non sono supportati con accesso in base al ruolo.
+
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html["Scopri di più sulla configurazione in base al ruolo per i carichi di lavoro di Backup and Recovery."^]

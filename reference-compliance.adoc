@@ -16,4 +16,4 @@ summary: 'All"interno della Console, ogni utente ha un profilo che contiene info
 [role="lead"]
 NetApp Console è conforme allo standard SOC 2 Tipo II.
 
-link:https://www.netapp.com/responsibility/trust-center/compliance/soc-2/["Scopri di più sulla conformità SOC 2 di NetApp."]
+link:https://www.netapp.com/responsibility/trust-center/compliance/soc-2/["Scopri di più sulla conformità SOC 2 di NetApp."^]

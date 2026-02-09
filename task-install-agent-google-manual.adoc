@@ -574,16 +574,14 @@ Prima di poter distribuire un agente Console in Google Cloud, è necessario abil
 .Fare un passo
 . Abilita le seguenti API di Google Cloud nel tuo progetto:
 +
-** API di Cloud Infrastructure Manager
 ** API di Cloud Deployment Manager V2
+** API di Cloud Infrastructure Manager
 ** API di registrazione cloud
 ** API di Cloud Resource Manager
 ** API di Compute Engine
 ** API di gestione dell'identità e dell'accesso (IAM)
-** API del servizio di gestione delle chiavi cloud (KMS)
-+
-(Obbligatorio solo se si prevede di utilizzare NetApp Backup and Recovery con chiavi di crittografia gestite dal cliente (CMEK))
-
+** Cloud Key Management Service (KMS) API (obbligatoria solo se si prevede di utilizzare NetApp Backup and Recovery con chiavi di crittografia gestite dal cliente (CMEK))
+** Cloud Quotas API (necessaria per le distribuzioni Cloud Volumes ONTAP tramite Infrastructure Manager)
 
 
 

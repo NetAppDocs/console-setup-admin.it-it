@@ -18,7 +18,7 @@ Utilizza la gestione delle identità e degli accessi (IAM) di NetApp Console per
 
 Le risorse sono organizzate gerarchicamente: l'organizzazione è in alto, seguita dalle cartelle (che possono contenere altre cartelle o progetti) e infine dai progetti, che contengono sistemi di archiviazione, carichi di lavoro e agenti.
 
-Assegnare autorizzazioni di controllo degli accessi basate sui ruoli (RBAC) ai membri a livello di organizzazione, cartella o progetto per garantire che gli utenti abbiano l'accesso appropriato alle risorse.
+Assegna ruoli di accesso a livello di organizzazione, cartella o progetto in modo che gli utenti abbiano il giusto accesso alle risorse.
 
 
 NOTE: Per gestire IAM nella NetApp Console, è necessario disporre dei ruoli di _Super admin_, _Organization admin_ o _Folder or project admin_.
@@ -57,7 +57,7 @@ link:task-iam-manage-folders-projects.html["Scopri come aggiungere cartelle alla
 
 === Risorse
 
-Le _Risorse_ includono sistemi di archiviazione, abbonamenti Keystone e agenti Console.
+Una _risorsa_ è un'entità di cui la Console è a conoscenza e che può essere assegnata a un progetto. Le _risorse_ includono sistemi storage, abbonamenti Keystone, alcuni carichi di lavoro di NetApp Backup and Recovery, nonché agenti della Console.
 
 + È necessario associare una risorsa a un progetto prima che chiunque possa accedervi.
 
@@ -69,14 +69,10 @@ Ad esempio, potresti associare un sistema Cloud Volumes ONTAP a un progetto o a 
 
 link:task-iam-manage-resources.html["Scopri come associare le risorse ai progetti."]
 
-Sistemi di archiviazione e abbonamenti Keystone:: I sistemi di storage sono le risorse principali gestite in NetApp Console. NetApp Console supporta la gestione di sistemi di archiviazione sia on-premise che cloud. È necessario aggiungere un sistema di archiviazione a un progetto prima che chiunque possa accedervi.
-+
---
-I sistemi di archiviazione vengono associati automaticamente al progetto in cui vengono aggiunti, ma è possibile associarli anche ad altri progetti o cartelle dalla pagina *Risorse*.
-
-Gli abbonamenti Keystone sono anche risorse che è possibile associare ai progetti per concedere agli utenti l'accesso all'abbonamento in NetApp Console.
-
---
+Sistemi di archiviazione e abbonamenti Keystone:: I sistemi storage sono le risorse principali che gestisci in NetApp Console. NetApp Console supporta la gestione sia dei sistemi storage on-premises che di cloud storage. Devi aggiungere un sistema storage a un progetto affinché possa essere accessibile a coloro che sono assegnati al progetto.
+Sistemi storage:: I sistemi storage vengono automaticamente associati al progetto in cui vengono aggiunti, ma puoi associarli ad altri progetti o cartelle dalla pagina *Resources*. Non puoi associare i sistemi storage FSx for NetApp ONTAP a progetti o cartelle, ma puoi visualizzarli nella pagina *Systems* o da Workloads.
+Abbonamenti Keystone:: Gli abbonamenti Keystone sono anche risorse che è possibile associare ai progetti per concedere agli utenti l'accesso all'abbonamento in NetApp Console.
+Carichi di lavoro di Backup and Recovery (Oracle e Microsoft SQL Server):: Anche alcuni carichi di lavoro di Backup and Recovery sono considerati risorse. È possibile assegnare agli utenti le autorizzazioni per accedere a Backup and Recovery
 
 
 [[associate-agents]]
