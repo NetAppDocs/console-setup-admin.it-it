@@ -5945,4 +5945,7 @@
   <block id="342df35452bbec008148c714d47038f6" category="list-text">Se l'ordine mostra un orologio e lo stato *Pending*, torna alla pagina del marketplace e seleziona *Manage on Provider* per completare il processo come documentato sopra.</block>
   <block id="9547217bb6aa822040056cba67310321" category="inline-image-macro">Uno screenshot di un marketplace entitlement in sospeso.</block>
   <block id="e6ec8d6dff39d45a9056311495699cef" category="paragraph"><block ref="e6ec8d6dff39d45a9056311495699cef" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="718285f559bff92f1fc2fb988df3fabe" category="doc">Console agent 4.4.1</block>
+  <block id="3ffe5c6490eae7ac4252c8efb9559119" category="paragraph-title">Accedi a NetApp Data Infrastructure Insights dalla NetApp Console</block>
+  <block id="0597e1be82ceeb01b40b4706c1dc68e1" category="paragraph">Puoi accedere a una prova gratuita di NetApp Data Infrastructure Insights da NetApp Console. Vai su *Governance* &gt; *Data Infrastructure Insights* per registrarti ed esplorare insight e analisi sul tuo ambiente dati.</block>
 </blocks>
