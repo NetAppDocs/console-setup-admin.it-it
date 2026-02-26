@@ -125,7 +125,7 @@ Di seguito è riportato un elenco dei ruoli nella categoria dei servizi dati.  O
 | link:reference-iam-disaster-rec-roles.html["Visualizzatore di Disaster Recovery"] | Visualizza solo le informazioni. 
 
 
-| Visualizzatore di classificazione | Consente agli utenti di visualizzare i risultati della scansione NetApp Data Classification . Gli utenti con questo ruolo possono visualizzare le informazioni sulla conformità e generare report per le risorse per le quali hanno l'autorizzazione ad accedere. Questi utenti non possono abilitare o disabilitare la scansione di volumi, bucket o schemi di database. La classificazione non ha un ruolo amministrativo. 
+| Visualizzatore di classificazione | Consente agli utenti di visualizzare i risultati della scansione di NetApp Data Classification. Gli utenti con questo ruolo possono visualizzare le informazioni di conformità e generare report per le risorse a cui hanno il permesso di accesso. Questi utenti non possono abilitare o disabilitare la scansione di volumi, bucket o database schemi. Data Classification non ha un ruolo admin. 
 
 
 | link:reference-iam-ransomware-roles.html["Amministratore di Ransomware Resilience"] | Gestisci le azioni nelle schede Proteggi, Avvisi, Ripristina, Impostazioni e Report di NetApp Ransomware Resilience. 

@@ -67,7 +67,7 @@ Tieni presente che alcuni servizi potrebbero essere supportati con limitazioni.
 | Backup e ripristino | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] 
 
 
-| Classificazione | SÌ 
+| Classificazione dei dati | SÌ 
 
 
 | Copia e sincronizza | NO 
