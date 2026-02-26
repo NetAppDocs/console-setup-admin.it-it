@@ -5948,4 +5948,7 @@
   <block id="718285f559bff92f1fc2fb988df3fabe" category="doc">Console agent 4.4.1</block>
   <block id="3ffe5c6490eae7ac4252c8efb9559119" category="paragraph-title">Accedi a NetApp Data Infrastructure Insights dalla NetApp Console</block>
   <block id="0597e1be82ceeb01b40b4706c1dc68e1" category="paragraph">Puoi accedere a una prova gratuita di NetApp Data Infrastructure Insights da NetApp Console. Vai su *Governance* &gt; *Data Infrastructure Insights* per registrarti ed esplorare insight e analisi sul tuo ambiente dati.</block>
+  <block id="1bad3fa525f7b2c60b554cc8a36a911c" category="list-text">cloudformation:ListStacks</block>
+  <block id="a09b37992441a5c2061c0ef135b80024" category="section-title">24 febbraio 2026</block>
+  <block id="51b31e1901c03d4b274f371dd730c779" category="paragraph">Ora è richiesta la seguente autorizzazione per Data Classification:</block>
 </blocks>

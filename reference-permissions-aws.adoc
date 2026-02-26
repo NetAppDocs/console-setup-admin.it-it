@@ -906,6 +906,7 @@ L'agente effettua le seguenti richieste API per distribuire NetApp Data Classifi
 * cloudformation:EliminaStack
 * cloudformation:DescribeStacks
 * cloudformation:DescribeStackEvents
+* cloudformation:ListStacks
 * iam:AddRoleToInstanceProfile
 * ec2:AssociateIamInstanceProfile
 * ec2:DescribeIamInstanceProfileAssociations
@@ -1195,6 +1196,14 @@ L'agente effettua le seguenti richieste API per distribuire e gestire Cloud Volu
 == Registro delle modifiche
 
 Man mano che vengono aggiunte o rimosse autorizzazioni, ne daremo nota nelle sezioni seguenti.
+
+
+
+=== 24 febbraio 2026
+
+Ora è richiesta la seguente autorizzazione per Data Classification:
+
+cloudformation:ListStacks
 
 
 
