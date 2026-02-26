@@ -75,7 +75,7 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
 
 
  a| 
-\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 Per fornire funzionalità e servizi all'interno della NetApp Console.
 
@@ -97,7 +97,7 @@ Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di agg
 --
 
 
-Endpoint contattati dalla console NetApp:: Utilizzando la NetApp Console basata sul Web fornita tramite il livello SaaS, questa contatta diversi endpoint per completare le attività di gestione dei dati.  Sono inclusi gli endpoint contattati per distribuire l'agente della Console dalla Console.
+Endpoint contattati dalla console NetApp:: Quando si utilizza l'applicazione SaaS NetApp Console basata sul web, questa contatta diversi endpoint per completare le attività di gestione dei dati. Questo include gli endpoint che vengono contattati per distribuire l'agente Console dalla Console.
 +
 --
 link:reference-networking-saas-console.html["Visualizza l'elenco degli endpoint contattati dalla console NetApp"] .
@@ -374,6 +374,7 @@ Note:
 .Fare un passo
 . Abilita le seguenti API di Google Cloud nel tuo progetto:
 +
+** API Cloud Build (necessaria per le distribuzioni Cloud Volumes ONTAP in modalità privata tramite Infrastructure Manager)
 ** API di Cloud Deployment Manager V2
 ** API di Cloud Infrastructure Manager
 ** API di registrazione cloud

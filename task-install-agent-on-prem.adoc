@@ -248,7 +248,7 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
 
 
  a| 
-\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 Per fornire funzionalità e servizi all'interno della NetApp Console.
 
@@ -316,7 +316,7 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
 
 
  a| 
-\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 Per fornire funzionalità e servizi all'interno della NetApp Console.
 
@@ -788,6 +788,13 @@ Se non si rimuovono queste variabili di sistema, l'installazione fallirà.
 +
 Scegli di scaricare i file di installazione dell'agente o un URL ai file.
 
+
+
++
+
+NOTE: Scarica il programma di installazione dell'agente "online" pensato per l'utilizzo nella tua rete o nel cloud. È disponibile un programma di installazione "offline" separato per l'agente Console, ma è supportato solo con distribuzioni in modalità privata.
+
++
 ** Sito di supporto NetApp (necessario se non si ha già accesso alla console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Sito di supporto NetApp"^] ,
 
 
@@ -872,7 +879,7 @@ Sarà necessario registrare l'agente Console nella NetApp Console.
 
 == Registrare l'agente della console con NetApp Console
 
-Accedi alla Console e associa l'agente della Console alla tua organizzazione.  La modalità di accesso dipende dalla modalità in cui si utilizza la Console.  Se si utilizza la Console in modalità standard, è possibile effettuare l'accesso tramite il sito Web SaaS.  Se si utilizza la Console in modalità limitata, è necessario effettuare l'accesso localmente dall'host dell'agente della Console.
+Accedi alla Console e associa l'agente della Console alla tua organizzazione. La modalità di accesso dipende dalla modalità in cui utilizzi la Console. Se utilizzi la Console in modalità standard, accedi tramite il sito web SaaS. Se utilizzi la Console in modalità limitata o privata, accedi localmente dall'host dell'agente della Console.
 
 .Passi
 . Aprire un browser Web e immettere l'URL dell'host dell'agente della console:

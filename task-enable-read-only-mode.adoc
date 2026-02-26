@@ -18,6 +18,9 @@ Come misura di sicurezza, puoi abilitare la modalità di sola lettura per la tua
 
 In modalità di sola lettura, gli utenti con ruoli di amministratore devono elevare manualmente le proprie autorizzazioni per apportare modifiche, il che garantisce che le modifiche siano intenzionali.
 
+
+NOTE: La modalità di sola lettura non è disponibile quando NetApp Console è in modalità privata. link:concept-modes.html["Scopri di più sulle modalità NetApp Console"].
+
 .Ruoli di accesso richiesti
 Super amministratore o amministratore dell'organizzazione.
 

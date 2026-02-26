@@ -150,4 +150,5 @@ Per informazioni su come impostare le autorizzazioni, fare riferimento alle segu
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Imposta le autorizzazioni per la modalità limitata"]
 
 
+* link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["Imposta le autorizzazioni per la modalità privata"]
 

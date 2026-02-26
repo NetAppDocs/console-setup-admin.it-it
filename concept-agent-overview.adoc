@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: concept-agent-overview.html 
+keywords: console agent, agent, what is an agent, deployment, hybrid cloud, storage management, data services 
+summary: 'È possibile abilitare le funzionalità della NetApp Console distribuendo gli agenti della Console, un componente software leggero che fornisce una connessione sicura tra i sistemi di storage on-premises e cloud e la NetApp Console, consentendo l"orchestrazione avanzata dello storage e i servizi dati.' 
+---
+= Scopri di più sugli agenti NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Abiliti le funzionalità della NetApp Console distribuendo agenti della Console, componenti software leggeri che forniscono una connessione sicura tra i tuoi sistemi di storage on-premises e cloud storage e la NetApp Console, abilitando l'orchestrazione avanzata dello storage e i servizi dati.
+
+
+
+== Cosa fa un agente Console
+
+Un agente Console colma il divario di rete tra i tuoi sistemi di storage e NetApp Console. Collega in modo sicuro la tua infrastruttura alle API NetApp e alla Console, consentendoti di:
+
+* Scopri e monitora i sistemi di archiviazione su AWS, Azure, Google Cloud e negli ambienti locali dalla NetApp Console.
+* Orchestrare le attività di provisioning e configurazione dello storage sui sistemi di storage dalla NetApp Console.
+* Abilita servizi avanzati di protezione e ottimizzazione dei dati.
+* Associa le credenziali del tuo cloud provider a un agente della Console per monitorare in modo sicuro l'utilizzo dei servizi cloud e collegare le distribuzioni all'abbonamento corretto per una fatturazione e una gestione dei costi accurate.
+
+
+
+
+=== Architettura dell'agente
+
+Gli agenti operano con processi leggeri che:
+
+* Estrarre o inviare dati da e verso l'applicazione SaaS della Console (modalità standard e limitata) oppure operare esclusivamente in locale (modalità privata)
+* Avvia tutte le comunicazioni: la Console non avvia mai chiamate outbound agli agenti
+* Connettiti ai tuoi sistemi di storage utilizzando protocolli di gestione standard
+* Utilizzare TLS 1.3 per comunicazioni sicure con i cloud provider e le API della NetApp Console
+
+
+
+
+=== Disponibilità degli agenti e requisiti operativi
+
+Gli agenti della Console sono un'infrastruttura critica per NetApp Console. NetApp Console può gestire brevi interruzioni, ma gli agenti devono rimanere operativi e raggiungibili per garantire la continuità dei servizi di gestione e dati. È tua responsabilità garantire:
+
+* Gli agenti rimangono attivi e funzionanti
+* Gli agenti hanno connettività di rete agli endpoint richiesti
+* I guasti infrastrutturali vengono risolti rapidamente
+* Le VM degli agenti vengono mantenute e aggiornate secondo le raccomandazioni di NetApp
+
+
+
+
+== Quando hai bisogno di un agente Console
+
+È necessario distribuire almeno un agente Console quando si desidera:
+
+* Utilizza modalità di distribuzione riservate o private (Console installata nel tuo ambiente). Per abilitare alcuni servizi sono necessari agenti aggiuntivi.
+* Accedi a servizi dati avanzati (NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, NetApp Data Classification e altro ancora).
+* Gestisci i sistemi Cloud Volumes ONTAP.
+* Eseguire attività di gestione avanzate sui cluster ONTAP locali.
+* Tieni traccia delle licenze, monitora lo stato di integrità dello storage e pianifica gli aggiornamenti del ciclo di vita.
+
+
+Senza un agente, puoi eseguire l'individuazione di base dello storage e accedere a un set limitato di funzionalità di monitoraggio e gestione dello storage. Tuttavia, la maggior parte dei casi d'uso enterprise richiede uno o più agenti operativi.
+
+link:concept-modes.html["Scopri di più sulle modalità di distribuzione NetApp Console"] per capire quando è necessario un agente e quali capacità gli agenti consentono.
+
+
+
+== Opzioni di deployment per gli agenti della Console
+
+È possibile distribuire gli agenti della Console in:
+
+* Amazon Web Services (modalità standard, limitata o privata)
+* Microsoft Azure (modalità standard, limitata o privata)
+* Google Cloud (modalità standard, limitata o privata)
+* Presso la tua sede (modalità standard o privata)
+
+
+La modalità di distribuzione della Console, l'ambiente di storage e le esigenze di sovranità dei dati determinano dove distribuire gli agenti. Distribuire più agenti in diversi ambienti per la separazione organizzativa o per esigenze aziendali.
+
+Dopo aver distribuito un agente, è necessario registrarlo presso l'organizzazione della NetApp Console per abilitare le funzionalità per tale organizzazione. È possibile associare più sistemi di storage e servizi dati a un singolo agente oppure distribuire più agenti in più ambienti per la separazione organizzativa o esigenze aziendali.
+
+
+
+=== Agenti per l'applicazione NetApp Console SaaS (modalità standard)
+
+Distribuisci agenti nel tuo cloud o on-premises per collegare la connettività all'applicazione SaaS della Console ospitata nel cloud. Gli agenti abilitano funzionalità avanzate mentre l'interfaccia utente della Console rimane accessibile da qualsiasi luogo.
+
+È possibile installare gli agenti direttamente dalla Console quando si utilizza l'applicazione SaaS (modalità standard). È possibile installare in AWS, Azure o Google Cloud, oppure manualmente in sede sul proprio host Linux o nel proprio ambiente VCenter.
+
+Quando installi un agente nei tuoi locali, puoi associare le rispettive credenziali del cloud provider per abilitare l'integrazione della fatturazione e i servizi dati.
+
+
+
+=== Agenti per NetApp Console in modalità limitata
+
+È necessario installare un agente da cui gli utenti potranno accedere alla NetApp Console. Sono necessari agenti aggiuntivi per abilitare i servizi dati e gestire i sistemi di storage.
+
+Se utilizzi NetApp Console in modalità limitata, puoi installare gli agenti dal marketplace del tuo cloud provider oppure installando manualmente il software sul tuo host Linux nel cloud, in sede o nel tuo ambiente VCenter.
+
+Sarà necessario installare un agente da cui gli utenti potranno accedere alla NetApp Console. Sono necessari agenti aggiuntivi per abilitare i servizi dati e per gestire i sistemi di storage.
+
+Quando installi un agente nei tuoi locali, puoi associare le rispettive credenziali del cloud provider per abilitare l'integrazione della fatturazione e i servizi dati.
+
+
+
+=== Agenti per NetApp Console in modalità privata (in locale o nel cloud senza connettività outbound)
+
+È necessario installare un agente da cui gli utenti potranno accedere alla NetApp Console. Sono necessari agenti aggiuntivi per abilitare i servizi dati e gestire i sistemi di storage.
+
+Installa gli agenti nel tuo data center o in un ambiente air-gapped. Gli agenti non hanno connettività con gli endpoint API di NetApp. Tutte le operazioni rimangono locali, con piena sovranità dei dati e controllo.
+
+Sarà necessario installare un agente da cui gli utenti potranno accedere alla NetApp Console. Sono necessari agenti aggiuntivi per abilitare i servizi dati e per gestire i sistemi di storage.
+
+Quando installi un agente nei tuoi locali, puoi associare le rispettive credenziali del cloud provider per abilitare l'integrazione della fatturazione e i servizi dati.
+
+
+
+=== Usa più agenti quando necessario
+
+Ogni agente opera in modo indipendente e può gestire più sistemi di storage e servizi dati. Distribuire più agenti quando è necessario:
+
+* Isolamento per tipo di storage o funzione organizzativa
+* Soddisfa i requisiti di segmentazione geografica o di rete
+
+
+
+
+== Informazioni correlate
+
+Scopri come distribuire gli agenti della Console:
+
+* link:task-install-agent-aws-console.html["Installa un agente in AWS"].
+* link:task-install-agent-azure-console.html["Installa un agente in Azure"].
+* link:task-install-agent-google-console-gcloud.html["Installa un agente in Google Cloud"].
+* link:task-install-agent-on-prem.html["Installa un agente in locale"].
+

@@ -6,7 +6,7 @@
 
 === Console agent 4.4.1
 
-La versione 4.4.0 supporta sia la modalità standard che la modalità limitata.
+La versione 4.4.1 supporta sia la modalità standard che la modalità limitata.
 
 Questa versione dell'agente Console include miglioramenti della sicurezza e correzioni di bug.
 

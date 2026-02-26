@@ -156,7 +156,7 @@ Aggiungere le credenziali AWS fornendo l'ARN di un ruolo IAM che fornisce le aut
 
 === Impostare il ruolo IAM
 
-Impostare un ruolo IAM che consenta al livello SaaS (Software as a Service) della NetApp Console di assumere tale ruolo.
+Configura un ruolo IAM che consenta all'applicazione software as a service (SaaS) NetApp Console di assumere il ruolo.
 
 .Passi
 . Accedere alla console IAM nell'account di destinazione.

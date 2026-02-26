@@ -16,6 +16,9 @@ summary: 'La federazione delle identità consente l"accesso Single Sign-On con l
 [role="lead"]
 L'accesso Single Sign-On (federazione) semplifica il processo di accesso e migliora la sicurezza consentendo agli utenti di accedere alla NetApp Console utilizzando le proprie credenziali aziendali.  Puoi abilitare l'accesso Single Sign-On (SSO) con il tuo provider di identità (IdP) o con il sito di supporto NetApp .
 
+
+NOTE: La federazione non è disponibile quando NetApp Console è in modalità privata. link:concept-modes.html["Scopri di più sulle modalità NetApp Console"^].
+
 .Ruolo richiesto
 Amministratore dell'organizzazione, amministratore della federazione, visualizzatore della federazione.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
 

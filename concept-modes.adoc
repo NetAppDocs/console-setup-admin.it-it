@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-modes.html 
 keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
-summary: 'NetApp Console offre diverse _modalità di distribuzione_ che ti consentono di soddisfare i requisiti aziendali e di sicurezza. La _modalità standard_ sfrutta un livello di software come servizio (SaaS) per fornire funzionalità complete, mentre la _modalità limitata_ e la _modalità privata_ sono disponibili per le organizzazioni che hanno restrizioni di connettività.' 
+summary: 'Puoi utilizzare NetApp Console tramite l"applicazione SaaS oppure installarla autonomamente nel tuo ambiente (cloud o on-premises).' 
 ---
 = Scopri di più sulle modalità di distribuzione NetApp Console
 :hardbreaks:
@@ -14,87 +14,201 @@ summary: 'NetApp Console offre diverse _modalità di distribuzione_ che ti conse
 
 
 [role="lead"]
-NetApp Console offre diverse _modalità di distribuzione_ che ti consentono di soddisfare i requisiti aziendali e di sicurezza.
+Puoi utilizzare NetApp Console tramite l'applicazione SaaS oppure installarla autonomamente nel tuo ambiente (cloud o on-premises).
 
-* La _modalità standard_ sfrutta un livello di software come servizio (SaaS) per fornire funzionalità complete.  Gli utenti accedono alla Console tramite un'interfaccia ospitata basata sul Web
-* La _Modalità limitata_ è disponibile per le organizzazioni con restrizioni di connettività che desiderano installare NetApp Console nel proprio cloud pubblico.  Gli utenti accedono alla Console tramite un'interfaccia basata sul Web ospitata su un agente Console nel loro ambiente cloud.
-+
-NetApp Console limita il traffico, le comunicazioni e i dati in modalità limitata, ed è necessario assicurarsi che l'ambiente (in sede e nel cloud) sia conforme alle normative richieste.
+NetApp si riferisce a questi casi d'uso come _modalità di distribuzione_. Ogni modalità offre connettività, funzionalità e servizi diversi per le esigenze aziendali e di sicurezza.
 
-
-
+Modalità standard (SaaS):: L'applicazione NetApp Console SaaS (software-as-a-service) consente l'accesso a tutti i servizi dati NetApp, aggiornamenti automatici e opzioni di autenticazione flessibili come la federazione delle identità e gli accessi al sito di supporto NetApp. Questa modalità supporta gli abbonamenti al marketplace e le licenze BYOL. Questa modalità è ideale per la maggior parte degli utenti e delle organizzazioni, in particolare per coloro che desiderano il maggior numero di funzionalità e servizi disponibili con NetApp Console.
+Modalità limitata (installata nel tuo cloud pubblico):: La modalità limitata è pensata per le organizzazioni che necessitano di maggiore sicurezza e connettività limitata, come governi e aziende regolamentate. Si installa la NetApp Console nel proprio cloud pubblico (in una regione governativa, sovrana o commerciale), e questa ha una connettività outbound limitata verso gli endpoint API della NetApp Console (ospitati nell'applicazione SaaS). La modalità limitata fornisce accesso ai principali servizi dati, tra cui Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (in regioni governative e commerciali) e classificazione dei dati, insieme ad aggiornamenti software automatizzati e federazione delle identità.
+Modalità privata (installata presso la tua sede o nel cloud):: La modalità privata è pensata per le organizzazioni con esigenze di sicurezza rigorose, come quelle in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6 o in ambienti air-gapped. Non si connette all'applicazione SaaS NetApp Console o alle API NetApp basate sul cloud, offrendo il pieno controllo e bloccando le comunicazioni esterne. I servizi dati supportati includono NetApp Backup and Recovery, NetApp Data Classification, NetApp Replication e Cloud Volumes ONTAP. Tutto lo storage e l'autenticazione rimangono locali, mantenendo i dati all'interno del proprio ambiente. Utilizzare questa modalità per appaltatori della difesa, istituti finanziari con rigide regole di residenza dei dati ed enti governativi con sistemi classificati.
 
 
-== Panoramica
+Quando è installato presso la vostra sede, sono supportati solo i sistemi di storage ONTAP.
+
+
+NOTE: NetApp Console limita il flusso di dati in modalità riservata e privata, ma è necessario assicurarsi che l'ambiente sia conforme alle normative.
 
 Ogni modalità di distribuzione differisce in termini di connettività in uscita, posizione, installazione, autenticazione, servizi dati e metodi di addebito.
 
-Modalità standard:: Si utilizza un servizio SaaS dalla console basata sul Web.  A seconda dei servizi dati e delle funzionalità che intendi utilizzare, un amministratore dell'organizzazione Console crea uno o più agenti Console per gestire i dati all'interno del tuo ambiente cloud ibrido.
-+
---
-Questa modalità utilizza la trasmissione crittografata dei dati tramite la rete Internet pubblica.
+La tabella seguente confronta queste modalità.
 
---
-Modalità limitata:: Si installa un agente Console nel cloud (in una regione governativa, sovrana o commerciale) e ha una connettività in uscita limitata al livello SaaS NetApp Console .
-+
---
-Questa modalità è solitamente utilizzata dagli enti governativi statali e locali e dalle aziende regolamentate.
-
-<<Modalità limitata,Scopri di più sulla connettività in uscita al livello SaaS>> .
-
---
-Modalità privata BlueXP (solo interfaccia BlueXP legacy):: La modalità privata BlueXP (interfaccia BlueXP legacy) viene in genere utilizzata con ambienti locali privi di connessione Internet e con regioni cloud sicure, tra cui AWS Secret Cloud, AWS Top Secret Cloud e Azure IL6.  NetApp continua a supportare questi ambienti con l'interfaccia legacy BlueXP .link:media/BlueXP-Private-Mode-legacy-interface.pdf["Documentazione PDF per la modalità privata BlueXP"^]
-
-
-La tabella seguente fornisce un confronto della console NetApp .
-
-[cols="16h,28,28"]
+[cols="16h,28,28,28"]
 |===
-|  | Modalità standard | Modalità limitata 
+|  | Modalità standard | Modalità limitata | Modalità privata 
 
 
-| È richiesta la connessione al livello SaaS NetApp Console ? | SÌ | Solo in uscita 
+| È richiesta la connessione all'applicazione NetApp Console SaaS? | SÌ | Solo in uscita | NO 
 
 
-| È richiesta la connessione al tuo provider cloud? | SÌ | Sì, all'interno della regione 
+| È richiesta la connessione al tuo provider cloud? | SÌ | Sì, all'interno della regione | Sì, all'interno della regione (se si utilizza Cloud Volumes ONTAP) 
 
 
-| Installazione dell'agente della console | Dalla console, dal cloud marketplace o dall'installazione manuale | Marketplace cloud o installazione manuale 
+| Installazione dell'agente della console | Dalla console, dal cloud marketplace o dall'installazione manuale | Marketplace cloud o installazione manuale | Installazione manuale 
 
 
-| Aggiornamenti dell'agente della console | Aggiornamenti automatici | Aggiornamenti automatici 
+| Aggiornamenti dell'agente della console | Aggiornamenti automatici del software dell'agente della Console | Aggiornamenti automatici del software dell'agente della Console | Aggiornamento manuale richiesto 
 
 
-| Accesso UI | Dal livello SaaS della console | Localmente da una VM agente 
+| Accesso UI | Dall'applicazione SaaS della Console | Localmente da una VM agente | Localmente dalla VM dell'agente 
 
 
-| Punto finale dell'API | Il livello SaaS della console | Un agente della console 
+| Punto finale dell'API | L'applicazione SaaS NetApp Console | un agente | un agente 
 
 
-| Autenticazione | Tramite SaaS utilizzando auth0, login NSS o federazione delle identità | Tramite SaaS utilizzando auth0 o federazione delle identità 
+| Autenticazione | Tramite SaaS utilizzando auth0, login NSS o federazione delle identità | Tramite SaaS utilizzando auth0 o federazione delle identità | Autenticazione utente locale 
 
 
-| Autenticazione multifattoriale | Disponibile per gli utenti locali | Non disponibile 
+| Autenticazione multifattoriale | Disponibile per gli utenti locali | Non disponibile | Non disponibile 
 
 
-| Servizi di archiviazione e dati | Tutti sono supportati | Molti sono supportati 
+| Servizi di archiviazione e dati | Tutti sono supportati | Molti sono supportati | Diversi sono supportati 
 
 
-| Opzioni di licenza del servizio dati | Abbonamenti al Marketplace e BYOL | Abbonamenti al Marketplace e BYOL 
+| Opzioni di licenza del servizio dati | Abbonamenti al Marketplace e BYOL | Abbonamenti al Marketplace e BYOL | Bring-your-own-license (BYOL) 
 |===
-Per saperne di più su queste modalità, comprese le funzionalità e i servizi NetApp Console supportati, leggere le sezioni seguenti.
+Consultare le seguenti sezioni per i dettagli sulle funzionalità e sui servizi supportati in ciascuna modalità.
 
 
 
-== Modalità standard
+== NetApp Console in modalità standard (applicazione SaaS)
 
-L'immagine seguente è un esempio di distribuzione in modalità standard.
+L'immagine seguente mostra una distribuzione in modalità standard.
 
-image:diagram-standard-mode.png["Un'immagine concettuale che mostra l'architettura della modalità standard con Internet pubblico in cui sono disponibili il livello SaaS e l'autenticazione auth0."]
+image:diagram-standard-mode.png["Un'immagine concettuale che mostra la rete Internet pubblica dove la console basata sul web, l'applicazione SaaS e l'autenticazione auth0 sono disponibili, una rete virtuale nel cloud dove un agente è in esecuzione e gestisce Cloud Volumes ONTAP e un AFF cluster in un data center on-premises."]
+
+
+
+=== Funzionalità e servizi supportati per NetApp Console in modalità standard
+
+Nella tabella seguente sono elencate le funzionalità di gestione dell'archiviazione, i servizi dati e le funzionalità amministrative disponibili nell'applicazione NetApp Console SaaS (modalità standard).
+
+[cols="3*"]
+|===
+| Area di prodotto | NetApp service o funzionalità | Agente Console richiesto 
+
+
+.12+| *Gestione dei sistemi di storage* Questa tabella mostra quali sistemi di storage è possibile gestire dalla NetApp Console. Non elenca le destinazioni di backup per NetApp Backup and Recovery. | Avvisi | SÌ 
+
+
+| Amazon FSx per ONTAP | Sì, per la scoperta e la gestione. È possibile utilizzare la scoperta diretta senza un agente NetApp Console, ma è necessario un agente per utilizzare le funzionalità di gestione. 
+
+
+| Amazon S3 | SÌ 
+
+
+| Blob azzurro | NO 
+
+
+| Azure NetApp Files | NO 
+
+
+| Cloud Volumes ONTAP | SÌ 
+
+
+| Serie E | SÌ 
+
+
+| Google Cloud NetApp Volumes | NO 
+
+
+| Google Cloud Storage | SÌ 
+
+
+| Cluster ONTAP on-premise | Necessario per l'individuazione e la gestione. È possibile utilizzare l'individuazione diretta senza un agente della NetApp Console, ma è necessario un agente per utilizzare le funzionalità di gestione. 
+
+
+| StorageGRID | SÌ 
+
+
+| Carichi di lavoro | NO 
+
+
+.8+| *Servizi dati* | NetApp Backup and Recovery | SÌ 
+
+
+| Classificazione NetApp | SÌ 
+
+
+| Copia e sincronizzazione NetApp | SÌ 
+
+
+| NetApp Disaster Recovery | SÌ 
+
+
+| NetApp Ransomware Protection | SÌ 
+
+
+| NetApp Replication | NO 
+
+
+| NetApp Cloud Tiering | SÌ 
+
+
+| NetApp Volume Caching | SÌ 
+
+
+.5+| *Funzionalità del contratto di supporto NetApp* | Consulente digitale | SÌ 
+
+
+| Efficienza economica | SÌ 
+
+
+| Pianificazione del ciclo di vita | SÌ 
+
+
+| Aggiornamenti software | NO 
+
+
+| Sostenibilità | SÌ 
+
+
+.12+| *Funzionalità amministrative* | Revisione contabile | NO 
+
+
+| Hub di automazione | NO 
+
+
+| Federazione | NO 
+
+
+| Gestione dell'identità e degli accessi | NO 
+
+
+ a| 
+Gestione di Licenses and subscriptions
+
+* Gli abbonamenti Marketplace e BYOL sono supportati con la modalità standard; tuttavia, le opzioni di licenza supportate dipendono dal servizio dati NetApp utilizzato.  Consultare la documentazione di ciascun servizio per saperne di più sulle opzioni di licenza disponibili.
+
+| NO 
+
+
+| Gestisci le credenziali del provider cloud | NO 
+
+
+| Autenticazione a più fattori (utenti locali) | NO 
+
+
+| Notifiche | NO 
+
+
+| Conti NSS | NO 
+
+
+| Partnership organizzative | NO 
+
+
+| Modalità di sola lettura | NO 
+
+
+| Notifiche | NO 
+|===
+
+
+=== Come funziona la NetApp Console in modalità standard
 
 In modalità standard la console funziona come segue:
 
-Comunicazione in uscita:: È richiesta la connettività da un agente della console al livello SaaS della console, alle risorse pubbliche del tuo provider cloud e ad altri componenti essenziali per le operazioni quotidiane.
+Comunicazione in uscita:: È richiesta la connettività da un agente all'applicazione SaaS della NetApp Console, alle risorse pubblicamente disponibili del tuo cloud provider e ad altri componenti essenziali per le operazioni quotidiane.
 +
 --
 * link:task-install-agent-aws-console.html#networking-aws-agent["Endpoint che un agente contatta in AWS"]
@@ -103,94 +217,108 @@ Comunicazione in uscita:: È richiesta la connettività da un agente della conso
 
 
 --
-Posizione supportata per un agente:: Nella modalità standard, un agente è supportato nel cloud o presso la tua sede.
-Installazione dell'agente della console:: È possibile installare un agente utilizzando uno dei seguenti metodi:
-+
---
-* Dalla console
-* Da AWS o Azure Marketplace
-* Da Google Cloud SDK
-* Utilizzando manualmente un programma di installazione su un host Linux nel tuo data center o cloud
-* Utilizzare l'OVA fornito nel proprio ambiente VCenter.
+Posizione supportata per un agente NetApp Console:: In modalità standard, puoi installare un agente Console nel cloud o presso la tua sede.
 
 
---
-Aggiornamenti dell'agente della console:: NetApp aggiorna automaticamente il tuo agente ogni mese.
-Accesso all'interfaccia utente:: L'interfaccia utente è accessibile dalla console basata sul Web fornita tramite il livello SaaS.
+
+NOTE: L'installazione di un agente nel cloud comporta costi di utilizzo del cloud.
+
+Aggiornamenti dell'agente della console:: NetApp aggiorna automaticamente il software dell'agente ogni mese.
+Accesso all'interfaccia utente:: Accedi all'interfaccia utente dall'applicazione Console SaaS, che è disponibile tramite Internet pubblico.
 Punto finale dell'API:: Le chiamate API vengono effettuate al seguente endpoint: \ https://api.bluexp.netapp.com
-Autenticazione:: Autenticazione con accessi auth0 o NetApp Support Site (NSS).  È disponibile la federazione delle identità.
-Servizi dati supportati:: Sono supportati tutti i servizi dati NetApp . link:https://docs.netapp.com/us-en/data-services-family/index.html["Scopri di più sui servizi dati NetApp"^] .
-Opzioni di licenza supportate:: Gli abbonamenti Marketplace e BYOL sono supportati con la modalità standard; tuttavia, le opzioni di licenza supportate dipendono dal servizio dati NetApp utilizzato.  Consultare la documentazione di ciascun servizio per saperne di più sulle opzioni di licenza disponibili.
-Come iniziare con la modalità standard:: Vai al https://console.netapp.com["NetApp Console"^] e iscriviti.
-+
---
-link:task-quick-start-standard-mode.html["Scopri come iniziare con la modalità standard"] .
-
---
+Autenticazione:: NetApp Console fornisce l'autenticazione tramite auth0 o NetApp Support Site (NSS) logins. È disponibile la federazione delle identità.
 
 
 
 
-== Modalità limitata
+=== Come iniziare con la modalità standard
+
+Vai al https://console.netapp.com["NetApp Console"^] e iscriviti.
+
++ link:task-quick-start-standard-mode.html["Scopri come iniziare con la modalità standard"].
+
+
+
+== NetApp Console in modalità limitata (installata nel tuo cloud pubblico)
+
+Si installa un agente Console nel cloud (in una regione governativa, sovrana o commerciale) e dispone di una connettività outbound limitata agli endpoint API della NetApp Console (ospitati nell'applicazione SaaS).
+
+Gli utenti accedono all'interfaccia utente locale fornita dall'agente della Console, non all'applicazione SaaS.
+
+A seconda dei servizi dati e delle funzionalità che intendi utilizzare, un amministratore dell'organizzazione Console crea ulteriori agenti Console per gestire i dati all'interno del tuo ambiente cloud ibrido.
+
+<<Modalità limitata,Scopri di più sulla connettività outbound alle API della NetApp Console>>.
 
 L'immagine seguente è un esempio di distribuzione in modalità limitata.
 
-image:diagram-restricted-mode.png["Un'immagine concettuale della modalità ristretta."]
+image:diagram-restricted-mode.png["Un'immagine concettuale che mostra la rete Internet pubblica dove sono disponibili l'applicazione SaaS e l'autenticazione auth0, una rete virtuale nel cloud dove è in esecuzione un agente che fornisce accesso alla console basata sul cloud e gestisce Cloud Volumes ONTAP e un AFF cluster in un data center on-premises."]
 
-La console funziona come segue in modalità limitata:
 
-Comunicazione in uscita:: Un agente necessita di connettività in uscita al livello SaaS della console per servizi dati, aggiornamenti software, autenticazione e trasmissione di metadati.
-+
---
-Il livello SaaS della console non avvia la comunicazione con un agente.  Gli agenti avviano tutte le comunicazioni con il livello SaaS della console, estraendo o inviando dati in base alle necessità.
 
-È inoltre richiesta una connessione alle risorse del provider cloud all'interno della regione.
+=== Funzionalità e servizi supportati per NetApp Console in modalità limitata
 
---
-Posizione supportata per un agente:: In modalità limitata, un agente è supportato nel cloud: in una regione governativa, sovrana o commerciale.
-Installazione dell'agente della console:: Puoi effettuare l'installazione da AWS o Azure Marketplace oppure manualmente sul tuo host Linux oppure tramite un OVA scaricabile nel tuo ambiente VCenter.
-Aggiornamenti dell'agente della console:: NetApp aggiorna automaticamente il software dell'agente con aggiornamenti mensili.
-Accesso all'interfaccia utente:: L'interfaccia utente è accessibile da una macchina virtuale agente distribuita nella tua regione cloud.
-Punto finale dell'API:: Le chiamate API vengono effettuate alla macchina virtuale dell'agente.
-Autenticazione:: L'autenticazione viene fornita tramite auth0.  È disponibile anche la federazione delle identità.
-Gestione dell'archiviazione e servizi dati supportati:: I seguenti servizi di archiviazione e dati con modalità limitata:
-+
---
-[cols="2*"]
+Nella tabella seguente sono elencate le funzionalità di gestione dell'archiviazione, i servizi dati e le funzionalità amministrative disponibili in NetApp Console quando la si installa in modalità limitata.
+
+[cols="3*"]
 |===
-| Servizi supportati | Note 
+| Area di prodotto | NetApp service o funzionalità | Agente Console richiesto 
 
 
-| Azure NetApp Files | Supporto completo 
+.3+| *Gestione dei sistemi di storage* Questa tabella mostra quali sistemi di storage è possibile gestire dalla NetApp Console. Non elenca le destinazioni di backup per NetApp Backup and Recovery. | Azure NetApp Files | NO 
 
 
-| Backup e ripristino | Supportato nelle regioni governative e commerciali con modalità limitata. Non supportato nelle regioni sovrane con modalità limitata. In modalità limitata, NetApp Backup and Recovery supporta solo il backup e il ripristino dei dati del volume ONTAP . https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati ONTAP"^] Il backup e il ripristino dei dati delle applicazioni e dei dati delle macchine virtuali non sono supportati. 
+| Cloud Volumes ONTAP | SÌ 
 
 
-| NetApp Data Classification  a| 
-Supportato nelle regioni governative con modalità limitata.  Non supportato nelle regioni commerciali o nelle regioni sovrane con modalità limitata.
+| Cluster ONTAP on-premise | Necessario per l'individuazione e la gestione. È possibile utilizzare l'individuazione diretta senza un agente della NetApp Console, ma è necessario un agente per utilizzare le funzionalità di gestione. 
 
 
+.3+| *Servizi dati* (la modalità limitata supporta meno servizi dati rispetto alla modalità standard)  a| 
+Backup and Recovery
 
-| Cloud Volumes ONTAP | Supporto completo 
+* Supportato nelle regioni governative e commerciali con modalità limitata. Non supportato nelle regioni sovrane con modalità limitata.
+* In modalità limitata, NetApp Backup and Recovery supporta solo il backup e il ripristino dei dati del volume ONTAP. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati ONTAP"^]
+
+| Supportato nelle regioni governative e commerciali con modalità limitata. Non supportato nelle regioni sovrane con modalità limitata. In modalità limitata, NetApp Backup and Recovery supporta solo il backup e il ripristino dei dati del volume ONTAP. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati ONTAP"^] 
 
 
-| Licenses and subscriptions | È possibile accedere alle informazioni sulla licenza e sull'abbonamento con le opzioni di licenza supportate elencate di seguito per la modalità con restrizioni. 
+ a| 
+NetApp Data Classification
+
+* Supportato nelle regioni governative con modalità limitata.  Non supportato nelle regioni commerciali o nelle regioni sovrane con modalità limitata.
+
+| SÌ 
 
 
-| Cluster ONTAP on-premise | Sono supportate sia la rilevazione con un agente Console sia la rilevazione senza un agente Console (rilevazione diretta).  Quando si rileva un cluster locale senza un agente Console, la visualizzazione avanzata (System Manager) non è supportata. 
+ a| 
+NetApp Replication
+
+* Supportato nelle regioni governative con modalità limitata.  Non supportato nelle regioni commerciali o nelle regioni sovrane con modalità limitata.
+
+| Sì*, (non necessario se si esegue la replica da ONTAP on-premises a ONTAP on-premises) 
 
 
-| Replicazione | Supportato nelle regioni governative con modalità limitata.  Non supportato nelle regioni commerciali o nelle regioni sovrane con modalità limitata. 
-|===
---
-Opzioni di licenza supportate:: Con la modalità limitata sono supportate le seguenti opzioni di licenza:
-+
---
-* Abbonamenti Marketplace (contratti orari e annuali)
-+
+| *Funzionalità del contratto di supporto NetApp* | Nessuno | N / A 
+
+
+.12+| *Funzionalità amministrative* | Revisione contabile | NO 
+
+
+| Hub di automazione | NO 
+
+
+| Federazione | NO 
+
+
+| Gestione dell'identità e degli accessi | NO 
+
+
+ a| 
+Gestione di Licenses and subscriptions
+
 Notare quanto segue:
 
+* Abbonamenti Marketplace (contratti orari e annuali)
 +
 ** Per Cloud Volumes ONTAP, è supportata solo la licenza basata sulla capacità.
 ** In Azure, i contratti annuali non sono supportati con le aree governative.
@@ -201,126 +329,354 @@ Notare quanto segue:
 Per Cloud Volumes ONTAP, con BYOL sono supportate sia le licenze basate sulla capacità che quelle basate sui nodi.
 
 
+| NO 
+
+
+| Gestisci le credenziali del provider cloud | NO 
+
+
+| Autenticazione a più fattori (utenti locali) | NO 
+
+
+| Notifiche | NO 
+
+
+| Conti NSS | NO 
+
+
+| Partnership organizzative | NO 
+
+
+| Modalità di sola lettura | NO 
+
+
+| Notifiche | NO 
+|===
+
+
+=== Come funziona la NetApp Console in modalità limitata
+
+La console funziona come segue in modalità limitata:
+
+Comunicazione in uscita:: Un agente richiede connettività outbound alle API basate sul cloud di NetApp per il supporto dei servizi dati, degli aggiornamenti software, dell'autenticazione e della trasmissione dei metadati.
++
+--
+NetApp non avvia la comunicazione con un agente. L'agente avvia tutte le comunicazioni e può estrarre o inviare dati da o verso le API e i servizi NetApp secondo necessità.
+
+È inoltre richiesta una connessione alle risorse del provider cloud all'interno della regione.
 
 --
-Come iniziare con la modalità limitata:: Quando si crea l'organizzazione NetApp Console , è necessario abilitare la modalità limitata.
-
-
-Se non hai ancora un'organizzazione, ti verrà chiesto di crearne una e di abilitare la modalità con restrizioni quando accedi alla Console per la prima volta da un agente della Console installato manualmente o creato dal marketplace del tuo provider cloud.
-
-
-NOTE: Non è possibile modificare l'impostazione della modalità limitata dopo aver creato l'organizzazione.
-
-link:task-quick-start-restricted-mode.html["Scopri come iniziare con la modalità limitata"] .
+Posizione supportata per un agente:: In modalità limitata, installi agenti nel cloud: in una regione governativa, sovrana o commerciale.
+Aggiornamenti dell'agente della console:: NetApp Console aggiorna automaticamente il software dell'agente ogni mese.
+Accesso all'interfaccia utente:: Gli utenti accedono alla Console da una macchina virtuale agente distribuita nella tua cloud region.
+Punto finale dell'API:: Le chiamate API vengono effettuate a una macchina virtuale agente.
+Autenticazione:: L'autenticazione viene fornita tramite il servizio cloud di NetApp Console utilizzando auth0. È disponibile anche la federazione delle identità.
 
 
 
-== Confronto tra servizi e funzionalità
 
-La tabella seguente può aiutarti a identificare rapidamente quali servizi e funzionalità sono supportati dalla modalità con restrizioni.
+=== Come iniziare con la modalità limitata
 
-Tieni presente che alcuni servizi potrebbero essere supportati con limitazioni.  Per maggiori dettagli su come questi servizi sono supportati con la modalità limitata, fare riferimento alle sezioni precedenti.
+È necessario abilitare la modalità con restrizioni quando si crea il proprio account NetApp Console. Se non si dispone di un'organizzazione, al primo accesso all'agente Console installato viene richiesto di crearne una e di abilitare la modalità con restrizioni.
 
-[cols="19,27,27"]
+Si noti che l'impostazione della modalità con restrizioni è fissa dopo la creazione dell'organizzazione. Non è possibile abilitare o disabilitare la modalità con restrizioni in un secondo momento. link:task-quick-start-restricted-mode.html["Scopri come iniziare con la modalità limitata"].
+
+
+
+== NetApp Console in modalità privata
+
+In modalità privata, si installa un agente Console in locale o nel cloud e quindi si utilizza NetApp Console per gestire i dati nel cloud ibrido. Non è disponibile alcuna connettività agli endpoint API della NetApp Console o all'applicazione NetApp Console SaaS, quindi si accede alla Console dall'interfaccia utente locale fornita dall'agente Console.
+
+L'immagine seguente mostra un esempio di distribuzione in modalità privata in cui l'agente Console è installato nel cloud e gestisce sia Cloud Volumes ONTAP sia un cluster ONTAP.
+
+image:diagram-private-mode-cloud.png["Un'immagine concettuale che mostra una rete virtuale nel cloud in cui è in esecuzione un agente che fornisce accesso alla console basata sul web e gestisce Cloud Volumes ONTAP e un AFF cluster in un data center on-premises."]
+
+La seconda immagine mostra un esempio di distribuzione in modalità privata in cui l'agente è installato in locale, gestisce un cluster ONTAP in locale e fornisce l'accesso ai servizi dati della NetApp Console supportati.
+
+image:diagram-private-mode-onprem.png["Un'immagine concettuale che mostra un data center locale in cui è in esecuzione un agente che fornisce accesso alla console basata sul web, ai servizi dati della NetApp Console e gestisce un AFF cluster in un data center locale."]
+
+
+
+=== Funzionalità e servizi supportati per NetApp Console in modalità privata
+
+La tabella seguente elenca le funzionalità di gestione dello storage, i servizi dati e le funzionalità amministrative disponibili in NetApp Console quando la si installa in modalità privata. Le funzionalità variano a seconda che la NetApp Console venga installata nel cloud o presso la propria sede.
+
+Modalità privata installata nel cloud::
+
+
+[cols="3*"]
 |===
-| Area di prodotto | Servizio o funzionalità dati NetApp | Modalità limitata 
+| Area di prodotto | NetApp service o funzionalità | Agente Console richiesto 
 
 
-.10+| *Archiviazione* Questa parte della tabella elenca il supporto per la gestione dei sistemi di archiviazione dalla Console.  Non indica le destinazioni di backup supportate per NetApp Backup and Recovery. | Amazon FSx per ONTAP | NO 
+.2+| *Gestione dei sistemi di storage* Questa parte della tabella elenca il supporto per la gestione dei sistemi di storage dalla NetApp Console. Non indica le destinazioni di backup supportate per NetApp Backup and Recovery. | Cloud Volumes ONTAP | Sì, ma poiché non c'è accesso a Internet, le seguenti funzionalità non sono disponibili: aggiornamenti software automatici e AutoSupport. 
 
 
-| Amazon S3 | NO 
+ a| 
+Cluster ONTAP on-premise
 
+* Richiede la connettività dal cloud (dove è installato l'agente Console) all'ambiente on-premises.
++
+È necessario disporre di un agente Console installato per individuare i cluster ONTAP locali.
 
-| Blob azzurro | NO 
 
+| È possibile utilizzare la scoperta diretta senza un agente Console, ma è necessario un agente per utilizzare le funzionalità di gestione. 
 
-| Azure NetApp Files | SÌ 
 
+.3+| *Servizi dati*  a| 
+Backup and Recovery
 
-| Cloud Volumes ONTAP | SÌ 
+* In modalità privata, NetApp Backup and Recovery supporta solo il backup e il ripristino dei dati dei volumi ONTAP. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati ONTAP"^] Il backup e il ripristino dei dati delle applicazioni e delle macchine virtuali non sono supportati.
+* Non supportato in Google Cloud o in https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^], https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^], o https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6["Azure IL6"^]
 
+| SÌ 
 
-| Google Cloud NetApp Volumes | NO 
 
+ a| 
+Classificazione NetApp
 
-| Google Cloud Storage | NO 
+* Le uniche fonti di dati supportate sono quelle che puoi individuare localmente. https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#supported-data-sources["Visualizza le origini che puoi scoprire localmente"^]
+* Le funzionalità che richiedono l'accesso outbound a Internet non sono supportate. https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#limitations["Visualizza le limitazioni delle funzionalità"^]
 
+| SÌ 
 
-| Cluster ONTAP on-premise | SÌ 
 
+| NetApp Replication | Sì* (non necessario se si esegue la replica da ONTAP on-premises a ONTAP on-premises) 
 
-| Serie E | NO 
 
+| *Funzionalità del contratto di supporto NetApp* | Nessuno | -- 
 
-| StorageGRID | NO 
 
+.6+| *Funzionalità amministrative* | Revisione contabile | NO 
 
-.9+| *Servizi dati* | Backup e ripristino NetApp | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] 
 
+ a| 
+Gestione di Licenses and subscriptions
 
-| NetApp Data Classification | SÌ 
+* Solo BYOL è supportato con la modalità privata.
++
+Per Cloud Volumes ONTAP BYOL, è supportata solo la licenza basata sui nodi. La licenza basata sulla capacità non è supportata. Poiché non è disponibile una connessione Internet outbound, è necessario caricare manualmente il file di licenza di Cloud Volumes ONTAP nella Console.
 
 
-| NetApp Copy and Sync | NO 
 
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses["Scopri come aggiungere licenze"^]
+| NO 
 
-| NetApp Disaster Recovery | NO 
 
+| Gestione dell'identità e degli accessi | NO 
 
-| NetApp Ransomware Resilience | NO 
 
+| Gestisci le credenziali del provider cloud | NO 
 
-| NetApp Replication | SÌ 
 
+| Modalità di sola lettura | NO 
 
-| NetApp Cloud Tiering | NO 
 
+| Notifiche | NO 
+|===
+Modalità privata installata on-premises::
 
-| Memorizzazione nella cache del volume NetApp | NO 
 
+[cols="3*"]
+|===
+| Area di prodotto | NetApp service o funzionalità | Agente Console richiesto 
 
-| Fabbrica di carichi di lavoro NetApp | NO 
 
+| *Gestione dei sistemi di storage* Questa parte della tabella elenca il supporto per la gestione dei sistemi di storage dalla NetApp Console. Non indica le destinazioni di backup supportate per NetApp Backup and Recovery.  a| 
+Cluster ONTAP on-premise
 
-.14+| *Caratteristiche* | Avvisi | NO 
+* Richiede la connettività dal cloud (dove è installato l'agente Console) all'ambiente on-premises.
++
+È necessario disporre di un agente Console installato per individuare i cluster ONTAP locali.
 
 
-| Digital Advisor | NO 
+| È possibile utilizzare la scoperta diretta senza un agente Console, ma è necessario un agente per utilizzare le funzionalità di gestione. 
 
 
-| Gestione delle licenze e degli abbonamenti | SÌ 
+.3+| *Servizi dati*  a| 
+Backup and Recovery
 
+* In modalità privata, NetApp Backup and Recovery supporta solo il backup e il ripristino dei dati del volume ONTAP. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati ONTAP"^]
+* Il backup e il ripristino dei dati delle applicazioni e dei dati delle macchine virtuali non sono supportati.
 
-| Gestione dell'identità e degli accessi | SÌ 
+| SÌ 
 
 
-| Credenziali | SÌ 
+ a| 
+Classificazione NetApp
 
+* Le uniche fonti di dati supportate sono quelle che puoi individuare localmente. https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#supported-data-sources["Visualizza le origini che puoi scoprire localmente"^]
+* Le funzionalità che richiedono l'accesso outbound a Internet non sono supportate. https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#limitations["Visualizza le limitazioni delle funzionalità"^]
 
-| Federazione | SÌ 
+| SÌ 
 
 
-| Pianificazione del ciclo di vita | NO 
+| NetApp Replication | Sì* (non necessario se si esegue la replica da ONTAP on-premises a ONTAP on-premises) 
 
 
-| Autenticazione multifattoriale | SÌ 
+| *Funzionalità del contratto di supporto NetApp* | Nessuno | N / A 
 
 
-| Conti NSS | SÌ 
+.6+| *Funzionalità amministrative* | Revisione contabile | NO 
 
 
-| Notifiche | SÌ 
+ a| 
+Gestione di Licenses and subscriptions
 
+* Solo BYOL è supportato con la modalità privata.
 
-| Ricerca | SÌ 
+| NO 
 
 
-| Aggiornamenti software | NO 
+| Gestione dell'identità e degli accessi | NO 
 
 
-| Sostenibilità | NO 
+| Gestisci le credenziali del provider cloud | NO 
 
 
-| Revisione contabile | SÌ 
+| Modalità di sola lettura | NO 
+
+
+| Notifiche | NO 
+|===
+
+
+=== Come funziona NetApp Console in modalità privata
+
+NetApp Console funziona come segue in modalità privata:
+
+Comunicazione in uscita:: Non è richiesta alcuna connettività outbound all'applicazione SaaS della Console (dove risiedono endpoint API aggiuntivi). Tutti i pacchetti, le dipendenze e i componenti essenziali sono inclusi nell'agente della Console e forniti dalla macchina locale. La connettività alle risorse pubblicamente disponibili del tuo cloud provider è richiesta solo se stai distribuendo Cloud Volumes ONTAP.
+Posizione supportata per l'agente della NetApp Console:: In modalità privata, l'agente Console è supportato nel cloud o on-premises.
+Aggiornamenti dell'agente della console:: È necessario aggiornare manualmente il software dell'agente della Console. NetApp pubblica il software dell'agente della Console sul NetApp Support Site a intervalli non definiti.
+Accesso all'interfaccia utente:: Gli utenti accedono alla Console dall'agente Console distribuito nella tua regione cloud o on-premises.
+Punto finale dell'API:: Le chiamate API vengono effettuate alla macchina virtuale dell'agente NetApp Console.
+Autenticazione:: L'autenticazione avviene tramite la gestione e l'accesso degli utenti locali. L'autenticazione non avviene tramite il servizio cloud della NetApp Console.
+
+
+
+
+=== Come iniziare con la modalità privata
+
+La modalità privata è disponibile scaricando il programma di installazione "offline" dal sito di supporto NetApp.
+
++ link:task-quick-start-private-mode.html["Scopri come iniziare con la modalità privata"].
+
++ NOTA: se si desidera utilizzare NetApp Console nel https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^] o nel https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^], è necessario seguire istruzioni separate per iniziare in tali ambienti. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html["Scopri come iniziare a usare Cloud Volumes ONTAP in AWS Secret Cloud o Top Secret Cloud"^]
+
+
+
+== NetApp Console confronto tra servizi e funzionalità
+
+Questa tabella mostra quali servizi e funzionalità sono supportati nelle modalità ristrette e private.
+
+
+NOTE: La modalità standard (NetApp Console SaaS application) supporta tutte le funzionalità.
+
+Si noti che alcuni servizi potrebbero essere supportati con limitazioni. Per maggiori dettagli sul supporto di questi servizi in modalità limitata e privata, consultare le sezioni precedenti.
+
+[cols="19,27,27,27"]
+|===
+| Area di prodotto | NetApp service o funzionalità | Modalità limitata | Modalità privata 
+
+
+.10+| *Gestione dei sistemi di storage* Questa tabella mostra quali sistemi di storage è possibile gestire dalla NetApp Console. Non elenca le destinazioni di backup per NetApp Backup and Recovery. | Avvisi | NO | NO 
+
+
+| Amazon FSx per ONTAP | NO | NO 
+
+
+| Amazon S3 | NO | NO 
+
+
+| Blob azzurro | NO | NO 
+
+
+| Azure NetApp Files | SÌ | NO 
+
+
+| Cloud Volumes ONTAP | SÌ | SÌ 
+
+
+| Google Cloud NetApp Volumes | NO | NO 
+
+
+| Google Cloud Storage | NO | NO 
+
+
+| Cluster ONTAP on-premises | SÌ | SÌ 
+
+
+| Serie E | NO | NO 
+
+
+| StorageGRID | NO | NO | Fabbrica del carico di lavoro 
+
+
+| NO | NO .8+| *Servizi dati* | Backup and Recovery 
+
+
+| SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] | Classificazione NetApp 
+
+
+| SÌ | SÌ | Copia e sincronizza 
+
+
+| NO | NO | NetApp Disaster Recovery 
+
+
+| NO | NO | NetApp Ransomware Protection 
+
+
+| NO | NO | NetApp Replication 
+
+
+| SÌ | SÌ | NetApp Cloud Tiering 
+
+
+| NO | NO | NetApp Volume Caching 
+
+
+| NO | NO .4+| *Funzionalità del contratto di supporto NetApp* | Consulente digitale 
+
+
+| NO | NO | Pianificazione del ciclo di vita 
+
+
+| NO | NO | Aggiornamenti software 
+
+
+| NO | NO | Sostenibilità 
+
+
+| NO | NO .9+| *Funzionalità amministrative* | Metriche della dashboard per risorse di storage e servizi dati 
+
+
+| NO | NO | Gestione dell'identità e degli accessi 
+
+
+| SÌ | SÌ | Gestisci le credenziali del provider cloud 
+
+
+| SÌ | SÌ | Federazione 
+
+
+| SÌ | NO | Licenses and subscriptions 
+
+
+| SÌ | SÌ | Autenticazione multifattoriale 
+
+
+| SÌ | NO | Conti NSS 
+
+
+| SÌ | NO | Partnership organizzative 
+
+
+| SÌ | NO | Modalità di sola lettura 
+
+
+| NO | NO | Notifiche | SÌ 
+
+
+| NO | Revisione contabile | SÌ | SÌ 
 |===

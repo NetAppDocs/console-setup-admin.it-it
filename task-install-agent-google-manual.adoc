@@ -406,7 +406,7 @@ Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al suppor
 
 
  a| 
-\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 Per fornire funzionalità e servizi all'interno della NetApp Console.
 
@@ -574,6 +574,7 @@ Prima di poter distribuire un agente Console in Google Cloud, è necessario abil
 .Fare un passo
 . Abilita le seguenti API di Google Cloud nel tuo progetto:
 +
+** API Cloud Build (necessaria per le distribuzioni Cloud Volumes ONTAP in modalità privata tramite Infrastructure Manager)
 ** API di Cloud Deployment Manager V2
 ** API di Cloud Infrastructure Manager
 ** API di registrazione cloud
@@ -630,6 +631,13 @@ Se non si rimuovono queste variabili di sistema, l'installazione fallirà.
 +
 Scegli di scaricare i file di installazione dell'agente o un URL ai file.
 
+
+
++
+
+NOTE: Scarica il programma di installazione dell'agente "online" pensato per l'utilizzo nella tua rete o nel cloud. È disponibile un programma di installazione "offline" separato per l'agente Console, ma è supportato solo con distribuzioni in modalità privata.
+
++
 ** Sito di supporto NetApp (necessario se non si ha già accesso alla console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Sito di supporto NetApp"^] ,
 
 

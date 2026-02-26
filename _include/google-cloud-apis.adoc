@@ -2,6 +2,7 @@
 :allow-uri-read: 
 
 
+* API Cloud Build (necessaria per le distribuzioni Cloud Volumes ONTAP in modalità privata tramite Infrastructure Manager)
 * API di Cloud Deployment Manager V2
 * API di Cloud Infrastructure Manager
 * API di registrazione cloud
