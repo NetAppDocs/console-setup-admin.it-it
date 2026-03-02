@@ -108,6 +108,7 @@ Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono
         "cloudformation:CreateStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "cloudformation:DeleteStack",
         "iam:PassRole",
@@ -405,6 +406,7 @@ Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "s3:GetObject",
         "s3:ListBucket",
@@ -549,6 +551,7 @@ Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "iam:PassRole",
         "iam:CreateRole",
@@ -668,6 +671,7 @@ Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "iam:PassRole",
         "iam:CreateRole",
@@ -882,7 +886,7 @@ Sono necessarie solo le seguenti autorizzazioni se sono state abilitate le funzi
 
 
 
-=== Classificazione dei dati
+=== NetApp Data Classification
 
 L'agente effettua le seguenti richieste API per distribuire NetApp Data Classification:
 
