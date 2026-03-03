@@ -328,7 +328,7 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | config.deployments.deleteState | NO | NO | SÌ 
 
 
-| config.deployments.get | NO | SÌ | NO 
+| config.deployments.get | NO | SÌ | SÌ 
 
 
 | config.deployments.getLock | NO | SÌ | NO 
