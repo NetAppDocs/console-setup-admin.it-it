@@ -122,7 +122,7 @@ La Console visualizza la versione nella parte superiore della pagina.
 
 
 
-== Verifica l'accesso alla rete
+== Verificare l'accesso alla rete e alla porta per l'agente Console
 
 Assicurarsi che l'agente della console disponga dell'accesso alla rete necessario.link:reference-networking-saas-console.html["Scopri di più sui punti di accesso alla rete richiesti."]
 
@@ -130,7 +130,7 @@ Assicurarsi che l'agente della console disponga dell'accesso alla rete necessari
 
 === Eseguire controlli di configurazione sull'agente Console
 
-Eseguire controlli di configurazione sugli agenti della Console dalla Console o dalla console di manutenzione dell'agente per assicurarsi che siano connessi.
+Eseguire controlli di configurazione sugli agenti della Console dalla Console o dalla console di manutenzione dell'agente per assicurarsi che possano accedere agli endpoint richiesti e che le porte richieste siano aperte.
 
 È anche possibile eseguire controlli di configurazione utilizzando la console di manutenzione dell'agente.link:reference-agent-maint-console-config-checker.html["Scopri di più sull'utilizzo del comando config-checker validate."]
 

@@ -4391,7 +4391,6 @@
   <block id="23fc9bc00056f19d24e4c3ab8b5ca0c6" category="paragraph">Visualizza la versione dell'agente della console per confermare l'aggiornamento o condividila con il tuo rappresentante NetApp .</block>
   <block id="b9b50a4a67814c748f85c0dd361e7931" category="list-text">Selezionare *Amministrazione &gt; Supporto &gt; Agenti*.</block>
   <block id="b8833ad6a19536ecd8aef7620db4ddce" category="paragraph">La Console visualizza la versione nella parte superiore della pagina.</block>
-  <block id="fb2564b7b05cf68b7b51fea5098120fd" category="section-title">Verifica l'accesso alla rete</block>
   <block id="021662795bfc95f525aded11ea0f47b7" category="inline-link-macro">Scopri di più sui punti di accesso alla rete richiesti.</block>
   <block id="532483dbc5894a7da7a4dd2c7f9b4e0e" category="paragraph">Assicurarsi che l'agente della console disponga dell'accesso alla rete necessario.<block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block></block>
   <block id="3b2256fce45383ccea4ebfc8f456dcf9" category="section-title">Problemi di installazione dell'agente della console</block>
@@ -5052,7 +5051,6 @@
   <block id="11d2b70f92f5671a073ee7f95edbc568" category="paragraph">IL<block ref="2df2419e3b3e4992394516227a5f4a71" prefix=" " category="inline-code"></block> Il comando consente di convalidare la configurazione di un agente Console.</block>
   <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">Parametri</block>
   <block id="bb9f0d8e73ffa6630952dc1ecc6cd9de" category="paragraph"><block ref="6a11199e55b0cb53d751c5170e5f74f9" prefix="" category="inline-code"></block>--*NECESSARIO*--</block>
-  <block id="69dfddf838a2ddd2939ee5adc69cb83c" category="paragraph">Scegli uno o più servizi da convalidare.  I nomi di servizio validi sono:<block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block> che convalida la connettività di rete agli endpoint della console richiesti.</block>
   <block id="1fde504b28ae1c1b6dbb99c104b00a85" category="paragraph"><block ref="693f786102104e01b7396235926fc506" prefix="" category="inline-code"></block>--*OBBLIGATORIO*-- Scegliere uno o più tipi di convalida da eseguire.  I tipi di convalida validi sono: *<block ref="25835188a2355e9530d3a10fcbe4c65b" prefix=" " category="inline-code"></block> che convalida la connettività di rete agli endpoint della console richiesti.</block>
   <block id="b3c3244f084b65704359870cc6488d93" category="paragraph"><block ref="f2d537814e28e44e0e35d5b4ce13cadb" prefix="" category="inline-code"></block>--*OPZIONALE*--</block>
   <block id="d076e244720434cf026cb278c7f19d8e" category="paragraph">Specifica l'URL del server proxy da utilizzare per la convalida.  Obbligatorio se l'agente è configurato per utilizzare un server proxy.</block>
@@ -5231,7 +5229,6 @@
   <block id="5d3a908b240fe98ac0740455635b4cc0" category="list-text">Se i problemi persistono, contatta l'assistenza.</block>
   <block id="13ab9425db1c4ad9c7ca529999f6de24" category="list-text">Verificare che l'agente abbia accesso in uscita agli endpoint richiesti.<block ref="c7fe41b97889c23a57defbbf2129845e" category="inline-link-macro-rx"></block></block>
   <block id="61af83c0a45998dc351428765c46fa2e" category="section-title">Eseguire controlli di configurazione sull'agente Console</block>
-  <block id="764bd6d2ae27e2401a34b6a482fc62d3" category="paragraph">Eseguire controlli di configurazione sugli agenti della Console dalla Console o dalla console di manutenzione dell'agente per assicurarsi che siano connessi.</block>
   <block id="cb4e992a592d7b26e6c218cdde9ee1b5" category="inline-link-macro">Scopri di più sull'utilizzo del comando config-checker validate.</block>
   <block id="adbf5b321ab6472093079a96d92216c2" category="paragraph">È anche possibile eseguire controlli di configurazione utilizzando la console di manutenzione dell'agente.<block ref="714b5c6de8ffee7e082263b89290e9dc" category="inline-link-macro-rx"></block></block>
   <block id="2c8b526b02d94d86279aebb87311c90d" category="admonition">È possibile convalidare solo gli agenti che hanno lo stato *Connesso*.</block>
@@ -6128,4 +6125,16 @@
   <block id="d9f6b701b4e6e8fa39df2310070b5bad" category="sidebar">Inizia con NetApp Console (modalità privata)</block>
   <block id="cc1e97b9fe18a374eacd6937d0fd1f20" category="sidebar">Flusso di lavoro iniziale per la modalità privata</block>
   <block id="68874f436c529f1931417d4bdfb1c183" category="cell">5.0.3 (2 marzo 2026)</block>
+  <block id="dd340069cb16665edf781618805f1165" category="doc">Console agent 4.5.0</block>
+  <block id="de3b44fa9f294325dd837b3f15773cd6" category="paragraph">La versione 4.5.0 supporta sia la modalità standard che la modalità limitata.</block>
+  <block id="8d40f2642d0505b33483f580f9515a11" category="paragraph">Questa versione dell'agente Console include miglioramenti della sicurezza e correzioni di bug, oltre alla seguente nuova funzionalità.</block>
+  <block id="b8ea9a14287592fd39444f5f11f22b28" category="paragraph-title">Supporto per i controlli di configurazione sulle porte richieste</block>
+  <block id="e6aa0876ac72372fe4102974fad02f9e" category="inline-link-macro">Scopri di più sull'esecuzione dei controlli di configurazione sull'agente Console.</block>
+  <block id="8fab8f63a86cd4593eb84501e6b42574" category="paragraph">È possibile verificare che le porte richieste per l'agente della Console siano aperte utilizzando i controlli di configurazione. È possibile eseguire i controlli di configurazione dalla Console o dalla console di manutenzione dell'agente. <block ref="b6bcdf4dfaf7604bd81efc4009e39859" category="inline-link-macro-rx"></block></block>
+  <block id="2de08c251ba5c647be79f6b565692ba4" category="section-title">Amministrazione della console</block>
+  <block id="2bdd9842a1d8845c8d1b9f13695c4ac5" category="inline-link-macro">Scopri di più sull'assegnazione dei ruoli Keystone agli utenti partner.</block>
+  <block id="f932e5731af0b28e3d04131c77f23704" category="paragraph">È possibile assegnare ruoli Keystone agli utenti partner per consentire loro di gestire le risorse Keystone in un'organizzazione partner. <block ref="37c7e4a6dbebd9961095310c537fa832" category="inline-link-macro-rx"></block></block>
+  <block id="89c004a6a6a30c4e3297ce59ad9244fe" category="paragraph">Scegli uno o più servizi da convalidare. I nomi dei servizi validi sono: <block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block> che convalidano la connettività di rete agli endpoint richiesti della Console e se le porte richieste sono aperte per l'agente della Console.</block>
+  <block id="81e25f5172548cbe6ade4ab58b86b791" category="section-title">Verificare l'accesso alla rete e alla porta per l'agente Console</block>
+  <block id="79809c4a6f04cdeb09f4ec1df49c2f33" category="paragraph">Eseguire controlli di configurazione sugli agenti della Console dalla Console o dalla console di manutenzione dell'agente per assicurarsi che possano accedere agli endpoint richiesti e che le porte richieste siano aperte.</block>
 </blocks>

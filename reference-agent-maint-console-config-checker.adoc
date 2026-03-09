@@ -39,7 +39,7 @@ IL `config-checker validate` Il comando consente di convalidare la configurazion
 `--services <comma-separated list of services to validate>`--*NECESSARIO*--
 
 [role="quick-margin-para"]
-Scegli uno o più servizi da convalidare.  I nomi di servizio validi sono:*`PLATFORM` che convalida la connettività di rete agli endpoint della console richiesti.
+Scegli uno o più servizi da convalidare. I nomi dei servizi validi sono: *`PLATFORM` che convalidano la connettività di rete agli endpoint richiesti della Console e se le porte richieste sono aperte per l'agente della Console.
 
 `--validationTypes <comma-separated list validation types to run>`--*OBBLIGATORIO*-- Scegliere uno o più tipi di convalida da eseguire.  I tipi di convalida validi sono: * `NETWORK` che convalida la connettività di rete agli endpoint della console richiesti.
 

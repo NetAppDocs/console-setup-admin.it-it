@@ -43,6 +43,8 @@ Puoi gestire i ruoli dei membri delle organizzazioni partner nello stesso modo i
 * link:reference-iam-disaster-rec-roles.html["Visualizzatore di ripristino di emergenza"]
 * link:reference-iam-storage-roles.html["Analista di supporto alle operazioni"]
 * link:reference-iam-predefined-roles.html["Visualizzatore di classificazione"]
+* link:reference-iam-keystone-roles.html["Amministratore Keystone"]
+* link:reference-iam-keystone-roles.html["Visualizzatore Keystone"]
 
 
 link:reference-iam-predefined-roles.html["Scopri di più sui ruoli predefiniti"]
