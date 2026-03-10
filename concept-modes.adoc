@@ -347,7 +347,7 @@ Per Cloud Volumes ONTAP, con BYOL sono supportate sia le licenze basate sulla ca
 | Partnership organizzative | NO 
 
 
-| Modalità di sola lettura | NO 
+| Modalità di sola lettura | SÌ 
 
 
 | Notifiche | NO 
@@ -579,7 +579,7 @@ Si noti che alcuni servizi potrebbero essere supportati con limitazioni. Per mag
 | Area di prodotto | NetApp service o funzionalità | Modalità limitata | Modalità privata 
 
 
-.10+| *Gestione dei sistemi di storage* Questa tabella mostra quali sistemi di storage è possibile gestire dalla NetApp Console. Non elenca le destinazioni di backup per NetApp Backup and Recovery. | Avvisi | NO | NO 
+.12+| *Gestione dei sistemi di storage* Questa tabella mostra quali sistemi di storage è possibile gestire dalla NetApp Console. Non elenca le destinazioni di backup per NetApp Backup and Recovery. | Avvisi | NO | NO 
 
 
 | Amazon FSx per ONTAP | NO | NO 
@@ -609,74 +609,74 @@ Si noti che alcuni servizi potrebbero essere supportati con limitazioni. Per mag
 | Serie E | NO | NO 
 
 
-| StorageGRID | NO | NO | Fabbrica del carico di lavoro 
+| StorageGRID | NO | NO 
 
 
-| NO | NO .8+| *Servizi dati* | Backup and Recovery 
+| Fabbrica del carico di lavoro | NO | NO 
 
 
-| SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] | Classificazione NetApp 
+.8+| *Servizi dati* | Backup and Recovery | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] 
 
 
-| SÌ | SÌ | Copia e sincronizza 
+| Classificazione NetApp | SÌ | SÌ 
 
 
-| NO | NO | NetApp Disaster Recovery 
+| Copia e sincronizza | NO | NO 
 
 
-| NO | NO | NetApp Ransomware Protection 
+| NetApp Disaster Recovery | NO | NO 
 
 
-| NO | NO | NetApp Replication 
+| NetApp Ransomware Protection | NO | NO 
 
 
-| SÌ | SÌ | NetApp Cloud Tiering 
+| NetApp Replication | SÌ | SÌ 
 
 
-| NO | NO | NetApp Volume Caching 
+| NetApp Cloud Tiering | NO | NO 
 
 
-| NO | NO .4+| *Funzionalità del contratto di supporto NetApp* | Consulente digitale 
+| NetApp Volume Caching | NO | NO 
 
 
-| NO | NO | Pianificazione del ciclo di vita 
+.4+| *Funzionalità del contratto di supporto NetApp* | Consulente digitale | NO | NO 
 
 
-| NO | NO | Aggiornamenti software 
+| Pianificazione del ciclo di vita | NO | NO 
 
 
-| NO | NO | Sostenibilità 
+| Aggiornamenti software | NO | NO 
 
 
-| NO | NO .9+| *Funzionalità amministrative* | Metriche della dashboard per risorse di storage e servizi dati 
+| Sostenibilità | NO | NO 
 
 
-| NO | NO | Gestione dell'identità e degli accessi 
+.9+| *Funzionalità amministrative* | Metriche della dashboard per risorse di storage e servizi dati | NO | NO 
 
 
-| SÌ | SÌ | Gestisci le credenziali del provider cloud 
+| Gestione dell'identità e degli accessi | SÌ | SÌ 
 
 
-| SÌ | SÌ | Federazione 
+| Gestisci le credenziali del provider cloud | SÌ | SÌ 
 
 
-| SÌ | NO | Licenses and subscriptions 
+| Federazione | SÌ | NO 
 
 
-| SÌ | SÌ | Autenticazione multifattoriale 
+| Licenses and subscriptions | SÌ | SÌ 
 
 
-| SÌ | NO | Conti NSS 
+| Autenticazione multifattoriale | SÌ | NO 
 
 
-| SÌ | NO | Partnership organizzative 
+| Conti NSS | SÌ | NO 
 
 
-| SÌ | NO | Modalità di sola lettura 
+| Partnership organizzative | SÌ | NO 
 
 
-| NO | NO | Notifiche | SÌ 
+| Modalità di sola lettura | SÌ | NO 
 
 
-| NO | Revisione contabile | SÌ | SÌ 
+| Notifiche | SÌ | NO | Revisione contabile 
 |===
