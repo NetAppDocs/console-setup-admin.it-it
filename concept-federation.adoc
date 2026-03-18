@@ -56,7 +56,6 @@ NetApp supporta i seguenti protocolli e provider di identità per la federazione
 
 .Protocolli
 * link:task-federation-adfs.html["Servizi federativi di Active Directory (AD FS)"]
-* link:task-federation-entra-id.html["ID di accesso Microsoft"]
 * link:link:task-federation-saml.html["Provider di identità Security Assertion Markup Language (SAML)"]
 
 
