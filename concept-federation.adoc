@@ -55,13 +55,14 @@ NOTE: Se in precedenza hai configurato la federazione utilizzando NetApp Cloud C
 NetApp supporta i seguenti protocolli e provider di identità per la federazione:
 
 .Protocolli
-* Provider di identità Security Assertion Markup Language (SAML)
-* Servizi federativi di Active Directory (AD FS)
+* link:task-federation-adfs.html["Servizi federativi di Active Directory (AD FS)"]
+* link:task-federation-entra-id.html["ID di accesso Microsoft"]
+* link:link:task-federation-saml.html["Provider di identità Security Assertion Markup Language (SAML)"]
 
 
 .Fornitori di identità
-* ID di accesso Microsoft
-* PingFederate
+* link:task-federation-entra-id.html["ID di accesso Microsoft"]
+* link:task-federation-ping.html["PingFederate"]
 
 
 
@@ -91,11 +92,3 @@ Testa la tua connessione federata prima di abilitarla. Utilizzare l'opzione di t
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Tre"]Abilita la tua connessione nella Console
 [role="quick-margin-para"]
 Dopo aver abilitato la connessione, gli utenti potranno accedere alla Console utilizzando le proprie credenziali aziendali.
-
-Per iniziare, rivedi l'argomento relativo al tuo protocollo o IdP:
-
-* link:task-federation-adfs.html["Impostare una connessione federata con AD FS"]
-* link:task-federation-entra-id.html["Imposta una connessione federata con Microsoft Entra ID"]
-* link:task-federation-ping.html["Imposta una connessione federata con PingFederate"]
-* link:task-federation-saml.html["Impostare una connessione federata con un provider di identità SAML"]
-

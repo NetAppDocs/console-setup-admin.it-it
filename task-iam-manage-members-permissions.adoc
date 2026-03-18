@@ -27,7 +27,7 @@ NetApp Console utilizza il controllo degli accessi basato sui ruoli (RBAC) per g
 
 Tenere presente quanto segue in merito alla concessione dell'accesso nella NetApp Console:
 
-* Tutti gli utenti devono prima registrarsi alla NetApp Console prima di poter ottenere l'accesso alle risorse
+* Tutti gli utenti devono prima registrarsi alla NetApp Console prima di poter ottenere l'accesso alle risorse.
 * È necessario assegnare esplicitamente un ruolo a ciascun utente nella Console prima che possa accedere alle risorse, anche se è membro di un gruppo federato a cui è stato assegnato un ruolo.
 * È possibile aggiungere account di servizio direttamente dalla Console e assegnare loro ruoli.
 
@@ -135,11 +135,13 @@ La console mostra il segreto del client solo una volta. Copialo in modo sicuro: 
 
 Puoi aggiungere un gruppo federato dal tuo provider di identità (IdP) alla tua organizzazione e assegnargli uno o più ruoli. I membri del gruppo federato ereditano i ruoli assegnati al gruppo nella Console.
 
+
+IMPORTANT: Quando aggiungi un gruppo federato alla Console e gli assegni un ruolo, solo gli utenti che sono membri del gruppo nel tuo IdP e che si sono già registrati alla NetApp Console e a cui è stato esplicitamente assegnato un ruolo nella Console possono accedere alle risorse. NetApp consiglia di assegnare a questi utenti un ruolo di accesso minimo, come Organization viewer.
+
 Prima di poter assegnare un ruolo a un gruppo federato, assicurati di aver soddisfatto i seguenti requisiti:
 
 * Imposta la federazione tra il tuo IdP e la Console. link:concept-federation.html["Scopri come impostare una federazione."]
 * Il gruppo deve già esistere nel tuo IdP e deve avere accesso all'app Console.
-* Gli utenti appartenenti al gruppo devono essersi già registrati alla NetApp Console e aver ricevuto un ruolo esplicito nella Console. NetApp consiglia di assegnare un ruolo di accesso minimo, ad esempio Visualizzatore dell'organizzazione.
 
 
 .Passi
