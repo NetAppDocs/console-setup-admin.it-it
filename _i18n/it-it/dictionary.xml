@@ -6132,4 +6132,5 @@
   <block id="1bbaa3de74e15060c4e8eab23f5e562e" category="list-text"><block ref="1bbaa3de74e15060c4e8eab23f5e562e" category="inline-link-macro-rx"></block></block>
   <block id="fa05cdec48b95e7a466d56fb898a127b" category="admonition">Quando aggiungi un gruppo federato alla Console e gli assegni un ruolo, solo gli utenti che sono membri del gruppo nel tuo IdP e che si sono già registrati alla NetApp Console e a cui è stato esplicitamente assegnato un ruolo nella Console possono accedere alle risorse. NetApp consiglia di assegnare a questi utenti un ruolo di accesso minimo, come Organization viewer.</block>
   <block id="e40a26e15c2c65355aa43c03560cc632" category="list-text">Tutti gli utenti devono prima registrarsi alla NetApp Console prima che possa essere loro concesso l’accesso alle risorse, anche se fanno parte di un gruppo federato.</block>
+  <block id="34df2c4da19b4e31f0349125e9cabfc7" category="section-title">10 marzo 2026</block>
 </blocks>
