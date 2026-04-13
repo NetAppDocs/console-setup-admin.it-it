@@ -4,7 +4,7 @@ permalink: reference-agent-maint-console-config-checker.html
 keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
 summary: 'È possibile utilizzare la console di manutenzione dell"agente Console per configurare un agente Console in modo che utilizzi un server proxy trasparente.' 
 ---
-= Convalida dell'agente con la console di manutenzione
+= Convalida dell'agente della console con la console di manutenzione in NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -39,9 +39,19 @@ IL `config-checker validate` Il comando consente di convalidare la configurazion
 `--services <comma-separated list of services to validate>`--*NECESSARIO*--
 
 [role="quick-margin-para"]
-Scegli uno o più servizi da convalidare. I nomi dei servizi validi sono: *`PLATFORM` che convalidano la connettività di rete agli endpoint richiesti della Console e se le porte richieste sono aperte per l'agente della Console.
+Seleziona uno o più servizi da convalidare. I nomi dei servizi validi sono:
 
-`--validationTypes <comma-separated list validation types to run>`--*OBBLIGATORIO*-- Scegliere uno o più tipi di convalida da eseguire.  I tipi di convalida validi sono: * `NETWORK` che convalida la connettività di rete agli endpoint della console richiesti.
+*`PLATFORM`che convalida la connettività di rete agli endpoint della Console richiesti, nonché se le porte necessarie sono aperte per l'agente della Console.
+
+`--validationTypes <comma-separated list validation types to run>` --*OBBLIGATORIO*-- Scegli uno o più tipi di convalida da eseguire. I tipi di convalida validi sono:
+
+* `NETWORK`che convalida la connettività di rete agli endpoint Console richiesti.
+* `HARDWARE`che convalida che l'host dell'agente soddisfa i requisiti hardware minimi per l'agente della Console.
++
+
+NOTE: Durante l'installazione, NetApp verifica che l'host dell'agente disponga di almeno l'80% dello spazio su disco totale disponibile, che include 48 GB in `/opt` e 32 GB in `/var` (80 GB totali). Dopo l'installazione, è necessario che rimanga disponibile almeno il 20% dello spazio su disco totale, che include 12 GB in `/opt` e 8 GB in `/var` (20 GB totali).
+
+
 
 `--proxy <url>`--*OPZIONALE*--
 
@@ -57,20 +67,22 @@ Specifica il percorso di uno o più file di certificato da utilizzare per la con
 
 === Esempi di convalida del controllo di configurazione
 
-.Validazione di base:
+Gli esempi seguenti includono la convalida della connettività di rete, delle porte richieste e dei requisiti hardware, insieme a diverse combinazioni di utilizzo di un proxy server e certificati personalizzati.
+
+.Validazione della connettività di rete e dei requisiti hardware:
 [source, cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE
 ----
 .Convalida in cui viene utilizzato un server proxy per l'agente:
 [source, cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --proxy http://proxy.company.com:8080
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE --proxy http://proxy.company.com:8080
 ----
 .Convalida in cui viene utilizzato un certificato per l'agente:
 [source, cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --certs /path/to/cert1.pem,/path/to/cert2.pem
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE --certs /path/to/cert1.pem,/path/to/cert2.pem
 ----
 
 

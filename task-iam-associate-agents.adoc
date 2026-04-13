@@ -18,6 +18,9 @@ Associare gli agenti della console a progetti specifici per abilitare la gestion
 
 I super amministratori e gli amministratori dell'organizzazione possono creare agenti e associare qualsiasi agente a qualsiasi progetto o cartella. Gli amministratori di cartelle o progetti possono associare gli agenti esistenti solo alle cartelle e ai progetti per i quali dispongono delle autorizzazioni. link:reference-iam-predefined-roles.html["Scopri di più sulle azioni che un _amministratore di cartella o di progetto_ può completare"].
 
+
+NOTE: Gli utenti con il ruolo di amministratore dell'organizzazione possono aggiungere risorse alla cartella per delegare l'attività di associazione della risorsa ai progetti agli amministratori della cartella o del progetto in questione. link:task-iam-manage-folders-projects.html#associate-resource-folder["Scopri come associare una risorsa a una cartella"].
+
 .Passi
 . Selezionare *Amministrazione > Identità e accesso* > *Agenti*.
 . Nella tabella, trova l'agente Console che desideri associare.

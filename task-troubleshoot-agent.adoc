@@ -122,17 +122,17 @@ La Console visualizza la versione nella parte superiore della pagina.
 
 
 
-== Verificare l'accesso alla rete e alla porta per l'agente Console
+== Verificare che l'agente della console soddisfi i requisiti
 
-Assicurarsi che l'agente della console disponga dell'accesso alla rete necessario.link:reference-networking-saas-console.html["Scopri di più sui punti di accesso alla rete richiesti."]
+Gli agenti della console richiedono l'accesso a determinati endpoint di rete, devono avere diverse porte aperte e devono soddisfare specifici requisiti hardware. È possibile verificare che l'agente della console soddisfi tali requisiti dalla Console o utilizzando la agent maintenance console.
 
+link:reference-networking-saas-console.html["Scopri di più sui punti di accesso alla rete richiesti."] link:
 
+Durante l'installazione, NetApp verifica che l'host dell'agente disponga di almeno l'80% dello spazio su disco totale disponibile, che include 48 GB in `/opt` e 32 GB in `/var` (80 GB totali). Dopo l'installazione, è necessario che rimanga disponibile almeno il 20% dello spazio su disco totale, che include 12 GB in `/opt` e 8 GB in `/var` (20 GB totali).
 
-=== Eseguire controlli di configurazione sull'agente Console
+link:reference-networking-saas-console.html["Scopri di più sui punti di accesso alla rete richiesti."] link:
 
-Eseguire controlli di configurazione sugli agenti della Console dalla Console o dalla console di manutenzione dell'agente per assicurarsi che possano accedere agli endpoint richiesti e che le porte richieste siano aperte.
-
-È anche possibile eseguire controlli di configurazione utilizzando la console di manutenzione dell'agente.link:reference-agent-maint-console-config-checker.html["Scopri di più sull'utilizzo del comando config-checker validate."]
+È inoltre possibile eseguire controlli di convalida utilizzando la console di manutenzione dell'agente. link:reference-agent-maint-console-config-checker.html["Scopri di più sull'utilizzo del comando config-checker validate."]
 
 
 NOTE: È possibile convalidare solo gli agenti che hanno lo stato *Connesso*.

@@ -1,0 +1,171 @@
+---
+sidebar: sidebar 
+permalink: concept-agent-install-options.html 
+keywords: install agent, deployment method, console install, marketplace install, manual install, ova install, vcenter install, installation options, 
+summary: 'Distribuisci un agente Console utilizzando la NetApp Console, il marketplace del tuo cloud provider o installando manualmente il software su un host Linux. Il metodo di distribuzione determina il tuo controllo sull"host e la velocità con cui puoi iniziare' 
+---
+= Scegliere un metodo di distribuzione dell'agente della console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Distribuisci un agente Console utilizzando la NetApp Console, il marketplace del tuo cloud provider o installando manualmente il software su un host Linux. Il metodo di distribuzione determina il controllo sull'host e la rapidità con cui puoi iniziare.
+
+Per le implementazioni cloud, è possibile distribuire un agente su Amazon Web Services (AWS), Microsoft Azure o Google Cloud.
+
+
+
+== Distribuisci dalla NetApp Console
+
+NetApp consiglia di eseguire il deployment dalla NetApp Console quando si utilizza la modalità standard. La NetApp Console guida l'utente attraverso la configurazione della rete e delle autorizzazioni, quindi avvia automaticamente la VM o l'istanza nel cloud provider. La Console guida l'utente attraverso la configurazione della rete e delle autorizzazioni, quindi avvia automaticamente la VM o l'istanza nel cloud provider.
+
+Scegli questo metodo quando:
+
+* Stai eseguendo il deployment in un ambiente cloud standard con accesso a Internet in uscita outbound.
+* Desideri il percorso più rapido per avere un agente funzionante con la minima configurazione manuale.
+
+
+[cols="47,47"]
+|===
+| Vantaggi | Svantaggi 
+
+
+ a| 
+* Configurazione guidata: la Console gestisce la creazione della macchina virtuale, l'installazione del software e la registrazione iniziale in un unico flusso di lavoro
+* Applica automaticamente l'immagine e la configurazione della macchina virtuale corrette
+* Il minor numero di passaggi manuali rispetto a qualsiasi altro metodo di deployment cloud
+
+ a| 
+* Non disponibile per ambienti on-premises, in modalità limitata o air-gapped
+
+
+|===
+link:task-install-agent-aws-console.html["Distribuisci un agente della Console in AWS dalla Console"] link:task-install-agent-azure-console.html["Distribuisci un agente della Console in Azure dalla Console"] link:task-install-agent-google-console-gcloud.html["Distribuisci un agente della Console in Google Cloud dalla Console"]
+
+
+
+== Distribuisci dal marketplace di un cloud provider
+
+La distribuzione tramite AWS Marketplace o Azure Marketplace avvia l'installazione dell'agente direttamente dal marketplace, non dalla NetApp Console.
+
+
+NOTE: In Google Cloud è disponibile un'opzione equivalente al marketplace, utilizzando gli strumenti di Google Cloud (gcloud CLI o Google Cloud console) anziché una tradizionale inserzione sul marketplace.
+
+Scegli questo metodo quando:
+
+* La vostra organizzazione richiede che tutto il software cloud venga acquistato tramite il marketplace.
+* Preferisci avviare le distribuzioni dall'interfaccia del tuo cloud provider anziché dalla NetApp Console.
+
+
+[cols="47,47"]
+|===
+| Vantaggi | Svantaggi 
+
+
+ a| 
+* Interfaccia di distribuzione familiare per i team che già lavorano nella console del cloud provider
+
+ a| 
+* La distribuzione viene avviata al di fuori della NetApp Console, quindi il flusso di lavoro guidato non è disponibile
+
+
+|===
+link:task-install-agent-aws-marketplace.html["Distribuisci un agente Console in AWS dal marketplace"] link:task-install-agent-azure-marketplace.html["Distribuisci un agente Console in Azure dal marketplace"] link:task-install-agent-google-gcloud.html["Distribuisci un agente Console in Google Cloud utilizzando gli strumenti di Google Cloud"]
+
+
+
+== Installazione manuale su un host Linux nel cloud
+
+L'installazione manuale consente di installare il software dell'agente Console direttamente su un host Linux fornito e gestito dall'utente in AWS, Azure, Google Cloud o in locale.
+
+Scegli questo metodo quando:
+
+* È necessario eseguire il deployment in un ambiente con modalità limitata o privata, senza accesso outbound a Internet.
+* La vostra organizzazione richiede che tutto il software venga installato su host pre-approvati e gestiti internamente.
+
+
+[cols="47,47"]
+|===
+| Vantaggi | Svantaggi 
+
+
+ a| 
+* Supporta ambienti con accesso outbound a Internet limitato (modalità ristretta o modalità privata)
+* Gli aggiornamenti vengono gestiti automaticamente quando l'agente della console ha accesso a Internet
+
+ a| 
+* La maggior parte dei passaggi di qualsiasi metodo di implementazione. È necessario preparare l'host, installare Podman o Docker, configurare la rete, installare il software e fornire manualmente le autorizzazioni
+* * La distribuzione viene avviata al di fuori della NetApp Console, pertanto il flusso di lavoro guidato non è disponibile
+
+
+|===
+link:task-install-agent-aws-manual.html["Installare manualmente un agente Console in AWS"] link:task-install-agent-azure-manual.html["Installare manualmente un agente Console in Azure"] link:task-install-agent-google-manual.html["Installare manualmente un agente Console in Google Cloud"]
+
+
+
+== Installazione manuale in locale tramite VCenter (OVA)
+
+Se si utilizza VMware VCenter, è possibile distribuire l'agente Console importando un file OVA (Open Virtual Appliance). L'OVA è un'immagine di macchina virtuale preconfigurata che viene distribuita con il vSphere client, senza installare Linux o configurare un container runtime.
+
+Scegli questo metodo quando:
+
+* Stai eseguendo la distribuzione in locale in un ambiente VMware.
+* Desideri un'installazione locale più semplice che richieda meno manutenzione e configurazione di Linux.
+
+
+
+NOTE: Non è possibile gestire le risorse di Google Cloud da un agente della Console locale. Per gestire le risorse di Google Cloud, installare l'agente in Google Cloud.
+
+[cols="47,47"]
+|===
+| Vantaggi | Svantaggi 
+
+
+ a| 
+* Installazione locale più semplice, senza necessità di configurare Linux o l'ambiente di runtime dei container
+* Solo on-premises; non disponibile per implementazioni cloud
+* Include una console di manutenzione basata su menu per le attività di manutenzione degli agenti
+* Flusso di lavoro di implementazione familiare per gli amministratori VMware
+* * L'immagine VM preconfigurata aiuta a prevenire errori e rende la manutenzione più semplice
+
+ a| 
+* Richiede vCenter; non può essere installato direttamente su un host ESXi bare
+
+
+|===
+link:task-install-agent-on-prem-ova.html["Distribuisci on-premises utilizzando VCenter"]
+
+
+
+== Installazione manuale in locale (senza vCenter)
+
+È possibile installare manualmente l'agente Console su qualsiasi host Linux locale. È necessario configurare l'host Linux e l'ambiente di runtime dei container (Docker o Podman), quindi installare l'agente Console.
+
+Scegli questo metodo quando:
+
+* Stai eseguendo la distribuzione in locale e non disponi di un ambiente VMware VCenter.
+* Hai familiarità con l'amministrazione di Linux e desideri gestire autonomamente l'host sottostante.
+* Si desidera controllare quando viene aggiornato l'agente della Console.
+
+
+[cols="47,47"]
+|===
+| Vantaggi | Svantaggi 
+
+
+ a| 
+* Funziona su qualsiasi hardware locale o piattaforma VM compatibile con Linux, senza bisogno di VMware
+* Supporta implementazioni in modalità privata (air-gapped) senza accesso outbound a Internet
+
+ a| 
+* È necessario saper usare Linux e configurare Docker o Podman autonomamente
+* È tua responsabilità applicare manualmente gli aggiornamenti all'agente della Console quando vengono rilasciate nuove versioni
+
+
+|===
+link:task-install-agent-on-prem.html["Installazione manuale in locale"]

@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: faq-iam-netapp-console.html 
+keywords: faq, frequently asked questions, frequently asked questions about netapp console iam, identity and access management, role-based access control, rbac, iam, roles, permissions, organization, folders, projects, members, agents, service accounts, federated groups 
+summary: Domande frequenti sulla gestione delle identità e degli accessi e sul controllo degli accessi in base al ruolo in NetApp Console. 
+---
+= Domande frequenti sulla gestione delle identità e degli accessi per NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Questa FAQ risponde alle domande più comuni sulla gestione delle identità e degli accessi (IAM) nella NetApp Console. Si concentra su concetti di controllo degli accessi in base al ruolo, sul comportamento gerarchico e sulla gestione dei membri, elementi utili per la pianificazione e l'implementazione degli accessi per la tua organizzazione.
+
+
+
+== Introduzione
+
+.Quali sono i primi passaggi per configurare IAM dopo aver creato una nuova organizzazione NetApp Console?
+Quando ti registri, la Console crea un'organizzazione con un Organization admin e un progetto predefinito. Da lì, i passaggi di configurazione consigliati sono:
+
+. Modifica il progetto predefinito oppure crea progetti e cartelle aggiuntivi per rispecchiare la gerarchia della tua azienda.
+. Aggiungi membri alla tua organizzazione.
+. Aggiungi o scopri risorse.
+. Assegnare risorse a progetti aggiuntivi, se necessario.
+
+
+
+
+== Gerarchia delle risorse: organizzazioni, cartelle e progetti
+
+.Qual è la differenza tra una cartella e un progetto in NetApp Console IAM?
+Le cartelle raggruppano progetti correlati per la struttura organizzativa e la delega dei ruoli. I progetti contengono risorse e rappresentano il punto di accesso per i membri a tali risorse. Le risorse non possono essere associate direttamente alle cartelle — devono essere associate ai progetti. L'assegnazione di un ruolo a livello di cartella conferisce a quel membro l'accesso ereditato a tutti i progetti e le cartelle secondarie.
+
+.Le cartelle sono visibili a tutti i membri della mia organizzazione?
+No. Le cartelle sono visibili solo ai membri che dispongono delle autorizzazioni IAM: amministratore dell'organizzazione, amministratore di cartella o di progetto o super amministratore. I membri normali accedono direttamente ai progetti e non visualizzano le cartelle.
+
+.È possibile associare una risorsa direttamente a una cartella?
+No. Le risorse devono essere associate ai progetti, non alle cartelle. Tuttavia, un amministratore dell'organizzazione può associare una risorsa a una cartella, in modo che un amministratore di cartella o di progetto possa poi collegarla ai progetti appropriati all'interno di tale cartella.
+
+.Fino a che livello di annidamento posso inserire cartelle e progetti nella gerarchia della mia organizzazione?
+Nella struttura delle risorse della tua organizzazione puoi creare fino a sette livelli di cartelle e progetti.
+
+.Che tipo di risorse possono essere associate ai progetti in NetApp Console?
+Le risorse che possono essere associate ai progetti includono:
+
+* Sistemi storage
+* Abbonamenti Keystone
+* Alcuni carichi di lavoro di backup e ripristino
+* Agenti della console
+
+
+
+
+== Ruoli e autorizzazioni
+
+.Qual è la differenza tra un amministratore di organizzazione e un amministratore di cartella o di progetto?
+Un amministratore dell'organizzazione ha accesso illimitato a tutti i progetti e le cartelle dell'intera organizzazione ed è l'unico ruolo che può creare Console agents. Un amministratore di cartella o di progetto può gestire solo le cartelle e i progetti specifici a cui è assegnato e non può creare Console agents.
+
+.Chi può creare agenti Console in NetApp Console?
+Solo gli utenti con il ruolo di amministratore dell'organizzazione possono creare agenti della Console. Gli amministratori di cartella o di progetto non possono creare agenti della Console.
+
+.Quale ruolo dovrei assegnare a un utente che deve solo monitorare lo stato di salute dello storage e gestire le richieste di assistenza?
+Assegna il ruolo di *Operation support analyst*, che fornisce accesso agli avvisi e agli strumenti di monitoraggio e la possibilità di inserire e gestire i casi di supporto.
+
+.Posso modificare il ruolo di un membro a livello di progetto se tale accesso è stato ereditato da una cartella?
+No. Non è possibile modificare l'accesso di un membro a un livello inferiore se è stato ereditato da un livello superiore. Per modificare l'accesso, è necessario modificare l'autorizzazione del membro al livello gerarchico superiore (cartella o organizzazione) in cui è stata originariamente assegnata.
+
+
+
+== Gestione degli iscritti e degli accessi
+
+.Cosa deve accadere prima che io possa aggiungere un utente alla mia organizzazione NetApp Console?
+L'utente deve essersi già registrato alla NetApp Console prima di poterlo aggiungere alla tua organizzazione, cartella o progetto. Questo requisito si applica anche agli utenti che sono membri di un gruppo federato.
+
+.Gli utenti federati ottengono automaticamente l'accesso alle risorse quando aggiungo il loro gruppo alla Console?
+No. Anche quando a un gruppo federato viene assegnato un ruolo, i singoli utenti devono soddisfare due requisiti prima di poter accedere alle risorse:
+
+. L'utente deve essersi già registrato alla NetApp Console.
+. All'utente deve essere assegnato esplicitamente un ruolo nella Console.
+
+
+NetApp consiglia di assegnare a questi utenti un ruolo di accesso minimo, come Organization viewer.
+
+
+
+== Agenti della console
+
+.Che fine fa un agente Console dopo la sua creazione e può essere utilizzato in altri progetti?
+Gli agenti della console sono inizialmente associati al progetto in cui vengono creati. Dopo la creazione, gli amministratori possono aggiungere agenti ad altri progetti o associarli a una cartella dalla pagina Agenti.
+
+
+
+== Informazioni correlate
+
+* link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e degli accessi NetApp Console"]
+* link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso NetApp Console"]
+* link:task-iam-get-started.html["Inizia con l'identità e l'accesso nella NetApp Console"]
+* link:task-iam-manage-folders-projects.html["Aggiungi cartelle e progetti alla tua organizzazione NetApp Console"]
+* link:task-iam-manage-members-permissions.html["Aggiungere utenti a un'organizzazione NetApp Console"]
+

@@ -4,7 +4,7 @@ permalink: task-install-agent-on-prem-ova.html
 keywords: install agent, on prem agent installation, on prem connector, vmware, OVA, manual install 
 summary: 'Se sei un utente VMWare, puoi utilizzare un OVA per installare un agente Console nel tuo VCenter.  Il download dell"OVA o l"URL sono disponibili tramite la NetApp Console.' 
 ---
-= Installa un agente Console in locale utilizzando VCenter
+= Distribuisci un agente Console in locale utilizzando VCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: 'Se sei un utente VMWare, puoi utilizzare un OVA per installare un agen
 
 
 [role="lead"]
-Se sei un utente VMWare, puoi utilizzare un OVA per installare un agente Console nel tuo VCenter.  Il download dell'OVA o l'URL sono disponibili tramite la NetApp Console.
+Se sei un utente VMWare, puoi utilizzare un file OVA per distribuire un agente Console nel tuo VCenter. Il download del file OVA o l'URL sono disponibili tramite la NetApp Console.
 
 
-NOTE: Quando si installa un agente Console con gli strumenti VCenter, è possibile utilizzare la console Web della VM per eseguire attività di manutenzione.link:task-agent-vm-config.html["Scopri di più sulla console VM per l'agente."]
+NOTE: Quando si distribuisce un agente Console con gli strumenti VCenter, è possibile utilizzare la console web della macchina virtuale per eseguire attività di manutenzione. link:task-agent-vm-config.html["Scopri di più sulla console VM per l'agente."]
 
 
 
@@ -450,7 +450,7 @@ image:screenshot_azure_client_secret.gif["Uno screenshot del portale di Azure ch
 
 == Installa un agente Console nel tuo ambiente VCenter
 
-NetApp supporta l'installazione dell'agente Console nel tuo ambiente VCenter.  Il file OVA include un'immagine VM preconfigurata che puoi distribuire nel tuo ambiente VMware.  È possibile scaricare un file o distribuire un URL direttamente dalla NetApp Console.  Include il software dell'agente Console e un certificato autofirmato.
+NetApp supporta l'installazione dell'agente Console nel tuo ambiente vCenter. Il file OVA include un'immagine VM preconfigurata che puoi distribuire nel tuo ambiente VMware. Un download del file o la distribuzione tramite URL è disponibile direttamente dalla NetApp Console. Include il software dell'agente Console e un certificato autofirmato.
 
 
 
@@ -466,12 +466,12 @@ Scarica l'OVA o copia l'URL dell'OVA direttamente dalla NetApp Console.
 
 
 
-=== Distribuisci l'agente nel tuo VCenter
+=== Distribuisci l'agente nel tuo ambiente vCenter
 
 Accedi al tuo ambiente VCenter per distribuire l'agente.
 
 .Passi
-. Carica il certificato autofirmato tra i tuoi certificati attendibili se il tuo ambiente lo richiede.  Dopo l'installazione, sostituire questo certificato.link:task-installing-https-cert.html["Scopri come sostituire il certificato autofirmato."]
+. Se il tuo ambiente lo richiede, carica il certificato autofirmato nell'elenco dei certificati attendibili. Sostituisci questo certificato dopo l'installazione.
 . Distribuire l'OVA dalla libreria dei contenuti o dal sistema locale.
 +
 |===

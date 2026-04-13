@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-manage-multiple-agents.html 
 keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors 
-summary: 'Se si utilizzano più agenti della Console, è possibile passare da un agente all"altro direttamente dalla Console.' 
+summary: 'Se la tua organizzazione utilizza più agenti Console, puoi passare da un agente Console all"altro direttamente dalla pagina Sistemi per visualizzare i sistemi associati.' 
 ---
-= Lavora con più agenti della console
+= Visualizza i sistemi associati ai diversi agenti della console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,20 +14,19 @@ summary: 'Se si utilizzano più agenti della Console, è possibile passare da un
 
 
 [role="lead"]
-Se si utilizzano più agenti della Console, è possibile passare da un agente all'altro direttamente dalla Console per visualizzare i sistemi associati.
+Se la tua organizzazione utilizza più agenti Console, puoi passare da uno all'altro per visualizzare i sistemi associati a un agente specifico.
+
+Per gli utenti con il ruolo di amministratore dell'organizzazione, questa funzionalità è utile quando si implementa la strategia di gestione delle risorse. È possibile passare a un agente diverso durante il rilevamento dei sistemi storage per associare automaticamente tali sistemi all'agente che si trova nello stesso ambiente.
+
+Per gli amministratori dello storage, è possibile passare da un agente all'altro per gestire i sistemi associati a ciascun agente.
+
+Ad esempio, in un ambiente multicloud, la tua organizzazione potrebbe avere un agente in AWS e un altro in Google Cloud. Passa da un agente all'altro per gestire i sistemi Cloud Volumes ONTAP nei rispettivi ambienti cloud.
 
 
-
-== Passare da un agente della console all'altro
-
-Se si dispone di più agenti Console, è possibile passare da uno all'altro per visualizzare i sistemi associati a un agente specifico.
-
-Ad esempio, in un ambiente multi-cloud, potresti avere un agente in AWS e un altro in Google Cloud.  Passa da un agente all'altro per gestire i sistemi Cloud Volumes ONTAP nei rispettivi ambienti cloud.
-
-
-NOTE: Questa opzione non è disponibile quando si visualizza la NetApp Console dall'interfaccia utente locale dell'agente
+NOTE: Questa opzione non è disponibile quando si visualizza la NetApp Console dall'interfaccia utente locale dell'agente.
 
 .Fare un passo
+. Selezionare *Archiviazione* > *Gestione* > *Sistemi*.
 . Selezionare l'icona Agenti della console (image:icon-agent.png["icona dell'agente"] ) in alto a destra per visualizzare l'elenco degli agenti disponibili.
 +
 image:screenshot-connector-switch.png["Uno screenshot che mostra l'icona Agenti nell'intestazione e l'azione Cambia."]

@@ -28,7 +28,12 @@ Ad esempio, è possibile assegnare a un membro il ruolo di amministratore di Ran
 
 == Tipi di membri dell'organizzazione della console
 
-Esistono tre tipi di membri in un'organizzazione NetApp Console : * _Account utente_: singoli utenti che accedono a NetApp Console per gestire le risorse. Gli utenti devono registrarsi alla NetApp Console prima di poter essere aggiunti a un'organizzazione. * _Account di servizio_: account non umani utilizzati dalle applicazioni o dai servizi per interagire con la NetApp Console tramite API. Puoi aggiungere account di servizio direttamente all'organizzazione della tua Console. * _Gruppi federati_: gruppi sincronizzati dal tuo provider di identità (IdP) che ti consentono di gestire l'accesso di più utenti collettivamente. Ogni utente all'interno di un gruppo federato deve essersi registrato alla NetApp Console ed essere stato aggiunto all'organizzazione con un ruolo di accesso prima di poter accedere alle risorse concesse al gruppo.
+Esistono tre tipi di membri in un'organizzazione NetApp Console:
+
+* _Account utente_: singoli utenti che accedono alla NetApp Console per gestire le risorse. Gli utenti devono registrarsi alla NetApp Console prima di poter essere aggiunti a un'organizzazione.
+* _Account di servizio_: account non umani utilizzati da applicazioni o servizi per interagire con la NetApp Console tramite API. È possibile aggiungere account di servizio direttamente all'organizzazione della Console.
+* _Gruppi federati_: Gruppi sincronizzati dal provider di identità (IdP) che consentono di gestire collettivamente l'accesso di più utenti. Ogni utente all'interno di un gruppo federato deve essersi registrato alla NetApp Console ed essere stato aggiunto all'organizzazione con un ruolo di accesso prima di poter accedere alle risorse assegnate al gruppo.
+
 
 link:task-iam-manage-members-permissions.html#add-members["Scopri come aggiungere membri alla tua organizzazione."]
 

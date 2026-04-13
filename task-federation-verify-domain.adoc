@@ -21,6 +21,8 @@ Il ruolo di amministratore della federazione è necessario per creare e gestire 
 
 La verifica del tuo dominio comporta l'aggiunta di un record TXT alle impostazioni DNS del tuo dominio.  Questo record viene utilizzato per dimostrare che sei il proprietario del dominio e consente alla NetApp Console di considerare attendibile il dominio per la federazione.  Potrebbe essere necessario coordinarsi con l'amministratore IT o di rete per completare questo passaggio.
 
+Ad esempio, se si utilizza Microsoft Entra ID, è possibile seguire i passaggi descritti nella documentazione Microsoft link:https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["Aggiungi un dominio con Microsoft Entra ID"].
+
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.
 . Selezionare *Federazione* per visualizzare la pagina *Federazioni*.

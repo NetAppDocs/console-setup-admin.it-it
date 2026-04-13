@@ -30,7 +30,7 @@ sidebar:
         url: "/concept-modes.html"
       - title: Account di supporto NetApp
         url: "/task-adding-nss-accounts.html"
-      - title: Comprendere gli agenti Console
+      - title: Scopri di più sugli agenti della console
         url: "/concept-agents.html"
       - title: Gestione dell'identità e degli accessi
         url: "/concept-identity-and-access-management.html"
@@ -70,7 +70,7 @@ sidebar:
     entries:
     - title: Accedi alla NetApp Console
       url: "/task-logging-in.html"
-    - title: Lavora con più agenti della console
+    - title: Visualizza i sistemi associati ai diversi agenti della console
       url: "/task-manage-multiple-agents.html"
     - title: Visualizza le metriche nella home page NetApp Console
       url: "/task-dashboard.html"
@@ -90,48 +90,56 @@ sidebar:
         url: "/concept-agents.html"
       - title: Distribuisci un agente della console
         entries:
+        - title: Scegliere un metodo di distribuzione dell'agente della console
+          url: "/concept-agent-install-options.html"
         - title: AWS
           entries:
-          - title: Opzioni di installazione dell'agente console
-            url: "/concept-install-options-aws.html"
-          - title: Creare un agente Console dalla NetApp Console
+          - title: Opzioni di installazione dell'agente console per AWS
+            url: "/concept-install-aws.html"
+          - title: Crea un agente Console in AWS dalla NetApp Console
             url: "/task-install-agent-aws-console.html"
-          - title: Creare un agente Console dal marketplace AWS
+          - title: Crea un agente Console in AWS dal marketplace di AWS
             url: "/task-install-agent-aws-marketplace.html"
-          - title: Installare manualmente l'agente Console
+          - title: Installare manualmente un agente Console in AWS
             url: "/task-install-agent-aws-manual.html"
         - title: Azzurro
           entries:
-          - title: Opzioni di installazione dell'agente console
-            url: "/concept-install-options-azure.html"
-          - title: Creare un agente Console dalla NetApp Console
+          - title: Opzioni di installazione dell'agente console per Azure
+            url: "/concept-install-azure.html"
+          - title: Creare un agente console in Azure dalla NetApp Console
             url: "/task-install-agent-azure-console.html"
-          - title: Creare un agente console dal marketplace di Azure
+          - title: Crea un agente Console in Azure dal Marketplace di Azure
             url: "/task-install-agent-azure-marketplace.html"
-          - title: Installare manualmente l'agente Console
+          - title: Installare manualmente un agente Console in Azure
             url: "/task-install-agent-azure-manual.html"
         - title: Google Cloud
           entries:
-          - title: Opzioni di installazione dell'agente console
-            url: "/concept-install-options-google.html"
-          - title: Creare un agente Console dalla NetApp Console
+          - title: Opzioni di installazione dell'agente della console per Google Cloud
+            url: "/concept-install-google.html"
+          - title: Crea un agente Console in Google Cloud da NetApp Console
             url: "/task-install-agent-google-console-gcloud.html"
-          - title: Crea un agente Console da Google Cloud
+          - title: Crea un agente Console in Google Cloud da Google Cloud
             url: "/task-install-agent-google-gcloud.html"
-          - title: Installare manualmente l'agente Console
+          - title: Installare manualmente un agente Console in Google Cloud
             url: "/task-install-agent-google-manual.html"
         - title: Installa un agente in locale
           entries:
-          - title: Installare manualmente un agente in locale
+          - title: Installare manualmente un agente Console in locale
             url: "/task-install-agent-on-prem.html"
-          - title: Installa un agente on-premise in VCenter
+          - title: Installare un agente Console locale in VCenter
             url: "/task-install-agent-on-prem-ova.html"
           - title: Porte per l'agente della console locale
             url: "/reference-ports-on-prem.html"
       - title: Mantieni gli agenti della console
         entries:
-        - title: Mantenere un agente installato su VCenter
-          url: "/task-agent-vm-config.html"
+        - title: Gestire gli agenti della Console installati manualmente
+          entries:
+          - title: Mantenere un agente installato su VCenter
+            url: "/task-agent-vm-config.html"
+          - title: Mantenere un agente installato manualmente
+            url: "/task-maintain-agents.html"
+        - title: Aggiornare gli indirizzi e gli URI dell'agente
+          url: "/task-update-agent-addressing.html"
         - title: Installa un certificato firmato da una CA per l'accesso alla console
             Web
           url: "/task-installing-https-cert.html"
@@ -169,6 +177,8 @@ sidebar:
         url: "/concept-identity-and-access-management.html"
       - title: Inizia con identità e accesso
         url: "/task-iam-get-started.html"
+      - title: Domande frequenti sulla gestione delle identità e degli accessi
+        url: "/faq-iam-netapp-console.html"
       - title: Imposta l'organizzazione della tua console
         entries:
         - title: Crea cartelle e progetti

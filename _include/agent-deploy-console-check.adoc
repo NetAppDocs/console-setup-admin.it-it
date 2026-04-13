@@ -10,7 +10,9 @@
 +
 []
 ====
-Se stai ancora utilizzando illink:reference-networking-saas-console-previous.html["punti finali precedenti"] utilizzato per gli aggiornamenti degli agenti, la convalida fallisce con un errore.  Per evitare ciò, deselezionare la casella di controllo per saltare il controllo di convalida.
+** Se stai ancora utilizzando illink:reference-networking-saas-console-previous.html["punti finali precedenti"] utilizzato per gli aggiornamenti degli agenti, la convalida fallisce con un errore.  Per evitare ciò, deselezionare la casella di controllo per saltare il controllo di convalida.
+** Durante l'installazione, NetApp verifica che l'host dell'agente disponga di almeno l'80% dello spazio su disco totale disponibile, che include 48 GB in `/opt` e 32 GB in `/var` (80 GB totali). Dopo l'installazione, è necessario che rimanga disponibile almeno il 20% dello spazio su disco totale, che include 12 GB in `/opt` e 8 GB in `/var` (20 GB totali).
+
 
 ====
 

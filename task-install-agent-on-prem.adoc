@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-install-agent-on-prem.html 
-keywords: install connector, on prem connector installation, on prem connector, install connector on prem, manual install 
-summary: Installa un agente Console in locale, quindi accedi e configuralo per farlo funzionare con la tua organizzazione Console. 
+keywords: deploy agent, on prem agent deployment, on prem agent, deploy connector on prem, manual deployment 
+summary: Distribuisci un agente Console in locale, quindi accedi e configuralo per funzionare con la tua organizzazione Console. 
 ---
-= Installare manualmente un agente Console in locale
+= Distribuisci manualmente un agente Console in locale
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: Installa un agente Console in locale, quindi accedi e configuralo per f
 
 
 [role="lead"]
-Installa un agente Console in locale, quindi accedi e configuralo per farlo funzionare con la tua organizzazione Console.
+Distribuisci un agente Console in locale, quindi accedi e configuralo per funzionare con la tua organizzazione Console.
 
 
-NOTE: Se sei un utente VMWare, puoi utilizzare un OVA per installare un agente Console nel tuo VCenter.link:task-install-agent-on-prem-ova.html["Scopri di più sull'installazione di un agente in un VCenter."]
+NOTE: Se sei un utente VMWare, puoi utilizzare un file OVA per distribuire un agente Console nel tuo vCenter. link:task-install-agent-on-prem-ova.html["Scopri di più sulla distribuzione di un agente in un vCenter."]
 
 Prima di procedere all'installazione, è necessario assicurarsi che l'host (VM o host Linux) soddisfi i requisiti e che l'agente della console abbia accesso in uscita a Internet e alle reti di destinazione.  Se intendi utilizzare i servizi dati NetApp o le opzioni di archiviazione cloud come Cloud Volumes ONTAP, dovrai creare credenziali nel tuo provider cloud da aggiungere alla Console, in modo che l'agente della Console possa eseguire azioni nel cloud per tuo conto.
 

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-upgrade-agent.html 
-keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
-summary: 'L"agente della Console viene aggiornato automaticamente quando dispone di connettività outbound. Se l"agente della Console non dispone di connettività outbound, è possibile aggiornarlo manualmente (ad esempio, in modalità privata).' 
+keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade, vcenter upgrade, OVA upgrade, ISO upgrade, vsphere upgrade 
+summary: 'L"agente della Console viene aggiornato automaticamente quando dispone di connettività outbound. Se l"agente della Console non dispone di connettività outbound, è possibile aggiornarlo manualmente. Se l"agente è stato distribuito in vCenter, è possibile aggiornarlo utilizzando un ISO.' 
 ---
-= Gestisci gli aggiornamenti degli agenti della console
+= Aggiorna l'agente della console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'L"agente della Console viene aggiornato automaticamente quando dispone
 
 
 [role="lead"]
-L'agente della Console viene aggiornato automaticamente quando dispone di connettività outbound. Se l'agente della Console non dispone di connettività outbound, è possibile aggiornarlo manualmente (ad esempio, in modalità privata).
+L'agente della Console viene aggiornato automaticamente quando dispone di connettività outbound. Se l'agente della Console non dispone di connettività outbound, puoi aggiornarlo manualmente. Se l'agente è stato distribuito in vCenter utilizzando un OVA, puoi aggiornarlo a una nuova versione montando un ISO sulla VM.
 
 
 
@@ -44,4 +44,47 @@ sudo /path/NetApp-Console-Agent-Offline-<version>
 Dove <versione> è la versione dell'agente scaricato.
 
 . Una volta completato l'aggiornamento, puoi verificare la versione dell'agente andando su *Amministrazione > Supporto > Agenti*.
+
+
+
+
+== Aggiornare un agente Console distribuito da vCenter utilizzando un ISO
+
+Se l'agente della Console è stato distribuito in vCenter utilizzando un OVA, puoi aggiornarlo a una nuova versione montando un ISO sulla VM ed eseguendo l'aggiornamento dalla console di manutenzione della VM.
+
+Prima di iniziare, crea un'istantanea della VM nel caso in cui tu debba ripristinare.
+
+.Passi
+. Scarica l'immagine ISO dell'agente della console da  https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["Sito di supporto NetApp"^].
+. Carica l'ISO in un datastore accessibile da vCenter.
+. Nel client vSphere, accedi al tuo vCenter e seleziona l'istanza di macchine virtuali che ospita l'agente della Console.
+. Montare l'immagine ISO sulla macchina virtuale:
++
+.. Fai clic con il pulsante destro del mouse sulla macchina virtuale e seleziona *Modifica impostazioni*.
+.. Selezionare l'unità CD/DVD e scegliere *File ISO del datastore*.
+.. Individuare e selezionare l'immagine ISO dell'agente della Console.
+.. Assicurati che *Connect* sia abilitato.
+.. Seleziona *OK*.
+
+
+. Dopo aver selezionato la macchina virtuale, selezionare *Avvia console Web*.
+. Accedi alla console di manutenzione utilizzando il nome utente  `maint` e la password di manutenzione che hai specificato quando hai distribuito l'OVA.
+. Premi  `1` per aprire il menu *Configurazione di sistema*.
+. Premi  `3` per selezionare *Aggiorna* e segui le istruzioni visualizzate sullo schermo.
++
+L'aggiornamento installa il sistema operativo aggiornato, il runtime Docker e i servizi dell'agente Console in sostituzione di quelli precedenti. Se il kernel viene aggiornato, la VM si riavvia automaticamente.
+
+. Al termine dell'aggiornamento, verificare che l'agente della Console sia in esecuzione correttamente:
++
+.. Nel client vSphere, verificare che la macchina virtuale sia accesa e che la console web sia accessibile.
+.. Nella NetApp Console, vai su *Amministrazione > Supporto > Agenti* e verifica che la versione dell'agente corrisponda alla nuova versione.
+
+
+. Smonta l'immagine ISO dalla macchina virtuale:
++
+.. Nel vSphere client, fai clic con il pulsante destro del mouse sulla VM e seleziona *Modifica impostazioni*.
+.. Selezionare l'unità CD/DVD e scegliere *Dispositivo client* oppure disconnettere l'ISO del datastore.
+.. Seleziona *OK*.
+
+
 

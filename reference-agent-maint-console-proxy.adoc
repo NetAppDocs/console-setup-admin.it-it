@@ -4,7 +4,7 @@ permalink: reference-agent-maint-console-proxy.html
 keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
 summary: 'È possibile utilizzare la console di manutenzione dell"agente Console per configurare un agente Console in modo che utilizzi un server proxy trasparente.' 
 ---
-= Comandi proxy trasparenti
+= Comandi proxy trasparenti per l'agente Console in NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

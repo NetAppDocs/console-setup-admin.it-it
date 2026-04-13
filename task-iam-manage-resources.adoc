@@ -26,9 +26,16 @@ Una _risorsa_ è un'entità di cui la Console è a conoscenza, ad esempio una ri
 
 È possibile associare diversi tipi di risorse ai progetti nell'organizzazione NetApp Console :
 
-Risorse di archiviazione:: Le risorse di archiviazione sono il tipo di risorsa più comune nella tua organizzazione e rappresentano sia sistemi di archiviazione locali che cloud. Quando aggiungi un sistema di archiviazione alla Console, puoi aggiungerlo a una cartella o a un progetto. Fino a quel momento, la Console lo contrassegna come non scoperto e non lo visualizza nella pagina *Risorse*.
-Agenti della console:: Se hai utilizzato un agente Console per individuare i sistemi di archiviazione, aggiungi l'agente alla stessa cartella o progetto. Ciò consente agli utenti di eseguire funzioni abilitate dall'agente, come servizi dati o gestione dell'archiviazione nativa della console. È possibile aggiungere agenti a cartelle o progetti dalla pagina *Agenti* nella Console. link:task-iam-associate-agents.html["Scopri come associare un agente Console a una cartella o a un progetto"].
-Abbonamenti Keystone:: Se nella tua organizzazione sono presenti abbonamenti Keystone , puoi visualizzarli nella pagina *Risorse*. È possibile associare gli abbonamenti Keystone a cartelle o progetti per consentire l'accesso ai membri che dispongono delle autorizzazioni per tali cartelle o progetti.
+Risorse di archiviazione:: Le risorse di storage sono il tipo di risorsa più comune nella tua organizzazione e rappresentano sia sistemi storage locali che cloud storage. Quando aggiungi un sistema storage alla Console, devi aggiungerlo a un progetto. Fino ad allora, la Console lo contrassegna come non rilevato e non lo visualizza nella pagina *Risorse*.
++
+--
+
+NOTE: Gli utenti con il ruolo di amministratore dell'organizzazione possono aggiungere risorse alla cartella per delegare l'attività di associazione della risorsa ai progetti agli amministratori della cartella o del progetto in questione. link:task-iam-manage-folders-projects.html#associate-resource-folder["Scopri come associare una risorsa a una cartella"].
+
+--
+Agenti della console:: Se hai utilizzato un agente della Console per individuare i sistemi di archiviazione, aggiungi l'agente allo stesso progetto del sistema storage. Questo permette agli utenti di eseguire funzioni abilitate per gli agenti, come i servizi dati o la gestione nativa dello storage della Console. Puoi aggiungere agenti ai progetti dalla pagina *Agenti* nella Console. link:task-iam-associate-agents.html["Scopri come associare un agente della Console a un progetto"].
+Abbonamenti Keystone:: Se nella tua organizzazione sono presenti abbonamenti Keystone, puoi visualizzarli nella pagina *Risorse*. Puoi associare gli abbonamenti Keystone ai progetti per fornire l'accesso ai membri che dispongono delle autorizzazioni per tali progetti.
+Carichi di lavoro di backup e ripristino:: Anche i carichi di lavoro di Backup and Recovery sono considerati risorse. È possibile assegnare agli utenti le autorizzazioni di accesso ai carichi di lavoro di Backup and Recovery associandoli ai progetti. Ad esempio, è possibile assegnare a un utente l'accesso a un carico di lavoro di Backup and Recovery associandolo a un progetto a cui l'utente può accedere e concedendogli il ruolo di Backup and Recovery appropriato.
 
 
 

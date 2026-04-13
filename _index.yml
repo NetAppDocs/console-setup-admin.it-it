@@ -44,8 +44,8 @@ indexpage:
       url: task-iam-manage-members-permissions.html
   - title: Distribuisci agenti della console
     links:
-    - title: Scopri di più sugli agenti della console
-      url: concept-agents.html
+    - title: Scegliere un metodo di distribuzione dell'agente della console
+      url: "/concept-agent-install-options.html"
     - title: Distribuisci un agente in locale
       url: "/task-install-agent-on-prem.html"
     - title: Distribuisci un agente in AWS
@@ -55,7 +55,7 @@ indexpage:
     - title: Distribuisci un agente in Google Cloud
       url: "/task-install-agent-google-console-gcloud.html"
     - title: Mantieni gli agenti della console
-      url: task-maintain-agents.html
+      url: "/task-maintain-agents.html"
   - title: Sicurezza e conformità
     links:
     - title: Federati con il tuo fornitore di identità

@@ -4,7 +4,7 @@ permalink: reference-permissions-gcp.html
 keywords: permissions, gcp, gcp permissions, bluexp, console agent 
 summary: 'L"agente della console necessita delle autorizzazioni per eseguire azioni nel tuo provider cloud.  Queste autorizzazioni sono incluse nelle policy fornite da NetApp.  Dovresti capire cosa fa l"agente con queste autorizzazioni.' 
 ---
-= Autorizzazioni di Google Cloud per l'agente della console
+= Autorizzazioni di Google Cloud per l'agente della NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -183,6 +183,7 @@ includedPermissions:
 - compute.disks.get
 - compute.disks.list
 - compute.disks.setLabels
+- compute.disks.update
 - compute.disks.use
 - compute.firewalls.create
 - compute.firewalls.delete
@@ -364,7 +365,7 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | config.revisions.get | NO | SÌ | NO 
 
 
-| calcola.dischi.crea .7+| Per creare e gestire dischi per Cloud Volumes ONTAP. | SÌ | SÌ | NO 
+| calcola.dischi.crea .8+| Per creare e gestire dischi sui sistemi Cloud Volumes ONTAP. | SÌ | SÌ | NO 
 
 
 | calcola.dischi.creaSnapshot | NO | SÌ | NO 
@@ -380,6 +381,9 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 
 
 | calcola.dischi.imposta etichette | SÌ | SÌ | NO 
+
+
+| compute.disks.update | NO | SÌ | NO 
 
 
 | calcolo.dischi.uso | NO | SÌ | NO 
@@ -800,6 +804,12 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 == Registro delle modifiche
 
 Di seguito sono riportati i permessi aggiunti e rimossi.
+
+
+
+=== 13 aprile 2026
+
+L'autorizzazione  `compute.disks.update` è stata aggiunta per aggiornare i parametri IOPS e throughput su un aggregate o disco Hyperdisk Balanced nei sistemi Cloud Volumes ONTAP.
 
 
 

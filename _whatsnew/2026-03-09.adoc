@@ -10,11 +10,11 @@ La versione 4.5.0 supporta sia la modalità standard che la modalità limitata.
 
 Questa versione dell'agente Console include miglioramenti della sicurezza e correzioni di bug, oltre alla seguente nuova funzionalità.
 
-.Supporto per i controlli di configurazione sulle porte richieste
-È possibile verificare che le porte richieste per l'agente della Console siano aperte utilizzando i controlli di configurazione. È possibile eseguire i controlli di configurazione dalla Console o dalla console di manutenzione dell'agente. link:https://docs.netapp.com/console-setup-admin/task-troubleshoot-agent.html["Scopri di più sull'esecuzione dei controlli di configurazione sull'agente Console."]
+.Supporto per i controlli di configurazione delle porte richieste
+È possibile verificare che le porte richieste per l'agente della Console siano aperte utilizzando i controlli di configurazione. È possibile eseguire i controlli di configurazione dalla Console o dalla console di manutenzione dell'agente. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Scopri di più sull'esecuzione dei controlli di configurazione sull'agente Console."]
 
 
 
 === Amministrazione della console
 
-È possibile assegnare ruoli Keystone agli utenti partner per consentire loro di gestire le risorse Keystone in un'organizzazione partner. link:https://docs.netapp.com/console-setup-admin/console-administration/task-partnerships-assign-users.html["Scopri di più sull'assegnazione dei ruoli Keystone agli utenti partner."]
+È possibile assegnare ruoli Keystone agli utenti partner per consentire loro di gestire le risorse Keystone in un'organizzazione partner. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["Scopri di più sull'assegnazione dei ruoli Keystone agli utenti partner."]

@@ -250,7 +250,7 @@ La sostituzione dell'attuale abbonamento al marketplace con un nuovo abbonamento
 
 
 .Prima di iniziare
-Prima di poter configurare un abbonamento, è necessario creare un agente Console. link:concept-agents.html#agent-installation["Scopri come creare un agente Console"] .
+È necessario creare un agente Console prima di poter configurare un abbonamento. link:concept-agent-install-options.html["Scopri come creare un agente Console"].
 
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
