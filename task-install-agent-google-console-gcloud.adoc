@@ -19,7 +19,7 @@ summary: 'Per creare un agente Console in Google Cloud da NetApp Console o trami
 L'installazione di un agente in Google Cloud avvia un'istanza di macchina virtuale con Linux e il software dell'agente Console in una VPC a tua scelta.
 
 .Prima di iniziare
-* Dovresti avere unlink:concept-agents.html["comprensione degli agenti della console"] .
+* link:concept-agent-install-options.html#agent-console-deploy["Scopri quando effettuare il deployment dalla Console"].
 * Dovresti rivederelink:reference-limitations.html["Limitazioni dell'agente della console"] .
 
 

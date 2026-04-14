@@ -19,7 +19,7 @@ summary: 'Per creare un agente Console da AWS Marketplace, è necessario configu
 L'installazione di un agente in AWS avvia un'istanza EC2 con Linux e il software dell'agente Console in una VPC a tua scelta.
 
 .Prima di iniziare
-* Dovresti avere unlink:concept-agents.html["comprensione degli agenti della console"] .
+* link:concept-agent-install-options.html#agent-marketplace-deploy["Scopri quando effettuare il deployment da AWS Marketplace"].
 * Dovresti rivederelink:reference-limitations.html["Limitazioni dell'agente della console"] .
 
 

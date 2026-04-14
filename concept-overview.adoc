@@ -144,7 +144,22 @@ NetApp Replication:: Replicare i dati tra i sistemi di archiviazione per support
 Monitora lo stato dei contratti in tutti i sistemi per migliorare la gestione dei costi, la conformità e le decisioni di acquisto.
 
 Hub di automazione:: Utilizza soluzioni con script per automatizzare la configurazione e la connessione di NetApp prodotti e servizi per operazioni più fluide e coerenti.
-NetApp Cloud Tiering:: Estendi il tuo storage ONTAP on-premises al cloud per l'ottimizzazione dei costi e la gestione del ciclo di vita dei dati.
+NetApp Cloud Tiering::
+
+
+[NOTE]
+====
+NetApp Cloud Tiering non è più disponibile per l'acquisto o il rinnovo della licenza a partire dal 26 aprile 2026.
+
+I clienti esistenti possono continuare a utilizzare e a ricevere assistenza per NetApp Cloud Tiering fino alla scadenza del loro abbonamento o contratto di licenza. Dopo la scadenza dell'abbonamento, i clienti non avranno più accesso alle funzionalità o all'assistenza di NetApp Cloud Tiering.
+
+NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp per migrare le licenze di tiering esistenti alle licenze ONTAP FabricPool, che forniscono la funzionalità per il data tiering in ONTAP. Vedere link:https://docs.netapp.com/us-en/ontap/fabricpool/install-license-aws-azure-ibm-task.html["Installare una FabricPool license su un ONTAP cluster"] per ulteriori informazioni su come configurare il data tiering in ONTAP utilizzando FabricPool.
+
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-Notice2.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_9L2PauNXYE0fOs0RIz8KK2q5Jb6sg8Yv-97NNJ53ceAab9UAqpKOrAvByxsOWqhIQHNCHgFfM0q3TI["NetApp Cloud Tiering Avviso di fine disponibilità"]
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-FAQ-v3.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_rplJe_ZtlY4PQAQRQlewsDa0W4JR55muT0KCThR46zI7-uOhIYfVsxODDKFrnYYvy5uZzvhEKHOwBI["NetApp Cloud Tiering Domande frequenti sulla fine della disponibilità"]
+
+
+====
 NetApp Data Classification:: Prepara i dati delle tue applicazioni e gli ambienti cloud per la conformità alle normative sulla privacy dei dati. Gratuito con abbonamento.
 NetApp Volume Caching:: Crea un volume di cache scrivibile per velocizzare l'accesso ai dati o per scaricare il traffico dai volumi a cui si accede più frequentemente, per ottenere prestazioni migliori e una maggiore efficienza dei costi.
 Carichi di lavoro NetApp:: Progetta, configura e gestisci carichi di lavoro chiave utilizzando Amazon FSx for NetApp ONTAP per ottimizzare prestazioni e costi per applicazioni specifiche.

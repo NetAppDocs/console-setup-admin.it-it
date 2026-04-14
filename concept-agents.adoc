@@ -186,7 +186,7 @@ NO
 
 
 | Metriche della dashboard della home page  a| 
-Sì^2^
+Sì. Metriche accurate della home page richiedono agenti Console di dimensioni e configurazione adeguate.
  a| 
 NO
 
@@ -195,7 +195,7 @@ NO
 | Pianificazione del ciclo di vita  a| 
 SÌ
  a| 
-No^1^
+No. È possibile visualizzare la pianificazione del ciclo di vita senza un agente Console, ma è necessario un agente Console per avviare le azioni.
 
 
 
@@ -237,7 +237,9 @@ NO
 
 
 
-| NetApp Cloud Tiering  a| 
+ a| 
+NetApp Cloud Tiering*
+ a| 
 SÌ
  a| 
 NO
@@ -271,10 +273,19 @@ SÌ
 NO
 
 |===
-^1^ È possibile visualizzare la pianificazione del ciclo di vita senza un agente della console, ma è necessario un agente della console per avviare le azioni.
+[NOTE]
+====
+NetApp Cloud Tiering non è più disponibile per l'acquisto o il rinnovo della licenza a partire dal 26 aprile 2026.
 
-^2^ Metriche accurate della home page richiedono agenti Console di dimensioni e configurazione appropriate.
+I clienti esistenti possono continuare a utilizzare e a ricevere assistenza per NetApp Cloud Tiering fino alla scadenza del loro abbonamento o contratto di licenza. Dopo la scadenza dell'abbonamento, i clienti non avranno più accesso alle funzionalità o all'assistenza di NetApp Cloud Tiering.
 
+NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp per migrare le licenze di tiering esistenti alle licenze ONTAP FabricPool, che forniscono la funzionalità per il data tiering in ONTAP. Vedere link:https://docs.netapp.com/us-en/ontap/fabricpool/install-license-aws-azure-ibm-task.html["Installare una FabricPool license su un ONTAP cluster"] per ulteriori informazioni su come configurare il data tiering in ONTAP utilizzando FabricPool.
+
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-Notice2.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_9L2PauNXYE0fOs0RIz8KK2q5Jb6sg8Yv-97NNJ53ceAab9UAqpKOrAvByxsOWqhIQHNCHgFfM0q3TI["NetApp Cloud Tiering Avviso di fine disponibilità"]
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-FAQ-v3.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_rplJe_ZtlY4PQAQRQlewsDa0W4JR55muT0KCThR46zI7-uOhIYfVsxODDKFrnYYvy5uZzvhEKHOwBI["NetApp Cloud Tiering Domande frequenti sulla fine della disponibilità"]
+
+
+====
 link:concept-modes.html["Scopri di più sulle modalità di distribuzione NetApp Console"] per capire quando è necessario un agente e quali capacità gli agenti consentono.
 
 
