@@ -102,6 +102,15 @@ Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di agg
 * Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
 
 
+a| https://occmclientinfragov.azurecr.us.iohttps://bluexpinfraprod.azurecr.io a| Per ottenere le immagini per gli aggiornamenti dell'agente della Console.
+
+* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti. Se usilink:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce. Per evitare questo errore, saltare il controllo di convalida.
++
+Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di aggiornare le regole del firewall agli endpoint correnti il ​​prima possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
+
+* Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
+
+
 ^1^ NetApp consiglia di consentire gli endpoint dell'Opzione 1 nel firewall in quanto più sicuri e di non consentire gli endpoint dell'Opzione 2.  Si tenga presente quanto segue in merito a questi endpoint:
 
 + * A partire dalla versione 3.9.47 dell'agente Console, il sistema supporta gli endpoint elencati nell'opzione 1.  Le versioni precedenti dell'agente Console non supportano la compatibilità con le versioni precedenti.  * L'agente della console contatta prima gli endpoint nell'opzione 2.  Se tali endpoint non sono accessibili, vengono contattati automaticamente gli endpoint nell'opzione 1.  * Se si utilizza l'agente Console con NetApp Backup and Recovery o Ransomware Resilience, il sistema non supporta gli endpoint Opzione 1.  Consentire gli endpoint dell'opzione 2 e non consentire l'opzione 1.
