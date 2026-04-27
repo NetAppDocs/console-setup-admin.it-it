@@ -23,8 +23,6 @@ Modalità limitata (installata nel tuo cloud pubblico):: La modalità limitata �
 Modalità privata (installata presso la tua sede o nel cloud):: La modalità privata è pensata per le organizzazioni con esigenze di sicurezza rigorose, come quelle in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6 o in ambienti air-gapped. Non si connette all'applicazione SaaS NetApp Console o alle API NetApp basate sul cloud, offrendo il pieno controllo e bloccando le comunicazioni esterne. I servizi dati supportati includono NetApp Backup and Recovery, NetApp Data Classification, NetApp Replication e Cloud Volumes ONTAP. Tutto lo storage e l'autenticazione rimangono locali, mantenendo i dati all'interno del proprio ambiente. Utilizzare questa modalità per appaltatori della difesa, istituti finanziari con rigide regole di residenza dei dati ed enti governativi con sistemi classificati.
 
 
-Quando è installato presso la vostra sede, sono supportati solo i sistemi di storage ONTAP.
-
 
 NOTE: NetApp Console limita il flusso di dati in modalità riservata e privata, ma è necessario assicurarsi che l'ambiente sia conforme alle normative.
 
