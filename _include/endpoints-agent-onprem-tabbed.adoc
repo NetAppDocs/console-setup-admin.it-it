@@ -1,0 +1,34 @@
+= 
+:allow-uri-read: 
+
+
+[role="tabbed-block"]
+====
+.Numero minimo di endpoint richiesti
+--
+Questi endpoint sono necessari per tutte le implementazioni dell'agente Console. Sono necessari endpoint aggiuntivi per gestire le risorse NetApp in AWS o Azure.
+
+[cols="2a,1a"]
+|===
+| Punti finali | Scopo Direttiva non risolta in <stdin> - include::endpoints-agent.adoc[tag=nss-endpoints] Direttiva non risolta in <stdin> - include::endpoints-agent.adoc[tag=saas-endpoints] Direttiva non risolta in <stdin> - include::endpoints-agent.adoc[tag=upgrade-endpoints] 
+|===
+--
+.Endpoint aggiuntivi per le risorse AWS
+--
+Quando l'agente della Console viene installato on-premises, necessita dell'accesso di rete ai seguenti endpoint AWS aggiuntivi per gestire i sistemi NetApp (come Cloud Volumes ONTAP) distribuiti in AWS.
+
+[cols="2a,1a"]
+|===
+| Punti finali | Scopo Direttiva non risolta in <stdin> - include::endpoints-agent.adoc[tag=aws-endpoints] 
+|===
+--
+.Endpoint aggiuntivi per le risorse di Azure
+--
+Quando l'agente della Console viene installato on-premises, necessita dell'accesso di rete ai seguenti endpoint aggiuntivi di Azure per gestire i sistemi NetApp (come Cloud Volumes ONTAP) distribuiti in Azure.
+
+[cols="2a,1a"]
+|===
+| Punti finali | Scopo Direttiva non risolta in <stdin> - include::endpoints-agent.adoc[tag=azure-public-endpoints] Direttiva non risolta in <stdin> - include::endpoints-agent.adoc[tag=azure-china-endpoints] 
+|===
+--
+====

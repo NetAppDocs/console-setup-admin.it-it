@@ -14,14 +14,14 @@ summary: 'Utilizza la gestione delle identità e degli accessi (IAM) di NetApp C
 
 
 [role="lead"]
-Utilizza la gestione delle identità e degli accessi (IAM) di NetApp Console per organizzare le tue risorse NetApp e controllare l'accesso in base alla struttura aziendale, in base a sede, reparto o progetto.
+Utilizza la funzionalità di gestione delle identità e degli accessi (IAM) della NetApp Console per organizzare le tue risorse NetApp e controllare l'accesso in base alla struttura aziendale, ad esempio per sede, reparto o progetto.
 
 Le risorse vengono organizzate in una gerarchia: al vertice si trova l'organizzazione, seguita dalle cartelle (che possono contenere altre cartelle o progetti) e infine dai progetti, che a loro volta dispongono di sistemi storage, carichi di lavoro e agenti.
 
 Assegna ruoli di accesso a livello di organizzazione, cartella o progetto in modo che gli utenti abbiano il giusto accesso alle risorse.
 
 
-NOTE: È necessario disporre dei ruoli _Super admin_, _Organization admin_ o _Folder or project admin_ per gestire IAM in NetApp Console.
+NOTE: È necessario disporre del ruolo _Super admin_, _Organization admin_ o _Folder or project admin_ per gestire IAM nella NetApp Console.
 
 L'immagine seguente illustra questa gerarchia a livello di base.
 
@@ -31,7 +31,7 @@ image:diagram-iam-resource-hierarchy.png["Un diagramma concettuale che mostra i 
 
 == Componenti di gestione dell'identità e dell'accesso
 
-NetApp Console IAM si basa su tre tipi di componenti: componenti organizzativi che definiscono la gerarchia, risorse che vengono assegnate all'interno di tale gerarchia e membri e ruoli che controllano chi può accedere a cosa.
+La NetApp Console IAM si basa su tre tipi di componenti: componenti organizzativi che definiscono la gerarchia, risorse assegnate all'interno di tale gerarchia e membri e ruoli che controllano chi può accedere a cosa.
 
 
 
@@ -52,7 +52,7 @@ Cartelle:: Raggruppa i progetti correlati in  per organizzarli per posizione, si
 
 
 
-NOTE: Gli utenti con il ruolo di amministratore dell'organizzazione possono aggiungere risorse a una cartella per delegare l'attività di associazione della risorsa ai progetti agli amministratori della cartella o del progetto corrispondente. link:task-iam-manage-folders-projects.html#associate-resource-folder["Scopri come associare una risorsa a una cartella"].
+NOTE: Gli utenti con il ruolo di amministratore dell'organizzazione possono aggiungere risorse a una cartella per delegare l'attività di associazione della risorsa ai progetti agli amministratori della cartella o del progetto in questione. link:task-iam-manage-folders-projects.html#associate-resource-folder["Scopri come associare una risorsa a una cartella"].
 
 
 
@@ -72,8 +72,8 @@ Sistemi storage:: I sistemi storage sono le risorse principali che si gestiscono
 I sistemi storage vengono automaticamente associati al progetto in cui vengono aggiunti, ma puoi associarli ad altri progetti o cartelle dalla pagina *Resources*. Non puoi associare i sistemi storage FSx for NetApp ONTAP a progetti o cartelle, ma puoi visualizzarli nella pagina *Systems* o da Workloads.
 
 --
-Abbonamenti Keystone:: Gli abbonamenti Keystone sono anche risorse che è possibile associare ai progetti per concedere agli utenti l'accesso all'abbonamento in NetApp Console.
-Carichi di lavoro di Backup and Recovery (Oracle e Microsoft SQL Server):: Alcuni carichi di lavoro di backup e ripristino sono considerati anche risorse. Assegna un carico di lavoro di backup e ripristino a un progetto per concedere agli utenti l'accesso.
+Abbonamenti Keystone:: Anche gli abbonamenti Keystone sono risorse che è possibile associare ai progetti per concedere agli utenti l'accesso all'abbonamento nella NetApp Console.
+Carichi di lavoro di Backup and Recovery (Oracle e Microsoft SQL Server):: Alcuni carichi di lavoro di Backup and Recovery sono considerati anche risorse. Assegna un carico di lavoro di Backup and Recovery a un progetto per concedere agli utenti l'accesso.
 
 
 [[associate-agents]]
@@ -106,7 +106,7 @@ Quando si associa un membro a un ruolo, è possibile assegnare tale ruolo all'in
 
 NetApp Console offre ruoli granulari che aderiscono al principio del "minimo privilegio", il che significa che i ruoli di accesso sono progettati per dare agli utenti accesso solo a ciò di cui hanno bisogno.
 
-Gli utenti possono ricoprire ruoli multipli man mano che le loro mansioni si espandono.
+Gli utenti potrebbero ricoprire ruoli multipli man mano che le loro mansioni si espandono.
 
 link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] .
 
@@ -125,17 +125,17 @@ La struttura IAM più adatta dipende dalle dimensioni della tua organizzazione e
 
 Per le organizzazioni con meno di 50 utenti e una gestione centralizzata dell'archiviazione, si può prendere in considerazione un approccio semplificato che utilizzi i ruoli di Super amministratore e Super visualizzatore.
 
-**Esempio: ABC Corporation (team di 5 persone)**
+*Esempio: ABC Corporation (team di 5 persone)*
 
-* **Struttura:** Unica organizzazione con 3 progetti (Produzione, Sviluppo, Backup)
-* **Ruoli:**
+* *Struttura:* Organizzazione unica con 3 progetti (Produzione, Sviluppo, Backup)
+* *Ruoli:*
 +
 ** 2 membri senior: ruolo di *Super amministratore* per accesso amministrativo completo
 ** 3 membri del team: ruolo di *Super viewer* per il monitoraggio senza diritti di modifica
 
 
-* **Strategia dell'agente:** Singolo agente associato a tutti i progetti per l'accesso alle risorse condivise
-* **Vantaggi:** Amministrazione semplificata, ridotta complessità dei ruoli, adatto a team che necessitano di un ampio accesso
+* *Strategia dell'agente:* Un unico agente associato a tutti i progetti per l'accesso alle risorse condivise
+* *Vantaggi:* Amministrazione semplificata, complessità dei ruoli ridotta, adatto a team che necessitano di un ampio accesso
 
 
 
@@ -144,31 +144,31 @@ Per le organizzazioni con meno di 50 utenti e una gestione centralizzata dell'ar
 
 Per le grandi organizzazioni con attività regionali e team specializzati, è opportuno implementare un approccio gerarchico con cartelle che rappresentano i confini geografici o delle unità aziendali.
 
-**Esempio: XYZ Corporation (multinazionale)**
+*Esempio: XYZ Corporation (società multinazionale)*
 
-* **Struttura:** Organizzazione > Cartelle regionali (Nord America, Europa, Asia-Pacifico) > Cartelle di progetto per regione
-* **Ruoli della piattaforma:**
+* *Struttura:* Organizzazione > Cartelle regionali (Nord America, Europa, Asia-Pacifico) > Cartelle di progetto per regione
+* *Ruoli sulla piattaforma:*
 +
 ** 1 *Amministratore dell'organizzazione*: supervisione globale e gestione delle policy
 ** 3 *Amministratori di cartelle o progetti*: Controllo regionale (uno per regione)
 ** 1 *Amministratore della federazione*: Integrazione del provider di identità aziendale
 
 
-* **Ruoli di archiviazione per regione:**
+* *Ruoli di archiviazione per regione:*
 +
 ** 9 *Amministratore di storage*: Scopri e gestisci i sistemi di storage nelle regioni assegnate
 ** 2 *Visualizzatore di archiviazione*: monitora le risorse di archiviazione nelle diverse regioni
 ** 1 *Specialista in integrità del sistema*: Gestisci l'integrità dell'archiviazione senza modifiche al sistema
 
 
-* **Ruoli del servizio dati:**
+* *Ruoli del servizio dati:*
 +
 ** *Amministratore di backup e ripristino*: per progetto in base alle responsabilità di backup
 ** *Amministratore di Ransomware Resilience*: monitoraggio del team di sicurezza nei vari progetti
 
 
-* **Strategia dell'agente:** Agenti regionali associati a progetti geografici appropriati
-* **Vantaggi:** Maggiore sicurezza attraverso la separazione dei ruoli, l'autonomia regionale e la conformità alle normative locali
+* *Strategia degli agenti:* Agenti regionali associati a progetti geografici appropriati
+* *Vantaggi:* Maggiore sicurezza grazie alla separazione dei ruoli, all'autonomia regionale e al rispetto delle normative locali
 
 
 
@@ -177,10 +177,10 @@ Per le grandi organizzazioni con attività regionali e team specializzati, è op
 
 Per le organizzazioni con team specializzati che necessitano di un accesso specifico al servizio dati, utilizzare assegnazioni di ruoli mirate in base alle responsabilità funzionali.
 
-**Esempio: TechCorp (azienda tecnologica di medie dimensioni)**
+*Esempio: TechCorp (azienda tecnologica di medie dimensioni)*
 
-* **Struttura:** Organizzazione > Cartelle dipartimentali (IT, Sicurezza, Sviluppo) > Risorse specifiche del progetto
-* **Ruoli specializzati:**
+* *Struttura:* Organizzazione > Cartelle di reparto (IT, Sicurezza, Sviluppo) > Risorse specifiche del progetto
+* *Ruoli specializzati:*
 +
 ** Team di sicurezza: ruoli di *amministratore di Ransomware Resilience* e *visualizzatore di classificazione*
 ** Team di backup: *Super amministratore di backup e ripristino* per operazioni di backup complete
@@ -188,8 +188,8 @@ Per le organizzazioni con team specializzati che necessitano di un accesso speci
 ** Team di conformità: *Analista di supporto operativo* per il monitoraggio e la gestione dei casi di supporto
 
 
-* **Strategia dell'agente:** Agenti collegati a progetti dipartimentali in base alla proprietà delle risorse
-* **Vantaggi:** Controllo degli accessi personalizzato, maggiore efficienza operativa e chiara responsabilità per attività specializzate
+* *Strategia degli agenti:* Agenti collegati a progetti dipartimentali in base alla proprietà delle risorse
+* *Vantaggi:* Controllo degli accessi personalizzato, maggiore efficienza operativa e chiara attribuzione di responsabilità per compiti specializzati
 
 
 

@@ -4,7 +4,7 @@ permalink: task-install-agent-on-prem.html
 keywords: deploy agent, on prem agent deployment, on prem agent, deploy connector on prem, manual deployment 
 summary: Distribuisci un agente Console in locale, quindi accedi e configuralo per funzionare con la tua organizzazione Console. 
 ---
-= Distribuisci manualmente un agente Console in locale
+= Installare manualmente un agente Console in locale
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -17,9 +17,9 @@ summary: Distribuisci un agente Console in locale, quindi accedi e configuralo p
 Distribuisci un agente Console in locale, quindi accedi e configuralo per funzionare con la tua organizzazione Console.
 
 
-NOTE: Se sei un utente VMWare, puoi utilizzare un file OVA per distribuire un agente Console nel tuo vCenter. link:task-install-agent-on-prem-ova.html["Scopri di più sulla distribuzione di un agente in un vCenter."]
+NOTE: Se sei un utente VMware, puoi utilizzare un file OVA per distribuire un agente Console nel tuo vCenter. link:task-install-agent-on-prem-ova.html["Scopri di più sulla distribuzione di un agente in un vCenter."]
 
-Prima di procedere all'installazione, è necessario assicurarsi che l'host (VM o host Linux) soddisfi i requisiti e che l'agente della console abbia accesso in uscita a Internet e alle reti di destinazione.  Se intendi utilizzare i servizi dati NetApp o le opzioni di archiviazione cloud come Cloud Volumes ONTAP, dovrai creare credenziali nel tuo provider cloud da aggiungere alla Console, in modo che l'agente della Console possa eseguire azioni nel cloud per tuo conto.
+Prima dell'installazione, è necessario assicurarsi che l'host (VM o host Linux) soddisfi i requisiti e che l'agente della Console abbia accesso outbound a Internet e alle reti di destinazione. Se si prevede di utilizzare NetApp data services, o cloud storage come Cloud Volumes ONTAP, sarà necessario creare le credenziali presso il cloud provider da aggiungere alla Console, in modo che l'agente della Console possa eseguire azioni nel cloud per conto dell'utente.
 
 
 
@@ -31,7 +31,7 @@ Prima di installare un agente Console, è necessario assicurarsi di disporre di 
 
 === Requisiti dell'host dell'agente della console di revisione
 
-Eseguire l'agente Console su un host x86 che soddisfi i requisiti di sistema operativo, RAM e porta.  Prima di installare l'agente Console, assicurati che il tuo host soddisfi questi requisiti.
+Eseguire l'agente Console su un host x86 che soddisfi i requisiti di sistema operativo, RAM e port. Assicurarsi che l'host soddisfi tali requisiti prima di installare l'agente Console.
 
 
 NOTE: L'agente della console riserva l'intervallo UID e GID da 19000 a 19200.  Questo intervallo è fisso e non può essere modificato.  Se un software di terze parti sul tuo host utilizza UID o GID compresi in questo intervallo, l'installazione dell'agente non andrà a buon fine.  NetApp consiglia di utilizzare un host privo di software di terze parti per evitare conflitti.
@@ -187,14 +187,60 @@ NOTE: Un agente Console installato in sede non può gestire le risorse in Google
 
 [role="tabbed-block"]
 ====
-.AWS
+.Numero minimo di endpoint richiesti
 --
-Quando l'agente Console è installato in locale, necessita dell'accesso di rete ai seguenti endpoint AWS per gestire i sistemi NetApp (ad esempio Cloud Volumes ONTAP) distribuiti in AWS.
+Questi endpoint sono necessari per tutte le implementazioni dell'agente Console. Sono necessari endpoint aggiuntivi per gestire le risorse NetApp in AWS o Azure.
 
-Endpoint contattati dall'agente della console:: L'agente della console necessita di accesso a Internet in uscita per contattare i seguenti endpoint per gestire risorse e processi all'interno dell'ambiente cloud pubblico per le operazioni quotidiane.
+[cols="2a,1a"]
+|===
+| Punti finali | Scopo 
+
+
+ a| 
+\ https://mysupport.netapp.com
+ a| 
+Per ottenere informazioni sulle licenze e per inviare messaggi AutoSupport a NetApp Support.
+
+
+
+ a| 
+\ https://signin.b2c.netapp.com
+ a| 
+Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
+
+
+
+ a| 
+\ https://support.netapp.com
+ a| 
+Per ottenere informazioni sulle licenze e per inviare messaggi AutoSupport a NetApp Support, nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
+
+
+
+ a| 
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
+ a| 
+Per fornire funzionalità e servizi all'interno della NetApp Console.
+
+
+
+ a| 
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+ a| 
+Per ottenere immagini per gli aggiornamenti dell'agente della console.
+
+* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti. Se usilink:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce. Per evitare questo errore, saltare il controllo di convalida.
 +
+Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di aggiornare le regole del firewall agli endpoint correnti il ​​prima possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
+
+* Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
+
+
+|===
 --
-Gli endpoint elencati di seguito sono tutti voci CNAME.
+.Endpoint aggiuntivi per le risorse AWS
+--
+Quando l'agente della Console viene installato on-premises, necessita dell'accesso di rete ai seguenti endpoint AWS aggiuntivi per gestire i sistemi NetApp (come Cloud Volumes ONTAP) distribuiti in AWS.
 
 [cols="2a,1a"]
 |===
@@ -217,118 +263,18 @@ Per gestire le risorse AWS.  L'endpoint dipende dalla tua regione AWS. https://d
 
 
  a| 
-Amazon FsX per NetApp ONTAP:
+Amazon FSx for NetApp ONTAP:
 
 * api.workloads.netapp.com
 
  a| 
-La console basata sul Web contatta questo endpoint per interagire con le API di Workload Factory per gestire e utilizzare i carichi di lavoro basati su FSx per ONTAP .
-
-
-
- a| 
-\ https://mysupport.netapp.com
- a| 
-Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp .
-
-
-
- a| 
-\ https://signin.b2c.netapp.com
- a| 
-Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
-
-
-
- a| 
-\ https://support.netapp.com
- a| 
-Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp , nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
- a| 
-Per fornire funzionalità e servizi all'interno della NetApp Console.
-
-
-
- a| 
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
- a| 
-Per ottenere immagini per gli aggiornamenti dell'agente della console.
-
-* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti. Se usilink:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce. Per evitare questo errore, saltare il controllo di convalida.
-+
-Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di aggiornare le regole del firewall agli endpoint correnti il ​​prima possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
-
-* Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
-
-
-
-
- a| 
-\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
- a| 
-Per ottenere immagini per gli aggiornamenti dell'agente della console.
-
-* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti. Se usilink:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce. Per evitare questo errore, saltare il controllo di convalida.
-+
-Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di aggiornare le regole del firewall agli endpoint correnti il ​​prima possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
-
-* Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
-
-
-^1^ NetApp consiglia di consentire gli endpoint dell'Opzione 1 nel firewall in quanto più sicuri e di non consentire gli endpoint dell'Opzione 2.  Si tenga presente quanto segue in merito a questi endpoint:
-
-+ * A partire dalla versione 3.9.47 dell'agente Console, il sistema supporta gli endpoint elencati nell'opzione 1.  Le versioni precedenti dell'agente Console non supportano la compatibilità con le versioni precedenti.  * L'agente della console contatta prima gli endpoint nell'opzione 2.  Se tali endpoint non sono accessibili, vengono contattati automaticamente gli endpoint nell'opzione 1.  * Se si utilizza l'agente Console con NetApp Backup and Recovery o Ransomware Resilience, il sistema non supporta gli endpoint Opzione 1.  Consentire gli endpoint dell'opzione 2 e non consentire l'opzione 1.
-
-
-
- a| 
-Se l'agente della console si trova in una regione AWS Government: \https://*.blob.core.windows.net https://cloudmanagerinfraprod.azurecr.io
- a| 
-Per ottenere le immagini per gli aggiornamenti dell'agente Console quando quest'ultimo è installato in una regione AWS Government.
-
-
-
- a| 
-Se l'agente della console si trova in un'area geografica di Azure Government: \https://*.blob.core.windows.net https://occmclientinfragov.azurecr.us
- a| 
-Per ottenere le immagini per gli aggiornamenti dell'agente Console quando l'agente Console è installato in un'area geografica di Azure Government.
-
-
-
- a| 
-Se l'agente della console si trova in una regione commerciale o in una regione sovrana, è possibile scegliere tra due set di endpoint:
-
-* Opzione 1 (consigliata) ^1^
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* Opzione 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Per ottenere le immagini per gli aggiornamenti dell'agente Console quando l'agente Console è installato in una regione commerciale o in una regione sovrana.
+La console basata sul Web contatta questo endpoint per interagire con le API di Workload Factory per gestire e utilizzare i carichi di lavoro basati su FSx for ONTAP.
 
 |===
 --
-
-
-|*Endpoint per 3.9.55 e precedenti* | *Endpoint per 4.0.0 e successive* | *Scopo*
-
-a| * https://support.netapp.com * https://mysupport.netapp.com a| * https://mysupport.netapp.com * https://signin.b2c.netapp.com * https://support.netapp.com a| Per la gestione delle licenze e per contattare il supporto NetApp. a| * https://*.api.bluexp.netapp.com * https://api.bluexp.netapp.com * https://*.cloudmanager.cloud.netapp.com * https://cloudmanager.cloud.netapp.com * https://netapp-cloud-account.auth0.com * https://netapp-cloud-account.us.auth0.com * https://console.netapp.com * https://*.console.netapp.com a| * https://api.bluexp.netapp.com * https://netapp-cloud-account.auth0.com * https://netapp-cloud-account.us.auth0.com * https://console.netapp.com * https://components.console.netapp.com * https://cdn.auth0.com a| Per le operazioni quotidiane. a| * https://*.blob.core.windows.net * https://cloudmanagerinfraprod.azurecr.io a| * https://bluexpinfraprod.eastus2.data.azurecr.io * https://bluexpinfraprod.azurecr.io | Per ottenere immagini per gli aggiornamenti dell'agente Console.
-
-|===
-|===
+.Endpoint aggiuntivi per le risorse di Azure
 --
-.Azzurro
---
-Quando l'agente Console è installato in locale, necessita dell'accesso di rete ai seguenti endpoint di Azure per gestire i sistemi NetApp (ad esempio Cloud Volumes ONTAP) distribuiti in Azure.
+Quando l'agente della Console viene installato on-premises, necessita dell'accesso di rete ai seguenti endpoint aggiuntivi di Azure per gestire i sistemi NetApp (come Cloud Volumes ONTAP) distribuiti in Azure.
 
 [cols="2a,1a"]
 |===
@@ -347,103 +293,6 @@ Per gestire le risorse nelle aree pubbliche di Azure.
  a| 
 Per gestire le risorse nelle regioni di Azure Cina.
 
-
-
- a| 
-\ https://mysupport.netapp.com
- a| 
-Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp .
-
-
-
- a| 
-\ https://signin.b2c.netapp.com
- a| 
-Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
-
-
-
- a| 
-\ https://support.netapp.com
- a| 
-Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp , nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
- a| 
-Per fornire funzionalità e servizi all'interno della NetApp Console.
-
-
-
- a| 
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
- a| 
-Per ottenere immagini per gli aggiornamenti dell'agente della console.
-
-* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti. Se usilink:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce. Per evitare questo errore, saltare il controllo di convalida.
-+
-Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di aggiornare le regole del firewall agli endpoint correnti il ​​prima possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
-
-* Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
-
-
-
-
- a| 
-\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
- a| 
-Per ottenere immagini per gli aggiornamenti dell'agente della console.
-
-* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti. Se usilink:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce. Per evitare questo errore, saltare il controllo di convalida.
-+
-Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di aggiornare le regole del firewall agli endpoint correnti il ​​prima possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
-
-* Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
-
-
-^1^ NetApp consiglia di consentire gli endpoint dell'Opzione 1 nel firewall in quanto più sicuri e di non consentire gli endpoint dell'Opzione 2.  Si tenga presente quanto segue in merito a questi endpoint:
-
-+ * A partire dalla versione 3.9.47 dell'agente Console, il sistema supporta gli endpoint elencati nell'opzione 1.  Le versioni precedenti dell'agente Console non supportano la compatibilità con le versioni precedenti.  * L'agente della console contatta prima gli endpoint nell'opzione 2.  Se tali endpoint non sono accessibili, vengono contattati automaticamente gli endpoint nell'opzione 1.  * Se si utilizza l'agente Console con NetApp Backup and Recovery o Ransomware Resilience, il sistema non supporta gli endpoint Opzione 1.  Consentire gli endpoint dell'opzione 2 e non consentire l'opzione 1.
-
-
-
- a| 
-Se l'agente della console si trova in una regione AWS Government: \https://*.blob.core.windows.net https://cloudmanagerinfraprod.azurecr.io
- a| 
-Per ottenere le immagini per gli aggiornamenti dell'agente Console quando quest'ultimo è installato in una regione AWS Government.
-
-
-
- a| 
-Se l'agente della console si trova in un'area geografica di Azure Government: \https://*.blob.core.windows.net https://occmclientinfragov.azurecr.us
- a| 
-Per ottenere le immagini per gli aggiornamenti dell'agente Console quando l'agente Console è installato in un'area geografica di Azure Government.
-
-
-
- a| 
-Se l'agente della console si trova in una regione commerciale o in una regione sovrana, è possibile scegliere tra due set di endpoint:
-
-* Opzione 1 (consigliata) ^1^
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* Opzione 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Per ottenere le immagini per gli aggiornamenti dell'agente Console quando l'agente Console è installato in una regione commerciale o in una regione sovrana.
-
-|===
-|*Endpoint per 3.9.55 e precedenti* | *Endpoint per 4.0.0 e successive* | *Scopo*
-
-a| * https://support.netapp.com * https://mysupport.netapp.com a| * https://mysupport.netapp.com * https://signin.b2c.netapp.com * https://support.netapp.com a| Per la gestione delle licenze e per contattare il supporto NetApp. a| * https://*.api.bluexp.netapp.com * https://api.bluexp.netapp.com * https://*.cloudmanager.cloud.netapp.com * https://cloudmanager.cloud.netapp.com * https://netapp-cloud-account.auth0.com * https://netapp-cloud-account.us.auth0.com * https://console.netapp.com * https://*.console.netapp.com a| * https://api.bluexp.netapp.com * https://netapp-cloud-account.auth0.com * https://netapp-cloud-account.us.auth0.com * https://console.netapp.com * https://components.console.netapp.com * https://cdn.auth0.com a| Per le operazioni quotidiane. a| * https://*.blob.core.windows.net * https://cloudmanagerinfraprod.azurecr.io a| * https://bluexpinfraprod.eastus2.data.azurecr.io * https://bluexpinfraprod.azurecr.io | Per ottenere immagini per gli aggiornamenti dell'agente Console.
-
-|===
 |===
 --
 ====
@@ -479,7 +328,7 @@ Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizz
 
 === Crea autorizzazioni cloud per l'agente della console per AWS o Azure
 
-Se si desidera utilizzare i servizi dati NetApp in AWS o Azure con un agente Console locale, è necessario configurare le autorizzazioni nel provider cloud e quindi aggiungere le credenziali all'agente Console dopo averlo installato.
+Se si desidera utilizzare i servizi dati NetApp in AWS o Azure con un agente Console locale, è necessario configurare le autorizzazioni nel cloud provider e quindi aggiungere le credenziali all'agente Console dopo averlo installato.
 
 
 TIP: Per gestire tutte le risorse presenti in Google Cloud, è necessario installare l'agente Console.
@@ -671,7 +520,7 @@ image:screenshot_azure_client_secret.gif["Uno screenshot del portale di Azure ch
 
 == Installare manualmente un agente Console
 
-Quando si installa manualmente un agente Console, è necessario preparare l'ambiente della macchina in modo che soddisfi i requisiti.  Avrai bisogno di un computer Linux e dovrai installare Podman o Docker, a seconda del tuo sistema operativo Linux.
+Quando si installa manualmente un agente Console, è necessario preparare l'ambiente della macchina in modo che soddisfi i requisiti. È necessaria una macchina Linux e sarà necessario installare Podman o Docker, a seconda del sistema operativo Linux.
 
 
 
@@ -989,7 +838,7 @@ Sarà necessario registrare l'agente Console nella NetApp Console.
 
 == Registrare l'agente della console con NetApp Console
 
-Accedi alla Console e associa l'agente della Console alla tua organizzazione. La modalità di accesso dipende dalla modalità in cui utilizzi la Console. Se utilizzi la Console in modalità standard, accedi tramite il sito web SaaS. Se utilizzi la Console in modalità limitata o privata, accedi localmente dall'host dell'agente della Console.
+Accedi alla Console e associa l'agente della Console alla tua organizzazione. La procedura di accesso dipende dalla modalità in cui utilizzi la Console. Se utilizzi la Console in modalità standard, accedi tramite il sito web SaaS. Se utilizzi la Console in modalità limitata o privata, accedi localmente dall'host dell'agente della Console.
 
 .Passi
 . Aprire un browser Web e immettere l'URL dell'host dell'agente della console:
@@ -1042,7 +891,7 @@ Ora puoi andare al https://console.netapp.com["NetApp Console"^] per iniziare a 
 .Azzurro
 --
 .Prima di iniziare
-Se hai appena creato queste credenziali di Azure, potrebbero volerci alcuni minuti prima che siano disponibili.  Attendi qualche minuto prima di aggiungere le credenziali all'agente della console.
+Se hai appena creato queste credenziali Azure, potrebbero essere necessari alcuni minuti prima che siano disponibili. Attendi qualche minuto prima di aggiungere le credenziali all'agente della Console.
 
 .Passi
 . Selezionare *Amministrazione > Credenziali*.

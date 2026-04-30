@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-install-agent-google-console-gcloud.html 
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
-summary: 'Per creare un agente Console in Google Cloud da NetApp Console o tramite Google Cloud, è necessario configurare la rete, preparare le autorizzazioni di Google Cloud, abilitare le API di Google Cloud e quindi creare l"agente Console.' 
+summary: 'Per creare un agente Console in Google Cloud dalla NetApp Console o utilizzando Google Cloud, è necessario configurare la rete, preparare le autorizzazioni di Google Cloud, abilitare le API di Google Cloud e quindi creare l"agente Console.' 
 ---
 = Distribuisci un agente Console in Google Cloud da NetApp Console
 :hardbreaks:
@@ -58,7 +58,7 @@ Per gestire le risorse in Google Cloud.
  a| 
 \ https://mysupport.netapp.com
  a| 
-Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp .
+Per ottenere informazioni sulle licenze e per inviare messaggi AutoSupport a NetApp Support.
 
 
 
@@ -72,7 +72,7 @@ Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere
  a| 
 \ https://support.netapp.com
  a| 
-Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp , nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
+Per ottenere informazioni sulle licenze e per inviare messaggi AutoSupport a NetApp Support, nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
 
 
 
@@ -95,65 +95,10 @@ Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di agg
 * Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
 
 
-
-
- a| 
-\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
- a| 
-Per ottenere immagini per gli aggiornamenti dell'agente della console.
-
-* Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti. Se usilink:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce. Per evitare questo errore, saltare il controllo di convalida.
-+
-Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di aggiornare le regole del firewall agli endpoint correnti il ​​prima possibile. link:reference-networking-saas-console-previous.html#update-endpoint-list["Scopri come aggiornare l'elenco degli endpoint"] .
-
-* Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
-
-
-^1^ NetApp consiglia di consentire gli endpoint dell'Opzione 1 nel firewall in quanto più sicuri e di non consentire gli endpoint dell'Opzione 2.  Si tenga presente quanto segue in merito a questi endpoint:
-
-+ * A partire dalla versione 3.9.47 dell'agente Console, il sistema supporta gli endpoint elencati nell'opzione 1.  Le versioni precedenti dell'agente Console non supportano la compatibilità con le versioni precedenti.  * L'agente della console contatta prima gli endpoint nell'opzione 2.  Se tali endpoint non sono accessibili, vengono contattati automaticamente gli endpoint nell'opzione 1.  * Se si utilizza l'agente Console con NetApp Backup and Recovery o Ransomware Resilience, il sistema non supporta gli endpoint Opzione 1.  Consentire gli endpoint dell'opzione 2 e non consentire l'opzione 1.
-
-
-
- a| 
-Se l'agente della console si trova in una regione AWS Government: \https://*.blob.core.windows.net https://cloudmanagerinfraprod.azurecr.io
- a| 
-Per ottenere le immagini per gli aggiornamenti dell'agente Console quando quest'ultimo è installato in una regione AWS Government.
-
-
-
- a| 
-Se l'agente della console si trova in un'area geografica di Azure Government: \https://*.blob.core.windows.net https://occmclientinfragov.azurecr.us
- a| 
-Per ottenere le immagini per gli aggiornamenti dell'agente Console quando l'agente Console è installato in un'area geografica di Azure Government.
-
-
-
- a| 
-Se l'agente della console si trova in una regione commerciale o in una regione sovrana, è possibile scegliere tra due set di endpoint:
-
-* Opzione 1 (consigliata) ^1^
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* Opzione 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Per ottenere le immagini per gli aggiornamenti dell'agente Console quando l'agente Console è installato in una regione commerciale o in una regione sovrana.
-
 |===
 --
 
 
-|*Endpoint per 3.9.55 e precedenti* | *Endpoint per 4.0.0 e successive* | *Scopo*
-
-a| * https://support.netapp.com * https://mysupport.netapp.com a| * https://mysupport.netapp.com * https://signin.b2c.netapp.com * https://support.netapp.com a| Per la gestione delle licenze e per contattare il supporto NetApp. a| * https://*.api.bluexp.netapp.com * https://api.bluexp.netapp.com * https://*.cloudmanager.cloud.netapp.com * https://cloudmanager.cloud.netapp.com * https://netapp-cloud-account.auth0.com * https://netapp-cloud-account.us.auth0.com * https://console.netapp.com * https://*.console.netapp.com a| * https://api.bluexp.netapp.com * https://netapp-cloud-account.auth0.com * https://netapp-cloud-account.us.auth0.com * https://console.netapp.com * https://components.console.netapp.com * https://cdn.auth0.com a| Per le operazioni quotidiane. a| * https://*.blob.core.windows.net * https://cloudmanagerinfraprod.azurecr.io a| * https://bluexpinfraprod.eastus2.data.azurecr.io * https://bluexpinfraprod.azurecr.io | Per ottenere immagini per gli aggiornamenti dell'agente Console.
-
-|===
-|===
 Endpoint contattati dalla console NetApp:: Quando si utilizza l'applicazione SaaS NetApp Console basata sul web, questa contatta diversi endpoint per completare le attività di gestione dei dati. Questo include gli endpoint che vengono contattati per distribuire l'agente Console dalla Console.
 +
 --
@@ -300,8 +245,10 @@ includedPermissions:
 L'esempio seguente crea un ruolo denominato "agentDeployment" a livello di progetto:
 
 +
-gcloud iam roles create connectorDeployment --project=myproject --file=agent-deployment.yaml
-
+[source, shell]
+----
+gcloud iam roles create agentDeployment --project=myproject --file=agent-deployment.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Documentazione di Google Cloud: creazione e gestione di ruoli personalizzati"^]
 
@@ -461,13 +408,13 @@ NOTE: Quando distribuisci un agente in Google Cloud, l'agente crea un bucket in 
 Dovresti avere quanto segue:
 
 * Le autorizzazioni Google Cloud richieste per creare l'agente Console e un account di servizio per la VM dell'agente Console.
-* Una VPC e una subnet che soddisfano i requisiti di rete.
+* Una VPC e una subnet che soddisfino i requisiti di rete.
 * Dettagli su un server proxy, se è necessario un proxy per l'accesso a Internet dall'agente della console.
 
 
 .Passi
 . Selezionare *Amministrazione > Agenti*.
-. Nella pagina *Panoramica*, seleziona *Distribuisci agente > Google Cloud*
+. Nella pagina *Panoramica*, seleziona *Distribuisci agente > Google Cloud*.
 . Nella pagina *Distribuzione di un agente*, rivedi i dettagli su ciò di cui avrai bisogno.  Hai due opzioni:
 +
 .. Selezionare *Continua* per preparare la distribuzione utilizzando la guida integrata nel prodotto.  Ogni passaggio della guida integrata nel prodotto include le informazioni contenute in questa pagina della documentazione.
@@ -483,8 +430,8 @@ Il modulo è di proprietà e ospitato da Google.  Le tue credenziali non vengono
 ** *Dettagli*: immettere un nome per l'istanza della macchina virtuale, specificare i tag, selezionare un progetto e quindi selezionare l'account di servizio che dispone delle autorizzazioni richieste (fare riferimento alla sezione precedente per i dettagli).
 ** *Posizione*: specificare una regione, una zona, una VPC e una subnet per l'istanza.
 ** *Rete*: scegliere se abilitare un indirizzo IP pubblico e, facoltativamente, specificare una configurazione proxy.
-** *Tag di rete*: aggiungere un tag di rete all'istanza dell'agente Console se si utilizza un proxy trasparente.  I tag di rete devono iniziare con una lettera minuscola e possono contenere lettere minuscole, numeri e trattini.  I tag devono terminare con una lettera minuscola o un numero.  Ad esempio, potresti utilizzare il tag "console-agent-proxy".
-** *Criterio firewall*: scegliere se creare un nuovo criterio firewall o se selezionarne uno esistente che consenta le regole in entrata e in uscita richieste.
+** *Tag di rete*: Aggiungi un tag di rete all'istanza dell'agente Console se utilizzi un proxy trasparente. I tag di rete devono iniziare con una lettera minuscola e possono contenere lettere minuscole, numeri e trattini. I tag devono terminare con una lettera minuscola o un numero. Ad esempio, potresti usare il tag `console-agent-proxy`.
+** *Criteri del firewall*: Scegliere se creare un nuovo criterio del firewall o se selezionare un criterio del firewall esistente che consenta le regole inbound e outbound richieste.
 +
 link:reference-ports-gcp.html["Regole del firewall in Google Cloud"]
 
@@ -515,4 +462,4 @@ Una volta completato il processo, l'agente Console è disponibile per l'uso.
 
 NOTE: Se la distribuzione non riesce, puoi scaricare un report e i registri dalla Console per aiutarti a risolvere i problemi.link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
 
-Se disponi di bucket Google Cloud Storage nello stesso account Google Cloud in cui hai creato l'agente Console, vedrai automaticamente un sistema Google Cloud Storage apparire nella pagina *Sistemi*. https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["Scopri come gestire Google Cloud Storage dalla Console"]
+Se disponi di bucket di Google Cloud Storage nello stesso account Google Cloud in cui hai creato l'agente della Console, un sistema Google Cloud Storage viene visualizzato automaticamente nella pagina *Sistemi* https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["Scopri come gestire Google Cloud Storage dalla Console"^].

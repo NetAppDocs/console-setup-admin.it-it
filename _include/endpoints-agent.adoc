@@ -22,12 +22,12 @@ Gli endpoint elencati di seguito sono tutti voci CNAME.
 
 | Per gestire le risorse AWS.  L'endpoint dipende dalla tua regione AWS. https://docs.aws.amazon.com/general/latest/gr/rande.html["Per i dettagli, fare riferimento alla documentazione AWS"^]
 
-| Amazon FsX per NetApp ONTAP:
+| Amazon FSx for NetApp ONTAP:
 
 * api.workloads.netapp.com
 
 
-| La console basata sul Web contatta questo endpoint per interagire con le API di Workload Factory per gestire e utilizzare i carichi di lavoro basati su FSx per ONTAP .
+La console basata sul web si connette a questo endpoint per interagire con le API di Workload Factory al fine di gestire e far funzionare i carichi di lavoro basati su FSx for ONTAP.
 
 | \ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
 
@@ -49,7 +49,7 @@ Gli endpoint elencati di seguito sono tutti voci CNAME.
 
 | Per gestire le risorse in Google Cloud.
 
-| \ https://mysupport.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp . | \ https://signin.b2c.netapp.com | Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console. | \ https://support.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport al supporto NetApp , nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
+| https://mysupport.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport all'assistenza NetApp. | https://signin.b2c.netapp.com | Per aggiornare le credenziali del NetApp Support Site (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console. | https://support.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport all'assistenza NetApp, nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
 
 | https://api.bluexp.netapp.com https://netapp-cloud-account.auth0.com https://netapp-cloud-account.us.auth0.com https://console.netapp.com https://components.console.netapp.com https://cdn.auth0.com | Per fornire funzionalità e servizi all'interno della NetApp Console.
 
@@ -87,8 +87,8 @@ Per ottenere immagini per gli aggiornamenti dell'agente della console.
 
 NetApp consiglia di consentire gli endpoint dell'Opzione 1 nel firewall in quanto più sicuri e di non consentire gli endpoint dell'Opzione 2, a meno che non si utilizzi Ransomware Resilience o Backup and Recovery.  Si tenga presente quanto segue in merito a questi endpoint:
 
-* Gli endpoint dell'opzione 1 sono supportati nella versione 3.9.47 e successive.  Le versioni precedenti alla 3.9.47 non supportano la compatibilità con le versioni precedenti.
-* L'agente della console avvia prima il contatto con gli endpoint nell'opzione 2.  Se tali endpoint non sono accessibili, vengono contattati automaticamente gli endpoint nell'opzione 1.
+* Gli endpoint dell'Opzione 1 sono supportati dalla versione 3.9.47 in poi. Le versioni precedenti alla 3.9.47 non supportano la compatibilità con le versioni precedenti.
+* L'agente della Console contatta innanzitutto gli endpoint dell'Opzione 2. Se questi endpoint non sono accessibili, contatta automaticamente gli endpoint dell'Opzione 1.
 * Se si utilizza l'agente Console con NetApp Backup and Recovery o Ransomware Resilience, il sistema non supporta gli endpoint Opzione 1.  Consentire gli endpoint dell'opzione 2 e non consentire l'opzione 1.
 
 
@@ -102,7 +102,7 @@ Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di agg
 * Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
 
 
-a| https://occmclientinfragov.azurecr.us.iohttps://bluexpinfraprod.azurecr.io a| Per ottenere le immagini per gli aggiornamenti dell'agente della Console.
+a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| Per ottenere le immagini per gli aggiornamenti dell'agente della Console.
 
 * Quando si distribuisce un nuovo agente, il controllo di convalida verifica la connettività agli endpoint correnti. Se usilink:reference-networking-saas-console-previous.html["punti finali precedenti"] , il controllo di convalida fallisce. Per evitare questo errore, saltare il controllo di convalida.
 +
@@ -113,7 +113,7 @@ Sebbene gli endpoint precedenti siano ancora supportati, NetApp consiglia di agg
 
 ^1^ NetApp consiglia di consentire gli endpoint dell'Opzione 1 nel firewall in quanto più sicuri e di non consentire gli endpoint dell'Opzione 2.  Si tenga presente quanto segue in merito a questi endpoint:
 
-+ * A partire dalla versione 3.9.47 dell'agente Console, il sistema supporta gli endpoint elencati nell'opzione 1.  Le versioni precedenti dell'agente Console non supportano la compatibilità con le versioni precedenti.  * L'agente della console contatta prima gli endpoint nell'opzione 2.  Se tali endpoint non sono accessibili, vengono contattati automaticamente gli endpoint nell'opzione 1.  * Se si utilizza l'agente Console con NetApp Backup and Recovery o Ransomware Resilience, il sistema non supporta gli endpoint Opzione 1.  Consentire gli endpoint dell'opzione 2 e non consentire l'opzione 1.
++ * A partire dalla versione 3.9.47 dell'agente Console, il sistema supporta gli endpoint elencati nell'Opzione 1. Le versioni precedenti dell'agente Console non supportano la compatibilità con le versioni precedenti. * L'agente Console contatta prima gli endpoint nell'Opzione 2. Se tali endpoint non sono accessibili, contatta automaticamente gli endpoint nell'Opzione 1. * Se si utilizza l'agente Console con NetApp Backup and Recovery o Ransomware Resilience, il sistema non supporta gli endpoint dell'Opzione 1. Consentire gli endpoint dell'Opzione 2 e non consentire l'Opzione 1.
 
 | Se l'agente della console si trova in una regione AWS Government: \https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
 
