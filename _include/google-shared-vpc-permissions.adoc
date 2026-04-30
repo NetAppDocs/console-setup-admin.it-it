@@ -44,9 +44,9 @@ compute.networkUser
 |===
 Note:
 
-. deploymentmanager.editor è necessario nel progetto host solo se non si passano regole del firewall alla distribuzione e si sceglie di lasciare che la Console le crei per conto proprio.  Se non è specificata alcuna regola, la NetApp Console crea una distribuzione nel progetto host che contiene la regola del firewall VPC0.
-. firewall.create e firewall.delete sono necessari solo se non si passano regole del firewall alla distribuzione e si sceglie di lasciare che la Console le crei per conto proprio.  Queste autorizzazioni si trovano nel file .yaml dell'account Console.  Se si distribuisce una coppia HA utilizzando una VPC condivisa, queste autorizzazioni verranno utilizzate per creare le regole del firewall per VPC1, 2 e 3.  Per tutte le altre distribuzioni, queste autorizzazioni verranno utilizzate anche per creare regole per VPC0.
-. Per Cloud Tiering, l'account del servizio di tiering deve avere il ruolo serviceAccount.user sull'account del servizio, non solo a livello di progetto.  Attualmente, se si assegna serviceAccount.user a livello di progetto, le autorizzazioni non vengono visualizzate quando si esegue una query sull'account di servizio con getIAMPolicy.
+. `deploymentmanager.editor`È richiesto solo nel progetto host se non si passano regole firewall alla distribuzione e si sceglie di lasciare che la Console le crei per te. La NetApp Console crea una distribuzione nel progetto host che contiene la regola firewall VPC0 se non viene specificata alcuna regola.
+. `firewall.create` e  `firewall.delete` sono necessarie solo se non si passano regole firewall alla distribuzione e si sceglie di lasciare che sia la Console a crearle per te. Queste autorizzazioni risiedono nel file .yaml dell'account della Console. Se si distribuisce una coppia HA utilizzando una VPC condivisa, queste autorizzazioni verranno utilizzate per creare le regole firewall per VPC1, 2 e 3. Per tutte le altre distribuzioni, queste autorizzazioni verranno utilizzate anche per creare le regole per VPC0.
+. Per Cloud Tiering, l'account di servizio di tiering deve avere il  `serviceAccount.user` ruolo sull'account di servizio, non solo a livello di progetto. Se lo assegni  `serviceAccount.user` a livello di progetto, le autorizzazioni non vengono visualizzate quando interroghi l'account di servizio con  `getIAMPolicy`.
 
 
 ====

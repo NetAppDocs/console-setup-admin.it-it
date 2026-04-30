@@ -93,10 +93,10 @@ NetApp Cloud Tiering non è più disponibile per l'acquisto o il rinnovo della l
 
 I clienti esistenti possono continuare a utilizzare e a ricevere assistenza per NetApp Cloud Tiering fino alla scadenza del loro abbonamento o contratto di licenza. Dopo la scadenza dell'abbonamento, i clienti non avranno più accesso alle funzionalità o all'assistenza di NetApp Cloud Tiering.
 
-NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp per migrare le licenze di tiering esistenti alle licenze ONTAP FabricPool, che forniscono la funzionalità per il data tiering in ONTAP. Vedere link:https://docs.netapp.com/us-en/ontap/fabricpool/install-license-aws-azure-ibm-task.html["Installare una FabricPool license su un ONTAP cluster"] per ulteriori informazioni su come configurare il data tiering in ONTAP utilizzando FabricPool.
+NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp per migrare le licenze di tiering esistenti alle licenze ONTAP FabricPool, che forniscono la funzionalità per il data tiering in ONTAP. Per ulteriori informazioni su come configurare il data tiering in ONTAP utilizzando FabricPool, consultare link:https://docs.netapp.com/us-en/ontap/fabricpool/install-license-aws-azure-ibm-task.html["Installare una FabricPool license su un ONTAP cluster"^].
 
-* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-Notice2.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_9L2PauNXYE0fOs0RIz8KK2q5Jb6sg8Yv-97NNJ53ceAab9UAqpKOrAvByxsOWqhIQHNCHgFfM0q3TI["NetApp Cloud Tiering Avviso di fine disponibilità"]
-* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-FAQ-v3.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_rplJe_ZtlY4PQAQRQlewsDa0W4JR55muT0KCThR46zI7-uOhIYfVsxODDKFrnYYvy5uZzvhEKHOwBI["NetApp Cloud Tiering Domande frequenti sulla fine della disponibilità"]
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-Notice2.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_9L2PauNXYE0fOs0RIz8KK2q5Jb6sg8Yv-97NNJ53ceAab9UAqpKOrAvByxsOWqhIQHNCHgFfM0q3TI["NetApp Cloud Tiering Avviso di fine disponibilità"^]
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-FAQ-v3.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_rplJe_ZtlY4PQAQRQlewsDa0W4JR55muT0KCThR46zI7-uOhIYfVsxODDKFrnYYvy5uZzvhEKHOwBI["NetApp Cloud Tiering Domande frequenti sulla fine della disponibilità"^]
 
 
 ====
@@ -254,10 +254,10 @@ NetApp Cloud Tiering non è più disponibile per l'acquisto o il rinnovo della l
 
 I clienti esistenti possono continuare a utilizzare e a ricevere assistenza per NetApp Cloud Tiering fino alla scadenza del loro abbonamento o contratto di licenza. Dopo la scadenza dell'abbonamento, i clienti non avranno più accesso alle funzionalità o all'assistenza di NetApp Cloud Tiering.
 
-NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp per migrare le licenze di tiering esistenti alle licenze ONTAP FabricPool, che forniscono la funzionalità per il data tiering in ONTAP. Vedere link:https://docs.netapp.com/us-en/ontap/fabricpool/install-license-aws-azure-ibm-task.html["Installare una FabricPool license su un ONTAP cluster"] per ulteriori informazioni su come configurare il data tiering in ONTAP utilizzando FabricPool.
+NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp per migrare le licenze di tiering esistenti alle licenze ONTAP FabricPool, che forniscono la funzionalità per il data tiering in ONTAP. Per ulteriori informazioni su come configurare il data tiering in ONTAP utilizzando FabricPool, consultare link:https://docs.netapp.com/us-en/ontap/fabricpool/install-license-aws-azure-ibm-task.html["Installare una FabricPool license su un ONTAP cluster"^].
 
-* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-Notice2.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_9L2PauNXYE0fOs0RIz8KK2q5Jb6sg8Yv-97NNJ53ceAab9UAqpKOrAvByxsOWqhIQHNCHgFfM0q3TI["NetApp Cloud Tiering Avviso di fine disponibilità"]
-* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-FAQ-v3.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_rplJe_ZtlY4PQAQRQlewsDa0W4JR55muT0KCThR46zI7-uOhIYfVsxODDKFrnYYvy5uZzvhEKHOwBI["NetApp Cloud Tiering Domande frequenti sulla fine della disponibilità"]
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-Notice2.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_9L2PauNXYE0fOs0RIz8KK2q5Jb6sg8Yv-97NNJ53ceAab9UAqpKOrAvByxsOWqhIQHNCHgFfM0q3TI["NetApp Cloud Tiering Avviso di fine disponibilità"^]
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-FAQ-v3.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_rplJe_ZtlY4PQAQRQlewsDa0W4JR55muT0KCThR46zI7-uOhIYfVsxODDKFrnYYvy5uZzvhEKHOwBI["NetApp Cloud Tiering Domande frequenti sulla fine della disponibilità"^]
 
 
 ====

@@ -13,6 +13,5 @@ NOTE: Se la Console distribuisce correttamente l'agente, non genera alcun report
 +
 Se si desidera provare a distribuire nuovamente l'agente, è necessario ricominciare l'intero processo.
 
+. Accedi al report e ai registri dall'host dell'agente della console
 
-
-Accedi al report e ai registri dall'host dell'agente della console

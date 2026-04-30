@@ -128,7 +128,7 @@ Server proxy:: NetApp supporta sia configurazioni proxy esplicite che trasparent
 --
 
 
-porti:: Non c'è traffico in entrata verso l'agente della console, a meno che non venga avviato dall'utente o utilizzato come proxy per inviare messaggi AutoSupport da Cloud Volumes ONTAP al supporto NetApp .
+porti:: Non c'è traffico in entrata verso l'agente della Console, a meno che non venga avviato dall'utente o utilizzato come proxy per inviare AutoSupport messaggi da Cloud Volumes ONTAP al supporto NetApp.
 +
 --
 * HTTP (80) e HTTPS (443) forniscono l'accesso all'interfaccia utente locale, che utilizzerai in rare circostanze.
@@ -142,7 +142,7 @@ Se i sistemi Cloud Volumes ONTAP non dispongono di una connessione Internet in u
 --
 
 
-Abilita NTP:: Se si prevede di utilizzare NetApp Data Classification per analizzare le origini dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della console sia sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione dei dati NetApp"^]
+Abilita NTP:: Se si intende utilizzare NetApp Data Classification per analizzare le fonti di dati aziendali, è necessario abilitare un servizio Network Time Protocol (NTP) sia sull'agente della Console che sul sistema NetApp Data Classification, in modo che l'ora sia sincronizzata tra i sistemi. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Scopri di più su NetApp Data Classification"^]
 +
 --
 Implementare questo accesso alla rete dopo aver creato l'agente Console.
@@ -212,7 +212,7 @@ Dovresti avere quanto segue:
 
 
 .Passi
-. Vai al https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Elenco degli agenti NetApp Console su AWS Marketplace"^]
+. Vai al https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Elenco degli agenti NetApp Console su AWS Marketplace"^].
 . Nella pagina Marketplace, seleziona *Continua ad abbonarti*.
 . Per abbonarsi al software, selezionare *Accetta i termini*.
 +

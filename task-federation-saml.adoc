@@ -26,6 +26,11 @@ NetApp supporta solo SSO avviato dal provider di servizi (SP).  Per prima cosa �
 
 È possibile impostare una connessione federata con il provider SAML 2.0 per abilitare l'accesso Single Sign-On (SSO) per la Console.  Il processo prevede la configurazione del provider in modo che consideri attendibile NetApp come fornitore di servizi e la successiva creazione della connessione nella Console.
 
+.Prima di iniziare
+* È richiesto un account IdP con privilegi amministrativi.  Coordinati con l'amministratore dell'IdP per completare i passaggi.
+* Identifica il dominio che desideri utilizzare per la federazione. Puoi utilizzare il tuo dominio di posta elettronica o un altro dominio di tua proprietà. Se desideri utilizzare un dominio diverso dal tuo dominio di posta elettronica, devi prima verificare il dominio nella Console. Per istruzioni, consulta link:task-federation-verify-domain.html["Verifica il tuo dominio nella NetApp Console"].
+
+
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.
 . Selezionare *Federazione* per visualizzare la pagina *Federazioni*.
@@ -91,7 +96,7 @@ NOTE: Quando si utilizza la Console in modalità limitata, copiare l'URL in una 
 .. Nella Console, seleziona *Avanti* per rivedere la pagina di riepilogo.
 .. Imposta le notifiche.
 +
-Scegli tra sette giorni o 30 giorni.  Il sistema invia notifiche di scadenza tramite e-mail e le mostra nella Console a tutti gli utenti con i seguenti ruoli: Super amministratore, Amministratore organizzazione, Amministratore federazione e Visualizzatore federazione.
+Scegli tra sette giorni e 30 giorni. Il sistema invia notifiche di scadenza via e-mail e le visualizza nella Console a qualsiasi utente con i seguenti ruoli: Super admin, Org admin, Federation admin e Federation viewer.
 
 .. Rivedi i dettagli della federazione e seleziona *Abilita federazione*.
 .. Selezionare *Fine* per completare il processo.

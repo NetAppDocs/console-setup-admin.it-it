@@ -42,7 +42,7 @@ image:screenshot_gcp_associate.gif["Uno screenshot di un progetto Google Cloud e
 NOTE: Prima di completare i passaggi seguenti, assicurati di disporre sia dei privilegi di amministratore della fatturazione nel tuo account Google Cloud sia di un accesso alla NetApp Console .
 
 +
-.. Dopo essere stato reindirizzato al https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Pagina NetApp Intelligent Services su Google Cloud Marketplace"^] , assicurati che nel menu di navigazione in alto sia selezionato il progetto corretto.
+.. Dopo essere stato reindirizzato alla  https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Pagina NetApp Intelligent Services su Google Cloud Marketplace"^], assicurati che il progetto corretto sia selezionato nel menu di navigazione in alto.
 +
 image:screenshot_gcp_cvo_marketplace.png["Uno screenshot della pagina del marketplace Cloud Volumes ONTAP in Google Cloud."]
 
@@ -62,7 +62,7 @@ image:screenshot_gcp_marketplace_register.png["Uno screenshot di un pop-up di re
 .. Completa i passaggi nella pagina *Assegnazione abbonamento*:
 +
 
-NOTE: Se qualcuno della tua organizzazione ha già un abbonamento al marketplace dal tuo account di fatturazione, verrai reindirizzato a https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["la pagina Cloud Volumes ONTAP nella NetApp Console"^] Invece.  Se ciò non è previsto, contatta il team di vendita NetApp .  Google consente un solo abbonamento per account di fatturazione Google.
+NOTE: Se qualcuno della tua organizzazione ha già un abbonamento al marketplace associato al tuo account di fatturazione, verrai reindirizzato a https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["la pagina Cloud Volumes ONTAP nella NetApp Console"^] invece. Se questo è inaspettato, contatta il tuo team di vendita NetApp. Google consente un solo abbonamento per account di fatturazione Google.
 
 +
 *** Seleziona l'organizzazione della Console a cui desideri associare questo abbonamento.

@@ -118,7 +118,7 @@ Fornire al Console agent la chiave di accesso AWS per un utente IAM che dispone 
 . Selezionare *Credenziali dell'organizzazione*.
 . Selezionare *Aggiungi credenziali* e seguire i passaggi della procedura guidata.
 +
-.. *Posizione delle credenziali*: seleziona *Amazon Web Services > Agente.
+.. *Posizione delle credenziali*: seleziona *Amazon Web Services > Agente*.
 .. *Definisci credenziali*: inserisci una chiave di accesso AWS e una chiave segreta.
 .. *Abbonamento Marketplace*: associa un abbonamento Marketplace a queste credenziali abbonandoti ora o selezionando un abbonamento esistente.
 .. *Revisione*: conferma i dettagli sulle nuove credenziali e seleziona *Aggiungi*.

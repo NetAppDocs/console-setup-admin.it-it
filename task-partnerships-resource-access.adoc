@@ -65,7 +65,7 @@ Ad esempio, se si dispone di due progetti e si desidera che lo stesso utente abb
 +
 L'elenco *Membro* mostra i membri che l'organizzazione partner ha aggiunto alla partnership.
 
-. Seleziona il menu azioniimage:icon-action.png["un'icona con tre punti verticali"] accanto al membro a cui vuoi assegnare un ruolo e seleziona *Aggiungi un ruolo*.
+. Seleziona il menu delle azioni image:icon-action.png["un'icona con tre punti verticali"] accanto al membro a cui desideri assegnare un ruolo e seleziona *Aggiungi un ruolo*.
 . Per aggiungere un ruolo, completare i passaggi nella finestra di dialogo:
 +
 ** *Seleziona un'organizzazione, una cartella o un progetto*: scegli il livello della gerarchia delle risorse per il quale il membro deve avere le autorizzazioni.
@@ -99,7 +99,7 @@ L'elenco *Membro* mostra i membri che l'organizzazione partner ha aggiunto alla 
 . È possibile modificare un ruolo esistente per un membro o rimuovere un ruolo.
 +
 .. Per modificare il ruolo di un membro, seleziona *Modifica* accanto al ruolo che desideri modificare.  È possibile modificare un ruolo solo in un ruolo all'interno della stessa categoria di ruoli.  Ad esempio, è possibile passare da un ruolo di servizio dati a un altro.  Conferma la modifica.
-.. Per annullare l'assegnazione del ruolo a un membro, selezionare image:icon-delete.png["Un'icona che assomiglia a un cestino della spazzatura"] accanto al ruolo per rimuovere il rispettivo ruolo dal membro. Ti verrà chiesto di confermare la rimozione.
+.. Per rimuovere un ruolo da un membro, seleziona image:icon-delete.png["Un'icona che assomiglia a un cestino della spazzatura"] accanto al ruolo per rimuovere il rispettivo ruolo dal membro. Ti verrà chiesto di confermare la rimozione.
 
 
 

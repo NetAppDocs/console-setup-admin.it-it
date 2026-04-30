@@ -42,7 +42,7 @@ Endpoint contattati durante l'installazione manuale:: Quando si installa manualm
  a| 
 Per ottenere le immagini, il programma di installazione deve avere accesso a uno di questi due set di endpoint.  ^1^ Gli endpoint elencati nell'opzione 1 sono consigliati perché sono più sicuri.  Ti consigliamo di configurare il firewall in modo da consentire gli endpoint elencati nell'opzione 1 e di non consentire gli endpoint elencati nell'opzione 2.  Si tenga presente quanto segue in merito a questi endpoint:
 
-* Gli endpoint elencati nell'opzione 1 sono supportati a partire dalla versione 3.9.47 dell'agente Console.  Non esiste alcuna compatibilità con le versioni precedenti dell'agente Console.
+* Gli endpoint elencati nell'opzione 1 sono supportati a partire dalla versione 3.9.47 dell'agente Console. Non è prevista la compatibilità con le versioni precedenti dell'agente Console.
 * L'agente della console contatta prima gli endpoint elencati nell'opzione 2.  Se tali endpoint non sono accessibili, l'agente della console contatta automaticamente gli endpoint elencati nell'opzione 1.
 * Gli endpoint nell'opzione 1 non sono supportati se si utilizza l'agente Console con NetApp Backup and Recovery o NetApp Ransomware Resilience.  In questo caso, è possibile non consentire gli endpoint elencati nell'opzione 1, consentendo invece quelli elencati nell'opzione 2.
 
@@ -111,14 +111,12 @@ Endpoint contattati durante l'installazione manuale:: Quando si installa manualm
  a| 
 Gli endpoint elencati nell'opzione 1 sono consigliati perché sono più sicuri.  Ti consigliamo di configurare il firewall in modo da consentire gli endpoint elencati nell'opzione 1 e di non consentire gli endpoint elencati nell'opzione 2.  Si tenga presente quanto segue in merito a questi endpoint:
 
-* Gli endpoint elencati nell'opzione 1 sono supportati a partire dalla versione 3.9.47 dell'agente Console.  Non esiste alcuna compatibilità con le versioni precedenti dell'agente Console.
+* Gli endpoint elencati nell'opzione 1 sono supportati a partire dalla versione 3.9.47 dell'agente Console. Non è prevista la compatibilità con le versioni precedenti dell'agente Console.
 * L'agente della console contatta prima gli endpoint elencati nell'opzione 2.  Se tali endpoint non sono accessibili, l'agente della console contatta automaticamente gli endpoint elencati nell'opzione 1.
 * Gli endpoint nell'opzione 1 non sono supportati se si utilizza l'agente Console con NetApp Backup and Recovery o NetApp Ransomware Resilience.  In questo caso, è possibile non consentire gli endpoint elencati nell'opzione 1, consentendo invece quelli elencati nell'opzione 2.
 
 
 |===
-+
-
-Gli endpoint elencati nell'opzione 1 sono consigliati perché sono più sicuri.  Ti consigliamo di configurare il firewall in modo da consentire gli endpoint elencati nell'opzione 1 e di non consentire gli endpoint elencati nell'opzione 2.  Si noti quanto segue in merito a questi endpoint: ** Gli endpoint elencati nell'opzione 1 sono supportati a partire dalla versione 3.9.47 dell'agente Console.  Non esiste alcuna compatibilità con le versioni precedenti dell'agente Console.  ** L'agente della console contatta prima gli endpoint elencati nell'opzione 2.  Se tali endpoint non sono accessibili, l'agente della console contatta automaticamente gli endpoint elencati nell'opzione 1.  ** Gli endpoint nell'opzione 1 non sono supportati se si utilizza l'agente Console con NetApp Backup and Recovery o NetpApp Ransomware Resilience.  In questo caso, è possibile non consentire gli endpoint elencati nell'opzione 1, consentendo invece quelli elencati nell'opzione 2.
+Gli endpoint elencati nell'opzione 1 sono consigliati perché più sicuri. Si consiglia di configurare il firewall per consentire gli endpoint elencati nell'opzione 1, bloccando invece quelli elencati nell'opzione 2. Nota quanto segue su questi endpoint: ** Gli endpoint elencati nell'opzione 1 sono supportati a partire dalla versione 3.9.47 dell'agente Console. Non è prevista la compatibilità con le versioni precedenti dell'agente Console. ** L'agente Console contatta prima gli endpoint elencati nell'opzione 2. Se questi endpoint non sono accessibili, l'agente Console contatta automaticamente gli endpoint elencati nell'opzione 1. ** Gli endpoint nell'opzione 1 non sono supportati se si utilizza l'agente Console con NetApp Backup and Recovery o NetApp Ransomware Resilience. In questo caso, è possibile bloccare gli endpoint elencati nell'opzione 1, consentendo invece gli endpoint elencati nell'opzione 2.
 
 L'host potrebbe tentare di aggiornare i pacchetti del sistema operativo durante l'installazione.  L'host può contattare diversi siti di mirroring per questi pacchetti del sistema operativo.
