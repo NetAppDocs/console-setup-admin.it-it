@@ -32,6 +32,8 @@ summary: 'È possibile utilizzare la console di manutenzione dell"agente Console
 
 IL `config-checker validate` Il comando consente di convalidare la configurazione di un agente Console.
 
+link:reference-networking-saas-console.html["Scopri di più sui punti di accesso alla rete richiesti."] link:task-install-agent-on-prem.html#os-req-agent["Scopri di più sui requisiti dell'host."]
+
 
 
 === Parametri

@@ -97,7 +97,7 @@ Docker (per Ubuntu e vCenter deployment)::
 docker ps -a
 ----
 --
-Podman (per distribuzioni RedHat Enterprise Linux)::
+Podman (per le implementazioni di Red Hat Enterprise Linux)::
 +
 --
 [source, cli]
@@ -126,11 +126,14 @@ La Console visualizza la versione nella parte superiore della pagina.
 
 Gli agenti della console richiedono l'accesso a determinati endpoint di rete, devono avere diverse porte aperte e devono soddisfare specifici requisiti hardware. È possibile verificare che l'agente della console soddisfi tali requisiti dalla Console o utilizzando la agent maintenance console.
 
-link:reference-networking-saas-console.html["Scopri di più sui punti di accesso alla rete richiesti."]
+link:reference-networking-saas-console.html["Scopri di più sui punti di accesso alla rete richiesti."] link:task-install-agent-on-prem.html#os-req-agent["Scopri di più sui requisiti dell'host."]
 
 Durante l'installazione, NetApp verifica che l'host dell'agente disponga di almeno l'80% dello spazio su disco totale disponibile, che include 48 GB in `/opt` e 32 GB in `/var` (80 GB totali). Dopo l'installazione, è necessario che rimanga disponibile almeno il 20% dello spazio su disco totale, che include 12 GB in `/opt` e 8 GB in `/var` (20 GB totali).
 
 È inoltre possibile eseguire controlli di convalida utilizzando la console di manutenzione dell'agente. link:reference-agent-maint-console-config-checker.html["Scopri di più sull'utilizzo del comando config-checker validate."]
+
+
+IMPORTANT: Per i clienti governativi del cloud (modalità limitata), NetApp Console non convalida l'endpoint di aggiornamento in modalità limitata. È necessario verificare manualmente che le regole del firewall consentano l'accesso a questo endpoint.link:task-prepare-restricted-mode.html["Scopri di più sui punti di accesso alla rete necessari per la modalità con restrizioni."]
 
 
 NOTE: È possibile convalidare solo gli agenti che hanno lo stato *Connesso*.
