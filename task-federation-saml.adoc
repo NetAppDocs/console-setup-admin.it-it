@@ -14,10 +14,10 @@ summary: 'Federati con il tuo provider IdP SAML 2.0 per abilitare l"accesso Sing
 
 
 [role="lead"]
-Federati con il tuo provider IdP SAML 2.0 per abilitare l'accesso Single Sign-On (SSO) per la console NEtApp.  Ciò consente agli utenti di accedere utilizzando le proprie credenziali aziendali.
+Federati con il tuo provider IdP SAML 2.0 per abilitare l'accesso Single Sign-On (SSO) per la NetApp Console.  Ciò consente agli utenti di accedere utilizzando le proprie credenziali aziendali.
 
 .Ruolo richiesto
-Il ruolo di amministratore della federazione è necessario per creare e gestire le federazioni.  Il visualizzatore della Federazione può visualizzare la pagina della Federazione.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
+Il ruolo di amministratore della federazione è necessario per creare e gestire le federazioni. L'utente visualizzatore della federazione può visualizzare la pagina della federazione. link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
 
 
 NOTE: Puoi federarti con il tuo IdP aziendale o con il sito di supporto NetApp .  Non è possibile federarsi con entrambi.

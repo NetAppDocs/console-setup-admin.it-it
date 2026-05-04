@@ -408,7 +408,7 @@ Server proxy:: NetApp supporta sia configurazioni proxy esplicite che trasparent
 * Credenziali
 * Certificato HTTPS
 +
-Con la modalità privata, l'unico momento in cui NetApp Console invia traffico outbound è al tuo cloud provider per creare un sistema Cloud Volumes ONTAP.
+Con la modalità privata, l'unico momento in cui NetApp Console invia traffico outbound è verso il cloud provider per creare un sistema Cloud Volumes ONTAP.
 
 
 
@@ -497,7 +497,7 @@ L'account ora dispone delle autorizzazioni necessarie.
 --
 Crea un ruolo personalizzato di Azure con le autorizzazioni richieste. Assegna questo ruolo alla VM dell'agente Console.
 
-Tieni presente che puoi creare un ruolo personalizzato di Azure tramite il portale di Azure, Azure PowerShell, Azure CLI o REST API.  I passaggi seguenti mostrano come creare il ruolo utilizzando l'interfaccia della riga di comando di Azure.  Se preferisci utilizzare un metodo diverso, fai riferimento a https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Documentazione di Azure"^]
+Tieni presente che puoi creare un ruolo personalizzato di Azure utilizzando il portale di Azure, Azure PowerShell, Azure CLI o l'API REST. I passaggi seguenti mostrano come creare il ruolo utilizzando Azure CLI. Se preferisci utilizzare un metodo diverso, consulta  https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Documentazione di Azure"^].
 
 .Passi
 . Abilita un'identità gestita assegnata dal sistema sulla VM in cui prevedi di installare l'agente della Console, così da poter fornire le autorizzazioni Azure richieste tramite un ruolo personalizzato.
@@ -688,7 +688,7 @@ image:screenshot_azure_client_secret.gif["Uno screenshot del portale di Azure ch
 
 
 .Risultato
-L'entità servizio è ora configurata e dovresti aver copiato l'ID dell'applicazione (client), l'ID della directory (tenant) e il valore del client secret. Inserisci queste informazioni in NetApp Console quando aggiungi una credenziale di Azure.
+Il tuo service principal è ora configurato e dovresti aver copiato l'ID dell'applicazione (client), l'ID della directory (tenant) e il valore del client secret. Inserisci queste informazioni in NetApp Console quando aggiungi una credenziale di Azure.
 
 --
 .Account di servizio Google Cloud

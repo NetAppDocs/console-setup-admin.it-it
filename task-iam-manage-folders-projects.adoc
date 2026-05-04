@@ -16,7 +16,7 @@ summary: 'Aggiungi cartelle e progetti adatti alla struttura della tua attività
 [role="lead"]
 Aggiungi cartelle e progetti adatti alla struttura della tua attività. Dopo aver creato cartelle e progetti, puoi associarvi risorse e gestire l'accesso dei membri a tali progetti.
 
-La Console crea automaticamente un progetto per te quando crei una nuova organizzazione. La maggior parte delle organizzazioni ha bisogno di più di un progetto e di cartelle per tenere tutto organizzato. link:concept-identity-and-access-management.html["Scopri di più sulla gerarchia delle risorse nella NetApp Console"].
+La Console crea automaticamente un progetto quando si crea una nuova organizzazione. La maggior parte delle organizzazioni necessita di più di un progetto, oltre a cartelle per mantenere tutto organizzato. link:concept-identity-and-access-management.html["Scopri di più sulla gerarchia delle risorse nella NetApp Console"].
 
 
 
@@ -35,7 +35,7 @@ Le cartelle consentono inoltre di gestire l'accesso dei membri in modo più effi
 
 NOTE: Le cartelle sono uno strumento organizzativo e non sono visibili ai membri che non dispongono di autorizzazioni IAM, come i ruoli di amministratore dell'organizzazione, amministratore di cartelle o progetti o super amministratore. I membri accedono ai progetti, non alle cartelle.
 
-Gli amministratori dell'organizzazione possono delegare le responsabilità amministrative creando cartelle. Dopo aver creato una cartella, un amministratore dell'organizzazione può assegnare a un membro i ruoli di amministratore della cartella o del progetto per cartelle specifiche. Questi membri possono quindi gestire tutti i progetti all'interno di quella cartella senza avere accesso all'intera organizzazione.
+Gli amministratori dell'organizzazione possono delegare le responsabilità amministrative creando cartelle. Dopo aver creato una cartella, un amministratore dell'organizzazione può assegnare a un membro il ruolo di amministratore della cartella o del progetto per cartelle specifiche. Questi membri possono quindi gestire tutti i progetti all'interno di quella cartella senza avere accesso all'intera organizzazione.
 
 Le cartelle possono avere altre cartelle o progetti come elementi secondari, ma non possono avere risorse direttamente associate. Le risorse devono essere associate a un progetto.
 
@@ -194,7 +194,7 @@ image:screenshot-iam-member-access.png["Uno screenshot della pagina Modifica pro
 
 Modificare l'accesso dei membri per controllare l'accesso alle risorse. Ricorda che i ruoli assegnati a livello di cartella vengono ereditati da tutti i progetti e le cartelle figlio.
 
-Non è possibile modificare l'accesso dei membri ai livelli inferiori se è ereditato dal livello di cartella o di organizzazione. Modificare l'autorizzazione del membro al livello gerarchico superiore per modificare l'accesso In alternativa, è possibile link:task-iam-manage-roles.html#manage-permissions["gestire i permessi dalla pagina Membri"].
+Non è possibile modificare l'accesso dei membri ai livelli inferiori se è ereditato dal livello di cartella o di organizzazione. Modifica l'autorizzazione del membro al livello gerarchico superiore per modificare l'accesso. In alternativa, puoi link:task-iam-manage-roles.html#manage-permissions["gestire i permessi dalla pagina Membri"].
 
 .Passi
 . Dalla pagina *Organizzazione*, vai a un progetto o a una cartella nella tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e poi seleziona *Modifica cartella* o *Modifica progetto*.

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-partnerships-resource-access.html 
-keywords: role-based access, partnership access, partner resources, resource access, grant acces, provide partner access, partnership organization 
+keywords: role-based access, partnership access, partner resources, resource access, grant access, provide partner access, partnership organization 
 summary: 'Puoi concedere l"accesso agli utenti partner assegnando loro ruoli specifici per cartelle e progetti all"interno della tua organizzazione.' 
 ---
 = Fornire l'accesso alle risorse agli utenti della partnership
@@ -61,7 +61,7 @@ Ad esempio, se si dispone di due progetti e si desidera che lo stesso utente abb
 . Selezionare *Amministrazione > Identità e accesso*.
 . Seleziona *Partnership*.
 . Selezionare la scheda *Partnership avviata*.
-. Seleziona il menu azioniimage:icon-action.png["un'icona con tre punti verticali"] accanto alla partnership consolidata che desideri visualizzare e seleziona *Visualizza dettagli*.
+. Seleziona il menu delle azioni image:icon-action.png["un'icona con tre punti verticali"] accanto alla partnership stabilita che desideri visualizzare e seleziona *Visualizza dettagli*.
 +
 L'elenco *Membro* mostra i membri che l'organizzazione partner ha aggiunto alla partnership.
 
@@ -90,7 +90,7 @@ Puoi modificare o rimuovere un ruolo assegnato a un membro di un'organizzazione 
 . Selezionare *Amministrazione > Identità e accesso*.
 . Seleziona *Partnership*.
 . Selezionare la scheda *Partnership avviata*.
-. Seleziona il menu azioniimage:icon-action.png["un'icona con tre punti verticali"] accanto alla partnership consolidata che desideri visualizzare e seleziona *Visualizza dettagli*.
+. Seleziona il menu delle azioni image:icon-action.png["un'icona con tre punti verticali"] accanto alla partnership stabilita che desideri visualizzare e seleziona *Visualizza dettagli*.
 +
 L'elenco *Membro* mostra i membri che l'organizzazione partner ha aggiunto alla partnership.
 

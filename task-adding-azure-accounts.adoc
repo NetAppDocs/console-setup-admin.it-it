@@ -297,7 +297,7 @@ Dopo aver fornito a un account Azure le autorizzazioni necessarie, è possibile 
 
 
 .Risultato
-Puoi passare a un set di credenziali diverso dalla pagina Dettagli e credenziali https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["quando si aggiunge un sistema alla Console"^]
+È possibile passare a un set di credenziali diverso dalla pagina Dettagli e credenziali https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["quando si aggiunge un sistema alla Console"^].
 
 image:screenshot_accounts_switch_azure.gif["Uno screenshot che mostra la selezione tra le credenziali dopo aver selezionato Modifica credenziali nella pagina Dettagli e credenziali."]
 

@@ -14,7 +14,7 @@ summary: Aggiungi e gestisci le credenziali AWS in modo che la NetApp Console di
 
 
 [role="lead"]
-Aggiungi e gestisci le credenziali AWS in modo da distribuire e gestire le risorse cloud nei tuoi account AWS dalla NetApp Console.  Se gestisci più abbonamenti AWS Marketplace, puoi assegnare a ciascuno di essi credenziali AWS diverse dalla pagina Credenziali.
+Aggiungi e gestisci le credenziali AWS per poter distribuire e gestire le risorse cloud nei tuoi account AWS dalla NetApp Console. Se gestisci più abbonamenti AWS Marketplace, puoi assegnare a ciascuno di essi credenziali AWS diverse dalla pagina Credenziali.
 
 
 
@@ -99,7 +99,7 @@ L'account dispone delle autorizzazioni richieste. <<add-the-credentials,Ora puoi
 
 ==== Concedi le autorizzazioni fornendo le chiavi AWS
 
-Se si desidera fornire alla Console le chiavi AWS per un utente IAM, è necessario concedere le autorizzazioni richieste a tale utente.  La policy IAM della console definisce le azioni e le risorse AWS che la console può utilizzare.
+Se si desidera fornire alla Console le chiavi AWS per un utente IAM, è necessario concedere a tale utente le autorizzazioni richieste. La policy IAM della Console definisce le azioni e le risorse AWS che la Console è autorizzata a utilizzare.
 
 È necessario utilizzare questo metodo di autenticazione se un agente Console è installato in locale.  Non è possibile utilizzare un ruolo IAM.
 
@@ -212,7 +212,7 @@ Il ruolo IAM ora dispone delle autorizzazioni necessarie. <<add-the-credentials,
 Dopo aver fornito al ruolo IAM le autorizzazioni richieste, aggiungere l'ARN del ruolo alla Console.
 
 .Prima di iniziare
-Se hai appena creato il ruolo IAM, potrebbero volerci alcuni minuti prima che sia disponibile per l'uso.  Attendi qualche minuto prima di aggiungere le credenziali alla Console.
+Se hai appena creato il ruolo IAM, potrebbero essere necessari alcuni minuti prima che sia disponibile per l'uso. Attendi qualche minuto prima di aggiungere le credenziali alla Console.
 
 .Passi
 . Selezionare *Amministrazione > Credenziali*.
@@ -232,7 +232,7 @@ image:screenshot-settings-icon-organization.png["Uno screenshot che mostra l'ico
 
 == Aggiungere le credenziali alla console per Amazon FSx per ONTAP
 
-Per i dettagli, fare riferimento al https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["la documentazione della console per Amazon FSx per ONTAP"^]
+Per i dettagli, fare riferimento a https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Documentazione della console per Amazon FSx per ONTAP"^]
 
 
 
@@ -292,7 +292,7 @@ Per tutte le altre organizzazioni o account, sarà necessario associare manualme
 
 == Associa un abbonamento esistente alla tua organizzazione
 
-Quando ti abboni ad AWS Marketplace, l'ultimo passaggio del processo consiste nell'associare l'abbonamento alla tua organizzazione. Se non hai completato questo passaggio, non potrai utilizzare l'abbonamento con la tua organizzazione.
+Quando si sottoscrive un abbonamento tramite AWS Marketplace, l'ultimo passaggio consiste nell'associare l'abbonamento alla propria organizzazione. Se non si completa questo passaggio, non sarà possibile utilizzare l'abbonamento con l'organizzazione.
 
 * link:concept-modes.html["Scopri di più sulle modalità di distribuzione della console"]
 * link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e dell'accesso alla console"]

@@ -93,8 +93,6 @@ Puoi utilizzare i codici di recupero una sola volta.  Se ne usi uno o lo perdi, 
 
 == Elimina la tua configurazione MFA
 
-Al termine, esci dalla Console oppure sposta indietro il cursore per tornare alla modalità di sola lettura. Il sistema rimuove i tuoi permessi elevati quando la sessione scade.
-
 
 NOTE: Se non riesci ad accedere all'app di autenticazione o al codice di ripristino, dovrai contattare l'amministratore della tua organizzazione per reimpostare la configurazione MFA.
 

@@ -66,7 +66,7 @@ Il gruppo di sicurezza predefinito per l'agente include le seguenti regole in us
 
 === Regole in uscita avanzate
 
-Se hai bisogno di regole rigide per il traffico in uscita, puoi utilizzare le seguenti informazioni per aprire solo le porte necessarie per la comunicazione in uscita da parte dell'agente
+Se sono necessarie regole rigide per il traffico in uscita, è possibile utilizzare le seguenti informazioni per aprire solo le porte necessarie per la comunicazione in uscita da parte dell'agente.
 
 
 NOTE: L'indirizzo IP di origine è l'host dell'agente.
@@ -85,5 +85,5 @@ NOTE: L'indirizzo IP di origine è l'host dell'agente.
 | TCP | 8080 | Classificazione dei dati | Sonda per l'istanza di classificazione dei dati durante la distribuzione 
 
 
-| DNS | UDP | 53 | DNS | Utilizzato per la risoluzione DNS da parte della console 
+| DNS | UDP | 53 | DNS | Utilizzato per la risoluzione DNS dalla Console 
 |===

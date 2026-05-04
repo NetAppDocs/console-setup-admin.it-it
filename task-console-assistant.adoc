@@ -24,7 +24,7 @@ L'assistente della console è disponibile solo per gli utenti con ruolo di ammin
 
 Per impostazione predefinita, la NetApp Console visualizza l'assistente della console nella home page per gli utenti che accedono per la prima volta e che dispongono del ruolo di amministratore dell'organizzazione. Rimane disponibile finché non si completano le attività obbligatorie di creazione di un agente Console e di aggiunta di un sistema.
 
-Utilizzare l'assistente per completare queste attività, che forniscono la configurazione minima per l'ambiente NetApp Console :
+Utilizza l'assistente per completare queste attività, che forniscono la configurazione minima per il tuo NetApp Console environment:
 
 * Aggiungi un account NetApp Support Site (NSS).
 +

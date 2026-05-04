@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-ports-azure.html 
 keywords: ports, security group, http, https, inbound, outbound 
-summary: 'Il gruppo di sicurezza di Azure per l"agente richiede regole sia in ingresso che in uscita.  La NetApp Console crea automaticamente questo gruppo di sicurezza quando si crea un agente della console dalla console. Per altre opzioni di installazione, è necessario impostare manualmente questo gruppo di sicurezza.' 
+summary: 'Il gruppo di sicurezza di Azure per l"agente richiede sia regole inbound che outbound. La NetApp Console crea automaticamente questo gruppo di sicurezza quando si crea un agente dalla Console. Per altre opzioni di installazione, è necessario configurare manualmente questo gruppo di sicurezza.' 
 ---
 = Regole del gruppo di sicurezza dell'agente della console in Azure
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Il gruppo di sicurezza di Azure per l"agente richiede regole sia in in
 
 
 [role="lead"]
-Il gruppo di sicurezza di Azure per l'agente richiede regole sia in ingresso che in uscita.  La NetApp Console crea automaticamente questo gruppo di sicurezza quando si crea un agente della console dalla console. Per altre opzioni di installazione, è necessario impostare manualmente questo gruppo di sicurezza.
+Il gruppo di sicurezza di Azure per l'agente richiede sia regole inbound che outbound. La NetApp Console crea automaticamente questo gruppo di sicurezza quando si crea un agente dalla Console. Per altre opzioni di installazione, è necessario configurare manualmente questo gruppo di sicurezza.
 
 
 
@@ -82,5 +82,5 @@ NOTE: L'indirizzo IP di origine è l'host dell'agente.
 | chiamate API | TCP | 8080 | Classificazione dei dati | Sonda per l'istanza di classificazione dei dati durante la distribuzione 
 
 
-| DNS | UDP | 53 | DNS | Utilizzato per la risoluzione DNS da parte della console 
+| DNS | UDP | 53 | DNS | Utilizzato per la risoluzione DNS dalla Console 
 |===

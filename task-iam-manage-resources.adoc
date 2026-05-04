@@ -30,7 +30,7 @@ Risorse di archiviazione:: Le risorse di storage sono il tipo di risorsa più co
 +
 --
 
-NOTE: Gli utenti con il ruolo di amministratore dell'organizzazione possono aggiungere risorse alla cartella per delegare l'attività di associazione della risorsa ai progetti agli amministratori della cartella o del progetto in questione. link:task-iam-manage-folders-projects.html#associate-resource-folder["Scopri come associare una risorsa a una cartella"].
+NOTE: Gli utenti con il ruolo di amministratore dell'organizzazione possono aggiungere risorse a una cartella per delegare l'attività di associazione della risorsa ai progetti agli amministratori della cartella o del progetto in questione. link:task-iam-manage-folders-projects.html#associate-resource-folder["Scopri come associare una risorsa a una cartella"].
 
 --
 Agenti della console:: Se hai utilizzato un agente della Console per individuare i sistemi di archiviazione, aggiungi l'agente allo stesso progetto del sistema storage. Questo permette agli utenti di eseguire funzioni abilitate per gli agenti, come i servizi dati o la gestione nativa dello storage della Console. Puoi aggiungere agenti ai progetti dalla pagina *Agenti* nella Console. link:task-iam-associate-agents.html["Scopri come associare un agente della Console a un progetto"].
@@ -86,7 +86,7 @@ Tieni presente che puoi selezionare solo le cartelle e i progetti per i quali di
 .Dopo aver finito
 Se si individua una risorsa utilizzando un agente Console, associare l'agente Console al progetto per concedere l'accesso.  In caso contrario, l'agente della console e la risorsa associata non saranno accessibili ai membri senza il ruolo di _Amministratore organizzazione_.
 
-link:task-iam-associate-connectors.html["Scopri come associare un agente Console a una cartella o a un progetto"].
+link:task-iam-associate-agents.html["Scopri come associare un agente Console a una cartella o a un progetto"] .
 
 
 

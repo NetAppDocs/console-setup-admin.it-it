@@ -8,9 +8,10 @@ summary: 'Se necessario, puoi modificare il nome dell"organizzazione NetApp Cons
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
-:icons: font
+:icons: 
 :linkattrs: 
 :imagesdir: ./media/
+:icontype: fontapp
 
 
 [role="lead"]
@@ -20,14 +21,14 @@ L'organizzazione NetApp Console ha un nome e un ID.  Puoi scegliere un nome per 
 
 == Rinomina la tua organizzazione
 
-Puoi rinominare la tua organizzazione.  Questa funzione è utile se si supporta più di un'organizzazione.
+Puoi rinominare la tua organizzazione. Questo è utile se supporti più di un'organizzazione.
 
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.
 . Seleziona *Organizzazione*.
 . Dalla pagina *Organizzazione*, vai alla prima riga della tabella, selezionaimage:icon-action.png["Un'icona composta da tre punti affiancati"] e quindi seleziona *Modifica organizzazione*.
 +
-image:screenshot-iam-edit-organization.png["Uno screenshot della pagina Panoramica che mostra l'icona delle azioni e l'opzione Modifica organizzazione."]
+image:screenshot-iam-edit-organization.png["Uno screenshot della pagina Organizzazione che mostra l'icona delle azioni e l'opzione Modifica organizzazione."]
 
 . Inserisci un nuovo nome per l'organizzazione e seleziona *Applica*.
 

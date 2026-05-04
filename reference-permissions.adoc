@@ -160,7 +160,7 @@ Quando si utilizza NetApp Backup and Recovery per eseguire il backup Cloud Volum
 |===
 
 
-=== Copia e sincronizzazione NetApp
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===

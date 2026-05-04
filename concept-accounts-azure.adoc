@@ -44,7 +44,7 @@ L'identità gestita assegnata dal sistema alla VM dell'agente Console è associa
 
 Se si desidera utilizzare credenziali di Azure diverse con la console, è necessario concedere le autorizzazioni richieste tramitelink:task-adding-azure-accounts.html["creazione e configurazione di un'entità servizio in Microsoft Entra ID"] per ogni account Azure.  L'immagine seguente mostra due account aggiuntivi, ciascuno configurato con un'entità servizio e un ruolo personalizzato che fornisce autorizzazioni:
 
-image:diagram_permissions_multiple_azure.png["Un'immagine concettuale che mostra l'account Azure iniziale che riceve le autorizzazioni tramite un ruolo personalizzato e un'identità gestita e due account aggiuntivi che ricevono le autorizzazioni tramite un ruolo personalizzato e un'entità servizio."]
+image:diagram_permissions_multiple_azure.png["Un'immagine concettuale che mostra l'account Azure iniziale che riceve le autorizzazioni tramite un ruolo personalizzato e un'identità gestita e due account aggiuntivi che ricevono le autorizzazioni tramite un ruolo personalizzato e un service principal."]
 
 Allora lo farestilink:task-adding-azure-accounts.html#add-credentials-azure["aggiungere le credenziali dell'account alla Console"] fornendo dettagli sul principale del servizio AD.
 

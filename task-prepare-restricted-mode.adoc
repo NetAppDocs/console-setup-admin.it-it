@@ -625,7 +625,7 @@ Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono
 --
 Creare un ruolo personalizzato di Azure con le autorizzazioni richieste.  Assegnerai questo ruolo alla VM dell'agente Console.
 
-Tieni presente che puoi creare un ruolo personalizzato di Azure tramite il portale di Azure, Azure PowerShell, Azure CLI o REST API.  I passaggi seguenti mostrano come creare il ruolo utilizzando l'interfaccia della riga di comando di Azure.  Se preferisci utilizzare un metodo diverso, fai riferimento a https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Documentazione di Azure"^]
+Tieni presente che puoi creare un ruolo personalizzato di Azure utilizzando il portale di Azure, Azure PowerShell, Azure CLI o l'API REST. I passaggi seguenti mostrano come creare il ruolo utilizzando Azure CLI. Se preferisci utilizzare un metodo diverso, consulta  https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Documentazione di Azure"^].
 
 .Passi
 . Se intendi installare manualmente il software sul tuo host, abilita un'identità gestita assegnata dal sistema sulla macchina virtuale, in modo da poter fornire le autorizzazioni di Azure richieste tramite un ruolo personalizzato.

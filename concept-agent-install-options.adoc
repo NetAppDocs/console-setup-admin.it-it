@@ -100,7 +100,7 @@ Scegli questo metodo quando:
 
  a| 
 * La maggior parte dei passaggi di qualsiasi metodo di implementazione. È necessario preparare l'host, installare Podman o Docker, configurare la rete, installare il software e fornire manualmente le autorizzazioni
-* * La distribuzione viene avviata al di fuori della NetApp Console, pertanto il flusso di lavoro guidato non è disponibile
+* La distribuzione viene avviata al di fuori della NetApp Console, quindi il flusso di lavoro guidato non è disponibile
 
 
 |===
@@ -108,9 +108,9 @@ link:task-install-agent-aws-manual.html["Installare manualmente un agente Consol
 
 
 
-== Installazione manuale in locale tramite VCenter (OVA)
+== Installazione manuale in locale tramite vCenter (OVA)
 
-Se si utilizza VMware VCenter, è possibile distribuire l'agente Console importando un file OVA (Open Virtual Appliance). L'OVA è un'immagine di macchina virtuale preconfigurata che viene distribuita con il vSphere client, senza installare Linux o configurare un container runtime.
+Se si utilizza VMware vCenter, è possibile distribuire l'agente Console importando un file OVA (Open Virtual Appliance). L'OVA è un'immagine di VM preconfigurata che viene distribuita con il client vSphere, senza installare Linux o configurare un runtime per container.
 
 Scegli questo metodo quando:
 
@@ -131,14 +131,14 @@ NOTE: Non è possibile gestire le risorse di Google Cloud da un agente della Con
 * Solo on-premises; non disponibile per implementazioni cloud
 * Include una console di manutenzione basata su menu per le attività di manutenzione degli agenti
 * Flusso di lavoro di implementazione familiare per gli amministratori VMware
-* * L'immagine VM preconfigurata aiuta a prevenire errori e rende la manutenzione più semplice
+* Le immagini di macchine virtuali preconfigurate aiutano a prevenire errori e rendono la manutenzione più semplice
 
  a| 
 * Richiede vCenter; non può essere installato direttamente su un host ESXi bare
 
 
 |===
-link:task-install-agent-on-prem-ova.html["Distribuisci on-premises utilizzando VCenter"]
+link:task-install-agent-on-prem-ova.html["Distribuzione in locale tramite vCenter"]
 
 
 
@@ -148,7 +148,7 @@ link:task-install-agent-on-prem-ova.html["Distribuisci on-premises utilizzando V
 
 Scegli questo metodo quando:
 
-* Stai eseguendo la distribuzione in locale e non disponi di un ambiente VMware VCenter.
+* Stai eseguendo la distribuzione in locale e non disponi di un ambiente vCenter VMware.
 * Hai familiarità con l'amministrazione di Linux e desideri gestire autonomamente l'host sottostante.
 * Si desidera controllare quando viene aggiornato l'agente della Console.
 

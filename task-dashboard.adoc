@@ -39,7 +39,7 @@ Ogni riquadro nella home page richiede ruoli utente diversi:
 
 Se non si dispone delle autorizzazioni per accedere a un riquadro, nel riquadro viene visualizzato un messaggio che indica che non si dispone delle autorizzazioni per utilizzarlo.
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso NetApp Console ."] .
+link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso NetApp Console"].
 
 .Passi
 . Dal menu NetApp Console , selezionare *Home*.

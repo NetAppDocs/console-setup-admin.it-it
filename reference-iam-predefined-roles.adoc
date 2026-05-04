@@ -27,7 +27,7 @@ I ruoli della piattaforma concedono autorizzazioni di amministrazione NetApp Con
 | Ruolo della piattaforma | Responsabilità 
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["Amministratore dell'organizzazione"] | Consente all'utente l'accesso illimitato a tutti i progetti e le cartelle all'interno di un'organizzazione, di aggiungere membri a qualsiasi progetto o cartella, nonché di eseguire qualsiasi attività e utilizzare qualsiasi servizio dati a cui non sia associato un ruolo esplicito.  Gli utenti con questo ruolo gestiscono la tua organizzazione creando cartelle e progetti, assegnando ruoli, aggiungendo utenti e gestendo i sistemi, se dispongono delle credenziali appropriate.  Questo è l'unico ruolo di accesso che può creare agenti Console. 
+| link:reference-iam-platform-roles.html#organization-admin-roles["Amministratore dell'organizzazione"] | Consente a un utente l'accesso illimitato a tutti i progetti e le cartelle all'interno di un'organizzazione. Può aggiungere membri a qualsiasi progetto o cartella, nonché eseguire qualsiasi attività e utilizzare qualsiasi servizio dati che non abbia un ruolo esplicito associato. Gli utenti con questo ruolo gestiscono l'organizzazione creando cartelle e progetti, assegnando ruoli, aggiungendo utenti e gestendo i sistemi se dispongono delle credenziali appropriate. Questo è l'unico ruolo di accesso che può creare agenti Console. 
 
 
 | link:reference-iam-platform-roles.html#organization-admin-roles["Amministratore di cartelle o progetti"] | Consente all'utente l'accesso illimitato ai progetti e alle cartelle assegnati. Possono aggiungere membri alle cartelle o ai progetti che gestiscono, nonché eseguire qualsiasi attività e utilizzare qualsiasi servizio dati o applicazione sulle risorse all'interno della cartella o del progetto a loro assegnato. Gli amministratori di cartelle o progetti non possono creare agenti della console. 
@@ -48,7 +48,7 @@ I ruoli della piattaforma concedono autorizzazioni di amministrazione NetApp Con
 | link:reference-iam-platform-roles.html#super-admin-roles["Super amministratore"] | Fornisce all'utente un sottoinsieme di ruoli amministrativi.  Questo ruolo è pensato per le organizzazioni più piccole che potrebbero non aver bisogno di distribuire le responsabilità della console tra più utenti. 
 
 
-| link:reference-iam-platform-roles.html#super-admin-roles["Super spettatore"] | Assegna all'utente un sottoinsieme di ruoli di visualizzazione.  Questo ruolo è pensato per le organizzazioni più piccole che potrebbero non aver bisogno di distribuire le responsabilità della console tra più utenti. 
+| link:reference-iam-platform-roles.html#super-admin-roles["Super spettatore"] | Fornisce all'utente un sottoinsieme di ruoli di visualizzazione. Questo ruolo è pensato per le organizzazioni di piccole dimensioni che potrebbero non aver bisogno di distribuire le responsabilità della Console tra più utenti. 
 |===
 
 
@@ -104,10 +104,10 @@ Di seguito è riportato un elenco dei ruoli nella categoria dei servizi dati.  O
 | link:reference-iam-backup-rec-roles.html["Amministratore di backup e ripristino"] | Eseguire backup su snapshot locali, replicare su storage secondario ed eseguire backup su storage di oggetti. 
 
 
-| link:reference-iam-backup-rec-roles.html["Backup e ripristino ripristino amministratore"] | Ripristinare i carichi di lavoro nel backup e nel ripristino. 
+| link:reference-iam-backup-rec-roles.html["Backup e ripristino ripristino amministratore"] | Ripristina i carichi di lavoro in NetApp Backup and Recovery. 
 
 
-| link:reference-iam-backup-rec-roles.html["Amministratore clone di backup e ripristino"] | Clona applicazioni e dati nel Backup e Ripristino. 
+| link:reference-iam-backup-rec-roles.html["Amministratore clone di backup e ripristino"] | Clona applicazioni e dati in NetApp Backup and Recovery. 
 
 
 | link:reference-iam-backup-rec-roles.html["Visualizzatore di backup e ripristino"] | Visualizza le informazioni di backup e ripristino. 

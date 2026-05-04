@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-agent-vm-config.html 
 keywords: agent VM, vcenter, esxi, increase cpu, increase ram, vm maintenance, agent maintenance, agent operating system, agent host 
-summary: 'Dopo aver distribuito l"agente della console, è possibile apportare modifiche all"host VCenter o ESXi esistente.  Ad esempio, è possibile aumentare la CPU o la RAM dell"istanza VM che ospita l"agente Console.' 
+summary: 'È possibile apportare modifiche al proprio vCenter o host ESXi esistente dopo aver distribuito l"agente Console. Ad esempio, è possibile aumentare la CPU o la RAM dell"istanza di macchina virtuale che ospita l"agente Console.' 
 ---
-= Gestire un host VCenter o ESXi per l'agente della console
+= Mantenere un vCenter o host ESXi per l'agente della Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Dopo aver distribuito l"agente della console, è possibile apportare m
 
 
 [role="lead"]
-Dopo aver distribuito l'agente della console, è possibile apportare modifiche all'host VCenter o ESXi esistente.  Ad esempio, è possibile aumentare la CPU o la RAM dell'istanza VM che ospita l'agente Console.
+È possibile apportare modifiche al proprio vCenter o host ESXi esistente dopo aver distribuito l'agente Console. Ad esempio, è possibile aumentare la CPU o la RAM dell'istanza di macchina virtuale che ospita l'agente Console.
 
 Eseguire queste attività di manutenzione utilizzando la console Web della VM:
 
@@ -31,10 +31,10 @@ Eseguire queste attività di manutenzione utilizzando la console Web della VM:
 
 == Accedi alla console di manutenzione della VM
 
-È possibile accedere alla console di manutenzione dal client VSphere.
+È possibile accedere alla console di manutenzione dal client vSphere.
 
 .Passi
-. Apri il client VSphere e accedi al tuo VCenter.
+. Apri il vSphere client ed effettua l'accesso al tuo vCenter.
 . Selezionare l'istanza della VM che ospita l'agente della console.
 . Selezionare *Avvia Web Console*.
 . Accedi all'istanza della VM utilizzando il nome utente e la password specificati al momento della creazione dell'istanza della VM.  Il nome utente è `maint` e la password è quella specificata quando hai creato l'istanza della VM.
@@ -47,7 +47,7 @@ Eseguire queste attività di manutenzione utilizzando la console Web della VM:
 Puoi cambiare la password per `maint` utente.
 
 .Passi
-. Apri il client VSphere e accedi al tuo VCenter.
+. Apri il vSphere client ed effettua l'accesso al tuo vCenter.
 . Selezionare l'istanza della VM che ospita l'agente della console.
 . Selezionare *Avvia Web Console*.
 . Accedi all'istanza della VM utilizzando il nome utente e la password specificati al momento della creazione dell'istanza della VM.  Il nome utente è `maint` e la password è quella specificata quando hai creato l'istanza della VM.
@@ -61,10 +61,10 @@ Puoi cambiare la password per `maint` utente.
 
 È possibile aumentare la CPU o la RAM dell'istanza VM che ospita l'agente Console.
 
-Modifica le impostazioni dell'istanza VM nell'host VCenter o ESXi, quindi utilizza la console di manutenzione per applicare le modifiche.
+Modifica le impostazioni dell'istanza di macchina virtuale nel tuo vCenter o host ESXi, quindi utilizza la console di manutenzione per applicare le modifiche.
 
-.Passaggi nel client VSphere
-. Apri il client VSphere e accedi al tuo VCenter.
+.Passaggi nel vSphere client
+. Apri il vSphere client ed effettua l'accesso al tuo vCenter.
 . Selezionare l'istanza della VM che ospita l'agente della console.
 . Fare clic con il pulsante destro del mouse sull'istanza della VM e selezionare *Modifica impostazioni*.
 . Aumentare lo spazio sul disco rigido utilizzato per /opt o per la partizione /var.
@@ -77,11 +77,11 @@ Modifica le impostazioni dell'istanza VM nell'host VCenter o ESXi, quindi utiliz
 
 
 .Passaggi nella console di manutenzione
-. Apri il client VSphere e accedi al tuo VCenter.
+. Apri il vSphere client ed effettua l'accesso al tuo vCenter.
 . Selezionare l'istanza della VM che ospita l'agente della console.
 . Selezionare *Avvia Web Console*.
 . Accedi all'istanza della VM utilizzando il nome utente e la password specificati al momento della creazione dell'istanza della VM.  Il nome utente è `maint` e la password è quella specificata quando hai creato l'istanza della VM.
-. Entra `1 to view the `System Configuration` menu.
+. Entra `1` per visualizzare il `System Configuration` menu.
 . Entra `2` e seguire le istruzioni visualizzate sullo schermo.  La console esegue la scansione per trovare nuove impostazioni e aumenta le dimensioni delle partizioni.
 
 
@@ -89,10 +89,10 @@ Modifica le impostazioni dell'istanza VM nell'host VCenter o ESXi, quindi utiliz
 
 === Visualizza le impostazioni di rete per la VM dell'agente
 
-Visualizzare le impostazioni di rete per la VM dell'agente nel client VSphere per confermare o risolvere i problemi di rete.  È possibile visualizzare (non aggiornare) solo le seguenti impostazioni di rete: indirizzo IP e dettagli DNS.
+Visualizza le impostazioni di rete della VM dell'agente nel vSphere client per confermare o risolvere i problemi di rete. Puoi solo visualizzare (non modificare) le seguenti impostazioni di rete: indirizzo IP e dettagli DNS.
 
 .Passi
-. Apri il client VSphere e accedi al tuo VCenter.
+. Apri il vSphere client ed effettua l'accesso al tuo vCenter.
 . Selezionare l'istanza della VM che ospita l'agente della console.
 . Selezionare *Avvia Web Console*.
 . Accedi all'istanza della VM utilizzando il nome utente e la password specificati al momento della creazione dell'istanza della VM.  Il nome utente è `maint` e la password è quella specificata quando hai creato l'istanza della VM.
@@ -107,7 +107,7 @@ Visualizzare le impostazioni di rete per la VM dell'agente nel client VSphere pe
 Aggiungere, aggiornare o rimuovere percorsi statici per la VM dell'agente in base alle esigenze.
 
 .Passi
-. Apri il client VSphere e accedi al tuo VCenter.
+. Apri il vSphere client ed effettua l'accesso al tuo vCenter.
 . Selezionare l'istanza della VM che ospita l'agente della console.
 . Selezionare *Avvia Web Console*.
 . Accedi all'istanza della VM utilizzando il nome utente e la password specificati al momento della creazione dell'istanza della VM.  Il nome utente è `maint` e la password è quella specificata quando hai creato l'istanza della VM.
@@ -125,11 +125,11 @@ Aggiungere, aggiornare o rimuovere percorsi statici per la VM dell'agente in bas
 È possibile aggiornare le impostazioni del dominio di ricerca per la VM dell'agente.
 
 .Passi
-. Apri il client VSphere e accedi al tuo VCenter.
+. Apri il vSphere client ed effettua l'accesso al tuo vCenter.
 . Selezionare l'istanza della VM che ospita l'agente della console.
 . Selezionare *Avvia Web Console*.
 . Accedi all'istanza della VM utilizzando il nome utente e la password specificati al momento della creazione dell'istanza della VM.  Il nome utente è `maint` e la password è quella specificata quando hai creato l'istanza della VM.
-. Entra `2`` per visualizzare il `Network Configuration` menu.
+. Entra `2` per visualizzare il `Network Configuration` menu.
 . Entra `8` per aggiornare le impostazioni di ricerca del dominio e seguire le istruzioni visualizzate sullo schermo.
 . Premere Invio.
 . Facoltativamente, apportare ulteriori modifiche.
@@ -143,7 +143,7 @@ Aggiungere, aggiornare o rimuovere percorsi statici per la VM dell'agente in bas
 Accedi agli strumenti diagnostici per risolvere i problemi con l'agente Console.  L'assistenza NetApp potrebbe chiederti di farlo durante la risoluzione dei problemi.
 
 .Passi
-. Apri il client VSphere e accedi al tuo VCenter.
+. Apri il vSphere client ed effettua l'accesso al tuo vCenter.
 . Selezionare l'istanza della VM che ospita l'agente della console.
 . Selezionare *Avvia Web Console*.
 . Accedi all'istanza della VM utilizzando il nome utente e la password specificati al momento della creazione dell'istanza della VM.  Il nome utente è `maint` e la password è quella specificata quando hai creato l'istanza della VM.
@@ -160,7 +160,7 @@ Accedi agli strumenti diagnostici per risolvere i problemi con l'agente Console.
 L'accesso SSH consente funzionalità avanzate del terminale come copia e incolla.
 
 .Passi
-. Apri il client VSphere e accedi al tuo VCenter.
+. Apri il vSphere client ed effettua l'accesso al tuo vCenter.
 . Selezionare l'istanza della VM che ospita l'agente della console.
 . Selezionare *Avvia Web Console*.
 . Accedi all'istanza della VM utilizzando il nome utente e la password specificati al momento della creazione dell'istanza della VM.  Il nome utente è `maint` e la password è quella specificata quando hai creato l'istanza della VM.

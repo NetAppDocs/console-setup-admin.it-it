@@ -39,7 +39,7 @@ Le tabelle seguenti indicano le azioni che ciascun ruolo della piattaforma Conso
 | Crea agenti | SÌ | NO 
 
 
-| Crea, modifica o elimina sistemi dalla Console (aggiungi o scopri sistemi) | SÌ | SÌ 
+| Creare, modificare o eliminare sistemi dalla Console (aggiungere o individuare sistemi) | SÌ | SÌ 
 
 
 | Crea cartelle e progetti, inclusa l'eliminazione | SÌ | NO 

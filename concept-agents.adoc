@@ -313,7 +313,7 @@ La modalità di distribuzione della Console, l'ambiente di storage e le esigenze
 
 Distribuisci agenti nel tuo cloud o on-premises per collegare la connettività all'applicazione SaaS della Console ospitata nel cloud. Gli agenti abilitano funzionalità avanzate mentre l'interfaccia utente della Console rimane accessibile da qualsiasi luogo.
 
-È possibile installare gli agenti direttamente dalla Console quando si utilizza l'applicazione SaaS (modalità standard). È possibile installare in AWS, Azure o Google Cloud, oppure manualmente in sede sul proprio host Linux o nel proprio ambiente VCenter.
+È possibile installare gli agenti direttamente dalla Console quando si utilizza l'applicazione SaaS (modalità standard). È possibile installare in AWS, Azure o Google Cloud, oppure manualmente in locale sul proprio host Linux o nel proprio ambiente vCenter.
 
 
 

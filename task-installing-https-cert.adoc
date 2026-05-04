@@ -90,7 +90,7 @@ Per garantire un accesso sicuro, è necessario rinnovare il certificato HTTPS de
 . Selezionare *Amministrazione > Agenti*.
 . Nella pagina *Panoramica*, seleziona il menu azioni per un agente Console e seleziona *Configurazione HTTPS*.
 +
-Vengono visualizzati i dettagli relativi al certificato, inclusa la data di scadenza.
+Dettagli relativi alla visualizzazione del certificato, inclusa la data di scadenza.
 
 . Selezionare *Cambia certificato* e seguire i passaggi per generare una CSR o installare il proprio certificato firmato da una CA.
 

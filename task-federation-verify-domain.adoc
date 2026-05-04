@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-federation-verify-domain.html 
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
-summary: Per la federazione puoi utilizzare solo domini verificati. Se desideri federarti con un dominio diverso dal tuo dominio di posta elettronica, devi prima verificare di essere il proprietario del dominio.  Per la federazione è possibile utilizzare solo domini verificati. 
+summary: Se desideri federare con un domain name diverso da quello della tua email, devi prima verificare di esserne il proprietario. Puoi utilizzare solo domain name verificati per la federazione. 
 ---
 = Verifica il dominio email per la tua connessione federata
 :hardbreaks:
@@ -14,14 +14,14 @@ summary: Per la federazione puoi utilizzare solo domini verificati. Se desideri 
 
 
 [role="lead"]
-Se desideri federarti con un dominio diverso dal tuo dominio di posta elettronica, devi prima verificare di essere il proprietario del dominio.  Per la federazione è possibile utilizzare solo domini verificati.
+Se desideri federare con un domain name diverso da quello della tua email, devi prima verificare di esserne il proprietario. Puoi utilizzare solo domain name verificati per la federazione.
 
 .Ruoli richiesti
-Il ruolo di amministratore della federazione è necessario per creare e gestire le federazioni.  Il visualizzatore della Federazione può visualizzare la pagina della Federazione.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
+Il ruolo di amministratore della federazione è necessario per creare e gestire le federazioni. L'utente visualizzatore della federazione può visualizzare la pagina della federazione. link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
 
 La verifica del tuo dominio comporta l'aggiunta di un record TXT alle impostazioni DNS del tuo dominio.  Questo record viene utilizzato per dimostrare che sei il proprietario del dominio e consente alla NetApp Console di considerare attendibile il dominio per la federazione.  Potrebbe essere necessario coordinarsi con l'amministratore IT o di rete per completare questo passaggio.
 
-Ad esempio, se si utilizza Microsoft Entra ID, è possibile seguire i passaggi descritti nella documentazione Microsoft link:https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["Aggiungi un dominio con Microsoft Entra ID"].
+Ad esempio, se si utilizza Microsoft Entra ID, è possibile seguire i passaggi descritti nella documentazione Microsoft https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["Aggiungi un dominio con Microsoft Entra ID"^].
 
 .Passi
 . Selezionare *Amministrazione > Identità e accesso*.

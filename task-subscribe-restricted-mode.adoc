@@ -28,7 +28,7 @@ Un abbonamento al marketplace consente di addebitare i seguenti servizi dati con
 NetApp Data Classification è abilitato tramite l'abbonamento, ma l'utilizzo della classificazione è gratuito.
 
 .Prima di iniziare
-Per potersi iscrivere ai servizi dati, è necessario aver già distribuito un agente Console.  È necessario associare un abbonamento al marketplace alle credenziali cloud connesse a un agente della console.
+Per sottoscrivere i servizi dati, è necessario aver già distribuito un agente Console. È inoltre necessario associare un abbonamento al marketplace alle credenziali cloud connesse a un agente Console.
 
 [role="tabbed-block"]
 ====

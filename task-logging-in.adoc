@@ -21,7 +21,7 @@ Dopo la registrazione, l'amministratore dell'organizzazione della Console deve a
 .Passi
 . Vai all'URL della NetApp Console. L'URL dipende dalla modalità della Console che la tua organizzazione sta utilizzando:
 +
-** *Modalità standard*: Apri un browser web e vai alla https://console.netapp.com["NetApp Console"]
+** *Modalità standard*: Apri un browser web e vai a https://console.netapp.com["NetApp Console"^].
 ** **Modalità limitata o modalità privata**: Apri un browser web e vai all'indirizzo IP in cui è installato l'agente Console.
 
 

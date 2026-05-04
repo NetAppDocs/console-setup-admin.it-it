@@ -160,7 +160,7 @@ NOTE: Console Operator è il nome predefinito fornito nel criterio.  Se hai scel
 --
 .Entità del servizio di Azure
 --
-Fornire all'agente della Console le credenziali per l'Azure service principal che hai configurato in precedenza.
+Fornisci all'agente della Console le credenziali per l'entità servizio di Azure che hai configurato in precedenza.
 
 .Passi
 . Selezionare *Amministrazione > Credenziali*.

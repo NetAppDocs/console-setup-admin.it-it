@@ -50,7 +50,7 @@ La tabella seguente confronta queste modalità.
 | Accesso UI | Dall'applicazione SaaS della Console | Localmente da una VM agente | Localmente dalla VM dell'agente 
 
 
-| Punto finale dell'API | L'applicazione SaaS NetApp Console | un agente | un agente 
+| Punto finale dell'API | L'applicazione SaaS NetApp Console | Un agente | Un agente 
 
 
 | Autenticazione | Tramite SaaS utilizzando auth0, login NSS o federazione delle identità | Tramite SaaS utilizzando auth0 o federazione delle identità | Autenticazione utente locale 
@@ -140,13 +140,13 @@ NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp 
 | Classificazione NetApp | SÌ 
 
 
-| Copia e sincronizzazione NetApp | SÌ 
+| NetApp Copy and Sync | SÌ 
 
 
 | NetApp Disaster Recovery | SÌ 
 
 
-| NetApp Ransomware Protection | SÌ 
+| NetApp Ransomware Resilience | SÌ 
 
 
 | NetApp Replication | NO 
@@ -188,7 +188,7 @@ NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp 
  a| 
 Gestione di Licenses and subscriptions
 
-* Gli abbonamenti Marketplace e BYOL sono supportati con la modalità standard; tuttavia, le opzioni di licenza supportate dipendono dal servizio dati NetApp utilizzato.  Consultare la documentazione di ciascun servizio per saperne di più sulle opzioni di licenza disponibili.
+* Gli abbonamenti al Marketplace e il BYOL sono supportati in modalità standard; tuttavia, le opzioni di licenza supportate dipendono dal servizio dati NetApp che si sta utilizzando. Consultare la documentazione di ciascun servizio per ulteriori informazioni sulle opzioni di licenza disponibili.
 
 | NO 
 
@@ -209,9 +209,6 @@ Gestione di Licenses and subscriptions
 
 
 | Modalità di sola lettura | NO 
-
-
-| Notifiche | NO 
 |===
 
 
@@ -306,7 +303,7 @@ NetApp Replication
 
 * Supportato nelle regioni governative con modalità limitata.  Non supportato nelle regioni commerciali o nelle regioni sovrane con modalità limitata.
 
-| Sì*, (non necessario se si esegue la replica da ONTAP on-premises a ONTAP on-premises) 
+| Sì* (non necessario se si esegue la replica da ONTAP on-premises a ONTAP on-premises) 
 
 
 | *Funzionalità del contratto di supporto NetApp* | Nessuno | N / A 
@@ -359,9 +356,6 @@ Per Cloud Volumes ONTAP, con BYOL sono supportate sia le licenze basate sulla ca
 
 
 | Modalità di sola lettura | SÌ 
-
-
-| Notifiche | NO 
 |===
 
 
@@ -615,7 +609,7 @@ Si noti che alcuni servizi potrebbero essere supportati con limitazioni. Per mag
 | Google Cloud Storage | NO | NO 
 
 
-| Cluster ONTAP on-premises | SÌ | SÌ 
+| Cluster ONTAP on-premise | SÌ | SÌ 
 
 
 | Serie E | NO | NO 
@@ -624,7 +618,7 @@ Si noti che alcuni servizi potrebbero essere supportati con limitazioni. Per mag
 | StorageGRID | NO | NO 
 
 
-| Fabbrica del carico di lavoro | NO | NO 
+| Carichi di lavoro | NO | NO 
 
 
 .8+| *Servizi dati* | Backup and Recovery | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] 
@@ -633,13 +627,13 @@ Si noti che alcuni servizi potrebbero essere supportati con limitazioni. Per mag
 | Classificazione NetApp | SÌ | SÌ 
 
 
-| Copia e sincronizza | NO | NO 
+| NetApp Copy and Sync | NO | NO 
 
 
 | NetApp Disaster Recovery | NO | NO 
 
 
-| NetApp Ransomware Protection | NO | NO 
+| NetApp Ransomware Resilience | NO | NO 
 
 
 | NetApp Replication | SÌ | SÌ 

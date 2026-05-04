@@ -19,7 +19,7 @@ Per distribuire un agente Console in Google Cloud utilizzando Google Cloud, è n
 L'installazione di un agente in Google Cloud avvia un'istanza di macchina virtuale con Linux e il software dell'agente Console in una VPC a tua scelta.
 
 .Prima di iniziare
-* Dovresti avere un link:concept-agents.html["Scopri di più sugli agenti della console"].
+* link:concept-agents.html["Scopri di più sugli agenti della console"].
 * Dovresti rivederelink:reference-limitations.html["Limitazioni dell'agente della console"] .
 
 
@@ -147,7 +147,7 @@ Implementare questo requisito di rete dopo aver creato l'agente Console.
 Imposta le autorizzazioni per l'utente di Google Cloud per distribuire la VM dell'agente della console da Google Cloud.
 
 .Passi
-. Crea un ruolo personalizzato in Google Platform:
+. Crea un ruolo personalizzato in Google Cloud:
 +
 .. Crea un file YAML che includa le seguenti autorizzazioni:
 +
@@ -248,8 +248,10 @@ includedPermissions:
 L'esempio seguente crea un ruolo denominato "connectorDeployment" a livello di progetto:
 
 +
+[source, bash]
+----
 gcloud iam roles create connectorDeployment --project=myproject --file=connector-deployment.yaml
-
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Documentazione di Google Cloud: creazione e gestione di ruoli personalizzati"^]
 

@@ -14,7 +14,7 @@ summary: La modalità privata viene in genere utilizzata negli ambienti locali p
 
 
 [role="lead"]
-È possibile installare NetApp Console in locale o in un ambiente cloud sicuro. La modalità privata viene in genere utilizzata con ambienti locali privi di connessione Internet e con regioni cloud sicure, che includono https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^], https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^] e https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6["Azure IL6"^]
+È possibile installare NetApp Console in locale o in un ambiente cloud sicuro. La modalità privata viene in genere utilizzata con ambienti locali privi di connessione a Internet e con regioni cloud sicure, che includono https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^], https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^] e https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6["Azure IL6"^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] link:task-prepare-private-mode.html["Prepararsi per la distribuzione"]
 [role="quick-margin-list"]

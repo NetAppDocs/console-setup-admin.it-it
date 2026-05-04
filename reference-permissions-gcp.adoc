@@ -605,7 +605,7 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 | logging.privateLogEntries.list | SÌ | SÌ | NO 
 
 
-| registrazione.logEntries.create .2+| Crea e instrada voci di registro per il monitoraggio, il debug e l'audit. | SÌ | SÌ | NO 
+| registrazione.logEntries.create .2+| Creare e instradare voci di registro per il monitoraggio, il debug e la verifica. | SÌ | SÌ | NO 
 
 
 | registrazione.logEntries.route | SÌ | SÌ | NO 

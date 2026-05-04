@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-agent-maint-console-proxy.html 
-keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
+keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy, agent proxy 
 summary: 'È possibile utilizzare la console di manutenzione dell"agente Console per configurare un agente Console in modo che utilizzi un server proxy trasparente.' 
 ---
 = Comandi proxy trasparenti per l'agente Console in NetApp Console
@@ -20,7 +20,7 @@ summary: 'È possibile utilizzare la console di manutenzione dell"agente Console
 
 == Accedi alla console di manutenzione dell'agente
 
-È possibile accedere alla Console di manutenzione dall'host dell'agente della Console.  Passare alla seguente directory:
+È possibile accedere alla console di manutenzione dall'host dell'agente della console. Accedere alla seguente directory:
 
 [source, cli]
 ----
@@ -45,8 +45,6 @@ IL `proxy get` Il comando visualizza informazioni sulla configurazione corrente 
 
 
 === Esempio di proxy get
-
-Per visualizzare la configurazione corrente del server proxy trasparente, utilizzare il seguente comando:
 
 [source, cli]
 ----
@@ -111,7 +109,7 @@ IL `proxy remove` Il comando rimuove la configurazione del server proxy traspare
 
 === Esempio di rimozione del proxy
 
-Per rimuovere il server proxy trasparente, utilizzare il seguente comando:
+Per rimuovere il proxy server trasparente, utilizzare il seguente comando:
 
 [source, cli]
 ----

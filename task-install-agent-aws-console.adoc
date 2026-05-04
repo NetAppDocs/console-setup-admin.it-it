@@ -291,7 +291,7 @@ Ora dovresti avere un ruolo IAM con le autorizzazioni richieste o un utente IAM 
 
 == Passaggio 3: creare l'agente della console
 
-Creare l'agente Console direttamente dalla console basata sul Web.
+Crea l'agente della Console direttamente dalla Console basata sul web.
 
 .Informazioni su questo compito
 * La creazione dell'agente Console dalla Console distribuisce un'istanza EC2 in AWS utilizzando una configurazione predefinita.  Non passare a un'istanza EC2 più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-agent-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
@@ -311,10 +311,10 @@ Dovresti avere quanto segue:
 
 .Passi
 . Selezionare *Amministrazione > Agenti*.
-. Nella pagina *Panoramica*, seleziona *Distribuisci agente > AWS*
+. Nella pagina *Panoramica*, selezionare *Distribuisci agente > AWS*.
 . Per creare l'agente Console, seguire i passaggi della procedura guidata:
-. Nella pagina *Introduzione* viene fornita una panoramica del processo
-. Nella pagina *Credenziali AWS*, specifica la tua regione AWS e poi scegli un metodo di autenticazione, che può essere un ruolo IAM che la Console può assumere oppure una chiave di accesso AWS e una chiave segreta.
+. Nella pagina *Introduzione*, rivedi la panoramica del processo.
+. Nella pagina *Credenziali AWS*, specifica la tua regione AWS e poi scegli un metodo di autenticazione, che può essere un ruolo IAM che la Console può assumere oppure una chiave di accesso e una chiave segreta AWS.
 +
 
 TIP: Se si sceglie *Assumi ruolo*, è possibile creare il primo set di credenziali dalla procedura guidata di distribuzione dell'agente della console.  Ogni ulteriore set di credenziali deve essere creato dalla pagina Credenziali.  Saranno quindi disponibili tramite la procedura guidata in un elenco a discesa. link:task-adding-aws-accounts.html["Scopri come aggiungere credenziali aggiuntive"] .

@@ -57,7 +57,7 @@ system configuration backup settings modify -destination <target-location>
 
 == Modificare gli URI di un agente
 
-Aggiornare l'URI di un agente della Console qualora cambino i requisiti di rete. Ciò garantisce una gestione ininterrotta, sicura e conforme dell'infrastruttura di storage.
+Aggiorna l'URI di un agente della Console se i requisiti di rete cambiano. Ciò garantisce una gestione ininterrotta, sicura e conforme dell'infrastruttura di storage.
 
 .Passi
 . Selezionare *Amministrazione > Agenti*.

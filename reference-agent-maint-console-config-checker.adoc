@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: reference-agent-maint-console-config-checker.html 
-keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
-summary: 'È possibile utilizzare la console di manutenzione dell"agente Console per configurare un agente Console in modo che utilizzi un server proxy trasparente.' 
+keywords: agent maintenance console, agent troubleshooting, network connectivity validation, agent validation, hardware requirements, deployment readiness, operational compliance, installation troubleshooting 
+summary: 'È possibile utilizzare la console di manutenzione dell"agente Console per convalidare l"installazione e la configurazione di un agente Console.' 
 ---
 = Convalida dell'agente della console con la console di manutenzione in NetApp Console
 :hardbreaks:
@@ -20,7 +20,7 @@ summary: 'È possibile utilizzare la console di manutenzione dell"agente Console
 
 == Accedi alla console di manutenzione dell'agente
 
-È possibile accedere alla Console di manutenzione dall'host dell'agente della Console.  Passare alla seguente directory:
+È possibile accedere alla console di manutenzione dall'host dell'agente della console. Accedere alla seguente directory:
 
 [source, cli]
 ----
@@ -41,9 +41,10 @@ IL `config-checker validate` Il comando consente di convalidare la configurazion
 [role="quick-margin-para"]
 Seleziona uno o più servizi da convalidare. I nomi dei servizi validi sono:
 
-*`PLATFORM`che convalida la connettività di rete agli endpoint della Console richiesti, nonché se le porte necessarie sono aperte per l'agente della Console.
+* `PLATFORM`che convalida la connettività di rete agli endpoint della Console richiesti, nonché se le porte necessarie sono aperte per l'agente della Console.
 
-`--validationTypes <comma-separated list validation types to run>` --*OBBLIGATORIO*-- Scegli uno o più tipi di convalida da eseguire. I tipi di convalida validi sono:
+
+`--validationTypes <comma-separated list of validation types to run>` --*OBBLIGATORIO*-- Scegli uno o più tipi di convalida da eseguire. I tipi di convalida validi sono:
 
 * `NETWORK`che convalida la connettività di rete agli endpoint Console richiesti.
 * `HARDWARE`che convalida che l'host dell'agente soddisfa i requisiti hardware minimi per l'agente della Console.

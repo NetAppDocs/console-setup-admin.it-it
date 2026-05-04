@@ -154,7 +154,7 @@ Tutti gli altri utenti e destinatari sono configurati per non ricevere alcuna em
 Per personalizzare le impostazioni delle notifiche è necessario disporre del ruolo di amministratore dell'organizzazione.
 
 .Passi
-. Selezionare *Amministrazione > Impostazioni notifiche*.
+. Seleziona *Amministrazione > Impostazioni notifiche*.
 . Selezionare *Utenti dell'organizzazione* o *Destinatari aggiuntivi*.
 +
 La pagina *Destinatari aggiuntivi* consente di configurare la Console in modo che invii notifiche alle persone che sono membri della tua organizzazione Console.

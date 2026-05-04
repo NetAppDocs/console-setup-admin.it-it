@@ -20,7 +20,7 @@ L'agente della Console viene aggiornato automaticamente quando dispone di connet
 
 == Aggiorna l'agente della console
 
-Durante il processo di aggiornamento, l'agente della console deve essere riavviato, pertanto la NetApp Console non sarà disponibile durante l'aggiornamento.
+L'agente della console deve essere riavviato durante il processo di aggiornamento, pertanto la NetApp Console non sarà disponibile durante l'aggiornamento.
 
 .Passi
 . Scarica il software dell'agente Console da https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["Sito di supporto NetApp"^] .

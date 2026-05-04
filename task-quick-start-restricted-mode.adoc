@@ -91,13 +91,13 @@ NetApp Replication
 
 * Supportato nelle regioni governative con modalità limitata.  Non supportato nelle regioni commerciali o nelle regioni sovrane con modalità limitata.
 
-| Sì*, (non necessario se si esegue la replica da ONTAP on-premises a ONTAP on-premises) 
+| Sì* (non necessario se si esegue la replica da ONTAP on-premises a ONTAP on-premises) 
 
 
 | *Funzionalità del contratto di supporto NetApp* | Nessuno | N / A 
 
 
-.12+| *Funzionalità amministrative* | Revisione contabile | NO 
+.11+| *Funzionalità amministrative* | Revisione contabile | NO 
 
 
 | Hub di automazione | NO 
@@ -144,7 +144,4 @@ Per Cloud Volumes ONTAP, con BYOL sono supportate sia le licenze basate sulla ca
 
 
 | Modalità di sola lettura | NO 
-
-
-| Notifiche | NO 
 |===

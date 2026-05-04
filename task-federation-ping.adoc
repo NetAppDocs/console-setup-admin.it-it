@@ -17,14 +17,14 @@ summary: 'Federati con il tuo provider IdP PingFederate per abilitare l"accesso 
 Federati con il tuo provider IdP PingFederate per abilitare l'accesso singolo (SSO) per la NetApp Console.  Ciò consente agli utenti di accedere utilizzando le proprie credenziali aziendali.
 
 .Ruoli richiesti
-Il ruolo di amministratore della federazione è necessario per creare e gestire le federazioni.  Il visualizzatore della Federazione può visualizzare la pagina della Federazione.link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
+Il ruolo di amministratore della federazione è necessario per creare e gestire le federazioni. L'utente visualizzatore della federazione può visualizzare la pagina della federazione. link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
 
 
 NOTE: Puoi federarti con il tuo IdP aziendale o con il sito di supporto NetApp .  NetApp consiglia di scegliere l'una o l'altra opzione, ma non entrambe.
 
 NetApp supporta solo SSO avviato dal provider di servizi (SP).  Per prima cosa è necessario configurare il provider di identità in modo che consideri attendibile NetApp come fornitore di servizi.  Quindi, è possibile creare una connessione nella Console che utilizzi la configurazione del provider di identità.
 
-È possibile impostare una connessione federata con PingFederate per abilitare l'accesso singolo (SSO) per la Console.  Il processo prevede la configurazione del server PingFederate in modo che consideri attendibile la Console come fornitore di servizi e quindi la creazione della connessione nella Console.
+È possibile configurare una connessione federata con PingFederate per abilitare il single sign-on (SSO) per la Console. Il processo prevede la configurazione del server PingFederate affinché consideri la Console come un service provider e la successiva creazione della connessione nella Console.
 
 .Prima di iniziare
 * È richiesto un account IdP con privilegi amministrativi.  Coordinati con l'amministratore dell'IdP per completare i passaggi.
@@ -51,7 +51,7 @@ NetApp supporta solo SSO avviato dal provider di servizi (SP).  Per prima cosa �
 +
 *** Per l'URL di risposta o l'URL del servizio consumatori di asserzione (ACS), utilizzare `https://netapp-cloud-account.auth0.com/login/callback`
 *** Per l'URL di disconnessione, utilizzare `https://netapp-cloud-account.auth0.com/logout`
-*** Per *ID pubblico/entità*, utilizzare `urn:auth0:netapp-cloud-account:<fed-domain-name-saml>` dove <fed-domain-name-pingfederate> è il nome di dominio della federazione.  Ad esempio, se il tuo dominio è `example.com` , l'ID Pubblico/Entità sarebbe `urn:auth0:netappcloud-account:fed-example-com-pingfederate` .
+*** Per *Audience/Entity ID*, utilizzare  `urn:auth0:netapp-cloud-account:<fed-domain-name-pingfederate>` dove <fed-domain-name-pingfederate> è il domain name per la federazione. Ad esempio, se il dominio è  `example.com`, l'Audience/Entity ID sarà  `urn:auth0:netapp-cloud-account:fed-example-com-pingfederate`.
 
 
 .. Copia l'URL del server PingFederate.  Questo URL sarà necessario quando si crea la connessione nella Console.
@@ -59,7 +59,7 @@ NetApp supporta solo SSO avviato dal provider di servizi (SP).  Per prima cosa �
 
 
 . Torna alla Console e seleziona *Avanti* per creare la connessione.
-. Crea la connessione con PingFederate
+. Crea la connessione con PingFederate.
 +
 .. Inserisci l'URL del server PingFederate che hai copiato nel passaggio precedente.
 .. Carica il certificato di firma X.509.  Il certificato deve essere in formato PEM, CER o CRT.

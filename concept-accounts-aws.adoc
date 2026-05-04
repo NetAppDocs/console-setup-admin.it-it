@@ -20,9 +20,9 @@ Puoi gestire le credenziali AWS e gli abbonamenti al marketplace direttamente da
 
 == Credenziali AWS iniziali
 
-Quando si distribuisce un agente Console dalla Console, è necessario fornire l'ARN di un ruolo IAM o le chiavi di accesso per un utente IAM. Il metodo di autenticazione deve disporre delle autorizzazioni per distribuire l'agente della console in AWS.  Le autorizzazioni richieste sono elencate nellink:task-install-agent-aws-console.html#aws-permissions-agent["Criteri di distribuzione degli agenti per AWS"] .
+Quando si distribuisce un agente Console dalla Console, è necessario fornire l'ARN di un ruolo IAM o le chiavi di accesso per un utente IAM. Il metodo di autenticazione deve disporre delle autorizzazioni per distribuire l'agente Console in AWS. Le autorizzazioni richieste sono elencate in link:task-install-agent-aws-console.html#aws-permissions-agent["Criteri di distribuzione degli agenti per AWS"].
 
-Quando la Console avvia l'agente della Console in AWS, crea un ruolo IAM e un profilo per l'agente. Associa inoltre una policy che fornisce all'agente della console le autorizzazioni per gestire risorse e processi all'interno di quell'account AWS. link:reference-permissions-aws.html["Esaminare come l'agente utilizza le autorizzazioni"].
+Quando la Console avvia l'agente della Console in AWS, crea un ruolo IAM e un profilo per l'agente. Inoltre, associa una policy che fornisce all'agente della Console le autorizzazioni per gestire risorse e processi all'interno di quell'account AWS. link:reference-permissions-aws.html["Esamina come l'agente utilizza le autorizzazioni"].
 
 image:diagram_permissions_initial_aws.png["Un'immagine concettuale che mostra la Console che distribuisce l'agente della Console in un account AWS."]
 
@@ -30,7 +30,7 @@ Se aggiungi un nuovo sistema Cloud Volumes ONTAP , la Console seleziona per impo
 
 image:screenshot_accounts_select_aws.gif["Uno screenshot che mostra l'opzione Cambia account nella pagina Dettagli e credenziali."]
 
-Distribuisci tutti i tuoi sistemi Cloud Volumes ONTAP utilizzando le credenziali AWS iniziali oppure puoi aggiungere credenziali aggiuntive.
+È possibile distribuire tutti i sistemi Cloud Volumes ONTAP utilizzando le credenziali AWS iniziali oppure è possibile aggiungere credenziali aggiuntive.
 
 
 
@@ -131,7 +131,7 @@ No, non è possibile spostare le risorse AWS associate al sistema Cloud Volumes 
 
 === Come funzionano le credenziali per le distribuzioni sul marketplace e le distribuzioni on-premise?
 
-Le sezioni precedenti descrivono il metodo di distribuzione consigliato per l'agente Console, ovvero dalla Console. È anche possibile distribuire un agente in AWS da AWS Marketplace e installare manualmente il software dell'agente della console sul proprio host Linux o nel proprio VCenter.
+Le sezioni precedenti descrivono il metodo di distribuzione consigliato per l'agente Console, ovvero dalla Console. È anche possibile distribuire un agente in AWS dall'AWS Marketplace e installare manualmente il software dell'agente Console sul proprio host Linux o nel proprio vCenter.
 
 Se si utilizza il Marketplace, le autorizzazioni vengono fornite nello stesso modo.  È sufficiente creare e configurare manualmente il ruolo IAM e quindi fornire le autorizzazioni per eventuali account aggiuntivi.
 

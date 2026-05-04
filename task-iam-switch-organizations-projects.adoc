@@ -35,9 +35,6 @@ image:screenshot-iam-switch-organizations.png["Uno screenshot del banner in alto
 La scheda *Partnership* non viene visualizzata se non hai organizzazioni partner.
 
 . Seleziona un'altra organizzazione e poi seleziona *Cambia*.
-+
-Se hai delle organizzazioni partner, seleziona la scheda *Partnership* per visualizzare le organizzazioni partner disponibili.
-
 
 
 

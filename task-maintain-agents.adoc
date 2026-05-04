@@ -62,7 +62,7 @@ La console ti avvisa quando la macchina virtuale dell'agente non è integro, com
 Ad esempio, la Console ti avvisa quando una risorsa agente (CPU, RAM o spazio su disco) supera il 90% della sua capacità totale per 30 minuti consecutivi.  Successivamente, se l'utilizzo delle risorse scende al di sotto di tale soglia, la notifica viene visualizzata come risolta (verde) nel Centro notifiche.
 
 
-NOTE: Per domande sulla modifica della VM dell'agente, contattare l'assistenza NetApp .
+NOTE: Collabora con il supporto NetApp se hai domande sulla modifica della tua VM agente.
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#notification-center["Saperne di più."^]
 
