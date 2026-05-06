@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task-organization-verify.html 
+keywords: adding, creating, netapp support site account, nss, update account, update nss account, update nss credentials, delete nss account, remove nss account, change working environment, working environment nss, digital wallet, license, change system, system nss, licenses and subscriptions 
+summary: 'Associa un account NetApp Support Site alla tua organizzazione NetApp Console per abilitare flussi di lavoro chiave per Cloud Volumes ONTAP.  Queste credenziali NSS sono associate all"intera organizzazione.' 
+---
+= Verifica la tua organizzazione della NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se utilizzi Digital Advisor, devi verificare la tua organizzazione Console se la tua azienda possiede più account aziendali con NetApp. Digital Advisor potrebbe visualizzare più account NetApp non correlati alla tua organizzazione Console. Per assicurarti di visualizzare solo le risorse associate alla tua organizzazione Console, puoi verificare l'ID aziendale che desideri associare alla tua organizzazione Console.
+
+La console supporta anche l'associazione di un account NSS per account utente. link:task-manage-user-credentials.html["Scopri come gestire le credenziali a livello utente"] .
+
+
+
+== Prima di iniziare
+
+È necessario disporre del ruolo di amministratore dell'organizzazione per verificarla e l'utente deve anche essere associato a un account NetApp Support Site (NSS). link:task-adding-nss-accounts["Scopri come associare il tuo account NSS"].
+
+
+NOTE: Se la tua azienda dispone di un solo account aziendale e il tuo utente è associato a un account del NetApp Support Site, la tua organizzazione viene verificata automaticamente.
+
+
+
+== Verifica la tua organizzazione
+
+.Passi
+. Se l'utente ha accesso a più di un'organizzazione, selezionare l'organizzazione che si desidera verificare dal menu a tendina Organization.
+. In *Amministrazione > Identità e accesso*.
+. Seleziona *Organizzazione*.
+

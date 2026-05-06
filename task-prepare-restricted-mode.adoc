@@ -491,7 +491,7 @@ Per fornire funzionalità e servizi all'interno della NetApp Console.
 
 
  a| 
-\https://occmclientinfragov.azurecr.us \https://bluexpinfraprod.azurecr.io
+\ https://occmclientinfragov.azurecr.us
  a| 
 Per ottenere immagini per gli aggiornamenti dell'agente della console.
 

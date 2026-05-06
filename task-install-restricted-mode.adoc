@@ -247,15 +247,13 @@ Se non si rimuovono queste variabili di sistema, l'installazione fallirà.
 +
 ** NetApp Console: Vai a *Agenti > Gestione > Distribuisci agente > Locale > Installazione manuale*.
 +
-Scegli se scaricare i file di installazione dell'agente oppure copiare un URL dei file.
+Scegli se scaricare i file di installazione dell'agente o un URL per i file.
 
-
-
+** https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Sito di supporto NetApp"^] (necessario se non si ha già accesso alla Console).
 +
 
 NOTE: Scarica il programma di installazione dell'agente "online" pensato per l'utilizzo nella tua rete o nel cloud. È disponibile un programma di installazione "offline" separato per l'agente Console, ma è supportato solo con distribuzioni in modalità privata.
 
-+
 ** NetApp Support Site (necessario se non si ha già accesso alla Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Sito di supporto NetApp"^].
 
 
@@ -278,33 +276,46 @@ Dove <versione> è la versione dell'agente Console scaricato.
 +
 Sarà necessario aggiungere le informazioni sul proxy se la rete richiede un proxy per l'accesso a Internet. È possibile aggiungere un proxy esplicito durante l'installazione. I parametri  `--proxy` e  `--cacert` sono facoltativi e non verrà richiesto di aggiungerli. Se si dispone di un proxy server esplicito, sarà necessario immettere i parametri come mostrato.
 
-
-
-
-NOTE: Se desideri configurare un proxy trasparente, puoi farlo dopo aver installato un agente. link:reference-agent-maint-console-proxy.html["Scopri di più sulla console di manutenzione dell'agente"].
-
 +
 
+NOTE: Se desideri configurare un proxy trasparente, puoi farlo dopo l'installazione. link:reference-agent-maint-console-proxy.html["Scopri di più sulla console di manutenzione dell'agente"].
+
++
 Ecco un esempio di configurazione di un proxy server esplicito con un certificato firmato da una CA:
 
 +
-
 [source, cli]
 ----
 ./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
-`--proxy` configura l'agente Console per utilizzare un proxy server utilizzando uno dei seguenti formati:
+`--proxy`Configura l'agente della Console per utilizzare un proxy server utilizzando uno dei seguenti formati:
 
-+ * \http://address:port * \http://user-name:password@address:port * \http://domain-name%92user-name:password@address:port * \https://address:port * \https://user-name:password@address:port * \https://domain-name%92user-name:password@address:port
++
+** \http://indirizzo:porta
+** \http://nome-utente:password@indirizzo:porta
+** \http://nome-dominio%92nome-utente:password@indirizzo:porta
+** \https://indirizzo:porta
+** \https://nome-utente:password@indirizzo:porta
+** \https://nome-dominio%92nome-utente:password@indirizzo:porta
++
+Notare quanto segue:
 
-+ Nota quanto segue:
++
+*** L'utente può essere un utente locale o un utente di dominio.
+*** Per un utente di dominio, è necessario utilizzare il codice ASCII per \ come mostrato sopra.
+*** L'agente Console non supporta nomi utente o password che includono il carattere @.
+*** Se la password include uno qualsiasi dei seguenti caratteri speciali, è necessario anteporre una barra rovesciata a tale carattere speciale: & o !
++
+Per esempio:
 
-+ ** L'utente può essere un utente locale o un utente di dominio. ** Per un utente di dominio, è necessario utilizzare il codice ASCII per una \ come mostrato sopra. ** L'agente Console non supporta nomi utente o password che includono il carattere @. ** Se la password include uno dei seguenti caratteri speciali, è necessario eseguire l'escape di quel carattere speciale anteponendo una barra rovesciata: & o !
++
+\http://bxpproxyuser:netapp1\!@indirizzo:3128
 
-+ Ad esempio:
 
-+ \http://bxpproxyuser:netapp1\!@address:3128
+
+
 
 . Se hai utilizzato Podman, dovrai modificare la porta aardvark-dns.
 +

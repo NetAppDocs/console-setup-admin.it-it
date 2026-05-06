@@ -40,6 +40,10 @@ La NetApp Console IAM si basa su tre tipi di componenti: componenti organizzativ
 Le componenti organizzative—organizzazione, cartelle e progetti—formano una gerarchia che determina come vengono raggruppate le risorse e come viene delegato l'accesso.
 
 Organizzazione:: Un'organizzazione è il livello più alto del sistema Console IAM e in genere rappresenta la tua azienda. La tua organizzazione è composta da cartelle, progetti, membri, ruoli e risorse. Le risorse sono associate ai progetti e ai membri vengono assegnati ruoli a livello di organizzazione, cartella o progetto.
+
+
+È inoltre possibile verificare la propria organizzazione per collegarla alla propria identità dell'account aziendale NetApp, garantendo così una governance coerente tra i sistemi NetApp. link:concept-verified-organization.html["Scopri le organizzazioni verificate in NetApp Console"].
+
 Progetti:: I progetti raggruppano risorse di storage. Assegna le risorse ai progetti e concedi agli utenti l'accesso a livello di progetto. Le risorse possono appartenere a più progetti. Gli utenti con accesso a un progetto possono utilizzarne le risorse.
 +
 --

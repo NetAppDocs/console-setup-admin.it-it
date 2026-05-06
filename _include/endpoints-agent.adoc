@@ -93,12 +93,9 @@ NetApp consiglia di consentire gli endpoint dell'Opzione 1 nel firewall in quant
 
 
 |===
-a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| Per ottenere immagini per gli aggiornamenti dell'agente della console.
+a| https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us (necessario per le distribuzioni in modalità limitata) a| Per ottenere immagini per gli aggiornamenti dell'agente della Console.
 
-* Quando esegui l'aggiornamento agli endpoint correnti nel firewall, gli agenti esistenti continueranno a funzionare.
-
-
-a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| Per ottenere le immagini per gli aggiornamenti dell'agente della Console.
+a| https://occmclientinfragov.azurecr.us a| Per ottenere le immagini per gli aggiornamenti dell'agente della Console.
 
 ^1^ NetApp consiglia di consentire gli endpoint dell'Opzione 1 nel firewall in quanto più sicuri e di non consentire gli endpoint dell'Opzione 2.  Si tenga presente quanto segue in merito a questi endpoint:
 

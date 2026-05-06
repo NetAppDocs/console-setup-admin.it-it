@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: concept-verified-organization.html 
+keywords: verified organization, organization verification, cmat, crm id, business account, identity and access management, iam, organization governance 
+summary: Le organizzazioni verificate collegano la tua organizzazione NetApp Console al tuo account aziendale NetApp, in modo che identità e governance siano coerenti tra i sistemi. 
+---
+= Scopri le organizzazioni verificate in NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Un'organizzazione verificata collega la tua organizzazione nella NetApp Console alla tua identità dell'account aziendale NetApp (ad esempio, un ID CMAT). Questo aiuta la Console ad applicare un'identità organizzativa e un modello di governance coerenti tra i sistemi NetApp.
+
+
+
+== Perché verificare la tua organizzazione
+
+La verifica della tua organizzazione può aiutarti a:
+
+* Allinea l'organizzazione della tua Console con l'identità del tuo account aziendale NetApp.
+* Migliora la coerenza per i flussi di lavoro di amministrazione, reporting e supporto.
+* Riduci le ambiguità quando i tuoi team lavorano su più NetApp services.
+* Supportare i controlli di governance che dipendono da un'identità organizzativa affidabile.
+
+
+
+
+== Cosa cambia dopo la verifica
+
+Dopo la verifica della tua organizzazione:
+
+* L'organizzazione è associata a un'identità di account aziendale NetApp.
+* La Console può considerare tale identità organizzativa come autorevole per la mappatura a livello aziendale.
+* Alcune modifiche al profilo organizzativo potrebbero essere limitate nella Console se gestite dal sistema di origine.
+
+
+
+
+== Prima di verificare
+
+Prima di verificare la tua organizzazione, conferma quanto segue:
+
+* Lei ricopre il ruolo amministrativo richiesto dalla sua organizzazione.
+* Hai a disposizione i dettagli dell'organizzazione necessari per la verifica.
+* Hai coordinato con il tuo team di account NetApp se è necessaria la convalida della mappatura tra account aziendali.
+
+
+
+
+== Informazioni correlate
+
+* link:task-verify-organization.html["Verifica la tua organizzazione"]
+* link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e degli accessi"]
+* link:task-iam-rename-organization.html["ID organizzazione e progetto"]
+
