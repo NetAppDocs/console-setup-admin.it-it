@@ -175,6 +175,8 @@ sidebar:
         url: "/faq-iam-netapp-console.html"
       - title: Imposta l'organizzazione della tua console
         entries:
+        - title: Verifica l'organizzazione della tua Console
+          url: "/task-iam-organization-verify.html"
         - title: Crea cartelle e progetti
           url: "/task-iam-manage-folders-projects.html"
         - title: Associare risorse a cartelle e progetti

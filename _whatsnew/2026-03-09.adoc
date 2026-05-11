@@ -15,6 +15,6 @@ Questa versione dell'agente Console include miglioramenti della sicurezza e corr
 
 
 
-=== Amministrazione della console
+=== Amministrazione NetApp Console
 
 È possibile assegnare ruoli Keystone agli utenti partner per consentire loro di gestire le risorse Keystone in un'organizzazione partner. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["Scopri di più sull'assegnazione dei ruoli Keystone agli utenti partner."]

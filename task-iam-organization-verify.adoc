@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: task-iam-organization-verify.html 
+keywords: verify Console organization, associate business account, CMAT account, digital advisor, filtering, organization verification,, business account management, multi-account NetApp customers, organization governance, account ownership verification, resource visibility control 
+summary: 'Per impostazione predefinita, Digital Advisor mostra tutti gli account NetApp associati alla tua azienda, anziché solo quelli della tua organizzazione Console. Per limitare la visualizzazione in Digital Advisor a un account specifico, verifica l"account aziendale che desideri utilizzare con la tua organizzazione Console.' 
+---
+= Verifica la tua organizzazione della NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per impostazione predefinita, Digital Advisor mostra tutti gli account NetApp associati alla tua azienda, anziché solo quelli della tua organizzazione Console. Per limitare la visualizzazione in Digital Advisor a un account specifico, verifica l'account aziendale che desideri utilizzare con la tua organizzazione Console.
+
+
+
+== Prima di iniziare
+
+Per verificare la tua organizzazione, devi disporre del ruolo di amministratore dell'organizzazione. Il tuo utente deve inoltre essere associato a un account NetApp Support Site (NSS). link:task-adding-nss-accounts["Scopri come associare il tuo account NSS"].
+
+
+NOTE: Se la tua azienda dispone di un solo account aziendale e il tuo utente è associato a un account del sito di supporto NetApp, la Console verifica automaticamente la tua organizzazione.
+
+
+
+== Verifica la tua organizzazione
+
+.Passi
+. Se l'utente ha accesso a più di un'organizzazione, selezionare l'organizzazione che si desidera verificare dal menu a tendina Organization.
+. In *Amministrazione > Identità e accesso*.
+. Seleziona *Organizzazione*.
+. Accanto al titolo della pagina, seleziona *Verifica*.
++
+image:screenshot-iam-verify-org.png["Uno screenshot della pagina Organization con il pulsante Verify evidenziato."]
+
++
+
+NOTE: Se la tua azienda ha un solo account aziendale, il tag accanto all'intestazione della pagina mostrerà la dicitura *Verified* e non sarà necessario intraprendere alcuna azione.
+
+. Nella finestra di dialogo *Associa account aziendale*, seleziona l'account aziendale che desideri associare alla tua organizzazione Console dal menu a discesa. Quindi seleziona *Associa*.
+
