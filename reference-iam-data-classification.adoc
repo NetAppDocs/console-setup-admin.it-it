@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-data-classification.html 
+keywords: role-based access control, IAM roles, access delegation, data classification, cloud data sense, compliance admin, classification viewer 
+summary: 'NetApp Data Classification supporta due ruoli per gestire l"accesso in lettura e scrittura alle risorse.' 
+---
+= NetApp Data Classification ruoli in NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification supporta la gestione delle identità e degli accessi per darti la flessibilità di assegnare agli utenti un ruolo specifico in base alle attività che devono svolgere all'interno della tua organizzazione. Le modalità di assegnazione dei ruoli dipendono dalle tue specifiche esigenze aziendali e dalle pratiche di gestione dell'archiviazione.
+
+La classificazione dei dati supporta due ruoli:
+
+* Amministratore della conformità
+* Visualizzatore di classificazione
+
+
+
+
+== Amministratore della conformità
+
+Il ruolo di Compliance admin opera esclusivamente a livello di organizzazione per gestire l'accesso alle risorse di NetApp Data Classification. Se un utente ha responsabilità inferiori a quelle di un Organization admin, deve disporre del ruolo di Compliance admin per installare NetApp Data Classification.
+
+
+IMPORTANT: Il ruolo di amministratore della conformità non è un ruolo autonomo. Gli utenti con il ruolo di amministratore della conformità devono essere associati anche ad almeno un link:reference-iam-platform-roles.html["Ruolo della piattaforma"].
+
+
+NOTE: Il Compliance admin è stato aggiunto a Data Classification nella versione 1.54. Se avevi implementato Data Classification prima di questa versione e avevi un ruolo sulla piattaforma con un accesso inferiore a quello di un organization admin, il ruolo Compliance admin veniva automaticamente associato all'account utente.
+
+
+
+== Visualizzatore di classificazione
+
+Il visualizzatore di classificazione è progettato per gli utenti che necessitano di accedere ai risultati delle scansioni in NetApp Data Classification, ma non hanno bisogno di accedere alle risorse di configurazione. Gli utenti con il ruolo di visualizzatore di classificazione possono visualizzare i risultati delle mappature e delle scansioni complete per valutare le aree in cui è possibile risparmiare spazio di archiviazione o individuare potenziali rischi per i dati. Gli utenti con il ruolo di visualizzatore di classificazione possono anche generare report per le risorse a cui hanno accesso. Questi utenti non possono abilitare o disabilitare la scansione di volumi, bucket o database schema.
+
+
+
+== Ulteriori informazioni
+
+* link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Scopri la NetApp Data Classification"^]
+
