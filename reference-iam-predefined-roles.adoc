@@ -73,6 +73,12 @@ Di seguito è riportato un elenco dei ruoli nella categoria applicazione.  Ogni 
 | link:reference-iam-keystone-roles.html["Visualizzatore Keystone"] | Gli utenti con il ruolo di visualizzatore Keystone NON POSSONO creare richieste di servizio.  Consente agli utenti di monitorare e visualizzare i consumi, le risorse e le informazioni amministrative all'interno del tenant Keystone a cui accedono. 
 
 
+| link:reference-iam-licenses-subscriptions.html["Amministrazione di licenze e abbonamenti"] | Gli utenti con il ruolo di amministratore di Licenses and subscriptions possono creare, aggiornare ed eliminare licenze dirette e abbonamenti al marketplace per la NetApp Console e i servizi dati correlati. 
+
+
+| link:reference-iam-licenses-subscriptions.html["Visualizzatore di licenze e abbonamenti"] | Gli utenti con il ruolo di visualizzatore di licenze e abbonamenti possono visualizzare le licenze dirette e gli abbonamenti del marketplace per la NetApp Console e i servizi dati correlati. 
+
+
 | Ruolo di configurazione del mediatore ONTAP | Gli account di servizio con il ruolo di configurazione ONTAP Mediator possono creare richieste di servizio.  Questo ruolo è richiesto in un account di servizio per configurare un'istanza dilink:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html["Mediatore cloud ONTAP"^] . 
 
 
