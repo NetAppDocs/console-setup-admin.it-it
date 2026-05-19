@@ -243,7 +243,7 @@ Autenticazione:: NetApp Console fornisce l'autenticazione tramite auth0 o NetApp
 
 Vai al https://console.netapp.com["NetApp Console"^] e iscriviti.
 
-+ link:task-quick-start-standard-mode.html["Scopri come iniziare con la modalità standard"].
+link:task-quick-start-standard-mode.html["Scopri come iniziare con la modalità standard"].
 
 
 
@@ -255,7 +255,7 @@ Gli utenti accedono all'interfaccia utente locale fornita dall'agente della Cons
 
 A seconda dei servizi dati e delle funzionalità che intendi utilizzare, un amministratore dell'organizzazione Console crea ulteriori agenti Console per gestire i dati all'interno del tuo ambiente cloud ibrido.
 
-<<Modalità limitata,Scopri di più sulla connettività outbound alle API della NetApp Console>>.
+link:task-install-restricted-mode.html["Scopri di più sulla connettività outbound alle API della NetApp Console"].
 
 L'immagine seguente è un esempio di distribuzione in modalità limitata.
 
