@@ -3732,7 +3732,6 @@
   <block id="9677e2cfcf9bc5456798a21522590a93" category="paragraph">Per ignorare singole notifiche, passa il cursore sulla notifica e seleziona *Ignora*.</block>
   <block id="def7f3eac7eed1dada5cdcd2951ede36" category="section-title">Imposta le impostazioni di notifica via email</block>
   <block id="a6ca8d5aaf648abdbc2d400cc1275aed" category="paragraph">Puoi inviare tipi specifici di notifiche tramite e-mail, in modo da essere informato sulle attività importanti del sistema anche quando non hai effettuato l'accesso. Le e-mail possono essere inviate a tutti gli utenti che fanno parte della tua organizzazione o del tuo account, oppure a qualsiasi altro destinatario che debba essere a conoscenza di determinati tipi di attività del sistema.</block>
-  <block id="1989e58795a64829ac69121bb1b0c591" category="list-text">La console invia notifiche e-mail per l'agente, le licenze e gli abbonamenti, NetApp Copy and Sync e NetApp Backup and Recovery.</block>
   <block id="73e3e67a2ad49cc81c8aa84272ebe07c" category="list-text">L'invio di notifiche e-mail non è supportato quando l'agente Console è installato in un sito senza accesso a Internet.</block>
   <block id="e879b7fea6cc39a26268d3c9029be021" category="paragraph">I filtri impostati nel Centro notifiche non determinano i tipi di notifiche che ricevi via e-mail.  Per impostazione predefinita, qualsiasi amministratore dell'organizzazione riceverà email per tutte le notifiche "Critiche" e "Raccomandate".  Queste notifiche sono valide per tutti i servizi: non è possibile scegliere di ricevere notifiche solo per determinati servizi, ad esempio agenti o NetApp Backup and Recovery.</block>
   <block id="7fcffcce675dad706dbf53d68f1f86f2" category="paragraph">Tutti gli altri utenti e destinatari sono configurati per non ricevere alcuna email di notifica, quindi sarà necessario configurare le impostazioni di notifica per tutti gli utenti aggiuntivi.</block>
@@ -6310,4 +6309,5 @@
   <block id="3726f34b9bf1c6c6d98054942b244313" category="cell">RANSOMWARE_RESILIENCE_USER_BEHAVIOR_ADMIN</block>
   <block id="91a470b0f7bf1c1702a23ad6d9d4159d" category="cell">RANSOMWARE_RESILIENCE_USER_BEHAVIOR_VIEWER</block>
   <block id="a67d722a1a98561bf88726ffcf6ecda7" category="cell">SNAPCENTER_ADMIN</block>
+  <block id="6b0a56bcf40e8d005fd8e9e5b2559479" category="list-text">La console invia notifiche via e-mail per l'agente, le licenze e gli abbonamenti, NetApp Copy and Sync, NetApp Backup and Recovery e NetApp Ransomware Resilience.</block>
 </blocks>
