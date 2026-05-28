@@ -16,8 +16,6 @@ summary: Se desideri federare con un domain name diverso da quello della tua ema
 [role="lead"]
 Se desideri federare con un domain name diverso da quello della tua email, devi prima verificare di esserne il proprietario. Puoi utilizzare solo domain name verificati per la federazione.
 
-Questo flusso di lavoro di verifica del dominio è diverso dalla verifica dell'organizzazione. link:task-verify-organization.html["Scopri come verificare la tua organizzazione"].
-
 .Ruoli richiesti
 Il ruolo di amministratore della federazione è necessario per creare e gestire le federazioni. L'utente visualizzatore della federazione può visualizzare la pagina della federazione. link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso."]
 

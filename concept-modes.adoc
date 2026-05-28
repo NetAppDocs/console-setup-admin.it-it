@@ -125,16 +125,19 @@ NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp 
 | Google Cloud Storage | SÌ 
 
 
+| Accesso all'abbonamento Keystone | SÌ 
+
+
 | Cluster ONTAP on-premise | Necessario per l'individuazione e la gestione. È possibile utilizzare l'individuazione diretta senza un agente della NetApp Console, ma è necessario un agente per utilizzare le funzionalità di gestione. 
 
 
 | StorageGRID | SÌ 
 
 
-| Carichi di lavoro | NO 
+| Carichi di lavoro | NO .8+| *Servizi dati* 
 
 
-.8+| *Servizi dati* | NetApp Backup and Recovery | SÌ 
+| NetApp Backup and Recovery | SÌ 
 
 
 | Classificazione NetApp | SÌ 
@@ -155,10 +158,10 @@ NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp 
 | NetApp Cloud Tiering | SÌ 
 
 
-| NetApp Volume Caching | SÌ 
+| NetApp Volume Caching | SÌ .5+| *Funzionalità del contratto di supporto NetApp* 
 
 
-.5+| *Funzionalità del contratto di supporto NetApp* | Consulente digitale | SÌ 
+| Consulente digitale | SÌ 
 
 
 | Efficienza economica | SÌ 
@@ -170,10 +173,10 @@ NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp 
 | Aggiornamenti software | NO 
 
 
-| Sostenibilità | SÌ 
+| Sostenibilità | SÌ .12+| *Funzionalità amministrative* 
 
 
-.12+| *Funzionalità amministrative* | Revisione contabile | NO 
+| Revisione contabile | NO 
 
 
 | Hub di automazione | NO 

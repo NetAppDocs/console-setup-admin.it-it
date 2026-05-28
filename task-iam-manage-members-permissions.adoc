@@ -30,6 +30,7 @@ Tenere presente quanto segue in merito alla concessione dell'accesso nella NetAp
 * Tutti gli utenti devono prima registrarsi alla NetApp Console prima che possa essere loro concesso l’accesso alle risorse, anche se fanno parte di un gruppo federato.
 * È necessario assegnare esplicitamente un ruolo a ciascun utente nella Console prima che possa accedere alle risorse, anche se è membro di un gruppo federato a cui è stato assegnato un ruolo.
 * È possibile aggiungere account di servizio direttamente dalla Console e assegnare loro ruoli.
+* È possibile scegliere tra i ruoli supportati quando si assegnano ruoli a utenti o account di servizio.
 
 
 
@@ -74,7 +75,7 @@ Notare quanto segue:
 
 . *Seleziona una categoria*, quindi seleziona un *Ruolo* che fornisca al membro le autorizzazioni per le risorse associate all'organizzazione, alla cartella o al progetto selezionato.
 +
-link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] .
+Nell'elenco a discesa vengono visualizzati solo i ruoli supportati. link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"].
 
 . Per consentire l'accesso a più cartelle, progetti o ruoli, seleziona *Aggiungi ruolo*, scegli la cartella, il progetto o la categoria di ruolo e seleziona un ruolo.
 . Selezionare *Aggiungi*.
@@ -163,7 +164,7 @@ Notare quanto segue:
 
 . Seleziona una *Categoria*, quindi seleziona un *Ruolo* che conceda al membro le autorizzazioni per le risorse nell'organizzazione, nella cartella o nel progetto selezionato.
 +
-link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] .
+Nell'elenco a discesa vengono visualizzati solo i ruoli supportati. link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"].
 
 . Per consentire l'accesso a più cartelle, progetti o ruoli, seleziona *Aggiungi ruolo*, scegli la cartella, il progetto o la categoria di ruolo e seleziona un ruolo.
 
