@@ -147,7 +147,7 @@ da 9,1 a 9,4
 
 da 8,6 a 8,10
  a| 
-3.9.42 o versione successiva con la console in modalità privata
+4.0.0 o versioni successive con la Console in modalità privata
  a| 
 Podman versione 4.6.1 o 4.9.4
 
@@ -162,7 +162,7 @@ Ubuntu
  a| 
 22,04 LTS
  a| 
-3.9.29 o successivo
+4.0.0 o versioni successive
  a| 
 Docker Engine da 23.0.6 a 26.0.0
 

@@ -406,8 +406,6 @@
   <block id="0930e6e62078c5446e99045f0a678607" category="paragraph">Docker Engine dalla versione 23.0.6 alla 28.0.0.</block>
   <block id="8f06b143b878ae3919ba41cd38ea7380" category="list-text">L'agente Console è supportato dai seguenti sistemi operativi quando si utilizza la Console in modalità privata.  Prima di installare l'agente è necessario uno strumento di orchestrazione dei container.</block>
   <block id="1a3d8802d280d4ec910f54042cd62998" category="cell">SELinux</block>
-  <block id="730752c250979031a3c93723f75e0b07" category="paragraph">3.9.42 o versione successiva con la console in modalità privata</block>
-  <block id="607262a04e5c4340fc8d641e874a5695" category="paragraph">3.9.29 o successivo</block>
   <block id="a3336db0e9f7b6341a12794c144076b6" category="paragraph">Docker Engine da 23.0.6 a 26.0.0</block>
   <block id="5556c95763913c6cfa8f61d9cab4f4f2" category="paragraph">26.0.0 è supportato con le installazioni del _nuovo_ agente 3.9.44 o successive</block>
   <block id="afaf0577b469adb0296b4fcfa6f2af91" category="list-text">L'agente Console è supportato sulle versioni in lingua inglese di questi sistemi operativi.</block>
@@ -1325,7 +1323,6 @@
   <block id="c3a964b5dfacd9501abc103bfcc4c98f" category="paragraph">Il 30 giugno 2024, RHEL 7 ha raggiunto la fine della manutenzione (EOM), mentre CentOS 7 ha raggiunto la fine del ciclo di vita (EOL).  NetApp ha interrotto il supporto per gli agenti su queste distribuzioni Linux il 30 giugno 2024.</block>
   <block id="7eba69a7025f97bec42a74bd138b395e" category="inline-link">Red Hat: cosa sapere sulla fine della manutenzione di Red Hat Enterprise Linux 7</block>
   <block id="ebc4aba90c33f7558582b9bbf738fdd9" category="paragraph"><block ref="ebc4aba90c33f7558582b9bbf738fdd9" category="inline-link-rx"></block></block>
-  <block id="f9c4366c4eb9ae998e18094001111005" category="paragraph">Se si dispone di un agente esistente in esecuzione su RHEL 7 o CentOS 7, NetApp non supporta l'aggiornamento o la conversione del sistema operativo a RHEL 8 o 9.  È necessario creare un nuovo agente su un sistema operativo supportato.</block>
   <block id="0f50cd1079cb24de2b4571c09546a2e1" category="list-text">Configurare un host RHEL 8 o 9.</block>
   <block id="8c9215e1b963f63a463d468347c9cc12" category="list-text">Installa un _nuovo_ agente.</block>
   <block id="b8bb8aa40b62692dd726a6effbbb7c2a" category="list-text">Configurare l'agente per scoprire i sistemi gestiti dall'agente precedente.</block>
@@ -4159,7 +4156,6 @@
   <block id="c64c773fbe16e4df6ae417c106a467ef" category="inline-link">Scopri di più sui requisiti di Docker Engine</block>
   <block id="395f31b2f1bc9cb3993acbb14cf4fb1f" category="paragraph"><block ref="724b4d6e1bb3e6bea768572a2ce7c10e" category="inline-link-rx"></block> .</block>
   <block id="15ba9bb026c53a148756b12826c46f8b" category="paragraph-title">Certificato SSL aggiornato per l'accesso all'interfaccia utente locale</block>
-  <block id="b96edd49155123375756b26e44b38121" category="paragraph">Quando si utilizza BlueXP in modalità limitata o privata, l'interfaccia utente è accessibile dalla macchina virtuale Connector distribuita nella propria area cloud o in locale.  Per impostazione predefinita, BlueXP utilizza un certificato SSL autofirmato per fornire un accesso HTTPS sicuro alla console basata sul Web in esecuzione sul connettore.</block>
   <block id="2737440e84d6c8a13a097fa583a6e67a" category="paragraph">In questa versione abbiamo apportato modifiche al certificato SSL per i connettori nuovi ed esistenti:</block>
   <block id="6cb49682fd1f125736d18f28cbce1f23" category="list-text">Il nome comune per il certificato ora corrisponde al nome host breve</block>
   <block id="982638142d38ac9441736ff5402f4e2a" category="list-text">Il nome alternativo del soggetto del certificato è il nome di dominio completo (FQDN) della macchina host</block>
@@ -4174,7 +4170,6 @@
   <block id="d0f584a070c78efb8fff64b377dbf729" category="paragraph">L'elenco aggiornato delle versioni di Podman supportate include 4.6.1 e 4.9.4 con host Red Hat Enterprise Linux.</block>
   <block id="fef89f8fc6e9d583565954d5abe02ec4" category="paragraph">Podman è richiesto per gli host RHEL a partire dalla versione 3.9.40 del Connector.</block>
   <block id="842ce6e5c3bdb8cf81ffbd4f90a57649" category="section-title">Autorizzazioni AWS e Azure aggiornate</block>
-  <block id="c1f46e9419a384f29f23682739cc8d58" category="paragraph">Abbiamo aggiornato le policy AWS e Azure per il connettore per rimuovere le autorizzazioni non più necessarie.  Le autorizzazioni erano correlate alla memorizzazione nella cache edge BlueXP e alla scoperta e gestione dei cluster Kubernetes, che non sono più supportati a partire da agosto 2024.</block>
   <block id="d201eff65f4516de2c618efea5a7edde" category="inline-link">Scopri cosa è cambiato nella policy AWS</block>
   <block id="b0c050c316c776928b8b8bc0c327449e" category="list-text"><block ref="aff0e765a5d2f4e281feabd61d1dd500" category="inline-link-rx"></block> .</block>
   <block id="2f036a4385aa02ab7c67e7932bd4036f" category="inline-link">Scopri cosa è cambiato nei criteri di Azure</block>
@@ -4182,7 +4177,6 @@
   <block id="335b63351c39337de35ede84c3852d4d" category="section-title">Patch del connettore 3.9.43</block>
   <block id="262115d0d4a65fe9bcd074ab5666018a" category="paragraph">Abbiamo aggiornato il connettore per supportare la versione Cloud Volumes ONTAP 9.15.1.</block>
   <block id="ede74fed38968a6f0c0dcebc3102b859" category="paragraph">Il supporto per questa versione include un aggiornamento dei criteri del connettore per Azure.  La policy ora include le seguenti autorizzazioni:</block>
-  <block id="c78a856f5972910d86f9b588fe9783e6" category="paragraph">Queste autorizzazioni sono necessarie per il supporto Cloud Volumes ONTAP dei set di scalabilità delle macchine virtuali.  Se disponi di connettori esistenti e desideri utilizzare questa nuova funzionalità, dovrai aggiungere queste autorizzazioni ai ruoli personalizzati associati alle tue credenziali di Azure.</block>
   <block id="1b41af4e937fd3b48c53451988ba06b5" category="inline-link">Scopri di più sulla versione Cloud Volumes ONTAP 9.15.1</block>
   <block id="dcc26903c10160517882b9dad3e9f26f" category="list-text"><block ref="dcc26903c10160517882b9dad3e9f26f" category="inline-link-rx"></block></block>
   <block id="21952e368aec0a06297b408b56d39588" category="inline-link">Visualizza le autorizzazioni di Azure per il connettore</block>
@@ -4245,20 +4239,6 @@
   <block id="4f56b8c7a0f62edc59659cfaecc68958" category="paragraph">Si noti che questa versione in modalità privata _non_ include il supporto per il connettore con Red Hat Enterprise Linux 8 e 9.</block>
   <block id="f691a3ef752f6e51a74183a6b7b1c432" category="cell">3.9.40</block>
   <block id="188fd7f75e50a8a882a75c15dcb630a1" category="cell">17 maggio 2024</block>
-  <block id="81f58b484d838909a5fedb3486f3a8e2" category="section-title">Connettore 3.9.40</block>
-  <block id="32d1e3d3ebe78d37dbdfcf9933b0cf90" category="paragraph">Questa versione di BlueXP Connector include il supporto per sistemi operativi aggiuntivi, piccoli miglioramenti della sicurezza e correzioni di bug.</block>
-  <block id="94f95548313e6f5528b5011a7d10e19f" category="paragraph">Al momento, la versione 3.9.40 è disponibile per la modalità standard e la modalità limitata.</block>
-  <block id="3eb0b1a8f5c259c6baffd4acbc27dc9b" category="paragraph">Il connettore è ora supportato sugli host che eseguono le seguenti versioni di Red Hat Enterprise Linux con _nuove_ installazioni del connettore quando si utilizza BlueXP in modalità standard o in modalità limitata:</block>
-  <block id="f335f00e1188cffe57c3d9416ce23c84" category="list-text">da 8,6 a 8,9</block>
-  <block id="16051bd228f38a4877773f8f795d59a9" category="paragraph">Il 30 giugno 2024, RHEL 7 raggiungerà la fine della manutenzione (EOM), mentre CentOS 7 raggiungerà la fine del ciclo di vita (EOL). NetApp continuerà a supportare il connettore su queste distribuzioni Linux fino al 30 giugno 2024.</block>
-  <block id="cc33fea72b72b4631424774600dd1785" category="inline-link">Scopri cosa fare se hai un connettore esistente in esecuzione su RHEL 7 o CentOS 7</block>
-  <block id="ab95c14710d4a4d5d91375c4a1b3315b" category="paragraph"><block ref="079fd36262e0750841aa2ea8902cdc7a" category="inline-link-rx"></block> .</block>
-  <block id="4cc078461f1763cdb13efec9da8a6a3f" category="paragraph-title">Aggiornamento delle autorizzazioni AWS</block>
-  <block id="2f4b86d46e79a7a3f22d1c784c12799e" category="paragraph">Nella versione 3.9.38 abbiamo aggiornato la policy del connettore per AWS per includere l'autorizzazione "ec2:DescribeAvailabilityZones". Questa autorizzazione è ora necessaria per supportare le zone locali AWS con Cloud Volumes ONTAP.</block>
-  <block id="7595af352964f2b06057ab6310fdff44" category="inline-link">Visualizza le autorizzazioni AWS per il connettore</block>
-  <block id="bad85d32b5f3e46e956809c13b502817" category="list-text"><block ref="7e42187d6259f740c2e1915df5429efc" category="inline-link-rx"></block> .</block>
-  <block id="364a4ff52cd92f16374019cdedf6b91c" category="inline-link">Scopri di più sul supporto per le zone locali AWS</block>
-  <block id="d3cdb39411bce89027162422ffb460a4" category="list-text"><block ref="d3cdb39411bce89027162422ffb460a4" category="inline-link-rx"></block></block>
   <block id="5483a2359dc6447c026002b1f7426d4e" category="sidebar">Inizia a usare NetApp Console per iniziare a creare, proteggere e gestire i dati nei tuoi ambienti on-premise e cloud.  Una volta completata la configurazione, puoi controllare l'accesso alle tue risorse tramite la gestione delle identità e degli accessi (IAM), amministrare gli agenti della console, gli account del provider cloud e altro ancora.</block>
   <block id="55744ccea4ab827ad5f363c0ec39e8bf" category="sidebar">Documentazione di configurazione e amministrazione NetApp Console</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Iniziare</block>
@@ -6273,4 +6253,17 @@
   <block id="19ba82eae8f218642333800aab8dc1c9" category="cell">Standard, privato</block>
   <block id="31c8c9293a24d211fe8df6780c3b5864" category="list-text">È possibile scegliere tra i ruoli supportati quando si assegnano ruoli a utenti o account di servizio.</block>
   <block id="b4c25e4423bb6dcb1445deb7b10e93fb" category="paragraph">Nell'elenco a discesa vengono visualizzati solo i ruoli supportati. <block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>.</block>
+  <block id="7ea105aee574037d5e6af21567c8c3dc" category="paragraph">4.0.0 o versioni successive con la Console in modalità privata</block>
+  <block id="5d818424eacea237d3f2053aafd60fbe" category="paragraph">4.0.0 o versioni successive</block>
+  <block id="b39dc14a008a29a5ead42173a9e0c598" category="doc">Rilascio modalità privata (4.7.0)</block>
+  <block id="2c0d034db2b48e2c24de792e5f537a36" category="paragraph">La versione 4.7.0 include aggiornamenti ai seguenti componenti e servizi della NetApp Console.</block>
+  <block id="d794a9cd24f47c508609ee13d758511f" category="cell">4.7.0</block>
+  <block id="59daf18c0a626a4e9dde08f3ce934dba" category="cell">Vai su <block ref="96a354291689d74da1dc3c76f5332e6f" category="inline-link-rx"></block> e fai riferimento alle modifiche incluse per le versioni 4.7.0.</block>
+  <block id="225461e659003503fb35b495b5008e09" category="cell">5.4.0 (08 giugno 2026)</block>
+  <block id="dec411cd5f201e22bcbd7d9f4569efcc" category="cell">1.54.0 (11 maggio 2026)</block>
+  <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">15 giugno 2026</block>
+  <block id="8d2fe627427775fd995055c612f4724b" category="paragraph">Quando usi BlueXP in modalità limitata o privata, l'interfaccia utente è accessibile dalla macchina virtuale Connector distribuita nella tua area cloud o on-premises. Per impostazione predefinita, BlueXP utilizza un certificato SSL autofirmato per fornire accesso HTTPS sicuro dal browser web locale.</block>
+  <block id="81ba052a80f6ca03940e96b958459737" category="paragraph">Abbiamo aggiornato le policy AWS e Azure per il Connector per rimuovere le autorizzazioni non più necessarie. Le autorizzazioni erano relative a BlueXP edge caching e al rilevamento e alla gestione dei cluster Kubernetes in Azure e AWS.</block>
+  <block id="8b8a789c0e7d6b190da84177b5130948" category="paragraph">Queste autorizzazioni sono necessarie per il supporto dei Virtual Machine Scale Sets in Cloud Volumes ONTAP. Se hai già dei Connector e vuoi usare questa nuova funzionalità, dovrai aggiungere queste autorizzazioni alle policy personalizzate associate alle credenziali di Azure.</block>
+  <block id="e68cc6c646a8fcaf6b506961e2280d76" category="paragraph">Se hai un agente esistente in esecuzione su RHEL 7 o CentOS 7, NetApp non supporta l'aggiornamento o la conversione del sistema operativo a RHEL 8 o 9. Devi creare un nuovo agente su un sistema operativo supportato. Segui questi passaggi high-level per effettuare la transizione:</block>
 </blocks>
