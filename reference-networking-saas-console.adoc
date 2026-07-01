@@ -100,4 +100,11 @@ L'agente della console deve essere in grado di accedere al seguente endpoint per
  a| 
 La console basata sul Web contatta questo endpoint per interagire con le API di Workload Factory per gestire e utilizzare i carichi di lavoro basati su FSx for ONTAP.
 
+
+
+ a| 
+\https://ws.workloads.bluexp.netapp.com
+ a| 
+Utilizzato dal backend di Workload Factory per interrogare l'agente della Console per le operazioni ONTAP.
+
 |===
