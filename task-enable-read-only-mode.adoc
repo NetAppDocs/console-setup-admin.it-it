@@ -26,6 +26,7 @@ Super amministratore o amministratore dell'organizzazione.
 
 
 
+[[enable-read-only-mode-for-your-console-organization]]
 == Abilita la modalità di sola lettura per l'organizzazione della tua console
 
 Abilita la modalità di sola lettura per limitare le modifiche all'organizzazione della tua Console. Tutti gli utenti possono comunque visualizzare le risorse. Gli utenti con ruoli di amministratore non possono eseguire alcuna azione nella Console senza elevare manualmente le proprie autorizzazioni.

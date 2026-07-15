@@ -18,6 +18,7 @@ Disinstallare un agente della Console per risolvere i problemi o per rimuoverlo 
 
 
 
+[[uninstall-the-agent-when-it-has-outbound-connectivity]]
 == Disinstallare l'agente quando ha connettività outbound
 
 Se si utilizza la modalità standard o la modalità limitata (in altre parole, l'host dell'agente ha connettività in uscita), è necessario seguire i passaggi indicati di seguito per disinstallare l'agente.
@@ -35,6 +36,7 @@ _silent_ esegue lo script senza chiedere conferma.
 
 
 
+[[uninstall-the-agent-when-it-has-no-outbound-connectivity]]
 == Disinstallare l'agente quando non ha connettività outbound
 
 Se il tuo agente non dispone di connettività outbound (ad esempio, in modalità privata), devi rimuovere manualmente il software dell'agente dall'host.
@@ -71,6 +73,7 @@ docker system prune -a
 
 
 
+[[remove-console-agents-from-the-console]]
 == Rimuovere gli agenti della console dalla console
 
 Se hai eliminato una VM dell'agente o hai disinstallato l'agente, dovresti rimuoverlo dall'elenco degli agenti nella Console. Dopo aver eliminato una VM dell'agente o aver disinstallato il software dell'agente, l'agente mostra lo stato *Disconnesso* nella Console.

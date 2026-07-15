@@ -22,6 +22,7 @@ Una _risorsa_ è un'entità di cui la Console è a conoscenza, ad esempio una ri
 
 
 
+[[console-resource-types]]
 == Tipi di risorse della console
 
 È possibile associare diversi tipi di risorse ai progetti nell'organizzazione NetApp Console :
@@ -40,6 +41,7 @@ Carichi di lavoro di backup e ripristino:: Anche i carichi di lavoro di Backup a
 
 
 
+[[view-the-resources-in-your-organization]]
 == Visualizza le risorse nella tua organizzazione
 
 Puoi visualizzare sia le risorse scoperte che quelle non scoperte associate alla tua organizzazione. Il sistema trova le risorse di archiviazione e le contrassegna come non rilevate finché non le aggiungi alla Console.
@@ -64,6 +66,8 @@ NOTE: La console esclude le risorse Amazon FSx for NetApp ONTAP dalla pagina Ris
 
 
 
+[[associate-a-resource-with-folders-and-projects]]
+[[associate-resource]]
 == Associare una risorsa a cartelle e progetti
 
 Associa una risorsa a una cartella o a un progetto per renderla disponibile ai membri che dispongono delle autorizzazioni per quella cartella o quel progetto.
@@ -90,6 +94,8 @@ link:task-iam-associate-agents.html["Scopri come associare un agente Console a u
 
 
 
+[[view-the-folders-and-projects-associated-with-a-resource]]
+[[view-folders-and-projects]]
 == Visualizza le cartelle e i progetti associati a una risorsa
 
 È possibile visualizzare le cartelle e i progetti associati a una determinata risorsa.
@@ -110,6 +116,8 @@ NOTE: Per vedere quali membri dell'organizzazione hanno accesso alla risorsa,lin
 
 
 
+[[remove-a-resource-from-a-folder-or-project]]
+[[remove-resource]]
 == Rimuovere una risorsa da una cartella o da un progetto
 
 Per rimuovere una risorsa da una cartella o da un progetto, rimuovere la sua associazione. Ciò impedisce ai membri di gestire la risorsa in quella cartella o progetto.
@@ -125,6 +133,7 @@ NOTE: Per rimuovere una risorsa rilevata dall'intera organizzazione, vai alla pa
 
 
 
+[[related-information]]
 == Informazioni correlate
 
 * link:concept-identity-and-access-management.html["Scopri di più su identità e accesso nella NetApp Console"]

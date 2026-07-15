@@ -20,12 +20,14 @@ La Console crea automaticamente un progetto quando si crea una nuova organizzazi
 
 
 
+[[using-folders-and-projects-to-organize-resources]]
 == Utilizzo di cartelle e progetti per organizzare le risorse
 
 Nella NetApp Console, un'organizzazione contiene cartelle e progetti che ti aiutano a organizzare le tue risorse. Le cartelle ti aiutano a raggruppare progetti correlati e i progetti ti aiutano a gestire le risorse e l'accesso dei membri.
 
 
 
+[[folders]]
 === Cartelle
 
 Le cartelle ti aiutano a organizzare i progetti correlati. È possibile creare cartelle nidificate per rappresentare diversi livelli della struttura della propria organizzazione. Ad esempio, potresti creare una cartella di primo livello per ogni unità aziendale e quindi creare sottocartelle per i diversi team all'interno di tale unità aziendale. Quindi si creano progetti all'interno delle cartelle.
@@ -64,6 +66,7 @@ I membri che dispongono delle autorizzazioni per il progetto A possono ora acced
 ====
 
 
+[[projects]]
 === Progetti
 
 Associare le risorse ai progetti per consentire ai membri di gestirli. Per la gestione e l'accesso degli utenti, le risorse devono essere associate a un progetto.
@@ -74,6 +77,7 @@ Gli utenti possono navigare tra i progetti assegnati nella pagina *Sistemi* per 
 
 
 
+[[add-a-folder-or-project]]
 == Aggiungi una cartella o un progetto
 
 Aggiungi progetti per gestire risorse e cartelle per raggruppare progetti correlati. Quando si crea una nuova organizzazione, la Console include un progetto.
@@ -107,6 +111,7 @@ link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] 
 
 
 
+[[rename-a-folder-or-project]]
 == Rinomina una cartella o un progetto
 
 Rinominare una cartella o un progetto in base alle proprie esigenze. La ridenominazione non influisce sulle risorse associate o sull'accesso dei membri.
@@ -118,6 +123,7 @@ Rinominare una cartella o un progetto in base alle proprie esigenze. La ridenomi
 
 
 
+[[delete-a-folder-or-project]]
 == Elimina una cartella o un progetto
 
 Elimina le cartelle e i progetti di cui non hai più bisogno, ad esempio dopo la ristrutturazione del team o il completamento del progetto.
@@ -131,6 +137,8 @@ Prima di eliminare una cartella o un progetto, assicurati che non contenga risor
 
 
 
+[[view-the-resources-associated-with-a-folder-or-project]]
+[[view-associated-resources-members]]
 == Visualizza le risorse associate a una cartella o a un progetto
 
 Visualizza quali risorse e membri sono associati a una cartella o a un progetto.
@@ -152,6 +160,8 @@ image:screenshot-iam-allocated-resources.png["Uno screenshot della pagina Modifi
 
 
 
+[[change-the-resources-associated-with-a-folder-or-project]]
+[[modify-resources]]
 == Modificare le risorse associate a una cartella o a un progetto
 
 È possibile modificare le risorse associate a una cartella o a un progetto in base alle esigenze della propria organizzazione.
@@ -172,6 +182,7 @@ image:screenshot-iam-associate-resources.png["Uno screenshot della pagina Modifi
 
 
 
+[[view-members-associated-with-a-folder-or-project]]
 == Visualizza i membri associati a una cartella o a un progetto
 
 È possibile visualizzare i membri associati a una cartella o a un progetto dalla pagina *Organizzazione*.
@@ -190,6 +201,8 @@ image:screenshot-iam-member-access.png["Uno screenshot della pagina Modifica pro
 
 
 
+[[modify-member-access-to-a-folder-or-project]]
+[[modify-members]]
 == Modificare l'accesso dei membri a una cartella o a un progetto
 
 Modificare l'accesso dei membri per controllare l'accesso alle risorse. Ricorda che i ruoli assegnati a livello di cartella vengono ereditati da tutti i progetti e le cartelle figlio.
@@ -211,6 +224,7 @@ Non è possibile modificare l'accesso dei membri ai livelli inferiori se è ered
 
 
 
+[[related-information]]
 == Informazioni correlate
 
 * link:concept-identity-and-access-management.html["Scopri di più su identità e accesso nella NetApp Console"]

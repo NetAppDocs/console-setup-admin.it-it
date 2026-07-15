@@ -23,6 +23,7 @@ Un'organizzazione partner deve prima aggiungere membri alla partnership prima ch
 
 
 
+[[understand-roles-for-partnership-users]]
 == Comprendere i ruoli degli utenti della partnership
 
 Puoi gestire i ruoli dei membri delle organizzazioni partner nello stesso modo in cui gestisci i tuoi.  Tuttavia, non tutti i ruoli sono disponibili per gli utenti in partnership.  In particolare, non è possibile concedere agli utenti partner un ruolo che consenta gli aggiornamenti software.  L'aggiornamento del software ONTAP richiede in genere l'accesso diretto alla rete.
@@ -51,6 +52,7 @@ link:reference-iam-predefined-roles.html["Scopri di più sui ruoli predefiniti"]
 
 
 
+[[add-a-role-to-a-partner-user]]
 == Aggiungere un ruolo a un utente partner
 
 Puoi fornire l'accesso alle risorse della tua organizzazione aggiungendo un ruolo a un membro.  Quando si assegna un ruolo, si specifica una risorsa e un ruolo.  È possibile assegnare più di un ruolo a un utente.
@@ -82,6 +84,7 @@ Se selezioni l'organizzazione o una cartella, il membro avrà autorizzazioni per
 
 
 
+[[change-or-remove-a-role-from-a-partner-user]]
 == Modificare o rimuovere un ruolo da un utente partner
 
 Puoi modificare o rimuovere un ruolo assegnato a un membro di un'organizzazione partner.

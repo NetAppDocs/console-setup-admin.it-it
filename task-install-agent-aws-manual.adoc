@@ -25,6 +25,7 @@ L'installazione di un agente in AWS avvia un'istanza EC2 con Linux e il software
 
 
 
+[[step-1-review-host-requirements]]
 == Passaggio 1: rivedere i requisiti dell'host
 
 Assicurarsi che l'host che esegue il software dell'agente Console soddisfi i requisiti relativi al sistema operativo, alla RAM e alle porte.
@@ -162,6 +163,8 @@ Limite di hop di risposta PUT quando si utilizza IMDSv2:: Se IMDSv2 è abilitato
 
 
 
+[[step-2-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == Passaggio 2: installare Podman o Docker Engine
 
 A seconda del sistema operativo in uso, prima di installare l'agente è necessario utilizzare Podman o Docker Engine.
@@ -347,6 +350,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-3-set-up-networking]]
 == Passaggio 3: configurazione della rete
 
 Assicurati che il percorso di rete supporti i seguenti requisiti affinché l'agente della console possa gestire le risorse nel tuo cloud ibrido.
@@ -469,6 +473,8 @@ Abilita NTP:: Se si intende utilizzare NetApp Data Classification per analizzare
 
 
 
+[[step-4-set-up-aws-permissions-for-the-console]]
+[[console-permissions-aws]]
 == Passaggio 4: impostare le autorizzazioni AWS per la console
 
 Fornire le autorizzazioni AWS alla NetApp Console utilizzando una di queste opzioni:
@@ -542,6 +548,7 @@ Ora hai un utente IAM che ha le autorizzazioni richieste e una chiave di accesso
 ====
 
 
+[[step-5-install-the-console-agent]]
 == Passaggio 5: installare l'agente della console
 
 Dopo aver completato i prerequisiti, installa manualmente il software sul tuo host Linux.
@@ -702,6 +709,7 @@ Se disponi di bucket Amazon S3 nello stesso account AWS in cui hai creato l'agen
 
 
 
+[[step-6-provide-permissions-to-netapp-console]]
 == Passaggio 6: fornire le autorizzazioni alla NetApp Console
 
 Dopo aver installato l'agente Console, fornisci le autorizzazioni AWS configurate in modo che l'agente Console possa gestire i tuoi dati e l'infrastruttura di storage in AWS.

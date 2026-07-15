@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-4-1]]
 === Console agent 4.4.1
 
 La versione 4.4.1 supporta sia la modalità standard che la modalità limitata.
@@ -12,12 +13,14 @@ Questa versione dell'agente Console include miglioramenti della sicurezza e corr
 
 
 
+[[netapp-console-administration]]
 === Amministrazione NetApp Console
 
 Questa versione include quanto segue:
 
 
 
+[[netapp-console-administration]]
 === Amministrazione NetApp Console
 
 Questa versione include quanto segue:

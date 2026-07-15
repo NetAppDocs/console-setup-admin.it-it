@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-6-0]]
 === Console agent 4.6.0
 
 La versione 4.6.0 supporta sia la modalità standard che la modalità limitata.

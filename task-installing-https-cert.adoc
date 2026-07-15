@@ -20,6 +20,7 @@ Se richiesto dalla tua azienda, puoi installare un certificato firmato da un'aut
 
 
 
+[[install-an-https-certificate]]
 == Installa un certificato HTTPS
 
 Installare un certificato firmato da una CA per l'accesso sicuro alla console basata sul Web in esecuzione sull'agente Console.
@@ -82,6 +83,7 @@ image:screenshot_https_cert.gif["Screenshot: mostra la pagina di configurazione 
 
 
 
+[[renew-the-console-https-certificate]]
 == Rinnova il certificato HTTPS della console
 
 Per garantire un accesso sicuro, è necessario rinnovare il certificato HTTPS dell'agente prima della scadenza.  Se non si rinnova il certificato prima della scadenza, verrà visualizzato un avviso quando gli utenti accedono alla console Web tramite HTTPS.

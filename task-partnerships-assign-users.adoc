@@ -23,6 +23,7 @@ Il ruolo di *Amministratore partnership* è necessario per creare e gestire le p
 
 
 
+[[add-members-to-a-partnership]]
 == Aggiungere membri a una partnership
 
 Quando si aggiungono membri a una partnership, il *Partnership admin* dell'organizzazione partner deve assegnare loro ruoli per particolari risorse nella loro organizzazione prima che possano accedere a tali risorse.
@@ -39,6 +40,7 @@ Dopo aver aggiunto membri a una partnership, i membri vengono visualizzati come 
 
 
 
+[[remove-members-from-a-partnership]]
 == Rimuovere i membri da una partnership
 
 È possibile rimuovere i membri da una partnership in qualsiasi momento. La rimozione di un utente da una partnership revoca immediatamente il suo accesso a qualsiasi risorsa dell'organizzazione partner.
@@ -55,6 +57,7 @@ Se si desidera modificare il ruolo di un membro o le risorse a cui può accedere
 
 
 
+[[view-role-information-for-a-user]]
 == Visualizza le informazioni sul ruolo di un utente
 
 È possibile visualizzare il ruolo assegnato a un utente e le risorse associate.

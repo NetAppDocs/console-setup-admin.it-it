@@ -21,6 +21,7 @@ Super amministratore, amministratore dell'organizzazione o amministratore di car
 
 
 
+[[reset-user-passwords-local-users-only]]
 == Reimposta le password utente (solo utenti locali)
 
 Gli amministratori dell'organizzazione non possono reimpostare le password degli utenti locali. Possono tuttavia chiedere agli utenti di reimpostare autonomamente le proprie password.
@@ -32,6 +33,8 @@ NOTE: Questa opzione non è disponibile per gli utenti di un'organizzazione fede
 
 
 
+[[manage-a-users-multi-factor-authentication-mfa]]
+[[manage-mfa]]
 == Gestire l'autenticazione a più fattori (MFA) di un utente
 
 Se un utente perde l'accesso al proprio dispositivo MFA, è possibile rimuovere o disabilitare la configurazione MFA.
@@ -58,6 +61,7 @@ Nella tabella *Membri* sono elencati i membri della tua organizzazione.
 
 
 
+[[recreate-the-credentials-for-a-service-account]]
 == Ricreare le credenziali per un account di servizio
 
 È possibile creare nuove credenziali per un account di servizio in caso di smarrimento o necessità di aggiornamento delle stesse.

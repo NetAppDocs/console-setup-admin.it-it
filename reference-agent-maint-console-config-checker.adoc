@@ -18,6 +18,7 @@ summary: 'È possibile utilizzare la console di manutenzione dell"agente Console
 
 
 
+[[access-the-agent-maintenance-console]]
 == Accedi alla console di manutenzione dell'agente
 
 È possibile accedere alla console di manutenzione dall'host dell'agente della console. Accedere alla seguente directory:
@@ -28,6 +29,7 @@ summary: 'È possibile utilizzare la console di manutenzione dell"agente Console
 ----
 
 
+[[config-checker-validate]]
 == verifica della configurazione convalida
 
 IL `config-checker validate` Il comando consente di convalidare la configurazione di un agente Console.
@@ -36,6 +38,7 @@ link:reference-networking-saas-console.html["Scopri di più sui punti di accesso
 
 
 
+[[parameters]]
 === Parametri
 
 `--services <comma-separated list of services to validate>`--*NECESSARIO*--
@@ -68,6 +71,7 @@ Specifica il percorso di uno o più file di certificato da utilizzare per la con
 
 
 
+[[config-checker-validate-examples]]
 === Esempi di convalida del controllo di configurazione
 
 Gli esempi seguenti includono la convalida della connettività di rete, delle porte richieste e dei requisiti hardware, insieme a diverse combinazioni di utilizzo di un proxy server e certificati personalizzati.
@@ -89,6 +93,7 @@ Gli esempi seguenti includono la convalida della connettività di rete, delle po
 ----
 
 
+[[view-help-for-any-command]]
 === Visualizza la guida per qualsiasi comando
 
 Per visualizzare la guida per qualsiasi comando, aggiungi `--help` al comando.  Ad esempio, per visualizzare la guida per `proxy add` comando, utilizzare il seguente comando:

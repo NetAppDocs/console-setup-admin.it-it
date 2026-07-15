@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-50]]
 === Connettore 3.9.50
 
 Questa versione di BlueXP Connector include piccoli miglioramenti della sicurezza e correzioni di bug.
@@ -18,6 +19,7 @@ Al momento, la versione 3.9.50 è disponibile per la modalità standard e la mod
 
 
 
+[[netapp-keystone-beta-available-in-bluexp]]
 === NetApp Keystone beta disponibile in BlueXP
 
 NetApp Keystone sarà presto disponibile da BlueXP ed è ora in versione beta.  È possibile accedere alla pagina di registrazione per la versione beta NetApp Keystone dalla barra di navigazione a sinistra di BlueXP.

@@ -26,6 +26,7 @@ Ad esempio, è possibile assegnare a un membro il ruolo di amministratore di Ran
 
 
 
+[[types-of-console-organization-members]]
 == Tipi di membri dell'organizzazione della console
 
 Esistono tre tipi di membri in un'organizzazione NetApp Console:
@@ -39,6 +40,7 @@ link:task-iam-manage-members-permissions.html#add-members["Scopri come aggiunger
 
 
 
+[[predefined-roles-in-netapp-console]]
 == Ruoli predefiniti nella NetApp Console
 
 NetApp Console include ruoli predefiniti che è possibile assegnare ai membri dell'organizzazione. Ogni ruolo include autorizzazioni che specificano quali azioni un membro può eseguire nell'ambito assegnatogli (organizzazione, cartella o progetto).

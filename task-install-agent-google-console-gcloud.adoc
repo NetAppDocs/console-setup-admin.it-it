@@ -25,6 +25,8 @@ L'installazione di un agente in Google Cloud avvia un'istanza di macchina virtua
 
 
 
+[[step-1-set-up-networking]]
+[[networking-gcp-agent]]
 == Passaggio 1: configurare la rete
 
 Configurare la rete per garantire che l'agente della console possa gestire le risorse, con connessioni alle reti di destinazione e accesso a Internet in uscita.
@@ -135,6 +137,8 @@ Implementare questo requisito di rete dopo aver creato l'agente Console.
 
 
 
+[[step-2-set-up-permissions-to-create-the-console-agent]]
+[[agent-permissions-google]]
 == Passaggio 2: impostare le autorizzazioni per creare l'agente della console
 
 Prima di poter distribuire un agente Console dalla Console, è necessario impostare le autorizzazioni per l'utente di Google Platform che distribuisce la VM dell'agente Console.
@@ -255,6 +259,8 @@ https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single
 
 
 
+[[step-3-create-a-google-cloud-service-account-to-use-with-the-agent]]
+[[console-permissions-google]]
 == Passaggio 3: creare un account di servizio Google Cloud da utilizzare con l'agente
 
 È necessario un account di servizio Google Cloud per fornire all'agente della Console le autorizzazioni di cui la Console ha bisogno per gestire le risorse in Google Cloud.  Quando si crea l'agente Console, è necessario associare questo account di servizio alla VM dell'agente Console.
@@ -314,6 +320,7 @@ Per maggiori dettagli, fare riferimento a https://cloud.google.com/iam/docs/gran
 
 
 
+[[step-4-set-up-shared-vpc-permissions]]
 == Passaggio 4: impostare le autorizzazioni VPC condivise
 
 Se si utilizza una VPC condivisa per distribuire risorse in un progetto di servizio, sarà necessario preparare le autorizzazioni.
@@ -366,6 +373,7 @@ Note:
 ====
 
 
+[[step-5-enable-google-cloud-apis]]
 == Passaggio 5: abilita le API di Google Cloud
 
 È necessario abilitare diverse API di Google Cloud prima di distribuire l'agente Console e Cloud Volumes ONTAP.
@@ -390,6 +398,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Documentazione
 
 
 
+[[step-6-create-the-console-agent]]
 == Passaggio 6: creare l'agente della console
 
 Crea un agente Console direttamente dalla Console.

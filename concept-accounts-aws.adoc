@@ -18,6 +18,7 @@ Puoi gestire le credenziali AWS e gli abbonamenti al marketplace direttamente da
 
 
 
+[[initial-aws-credentials]]
 == Credenziali AWS iniziali
 
 Quando si distribuisce un agente Console dalla Console, è necessario fornire l'ARN di un ruolo IAM o le chiavi di accesso per un utente IAM. Il metodo di autenticazione deve disporre delle autorizzazioni per distribuire l'agente Console in AWS. Le autorizzazioni richieste sono elencate in link:task-install-agent-aws-console.html#aws-permissions-agent["Criteri di distribuzione degli agenti per AWS"].
@@ -34,6 +35,7 @@ image:screenshot_accounts_select_aws.gif["Uno screenshot che mostra l'opzione Ca
 
 
 
+[[additional-aws-credentials]]
 == Credenziali AWS aggiuntive
 
 È possibile aggiungere ulteriori credenziali AWS alla Console nei seguenti casi:
@@ -47,6 +49,7 @@ Per maggiori dettagli, consultare le sezioni seguenti.
 
 
 
+[[add-aws-credentials-to-use-a-console-agent-with-another-aws-account]]
 === Aggiungi le credenziali AWS per utilizzare un agente della console con un altro account AWS
 
 Per utilizzare la Console con account AWS aggiuntivi, fornire le chiavi AWS o l'ARN di un ruolo in un account attendibile. L'immagine seguente mostra due account aggiuntivi, uno che fornisce autorizzazioni tramite un ruolo IAM in un account attendibile e l'altro tramite le chiavi AWS di un utente IAM:
@@ -63,6 +66,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["Scopri come aggiun
 
 
 
+[[add-aws-credentials-to-create-a-console-agent]]
 === Aggiungi le credenziali AWS per creare un agente della console
 
 L'aggiunta delle credenziali AWS fornisce le autorizzazioni per creare un agente della console.
@@ -71,6 +75,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["Scopri come aggiun
 
 
 
+[[add-aws-credentials-for-fsx-for-ontap]]
 === Aggiungi le credenziali AWS per FSx per ONTAP
 
 Aggiungere le credenziali AWS alla Console per fornire le autorizzazioni necessarie per creare e gestire un sistema FSx for ONTAP .
@@ -79,6 +84,7 @@ https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-set
 
 
 
+[[credentials-and-marketplace-subscriptions]]
 == Credenziali e abbonamenti al marketplace
 
 È necessario associare le credenziali aggiunte a un agente della console a un abbonamento AWS Marketplace per pagare Cloud Volumes ONTAP a una tariffa oraria (PAYGO) e altri servizi dati NetApp o tramite un contratto annuale. link:task-adding-aws-accounts.html#subscribe["Scopri come associare un abbonamento AWS"].
@@ -91,12 +97,14 @@ Tieni presente quanto segue in merito alle credenziali AWS e agli abbonamenti al
 
 
 
+[[faq]]
 == Domande frequenti
 
 Le seguenti domande riguardano credenziali e abbonamenti.
 
 
 
+[[how-can-i-securely-rotate-my-aws-credentials]]
 === Come posso ruotare in modo sicuro le mie credenziali AWS?
 
 Come descritto nelle sezioni precedenti, la Console consente di fornire credenziali AWS in diversi modi: un ruolo IAM associato all'agente della Console, assumendo un ruolo IAM in un account attendibile o fornendo chiavi di accesso AWS.
@@ -107,6 +115,7 @@ Se fornisci alla Console le chiavi di accesso AWS, dovresti ruotare le chiavi ag
 
 
 
+[[can-i-change-the-aws-marketplace-subscription-for-cloud-volumes-ontap-systems]]
 === Posso modificare l'abbonamento AWS Marketplace per i sistemi Cloud Volumes ONTAP ?
 
 Sì, puoi.  Quando modifichi l'abbonamento ad AWS Marketplace associato a un set di credenziali, tutti i sistemi Cloud Volumes ONTAP esistenti e nuovi vengono addebitati sul nuovo abbonamento.
@@ -115,6 +124,7 @@ link:task-adding-aws-accounts.html#subscribe["Scopri come associare un abbonamen
 
 
 
+[[can-i-add-multiple-aws-credentials-each-with-different-marketplace-subscriptions]]
 === Posso aggiungere più credenziali AWS, ciascuna con diversi abbonamenti al marketplace?
 
 Tutte le credenziali AWS appartenenti allo stesso account AWS saranno associate allo stesso abbonamento AWS Marketplace.
@@ -123,12 +133,14 @@ Se disponi di più credenziali AWS appartenenti a diversi account AWS, tali cred
 
 
 
+[[can-i-move-existing-cloud-volumes-ontap-systems-to-a-different-aws-account]]
 === Posso spostare i sistemi Cloud Volumes ONTAP esistenti su un account AWS diverso?
 
 No, non è possibile spostare le risorse AWS associate al sistema Cloud Volumes ONTAP su un account AWS diverso.
 
 
 
+[[how-do-credentials-work-for-marketplace-deployments-and-on-premises-deployments]]
 === Come funzionano le credenziali per le distribuzioni sul marketplace e le distribuzioni on-premise?
 
 Le sezioni precedenti descrivono il metodo di distribuzione consigliato per l'agente Console, ovvero dalla Console. È anche possibile distribuire un agente in AWS dall'AWS Marketplace e installare manualmente il software dell'agente Console sul proprio host Linux o nel proprio vCenter.

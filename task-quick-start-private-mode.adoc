@@ -32,12 +32,14 @@ summary: La modalità privata viene in genere utilizzata negli ambienti locali p
 
 
 
+[[supported-features-and-services-for-netapp-console-in-private-mode]]
 == Funzionalità e servizi supportati per NetApp Console in modalità privata
 
 La tabella seguente elenca le funzionalità di gestione dello storage, i servizi dati e le funzionalità amministrative disponibili in NetApp Console quando la si installa in modalità privata. Le funzionalità variano a seconda che la NetApp Console venga installata nel cloud o presso la propria sede.
 
 
 
+[[private-mode-installed-in-the-cloud]]
 === Modalità privata installata nel cloud
 
 [cols="3*"]
@@ -112,6 +114,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 |===
 
 
+[[private-mode-installed-on-premises]]
 === Modalità privata installata on-premises
 
 [cols="3*"]

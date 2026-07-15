@@ -21,6 +21,7 @@ Super amministratore, amministratore dell'organizzazione o amministratore di car
 
 
 
+[[understand-how-access-is-granted-in-netapp-console]]
 == Scopri come viene concesso l'accesso nella NetApp Console
 
 La NetApp Console utilizza il controllo degli accessi in base al ruolo (RBAC) per gestire le autorizzazioni. Assegna ruoli agli utenti singolarmente o tramite gruppi federati. Ogni ruolo definisce le azioni consentite per risorse specifiche.
@@ -35,6 +36,8 @@ Tenere presente quanto segue in merito alla concessione dell'accesso nella NetAp
 
 
 
+[[add-members-to-your-organization]]
+[[add-members]]
 == Aggiungi membri alla tua organizzazione
 
 NetApp Console supporta tre tipi di membri: account utente, account di servizio e gruppi federati.
@@ -47,6 +50,7 @@ Quando aggiungi un membro, scegli il livello della risorsa (organizzazione, cart
 
 
 
+[[add-a-user]]
 === Aggiungi un utente
 
 Gli utenti si iscrivono alla NetApp Console, ma un amministratore dell'organizzazione o un amministratore di cartella o di progetto deve aggiungerli a un'organizzazione, una cartella o un progetto affinché possano accedere alle risorse.
@@ -86,6 +90,8 @@ La Console invia le istruzioni all'utente tramite e-mail.
 
 
 
+[[add-a-service-account]]
+[[service-account]]
 === Aggiungi un account di servizio
 
 Gli account di servizio consentono di automatizzare le attività e di connettersi in modo sicuro alle API della console. Scegli un ID client e un segreto per configurazioni semplici oppure JWT (JSON Web Token) per una maggiore sicurezza in ambienti automatizzati o cloud-native. Seleziona il metodo che soddisfa i tuoi requisiti di sicurezza.
@@ -132,6 +138,7 @@ La console mostra il segreto del client solo una volta. Copialo in modo sicuro: 
 
 
 
+[[add-a-federated-group-to-your-organization]]
 == Aggiungi un gruppo federato alla tua organizzazione
 
 Puoi aggiungere un gruppo federato dal tuo provider di identità (IdP) alla tua organizzazione e assegnargli uno o più ruoli. I membri del gruppo federato ereditano i ruoli assegnati al gruppo nella Console.
@@ -171,6 +178,7 @@ Nell'elenco a discesa vengono visualizzati solo i ruoli supportati. link:referen
 
 
 
+[[related-information]]
 == Informazioni correlate
 
 * link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e degli accessi nella NetApp Console"]

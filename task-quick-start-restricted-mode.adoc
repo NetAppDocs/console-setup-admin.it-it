@@ -51,6 +51,7 @@ NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp 
 ====
 
 
+[[supported-features-and-services-for-netapp-console-in-restricted-mode]]
 == Funzionalità e servizi supportati per NetApp Console in modalità limitata
 
 Nella tabella seguente sono elencate le funzionalità di gestione dell'archiviazione, i servizi dati e le funzionalità amministrative disponibili in NetApp Console quando la si installa in modalità limitata.

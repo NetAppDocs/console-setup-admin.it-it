@@ -21,6 +21,7 @@ TIP: Potresti appartenere a più organizzazioni se un'altra organizzazione ti in
 
 
 
+[[switch-between-organizations]]
 == Passare da un'organizzazione all'altra
 
 Se sei membro di più organizzazioni, puoi passare da una all'altra in qualsiasi momento.
@@ -39,6 +40,7 @@ La scheda *Partnership* non viene visualizzata se non hai organizzazioni partner
 
 
 
+[[switch-between-projects]]
 == Passa da un progetto all'altro
 
 Se la tua organizzazione comprende più progetti e hai accesso a tali progetti, puoi passare da uno all'altro in qualsiasi momento.
@@ -56,6 +58,7 @@ image:screenshot-iam-switch-projects-select.png["Uno screenshot del menu Ambito 
 
 
 
+[[switch-between-console-agents]]
 == Passare da un agente della console all'altro
 
 Se si dispone di più agenti Console, è possibile passare da uno all'altro per visualizzare i sistemi associati a un agente specifico.
@@ -70,6 +73,7 @@ link:task-iam-associate-agents.html["Associare agenti a cartelle e progetti"] .
 
 
 
+[[related-information]]
 == Informazioni correlate
 
 * link:concept-identity-and-access-management.html["Scopri di più su identità e accesso nella NetApp Console"]

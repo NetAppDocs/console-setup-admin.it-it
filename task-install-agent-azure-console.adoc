@@ -28,6 +28,8 @@ NOTE: Distribuisci un agente Console nella stessa area di Azure dei sistemi Clou
 
 
 
+[[step-1-set-up-networking]]
+[[networking-azure-agent]]
 == Passaggio 1: configurare la rete
 
 Assicurarsi che il percorso di rete in cui si prevede di installare l'agente Console supporti i seguenti requisiti.  Questi requisiti consentono all'agente Console di gestire le risorse cloud ibride.
@@ -153,6 +155,8 @@ Dopo aver creato l'agente Console, è necessario implementare questo requisito d
 
 
 
+[[step-2-create-a-console-agent-deployment-policy-custom-role]]
+[[agent-custom-role]]
 == Passaggio 2: creare un criterio di distribuzione dell'agente della console (ruolo personalizzato)
 
 È necessario creare un ruolo personalizzato che disponga delle autorizzazioni per distribuire l'agente Console in Azure.
@@ -275,6 +279,7 @@ Ora hai un ruolo personalizzato denominato _Azure SetupAsService_.  Puoi applica
 
 
 
+[[step-3-set-up-authentication]]
 == Passaggio 3: imposta l'autenticazione
 
 Quando si crea l'agente della console dalla console, è necessario fornire un accesso che consenta alla console di autenticarsi con Azure e distribuire la macchina virtuale.  Hai due opzioni:
@@ -415,6 +420,7 @@ Il tuo service principal è ora configurato e dovresti aver copiato l'ID dell'ap
 ====
 
 
+[[step-4-create-the-console-agent]]
 == Passaggio 4: creare l'agente della console
 
 Creare l'agente Console direttamente dalla NetApp Console.

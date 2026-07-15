@@ -25,6 +25,8 @@ L'installazione di un agente in AWS avvia un'istanza EC2 con Linux e il software
 
 
 
+[[step-1-set-up-networking-for-deploying-a-console-agent-in-aws]]
+[[networking-aws-agent]]
 == Passaggio 1: configurare la rete per la distribuzione di un agente della console in AWS
 
 Assicurarsi che il percorso di rete in cui si prevede di installare l'agente Console supporti i seguenti requisiti.  Questi requisiti consentono all'agente della console di gestire risorse e processi nel cloud ibrido.
@@ -153,6 +155,8 @@ Sarà necessario implementare questo requisito di rete dopo aver creato l'agente
 
 
 
+[[step-2-set-up-aws-permissions-for-the-console-agent]]
+[[aws-permissions-agent]]
 == Passaggio 2: impostare le autorizzazioni AWS per l'agente della console
 
 La console deve autenticarsi con AWS prima di poter distribuire l'agente della console nella VPC. Puoi scegliere uno di questi metodi di autenticazione:
@@ -282,6 +286,7 @@ Ora dovresti avere un ruolo IAM con le autorizzazioni richieste o un utente IAM 
 
 
 
+[[step-3-create-the-console-agent]]
 == Passaggio 3: creare l'agente della console
 
 Crea l'agente della Console direttamente dalla Console basata sul web.

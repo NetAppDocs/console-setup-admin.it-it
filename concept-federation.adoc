@@ -24,6 +24,7 @@ Amministratore dell'organizzazione, amministratore della federazione, visualizza
 
 
 
+[[single-sign-on-with-netapp-support-site]]
 == Single sign-on con il NetApp Support Site
 
 La federazione con il sito di supporto NetApp consente agli utenti di accedere alla console, Active IQ Digital Advisor e ad altre app associate utilizzando le stesse credenziali.
@@ -41,6 +42,7 @@ Il team di supporto NetApp esamina ed elabora la tua richiesta.
 
 
 
+[[single-sign-on-with-your-identity-provider]]
 == Single sign-on con il tuo identity provider
 
 È possibile impostare una connessione federata con il proprio provider di identità per abilitare l'accesso Single Sign-On (SSO) per la Console.  Il processo prevede la configurazione del provider di identità in modo che consideri NetApp affidabile come fornitore di servizi e la successiva creazione della connessione nella Console.
@@ -50,6 +52,7 @@ NOTE: Se in precedenza hai configurato la federazione utilizzando NetApp Cloud C
 
 
 
+[[supported-identity-providers]]
 === Provider di identità supportati
 
 NetApp supporta i seguenti protocolli e provider di identità per la federazione:
@@ -66,6 +69,7 @@ NetApp supporta i seguenti protocolli e provider di identità per la federazione
 
 
 
+[[federation-with-netapp-console-workflow]]
 === Federazione con flusso di lavoro NetApp Console
 
 NetApp supporta solo SSO avviato dal provider di servizi (SP).  Per prima cosa è necessario configurare il provider di identità in modo che consideri attendibile NetApp come fornitore di servizi.  Quindi, è possibile creare una connessione nella Console che utilizzi la configurazione del provider di identità.

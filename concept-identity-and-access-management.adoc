@@ -29,12 +29,14 @@ image:diagram-iam-resource-hierarchy.png["Un diagramma concettuale che mostra i 
 
 
 
+[[identity-and-access-management-components]]
 == Componenti di gestione dell'identità e dell'accesso
 
 La NetApp Console IAM si basa su tre tipi di componenti: componenti organizzativi che definiscono la gerarchia, risorse assegnate all'interno di tale gerarchia e membri e ruoli che controllano chi può accedere a cosa.
 
 
 
+[[netapp-console-organizational-components]]
 === NetApp Console componenti organizzativi
 
 Le componenti organizzative—organizzazione, cartelle e progetti—formano una gerarchia che determina come vengono raggruppate le risorse e come viene delegato l'accesso.
@@ -56,6 +58,7 @@ NOTE: Gli utenti con il ruolo di amministratore dell'organizzazione possono aggi
 
 
 
+[[resources]]
 === Risorse
 
 Una _risorsa_ è un'entità di cui la Console è a conoscenza e che può essere assegnata a un progetto. Le _risorse_ includono sistemi storage, abbonamenti Keystone, alcuni carichi di lavoro di NetApp Backup and Recovery, nonché agenti della Console.
@@ -87,6 +90,7 @@ link:task-iam-associate-agents.html["Scopri come associare gli agenti ai progett
 
 
 
+[[members-and-roles]]
 === Membri e ruoli
 
 I membri sono gli utenti e gli account di servizio della tua organizzazione. I ruoli definiscono quali azioni possono eseguire e a quale livello della gerarchia—organizzazione, cartella o progetto.
@@ -115,12 +119,14 @@ link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] 
 
 
 
+[[iam-strategy-examples]]
 == Esempi di strategia IAM
 
 La struttura IAM più adatta dipende dalle dimensioni della tua organizzazione e da come sono organizzati i tuoi team. Gli esempi seguenti mostrano come diverse organizzazioni possono utilizzare la gerarchia IAM per gestire l'accesso in modo efficace.
 
 
 
+[[small-organization-strategy]]
 === Strategia per piccole organizzazioni
 
 Per le organizzazioni con meno di 50 utenti e una gestione centralizzata dell'archiviazione, si può prendere in considerazione un approccio semplificato che utilizzi i ruoli di Super amministratore e Super visualizzatore.
@@ -140,6 +146,7 @@ Per le organizzazioni con meno di 50 utenti e una gestione centralizzata dell'ar
 
 
 
+[[multi-regional-enterprise-strategy]]
 === Strategia aziendale multiregionale
 
 Per le grandi organizzazioni con attività regionali e team specializzati, è opportuno implementare un approccio gerarchico con cartelle che rappresentano i confini geografici o delle unità aziendali.
@@ -173,6 +180,7 @@ Per le grandi organizzazioni con attività regionali e team specializzati, è op
 
 
 
+[[departmental-specialization-strategy]]
 === Strategia di specializzazione dipartimentale
 
 Per le organizzazioni con team specializzati che necessitano di un accesso specifico al servizio dati, utilizzare assegnazioni di ruoli mirate in base alle responsabilità funzionali.
@@ -194,6 +202,7 @@ Per le organizzazioni con team specializzati che necessitano di un accesso speci
 
 
 
+[[next-steps-with-iam-in-netapp-console]]
 == Passaggi successivi con IAM nella NetApp Console
 
 * link:task-iam-get-started.html["Introduzione a IAM nella NetApp Console"]

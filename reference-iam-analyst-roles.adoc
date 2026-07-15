@@ -18,6 +18,7 @@ summary: È possibile assegnare agli utenti il ruolo di analista del supporto op
 
 
 
+[[operational-support-analyst]]
 == Analista di supporto operativo
 
 [cols="1,2"]

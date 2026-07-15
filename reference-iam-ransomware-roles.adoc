@@ -35,6 +35,7 @@ Per descrizioni dettagliate di ciascun ruolo, consultare le tabelle seguenti.
 
 
 
+[[baseline-roles]]
 == Ruoli di base
 
 Nella tabella seguente vengono descritte le azioni disponibili per i ruoli di amministratore e visualizzatore di Ransomware Resilience.
@@ -305,6 +306,7 @@ SÌ
 |===
 
 
+[[user-behavior-roles]]
 == Ruoli comportamentali dell'utente
 
 Per configurare le impostazioni relative al comportamento sospetto degli utenti e rispondere agli avvisi, un utente deve disporre del ruolo di amministratore del comportamento utente di Ransomware Resilience. Per visualizzare solo gli avvisi relativi a comportamenti sospetti degli utenti, l'utente deve disporre del ruolo di visualizzatore del comportamento utente Ransomware Resilience.

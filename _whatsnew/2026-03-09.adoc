@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-5-0]]
 === Console agent 4.5.0
 
 La versione 4.5.0 supporta sia la modalità standard che la modalità limitata.
@@ -15,6 +16,7 @@ Questa versione dell'agente Console include miglioramenti della sicurezza e corr
 
 
 
+[[netapp-console-administration]]
 === Amministrazione NetApp Console
 
 È possibile assegnare ruoli Keystone agli utenti partner per consentire loro di gestire le risorse Keystone in un'organizzazione partner. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["Scopri di più sull'assegnazione dei ruoli Keystone agli utenti partner."]

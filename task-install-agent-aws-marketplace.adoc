@@ -25,6 +25,7 @@ L'installazione di un agente in AWS avvia un'istanza EC2 con Linux e il software
 
 
 
+[[step-1-set-up-networking]]
 == Passaggio 1: configurare la rete
 
 Assicurarsi che il percorso di rete per l'agente della console soddisfi i seguenti requisiti per gestire le risorse del cloud ibrido.
@@ -145,6 +146,7 @@ Implementare questo accesso alla rete dopo aver creato l'agente Console.
 
 
 
+[[step-2-set-up-aws-permissions]]
 == Passaggio 2: impostare le autorizzazioni AWS
 
 Per preparare la distribuzione di un marketplace, crea policy IAM in AWS e associale a un ruolo IAM.  Quando si crea l'agente della console da AWS Marketplace, viene richiesto di selezionare il ruolo IAM.
@@ -176,6 +178,7 @@ Ora disponi di un ruolo IAM che puoi associare all'istanza EC2 durante la distri
 
 
 
+[[step-3-review-instance-requirements]]
 == Passaggio 3: rivedere i requisiti dell'istanza
 
 Quando si crea l'agente Console, è necessario scegliere un tipo di istanza EC2 che soddisfi i seguenti requisiti.
@@ -187,6 +190,7 @@ Tipo di istanza AWS EC2:: Un tipo di istanza che soddisfa i requisiti di CPU e R
 
 
 
+[[step-4-create-the-console-agent]]
 == Passaggio 4: creare l'agente della console
 
 Crea l'agente della console direttamente da AWS Marketplace.

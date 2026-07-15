@@ -18,6 +18,7 @@ Preparare l'ambiente prima di distribuire NetApp Console in modalità limitata. 
 
 
 
+[[step-1-understand-how-restricted-mode-works]]
 == Passaggio 1: comprendere come funziona la modalità con restrizioni
 
 Prima di iniziare, è necessario comprendere il funzionamento della NetApp Console in modalità limitata.
@@ -30,6 +31,7 @@ link:concept-modes.html["Scopri come funziona la modalità con restrizioni"] .
 
 
 
+[[step-2-review-installation-options]]
 == Passaggio 2: rivedere le opzioni di installazione
 
 In modalità limitata, è possibile installare l'agente Console solo nel cloud.  Sono disponibili le seguenti opzioni di installazione:
@@ -41,6 +43,7 @@ In modalità limitata, è possibile installare l'agente Console solo nel cloud. 
 
 
 
+[[step-3-review-host-requirements]]
 == Passaggio 3: rivedere i requisiti dell'host
 
 Per eseguire l'agente Console, un host deve soddisfare requisiti specifici di sistema operativo, RAM e porta.
@@ -173,6 +176,8 @@ Non supportato
 |===
 
 
+[[step-4-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == Passaggio 4: installare Podman o Docker Engine
 
 Per installare manualmente l'agente Console, preparare l'host installando Podman o Docker Engine.
@@ -360,6 +365,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-5-prepare-network-access]]
 == Passaggio 5: preparare l'accesso alla rete
 
 Configura l'accesso alla rete in modo che l'agente della console possa gestire le risorse nel tuo cloud pubblico.  Oltre a disporre di una rete virtuale e di una subnet per l'agente della console, è necessario assicurarsi che siano soddisfatti i seguenti requisiti.
@@ -546,6 +552,7 @@ Se intendi creare un agente Console dal marketplace del tuo provider cloud, impl
 
 
 
+[[step-6-prepare-cloud-permissions]]
 == Passaggio 6: preparare le autorizzazioni cloud
 
 L'agente Console richiede le autorizzazioni del provider cloud per distribuire Cloud Volumes ONTAP in una rete virtuale e per utilizzare i servizi dati NetApp .  È necessario impostare le autorizzazioni nel provider cloud e quindi associare tali autorizzazioni all'agente Console.
@@ -853,6 +860,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 ====
 
 
+[[step-7-enable-google-cloud-apis]]
 == Passaggio 7: abilita le API di Google Cloud
 
 Per distribuire Cloud Volumes ONTAP in Google Cloud sono necessarie diverse API.

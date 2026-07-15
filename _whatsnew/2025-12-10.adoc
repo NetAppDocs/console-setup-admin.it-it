@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-2-0]]
 === Agente console 4.2.0
 
 La versione 4.2.0 supporta sia la modalità standard che quella limitata.
@@ -27,6 +28,7 @@ Quando è necessario installare manualmente un agente, è possibile accedere al 
 
 
 
+[[netapp-console-administration]]
 === Amministrazione NetApp Console
 
 Questa versione include quanto segue:

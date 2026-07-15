@@ -18,6 +18,7 @@ Per impostazione predefinita, Digital Advisor mostra tutti gli account NetApp as
 
 
 
+[[before-you-begin]]
 == Prima di iniziare
 
 Per verificare la tua organizzazione, devi disporre del ruolo di amministratore dell'organizzazione. Il tuo utente deve inoltre essere associato a un account NetApp Support Site (NSS). link:task-adding-nss-accounts.html["Scopri come associare il tuo account NSS"].
@@ -27,6 +28,7 @@ NOTE: Se la tua azienda dispone di un solo account aziendale e il tuo utente è 
 
 
 
+[[verify-your-organization]]
 == Verifica la tua organizzazione
 
 .Passi

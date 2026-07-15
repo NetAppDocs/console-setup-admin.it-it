@@ -18,6 +18,7 @@ summary: 'È possibile gestire le credenziali di Google Cloud associate all"ista
 
 
 
+[[associate-a-marketplace-subscription-with-google-cloud-credentials]]
 == Associa un abbonamento Marketplace alle credenziali di Google Cloud
 
 Quando si distribuisce un agente Console in Google Cloud, la Console crea un set predefinito di credenziali associate a una istanza di macchine virtuali agente Console. In qualsiasi momento, è possibile modificare l'abbonamento a Google Cloud Marketplace associato a queste credenziali. L'abbonamento consente di creare un sistema Cloud Volumes ONTAP pay-as-you-go e di utilizzare altri servizi dati.
@@ -88,6 +89,7 @@ image:screenshot_gcp_associate.gif["Uno screenshot della pagina di assegnazione 
 
 
 
+[[troubleshoot-the-marketplace-subscription-process]]
 == Risolvi i problemi del processo di abbonamento al Marketplace
 
 A volte, l'abbonamento ai servizi dati NetApp tramite Google Cloud Marketplace può risultare frammentato a causa di autorizzazioni errate o del mancato rispetto accidentale del reindirizzamento alla Console. Se ciò accade, utilizzare i seguenti passaggi per completare il processo di abbonamento.

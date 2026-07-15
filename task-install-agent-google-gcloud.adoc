@@ -25,6 +25,7 @@ L'installazione di un agente in Google Cloud avvia un'istanza di macchina virtua
 
 
 
+[[step-1-set-up-networking]]
 == Passaggio 1: configurare la rete
 
 Configurare la rete per consentire all'agente della console di gestire le risorse e connettersi alle reti di destinazione e a Internet.
@@ -135,6 +136,8 @@ Implementare questo requisito di rete dopo aver creato l'agente Console.
 
 
 
+[[step-2-set-up-permissions-to-create-the-console-agent]]
+[[agent-permissions-google]]
 == Passaggio 2: impostare le autorizzazioni per creare l'agente della console
 
 Imposta le autorizzazioni per l'utente di Google Cloud per distribuire la VM dell'agente della console da Google Cloud.
@@ -258,6 +261,8 @@ https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single
 
 
 
+[[step-3-set-up-permissions-for-the-console-agent-operations]]
+[[console-permissions-google]]
 == Passaggio 3: impostare le autorizzazioni per le operazioni dell'agente della console
 
 È necessario un account di servizio Google Cloud per fornire all'agente della Console le autorizzazioni di cui la Console ha bisogno per gestire le risorse in Google Cloud.  Quando si crea l'agente Console, è necessario associare questo account di servizio alla VM dell'agente Console.
@@ -317,6 +322,7 @@ Per maggiori dettagli, fare riferimento a https://cloud.google.com/iam/docs/gran
 
 
 
+[[step-4-set-up-shared-vpc-permissions]]
 == Passaggio 4: impostare le autorizzazioni VPC condivise
 
 Se si utilizza una VPC condivisa per distribuire risorse in un progetto di servizio, sarà necessario preparare le autorizzazioni.
@@ -369,6 +375,7 @@ Note:
 ====
 
 
+[[step-5-enable-google-cloud-apis]]
 == Passaggio 5: abilita le API di Google Cloud
 
 Abilitare diverse API di Google Cloud prima di distribuire l'agente Console e Cloud Volumes ONTAP.
@@ -393,6 +400,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Documentazione
 
 
 
+[[step-6-create-the-console-agent]]
 == Passaggio 6: creare l'agente della console
 
 Crea un agente Console utilizzando Google Cloud.

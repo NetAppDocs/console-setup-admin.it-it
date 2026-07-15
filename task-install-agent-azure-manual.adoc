@@ -28,6 +28,7 @@ NOTE: Distribuisci un agente Console nella stessa area di Azure dei sistemi Clou
 
 
 
+[[step-1-review-host-requirements]]
 == Passaggio 1: rivedere i requisiti dell'host
 
 Il software dell'agente Console deve essere eseguito su un host che soddisfi specifici requisiti del sistema operativo, requisiti di RAM, requisiti di porta e così via.
@@ -154,6 +155,8 @@ Non supportato
 |===
 
 
+[[step-2-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == Passaggio 2: installare Podman o Docker Engine
 
 A seconda del sistema operativo in uso, prima di installare l'agente è necessario utilizzare Podman o Docker Engine.
@@ -339,6 +342,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-3-set-up-networking]]
 == Passaggio 3: configurazione della rete
 
 Assicurarsi che il percorso di rete in cui si prevede di installare l'agente Console supporti i seguenti requisiti.  Soddisfacendo questi requisiti, l'agente della console può gestire risorse e processi all'interno del tuo ambiente cloud ibrido.
@@ -458,6 +462,7 @@ Abilita NTP:: Se si intende utilizzare NetApp Data Classification per analizzare
 
 
 
+[[step-4-set-up-console-agent-deployment-permissions]]
 == Passaggio 4: impostare le autorizzazioni di distribuzione dell'agente della console
 
 È necessario fornire le autorizzazioni di Azure all'agente della console utilizzando una delle seguenti opzioni:
@@ -669,6 +674,7 @@ Il tuo service principal è ora configurato e dovresti aver copiato l'ID dell'ap
 ====
 
 
+[[step-5-install-the-console-agent]]
 == Passaggio 5: installare l'agente della console
 
 Una volta completati i prerequisiti, puoi installare manualmente il software sul tuo host Linux.
@@ -835,6 +841,7 @@ Se si dispone di un archivio BLOB di Azure nella stessa sottoscrizione di Azure 
 
 
 
+[[step-6-provide-permissions-to-netapp-console]]
 == Passaggio 6: fornire le autorizzazioni alla NetApp Console
 
 Ora che hai installato l'agente Console, devi fornirgli le autorizzazioni di Azure configurate in precedenza.  L'assegnazione delle autorizzazioni consente alla Console di gestire i dati e l'infrastruttura di archiviazione in Azure.

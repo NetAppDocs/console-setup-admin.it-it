@@ -18,6 +18,7 @@ Aggiungi e gestisci le credenziali di Azure in modo che la NetApp Console dispon
 
 
 
+[[overview]]
 == Panoramica
 
 Esistono due modi per aggiungere ulteriori sottoscrizioni e credenziali di Azure nella Console.
@@ -28,6 +29,7 @@ Esistono due modi per aggiungere ulteriori sottoscrizioni e credenziali di Azure
 
 
 
+[[associate-additional-azure-subscriptions-with-a-managed-identity]]
 == Associare ulteriori sottoscrizioni di Azure a un'identità gestita
 
 La console consente di scegliere le credenziali di Azure e la sottoscrizione di Azure in cui si desidera distribuire Cloud Volumes ONTAP.  Non è possibile selezionare una sottoscrizione di Azure diversa per il profilo di identità gestita a meno che non si associ https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identità gestita"^] con quegli abbonamenti.
@@ -65,6 +67,8 @@ image:screenshot_accounts_switch_azure_subscription.gif["Uno screenshot che most
 
 
 
+[[add-additional-azure-credentials-to-netapp-console]]
+[[add-credentials-azure]]
 == Aggiungi ulteriori credenziali di Azure alla NetApp Console
 
 Quando si distribuisce un agente Console dalla Console, la Console abilita un'identità gestita assegnata dal sistema sulla macchina virtuale che dispone delle autorizzazioni richieste.  La console seleziona queste credenziali di Azure per impostazione predefinita quando si crea un nuovo sistema per Cloud Volumes ONTAP.
@@ -76,6 +80,7 @@ Se si desidera distribuire Cloud Volumes ONTAP utilizzando credenziali Azure _di
 
 
 
+[[grant-azure-permissions-using-a-service-principal]]
 === Concedi le autorizzazioni di Azure utilizzando un'entità servizio
 
 La console necessita delle autorizzazioni per eseguire azioni in Azure.  È possibile concedere le autorizzazioni necessarie a un account Azure creando e configurando un'entità servizio in Microsoft Entra ID e ottenendo le credenziali di Azure necessarie alla console.
@@ -231,6 +236,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Uno screenshot del portale di 
 
 
 
+[[ids]]
 ==== Ottieni l'ID dell'applicazione e l'ID della directory
 
 Quando si aggiunge l'account Azure alla console, è necessario fornire l'ID dell'applicazione (client) e l'ID della directory (tenant) per l'applicazione.  La console utilizza gli ID per effettuare l'accesso in modo programmatico.
@@ -269,6 +275,7 @@ Il tuo service principal è ora configurato e dovresti aver copiato l'ID dell'ap
 
 
 
+[[add-the-credentials-to-the-console]]
 === Aggiungere le credenziali alla Console
 
 Dopo aver fornito a un account Azure le autorizzazioni necessarie, è possibile aggiungere le credenziali per tale account alla Console.  Completando questo passaggio sarà possibile avviare Cloud Volumes ONTAP utilizzando credenziali Azure diverse.
@@ -303,12 +310,15 @@ image:screenshot_accounts_switch_azure.gif["Uno screenshot che mostra la selezio
 
 
 
+[[manage-existing-credentials]]
 == Gestisci le credenziali esistenti
 
 Gestisci le credenziali di Azure che hai già aggiunto alla Console associando una sottoscrizione al Marketplace, modificando le credenziali ed eliminandole.
 
 
 
+[[associate-an-azure-marketplace-subscription-to-credentials]]
+[[subscribe]]
 === Associare una sottoscrizione di Azure Marketplace alle credenziali
 
 Dopo aver aggiunto le credenziali di Azure alla console, è possibile associare a tali credenziali un abbonamento ad Azure Marketplace.  È possibile utilizzare l'abbonamento per creare un sistema Cloud Volumes ONTAP con pagamento in base al consumo e accedere ai servizi dati NetApp .
@@ -358,6 +368,7 @@ Per tutte le altre organizzazioni o account, sarà necessario associare manualme
 
 
 
+[[edit-credentials]]
 === Modifica credenziali
 
 Modifica le tue credenziali di Azure nella Console.  Ad esempio, è possibile aggiornare il segreto client se è stato creato un nuovo segreto per l'applicazione del servizio principale.
@@ -371,6 +382,7 @@ Modifica le tue credenziali di Azure nella Console.  Ad esempio, è possibile ag
 
 
 
+[[delete-credentials]]
 === Elimina le credenziali
 
 Se non hai più bisogno di un set di credenziali, puoi eliminarlo.  È possibile eliminare solo le credenziali non associate a un sistema.

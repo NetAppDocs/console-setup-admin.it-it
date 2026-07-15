@@ -18,12 +18,14 @@ Scopri di più sulle configurazioni predefinite dell'agente della console per di
 
 
 
+[[default-configuration-with-internet-access]]
 == Configurazione predefinita con accesso a Internet
 
 I seguenti dettagli di configurazione si applicano se hai distribuito un agente Console dalla NetApp Console, dal marketplace del tuo provider cloud o se hai installato manualmente un agente Console su un host Linux locale con accesso a Internet.
 
 
 
+[[console-agent-vm-details-for-aws]]
 === Dettagli della VM dell'agente console per AWS
 
 Se hai distribuito un agente Console dalla Console o dal marketplace del provider cloud, tieni presente quanto segue:
@@ -40,6 +42,7 @@ Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per acced
 
 
 
+[[console-agent-vm-details-for-azure]]
 === Dettagli della macchina virtuale dell'agente console per Azure
 
 Se hai distribuito un agente Console dalla Console o dal marketplace del provider cloud, tieni presente quanto segue:
@@ -55,6 +58,7 @@ Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per acced
 
 
 
+[[console-agent-vm-details-for-google-cloud]]
 === Dettagli della VM dell'agente della console per Google Cloud
 
 Se hai distribuito un agente Console dalla Console, tieni presente quanto segue:
@@ -70,6 +74,7 @@ Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per acced
 
 
 
+[[installation-folder]]
 === Cartella di installazione
 
 La cartella di installazione dell'agente si trova nel seguente percorso:
@@ -78,6 +83,7 @@ La cartella di installazione dell'agente si trova nel seguente percorso:
 
 
 
+[[log-files]]
 === File di registro
 
 I file di registro sono contenuti nelle seguenti cartelle:
@@ -95,6 +101,7 @@ I registri in questa cartella forniscono dettagli sui servizi cloud e sul serviz
 
 
 
+[[console-agent-service]]
 === Servizio agente console
 
 * Il servizio agente della Console si chiama  `occm`.
@@ -106,6 +113,7 @@ Se il servizio MySQL non è attivo, allora anche il  `occm` servizio non è atti
 
 
 
+[[ports]]
 === porti
 
 L'agente utilizza le seguenti porte sull'host Linux:
@@ -116,6 +124,7 @@ L'agente utilizza le seguenti porte sull'host Linux:
 
 
 
+[[default-configuration-without-internet-access]]
 == Configurazione predefinita senza accesso a Internet
 
 La seguente configurazione si applica se hai installato manualmente l'agente Console su un host Linux locale che non ha accesso a Internet. link:task-quick-start-private-mode.html["Scopri di più su questa opzione di installazione"] .

@@ -20,6 +20,8 @@ Per le implementazioni cloud, è possibile distribuire un agente su Amazon Web S
 
 
 
+[[deploy-from-the-netapp-console]]
+[[agent-console-deploy]]
 == Distribuisci dalla NetApp Console
 
 NetApp consiglia di eseguire il deployment dalla NetApp Console quando si utilizza la modalità standard. La NetApp Console guida l'utente attraverso la configurazione della rete e delle autorizzazioni, quindi avvia automaticamente la VM o l'istanza nel cloud provider. La Console guida l'utente attraverso la configurazione della rete e delle autorizzazioni, quindi avvia automaticamente la VM o l'istanza nel cloud provider.
@@ -49,6 +51,8 @@ link:task-install-agent-aws-console.html["Distribuisci un agente della Console i
 
 
 
+[[deploy-from-a-cloud-provider-marketplace]]
+[[agent-marketplace-deploy]]
 == Distribuisci dal marketplace di un cloud provider
 
 La distribuzione tramite AWS Marketplace o Azure Marketplace avvia l'installazione dell'agente direttamente dal marketplace, non dalla NetApp Console.
@@ -79,6 +83,8 @@ link:task-install-agent-aws-marketplace.html["Distribuisci un agente Console in 
 
 
 
+[[manually-install-on-a-linux-host-in-the-cloud]]
+[[agent-cloud-manual-deploy]]
 == Installazione manuale su un host Linux nel cloud
 
 L'installazione manuale consente di installare il software dell'agente Console direttamente su un host Linux fornito e gestito dall'utente in AWS, Azure, Google Cloud o in locale.
@@ -108,6 +114,8 @@ link:task-install-agent-aws-manual.html["Installare manualmente un agente Consol
 
 
 
+[[manually-install-on-premises-using-vcenter-ova]]
+[[agent-ova-on-prem-deploy]]
 == Installazione manuale in locale tramite vCenter (OVA)
 
 Se si utilizza VMware vCenter, è possibile distribuire l'agente Console importando un file OVA (Open Virtual Appliance). L'OVA è un'immagine di VM preconfigurata che viene distribuita con il client vSphere, senza installare Linux o configurare un runtime per container.
@@ -142,6 +150,8 @@ link:task-install-agent-on-prem-ova.html["Distribuzione in locale tramite vCente
 
 
 
+[[manually-install-on-premises-without-vcenter]]
+[[agent-manual-on-prem-deploy]]
 == Installazione manuale in locale (senza vCenter)
 
 È possibile installare manualmente l'agente Console su qualsiasi host Linux locale. È necessario configurare l'host Linux e l'ambiente di runtime dei container (Docker o Podman), quindi installare l'agente Console.

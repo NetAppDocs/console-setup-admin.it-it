@@ -27,6 +27,7 @@ NOTE: Con la versione 4.0.0, NetApp ha ridotto gli endpoint di rete richiesti pe
 
 
 
+[[endpoints-contacted-by-netapp-console-and-console-agents]]
 == Endpoint contattati da NetApp Console e dagli agenti della console
 
 Ogni agente distribuito e ogni computer che accede alla NetApp Console devono disporre di connessioni agli endpoint elencati di seguito.
@@ -58,6 +59,7 @@ Per ottenere immagini per gli aggiornamenti dell'agente della console.
 |===
 
 
+[[cloud-provider-endpoints-contacted-the-console-agent]]
 == Gli endpoint del provider cloud hanno contattato l'agente della console
 
 Gli agenti della console devono avere accesso ad endpoint aggiuntivi se sono distribuiti nel tuo provider cloud.
@@ -71,12 +73,14 @@ Configurare l'accesso all'endpoint di rete del provider cloud prima di installar
 
 
 
+[[data-services-endpoints-contacted-by-the-console-agent]]
 == Endpoint dei servizi dati contattati dall'agente della console
 
 Alcuni servizi dati NetApp e Cloud Volumes ONTAP richiedono che l'agente disponga di un accesso Internet in uscita aggiuntivo.
 
 
 
+[[endpoints-for-cloud-volumes-ontap]]
 === Endpoint per Cloud Volumes ONTAP
 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["Endpoint per Cloud Volumes ONTAP in AWS"]
@@ -86,6 +90,7 @@ Alcuni servizi dati NetApp e Cloud Volumes ONTAP richiedono che l'agente dispong
 
 
 
+[[endpoints-for-workloads]]
 === Endpoint per carichi di lavoro
 
 L'agente della console deve essere in grado di accedere al seguente endpoint per NetApp Workloads.

@@ -20,6 +20,7 @@ All'interno della Console, ogni utente ha un profilo che contiene informazioni s
 
 
 
+[[change-your-display-name]]
 == Cambia il tuo nome visualizzato
 
 Puoi modificare il nome visualizzato nella Console, che ti identifica agli altri utenti. Non puoi modificare il tuo nome utente o indirizzo email.
@@ -32,6 +33,7 @@ Puoi modificare il nome visualizzato nella Console, che ti identifica agli altri
 
 
 
+[[elevate-your-role-in-read-only-mode]]
 == Eleva il tuo ruolo in modalità di sola lettura
 
 In alcuni casi, l'amministratore della tua organizzazione potrebbe impostare la tua organizzazione in modalità di sola lettura. Se hai un ruolo di amministratore, devi elevare le autorizzazioni per apportare modifiche. Ciò garantisce che le modifiche siano intenzionali e autorizzate.
@@ -50,6 +52,8 @@ image:screenshot-user-elevated.png["Uno screenshot che mostra il cursore della m
 
 
 
+[[configure-multi-factor-authentication]]
+[[task-user-mfa]]
 == Configurare l'autenticazione a più fattori
 
 Configurare l'autenticazione a più fattori (MFA) per migliorare la sicurezza richiedendo un secondo metodo di verifica.
@@ -78,6 +82,7 @@ Dopo aver configurato l'MFA, la Console ti chiederà di immettere un codice mono
 
 
 
+[[regenerate-your-mfa-recovery-code]]
 == Rigenera il tuo codice di ripristino MFA
 
 Puoi utilizzare i codici di recupero una sola volta.  Se ne usi uno o lo perdi, creane uno nuovo.
@@ -91,6 +96,7 @@ Puoi utilizzare i codici di recupero una sola volta.  Se ne usi uno o lo perdi, 
 
 
 
+[[delete-your-mfa-configuration]]
 == Elimina la tua configurazione MFA
 
 
@@ -104,6 +110,8 @@ NOTE: Se non riesci ad accedere all'app di autenticazione o al codice di riprist
 
 
 
+[[contact-your-organization-administrator]]
+[[contact-admin]]
 == Contatta l'amministratore della tua organizzazione
 
 Se hai bisogno di contattare l'amministratore della tua organizzazione, puoi inviargli un'e-mail direttamente dalla Console.  L'amministratore gestisce gli account utente e le autorizzazioni all'interno della tua organizzazione.
@@ -120,6 +128,7 @@ NOTE: Per utilizzare la funzione *Contatta gli amministratori*, è necessario ch
 
 
 
+[[configure-dark-mode-dark-theme]]
 == Configura la modalità scura (tema scuro)
 
 È possibile impostare la Console in modo che venga visualizzata in modalità scura.

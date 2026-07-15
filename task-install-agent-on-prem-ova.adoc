@@ -21,12 +21,14 @@ NOTE: Quando si distribuisce un agente Console con i propri vCenter strumenti, �
 
 
 
+[[prepare-to-install-the-console-agent]]
 == Prepararsi all'installazione dell'agente Console
 
 Prima dell'installazione, assicurati che l'host della VM soddisfi i requisiti e che l'agente della console possa accedere a Internet e alle reti di destinazione.  Per utilizzare i servizi dati NetApp o Cloud Volumes ONTAP, creare le credenziali del provider cloud affinché l'agente della console esegua azioni per tuo conto.
 
 
 
+[[review-console-agent-host-requirements]]
 === Requisiti dell'host dell'agente della console di revisione
 
 Prima di installare l'agente Console, assicurarsi che il computer host soddisfi i requisiti di installazione.
@@ -43,6 +45,8 @@ NOTE: Installare l'agente in un ambiente vCenter anziché direttamente su un hos
 
 
 
+[[set-up-network-access-for-the-console-agent]]
+[[network-access-agent]]
 === Configurare l'accesso alla rete per l'agente della console
 
 Collaborare con l'amministratore di rete per garantire che l'agente della console abbia accesso in uscita agli endpoint richiesti e alle connessioni alle reti di destinazione.
@@ -208,6 +212,8 @@ Abilita NTP:: Se si intende utilizzare NetApp Data Classification per analizzare
 
 
 
+[[create-console-agent-cloud-permissions-for-aws-or-azure]]
+[[agent-permission-aws-azure]]
 === Crea autorizzazioni cloud per l'agente della console per AWS o Azure
 
 Se si desidera utilizzare i servizi dati NetApp in AWS o Azure con un agente Console locale, è necessario configurare le autorizzazioni nel provider cloud in modo da poter aggiungere le credenziali all'agente Console dopo averlo installato.
@@ -400,12 +406,14 @@ image:screenshot_azure_client_secret.gif["Uno screenshot del portale di Azure ch
 ====
 
 
+[[install-a-console-agent-in-your-vcenter-environment]]
 == Installa un agente Console nel tuo ambiente vCenter
 
 NetApp supporta l'installazione dell'agente Console nel tuo ambiente vCenter. Il file OVA include un'immagine VM preconfigurata che puoi distribuire nel tuo ambiente VMware. Un download del file o la distribuzione tramite URL è disponibile direttamente dalla NetApp Console. Include il software dell'agente Console e un certificato autofirmato.
 
 
 
+[[download-the-ova-or-copy-the-url]]
 === Scarica l'OVA o copia l'URL
 
 Scarica l'OVA o copia l'URL dell'OVA direttamente dalla NetApp Console.
@@ -418,6 +426,7 @@ Scarica l'OVA o copia l'URL dell'OVA direttamente dalla NetApp Console.
 
 
 
+[[deploy-the-agent-in-your-vcenter-environment]]
 === Distribuisci l'agente nel tuo vCenter environment
 
 Accedi al tuo ambiente vCenter per distribuire l'agente.
@@ -483,6 +492,7 @@ NOTE: Se la distribuzione non riesce, è possibile accedere al report di convali
 
 
 
+[[register-the-console-agent-with-netapp-console]]
 == Registrare l'agente della console con NetApp Console
 
 Accedi alla Console e associa l'agente della Console alla tua organizzazione. La procedura di accesso dipende dalla modalità in cui utilizzi la Console. Se utilizzi la Console in modalità standard, accedi tramite il sito web SaaS. Se utilizzi la Console in modalità limitata o privata, accedi localmente dall'host dell'agente della Console.
@@ -508,6 +518,7 @@ La modalità limitata non è supportata quando l'agente Console è installato in
 
 
 
+[[add-cloud-provider-credentials-to-the-console]]
 == Aggiungere le credenziali del provider cloud alla console
 
 Dopo aver installato e configurato l'agente Console, aggiungi le tue credenziali cloud in modo che l'agente Console disponga delle autorizzazioni necessarie per eseguire azioni in AWS o Azure.

@@ -28,6 +28,7 @@ NOTE: Distribuisci un agente Console nella stessa area di Azure dei sistemi Clou
 
 
 
+[[step-1-set-up-networking]]
 == Passaggio 1: configurare la rete
 
 Assicurati che la posizione di rete in cui intendi installare l'agente della Console soddisfi i seguenti requisiti. Questi requisiti consentono all'agente della Console di gestire le risorse nel tuo cloud ibrido.
@@ -145,6 +146,7 @@ Implementare i requisiti di rete dopo aver creato l'agente Console.
 
 
 
+[[step-2-review-vm-requirements]]
 == Passaggio 2: rivedere i requisiti della VM
 
 Quando si crea l'agente Console, scegliere un tipo di macchina virtuale che soddisfi i seguenti requisiti.
@@ -156,6 +158,7 @@ Dimensioni della VM di Azure:: Un tipo di istanza che soddisfa i requisiti di CP
 
 
 
+[[step-3-set-up-permissions]]
 == Passaggio 3: impostare le autorizzazioni
 
 È possibile concedere le autorizzazioni nei seguenti modi:
@@ -364,6 +367,7 @@ image:screenshot_azure_client_secret.gif["Uno screenshot del portale di Azure ch
 ====
 
 
+[[step-4-create-the-console-agent]]
 == Passaggio 4: creare l'agente della console
 
 Avviare l'agente Console direttamente da Azure Marketplace.
@@ -448,6 +452,7 @@ Se si dispone di un archivio BLOB di Azure nella stessa sottoscrizione di Azure 
 
 
 
+[[step-5-provide-permissions-to-the-console-agent]]
 == Passaggio 5: fornire le autorizzazioni all'agente della console
 
 Ora che hai creato l'agente Console, devi fornirgli le autorizzazioni impostate in precedenza.  La concessione delle autorizzazioni consente all'agente della console di gestire i dati e l'infrastruttura di archiviazione in Azure.

@@ -1,0 +1,22 @@
+= Console agent 4.9.0
+:allow-uri-read: 
+
+
+
+
+[[console-agent-4-9-0]]
+=== Console agent 4.9.0
+
+La versione 4.9.0 supporta sia la modalità standard che la modalità limitata.
+
+Questa versione dell'agente Console include miglioramenti della sicurezza e correzioni di bug.
+
+
+
+[[netapp-console-administration]]
+=== Amministrazione NetApp Console
+
+.Supporto per l'accesso in base al ruolo per Cloud Volumes ONTAP
+La console supporta l'accesso in base al ruolo per Cloud Volumes ONTAP.
+
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["Scopri di più sull'accesso in base al ruolo per Cloud Volumes ONTAP"^].

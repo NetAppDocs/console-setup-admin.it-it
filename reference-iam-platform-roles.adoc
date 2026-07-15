@@ -29,6 +29,8 @@ Le tabelle seguenti indicano le azioni che ciascun ruolo della piattaforma Conso
 
 
 
+[[organization-administration-roles]]
+[[organization-admin-roles]]
 == Ruoli di amministrazione dell'organizzazione
 
 [cols="2,1,1"]
@@ -79,6 +81,7 @@ Le tabelle seguenti indicano le azioni che ciascun ruolo della piattaforma Conso
 |===
 
 
+[[federation-roles]]
 == Ruoli della Federazione
 
 [cols="2,1,1"]
@@ -105,6 +108,7 @@ Le tabelle seguenti indicano le azioni che ciascun ruolo della piattaforma Conso
 |===
 
 
+[[partnership-roles]]
 == Ruoli di partnership
 
 [cols="2,1,1"]
@@ -125,6 +129,8 @@ Le tabelle seguenti indicano le azioni che ciascun ruolo della piattaforma Conso
 |===
 
 
+[[super-admin-and-viewer-roles]]
+[[super-admin-roles]]
 == Ruoli di super amministratore e visualizzatore
 
 Il ruolo di *Super amministratore* fornisce accesso completo alla gestione delle funzionalità della Console, dell'archiviazione e dei servizi dati.  Questo ruolo è adatto a coloro che supervisionano l'amministrazione e la governance.  Al contrario, il ruolo *Super viewer* offre un accesso di sola lettura, ideale per revisori o stakeholder che necessitano di visibilità senza apportare modifiche.

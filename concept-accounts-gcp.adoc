@@ -18,6 +18,7 @@ Scopri come la NetApp Console utilizza le credenziali di Google Cloud per esegui
 
 
 
+[[project-and-permissions-for-netapp-console]]
 == Progetto e autorizzazioni per NetApp Console
 
 Prima di poter utilizzare la Console per gestire le risorse nel tuo progetto Google Cloud, devi prima distribuire un agente Console.  L'agente non può essere in esecuzione presso la tua sede o presso un altro provider cloud.
@@ -41,6 +42,7 @@ Per informazioni su come impostare le autorizzazioni, fare riferimento alle segu
 
 
 
+[[credentials-and-marketplace-subscriptions]]
 == Credenziali e abbonamenti al marketplace
 
 Quando distribuisci un agente Console in Google Cloud, la Console crea un set predefinito di credenziali per l'account del servizio Google Cloud nel progetto in cui risiede l'agente Console.  Per poter pagare i servizi dati Cloud Volumes ONTAP e NetApp , queste credenziali devono essere associate a un abbonamento a Google Cloud Marketplace.
@@ -56,6 +58,7 @@ Tieni presente quanto segue in merito alle credenziali di Google Cloud e agli ab
 
 
 
+[[project-for-cloud-volumes-ontap]]
 == Progetto per Cloud Volumes ONTAP
 
 Cloud Volumes ONTAP può risiedere nello stesso progetto dell'agente Console oppure in un progetto diverso.  Per distribuire Cloud Volumes ONTAP in un progetto diverso, è necessario prima aggiungere l'account del servizio agente Console e il ruolo a quel progetto.

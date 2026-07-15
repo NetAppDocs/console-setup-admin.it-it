@@ -18,6 +18,7 @@ La gestione delle identità e degli accessi (IAM) nella NetApp Console offre ruo
 
 
 
+[[platform-roles]]
 == Ruoli della piattaforma
 
 I ruoli della piattaforma concedono autorizzazioni di amministrazione NetApp Console , tra cui l'assegnazione dei ruoli e la gestione degli utenti.  La console ha diversi ruoli di piattaforma.
@@ -55,6 +56,7 @@ I ruoli della piattaforma concedono autorizzazioni di amministrazione NetApp Con
 |===
 
 
+[[application-roles]]
 == Ruoli applicativi
 
 Di seguito è riportato un elenco dei ruoli nella categoria applicazione.  Ogni ruolo concede autorizzazioni specifiche nell'ambito designato.  Gli utenti che non possiedono il ruolo di piattaforma o applicazione richiesto non possono accedere alla rispettiva applicazione.
@@ -92,6 +94,7 @@ Di seguito è riportato un elenco dei ruoli nella categoria applicazione.  Ogni 
 |===
 
 
+[[data-service-roles]]
 == Ruoli del servizio dati
 
 Di seguito è riportato un elenco dei ruoli nella categoria dei servizi dati.  Ogni ruolo concede autorizzazioni specifiche nell'ambito designato.  Gli utenti che non dispongono del ruolo di servizio dati richiesto o di un ruolo di piattaforma non potranno accedere al servizio dati.
@@ -114,6 +117,15 @@ Di seguito è riportato un elenco dei ruoli nella categoria dei servizi dati.  O
 
 
 | link:reference-iam-backup-rec-roles.html["Visualizzatore di backup e ripristino"] | BACKUP_VIEWER | Standard, Limitato, Privato | Visualizza le informazioni di backup e ripristino. 
+
+
+| link:reference-iam-cvo-roles.html["Amministratore Cloud Volumes ONTAP"] | CVO_ADMIN | Standard, Limitato, Privato | Fornisce accesso completo a tutte le operazioni di Cloud Volumes ONTAP. 
+
+
+| link:reference-iam-cvo-roles.html["operatore Cloud Volumes ONTAP"] | CVO_OPERATOR | Standard, Limitato, Privato | Consente di eseguire attività di gestione quotidiane, tra cui l'aggiunta di volumi, la configurazione della replica e la gestione dello storage. 
+
+
+| link:reference-iam-cvo-roles.html["Visualizzatore Cloud Volumes ONTAP"] | CVO_VIEWER | Standard, Limitato, Privato | Fornisce accesso in sola lettura alle informazioni di Cloud Volumes ONTAP. Questo ruolo non può eseguire alcuna operazione attiva. 
 
 
 | link:reference-iam-disaster-rec-roles.html["Amministratore del ripristino di emergenza"] | AMMINISTRATORE DEL RECUPERO IN CASO DI DISASTRO | Standard | Eseguire qualsiasi azione nel servizio NetApp Disaster Recovery . 
@@ -147,6 +159,7 @@ Di seguito è riportato un elenco dei ruoli nella categoria dei servizi dati.  O
 |===
 
 
+[[related-links]]
 == Link correlati
 
 * link:concept-identity-and-access-management.html["Scopri di più sulla gestione dell'identità e degli accessi NetApp Console"]

@@ -4,6 +4,7 @@
 
 
 
+[[private-mode-release-3-9-44]]
 === Rilascio della modalità privata (3.9.44)
 
 Una nuova versione della modalità privata è ora disponibile per il download dal sito di supporto NetApp .

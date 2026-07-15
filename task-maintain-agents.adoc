@@ -18,6 +18,7 @@ Quando si installa manualmente un agente Console, la manutenzione del sistema op
 
 
 
+[[apply-operating-system-updates-to-the-agent-host]]
 == Applicare gli aggiornamenti del sistema operativo all'host dell'agente
 
 Applica le patch di sicurezza del sistema operativo senza interrompere i servizi host dell'agente.
@@ -41,6 +42,7 @@ sudo apt upgrade
 ----
 
 
+[[vm-or-instance-type]]
 == Tipo di VM o istanza
 
 Se si crea un agente Console dalla Console, questo distribuisce un'istanza VM nel provider cloud con una configurazione predefinita.  Dopo aver creato l'agente, non passare a un'istanza VM più piccola con meno CPU o RAM.
@@ -55,6 +57,8 @@ link:reference-agent-default-config.html["Scopri la configurazione predefinita p
 
 
 
+[[monitor-the-agent]]
+[[monitor-disk-space]]
 == Monitorare l'agente
 
 La console ti avvisa quando la macchina virtuale dell'agente non è integro, compresi problemi di spazio su disco, RAM e CPU.  Monitora queste notifiche nel Centro notifiche all'interno della Console oppure configura le notifiche e-mail.  È normale che si verifichino occasionalmente aumenti dello spazio su disco, della memoria o dell'utilizzo della CPU, ma se ciò accade frequentemente, è opportuno adottare misure per risolverlo.
@@ -81,6 +85,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operation
 |===
 
 
+[[stopping-and-starting-the-agent-vm]]
 == Arresto e avvio della VM dell'agente
 
 Se necessario, arrestare e avviare la VM dell'agente tramite la console del provider cloud o le procedure standard in sede.
@@ -89,6 +94,8 @@ link:concept-agents.html#agents-must-be-operational-at-all-times["Tieni presente
 
 
 
+[[connect-to-the-linux-vm]]
+[[connect-linux-host]]
 == Connettiti alla VM Linux
 
 Se devi connetterti alla VM Linux su cui è in esecuzione l'agente, utilizza le opzioni di connettività del tuo provider cloud.

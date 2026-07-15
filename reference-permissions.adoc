@@ -18,12 +18,14 @@ Sarà necessario fornire all'agente della console le autorizzazioni appropriate 
 
 
 
+[[aws-permissions]]
 == Autorizzazioni AWS
 
 La NetApp Console richiede le autorizzazioni AWS per un agente della console e per i singoli servizi.
 
 
 
+[[console-agents]]
 === Agenti della console
 
 [cols="20,60,20"]
@@ -35,6 +37,7 @@ La NetApp Console richiede le autorizzazioni AWS per un agente della console e p
 |===
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -46,6 +49,7 @@ La NetApp Console richiede le autorizzazioni AWS per un agente della console e p
 |===
 
 
+[[cloud-volumes-ontap]]
 === Cloud Volumes ONTAP
 
 [cols="20,60,20"]
@@ -57,6 +61,7 @@ La NetApp Console richiede le autorizzazioni AWS per un agente della console e p
 |===
 
 
+[[netapp-copy-and-sync]]
 === NetApp Copy and Sync
 
 [cols="20,60,20"]
@@ -74,6 +79,7 @@ La NetApp Console richiede le autorizzazioni AWS per un agente della console e p
 |===
 
 
+[[fsx-for-ontap]]
 === FSx per ONTAP
 
 [cols="20,60,20"]
@@ -85,6 +91,7 @@ La NetApp Console richiede le autorizzazioni AWS per un agente della console e p
 |===
 
 
+[[netapp-cloud-tiering]]
 === NetApp Cloud Tiering
 
 [NOTE]
@@ -109,12 +116,14 @@ NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp 
 |===
 
 
+[[azure-permissions]]
 == Autorizzazioni di Azure
 
 La console richiede le autorizzazioni di Azure per un agente della console e per i singoli servizi.
 
 
 
+[[console-agent]]
 === Agente console
 
 [cols="20,60,20"]
@@ -137,6 +146,7 @@ link:reference-permissions-azure.html["Autorizzazioni di Azure per un agente del
 |===
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -160,6 +170,7 @@ Quando si utilizza NetApp Backup and Recovery per eseguire il backup Cloud Volum
 |===
 
 
+[[netapp-copy-and-sync]]
 === NetApp Copy and Sync
 
 [cols="20,60,20"]
@@ -171,12 +182,14 @@ Quando si utilizza NetApp Backup and Recovery per eseguire il backup Cloud Volum
 |===
 
 
+[[google-cloud-permissions]]
 == Autorizzazioni di Google Cloud
 
 La Console richiede le autorizzazioni di Google Cloud per un agente della Console e per i singoli servizi.
 
 
 
+[[console-agents]]
 === Agenti della console
 
 [cols="20,60,20"]
@@ -191,6 +204,7 @@ La Console richiede le autorizzazioni di Google Cloud per un agente della Consol
 |===
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -215,6 +229,7 @@ Quando si utilizza NetApp Backup and Recovery per eseguire il backup Cloud Volum
 |===
 
 
+[[netapp-copy-and-sync]]
 === NetApp Copy and Sync
 
 [cols="20,60,20"]
@@ -229,12 +244,14 @@ Quando si utilizza NetApp Backup and Recovery per eseguire il backup Cloud Volum
 |===
 
 
+[[storagegrid-permissions]]
 == Autorizzazioni StorageGRID
 
 La console richiede le autorizzazioni StorageGRID per due servizi.
 
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -246,6 +263,7 @@ La console richiede le autorizzazioni StorageGRID per due servizi.
 |===
 
 
+[[netapp-cloud-tiering]]
 === NetApp Cloud Tiering
 
 [NOTE]

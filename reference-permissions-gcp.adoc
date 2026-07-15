@@ -18,6 +18,7 @@ L'agente della console necessita delle autorizzazioni per eseguire azioni in Goo
 
 
 
+[[google-cloud-user-account-permissions]]
 == Autorizzazioni dell'account utente di Google Cloud
 
 Il ruolo personalizzato riportato di seguito fornisce a un utente Google Cloud le autorizzazioni necessarie per distribuire un agente.  Applica questo ruolo personalizzato all'utente che distribuirà l'agente.
@@ -115,6 +116,7 @@ includedPermissions:
 ====
 
 
+[[service-account-permissions]]
 == Autorizzazioni dell'account di servizio
 
 Il ruolo personalizzato riportato di seguito fornisce all'account del servizio Google Cloud associato all'agente della console le autorizzazioni necessarie per gestire risorse e processi nella rete Google Cloud.
@@ -302,12 +304,14 @@ includedPermissions:
 ====
 
 
+[[how-google-cloud-permissions-are-used]]
 == Come vengono utilizzate le autorizzazioni di Google Cloud
 
 L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire le risorse Cloud Volumes ONTAP e i processi dei servizi dati NetApp nella rete Google Cloud.  Le sezioni seguenti descrivono come l'agente utilizza queste autorizzazioni.
 
 
 
+[[permissions-used-for-cloud-volumes-ontap]]
 === Autorizzazioni utilizzate per Cloud Volumes ONTAP
 
 L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire le risorse e i processi Cloud Volumes ONTAP nella rete Google Cloud.  Le sezioni seguenti descrivono come l'agente utilizza queste autorizzazioni.
@@ -748,6 +752,7 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 ====
 
 
+[[permissions-used-for-netapp-backup-and-recovery]]
 === Autorizzazioni utilizzate per NetApp Backup and Recovery
 
 L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire le risorse e i processi NetApp Backup and Recovery nella rete Google Cloud.  Le sezioni seguenti descrivono come l'agente utilizza queste autorizzazioni.
@@ -777,6 +782,7 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 ====
 
 
+[[permissions-used-for-netapp-data-classification]]
 === Autorizzazioni utilizzate per la NetApp Data Classification
 
 L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire le risorse e i processi NetApp Data Classification nella rete Google Cloud.  Le sezioni seguenti descrivono come l'agente utilizza queste autorizzazioni.
@@ -801,30 +807,36 @@ L'agente Console utilizza le autorizzazioni nel ruolo personalizzato per gestire
 ====
 
 
+[[change-log]]
+[[gcp-permissions-change-log]]
 == Registro delle modifiche
 
 Di seguito sono riportati i permessi aggiunti e rimossi.
 
 
 
+[[13-april-2026]]
 === 13 aprile 2026
 
 L'autorizzazione  `compute.disks.update` è stata aggiunta per aggiornare i parametri IOPS e throughput su un aggregate o disco Hyperdisk Balanced nei sistemi Cloud Volumes ONTAP.
 
 
 
+[[26-february-2026]]
 === 26 febbraio 2026
 
 Le autorizzazioni  `cloudbuild.workerpools.get` e  `cloudbuild.workerpools.list` sono state aggiunte per supportare Infrastructure Manager nelle distribuzioni in modalità privata di Cloud Volumes ONTAP in Google Cloud.
 
 
 
+[[09-february-2026]]
 === 09 febbraio 2026
 
 L' `compute.forwardingRules.update`autorizzazione è stata aggiunta per supportare Infrastructure Manager nelle distribuzioni Cloud Volumes ONTAP in Google Cloud.
 
 
 
+[[08-december-2025]]
 === 08 dicembre 2025
 
 NetApp sta passando da Google Cloud Deployment Manager a Google Cloud Infrastructure Manager (IM) per distribuire ed eseguire l'agente Console in Google Cloud.  Per supportare questa modifica sono state aggiunte le seguenti autorizzazioni.
@@ -916,12 +928,14 @@ Per l'account di servizio utilizzato per le operazioni quotidiane di Cloud Volum
 
 
 
+[[26-november-2025]]
 === 26 novembre 2025
 
 Le autorizzazioni sono state aggiornate per chiarire il loro utilizzo, ma non sono state aggiunte o rimosse autorizzazioni. Sono state aggiunte tre colonne per indicare se ogni autorizzazione viene utilizzata per la distribuzione, le operazioni quotidiane o l'eliminazione. Oltre a ciò, alcune autorizzazioni sono separate in base al loro utilizzo per NetApp Data Classification e NetApp Backup and Recovery.
 
 
 
+[[06-february-2023]]
 === 06 febbraio 2023
 
 A questa policy è stata aggiunta la seguente autorizzazione:
@@ -933,6 +947,7 @@ Questa autorizzazione è richiesta per Cloud Volumes ONTAP.
 
 
 
+[[27-january-2023]]
 === 2023-01-27
 
 A questa policy sono state aggiunte le seguenti autorizzazioni:

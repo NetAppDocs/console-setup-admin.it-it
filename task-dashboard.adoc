@@ -25,6 +25,7 @@ NOTE: Per ottenere metriche precise nella home page sono necessari agenti della 
 
 
 
+[[required-netapp-console-roles]]
 == Ruoli richiesti NetApp Console
 
 Ogni riquadro nella home page richiede ruoli utente diversi:
@@ -59,6 +60,7 @@ image:screenshot-home-metrics.png["Pagina iniziale NetApp Console che mostra le 
 
 
 
+[[enable-metrics-to-appear-on-the-home-page]]
 == Abilita la visualizzazione delle metriche nella home page
 
 È possibile visualizzare le metriche nella Home page quando sono soddisfatte le seguenti condizioni:
@@ -77,6 +79,7 @@ Per consentire la visualizzazione delle metriche nella home page, completare le 
 
 
 
+[[view-the-overall-storage-capacity]]
 == Visualizza la capacità di archiviazione complessiva
 
 Il riquadro Capacità di archiviazione fornisce le seguenti informazioni sui cluster ONTAP e sui sistemi Cloud Volumes ONTAP :
@@ -102,6 +105,7 @@ TIP: Se hai più progetti, potresti visualizzare dati diversi nel riquadro Capac
 
 
 
+[[view-ontap-alerts]]
 == Visualizza gli avvisi ONTAP
 
 Visualizza i problemi o i potenziali rischi nei tuoi ambienti ONTAP locali NetApp .  Puoi visualizzare alcuni avvisi non EMS e alcuni avvisi EMS.
@@ -149,6 +153,7 @@ Per un elenco degli avvisi che potresti visualizzare, fai riferimento a https://
 
 
 
+[[view-storage-performance-capacity]]
 == Visualizza la capacità delle prestazioni di archiviazione
 
 Esaminare la capacità di prestazioni di archiviazione utilizzata per cluster o sistema Cloud Volumes ONTAP per determinare in che modo la capacità di prestazioni, la latenza e gli IOPS influiscono sui carichi di lavoro.  Ad esempio, potresti scoprire di dover spostare i carichi di lavoro per ridurre al minimo la latenza e massimizzare IOPS e throughput per i carichi di lavoro critici.
@@ -166,6 +171,7 @@ TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare
 
 
 
+[[view-the-licenses-and-subscriptions-that-you-have]]
 == Visualizza le licenze e gli abbonamenti che possiedi
 
 Esaminare le seguenti informazioni nel riquadro Licenses and subscriptions :
@@ -188,6 +194,7 @@ TIP: La memorizzazione nella cache ottimizza le prestazioni, ma potrebbe causare
 
 
 
+[[view-ransomware-resilience-status]]
 == Visualizza lo stato di resilienza del ransomware
 
 Scopri se i carichi di lavoro sono a rischio di attacchi ransomware o protetti con il servizio dati NetApp Ransomware Resilience .  È possibile esaminare la quantità totale di dati protetti, visualizzare il numero di azioni consigliate e visualizzare il numero di avvisi relativi alla protezione dal ransomware.
@@ -209,6 +216,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransom
 
 
 
+[[view-backup-and-recovery-status]]
 == Visualizza lo stato di backup e ripristino
 
 Esamina lo stato generale dei tuoi backup e ripristini da NetApp Backup and Recovery.  È possibile visualizzare il numero di risorse protette e non protette.  Puoi anche visualizzare la percentuale di backup e operazioni di ripristino per la protezione dei tuoi carichi di lavoro.  Una percentuale più alta indica una migliore protezione dei dati.

@@ -42,6 +42,7 @@ La tabella mette a confronto le funzionalità della pagina Audit e del Centro no
 |===
 
 
+[[audit-user-activity-from-the-audit-page]]
 == Controlla l'attività dell'utente dalla pagina Audit
 
 Utilizzare la pagina Audit per identificare chi ha eseguito un'azione o il suo stato.
@@ -60,6 +61,7 @@ Ad esempio, puoi utilizzare il filtro *Servizio* per mostrare le azioni relative
 
 
 
+[[download-audit-logs-from-the-audit-page]]
 === Scarica i registri di controllo dalla pagina Audit
 
 È possibile scaricare i registri di controllo dalla pagina Controllo in un file CSV.  Ciò consente di tenere traccia delle azioni eseguite dagli utenti nella tua organizzazione.  Il file CSV include tutte le colonne presenti nel file CSV scaricato, indipendentemente dai filtri o dalle colonne visualizzate nella pagina Audit.
@@ -70,6 +72,8 @@ Ad esempio, puoi utilizzare il filtro *Servizio* per mostrare le azioni relative
 
 
 
+[[monitor-activities-using-the-notification-center]]
+[[notification-center]]
 == Monitorare le attività tramite il Centro notifiche
 
 Le notifiche monitorano le operazioni della Console per confermarne il successo.  Consentono di visualizzare lo stato di numerose azioni della Console avviate durante la sessione di accesso corrente.  Non tutti i servizi della console segnalano informazioni nel Centro notifiche.
@@ -80,6 +84,7 @@ Le notifiche monitorano le operazioni della Console per confermarne il successo.
 
 
 
+[[comparing-the-notification-center-with-alerts]]
 === Confronto tra il Centro notifiche e gli avvisi
 
 Il Centro notifiche consente di visualizzare lo stato delle operazioni avviate e di impostare notifiche di avviso per determinati tipi di attività di sistema.  Nel frattempo, gli avvisi consentono di visualizzare problemi o potenziali rischi nel tuo ambiente di archiviazione ONTAP in relazione a capacità, disponibilità, prestazioni, protezione e sicurezza.
@@ -88,6 +93,7 @@ https://docs.netapp.com/us-en/console-alerts/index.html["Scopri di più sugli av
 
 
 
+[[notification-types]]
 === Tipi di notifica
 
 La Console classifica le notifiche nelle seguenti categorie:
@@ -116,6 +122,7 @@ La Console classifica le notifiche nelle seguenti categorie:
 |===
 
 
+[[filter-notifications]]
 === Filtra le notifiche
 
 Per impostazione predefinita, tutte le notifiche attive verranno visualizzate nel Centro notifiche.  Puoi filtrare le notifiche che vedi per visualizzare solo quelle che ritieni importanti.  È possibile filtrare per "Servizio" e per "Tipo" di notifica.
@@ -126,6 +133,7 @@ Ad esempio, se vuoi visualizzare solo le notifiche "Errore" e "Avviso" per le op
 
 
 
+[[dismiss-notifications]]
 === Ignora le notifiche
 
 Puoi rimuovere le notifiche dalla pagina se non hai più bisogno di vederle.  È possibile ignorare le notifiche singolarmente o tutte contemporaneamente.
@@ -136,6 +144,7 @@ Per ignorare singole notifiche, passa il cursore sulla notifica e seleziona *Ign
 
 
 
+[[set-email-notification-settings]]
 === Imposta le impostazioni di notifica via email
 
 Puoi inviare tipi specifici di notifiche tramite e-mail, in modo da essere informato sulle attività importanti del sistema anche quando non hai effettuato l'accesso. Le e-mail possono essere inviate a tutti gli utenti che fanno parte della tua organizzazione o del tuo account, oppure a qualsiasi altro destinatario che debba essere a conoscenza di determinati tipi di attività del sistema.
@@ -169,6 +178,7 @@ La pagina *Destinatari aggiuntivi* consente di configurare la Console in modo ch
 
 
 
+[[add-additional-email-recipients]]
 === Aggiungi altri destinatari e-mail
 
 Gli utenti che compaiono nella pagina _Utenti dell'organizzazione_ vengono automaticamente inseriti tra gli utenti della tua organizzazione o del tuo account.  Nella pagina _Destinatari aggiuntivi_ puoi aggiungere indirizzi email per altre persone o gruppi che non hanno accesso alla Console, ma che devono essere informati su determinati tipi di avvisi e notifiche.

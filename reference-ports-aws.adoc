@@ -18,6 +18,7 @@ Il gruppo di sicurezza AWS per l'agente richiede regole sia in entrata che in us
 
 
 
+[[inbound-rules]]
 == Regole in entrata
 
 [cols="10,10,80"]
@@ -42,12 +43,14 @@ Il gruppo di sicurezza AWS per l'agente richiede regole sia in entrata che in us
 |===
 
 
+[[outbound-rules]]
 == Regole in uscita
 
 Il gruppo di sicurezza predefinito per l'agente apre tutto il traffico in uscita.  Se ciò è accettabile, seguite le regole di base per le comunicazioni in uscita.  Se hai bisogno di regole più rigide, usa le regole in uscita avanzate.
 
 
 
+[[basic-outbound-rules]]
 === Regole di base in uscita
 
 Il gruppo di sicurezza predefinito per l'agente include le seguenti regole in uscita.
@@ -64,6 +67,7 @@ Il gruppo di sicurezza predefinito per l'agente include le seguenti regole in us
 |===
 
 
+[[advanced-outbound-rules]]
 === Regole in uscita avanzate
 
 Se sono necessarie regole rigide per il traffico in uscita, è possibile utilizzare le seguenti informazioni per aprire solo le porte necessarie per la comunicazione in uscita da parte dell'agente.

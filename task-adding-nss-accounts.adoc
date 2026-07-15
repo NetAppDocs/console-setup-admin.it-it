@@ -20,6 +20,7 @@ La console supporta anche l'associazione di un account NSS per account utente. l
 
 
 
+[[overview]]
 == Panoramica
 
 Per abilitare le seguenti attività è necessario associare le credenziali del sito di supporto NetApp al numero di serie specifico dell'account della console:
@@ -39,6 +40,7 @@ Queste credenziali sono associate al numero di serie specifico del tuo account C
 
 
 
+[[add-an-nss-account]]
 == Aggiungi un account NSS
 
 È possibile aggiungere e gestire gli account del sito di supporto NetApp da utilizzare con la Console dalla Dashboard di supporto all'interno della Console.
@@ -82,6 +84,7 @@ Gli utenti possono ora selezionare l'account quando creano nuovi sistemi Cloud V
 
 
 
+[[update-nss-credentials]]
 == Aggiorna le credenziali NSS
 
 Per motivi di sicurezza, è necessario aggiornare le credenziali NSS ogni 90 giorni.  Se le tue credenziali NSS sono scadute, verrai avvisato nel centro notifiche della Console. link:task-monitor-cm-operations.html#notification-center["Scopri di più sul Centro notifiche"^] .
@@ -107,6 +110,8 @@ NetApp utilizza Microsoft Entra ID come provider di identità per i servizi di a
 
 
 
+[[attach-a-system-to-a-different-nss-account]]
+[[attach-system-nss-account]]
 == Collega un sistema a un account NSS diverso
 
 Se la tua organizzazione dispone di più account NetApp Support Site, puoi modificare l'account associato a un sistema Cloud Volumes ONTAP .
@@ -131,6 +136,7 @@ image:screenshot-nss-change-account.png["Uno screenshot che mostra il menu delle
 
 
 
+[[display-the-email-address-for-an-nss-account]]
 == Visualizza l'indirizzo email di un account NSS
 
 Per motivi di sicurezza, l'indirizzo email associato a un account NSS non viene visualizzato per impostazione predefinita.  È possibile visualizzare l'indirizzo e-mail e il nome utente associato a un account NSS.
@@ -146,6 +152,7 @@ TIP: Quando si accede alla pagina Gestione NSS, la Console genera un token per o
 
 
 
+[[remove-an-nss-account]]
 == Rimuovere un account NSS
 
 Elimina tutti gli account NSS che non desideri più utilizzare con la Console.
