@@ -51,7 +51,7 @@ La console basata sul web si connette a questo endpoint per interagire con le AP
 
 | https://mysupport.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport all'assistenza NetApp. | https://signin.b2c.netapp.com | Per aggiornare le credenziali del NetApp Support Site (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console. | https://support.netapp.com | Per ottenere informazioni sulle licenze e inviare messaggi AutoSupport all'assistenza NetApp, nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
 
-| https://api.bluexp.netapp.com https://netapp-cloud-account.auth0.com https://netapp-cloud-account.us.auth0.com https://console.netapp.com https://components.console.netapp.com https://cdn.auth0.com | Per fornire funzionalità e servizi all'interno della NetApp Console.
+| https://api.bluexp.netapp.com https://netapp-cloud-account.auth0.com https://netapp-cloud-account.us.auth0.com https://console.netapp.com https://components.console.bluexp.netapp.com https://cdn.auth0.com | Per fornire funzionalità e servizi all'interno della NetApp Console.
 
 [cols="2*"]
 |===
@@ -135,7 +135,7 @@ Per ottenere le licenze e contattare l'assistenza NetApp .
 * \ https://netapp-cloud-account.auth0.com
 * \ https://netapp-cloud-account.us.auth0.com
 * \ https://console.netapp.com
-* \https://components.console.netapp.com
+* \https://components.console.bluexp.netapp.com
 * \ https://cdn.auth0.com
 
  a| 
