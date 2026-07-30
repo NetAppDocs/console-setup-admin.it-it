@@ -29,9 +29,6 @@ Amministratore dell'organizzazione, amministratore della federazione, visualizza
 
 La federazione con il sito di supporto NetApp consente agli utenti di accedere alla console, Active IQ Digital Advisor e ad altre app associate utilizzando le stesse credenziali.
 
-
-NOTE: Se esegui la federazione con il sito di supporto NetApp , non puoi eseguirla anche con il tuo provider di gestione dell'identità aziendale.  Scegli quello più adatto alla tua organizzazione.
-
 .Passi
 . Scarica e completa il https://kb.netapp.com/@api/deki/files/98382/NetApp-B2C-Federation-Request-Form-April-2022.docx?revision=1["Modulo di richiesta di federazione NetApp"^] .
 . Inviare il modulo all'indirizzo email specificato nel modulo.
