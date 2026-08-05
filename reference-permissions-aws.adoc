@@ -124,6 +124,7 @@ Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono
         "iam:DeleteInstanceProfile",
         "iam:GetRolePolicy",
         "iam:GetRole",
+        "iam:TagRole",
         "sts:DecodeAuthorizationMessage",
         "sts:AssumeRole",
         "s3:GetBucketTagging",
@@ -362,6 +363,7 @@ Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -558,6 +560,7 @@ Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -678,6 +681,7 @@ Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -955,7 +959,7 @@ L'agente effettua le seguenti richieste API per distribuire e gestire Cloud Volu
 | Scopo | Azione | Utilizzato per la distribuzione? | Utilizzato per le operazioni quotidiane? | Utilizzato per l'eliminazione? 
 
 
-.13+| Crea e gestisci ruoli IAM e profili di istanza per istanze Cloud Volumes ONTAP | iam:ListInstanceProfiles | SÌ | SÌ | NO 
+.14+| Crea e gestisci ruoli IAM e profili di istanza per istanze Cloud Volumes ONTAP | iam:ListInstanceProfiles | SÌ | SÌ | NO 
 
 
 | iam:CreateRole | SÌ | NO | NO 
@@ -965,6 +969,9 @@ L'agente effettua le seguenti richieste API per distribuire e gestire Cloud Volu
 
 
 | iam:PutRolePolicy | SÌ | NO | NO 
+
+
+| iam:TagRole | SÌ | NO | NO 
 
 
 | iam:CreateInstanceProfile | SÌ | NO | NO 
