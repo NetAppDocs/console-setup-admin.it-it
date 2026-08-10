@@ -20,6 +20,8 @@ sidebar:
       url: "/whats-new.html"
     - title: Limitazioni note
       url: "/reference-limitations.html"
+    - title: Confronta NetApp Console e NetApp Console implementazione locale
+      url: "/console-differences.html"
   - title: Iniziare
     entries:
     - title: Impara le basi
