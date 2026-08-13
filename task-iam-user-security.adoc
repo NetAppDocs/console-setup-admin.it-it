@@ -4,7 +4,7 @@ permalink: task-iam-user-security.html
 keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management 
 summary: Gestisci i membri della tua organizzazione per fornire autorizzazioni ai diversi livelli della gerarchia delle risorse della tua organizzazione. 
 ---
-= Sicurezza dell'utente
+= Gestisci la sicurezza degli utenti in NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

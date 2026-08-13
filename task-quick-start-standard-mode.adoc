@@ -4,7 +4,7 @@ permalink: task-quick-start-standard-mode.html
 keywords: quick start, standard mode quick start 
 summary: 'Per iniziare a utilizzare NetApp Console (SaaS), prepara la rete per la Console, registrati e crea un account e utilizza l"assistente NetApp per impostare le funzionalità iniziali.' 
 ---
-= Flusso di lavoro introduttivo per NetApp Console (applicazione SaaS)
+= Guida rapida per la NetApp Console in modalità standard
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

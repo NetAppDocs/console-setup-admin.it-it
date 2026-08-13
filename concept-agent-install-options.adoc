@@ -4,7 +4,7 @@ permalink: concept-agent-install-options.html
 keywords: install agent, deployment method, console install, marketplace install, manual install, ova install, vcenter install, installation options, 
 summary: 'Distribuire un agente Console utilizzando la NetApp Console, il marketplace del proprio cloud provider o installando manualmente il software su un host Linux. Il metodo di distribuzione determina come si gestisce l"host dell"agente e varia a seconda della modalità di distribuzione di NetApp Console utilizzata.' 
 ---
-= Scegliere un metodo di distribuzione dell'agente della console
+= Scopri i metodi di distribuzione dell'agente di NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

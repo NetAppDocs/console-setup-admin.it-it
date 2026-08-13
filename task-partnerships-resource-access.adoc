@@ -4,7 +4,7 @@ permalink: task-partnerships-resource-access.html
 keywords: role-based access, partnership access, partner resources, resource access, grant access, provide partner access, partnership organization 
 summary: 'Puoi concedere l"accesso agli utenti partner assegnando loro ruoli specifici per cartelle e progetti all"interno della tua organizzazione.' 
 ---
-= Fornire l'accesso alle risorse agli utenti della partnership
+= Fornisci l'accesso alle risorse agli utenti partner in NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

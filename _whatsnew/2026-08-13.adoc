@@ -1,0 +1,25 @@
+= Console agent 4.10.0
+:allow-uri-read: 
+
+
+
+
+[[console-agent-4-10-0]]
+=== Console agent 4.10.0
+
+La versione 4.10.0 supporta sia la modalità standard che la modalità limitata.
+
+Questa versione dell'agente Console include miglioramenti della sicurezza e correzioni di bug.
+
+
+
+==== Reattività e affidabilità migliorate per Cloud Mediator
+
+Il servizio ora elabora gli aggiornamenti dello stato del cluster in modo più efficiente, riducendo i timeout intermittenti e i tempi di inattività e rafforzando la mediazione automatica dei failover non pianificati per le relazioni SMaS.
+
+
+
+[[netapp-console-administration]]
+=== Amministrazione NetApp Console
+
+NetApp Console 4.10.0 amministrazione include correzioni di sicurezza e bug.

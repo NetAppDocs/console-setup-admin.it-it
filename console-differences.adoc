@@ -4,7 +4,7 @@ permalink: console-differences.html
 keywords: netapp console, netapp console local deployment, comparison, saas, self-hosted, deployment modes, on-premises, cloud, storage management, data sovereignty, agentless, ONTAP fleet management, policy enforcement, storage class policies, data residency, vCenter, fleet management, workload analyzer, identity federation, autonomous, active directory, bring-your-own-license, local 
 summary: 'NetApp Console è un"applicazione SaaS che utilizza agenti Console per gestire sistemi di storage cloud e on-premises. NetApp Console local deployment è una macchina virtuale self-hosted e senza agenti per la gestione di flotte ONTAP su scala aziendale con applicazione delle policy, correzione delle discrepanze e piena sovranità dei dati.' 
 ---
-= Confronta NetApp Console e NetApp Console implementazione locale
+= In che modo NetApp Console e la distribuzione locale di NetApp Console sono diverse
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -13,3 +13,141 @@ summary: 'NetApp Console è un"applicazione SaaS che utilizza agenti Console per
 :imagesdir: ./media/
 
 
+
+NOTE: Scegli NetApp Console se gestisci ambienti cloud e on-premises e vuoi che NetApp gestisca l'infrastruttura della piattaforma. Scegli NetApp Console implementazione locale se gestisci un ampio ambiente ONTAP on-premises e hai bisogno di piena sovranità dei dati e di una gestione dello storage basata su policy.
+
+
+
+[[netapp-console]]
+== NetApp Console
+
+NetApp ospita e gestisce NetApp Console come applicazione SaaS. Ti registri e inizi subito a gestire lo storage. Per gestire i sistemi di storage, distribuisci agenti Console leggeri nei tuoi ambienti cloud o on-premises. Gli agenti si connettono outbound alla piattaforma NetApp Console e NetApp gestisce automaticamente l'autenticazione, gli aggiornamenti e la disponibilità della piattaforma.
+
+NetApp Console supporta anche la modalità limitata (installata nel tuo cloud pubblico con connettività outbound limitata) e la modalità privata (installata on-premises o nel tuo cloud senza connettività alla piattaforma NetApp Console, inclusi gli ambienti air-gapped).
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["Scopri di più sulle modalità di distribuzione NetApp Console"].
+
+NetApp Console supporta la più ampia gamma di sistemi di storage, inclusi cloud storage come Amazon FSx for ONTAP, Cloud Volumes ONTAP, Amazon S3, Google Cloud Storage, E-Series, StorageGRID e cluster ONTAP on-premises. Offre accesso alla suite completa di servizi dati NetApp, inclusi NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, NetApp Copy and Sync e NetApp Data Classification. NetApp Console offre anche funzionalità dei contratti di supporto come Digital Advisor, Lifecycle Planning e dashboard di Sustainability.
+
+NetApp Console è la soluzione ideale per le organizzazioni che gestiscono ambienti cloud ibridi e desiderano il massimo delle funzionalità, meno lavoro per mantenere tutto operativo e licenze flessibili.
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["Scopri NetApp Console^."]
+
+
+
+[[netapp-console-local-deployment]]
+== NetApp Console distribuzione locale
+
+La distribuzione locale di NetApp Console ti consente di eseguire il control plane di NetApp Console interamente all'interno della tua infrastruttura on-premises, senza che il traffico di gestione lasci il tuo ambiente. Distribuisci la Console come macchina virtuale utilizzando un'immagine di virtual appliance e la gestisci come qualsiasi altra macchina virtuale nel tuo ambiente vCenter. Non sono richiesti agenti Console. La macchina virtuale comunica direttamente con i tuoi cluster ONTAP.
+
+Sebbene la modalità privata di NetApp Console supporti anche implementazioni isolate dalla rete e on-premises, l'implementazione locale di Console è progettata specificamente per la gestione di flotte ONTAP su scala aziendale. Aggiunge funzionalità non disponibili in nessuna modalità di implementazione di NetApp Console:
+
+Politiche delle classi di archiviazione:: Definisci gli standard di archiviazione una sola volta come modelli riutilizzabili che raggruppano i requisiti di prestazioni, capacità e tiering. Tutto il provisioning utilizza classi approvate e la distribuzione locale di Console monitora continuamente i carichi di lavoro per verificarne la conformità e identificare eventuali deviazioni.
+Gestione della flotta:: Organizza i cluster in cartelle e fleet che rispecchiano la struttura della tua azienda, poi delega l'amministrazione a livello di organizzazione, cartella o fleet.
+Analizzatore del workload:: Correla latenza, throughput, operazioni di input/output al secondo e modifiche di configurazione nel tempo per individuare i problemi di prestazioni prima che influiscano sui carichi di lavoro.
+Integrazione di modelli linguistici su larga scala:: Collegati al tuo modello linguistico di grandi dimensioni per effettuare il provisioning dello storage utilizzando il linguaggio naturale, indagare sugli avvisi e ottenere risposte contestuali sul tuo ambiente di storage.
+Bonifica guidata e automatizzata:: Quando un carico di lavoro si discosta dalla sua classe di archiviazione o viene attivato un avviso, la distribuzione locale della Console fornisce suggerimenti Fix-It. Usa i passaggi guidati o la correzione automatica con un clic per ripristinare la conformità senza interventi manuali.
+Invio di avvisi tramite email e webhook:: Configura i canali di notifica via e-mail e webhook in modo che gli avvisi raggiungano i team giusti quando cambiano le condizioni di storage. I webhook si integrano con i tuoi strumenti di monitoraggio e gestione degli incidenti esistenti.
+
+
+La distribuzione locale della Console supporta i cluster ONTAP on-premises e NetApp Backup and Recovery. Si integra con Active Directory per l'autenticazione federata e supporta l'autenticazione a più fattori per gli utenti locali.
+
+La distribuzione locale tramite console è la soluzione ideale per le organizzazioni con grandi ambienti ONTAP on-premises che richiedono provisioning basato su policy, controlli di conformità automatizzati e piena sovranità dei dati.
+
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["Scopri la distribuzione locale della NetApp Console^."]
+
+
+
+[[feature-comparison]]
+== Confronto delle funzionalità
+
+
+
+[[storage-management]]
+=== Gestione dello storage
+
+[cols="3,2,2"]
+|===
+| Caratteristica | NetApp Console | NetApp Console distribuzione locale 
+
+
+| Cluster ONTAP on-premise | Sì (richiede l'agente Console) | Sì (comunicazione diretta dalla macchina virtuale Console) 
+
+
+| Sistemi di cloud storage (Amazon FSx for ONTAP, Cloud Volumes ONTAP, Amazon S3 e altri) | SÌ | NO 
+
+
+| E-Series e StorageGRID | SÌ | NO 
+
+
+| NetApp Backup and Recovery | SÌ | SÌ 
+
+
+| NetApp Disaster Recovery | SÌ | NO 
+
+
+| NetApp Ransomware Resilience | SÌ | NO 
+
+
+| NetApp Copy and Sync | SÌ | NO 
+
+
+| NetApp Data Classification | SÌ | NO 
+
+
+| Digital Advisor, pianificazione del ciclo di vita, sostenibilità | SÌ | NO 
+
+
+| Politiche relative alle classi di archiviazione e monitoraggio della conformità | NO | SÌ 
+
+
+| Bonifica guidata e automatizzata | NO | SÌ 
+
+
+| Gestione della flotta (cartelle e flotte) | NO | SÌ 
+
+
+| Analizzatore del workload | NO | SÌ 
+
+
+| Integrazione di large language model per operazioni assistite dall'intelligenza artificiale | NO | SÌ 
+|===
+
+
+[[console-setup-and-security]]
+=== Configurazione e sicurezza della console
+
+[cols="3,2,2"]
+|===
+| Caratteristica | NetApp Console | NetApp Console distribuzione locale 
+
+
+| Modello di implementazione | Software as a service, ospitato da NetApp (diverse modalità di implementazione disponibili) | Macchina virtuale self-hosted nella tua infrastruttura 
+
+
+| Agente Console richiesto | SÌ | NO 
+
+
+| Aggiornamenti software | Automatico, gestito da NetApp | Manuale 
+
+
+| Accesso all'interfaccia utente | NetApp Console application (accesso tramite internet o macchina virtuale) | Console macchina virtuale (locale, non richiede connessione a Internet) 
+
+
+| sovranità dei dati | Il traffico di gestione va alla piattaforma NetApp Console | Nessun traffico dati o di gestione esce dal tuo ambiente 
+
+
+| Integrazione con Active Directory | NO | SÌ 
+
+
+| Federazione delle identità | SÌ | NO 
+
+
+| Autenticazione a più fattori (utenti locali) | SÌ | SÌ 
+
+
+| Registrazione degli eventi di controllo | SÌ | SÌ 
+
+
+| Licenze | Abbonamenti al Marketplace e bring-your-own-license | Bring-your-own-license 
+|===

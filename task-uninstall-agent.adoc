@@ -4,7 +4,7 @@ permalink: task-uninstall-agent.html
 keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent 
 summary: 'Disinstallare un agente della Console per risolvere i problemi o per rimuoverlo definitivamente dall"host. I passaggi da seguire dipendono dalla modalità di distribuzione in uso. Una volta rimosso un agente della Console dal proprio ambiente, è possibile rimuoverlo anche dalla Console.' 
 ---
-= Disinstallare e rimuovere un agente Console
+= Disinstalla e rimuovi un agente NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

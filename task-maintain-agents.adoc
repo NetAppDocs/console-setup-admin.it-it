@@ -4,7 +4,7 @@ permalink: task-maintain-agents.html
 keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
 summary: 'La manutenzione del sistema operativo sull"host dell"agente è responsabilità dell"utente.  Ad esempio, dovresti applicare gli aggiornamenti di sicurezza al sistema operativo sull"host dell"agente Console seguendo le procedure standard della tua azienda per la distribuzione del sistema operativo.' 
 ---
-= Gestire la VM per un agente Console installato manualmente
+= Gestisci la VM per un agente NetApp Console installato manualmente
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

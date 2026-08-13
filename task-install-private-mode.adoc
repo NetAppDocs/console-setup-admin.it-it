@@ -4,7 +4,7 @@ permalink: task-install-private-mode.html
 keywords: install dark site, deploy dark site, install private mode, deploy private mode, install agent dark site, agent dark site, dark site, private mode, no internet 
 summary: 'Distribuisci la NetApp Console in modalità privata in modo da poterla utilizzare senza connettività outbound. Per iniziare, installa un agente Console, configura la NetApp Console accedendo all"interfaccia utente in esecuzione sull"agente Console, quindi fornisci le autorizzazioni cloud che hai precedentemente configurato.' 
 ---
-= Distribuisci l'agente della Console in modalità privata
+= Distribuisci l'agente NetApp Console in modalità privata
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
