@@ -89,10 +89,6 @@ Ipervisore:: È richiesto un hypervisor bare metal o hosted certificato per eseg
 
  a| 
 Red Hat Enterprise Linux
-
-
-
- a| 
  a| 
 9,6
 
@@ -111,7 +107,6 @@ Supportato in modalità di applicazione o modalità permissiva
 
 
  a| 
- a| 
 da 9,1 a 9,4
 
 * Solo versioni in lingua inglese.
@@ -128,7 +123,6 @@ Supportato in modalità di applicazione o modalità permissiva
 
 
 
- a| 
  a| 
 da 8,6 a 8,10
 
@@ -148,10 +142,6 @@ Supportato in modalità di applicazione o modalità permissiva
 
  a| 
 Ubuntu
-
-
-
- a| 
  a| 
 24,04 LTS
  a| 
@@ -163,7 +153,6 @@ Non supportato
 
 
 
- a| 
  a| 
 22,04 LTS
  a| 
