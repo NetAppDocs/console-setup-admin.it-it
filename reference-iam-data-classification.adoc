@@ -12,7 +12,7 @@ summary: 'NetApp Data Classification supporta due ruoli per gestire l"accesso in
 
 
 [role="lead"]
-NetApp Data Classification supporta la gestione delle identità e degli accessi per darti la flessibilità di assegnare agli utenti un ruolo specifico in base alle attività che devono svolgere all'interno della tua organizzazione. Le modalità di assegnazione dei ruoli dipendono dalle tue specifiche esigenze aziendali e dalle pratiche di gestione dell'archiviazione.
+NetApp Data Classification supporta i ruoli di gestione delle identità e degli accessi (IAM), così puoi personalizzare l'accesso in base alle attività che gli utenti devono svolgere. Come assegni i ruoli dipende dalle tue pratiche aziendali e di gestione dello storage.
 
 La classificazione dei dati supporta due ruoli:
 
@@ -38,7 +38,7 @@ NOTE: Il Compliance admin è stato aggiunto a Data Classification nella versione
 [[classification-viewer]]
 == Visualizzatore di classificazione
 
-Il visualizzatore di classificazione è progettato per gli utenti che necessitano di accedere ai risultati delle scansioni in NetApp Data Classification, ma non hanno bisogno di accedere alle risorse di configurazione. Gli utenti con il ruolo di visualizzatore di classificazione possono visualizzare i risultati delle mappature e delle scansioni complete per valutare le aree in cui è possibile risparmiare spazio di archiviazione o individuare potenziali rischi per i dati. Gli utenti con il ruolo di visualizzatore di classificazione possono anche generare report per le risorse a cui hanno accesso. Questi utenti non possono abilitare o disabilitare la scansione di volumi, bucket o database schema.
+Il visualizzatore di classificazione è progettato per gli utenti che hanno bisogno di accedere ai risultati delle scansioni in NetApp Data Classification, ma non hanno bisogno di accedere alle risorse di configurazione. Gli utenti con il ruolo di visualizzatore di classificazione possono visualizzare i risultati delle mappature e delle scansioni complete per valutare le aree in cui è possibile risparmiare spazio di archiviazione o individuare potenziali rischi per i dati. Gli utenti con il ruolo di visualizzatore di classificazione possono anche generare report per le risorse a cui hanno accesso. Questi utenti non possono abilitare o disabilitare la scansione di volumi, bucket o schemi di database.
 
 
 
