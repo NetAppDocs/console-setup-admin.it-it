@@ -17,8 +17,8 @@ summary: 'È possibile assegnare i seguenti ruoli agli utenti per consentire lor
 Il ripristino di emergenza utilizza i seguenti ruoli:
 
 * *Amministratore del ripristino di emergenza*: Esegui qualsiasi azione.
-* *Amministratore failover di disaster recovery*: esegue failover e migrazioni.
-* *Amministratore dell'applicazione di ripristino di emergenza*: crea piani di replica. Modificare i piani di replicazione. Avviare i failover di prova.
+* *Amministratore del failover per il ripristino di emergenza*: Esegui failover e migrazioni.
+* *Amministratore dell'applicazione di ripristino di emergenza*: Crea e modifica i piani di replica; avvia i test di failover.
 * *Visualizzatore di ripristino di emergenza*: visualizza solo le informazioni.
 
 
@@ -26,17 +26,20 @@ La tabella seguente indica le azioni che ciascun ruolo può eseguire.
 
 [cols="30,20a,20a,20a,20a"]
 |===
-| Caratteristica e azione | Amministratore del ripristino di emergenza | Amministratore del failover del ripristino di emergenza | Amministratore dell'applicazione di ripristino di emergenza | Visualizzatore di ripristino di emergenza 
+| Azione | Amministratore del ripristino di emergenza | Amministratore del failover del ripristino di emergenza | Amministratore dell'applicazione di ripristino di emergenza | Visualizzatore di ripristino di emergenza 
 
 
-| Visualizza la dashboard e tutte le schede  a| 
+5+| *Attivazione e individuazione* 
+
+
+| Attiva la licenza  a| 
 SÌ
+ a| 
+NO
  a| 
 SÌ
  a| 
-SÌ
- a| 
-SÌ
+NO
 
 
 
@@ -62,6 +65,17 @@ NO
 
 
 
+| Visualizza la dashboard e tutte le schede  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+ a| 
+SÌ
+
+
+
 | Visualizza le informazioni sulla licenza  a| 
 SÌ
  a| 
@@ -73,18 +87,29 @@ SÌ
 
 
 
-| Attiva la licenza  a| 
+| Visualizza le credenziali  a| 
+SÌ
+ a| 
 SÌ
  a| 
 NO
  a| 
+NO
+
+
+
+| Crea, aggiorna o elimina le credenziali  a| 
 SÌ
+ a| 
+SÌ
+ a| 
+NO
  a| 
 NO
 
 
 
-5+| *Nella scheda Siti*: 
+5+| *Siti* 
 
 
 | Visualizza i siti  a| 
@@ -98,7 +123,7 @@ SÌ
 
 
 
-| Aggiungere, modificare o eliminare siti  a| 
+| Aggiungi, modifica o elimina siti o cluster  a| 
 SÌ
  a| 
 NO
@@ -109,7 +134,18 @@ NO
 
 
 
-5+| *Nella scheda Piani di replicazione*: 
+| Visualizza i cluster  a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+ a| 
+NO
+
+
+
+5+| *Piani di replica* 
 
 
 | Visualizza i piani di replicazione  a| 
@@ -211,7 +247,32 @@ NO
 
 
 
-5+| *Nella scheda Gruppi di risorse*: 
+5+| *Impostazioni* 
+
+
+| Crea o modifica AppVaults  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+| Crea o modifica le trasformazioni delle risorse  a| 
+SÌ
+ a| 
+SÌ
+ a| 
+NO
+ a| 
+NO
+
+
+
+5+| *Gruppi di risorse* 
 
 
 | Visualizza gruppi di risorse  a| 
@@ -236,7 +297,7 @@ NO
 
 
 
-5+| *Nella scheda Monitoraggio lavori*: 
+5+| *Monitoraggio dei job* 
 
 
 | Visualizza i lavori  a| 
