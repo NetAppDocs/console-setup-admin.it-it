@@ -24,3 +24,9 @@ La versione 4.10.0 include aggiornamenti ai seguenti componenti e servizi della 
 
 | NetApp Data Classification | 1.546.0 (10 agosto 2026) | Vai al https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["novità nella pagina Classificazione di NetApp"^]. 
 |===
+
+
+[[private-mode-4-10-0-supports-red-hat-enterprise-linux-rhel-9-6]]
+=== La modalità privata 4.10.0 supporta Red Hat Enterprise Linux (RHEL) 9.6
+
+La modalità privata può ora essere installata ed eseguita su Red Hat Enterprise Linux (RHEL) 9.6, offrendoti il sistema operativo supportato più recente per una maggiore sicurezza e prestazioni superiori. link:https://docs.netapp.com/us-en/console-setup-admin/task-prepare-private-mode.html#step-3-review-host-requirements["Scopri i requisiti dell'host per la modalità privata"^]
