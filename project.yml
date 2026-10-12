@@ -130,12 +130,12 @@ sidebar:
         url: "/concept-agents.html"
       - title: Mantieni gli agenti della console
         entries:
-        - title: Gestire gli agenti della Console installati manualmente
-          entries:
-          - title: Mantenere un agente installato su VCenter
-            url: "/task-agent-vm-config.html"
-          - title: Mantenere un agente installato manualmente
-            url: "/task-maintain-agents.html"
+        - title: Mantieni un agente installato su vCenter
+          url: "/task-agent-vm-config.html"
+        - title: Mantieni le istanze di macchine virtuali dell'agente NetApp Console
+          url: "/task-maintain-agents.html"
+      - title: Agenti Secure Console
+        entries:
         - title: Aggiornare gli indirizzi e gli URI dell'agente
           url: "/task-update-agent-addressing.html"
         - title: Installa un certificato firmato da una CA per l'accesso alla console
@@ -143,12 +143,12 @@ sidebar:
           url: "/task-installing-https-cert.html"
         - title: Configurare un agente Console per utilizzare un server proxy
           url: "/task-configuring-proxy.html"
-        - title: Risolvere i problemi dell'agente della console
-          url: "/task-troubleshoot-agent.html"
-        - title: Aggiorna l'agente della console
-          url: "/task-upgrade-agent.html"
-        - title: Disinstallare e rimuovere l'agente Console
-          url: "/task-uninstall-agent.html"
+      - title: Risolvere i problemi dell'agente della console
+        url: "/task-troubleshoot-agent.html"
+      - title: Aggiorna l'agente della console
+        url: "/task-upgrade-agent.html"
+      - title: Disinstallare e rimuovere l'agente Console
+        url: "/task-uninstall-agent.html"
       - title: Gestisci le credenziali del provider cloud
         entries:
         - title: AWS
