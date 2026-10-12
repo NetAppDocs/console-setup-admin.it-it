@@ -16,6 +16,9 @@ summary: 'Puoi assegnare i seguenti ruoli agli utenti per fornire loro accesso a
 [role="lead"]
 Puoi assegnare i seguenti ruoli agli utenti per consentire loro l'accesso a Cloud Volumes ONTAP all'interno della NetApp Console.
 
+
+NOTE: I ruoli di accesso per Cloud Volumes ONTAP sono disponibili quando esegui un agente Console versione 4.9.0 o successiva.
+
 * *Cloud Volumes ONTAP admin*: Fornisce accesso completo a tutte le operazioni di Cloud Volumes ONTAP.
 * *Cloud Volumes ONTAP operator*: Esegue importanti operazioni di storage, come la scoperta e la gestione dei sistemi Cloud Volumes ONTAP, inclusa l'aggiunta di volumi, aggregati, snapshot e repliche, la modifica di alcune configurazioni e l'aggiornamento delle versioni di Cloud Volumes ONTAP.
 * *Cloud Volumes ONTAP viewer*: Fornisce accesso in sola lettura alle informazioni di Cloud Volumes ONTAP. Questo ruolo non può eseguire operazioni attive. Alcune schede e schermate contenenti informazioni di configurazione potrebbero non essere disponibili per i viewer.
@@ -27,9 +30,9 @@ Assegna i ruoli di Cloud Volumes ONTAP a livello di organizzazione, cartella o p
 
 
 
-[[role-migrations-for-existing-users]]
+[[role-migrations-for-existing-users-after-upgrading-to-console-agent-version-4-9-0-or-later]]
 [[seeding-mappings-for-existing-users]]
-== Migrazione dei ruoli per gli utenti esistenti
+== Migrazione dei ruoli per gli utenti esistenti dopo l'aggiornamento alla versione 4.9.0 o successiva dell'agente Console
 
 Quando aggiorni un agente della Console alla versione 4.9.0 o successiva, la Console assegna ruoli aggiuntivi di Cloud Volumes ONTAP agli utenti esistenti in base ai loro ruoli sulla piattaforma.
 

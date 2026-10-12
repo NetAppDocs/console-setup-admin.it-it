@@ -16,6 +16,9 @@ summary: 'Configura l"accesso in base al ruolo per Cloud Volumes ONTAP organizza
 [role="lead"]
 Configura l'accesso a Cloud Volumes ONTAP così gli utenti Console esistenti mantengono l'accesso di cui hanno bisogno e i nuovi abbonati possono aggiungere utenti con le autorizzazioni appropriate.
 
+
+NOTE: I ruoli di accesso per Cloud Volumes ONTAP sono disponibili quando esegui un agente Console versione 4.9.0 o successiva.
+
 Usa una delle seguenti sezioni:
 
 * *Novità per NetApp Console e Cloud Volumes ONTAP*: Configura l'accesso in base al ruolo per i nuovi utenti e i sistemi Cloud Volumes ONTAP.
