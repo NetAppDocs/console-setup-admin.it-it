@@ -128,11 +128,11 @@ Supportato in modalità di applicazione o modalità permissiva
  a| 
 Ubuntu
  a| 
-22,04 LTS
+24,04 LTS
  a| 
-4.0.0 o versioni successive
+4.0.0 o versione successiva con NetApp Console in modalità privata
  a| 
-Docker Engine da 23.0.6 a 26.0.0
+Docker Engine dalla versione 23.0.6 alla 28.0.0.
 
 26.0.0 è supportato con le installazioni del _nuovo_ agente 3.9.44 o successive
  a| 

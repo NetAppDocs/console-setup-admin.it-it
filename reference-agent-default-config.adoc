@@ -31,7 +31,7 @@ I seguenti dettagli di configurazione si applicano se hai distribuito un agente 
 Se hai distribuito un agente Console dalla Console o dal marketplace AWS, tieni presente quanto segue:
 
 * Il tipo di istanza EC2 è t3.2xlarge.
-* Il sistema operativo per l'immagine è Ubuntu 22.04 LTS.
+* Il sistema operativo per l'immagine è Ubuntu 24.04 LTS.
 +
 Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per accedere al sistema è necessario utilizzare un terminale.
 
@@ -48,7 +48,7 @@ Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per acced
 Se hai distribuito un agente di Console da Console o da Azure marketplace, tieni presente quanto segue:
 
 * Il tipo di VM è Standard_D8s_v3.
-* Il sistema operativo per l'immagine è Ubuntu 22.04 LTS.
+* Il sistema operativo per l'immagine è Ubuntu 24.04 LTS.
 +
 Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per accedere al sistema è necessario utilizzare un terminale.
 
@@ -64,7 +64,7 @@ Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per acced
 Se hai distribuito un agente Console dalla Console o dal marketplace di Google Cloud, tieni presente quanto segue:
 
 * L'istanza della VM è n2-standard-8.
-* Il sistema operativo per l'immagine è Ubuntu 22.04 LTS.
+* Il sistema operativo per l'immagine è Ubuntu 24.04 LTS.
 +
 Il sistema operativo non include un'interfaccia grafica utente (GUI).  Per accedere al sistema è necessario utilizzare un terminale.
 
