@@ -54,7 +54,7 @@ La distribuzione locale della Console supporta i cluster ONTAP on-premises e Net
 
 La distribuzione locale tramite console è la soluzione ideale per le organizzazioni con grandi ambienti ONTAP on-premises che richiedono provisioning basato su policy, controlli di conformità automatizzati e piena sovranità dei dati.
 
-link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["Scopri la distribuzione locale della NetApp Console^."]
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["Scopri il deployment locale di NetApp Console."^]
 
 
 

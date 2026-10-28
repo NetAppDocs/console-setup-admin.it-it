@@ -54,7 +54,7 @@ Per modificarlo, l'agente della console deve essere attivo.
 . Selezionare *Configurazione proxy HTTP*.
 . Selezionare *Proxy esplicito* nel campo Tipo di configurazione.
 . Seleziona *Abilita proxy*.
-. Specificare il server utilizzando la sintassi http://_address:port_[] O https://_address:port_[]
+. Specifica il server utilizzando la sintassi \http://<address>:<port> o \https://<address>:<port>
 . Specificare un nome utente e una password se è richiesta l'autenticazione di base per il server.
 +
 Notare quanto segue:

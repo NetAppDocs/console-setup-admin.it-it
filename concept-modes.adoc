@@ -19,7 +19,7 @@ Puoi utilizzare NetApp Console tramite l'applicazione SaaS oppure installarla au
 NetApp si riferisce a questi casi d'uso come _modalità di distribuzione_. Ogni modalità offre connettività, funzionalità e servizi diversi per le esigenze aziendali e di sicurezza.
 
 Modalità standard (SaaS):: L'applicazione NetApp Console SaaS (software-as-a-service) consente l'accesso a tutti i servizi dati NetApp, aggiornamenti automatici e opzioni di autenticazione flessibili come la federazione delle identità e gli accessi al sito di supporto NetApp. Questa modalità supporta gli abbonamenti al marketplace e le licenze BYOL. Questa modalità è ideale per la maggior parte degli utenti e delle organizzazioni, in particolare per coloro che desiderano il maggior numero di funzionalità e servizi disponibili con NetApp Console.
-Modalità limitata (installata nel tuo cloud pubblico):: La modalità limitata è pensata per le organizzazioni che necessitano di maggiore sicurezza e connettività limitata, come governi e aziende regolamentate. Si installa la NetApp Console nel proprio cloud pubblico (in una regione governativa, sovrana o commerciale), e questa ha una connettività outbound limitata verso gli endpoint API della NetApp Console (ospitati nell'applicazione SaaS). La modalità limitata fornisce accesso ai principali servizi dati, tra cui Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (in regioni governative e commerciali) e classificazione dei dati, insieme ad aggiornamenti software automatizzati e federazione delle identità.
+Modalità limitata (installata nel tuo cloud pubblico):: La modalità con restrizioni è pensata per le organizzazioni che necessitano di maggiore sicurezza e connettività limitata, come enti governativi e aziende soggette a normative. Installi la NetApp Console nel tuo cloud pubblico (in una regione governativa, sovrana o commerciale) e dispone di connettività outbound limitata verso gli endpoint API di NetApp Console (ospitati nell'applicazione SaaS). La modalità con restrizioni fornisce l'accesso ai principali servizi dati, tra cui AI Data Engine, Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (nelle regioni governative e commerciali) e la classificazione dei dati, insieme ad aggiornamenti software automatici e federazione delle identità.
 Modalità privata (installata presso la tua sede o nel cloud):: La modalità privata è pensata per le organizzazioni con esigenze di sicurezza rigorose, come quelle in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6 o in ambienti air-gapped. Non si connette all'applicazione SaaS NetApp Console o alle API NetApp basate sul cloud, offrendo il pieno controllo e bloccando le comunicazioni esterne. I servizi dati supportati includono NetApp Backup and Recovery, NetApp Data Classification, NetApp Replication e Cloud Volumes ONTAP. Tutto lo storage e l'autenticazione rimangono locali, mantenendo i dati all'interno del proprio ambiente. Utilizzare questa modalità per appaltatori della difesa, istituti finanziari con rigide regole di residenza dei dati ed enti governativi con sistemi classificati.
 
 
@@ -139,7 +139,10 @@ NetApp consiglia ai clienti di collaborare con il proprio rappresentante NetApp 
 | Carichi di lavoro | NO 
 
 
-.8+| *Servizi dati* | NetApp Backup and Recovery | SÌ 
+.9+| *Servizi dati* | NetApp AI Data Engine | SÌ 
+
+
+| NetApp Backup and Recovery | SÌ 
 
 
 | Classificazione NetApp | SÌ 
@@ -290,7 +293,10 @@ Nella tabella seguente sono elencate le funzionalità di gestione dell'archiviaz
 | Cluster ONTAP on-premise | Necessario per l'individuazione e la gestione. È possibile utilizzare l'individuazione diretta senza un agente della NetApp Console, ma è necessario un agente per utilizzare le funzionalità di gestione. 
 
 
-.3+| *Servizi dati* (la modalità limitata supporta meno servizi dati rispetto alla modalità standard)  a| 
+.4+| *Servizi dati* (la modalità limitata supporta meno servizi dati rispetto alla modalità standard) | AI Data Engine | SÌ 
+
+
+ a| 
 Backup and Recovery
 
 * Supportato nelle regioni governative e commerciali con modalità limitata. Non supportato nelle regioni sovrane con modalità limitata.
@@ -638,7 +644,10 @@ Si noti che alcuni servizi potrebbero essere supportati con limitazioni. Per mag
 | Carichi di lavoro | NO | NO 
 
 
-.8+| *Servizi dati* | Backup and Recovery | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] 
+.9+| *Servizi dati* | AI Data Engine | SÌ | NO 
+
+
+| Backup and Recovery | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] | SÌhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Visualizza l'elenco delle destinazioni di backup supportate per i dati del volume ONTAP"^] 
 
 
 | Classificazione NetApp | SÌ | SÌ 

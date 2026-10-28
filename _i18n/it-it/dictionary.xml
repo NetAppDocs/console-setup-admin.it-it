@@ -2595,7 +2595,6 @@
   <block id="3a71443a0764cf544fb5e2055be2d744" category="list-text">Selezionare *Configurazione proxy HTTP*.</block>
   <block id="945758c578fdff6bf19c6fade212dcaf" category="list-text">Selezionare *Proxy esplicito* nel campo Tipo di configurazione.</block>
   <block id="dabc8d2c79f6529ca393b4b3d4f75805" category="list-text">Seleziona *Abilita proxy*.</block>
-  <block id="25e8eb6a683e97e04e337e061a18205c" category="list-text">Specificare il server utilizzando la sintassi<block ref="f8f3e404ad5e32f60f55bb48e6395ae6" category="inline-link-rx"></block> O<block ref="9ab29a9097f3907435367cc314192885" category="inline-link-rx"></block></block>
   <block id="2fc62556a3d8d2f1a8b9dc5e4e4ba9ca" category="list-text">Specificare un nome utente e una password se è richiesta l'autenticazione di base per il server.</block>
   <block id="80bba58d673fb4fcbcf926f928bf80c7" category="list-text">Per un utente di dominio, è necessario immettere il codice ASCII per \ come segue: domain-name%92user-name</block>
   <block id="5596775e1e7017bff2ae389af56efd57" category="paragraph">Ad esempio: netapp%92proxy</block>
@@ -5242,7 +5241,6 @@
   <block id="039fece4b91879f57d8ce3e60cd91b72" category="list-text">Modalità standard (SaaS)</block>
   <block id="4404088bcdbc148a12d9d54feaceaaa6" category="list-text">L'applicazione NetApp Console SaaS (software-as-a-service) consente l'accesso a tutti i servizi dati NetApp, aggiornamenti automatici e opzioni di autenticazione flessibili come la federazione delle identità e gli accessi al sito di supporto NetApp. Questa modalità supporta gli abbonamenti al marketplace e le licenze BYOL. Questa modalità è ideale per la maggior parte degli utenti e delle organizzazioni, in particolare per coloro che desiderano il maggior numero di funzionalità e servizi disponibili con NetApp Console.</block>
   <block id="cbe7773bd2fa95a5751a5e831a6e8519" category="list-text">Modalità limitata (installata nel tuo cloud pubblico)</block>
-  <block id="9b623b58bde4f03efa6364d08c8279df" category="list-text">La modalità limitata è pensata per le organizzazioni che necessitano di maggiore sicurezza e connettività limitata, come governi e aziende regolamentate. Si installa la NetApp Console nel proprio cloud pubblico (in una regione governativa, sovrana o commerciale), e questa ha una connettività outbound limitata verso gli endpoint API della NetApp Console (ospitati nell'applicazione SaaS). La modalità limitata fornisce accesso ai principali servizi dati, tra cui Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (in regioni governative e commerciali) e classificazione dei dati, insieme ad aggiornamenti software automatizzati e federazione delle identità.</block>
   <block id="58c169b907a09c154e92b586b03720ce" category="list-text">Modalità privata (installata presso la tua sede o nel cloud)</block>
   <block id="e728600836da4c211714325b06aff5ce" category="list-text">La modalità privata è pensata per le organizzazioni con esigenze di sicurezza rigorose, come quelle in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6 o in ambienti air-gapped. Non si connette all'applicazione SaaS NetApp Console o alle API NetApp basate sul cloud, offrendo il pieno controllo e bloccando le comunicazioni esterne. I servizi dati supportati includono NetApp Backup and Recovery, NetApp Data Classification, NetApp Replication e Cloud Volumes ONTAP. Tutto lo storage e l'autenticazione rimangono locali, mantenendo i dati all'interno del proprio ambiente. Utilizzare questa modalità per appaltatori della difesa, istituti finanziari con rigide regole di residenza dei dati ed enti governativi con sistemi classificati.</block>
   <block id="8f674ddec71fa3256a062bcac7a92856" category="admonition">NetApp Console limita il flusso di dati in modalità riservata e privata, ma è necessario assicurarsi che l'ambiente sia conforme alle normative.</block>
@@ -6331,8 +6329,6 @@
   <block id="69c0257b1ba8a3ba7687d4f7a9883d7f" category="list-text">Configura i canali di notifica via e-mail e webhook in modo che gli avvisi raggiungano i team giusti quando cambiano le condizioni di storage. I webhook si integrano con i tuoi strumenti di monitoraggio e gestione degli incidenti esistenti.</block>
   <block id="00c24ecc0e9a6f1c6a5202f40e8c96c1" category="paragraph">La distribuzione locale della Console supporta i cluster ONTAP on-premises e NetApp Backup and Recovery. Si integra con Active Directory per l'autenticazione federata e supporta l'autenticazione a più fattori per gli utenti locali.</block>
   <block id="be6ca74d1ea996c7c4fe59d3f22d39a4" category="paragraph">La distribuzione locale tramite console è la soluzione ideale per le organizzazioni con grandi ambienti ONTAP on-premises che richiedono provisioning basato su policy, controlli di conformità automatizzati e piena sovranità dei dati.</block>
-  <block id="70b86d6aa7fb00fd1d760b33b8607159" category="inline-link-macro">Scopri la distribuzione locale della NetApp Console^.</block>
-  <block id="f64bf1d04df251b82d06554b478f9ae4" category="paragraph"><block ref="f64bf1d04df251b82d06554b478f9ae4" category="inline-link-macro-rx"></block></block>
   <block id="0161e3d40bdbea6ca6998c8c60165b33" category="section-title">Confronto delle funzionalità</block>
   <block id="bfd15aa26ba0ced782240c4a8b7e517e" category="section-title">Gestione dello storage</block>
   <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">Caratteristica</block>
@@ -6663,4 +6659,15 @@
   <block id="7be2d306061e806c6a2cf1ac2026ea93" category="section-title">Migrazione dei ruoli per gli utenti esistenti dopo l'aggiornamento alla versione 4.9.0 o successiva dell'agente Console</block>
   <block id="ecfb18572af1acc83bcc04e648fd570d" category="paragraph">4.0.0 o versione successiva con NetApp Console in modalità privata</block>
   <block id="044ded006ef73f38b5aa769474d4c58d" category="list-text">Il sistema operativo per l'immagine è Ubuntu 24.04 LTS.</block>
+  <block id="08853958e0db62fd50058fd45b355d7a" category="doc">Console agent 4.12.0</block>
+  <block id="67b83a9547aaccf9123cbc81823aeda8" category="paragraph">La versione 4.12.0 supporta sia la modalità standard che la modalità limitata.</block>
+  <block id="f3826fe13aaaec9b1aee814413e5cc00" category="paragraph">Questa versione include miglioramenti alla sicurezza e correzioni di bug.</block>
+  <block id="be15bb9dacde4dbbac6fa94a41f457d4" category="list-text">La modalità con restrizioni è pensata per le organizzazioni che necessitano di maggiore sicurezza e connettività limitata, come enti governativi e aziende soggette a normative. Installi la NetApp Console nel tuo cloud pubblico (in una regione governativa, sovrana o commerciale) e dispone di connettività outbound limitata verso gli endpoint API di NetApp Console (ospitati nell'applicazione SaaS). La modalità con restrizioni fornisce l'accesso ai principali servizi dati, tra cui AI Data Engine, Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (nelle regioni governative e commerciali) e la classificazione dei dati, insieme ad aggiornamenti software automatici e federazione delle identità.</block>
+  <block id="2f05d6cddb39e99b401c758387957ed6" category="cell">NetApp AI Data Engine</block>
+  <block id="424a10335c5c90e5b96111de1934acec" category="cell">AI Data Engine</block>
+  <block id="52ae244e9f2a39b24f6e7062c06f1548" category="inline-link-macro">Scopri il deployment locale di NetApp Console.</block>
+  <block id="a8f4a115cb2472a4344e18b6a59c28a7" category="paragraph"><block ref="a8f4a115cb2472a4344e18b6a59c28a7" category="inline-link-macro-rx"></block></block>
+  <block id="ab6e085a179dd5f550dee0092d1b6d67" category="list-text">Specifica il server utilizzando la sintassi \http://&lt;address&gt;:&lt;port&gt; o \https://&lt;address&gt;:&lt;port&gt;</block>
+  <block id="f633c86b0317ff4aa3fa992245e2b77a" category="section-title">15 ottobre 2026</block>
+  <block id="972fa0a7afa32e373a27dd0fbf1e8d19" category="paragraph">Direttiva non risolta in &lt;stdin&gt; - include::_whatsnew/2026-10-13.adoc[]</block>
 </blocks>
