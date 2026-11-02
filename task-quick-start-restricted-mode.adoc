@@ -20,16 +20,22 @@ La modalità limitata è in genere utilizzata da enti governativi statali e loca
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] link:task-prepare-restricted-mode.html["Prepararsi per la distribuzione"]
 [role="quick-margin-list"]
-. Preparare un host Linux dedicato che soddisfi i requisiti di CPU, RAM, spazio su disco, strumento di orchestrazione dei container e altro ancora.
+. Esamina i requisiti dell'host. Se installi manualmente, prepara un host Linux dedicato che soddisfi i requisiti di CPU, RAM, spazio su disco e degli strumenti di orchestrazione dei container. link:task-prepare-restricted-mode.html#step-3-review-host-requirements["Esamina i requisiti dell'host"].
 . Impostare una rete che fornisca l'accesso alle reti di destinazione, l'accesso a Internet in uscita per le installazioni manuali e l'accesso a Internet in uscita per l'accesso quotidiano.
-. Imposta le autorizzazioni nel tuo provider cloud in modo da poterle associare all'istanza dell'agente Console dopo averla distribuita.
+. Prepara le autorizzazioni cloud richieste per il tuo provider e il tuo metodo di implementazione.
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] link:task-install-restricted-mode.html["Distribuisci l'agente della console"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Distribuisci l'agente Console
 [role="quick-margin-list"]
-. Installa l'agente Console dal marketplace del tuo provider cloud oppure installa manualmente il software sul tuo host Linux.
+. Scegli le istruzioni di distribuzione per il tuo ambiente cloud:
++
+** AWS: link:task-install-restricted-mode-aws.html["Implementa in AWS"]
+** Azure: link:task-install-restricted-mode-azure.html["Implementa in Azure"]
+** Installazione manuale: link:task-install-restricted-mode-manual.html["Distribuisci manualmente in AWS, Azure o Google Cloud"]
+
+
 . Per configurare la NetApp Console , apri un browser Web e inserisci l'indirizzo IP dell'host Linux.
-. Fornire all'agente della console le autorizzazioni precedentemente impostate.
+. Segui le istruzioni specifiche del tuo provider per associare le autorizzazioni necessarie all'agente di Console. Per le distribuzioni di AWS Marketplace, seleziona il ruolo IAM quando avvii l'istanza EC2.
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] link:task-subscribe-restricted-mode.html["Iscriviti a NetApp Intelligent Services (facoltativo)"]

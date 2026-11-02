@@ -1,0 +1,721 @@
+---
+sidebar: sidebar 
+permalink: task-install-restricted-mode-manual.html 
+keywords: restricted mode, manual install, AWS, Azure, Google Cloud, Linux host, Console agent 
+summary: 'Installa manualmente l"agente della Console in modalità limitata su un host Linux dedicato in AWS, Azure o Google Cloud, quindi configura la Console e assegna le autorizzazioni cloud.' 
+---
+= Distribuisci manualmente l'agente NetApp Console in modalità limitata
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se vuoi utilizzare NetApp Console con connettività outbound limitata, devi distribuire manualmente l'agente Console in modalità con restrizioni.
+
+Se non vuoi utilizzare un abbonamento al marketplace o stai distribuendo Google Cloud, devi installare manualmente l'agente della Console.
+
+
+
+[[step-1-prepare-cloud-permissions]]
+== Passaggio 1: Prepara le autorizzazioni cloud
+
+Prima di installare l'agente Console, prepara le autorizzazioni del cloud provider necessarie per gestire le risorse.
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Scopri come preparare le autorizzazioni cloud"] .
+
+
+
+[[step-2-enable-google-cloud-apis-google-cloud-only]]
+[[restricted-mode-google-cloud-apis]]
+== Passaggio 2: Abilita le API di Google Cloud (solo per Google Cloud)
+
+Se stai installando l'agente Console in Google Cloud, abilita le API necessarie nel tuo progetto prima dell'installazione. Queste API sono necessarie per specifiche funzionalità di Cloud Volumes ONTAP.
+
+.Passi
+. https://cloud.google.com/apis/docs/getting-started#enabling_apis["Abilita le API nel tuo progetto Google Cloud"^]
++
+** API Cloud Build (necessaria per le distribuzioni Cloud Volumes ONTAP in modalità privata tramite Infrastructure Manager)
+** API di Cloud Deployment Manager V2
+** API di Cloud Infrastructure Manager
+** API di registrazione cloud
+** API di Cloud Resource Manager
+** API di Compute Engine
+** API di gestione dell'identità e dell'accesso (IAM)
+** Cloud Key Management Service (KMS) API (necessaria solo se si prevede di utilizzare NetApp Backup and Recovery con chiavi di crittografia gestite dal cliente (CMEK))
+** Cloud Quotas API (necessaria per le distribuzioni Cloud Volumes ONTAP tramite Infrastructure Manager)
+
+
+
+
+
+
+[[step-3-prepare-network-access]]
+== Passaggio 3: Prepara l'accesso alla rete
+
+Consenti gli endpoint outbound richiesti per il cloud provider in cui installi il Console agent.
+
+
+
+[[cloud-provider-endpoints]]
+=== Endpoint del cloud provider
+
+
+
+==== ambienti AWS
+
+Consenti a questi endpoint di servizio AWS di gestire le risorse AWS, incluso FSx for ONTAP.
+
+[cols="2a,1a"]
+|===
+| Punti finali | Scopo 
+
+
+ a| 
+Servizi AWS (amazonaws.com):
+
+* Formazione delle nuvole
+* Elastic Compute Cloud (EC2)
+* Gestione dell'identità e degli accessi (IAM)
+* Servizio di gestione delle chiavi (KMS)
+* Servizio token di sicurezza (STS)
+* Servizio di archiviazione semplice (S3)
+
+ a| 
+Per gestire le risorse AWS.  L'endpoint dipende dalla tua regione AWS. https://docs.aws.amazon.com/general/latest/gr/rande.html["Per i dettagli, fare riferimento alla documentazione AWS"^]
+
+
+
+ a| 
+Amazon FSx for NetApp ONTAP:
+
+* api.workloads.netapp.com
+
+ a| 
+La console basata sul Web contatta questo endpoint per interagire con le API di Workload Factory per gestire e utilizzare i carichi di lavoro basati su FSx for ONTAP.
+
+|===
+
+
+==== Ambienti Azure
+
+Consenti gli endpoint applicabili alla tua regione Azure: public, Government o China.
+
+[cols="2a,1a"]
+|===
+| Punti finali | Scopo 
+
+
+ a| 
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
+
+ a| 
+Per gestire le risorse nelle aree pubbliche di Azure.
+
+
+
+ a| 
+* \https://management.usgovcloudapi.net
+* \https://login.microsoftonline.us
+* \https://*.blob.core.usgovcloudapi.net
+* \https://core.usgovcloudapi.net
+
+ a| 
+Per gestire le risorse nelle aree di Azure Government.
+
+
+
+ a| 
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
+
+ a| 
+Per gestire le risorse nelle regioni di Azure Cina.
+
+|===
+
+
+==== Ambienti Google Cloud
+
+Consenti a questi endpoint API di Google Cloud di gestire le risorse nel tuo progetto.
+
+[cols="2a,1a"]
+|===
+| Punti finali | Scopo 
+
+
+ a| 
+* \https://www.googleapis.com/compute/v1/
+* \https://compute.googleapis.com/compute/v1
+* \https://cloudresourcemanager.googleapis.com/v1/projects
+* \https://www.googleapis.com/compute/beta
+* \https://storage.googleapis.com/storage/v1
+* \https://www.googleapis.com/storage/v1
+* \https://iam.googleapis.com/v1
+* \https://cloudkms.googleapis.com/v1
+* \https://config.googleapis.com/v1/projects
+
+ a| 
+Per gestire le risorse in Google Cloud.
+
+|===
+
+
+[[netapp-console-endpoints]]
+=== NetApp Console endpoint
+
+Consenti gli endpoint condivisi per il supporto di NetApp, le funzionalità di Console e la distribuzione e gli aggiornamenti dell'agente di Console.
+
+[cols="2a,1a"]
+|===
+| Punti finali | Scopo 
+
+
+ a| 
+* \ https://mysupport.netapp.com
+
+ a| 
+Per ottenere informazioni sulle licenze e per inviare messaggi AutoSupport a NetApp Support.
+
+
+
+ a| 
+* \ https://signin.b2c.netapp.com
+
+ a| 
+Per aggiornare le credenziali del sito di supporto NetApp (NSS) o per aggiungere nuove credenziali NSS alla NetApp Console.
+
+
+
+ a| 
+* \ https://support.netapp.com
+
+ a| 
+Per ottenere informazioni sulle licenze e per inviare messaggi AutoSupport a NetApp Support, nonché per ricevere aggiornamenti software per Cloud Volumes ONTAP.
+
+
+
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+Per fornire funzionalità e servizi all'interno della NetApp Console.
+
+
+
+ a| 
+Per le regioni non governative, usa i seguenti endpoint:
+
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+
+Per le regioni governative, usa invece il seguente endpoint:
+
+* \ https://occmclientinfragov.azurecr.us
+
+ a| 
+Per ottenere le immagini necessarie per la distribuzione e l'aggiornamento dell'agente Console.
+
+|===
+Per l'accesso tramite browser e altri requisiti di rete, consulta link:task-prepare-restricted-mode.html#step-5-prepare-network-access["Prepara l'accesso alla rete per la modalità limitata"].
+
+
+
+[[step-4-install-podman-or-docker-engine]]
+[[podman-configuration]]
+== Passaggio 4: installare Podman o Docker Engine
+
+A seconda del sistema operativo in uso, prima di installare l'agente è necessario utilizzare Podman o Docker Engine.
+
+* Podman è richiesto per Red Hat Enterprise Linux 8 e 9.
++
+<<podman-versions,Visualizza le versioni di Podman supportate>> .
+
+* Docker Engine è richiesto per Ubuntu.
++
+<<podman-versions,Visualizza le versioni supportate di Docker Engine>> .
+
+
+
+.Passi
+[role="tabbed-block"]
+====
+.Podman
+--
+Per installare e configurare Podman, segui questi passaggi:
+
+* Abilita e avvia il servizio podman.socket
+* Installa python3
+* Installa il pacchetto podman-compose (la procedura varia a seconda della versione di Red Hat)
+* Aggiungere podman-compose alla variabile d'ambiente PATH
+* Se si utilizza Red Hat Enterprise Linux, verificare che la versione di Podman utilizzi Netavark Aardvark DNS anziché CNI
+
+
+
+NOTE: Dopo aver installato l'agente, regolare la porta aardvark-dns (predefinita: 53) per evitare conflitti di porta DNS.  Seguire le istruzioni per configurare la porta.
+
+.Passi
+. Rimuovere il pacchetto podman-docker se è installato sull'host.
++
+[source, cli]
+----
+dnf remove podman-docker
+rm /var/run/docker.sock
+----
+. Installa Podman.
++
+È possibile ottenere Podman dai repository ufficiali di Red Hat Enterprise Linux.
+
++
+.. Per Red Hat Enterprise Linux 9,6:
++
+[source, cli]
+----
+sudo dnf install podman-5:<version>
+----
++
+Dove <versione> è la versione supportata di Podman che stai installando. <<podman-versions,Visualizza le versioni di Podman supportate>> .
+
+.. Per Red Hat Enterprise Linux dalla versione 9.1 alla 9.4:
++
+[source, cli]
+----
+sudo dnf install podman-4:<version>
+----
++
+Dove <versione> è la versione supportata di Podman che stai installando. <<podman-versions,Visualizza le versioni di Podman supportate>> .
+
+.. Per Red Hat Enterprise Linux 8:
++
+[source, cli]
+----
+sudo dnf install podman-4:<version>
+----
++
+Dove <versione> è la versione supportata di Podman che stai installando. <<podman-versions,Visualizza le versioni di Podman supportate>> .
+
+
+
+. Abilitare e avviare il servizio podman.socket.
++
+[source, cli]
+----
+sudo systemctl enable --now podman.socket
+----
+. Installa python3.
++
+[source, cli]
+----
+sudo dnf install python3
+----
+. Installa il pacchetto repository EPEL se non è già disponibile sul tuo sistema.
++
+Questo passaggio è necessario perché podman-compose è disponibile nel repository Extra Packages for Enterprise Linux (EPEL).
+
+. Se si utilizza Red Hat Enterprise 9:
++
+.. Installare il pacchetto del repository EPEL.
+
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+----
++
+.. Installa il pacchetto podman-compose 1.5.0.
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.5.0
+----
+
+
+. Se si utilizza Red Hat Enterprise Linux 8:
++
+.. Installare il pacchetto del repository EPEL.
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+----
+.. Installa il pacchetto podman-compose 1.0.6.
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.0.6
+----
++
+
+NOTE: Utilizzando il `dnf install` il comando soddisfa il requisito per aggiungere podman-compose alla variabile d'ambiente PATH.  Il comando di installazione aggiunge podman-compose a /usr/bin, che è già incluso nel `secure_path` opzione sull'host.
+
+.. Se si utilizza Red Hat Enterprise Linux 8, verificare che la versione di Podman utilizzi NetAvark con Aardvark DNS anziché CNI.
++
+... Controlla se il tuo networkBackend è impostato su CNI eseguendo il seguente comando:
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+... Se networkBackend è impostato su `CNI` , dovrai cambiarlo in `netavark` .
+... Installare `netavark` E `aardvark-dns` utilizzando il seguente comando:
++
+[source, cli]
+----
+dnf install aardvark-dns netavark
+----
+... Apri il `/etc/containers/containers.conf` file e modificare l'opzione network_backend per utilizzare "netavark" invece di "cni".
++
+Se `/etc/containers/containers.conf` non esiste, apportare le modifiche alla configurazione `/usr/share/containers/containers.conf` .
+
+... Riavvia Podman.
++
+[source, cli]
+----
+systemctl restart podman
+----
+... Verificare che networkBackend sia ora modificato in "netavark" utilizzando il seguente comando:
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+
+
+
+
+. Se associ questo agente a un sistema Cloud Volumes ONTAP, valuta di aumentare il numero di thread associati all'agente per migliorare le prestazioni. link:https://kb.netapp.com/Cloud/ncds/nds/cvods/cvods_kbs/CVO_going_to_failed_state_frequently_in_NetApp_Console["Scopri come aumentare il limite di thread del container dell'agente"^].
+
+
+--
+.Motore Docker
+--
+Per installare Docker Engine, seguire la documentazione di Docker.
+
+.Passi
+. https://docs.docker.com/engine/install/["Visualizza le istruzioni di installazione da Docker"^]
++
+Segui i passaggi per installare una versione supportata di Docker Engine. Non installare la versione più recente, poiché non è supportata dalla Console.
+
+. Verificare che Docker sia abilitato e in esecuzione.
++
+[source, cli]
+----
+sudo systemctl enable docker && sudo systemctl start docker
+----
+
+
+--
+====
+
+
+[[step-5-manually-install-the-netapp-console-restricted-mode-in-your-cloud-environment-must-use-for-google-cloud]]
+== Passaggio 5: Installa manualmente la modalità con restrizioni di NetApp Console nel tuo ambiente cloud (da usare obbligatoriamente per Google Cloud)
+
+Puoi installare manualmente l'agente Console sul tuo host Linux in esecuzione su AWS, Azure o Google Cloud.
+
+.Prima di iniziare
+Dovresti avere quanto segue:
+
+* Privilegi di root per installare l'agente Console.
+* Dettagli su un server proxy, se è necessario un proxy per l'accesso a Internet dall'agente della console.
++
+È possibile configurare un proxy server dopo l'installazione, ma ciò richiede il riavvio dell'agente della Console.
+
+* Un certificato firmato da una CA, se il server proxy utilizza HTTPS o se il proxy è un proxy di intercettazione.
+
+
+
+NOTE: Non è possibile impostare un certificato per un server proxy trasparente durante l'installazione manuale dell'agente Console. Se è necessario impostare un certificato per un server proxy trasparente, è necessario utilizzare la Console di manutenzione dopo l'installazione. Scopri di più sulink:reference-agent-maint-console-proxy.html["Console di manutenzione dell'agente"] .
+
+* È necessario disattivare il controllo della configurazione che verifica la connettività in uscita durante l'installazione.  L'installazione manuale fallisce se questo controllo non è disabilitato.link:task-troubleshoot-agent.html["Scopri come disattivare i controlli di configurazione per le installazioni manuali."]
+
+
+.Informazioni su questo compito
+Dopo l'installazione, l'agente Console si aggiorna automaticamente se è disponibile una nuova versione.
+
+.Passi
+. Se le variabili di sistema _http_proxy_ o _https_proxy_ sono impostate sull'host, rimuoverle:
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+Se non si rimuovono queste variabili di sistema, l'installazione fallirà.
+
+. Scaricare il software dell'agente Console e copiarlo sull'host Linux.  È possibile scaricarlo dalla NetApp Console o dal sito di supporto NetApp .
++
+** NetApp Console: Vai a *Agenti > Gestione > Distribuisci agente > Locale > Installazione manuale*.
++
+Scegli se scaricare i file di installazione dell'agente o un URL per i file.
+
+** https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Sito di supporto NetApp"^] (necessario se non si ha già accesso alla Console).
++
+
+NOTE: Scarica il programma di installazione dell'agente "online" pensato per l'utilizzo nella tua rete o nel cloud. È disponibile un programma di installazione "offline" separato per l'agente Console, ma è supportato solo con distribuzioni in modalità privata.
+
+** NetApp Support Site (necessario se non si ha già accesso alla Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Sito di supporto NetApp"^].
+
+
+. Assegnare le autorizzazioni per eseguire lo script.
++
+[source, cli]
+----
+chmod +x NetApp_Console_Agent_Cloud_<version>
+----
++
+Dove <versione> è la versione dell'agente Console scaricato.
+
+. Se si esegue l'installazione in un ambiente Government Cloud, disattivare i controlli di configurazione.link:task-troubleshoot-agent.html#disable-config-check["Scopri come disattivare i controlli di configurazione per le installazioni manuali."]
+. Eseguire lo script di installazione.
++
+[source, cli]
+----
+./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+Sarà necessario aggiungere le informazioni sul proxy se la rete richiede un proxy per l'accesso a Internet. È possibile aggiungere un proxy esplicito durante l'installazione. I parametri  `--proxy` e  `--cacert` sono facoltativi e non verrà richiesto di aggiungerli. Se si dispone di un proxy server esplicito, sarà necessario immettere i parametri come mostrato.
+
++
+
+NOTE: Se desideri configurare un proxy trasparente, puoi farlo dopo l'installazione. link:reference-agent-maint-console-proxy.html["Scopri di più sulla console di manutenzione dell'agente"].
+
++
+Ecco un esempio di configurazione di un proxy server esplicito con un certificato firmato da una CA:
+
++
+[source, cli]
+----
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+`--proxy`Configura l'agente della Console per utilizzare un proxy server utilizzando uno dei seguenti formati:
+
++
+** \http://indirizzo:porta
+** \http://nome-utente:password@indirizzo:porta
+** \http://nome-dominio%92nome-utente:password@indirizzo:porta
+** \https://indirizzo:porta
+** \https://nome-utente:password@indirizzo:porta
+** \https://nome-dominio%92nome-utente:password@indirizzo:porta
++
+Notare quanto segue:
+
++
+*** L'utente può essere un utente locale o un utente di dominio.
+*** Per un utente di dominio, è necessario utilizzare il codice ASCII per \ come mostrato sopra.
+*** L'agente Console non supporta nomi utente o password che includono il carattere @.
+*** Se la password include uno qualsiasi dei seguenti caratteri speciali, è necessario anteporre una barra rovesciata a tale carattere speciale: & o !
++
+Per esempio:
+
++
+\http://bxpproxyuser:netapp1\!@indirizzo:3128
+
+
+
+
+
+. Se hai utilizzato Podman, dovrai modificare la porta aardvark-dns.
++
+.. Eseguire l'SSH sulla macchina virtuale dell'agente Console.
+.. Aprire il file podman _/usr/share/containers/containers.conf_ e modificare la porta scelta per il servizio DNS Aardvark.  Ad esempio, cambialo in 54.
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+----
++
+Per esempio:
+
++
+[source, text]
+----
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+----
+.. Riavviare la macchina virtuale dell'agente Console.
+
+
+
+
+.Risultato
+L'agente Console è ora installato.  Al termine dell'installazione, il servizio agente della console (occm) viene riavviato due volte se è stato specificato un server proxy.
+
+.Cosa succederà ora?
+Configurare la NetApp Console.
+
+
+
+[[step-6-set-up-netapp-console]]
+== Passaggio 6: Configura NetApp Console
+
+Quando si accede alla console per la prima volta, viene richiesto di scegliere un'organizzazione per l'agente della console e di abilitare la modalità con restrizioni.
+
+.Prima di iniziare
+La persona che configura l'agente della Console deve accedere alla Console utilizzando un account di accesso che non appartenga già a un'organizzazione della Console.
+
+Se il tuo login è associato a un'altra organizzazione, dovrai registrarti con un nuovo login.  Altrimenti, non vedrai l'opzione per abilitare la modalità limitata nella schermata di configurazione.
+
+.Passi
+. Aprire un browser Web da un host che dispone di una connessione all'istanza dell'agente Console e immettere il seguente URL dell'agente Console installato.
+. Registrati o accedi alla NetApp Console.
+. Dopo aver effettuato l'accesso, configura la Console:
++
+.. Immettere un nome per l'agente della console.
+.. Immettere un nome per una nuova organizzazione della Console.
+.. Seleziona *Stai lavorando in un ambiente protetto?*
+.. Seleziona *Abilita la modalità con restrizioni su questo account*.
++
+Tieni presente che non puoi modificare questa impostazione dopo aver creato l'account.  Non potrai abilitare la modalità con restrizioni in un secondo momento, né potrai disabilitarla in un secondo momento.
+
++
+Se hai distribuito l'agente Console in una regione governativa, la casella di controllo è già abilitata e non può essere modificata.  Questo perché la modalità limitata è l'unica supportata nelle regioni governative.
+
+.. Seleziona *Iniziamo*.
+
+
+
+
+.Risultato
+L'agente Console è ora installato e configurato con la tua organizzazione Console.  Tutti gli utenti devono accedere alla Console utilizzando l'indirizzo IP dell'istanza dell'agente della Console.
+
+.Cosa succederà ora?
+Fornisci alla Console le autorizzazioni precedentemente impostate.
+
+
+
+[[step-7-provide-permissions-to-the-console-agent]]
+== Passaggio 7: Fornisci le autorizzazioni all'agente Console
+
+Se hai installato manualmente l'agente Console, devi concedergli le autorizzazioni che hai configurato in precedenza.
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Scopri come preparare le autorizzazioni cloud"] .
+
+[role="tabbed-block"]
+====
+.Ruolo AWS IAM
+--
+Collega il ruolo IAM creato in precedenza all'istanza EC2 in cui hai installato l'agente Console.
+
+Questi passaggi sono validi solo se hai installato manualmente l'agente Console in AWS.  Per le distribuzioni di AWS Marketplace, hai già associato l'istanza dell'agente della console a un ruolo IAM che include le autorizzazioni richieste.
+
+.Passi
+. Vai alla console Amazon EC2.
+. Selezionare *Istanze*.
+. Selezionare l'istanza dell'agente Console.
+. Selezionare *Azioni > Sicurezza > Modifica ruolo IAM*.
+. Selezionare il ruolo IAM e selezionare *Aggiorna ruolo IAM*.
+
+
+--
+.Chiave di accesso AWS
+--
+Fornire alla NetApp Console la chiave di accesso AWS per un utente IAM che dispone delle autorizzazioni richieste.
+
+.Passi
+. Selezionare *Amministrazione > Credenziali*.
+. Selezionare *Credenziali dell'organizzazione*.
+. Selezionare *Aggiungi credenziali* e seguire i passaggi della procedura guidata.
++
+.. *Posizione delle credenziali*: seleziona *Amazon Web Services > Agente*.
+.. *Definisci credenziali*: inserisci una chiave di accesso AWS e una chiave segreta.
+.. *Abbonamento Marketplace*: associa un abbonamento Marketplace a queste credenziali abbonandoti ora o selezionando un abbonamento esistente.
+.. *Revisione*: conferma i dettagli sulle nuove credenziali e seleziona *Aggiungi*.
+
+
+
+
+--
+.Ruolo di Azure
+--
+Accedere al portale di Azure e assegnare il ruolo personalizzato di Azure alla macchina virtuale dell'agente della console per una o più sottoscrizioni.
+
+.Passi
+. Dal portale di Azure, apri il servizio *Sottoscrizioni* e seleziona la tua sottoscrizione.
++
+È importante assegnare il ruolo dal servizio *Abbonamenti* perché questo specifica l'ambito dell'assegnazione del ruolo a livello di abbonamento.  L'_ambito_ definisce l'insieme di risorse a cui si applica l'accesso.  Se si specifica un ambito a un livello diverso (ad esempio, a livello di macchina virtuale), la possibilità di completare azioni dall'interno della NetApp Console ne risentirà.
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Documentazione di Microsoft Azure: comprendere l'ambito di Azure RBAC"^]
+
+. Selezionare *Controllo accessi (IAM)* > *Aggiungi* > *Aggiungi assegnazione ruolo*.
+. Nella scheda *Ruolo*, seleziona il ruolo *Operatore console* e seleziona *Avanti*.
++
+
+NOTE: Console Operator è il nome predefinito fornito nel criterio.  Se hai scelto un nome diverso per il ruolo, seleziona quel nome.
+
+. Nella scheda *Membri*, completa i seguenti passaggi:
++
+.. Assegna l'accesso a un'*identità gestita*.
+.. Selezionare *Seleziona membri*, selezionare l'abbonamento in cui è stata creata la macchina virtuale dell'agente Console, in *Identità gestita*, scegliere *Macchina virtuale*, quindi selezionare la macchina virtuale dell'agente Console.
+.. Seleziona *Seleziona*.
+.. Selezionare *Avanti*.
+.. Seleziona *Revisiona + assegna*.
+.. Se si desidera gestire risorse in sottoscrizioni Azure aggiuntive, passare a tale sottoscrizione e ripetere questi passaggi.
+
+
+
+
+--
+.Entità del servizio di Azure
+--
+Fornisci alla NetApp Console le credenziali dell'entità servizio di Azure che hai configurato in precedenza.
+
+.Passi
+. Selezionare *Amministrazione > Credenziali*.
+. Selezionare *Aggiungi credenziali* e seguire i passaggi della procedura guidata.
++
+.. *Posizione delle credenziali*: selezionare *Microsoft Azure > Agente*.
+.. *Definisci credenziali*: immetti le informazioni sull'entità servizio Microsoft Entra che concede le autorizzazioni richieste:
++
+*** ID applicazione (client)
+*** ID directory (tenant)
+*** Segreto del cliente
+
+
+.. *Abbonamento Marketplace*: associa un abbonamento Marketplace a queste credenziali abbonandoti ora o selezionando un abbonamento esistente.
+.. *Revisione*: conferma i dettagli sulle nuove credenziali e seleziona *Aggiungi*.
+
+
+
+
+.Risultato
+La NetApp Console ora dispone delle autorizzazioni necessarie per eseguire azioni in Azure per tuo conto.
+
+--
+.Account di servizio Google Cloud
+--
+Associare l'account di servizio alla VM dell'agente Console.
+
+.Passi
+. Vai al portale di Google Cloud e assegna l'account di servizio all'istanza VM dell'agente Console.
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Documentazione di Google Cloud: modifica dell'account di servizio e degli ambiti di accesso per un'istanza"^]
+
+. Se si desidera gestire le risorse in altri progetti, concedere l'accesso aggiungendo l'account di servizio con il ruolo di agente della console a quel progetto.  Sarà necessario ripetere questo passaggio per ogni progetto.
+
+
+--
+====

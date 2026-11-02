@@ -28,10 +28,20 @@ I ruoli della piattaforma concedono autorizzazioni di amministrazione NetApp Con
 | Ruolo della piattaforma | Nome API* *Il nome API è l'identificativo del ruolo utilizzato nelle API. Copiare il valore esattamente come mostrato (incluse maiuscole e underscore). | Disponibilità della modalità | Responsabilità 
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["Amministratore dell'organizzazione"] | ORGANIZATION_ADMIN | Standard, Limitato, Privato | Consente a un utente l'accesso illimitato a tutti i progetti e le cartelle all'interno di un'organizzazione, aggiungere membri a qualsiasi progetto o cartella, nonché eseguire qualsiasi attività e utilizzare qualsiasi servizio dati che non abbia un ruolo esplicito associato. Gli utenti con questo ruolo gestiscono l'organizzazione creando cartelle e progetti, assegnando ruoli, aggiungendo utenti e gestendo i sistemi se dispongono delle credenziali appropriate. Questo è l'unico ruolo di accesso che può creare agenti Console. 
+| link:reference-iam-platform-roles.html#organization-admin-roles["Amministratore dell'organizzazione"] | ORGANIZATION_ADMIN | Standard, Limitato, Privato  a| 
+Consente a un utente l'accesso illimitato a tutti i progetti e le cartelle all'interno di un'organizzazione, aggiungere membri a qualsiasi progetto o cartella, nonché eseguire qualsiasi attività e utilizzare qualsiasi servizio dati che non abbia un ruolo esplicito associato.
+
+Gli utenti con questo ruolo gestiscono l'organizzazione creando cartelle e progetti, assegnando ruoli, aggiungendo utenti e gestendo i sistemi se dispongono delle credenziali appropriate.
+
+Questo è l'unico ruolo di accesso che può creare agenti Console.
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["Amministratore di cartelle o progetti"] | AMMINISTRATORE_CARTELLA_O_PROGETTO | Standard, Limitato, Privato | Consente all'utente l'accesso illimitato ai progetti e alle cartelle assegnati. Possono aggiungere membri alle cartelle o ai progetti che gestiscono, nonché eseguire qualsiasi attività e utilizzare qualsiasi servizio dati o applicazione sulle risorse all'interno della cartella o del progetto a loro assegnato. Gli amministratori di cartelle o progetti non possono creare agenti della console. 
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["Amministratore di cartelle o progetti"] | AMMINISTRATORE_CARTELLA_O_PROGETTO | Standard, Limitato, Privato  a| 
+Consente di accedere senza limitazioni ai progetti e alle cartelle assegnati. Puoi aggiungere membri alle cartelle o ai progetti che gestisci, nonché eseguire qualsiasi attività e utilizzare qualsiasi servizio dati o applicazione sulle risorse all'interno della cartella o del progetto a cui sei assegnato.
+
+Gli amministratori di cartella o di progetto non possono creare agenti della Console.
+
 
 
 | link:reference-iam-platform-roles.html#federation-roles["Amministratore della Federazione"] | FEDERATION_ADMIN | Standard, Limitato | Consente a un utente di creare e gestire federazioni con la Console, che abilita l'accesso singolo (SSO). 

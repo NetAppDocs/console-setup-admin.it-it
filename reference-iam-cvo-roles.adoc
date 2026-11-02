@@ -24,58 +24,7 @@ NOTE: I ruoli di accesso per Cloud Volumes ONTAP sono disponibili quando esegui 
 * *Cloud Volumes ONTAP viewer*: Fornisce accesso in sola lettura alle informazioni di Cloud Volumes ONTAP. Questo ruolo non può eseguire operazioni attive. Alcune schede e schermate contenenti informazioni di configurazione potrebbero non essere disponibili per i viewer.
 
 
-link:reference-iam-predefined-roles.html["Scopri di più sui ruoli di accesso"] .
-
-Assegna i ruoli di Cloud Volumes ONTAP a livello di organizzazione, cartella o progetto che contiene il sistema. I ruoli della piattaforma permettono agli utenti di amministrare le risorse della NetApp Console, mentre i ruoli di Cloud Volumes ONTAP permettono agli utenti di gestire i sistemi Cloud Volumes ONTAP. Per indicazioni sulla pianificazione delle assegnazioni dei ruoli, consulta link:task-cvo-rbac-setup.html#plan-cloud-volumes-ontap-role-assignments["Configura l'accesso in base al ruolo per Cloud Volumes ONTAP"].
-
-
-
-[[role-migrations-for-existing-users-after-upgrading-to-console-agent-version-4-9-0-or-later]]
-[[seeding-mappings-for-existing-users]]
-== Migrazione dei ruoli per gli utenti esistenti dopo l'aggiornamento alla versione 4.9.0 o successiva dell'agente Console
-
-Quando aggiorni un agente della Console alla versione 4.9.0 o successiva, la Console assegna ruoli aggiuntivi di Cloud Volumes ONTAP agli utenti esistenti in base ai loro ruoli sulla piattaforma.
-
-
-NOTE: Quando un agente Console esistente viene aggiornato alla versione 4.9.0 o successiva, la Console esegue un processo di migrazione una tantum che assegna i ruoli di Cloud Volumes ONTAP agli utenti esistenti nell'organizzazione. Questo processo può richiedere fino a 30 minuti per essere completato. Per rivedere e modificare i ruoli assegnati durante la migrazione, vedi link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["Rivedi i ruoli dopo l'aggiornamento dell'agente della Console"].
-
-Le seguenti mappature si applicano esclusivamente a questo processo di migrazione una tantum.
-
-[cols="50,50"]
-|===
-| Ruolo esistente sulla piattaforma | Ruolo Cloud Volumes ONTAP assegnato durante l'aggiornamento 
-
-
-| Super amministratore | Amministratore Cloud Volumes ONTAP 
-
-
-| Amministratore dell'organizzazione | Amministratore Cloud Volumes ONTAP 
-
-
-| Amministratore della Federazione | Amministratore Cloud Volumes ONTAP 
-
-
-| Amministratore di cartelle o progetti | Amministratore Cloud Volumes ONTAP 
-
-
-| Super spettatore | Visualizzatore Cloud Volumes ONTAP 
-
-
-| Visualizzatore dell'organizzazione | Visualizzatore Cloud Volumes ONTAP 
-
-
-| Visualizzatore della federazione | Visualizzatore Cloud Volumes ONTAP 
-
-
-| Visualizzatore di cartelle o progetti | Visualizzatore Cloud Volumes ONTAP 
-
-
-| Qualsiasi altro ruolo sulla piattaforma | Visualizzatore Cloud Volumes ONTAP 
-|===
-La Console assegna il ruolo Cloud Volumes ONTAP allo stesso livello gerarchico del ruolo della piattaforma esistente. Queste mappature non si applicano alle nuove assegnazioni di ruolo. Per rivedere e modificare i ruoli predefiniti, vedi link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["Rivedi i ruoli dopo l'aggiornamento dell'agente della Console"].
-
-
-NOTE: Un problema noto attualmente impedisce il funzionamento della combinazione di ruoli *Organization viewer* e *Cloud Volumes ONTAP viewer* a livello di organizzazione. Usa il ruolo *Organization admin* o *Folder or project admin* come soluzione temporanea.
+Per i dettagli su tutti i ruoli di accesso alla NetApp Console, vedere link:reference-iam-predefined-roles.html["ruoli di accesso"].
 
 
 

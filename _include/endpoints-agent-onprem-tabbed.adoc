@@ -10,7 +10,7 @@ Questi endpoint sono necessari per tutte le implementazioni dell'agente Console.
 
 [cols="2a,1a"]
 |===
-| Punti finali | Scopo Direttiva non risolta in <stdin> - include::endpoints-agent.adoc[tag=nss-endpoints] Direttiva non risolta in <stdin> - include::endpoints-agent.adoc[tag=saas-endpoints] Direttiva non risolta in <stdin> - include::endpoints-agent.adoc[tag=upgrade-endpoints] 
+| Punti finali | Scopo Direttiva non risolta in <stdin> - include::endpoints-agent.adoc[tag=nss-endpoints] Direttiva non risolta in <stdin> - include::endpoints-agent.adoc[tag=saas-endpoints] Direttiva non risolta in <stdin> - include::endpoints-agent.adoc[tag=upgrade-endpoints-saas] 
 |===
 --
 .Endpoint aggiuntivi per le risorse AWS
