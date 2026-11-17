@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-install-agent-aws-console.html 
-keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console 
-summary: È possibile distribuire un agente Console in AWS direttamente dalla NetApp Console. Prima di distribuire un agente Console in AWS dalla Console, è necessario configurare la rete e preparare le autorizzazioni AWS. 
+keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console, Create role for me, CloudFormation Quick Create, IAM role, IAM policy, Assume role, AWS keys, deployment role, external ID 
+summary: 'Distribuisci un agente Console in AWS da NetApp Console utilizzando "Crea ruolo per me", "Assumi ruolo" o le chiavi AWS. Configura prima la rete e le autorizzazioni.' 
 ---
 = Distribuisci un agente Console in AWS dalla NetApp Console
 :hardbreaks:
@@ -14,22 +14,22 @@ summary: È possibile distribuire un agente Console in AWS direttamente dalla Ne
 
 
 [role="lead"]
-È possibile distribuire un agente Console in AWS direttamente dalla NetApp Console. Prima di distribuire un agente Console in AWS dalla Console, è necessario configurare la rete e preparare le autorizzazioni AWS.
+Distribuisci un agente Console in AWS senza uscire da NetApp Console, così puoi iniziare a gestire le tue risorse AWS e i servizi dati.
 
-L'installazione di un agente in AWS avvia un'istanza EC2 con Linux e il software dell'agente Console in una VPC a tua scelta.
+La distribuzione di un agente Console in AWS avvia un'istanza EC2 che esegue Linux e il software dell'agente Console in una VPC a tua scelta.
 
 .Prima di iniziare
 * link:concept-agent-install-options.html#agent-console-deploy["Scopri quando effettuare il deployment dalla Console"].
-* Dovresti rivederelink:reference-limitations.html["Limitazioni dell'agente della console"] .
+* Revisionelink:reference-limitations.html["Limitazioni dell'agente della console"] .
 
 
 
 
-[[step-1-set-up-networking-for-deploying-a-console-agent-in-aws]]
+[[step-1-set-up-networking-to-deploy-a-console-agent-in-aws]]
 [[networking-aws-agent]]
-== Passaggio 1: configurare la rete per la distribuzione di un agente della console in AWS
+== Passaggio 1: Configura la rete per distribuire un agente Console in AWS
 
-Assicurarsi che il percorso di rete in cui si prevede di installare l'agente Console supporti i seguenti requisiti.  Questi requisiti consentono all'agente della console di gestire risorse e processi nel cloud ibrido.
+Assicurati che la posizione di rete in cui intendi distribuire il Console agent soddisfi i seguenti requisiti. Questi requisiti consentono al Console agent di gestire risorse e processi nel tuo cloud ibrido.
 
 VPC e sottorete:: Quando si crea l'agente Console, è necessario specificare la VPC e la subnet in cui deve risiedere.
 
@@ -166,17 +166,95 @@ Sarà necessario implementare questo requisito di rete dopo aver creato l'agente
 
 
 
-[[step-2-set-up-aws-permissions-for-the-console-agent]]
+[[step-2-set-up-aws-permissions-to-deploy-the-console-agent]]
 [[aws-permissions-agent]]
-== Passaggio 2: impostare le autorizzazioni AWS per l'agente della console
+== Passaggio 2: Configura le autorizzazioni AWS per distribuire l'agente Console
 
-La console deve autenticarsi con AWS prima di poter distribuire l'agente della console nella VPC. Puoi scegliere uno di questi metodi di autenticazione:
+Concedi alla Console solo le autorizzazioni AWS necessarie per distribuire l'agente della Console nella tua VPC, in base al metodo di autenticazione scelto.
 
-* Consentire alla Console di assumere un ruolo IAM che disponga delle autorizzazioni richieste
-* Fornire una chiave di accesso AWS e una chiave segreta per un utente IAM che dispone delle autorizzazioni richieste
+Scegli uno di questi metodi di autenticazione e configura solo ciò che richiede:
+
+[cols="1a,2a,2a"]
+|===
+| Metodo | Cosa fa | Cosa configuri 
 
 
-In entrambe le opzioni, il primo passo è creare un criterio IAM. Questa policy contiene solo le autorizzazioni necessarie per avviare l'agente della console in AWS dalla console.
+ a| 
+*Crea un ruolo per me*
+ a| 
+La Console apre AWS CloudFormation Quick Create, che crea il ruolo di distribuzione che la Console assume.
+ a| 
+Autorizzazioni per l'identità AWS che invia lo stack.
+
+
+
+ a| 
+*Assumi il ruolo*
+ a| 
+La Console assume un ruolo IAM esistente nel tuo account.
+ a| 
+Una politica e un ruolo IAM.
+
+
+
+ a| 
+*chiavi AWS*
+ a| 
+La Console utilizza una chiave di accesso AWS e una chiave segreta.
+ a| 
+Una policy e un utente IAM.
+
+|===
+Con le opzioni *Crea ruolo per me* e *Assumi ruolo*, la Console assume un ruolo IAM, denominato *ruolo di distribuzione*, per distribuire l'agente della Console. Dopo la distribuzione, l'agente della Console utilizza un ruolo IAM separato collegato alla sua istanza EC2, denominato *ruolo agente*. Per impostazione predefinita, la Console crea automaticamente il ruolo agente per te. link:#aws-agent-role["Scopri come utilizzare il tuo ruolo di agente"].
+
+
+
+[[set-up-permissions-for-create-role-for-me-cloudformation-quick-create]]
+[[aws-permissions-quick-create]]
+=== Configura le autorizzazioni per Crea ruolo per me (CloudFormation Quick Create)
+
+Utilizza un'identità AWS in grado di creare lo stack CloudFormation e il ruolo di distribuzione, in modo che lo stack si completi senza errori di autorizzazione.
+
+L'identità che invia lo stack Quick Create di CloudFormation necessita di autorizzazioni di amministratore o delle seguenti autorizzazioni minime. Queste autorizzazioni consentono a CloudFormation di creare il ruolo di distribuzione. Non sono le autorizzazioni del ruolo dell'agente.
+
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CloudFormationStack",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:GetTemplateSummary",
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:GetRole",
+        "iam:PutRolePolicy",
+        "iam:DeleteRolePolicy",
+        "iam:GetRolePolicy",
+        "iam:PassRole",
+        "lambda:CreateFunction",
+        "lambda:DeleteFunction",
+        "lambda:GetFunction",
+        "lambda:InvokeFunction"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+
+
+[[set-up-permissions-for-assume-role-or-aws-keys]]
+[[aws-permissions-assume-role-keys]]
+=== Configura le autorizzazioni per Assume role o le chiavi AWS
+
+Se scegli *Assume role* o *AWS keys*, crea una policy con solo le autorizzazioni necessarie per distribuire l'agente di Console e associala al ruolo o all'utente che Console utilizza.
 
 Se necessario, è possibile limitare la policy IAM utilizzando l'IAM `Condition` elemento. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html["Documentazione AWS: Elemento Condizione"^]
 
@@ -186,7 +264,7 @@ Se necessario, è possibile limitare la policy IAM utilizzando l'IAM `Condition`
 . Selezionare *JSON*.
 . Copia e incolla la seguente policy:
 +
-Questa policy contiene solo le autorizzazioni necessarie per avviare l'agente della console in AWS dalla console.  Quando la Console crea l'agente della Console, applica un nuovo set di autorizzazioni all'agente della Console che consente all'agente della Console di gestire le risorse AWS. link:reference-permissions-aws.html["Visualizza le autorizzazioni richieste per l'agente della console stesso"].
+Questa policy contiene solo le autorizzazioni necessarie per avviare l'agente della Console in AWS dalla Console. link:reference-permissions-aws.html["Visualizza le autorizzazioni del ruolo dell'agente"].
 
 +
 [source, json]
@@ -269,7 +347,7 @@ Questa policy contiene solo le autorizzazioni necessarie per avviare l'agente de
 . Selezionare *Crea policy*.
 . È possibile associare il criterio a un ruolo IAM che la Console può assumere oppure a un utente IAM in modo da poter fornire alla Console le chiavi di accesso:
 +
-** (Opzione 1) Impostare un ruolo IAM che la Console può assumere:
+** *Assumi il ruolo*: Configura un ruolo IAM che la Console può assumere:
 +
 ... Vai alla console AWS IAM nell'account di destinazione.
 ... In Gestione accessi, seleziona *Ruoli > Crea ruolo* e segui i passaggi per creare il ruolo.
@@ -279,7 +357,7 @@ Questa policy contiene solo le autorizzazioni necessarie per avviare l'agente de
 ... Dopo aver creato il ruolo, copia l'ARN del ruolo in modo da poterlo incollare nella Console quando crei l'agente della Console.
 
 
-** (Opzione 2) Impostare le autorizzazioni per un utente IAM in modo da poter fornire alla Console le chiavi di accesso:
+** *Chiavi AWS*: Configura le autorizzazioni per un utente IAM in modo da poter fornire alla Console le chiavi di accesso:
 +
 ... Dalla console AWS IAM, seleziona *Utenti* e poi seleziona il nome utente.
 ... Seleziona *Aggiungi autorizzazioni > Allega direttamente i criteri esistenti*.
@@ -293,56 +371,98 @@ Questa policy contiene solo le autorizzazioni necessarie per avviare l'agente de
 
 
 .Risultato
-Ora dovresti avere un ruolo IAM con le autorizzazioni richieste o un utente IAM con le autorizzazioni richieste.  Quando si crea l'agente Console dalla Console, è possibile fornire informazioni sul ruolo o sulle chiavi di accesso.
+Ora disponi di un ruolo di distribuzione o di un utente IAM con le autorizzazioni necessarie. Quando distribuisci l'agente Console, devi fornire l'ARN del ruolo o le chiavi di accesso.
 
 
 
-[[step-3-create-the-console-agent]]
-== Passaggio 3: creare l'agente della console
+[[step-3-set-up-your-own-iam-role-for-the-console-agent-optional]]
+[[aws-agent-role]]
+== Passaggio 3: Configura il tuo ruolo IAM per l'agente di Console (facoltativo)
 
-Crea l'agente della Console direttamente dalla Console basata sul web.
+Crea il tuo ruolo agente se vuoi selezionarlo invece del ruolo che la Console crea per impostazione predefinita. Crea il ruolo prima di distribuire l'agente della Console.
+
+.Passi
+. Accedi alla console AWS e vai al servizio IAM.
+. Crea una policy:
++
+.. Selezionare *Criteri > Crea criterio*.
+.. Seleziona *JSON* e copia e incolla il contenuto dellink:reference-permissions-aws.html["Criterio IAM per l'agente della console"] .
+.. Completare i passaggi rimanenti per creare la policy.
++
+Per le regioni standard, le autorizzazioni sono distribuite su due policy.  Sono necessarie due policy a causa del limite massimo di dimensione dei caratteri per le policy gestite in AWS. link:reference-permissions-aws.html["Scopri di più sui criteri IAM per l'agente della console"] .
+
+
+
+. Crea un ruolo IAM:
++
+.. Selezionare *Ruoli > Crea ruolo*.
+.. Selezionare *Servizio AWS > EC2*.
+.. Aggiungi autorizzazioni allegando la policy appena creata.
+.. Completa i passaggi rimanenti per creare il ruolo.
+
+
+
+
+.Risultato
+Ora hai un ruolo dell'agente che puoi selezionare in *Dettagli di distribuzione dell'agente* quando distribuisci l'agente Console.
+
+
+
+[[step-4-deploy-the-console-agent]]
+== Passaggio 4: Distribuisci l'agente Console
+
+Inserisci i dettagli di autenticazione, implementazione, rete e gruppo di sicurezza in modo che Console avvii l'agente di Console nella tua VPC.
 
 .Informazioni su questo compito
 * La creazione dell'agente Console dalla Console distribuisce un'istanza EC2 in AWS utilizzando una configurazione predefinita.  Non passare a un'istanza EC2 più piccola con meno CPU o meno RAM dopo aver creato l'agente Console. link:reference-agent-default-config.html["Scopri la configurazione predefinita per l'agente Console"] .
-* Quando la Console crea l'agente Console, crea anche un ruolo IAM e un profilo per l'agente. Questo ruolo include autorizzazioni che consentono all'agente della console di gestire le risorse AWS. Assicurarsi che il ruolo venga aggiornato man mano che nelle versioni future verranno aggiunte nuove autorizzazioni. link:reference-permissions-aws.html["Scopri di più sulla policy IAM per l'agente della console"].
+* Per impostazione predefinita, la Console crea il ruolo agente e il relativo profilo. Se fornisci un ruolo agente personalizzato, assicurati di aggiornarlo man mano che nelle versioni future vengono aggiunte nuove autorizzazioni. link:reference-permissions-aws.html["Scopri di più sulla policy IAM per l'agente della console"].
 
 
 .Prima di iniziare
 Dovresti avere quanto segue:
 
-* Un metodo di autenticazione AWS: un ruolo IAM o chiavi di accesso per un utente IAM con le autorizzazioni richieste.
+* Un metodo di autenticazione AWS: *Crea ruolo per me*, *Assumi ruolo* o *Chiavi AWS*.
 * Una VPC e una subnet che soddisfano i requisiti di rete.
 * Una coppia di chiavi per l'istanza EC2.
 * Dettagli su un server proxy, se è necessario un proxy per l'accesso a Internet dall'agente della console.
-* Impostarelink:#networking-aws-agent["requisiti di rete"] .
-* Impostarelink:#aws-permissions-agent["Autorizzazioni AWS"] .
+* Completato link:#networking-aws-agent["Passo 1"].
+* Completato link:#aws-permissions-agent["Passo 2"].
 
 
 .Passi
 . Selezionare *Amministrazione > Agenti*.
 . Nella pagina *Panoramica*, selezionare *Distribuisci agente > AWS*.
-. Per creare l'agente Console, seguire i passaggi della procedura guidata:
-. Nella pagina *Introduzione*, rivedi la panoramica del processo.
-. Nella pagina *Credenziali AWS*, specifica la tua regione AWS e poi scegli un metodo di autenticazione, che può essere un ruolo IAM che la Console può assumere oppure una chiave di accesso e una chiave segreta AWS.
+. Nella sezione *Credenziali AWS per la distribuzione dell'agente*, scegli uno dei seguenti metodi di autenticazione:
 +
+** *Crea un ruolo per me*:
++
+... Seleziona la tua regione AWS e inserisci l'ID del tuo account AWS. Facoltativamente, puoi inserire un ID esterno.
+... Seleziona *Open CloudFormation Quick Create*.
+... In AWS, accetta i termini e seleziona *Crea stack*.
+... Quando AWS termina la creazione del ruolo, torna alla Console e conferma il ruolo.
 
-TIP: Se si sceglie *Assumi ruolo*, è possibile creare il primo set di credenziali dalla procedura guidata di distribuzione dell'agente della console.  Ogni ulteriore set di credenziali deve essere creato dalla pagina Credenziali.  Saranno quindi disponibili tramite la procedura guidata in un elenco a discesa. link:task-adding-aws-accounts.html["Scopri come aggiungere credenziali aggiuntive"] .
 
-. Nella pagina *Dettagli*, fornire i dettagli sull'agente della console.
+** *Assumi il ruolo*: Inserisci l'ARN del ruolo IAM e seleziona *Convalida le credenziali*.
+** *Chiavi AWS*: Inserisci la chiave di accesso e la chiave segreta, quindi seleziona *Convalida credenziali*.
+
+
+. Nella sezione *Dettagli di distribuzione dell'agente*, fornisci i dettagli dell'agente Console.
 +
 ** Inserisci un nome.
 ** Aggiungi tag personalizzati (metadati).
-** Scegli se desideri che la Console crei un nuovo ruolo con le autorizzazioni richieste oppure se desideri selezionare un ruolo esistente che hai impostato conlink:reference-permissions-aws.html["i permessi richiesti"] .
+** Scegli se vuoi che la Console crei il ruolo dell'agente oppure seleziona un ruolo dell'agente che link:#aws-agent-role["configura da solo"].
 ** Scegliere se si desidera crittografare i dischi EBS dell'agente Console.  È possibile utilizzare la chiave di crittografia predefinita oppure una chiave personalizzata.
 
 
-. Nella pagina *Rete*, specificare una VPC, una subnet e una coppia di chiavi per l'agente, scegliere se abilitare un indirizzo IP pubblico e, facoltativamente, specificare una configurazione proxy.
+. Nella sezione *Configurazione di rete*, specifica una VPC, una subnet e una coppia di chiavi per l'agente Console, scegli se abilitare un indirizzo IP pubblico e, facoltativamente, specifica una configurazione proxy.
 +
 Assicurati di disporre della coppia di chiavi corretta per accedere alla macchina virtuale dell'agente Console.  Senza una coppia di chiavi non è possibile accedervi.
 
-. Nella pagina *Gruppo di sicurezza*, scegliere se creare un nuovo gruppo di sicurezza o se selezionarne uno esistente che consenta le regole in entrata e in uscita richieste.
+. Nella sezione *Gruppo di sicurezza*, scegli se creare un nuovo gruppo di sicurezza o selezionare un gruppo di sicurezza esistente che consenta le regole inbound e outbound richieste.
 +
 link:reference-ports-aws.html["Visualizza le regole del gruppo di sicurezza per AWS"] .
+
+
 
 . Rivedi le tue selezioni per verificare che la configurazione sia corretta.
 +
@@ -359,14 +479,35 @@ link:reference-ports-aws.html["Visualizza le regole del gruppo di sicurezza per 
 ====
 . Selezionare *Aggiungi*.
 +
-La console distribuisce l'agente in circa 10 minuti. Rimani sulla pagina fino al completamento del processo.
+La Console distribuisce l'agente della Console in circa 10 minuti. Rimani sulla pagina fino al completamento del processo.
 
 
 
 .Risultato
 Una volta completato il processo, l'agente della Console sarà disponibile per l'uso dalla Console.
 
-
-NOTE: Se la distribuzione non riesce, puoi scaricare un report e i registri dalla Console per aiutarti a risolvere i problemi.link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
-
 Se disponi di bucket Amazon S3 nello stesso account AWS in cui hai creato l'agente della console, vedrai apparire automaticamente un ambiente di lavoro Amazon S3 nella pagina *Sistemi*. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Scopri come gestire i bucket S3 dalla NetApp Console"^]
+
+
+
+[[troubleshoot-a-failed-console-agent-deployment]]
+[[troubleshoot-agent-deployment]]
+== Risoluzione dei problemi relativi a una distribuzione non riuscita dell'agente Console
+
+Utilizza il report di distribuzione per individuare cosa ha bloccato la distribuzione dell'agente Console, quindi riprova.
+
+La Console fornisce un report solo se è stata selezionata la check box *Validate agent configuration*. Se la distribuzione riesce, non viene generato alcun report.
+
+.Passi
+. Nella finestra di dialogo *Distribuzione agente non riuscita*, seleziona *Scarica report*.
++
+Console scarica un file PDF contenente il report di convalida.
+
+. Esamina il report e risolvi i problemi che elenca.
+. Nella finestra di dialogo, seleziona *Start over* e quindi completa di nuovo la distribuzione.
++
+Per riprovare, devi ricominciare l'intero processo da capo.
+
+
+
+link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]

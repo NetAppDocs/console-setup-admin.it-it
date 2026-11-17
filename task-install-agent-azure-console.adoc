@@ -535,7 +535,28 @@ La Console prepara l'agente in circa 10 minuti. Rimani sulla pagina fino al comp
 .Risultato
 Una volta completato il processo, l'agente della Console sarà disponibile per l'uso dalla Console.
 
-
-NOTE: Se la distribuzione non riesce, puoi scaricare un report e i registri dalla Console per aiutarti a risolvere i problemi.link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
-
 Se si dispone di Azure Blob Storage nello stesso account Azure in cui è stato creato l'agente Console, Azure Blob Storage verrà visualizzato automaticamente nella pagina *Sistemi*. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Scopri come gestire l'archiviazione BLOB di Azure dalla NetApp Console"^]
+
+
+
+[[troubleshoot-a-failed-console-agent-deployment]]
+[[troubleshoot-agent-deployment]]
+== Risoluzione dei problemi relativi a una distribuzione non riuscita dell'agente Console
+
+Utilizza il report di distribuzione per individuare cosa ha bloccato la distribuzione dell'agente Console, quindi riprova.
+
+La Console fornisce un report solo se è stata selezionata la check box *Validate agent configuration*. Se la distribuzione riesce, non viene generato alcun report.
+
+.Passi
+. Nella finestra di dialogo *Distribuzione agente non riuscita*, seleziona *Scarica report*.
++
+Console scarica un file PDF contenente il report di convalida.
+
+. Esamina il report e risolvi i problemi che elenca.
+. Nella finestra di dialogo, seleziona *Start over* e quindi completa di nuovo la distribuzione.
++
+Per riprovare, devi ricominciare l'intero processo da capo.
+
+
+
+link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]

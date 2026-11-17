@@ -203,7 +203,7 @@ Fare riferimento a link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_
 ** Creare un criterio che includa le autorizzazioni necessarie per creare un agente Console.
 +
 *** https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Visualizza le autorizzazioni necessarie per FSx per ONTAP"^]
-*** link:task-install-agent-aws-console.html#aws-permissions-agent["Visualizza la politica di distribuzione dell'agente"]
+*** link:task-install-agent-aws-console.html#aws-permissions-assume-role-keys["Visualizza la politica di distribuzione dell'agente"]
 
 
 

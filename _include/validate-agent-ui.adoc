@@ -1,17 +1,27 @@
-= 
+= Risoluzione dei problemi relativi a una distribuzione non riuscita dell'agente Console
 :allow-uri-read: 
 
 
-Se hai selezionato la casella di controllo *Convalida configurazione agente* nella pagina *Revisione*, la Console verifica la configurazione dell'agente della Console dopo la sua creazione.  Se la Console non riesce a distribuire l'agente, fornisce un report scaricabile per aiutarti a risolvere il problema.
 
 
-NOTE: Se la Console distribuisce correttamente l'agente, non genera alcun report e viene visualizzata una finestra di dialogo di conferma che verifica la corretta distribuzione.
+[[troubleshoot-a-failed-console-agent-deployment]]
+[[troubleshoot-agent-deployment]]
+== Risoluzione dei problemi relativi a una distribuzione non riuscita dell'agente Console
+
+Utilizza il report di distribuzione per individuare cosa ha bloccato la distribuzione dell'agente Console, quindi riprova.
+
+La Console fornisce un report solo se è stata selezionata la check box *Validate agent configuration*. Se la distribuzione riesce, non viene generato alcun report.
 
 .Passi
-. Nella finestra di dialogo *Distribuzione agente non riuscita*, selezionare *Scarica report* per scaricare un file PDF contenente il report di convalida.
-. In alternativa, puoi selezionare *Ricomincia* per tornare alla procedura guidata *Distribuisci agente* e riprovare.
+. Nella finestra di dialogo *Distribuzione agente non riuscita*, seleziona *Scarica report*.
 +
-Se si desidera provare a distribuire nuovamente l'agente, è necessario ricominciare l'intero processo.
+Console scarica un file PDF contenente il report di convalida.
 
-. Accedi al report e ai registri dall'host dell'agente della console
+. Esamina il report e risolvi i problemi che elenca.
+. Nella finestra di dialogo, seleziona *Start over* e quindi completa di nuovo la distribuzione.
++
+Per riprovare, devi ricominciare l'intero processo da capo.
 
+
+
+link:task-troubleshoot-agent.html#troubleshoot-installation["Scopri come risolvere i problemi di installazione."]
