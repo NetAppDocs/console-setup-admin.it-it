@@ -1,0 +1,31 @@
+= Console agent 4.13.0
+:allow-uri-read: 
+
+
+
+
+[[console-agent-4-13-0]]
+=== Console agent 4.13.0
+
+La versione 4.13.0 supporta sia la modalità standard che la modalità limitata.
+
+Questa versione dell'agente Console include miglioramenti della sicurezza e correzioni di bug, oltre alla seguente nuova funzionalità. Quando aggiorni un agente Console distribuito con vCenter alla versione 4.13.0 usando un'immagine ISO, assicurati di riavviare la VM al termine dell'aggiornamento. La VM potrebbe riavviarsi automaticamente.
+
+
+
+==== Crea automaticamente il ruolo di distribuzione AWS quando distribuisci un agente Console
+
+Non devi più creare il ruolo IAM per distribuire un agente NetApp Console in AWS prima di iniziare. La NetApp Console può creare il ruolo per te.link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-aws-console.html["Scopri come distribuire un agente Console in AWS dalla Console"^]
+
+
+
+[[netapp-console-administration]]
+=== Amministrazione NetApp Console
+
+Questa versione include miglioramenti della sicurezza e correzioni di bug, oltre alla seguente nuova funzionalità.
+
+
+
+==== Assegna il ruolo di collaboratore di Cloud Volumes ONTAP
+
+Ora puoi assegnare il ruolo di collaboratore di Cloud Volumes ONTAP per dare ai membri ampio accesso alla gestione dei sistemi Cloud Volumes ONTAP senza consentire loro di eliminare sistemi, volumi, aggregati o relazioni di replica link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["Scopri di più sull'accesso in base al ruolo per Cloud Volumes ONTAP"^].

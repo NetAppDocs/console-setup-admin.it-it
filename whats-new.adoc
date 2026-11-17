@@ -18,8 +18,8 @@ Scopri le novità sulle funzionalità di amministrazione NetApp Console : gestio
 
 
 
-[[09-november-2026]]
-== 09 novembre 2026
+[[17-november-2026]]
+== 17 novembre 2026
 
 
 
@@ -28,9 +28,12 @@ Scopri le novità sulle funzionalità di amministrazione NetApp Console : gestio
 
 La versione 4.13.0 supporta sia la modalità standard che la modalità limitata.
 
-Questa versione dell'agente Console include miglioramenti della sicurezza e correzioni di bug, oltre alla seguente nuova funzionalità.
+Questa versione dell'agente Console include miglioramenti della sicurezza e correzioni di bug, oltre alla seguente nuova funzionalità. Quando aggiorni un agente Console distribuito con vCenter alla versione 4.13.0 usando un'immagine ISO, assicurati di riavviare la VM al termine dell'aggiornamento. La VM potrebbe riavviarsi automaticamente.
 
-.Crea automaticamente il ruolo di distribuzione AWS quando distribuisci un agente Console
+
+
+==== Crea automaticamente il ruolo di distribuzione AWS quando distribuisci un agente Console
+
 Non devi più creare il ruolo IAM per distribuire un agente NetApp Console in AWS prima di iniziare. La NetApp Console può creare il ruolo per te.link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-aws-console.html["Scopri come distribuire un agente Console in AWS dalla Console"^]
 
 
@@ -38,7 +41,13 @@ Non devi più creare il ruolo IAM per distribuire un agente NetApp Console in AW
 [[netapp-console-administration]]
 === Amministrazione NetApp Console
 
-Questa versione include miglioramenti alla sicurezza e correzioni di bug.
+Questa versione include miglioramenti della sicurezza e correzioni di bug, oltre alla seguente nuova funzionalità.
+
+
+
+==== Assegna il ruolo di collaboratore di Cloud Volumes ONTAP
+
+Ora puoi assegnare il ruolo di collaboratore di Cloud Volumes ONTAP per dare ai membri ampio accesso alla gestione dei sistemi Cloud Volumes ONTAP senza consentire loro di eliminare sistemi, volumi, aggregati o relazioni di replica link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["Scopri di più sull'accesso in base al ruolo per Cloud Volumes ONTAP"^].
 
 
 
@@ -86,7 +95,7 @@ La versione 4.10.0 include aggiornamenti ai seguenti componenti e servizi della 
 | NetApp Backup and Recovery | 5.6.2 (31 agosto 2026) | Vai al https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["novità nella pagina NetApp Backup and Recovery"^]. 
 
 
-| NetApp Data Classification | 1.546.0 (10 agosto 2026) | Vai al https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["novità nella pagina Classificazione di NetApp"^]. 
+| NetApp Data Classification | 1.56.0 (10 agosto 2026) | Vai al https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["novità nella pagina Classificazione di NetApp"^]. 
 |===
 
 

@@ -57,10 +57,13 @@ Usa queste assegnazioni in base al ruolo quando un utente deve amministrare le r
 | Ambito | Ruolo della piattaforma | Ruolo di Cloud Volumes ONTAP | Raccomandazione 
 
 
-| Organizzazione | Amministratore dell'organizzazione | operatore Cloud Volumes ONTAP | Quando un utente deve amministrare le risorse della Console (incluse le impostazioni dell'agente della Console) e gestire i sistemi Cloud Volumes ONTAP 
+| Organizzazione | Amministratore dell'organizzazione | Amministratore Cloud Volumes ONTAP | Quando un utente deve amministrare le risorse della Console (incluse le impostazioni dell'agente della Console) e gestire i sistemi Cloud Volumes ONTAP 
 
 
 | Cartella o progetto | Amministratore di cartelle o progetti | Amministratore Cloud Volumes ONTAP | Quando un utente deve amministrare le risorse della NetApp Console in una cartella o in un progetto specifici e amministrare i sistemi Cloud Volumes ONTAP 
+
+
+| Cartella o progetto | Amministratore di cartelle o progetti | Collaboratore di Cloud Volumes ONTAP | Quando un utente deve amministrare le risorse della NetApp Console in una cartella o in un progetto specifici e gestire i sistemi Cloud Volumes ONTAP 
 
 
 | Cartella o progetto | Amministratore di cartelle o progetti | operatore Cloud Volumes ONTAP | Quando un utente deve amministrare le risorse della NetApp Console in una cartella o in un progetto specifici e gestire i sistemi Cloud Volumes ONTAP 
